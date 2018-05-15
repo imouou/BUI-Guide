@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BUI 教程</title>
+  <link rel="icon" href="_media/favicon.ico">
+  <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
+  <meta name="description" content="A magical documentation generator.">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/vue.css" title="vue">
+  <style>
+    nav.app-nav li ul {
+      min-width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">Loading ...</div>
+  <script>
+    window.$docsify = {
+      alias: {
+        // 编写插件
+        '.*?/tools/buifast': 'https://raw.githubusercontent.com/imouou/BUI-Fast-Snippets/master/README.md',
+        // 模板库
+        '.*?/tools/bui-template': 'https://raw.githubusercontent.com/imouou/BUI-Template/master/README.md',
+        // npm工具
+        '.*?/tools/buijs': 'https://raw.githubusercontent.com/imouou/buijs-cli/master/README.md',
+        //'.*?/changelog': 'https://raw.githubusercontent.com/imouou/BUI-Guide/master/docs/CHANGELOG.md',
+        '/.*/_navbar.md': '/_navbar.md'
+      },
+      auto2top: true,
+      // coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      ga: 'UA-106147152-1',
+      name: 'BUI 教程',
+      search: {
+        noData: {
+          '/': '没有结果!',
+          '/en/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': '搜索',
+          '/en/': 'Search'
+        }
+      },
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            var url = 'https://github.com/imouou/BUI-Guide/blob/master/docs/' + vm.route.file
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+
+            return editHtml
+              + html
+              + '\n\n----\n\n'
+              + '<a href="http://www.easybui.com" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">&copy; 2016-2018 easybui.com Powered by docsify</a>'
+          })
+        }
+      ]
+    }
+  </script>
+  <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script> -->
+
+  <script src="js/docsify.min.js"></script>
+  <script src="js/plugins/search.min.js"></script>
+  <script src="js/plugins/ga.min.js"></script>
+  <script src="prism/prism-bash.min.js"></script>
+  <script src="prism/prism-markdown.min.js"></script>
+  <script src="prism/prism-nginx.min.js"></script>
+</body>
+
+</html>

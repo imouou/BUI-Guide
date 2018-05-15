@@ -1,0 +1,7 @@
+- [Demo](http://www.easybui.com/demo/)
+- [API](http://www.easybui.com/demo/api/)
+- FAQ
+  - [常见问题](faq.md)
+  - [我要提问](https://github.com/imouou/BUI-Guide/issues/new)
+- 原生API
+  - [Link API](http://dev.bingocc.com/btapi/)
