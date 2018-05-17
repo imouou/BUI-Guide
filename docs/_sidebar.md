@@ -13,10 +13,9 @@
 * 进阶
   * [单页路由](chapter2/router.md)
   * [模块化](chapter2/loader.md)
+  * [控件用法](chapter2/controls.md)
   * [动画交互](chapter2/animate.md)
   * [常用方法](chapter2/method.md)
-  * [控件用法](chapter2/controls.md)
-  * [打包独立应用](chapter2/package.md)
 
 * 效率
   * [BUI-Fast](tools/buifast.md)

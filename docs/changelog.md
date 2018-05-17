@@ -28,6 +28,13 @@ $ buijs update -p appcan
 
 会自动更新最新的 bui.css bui.js 文件
 
+新增:
+
+发短信 bui.unit.sms
+打电话 bui.unit.tel
+发邮件 bui.unit.mailto
+
+综合方法,保持跟href写法一致. 发短信,打电话,发邮件 bui.unit.openExtral
 
 ### 重要修改
 
@@ -36,11 +43,21 @@ $ buijs update -p appcan
 #### bui.upload 
 1. 修复 上传文件的 data 不能附带参数问题
 
+#### bui.list
+1. 修复refresh方法的分页错乱问题 (未修复)
+
 #### bui.list, bui.pullrefresh, bui.slide, bui.scroll, bui.dialog
 1. 修复高度自动计算时,受键盘影响问题
 
 #### bui.accordion
 1. 修复配合全局初始化,在单页使用时导致部分失效的问题
+
+#### bui.slide
+1. 修复纵向滑动时,高度不支持rem问题
+
+#### bui.array
+1. 修复 bui.array.remove 删除普通数组只删除一个的问题;
+1. 修复 bui.array.filter 过滤普通数组的匹配问题;
 
 
 ## 1.4.3 20180427

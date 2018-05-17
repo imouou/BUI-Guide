@@ -4,7 +4,10 @@
 
 ## 简单示例
 
+![焦点图](http://www.easybui.com/static/images/controls/bui-slide_low.gif)
+
 ?> 这是BUI最简单的使用方式,引入相应的库即可使用. <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed" target="_blank">马上试试</a>
+
 
 ```html
   <link rel="stylesheet" href="//unpkg.com/buijs/lib/latest/bui.css" />
@@ -218,11 +221,6 @@
 - ui-page <kbd>Tab</kbd>    生成bui标准页面结构
 - ui-slide <kbd>Tab</kbd>   生成焦点图控件结构
 - bui-slide <kbd>Tab</kbd>  生成焦点图控件初始化代码
-
-
-
-## buijs 自动化工程
-?> 使用`buijs` NPM工具, 每次会获取最新工程包, 主要配合[单页开发](chapter2/router)使用, 例如,服务器部署,es6编译,sass编译,接口跨域,打包安全等,可以减少你对其它工具的依赖, 但这个需要你对NPM有一定的了解, 新手可以略过. 非新手猛击这里[如何安装使用buijs](tools/buijs)
 
 
 ## 准备好了吗?
