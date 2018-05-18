@@ -82,6 +82,12 @@
   <script src="prism/prism-bash.min.js"></script>
   <script src="prism/prism-markdown.min.js"></script>
   <script src="prism/prism-nginx.min.js"></script>
+  <script>
+  // 开启离线缓存
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 
 </html>

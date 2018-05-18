@@ -56,7 +56,7 @@
 * 适合快速开发demo原型投标;
 
 
-## 支持第三方平台打包
+## 支持第三方打包
 - Cordova
 - DCloud
 - APICloud

@@ -99,9 +99,9 @@ bui.ajax({
 <script src="bui.js?t=2016073101"></script>
 ```
 
-?> 如果你使用的是`bui.loader`模块化开发, 可以在公共配置的地方, 设置 `bui.config.loader.cache = false;`, 加载的模块便会采用时间戳的方式加载.
+?> 如果你使用的是`bui.loader`模块化开发, 重新初始化`window.loader`设置缓存参数为false, 加载的模块便会采用时间戳的方式加载.
 
 ```js
-bui.config.loader.cache = false;
+window.loader = bui.loader({cache: false});
 ```
 

@@ -2,6 +2,4 @@
 - [API](http://www.easybui.com/demo/api/)
 - Native API
   - [Link API](http://dev.bingocc.com/btapi/)
-- [Feedback](https://github.com/imouou/BUI-Guide/issues/new)
-- Help
-  - [FAQ](faq.md)
+- [Help](help.md)
