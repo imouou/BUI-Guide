@@ -29,7 +29,7 @@
 
 效果预览:
 
-![bui.list](http://www.easybui.com/static/images/controls/bui-list_low.gif)
+![bui.list](../static/images/controls/bui-list_low.gif)
 
 *生成结构, bui-fast 快速书写 `ui-list` <kbd>tab</kbd>*
 ```html

@@ -3,7 +3,7 @@
 
 ## 目录规范
 
-![BUI 单页示例目录说明](http://www.easybui.com/docs/images/router/catalog.png)  
+![BUI 单页示例目录说明](../static/images/router/catalog.png)  
 
 !> `src`目录及外层 `app.json`,`gulpfile.js`,`package.json`, 不使用npm时,非必须.
 

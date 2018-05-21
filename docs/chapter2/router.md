@@ -7,7 +7,7 @@
 
 ### 效果预览
 
-![单页示例预览](http://www.easybui.com/static/images/controls/bui-router_low.gif)
+![单页示例预览](../static/images/controls/bui-router_low.gif)
 
 [点击这里体验](http://www.easybui.com/case/preview.html?url=http://www.easybui.com/case/source/router/demo/index.html)
 
@@ -33,7 +33,7 @@
 
 ?> 使用`buijs`命令行构建. <a href="https://github.com/imouou/buijs-cli" target="_blank">如何使用buijs命令行工具?</a>
 
-![buijs 创建工程预览](http://www.easybui.com/docs/images/router/buijs-create-demo_low.gif) 
+![buijs 创建工程预览](../static/images/buijs/buijs-create-demo_low.gif) 
 
 ### 创建demo工程
 ```bash
@@ -57,7 +57,7 @@ $ npm run dev
 
 ### 目录规范
 
-![BUI 单页示例目录说明](http://www.easybui.com/docs/images/router/catalog.png)  
+![BUI 单页示例目录说明](../static/images/router/catalog.png)  
 
 **目录说明:**
 
@@ -198,7 +198,7 @@ loader.define(function(require,exports,module){
 
 ?> 这就是一个简单的路由跳转过程. 
 
-![BUI 路由模块加载流程图](http://www.easybui.com/docs/images/router/router_flow.png)
+![BUI 路由模块加载流程图](../static/images/router/router_flow.png)
 
 
 ## 页面跳转

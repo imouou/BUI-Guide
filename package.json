@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "docsify start docs",
+    "deploy": "now -p"
+  },
+  "docsify": {
+    "config": {
+      "basePath": "/",
+      "loadSidebar": true,
+      "loadNavbar": true
+    }
+  }
+}

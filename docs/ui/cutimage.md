@@ -11,7 +11,7 @@
 ?>images目录里面可以自行规划,例如:icons,banner等;
 
 **演示:**
-![切图](http://www.easybui.com/docs/images/cutimage_low.gif)
+![切图](../static/images/cutimage_low.gif)
 
 ## 转换设计稿大小
 > BUI独创的基于REM适配手机,保持跟原生DPI一致的缩放效果, 需要把设计稿转换为540的设计稿,这样量取到的值,直接除以100,便是rem值.
@@ -19,10 +19,10 @@
 
 ### 把设计稿更改为`540px`宽度,高度等比缩放的设计稿
 
-![修改设计稿为540宽度](http://www.easybui.com/docs/images/modify540.png)
+![修改设计稿为540宽度](../static/images/modify540.png)
 
 ### 量取设计稿内容的大小/100, 转成rem单位
-![转换尺寸为rem单位](http://www.easybui.com/docs/images/getSlideHeight.png)
+![转换尺寸为rem单位](../static/images/getSlideHeight.png)
 
 *说明:*
 

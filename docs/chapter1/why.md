@@ -25,7 +25,7 @@
 
 ?> 其实分析以后你会发现,一个应用的开发,很多效果,交互都应该是通用的, 只有少部分原生需要用第三方平台来开发, 这个时候你只需要使用 `BUI+APICloud`, `BUI+DCloud`, `BUI+APPCan` 等等, 你只需要用到原生api的时候,查一下, 开发方式还是按BUI的来, 最终可以在常用的平台都保持一致的交互效果, 学一个就够了. 
 
-![](http://www.easybui.com/docs/images/bui-silu.png)
+![设计思路](../static/images/bui-silu.png)
 
 
 ?>以上都是我们开发中遇到的真实客户需求, 用 BUI `以不变应万变`, 学习上手都很简单. 

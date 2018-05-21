@@ -51,7 +51,7 @@ bui.ajax({
 
 ?> 打开chrome 开发者工具, 开启模拟手机效果, 这样才能模拟手机的滑动拖拽事件.
 
-![chrome 预览图](http://www.easybui.com/docs/images/chrome.png)
+![chrome 预览图](../static/images/chrome.png)
 
 !> 在PC调试数据,界面等内容,需要打开跨域的chrome
     

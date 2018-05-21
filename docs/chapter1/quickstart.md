@@ -4,7 +4,7 @@
 
 ## 简单示例
 
-![焦点图](http://www.easybui.com/static/images/controls/bui-slide_low.gif)
+![焦点图](../static/images/controls/bui-slide_low.gif)
 
 ?> 这是BUI最简单的使用方式,引入相应的库即可使用. <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed" target="_blank">马上试试</a>
 
@@ -65,7 +65,7 @@
 ## 效果预览
 ?> 效果有点像这样: 可以直接在chrome浏览器打开html文件.
 
-![BUI标准页预览](https://raw.githubusercontent.com/imouou/BUI-Template/master/preview.png)
+![BUI标准页预览](../static/images/template/preview.png)
 
 ## 控件基本使用
 
@@ -125,6 +125,7 @@
 !> `注意:` 事件监听必须在方法执行之前. slide默认支持滑动,点击等事件, 但必须在手机或者开启Chrome设备预览才能操作,
 
 ## 在线预览
+
 
 ?> 最终组合以后的代码, 你可以点击这里 <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed" target="_blank">在线编辑预览</a>
 
@@ -208,13 +209,13 @@
 
 *方案1:*
 - ui-html <kbd>Tab</kbd>    生成bui页面引用
-![BUI-Fast焦点图预览](http://www.easybui.com/docs/images/ui-html.gif)
+![BUI-Fast焦点图预览](../static/images/bui-fast/ui-html.gif)
 
 - ui-page <kbd>Tab</kbd>    生成bui标准页面结构
-![BUI-Fast焦点图预览](http://www.easybui.com/docs/images/ui-page.gif)
+![BUI-Fast焦点图预览](../static/images/bui-fast/ui-page.gif)
 
 - bui-slide-demo <kbd>Tab</kbd>  生成焦点图控件初始化代码及结构
-![BUI-Fast焦点图预览](http://www.easybui.com/docs/images/bui-slide-demo.gif)
+![BUI-Fast焦点图预览](../static/images/bui-fast/bui-slide-demo.gif)
 
 *方案2: *
 - ui-html <kbd>Tab</kbd>    生成bui页面引用

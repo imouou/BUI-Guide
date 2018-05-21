@@ -28,7 +28,7 @@
   * [样式规范](ui/style.md)
 
 * 帮助
-  * [我要提问](https ://github.com/imouou/BUI-Guide/issues/new)
+  * [我要提问](https://github.com/imouou/BUI-Guide/issues/new)
   * [常见问题](help.md)
 
 
