@@ -59,6 +59,9 @@ $ buijs update -p appcan
 1. 修复 bui.array.remove 删除普通数组只删除一个的问题;
 1. 修复 bui.array.filter 过滤普通数组的匹配问题;
 
+#### bui.pickerdate
+1. 修复 时间,分钟显示的时候,;
+
 
 ## 1.4.3 20180427
 
