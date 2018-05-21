@@ -25,8 +25,13 @@ BUI 移动开发交流群1: `691560280`
 - 美工
 - 前端开发者
 
+## 扫码体验
+![BUI Demo](http://www.easybui.com/static/images/qrcode.png)
+
 
 ## 链接
+
+[BUI在线演示](http://www.easybui.com/demo/)
 
 [BUI官网](http://www.easybui.com)
 
