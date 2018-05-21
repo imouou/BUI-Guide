@@ -4,3 +4,5 @@
 - Native API
   - [Link API](http://dev.bingocc.com/btapi/)
 - [Help](help.md)
+  - [我要提问](https://github.com/imouou/BUI-Guide/issues/new)
+  - [常见问题](help.md)
