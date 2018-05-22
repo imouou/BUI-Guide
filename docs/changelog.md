@@ -44,7 +44,7 @@ $ buijs update -p appcan
 1. 修复 上传文件的 data 不能附带参数问题
 
 #### bui.list
-1. 修复refresh方法的分页错乱问题 (未修复)
+1. 修复refresh方法的分页错乱问题 
 
 #### bui.list, bui.pullrefresh, bui.slide, bui.scroll, bui.dialog
 1. 修复高度自动计算时,受键盘影响问题
