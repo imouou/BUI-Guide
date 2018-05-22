@@ -17,6 +17,11 @@ BUI 移动开发交流群1: `691560280`
 
 [查看更多介绍](chapter1/about)
 
+## 案例效果
+
+<img src="static/images/case/163_low.gif" alt="" width="240px">
+<img src="static/images/case/qq_low.gif" alt="" width="240px">
+<img src="static/images/case/weixin_low.gif" alt="" width="240px">
 ## 面向的开发者
 
 ?> 需要掌握一点前端基础知识, `html`,`css`,`javascript`或`jQuery` 
