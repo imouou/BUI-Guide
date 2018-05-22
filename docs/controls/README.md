@@ -19,9 +19,9 @@
 
 | <img src="http://www.easybui.com/static/images/controls/bui-actionsheet_low.gif" width="240px" alt="">  |<img src="http://www.easybui.com/static/images/controls/bui-dropdown-scenes_low.jpg" width="240px" alt="">      | <img src="http://www.easybui.com/static/images/controls/bui-accordion_low.jpg" width="240px" alt="">      |
 |:--------------------:|:---------------:|:---------------:|
-| [bui.acticonsheet](http://www.easybui.com/demo/#pages/ui_controls/bui.acticonsheet) 上拉菜单 | [bui.dropdown](http://www.easybui.com/demo/#pages/ui_controls/bui.dropdown_scenes) 下拉菜单    | [bui.accordion](http://www.easybui.com/demo/#pages/ui_controls/bui.accordion) 折叠菜单    |
+| [bui.actionsheet](http://www.easybui.com/demo/#pages/ui_controls/bui.actionsheet) 上拉菜单 | [bui.dropdown](http://www.easybui.com/demo/#pages/ui_controls/bui.dropdown_scenes) 下拉菜单    | [bui.accordion](http://www.easybui.com/demo/#pages/ui_controls/bui.accordion) 折叠菜单    |
 | <img src="http://www.easybui.com/static/images/controls/bui-select_low.gif" width="240px" alt="">  |<img src="http://www.easybui.com/static/images/controls/bui-rating_low.jpg" width="240px" alt="">      | <img src="http://www.easybui.com/static/images/controls/bui-stepbar_low.jpg" width="240px" alt="暂缺">      |
-| [bui.select](http://www.easybui.com/demo/#pages/ui_controls/bui.select) 选择菜单 | [bui.rating](http://www.easybui.com/demo/#pages/ui_controls/bui.rating) 星级评分    | [bui.stepbar](http://www.easybui.com/demo/#pages/ui_controls/bui.stepbar) 步骤条    |
+| [bui.select](http://www.easybui.com/demo/#pages/ui_controls/bui.select_popup) 选择菜单 | [bui.rating](http://www.easybui.com/demo/#pages/ui_controls/bui.rating) 星级评分    | [bui.stepbar](http://www.easybui.com/demo/#pages/ui_controls/bui.stepbar) 步骤条    |
 
 ## 弹出交互
 
