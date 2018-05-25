@@ -400,7 +400,7 @@ $(".btn-scrolltop").on("click",function(e){
 
 ?> 这是一个综合例子, 结合事件方法一起使用, 理解了这个例子, 才算真的理解BUI的控件的灵活之处.  
 
-<iframe width="100%" height="450" src="http://code.hcharts.cn/easybui/YJSLuW/4/share/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/YJSLuW/4/share/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 !> 上面的代码不能请求外部数据,想要预览效果,可以点击下面地址.
 
