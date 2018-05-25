@@ -40,6 +40,10 @@ $ buijs update -p appcan
 
 ### 优化-修复-维护
 
+#### bui.router 
+1. 修复 preload 的资源文件不支持数组
+
+
 #### bui.upload 
 1. 修复 上传文件的 data 不能附带参数问题
 

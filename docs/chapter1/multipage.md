@@ -34,10 +34,12 @@
 *示例:*
 
 ```html
-<div class="bui-btn" href="pages/page2/page2.html"></div>
-
+<div class="bui-page">
+  <div class="bui-btn" href="pages/page2/page2.html"></div>
+</div>
 ```
 ```js
+// .bui-page 下的所有按钮及a 标签,带href属性,点击会调用 bui.load 
 bui.btn({id:".bui-page",handle:".bui-btn,a"}).load();
 
 ```
@@ -61,8 +63,14 @@ bui.btn({id:".bui-page",handle:".bui-btn,a"}).load();
 
 *page1.html 示例:*
 
+```html
+<div id="btnGo" class="bui-btn">点击跳转</div>;
+```
 ```js
-bui.load({ url: "pages/page2.html", param: { id: "page1"} });
+// 绑定按钮跳转
+$("#btnGo").on("click",function(e){
+  bui.load({ url: "pages/page2.html", param: { id: "page1"} });
+})
 ```
 
 ## 接收参数  
