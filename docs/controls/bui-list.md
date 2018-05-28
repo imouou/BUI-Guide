@@ -1,5 +1,9 @@
 # bui.list: 列表刷新及加载
 
+## 效果预览
+![控件预览](http://www.easybui.com/static/images/controls/bui-list_low.gif)
+
+
 !> 滑动类控件需要开启chrome才能模拟手机下拉效果, 可以扫码在手机全屏预览.
 
 ## 列表刷新及加载

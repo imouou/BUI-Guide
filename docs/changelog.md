@@ -66,6 +66,9 @@ $ buijs update -p appcan
 #### bui.pickerdate
 1. 修复 时间,分钟显示的时候,;
 
+#### bui.sidebar
+1. 修复高度无效问题
+
 
 ## 1.4.3 20180427
 
