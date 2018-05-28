@@ -69,6 +69,10 @@ $ buijs update -p appcan
 #### bui.sidebar
 1. 修复高度无效问题
 
+#### bui.select
+1. 重复设置的时候,只有值,没有勾.
+2. 回填指定值的时候,可以使用 value方法, active只能索引
+
 
 ## 1.4.3 20180427
 

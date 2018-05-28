@@ -20,3 +20,9 @@
 ## 弹窗静态初始化
 
 <iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/YJSLuW/3/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+## 省市区多级联动
+
+<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/YJSLuW/4/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+

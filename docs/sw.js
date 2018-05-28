@@ -6,7 +6,7 @@
  * Register service worker.
  * ========================================================== */
 
-const RUNTIME = 'bui-guide3'
+const RUNTIME = 'bui-guide4'
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
   'fonts.gstatic.com',
