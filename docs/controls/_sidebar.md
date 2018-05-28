@@ -11,12 +11,15 @@
 
 * 点击交互
 
+  * [bui.btn 绑定按钮](controls/bui-btn.md)
   * [bui.actionsheet: 上拉菜单](controls/bui-actionsheet.md)
   * [bui.dropdown: 下拉菜单](controls/bui-dropdown.md)
   * [bui.accordion 折叠菜单](controls/bui-accordion.md)
   * [bui.select 选择菜单](controls/bui-select.md)
   * [bui.rating 星级评分](controls/bui-rating.md)
   * [bui.stepbar 步骤条](controls/bui-stepbar.md)
+  * [bui.searchbar 搜索](controls/bui-searchbar.md)
+  * [bui.upload 上传](controls/bui-upload.md)
 
 * 弹出交互
 
