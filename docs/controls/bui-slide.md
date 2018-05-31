@@ -8,6 +8,10 @@
 
 <iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/FdVLDb/1/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+## 欢迎页
+
+<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/FdVLDb/8/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ## 菜单滚动的选项卡
 
 <iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/FdVLDb/2/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

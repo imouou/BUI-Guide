@@ -389,14 +389,14 @@ router.preload([{
 
 ## 页面重复加载
 
-### router.getCurrentPage()
+### router.currentPage()
 
 ?> 有一种情况,页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种情况,就需要通过获取当前页面对象,来查找元素,而不能使用ID了, 包括控件的初始化.
 
 *控件初始化示例: *
 ```js
 // 获取当前页面唯一ID
-var currentPage = router.getCurrentPage();
+var currentPage = router.currentPage();
 
 // 页面唯一的样式名
 var accordionID = $(".bui-accordion",currentPage);
@@ -410,7 +410,7 @@ var uiAccordion = bui.accordion({
 *事件绑定示例: *
 ```js
 // 获取当前页面唯一ID
-var currentPage = router.getCurrentPage();
+var currentPage = router.currentPage();
 
 // 绑定当前页面下样式为 btn 的事件
 $(currentPage).on("click",".btn",function(e){

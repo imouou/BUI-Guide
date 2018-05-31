@@ -19,6 +19,7 @@
 <img src="static/images/case/qq_low.gif" alt="" width="240px">
 <img src="static/images/case/weixin_low.gif" alt="" width="240px">
 
+网易新闻: 耗时`半天`  |  QQ: 耗时`1天` |  微信: 耗时`2小时`
 
 ## 目录
 

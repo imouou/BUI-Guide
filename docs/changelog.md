@@ -33,6 +33,7 @@ $ buijs update -p appcan
 发短信 bui.unit.sms
 打电话 bui.unit.tel
 发邮件 bui.unit.mailto
+计时器 bui.timer 
 
 综合方法,保持跟href写法一致. 发短信,打电话,发邮件 bui.unit.openExtral
 
