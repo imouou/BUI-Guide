@@ -6,7 +6,7 @@
 
 ![焦点图](../static/images/controls/bui-slide_low.gif)
 
-?> 这是BUI最简单的使用方式,引入相应的库即可使用. <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed" target="_blank">马上试试</a>
+?> 这是BUI最简单的使用方式,引入相应的库即可使用. <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed?html,js,output" target="_blank">马上试试</a>
 
 
 ```html
@@ -127,7 +127,7 @@
 ## 在线预览
 
 
-?> 最终组合以后的代码, 你可以点击这里 <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed" target="_blank">在线编辑预览</a>
+?> 最终组合以后的代码, 你可以点击这里 <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed?html,js,output" target="_blank">在线编辑预览</a>
 
 *index.html*
 

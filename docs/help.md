@@ -199,6 +199,22 @@ a标签跳转 = bui.load 跳转.
 
 !> 需要注意的是 a 标签默认点击会受样式的伪类状态影响, 默认我们使用 div 标签模拟. 
 
+> Q: 输入法遮挡输入框问题? 
+
+*答:*
+
+```js
+// 给输入框绑定事件,点击的时候触发一个定时器,把输入框滚动到可视范围内
+$('.bui-input').on('click', function () {
+    $("html,body").css("overflow","scroll");
+    var target = this;
+    // 使用定时器是为了让输入框上滑时更加自然
+    setTimeout(function(){
+      target.scrollIntoView(true);
+    },100);
+});
+```
+
 
 ## 控件问题
 ---
