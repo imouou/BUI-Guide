@@ -8,6 +8,6 @@
 
 ?> 如果不需要比较复杂的定制化,建议使用 `bui.list` 来代替.
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/HhhLDn/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/HhhLDn/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 !> 滑动类控件需要开启chrome才能模拟手机下拉效果, 可以扫码在手机全屏预览.

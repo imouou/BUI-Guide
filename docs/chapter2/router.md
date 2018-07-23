@@ -387,33 +387,29 @@ router.preload([{
 
 ```
 
-## 页面重复加载
+## 获取当前页面dom对象
 
 ### router.currentPage()
 
-?> 有一种情况,页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种情况,就需要通过获取当前页面对象,来查找元素,而不能使用ID了, 包括控件的初始化.
-
-*控件初始化示例: *
+*示例: *
 ```js
 // 获取当前页面唯一ID
 var currentPage = router.currentPage();
 
-// 页面唯一的样式名
-var accordionID = $(".bui-accordion",currentPage);
-
-// 控件初始化
-var uiAccordion = bui.accordion({
-    id: accordionID
-})
 ```
+
+## 页面需要重复加载
+
+### router.$ 替换 $
+
+?> `router.$` 跟 `$`的区别在于, router.$ 是相对于当前页面查找, 有一种情况, 页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种时候,`$`绑定页面的事件会被重复绑定, `router.$` 则不会.
+
 
 *事件绑定示例: *
 ```js
-// 获取当前页面唯一ID
-var currentPage = router.currentPage();
 
 // 绑定当前页面下样式为 btn 的事件
-$(currentPage).on("click",".btn",function(e){
+router.$(".bui-page").on("click",".btn",function(e){
   
 })
 ```

@@ -1,16 +1,34 @@
-* 滑动交互
+* 基础
+  * [布局](chapter1/layout.md)
+  * [布局范例](base/layout.md)
+  * [表单](base/form.md)
+  * [图标](base/icons.md)
 
+  * [头部](base/bui-bar.md)
+  * [列表](base/bui-list.md)
+  * [导航](base/bui-nav.md)
+  * [面板](base/bui-panel.md)
+  * [表格](base/bui-table.md)
+  * [表单](base/bui-form.md)
+  * [按钮](base/bui-btn.md)
+  * [单选](base/bui-radio.md)
+  * [复选](base/bui-checkbox.md)
+  * [喜欢](base/bui-like.md)
+  * [切换](base/bui-switch.md)
+  * [滑动条](base/bui-range.md)
+  * [日期](base/bui-date.md)
+  * [输入框](base/bui-input.md)
+  * [搜索框](base/bui-searchbar.md)
+  * [进度条](base/bui-progress.md)
+* 控件
   * [bui.list: 列表刷新及加载](controls/bui-list.md)
   * [bui.scroll: 滚动刷新及加载](controls/bui-scroll.md)
   * [bui.pullrefresh 下拉刷新](controls/bui-pullrefresh.md)
-  * [bui.slide 焦点图+选项卡](controls/bui-slide.md)
+  * [bui.slide 焦点图+Tab选项卡](controls/bui-slide.md)
   * [bui.sidebar 侧边栏](controls/bui-sidebar.md)
   * [bui.listview 侧滑菜单](controls/bui-listview.md)
   * [bui.swipe 抽屉控件](controls/bui-swipe.md)
   * [bui.pickerdate 日期选择](controls/bui-pickerdate.md)
-
-* 点击交互
-
   * [bui.btn 绑定按钮](controls/bui-btn.md)
   * [bui.actionsheet: 上拉菜单](controls/bui-actionsheet.md)
   * [bui.dropdown: 下拉菜单](controls/bui-dropdown.md)
@@ -20,15 +38,9 @@
   * [bui.stepbar 步骤条](controls/bui-stepbar.md)
   * [bui.searchbar 搜索](controls/bui-searchbar.md)
   * [bui.upload 上传](controls/bui-upload.md)
-
-* 弹出交互
-
   * [bui.mask: 遮罩](controls/bui-mask.md)
   * [bui.loading: 正在加载](controls/bui-loading.md)
   * [bui.dialog 弹窗](controls/bui-dialog.md)
-
-* 提醒类交互
-
   * [bui.alert 提醒框](controls/bui-alert.md)
   * [bui.confirm 确认框](controls/bui-confirm.md)
   * [bui.prompt 弹出输入](controls/bui-prompt.md)

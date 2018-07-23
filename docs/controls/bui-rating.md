@@ -6,12 +6,12 @@
 
 ## 初始化
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/FNHLwg/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/FNHLwg/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 半颗星评分
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/FNHLwg/2/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/FNHLwg/2/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 展示百分比
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/FNHLwg/1/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/FNHLwg/1/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

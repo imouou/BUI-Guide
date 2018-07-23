@@ -4,6 +4,5 @@
 - [API](http://www.easybui.com/demo/api/)
 - Native API
   - [Link API](http://dev.bingocc.com/btapi/)
-- [Help](help.md)
-  - [我要提问](https://github.com/imouou/BUI-Guide/issues/new)
-  - [常见问题](help.md)
+- [BUI专栏](article.md)
+

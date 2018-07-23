@@ -7,8 +7,8 @@
 
 ## 初始化
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/IVPLws/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/IVPLws/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 横向展示
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/IVPLws/1/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/IVPLws/1/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

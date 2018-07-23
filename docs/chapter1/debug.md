@@ -18,7 +18,9 @@ $ npm run dev
 ?> 配合自动化构建工程, 打开根目录下的 `app.json` ,里面有个键值 `proxy` 的对象. 
 
 假设请求的接口地址为: http://www.easybui.com/api/getDetail/id/123 
-*需要这样配置 proxy :*
+*可以这样配置 proxy :*
+
+`"/api"` 为请求接口的二级目录
 
 ```
 {
@@ -34,8 +36,17 @@ $ npm run dev
 }
 ```
 
-js: 脚本请求使用`相对路径`, 为了后面更改为正式地址, 建议可以把url部分作为配置项.
+js: ajax请求的时候使用`相对路径`.
 
+```
+bui.ajax({
+    url: "api/getDetail/id/123"
+}).then(function(res){
+    
+})
+```
+
+!> 为了后面更改为正式地址, 建议可以把url部分作为配置项
 ```
 var apiUrl = "";
 
@@ -54,6 +65,17 @@ bui.ajax({
 ![chrome 预览图](../static/images/chrome.png)
 
 !> 在PC调试数据,界面等内容,需要打开跨域的chrome
+
+* **Chrome 49以上版本解决跨域问题**
+
+  **mac** 在终端上输入以下命令:
+  ```bash
+  $ open -a Google\ Chrome --args --disable-web-security  --user-data-dir
+  ```
+  **windows** 新建个快捷方式,右键->属性, 目标路径后面增加  `--args --disable-web-security  --user-data-dir`
+  ```
+  "C:\Program Files\Google\Chrome\Application\chrome.exe" --args --disable-web-security  --user-data-dir
+  ```
     
 * **Chrome 49以下版本解决跨域问题**
 
@@ -66,23 +88,12 @@ bui.ajax({
   "C:\Program Files\Google\Chrome\Application\chrome.exe" --args --disable-web-security 
   ```
 
-* **Chrome 49以上版本解决跨域问题**
-
-  **mac** 在终端上输入以下命令:
-  ```bash
-  $ open -a Google\ Chrome --args --disable-web-security  --user-data-dir
-  ```
-  **windows** 新建个快捷方式,右键->属性, 目标路径后面增加  `--args --disable-web-security  --user-data-dir`
-  ```
-  "C:\Program Files\Google\Chrome\Application\chrome.exe" --args --disable-web-security  --user-data-dir
-  ```
-
 如果以上方式不能解决你的跨域问题,请自行网上搜索 chrome对应的版本的跨域.
 
 
 ## Debugtool调试
 
-?> DebugTool是手机上的一个应用,可以在手机模拟打包后的调试效果,基于`Bingotouch`,`Link`开发的应用, 多页开发全局配置 `bui.isWebapp = false;` 可以切换成原生跳转,原生请求.
+?> DebugTool是手机上的一个应用,使用 `buijs create -p bingotouch` 创建的工程, 可以在debugtool模拟打包后的调试效果,仅限于`Bingotouch`,`Link`开发的应用. 全局配置 `bui.isWebapp = false;` 可以切换成原生请求,以解决移动端跨域的问题.
 
 * [安卓版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v3.4.0.apk)
 * [IOS版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v1.0.ipa)

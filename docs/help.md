@@ -115,6 +115,50 @@ window.loader = bui.loader({
 bui的开发推荐全部使用click事件, tap事件在移动端会存在一些兼容问题.
 ```
 
+> Q: input被输入法遮挡问题?
+
+*答:*
+
+```js
+
+
+方案1: 输入框在底部用方案1
+
+$('.bui-input').on('click', function () {
+    // 使用定时器是为了延迟计算
+    setTimeout(function(){
+        bui.init({
+            id: router.$(".bui-page")
+        })
+
+      router.$(".bui-page")[0].scrollIntoView();
+
+    },300);
+});
+// 指定某个input,避免每次都要重复计算
+$('input').on('blur', function () {
+    // 使用定时器是为了延迟计算
+    setTimeout(function(){
+        bui.init({
+            id: router.$(".bui-page")
+        })
+
+      router.$(".bui-page")[0].scrollIntoView();
+    },300);
+});
+
+方案2: 顶部会看不到
+
+$('.bui-input').on('click', function () {
+    $("html,body").css("overflow","scroll");
+    var target = this;
+    // 使用定时器是为了缓冲
+    setTimeout(function(){
+      target.scrollIntoView(true);
+    },100);
+});
+```
+
 
 ## 单页开发问题
 ---
@@ -199,20 +243,13 @@ a标签跳转 = bui.load 跳转.
 
 !> 需要注意的是 a 标签默认点击会受样式的伪类状态影响, 默认我们使用 div 标签模拟. 
 
-> Q: 输入法遮挡输入框问题? 
+> Q: 页面跳转的静态属性传参? 
 
-*答:*
+*答:* 静态传过去的参数必须是一个标准的json字符
 
 ```js
-// 给输入框绑定事件,点击的时候触发一个定时器,把输入框滚动到可视范围内
-$('.bui-input').on('click', function () {
-    $("html,body").css("overflow","scroll");
-    var target = this;
-    // 使用定时器是为了让输入框上滑时更加自然
-    setTimeout(function(){
-      target.scrollIntoView(true);
-    },100);
-});
+  html += "<li href='pages/ui_controls/bui.hint.html' param='{\"id\":123}'>跳转传参示例</li>";
+
 ```
 
 

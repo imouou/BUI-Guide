@@ -6,4 +6,4 @@
 
 ?> 支持传对象参数
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/CHZLwL/2/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/CHZLwL/2/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

@@ -4,6 +4,134 @@
 ## 目录
 [TOC]
 
+## 1.4.6 20180730
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js 
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js 
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js 
+$ buijs update -p apicloud 
+
+# 更新 appcan 平台 bui.css, bui.js 
+$ buijs update -p appcan    
+```
+
+## buijs 工程更新
+1. 修正json文件修改不更新
+2. 修复加入第三方插件时,会导致插件失效, 引入第三方插件需要以 .min.js .min.css 命名才不会被修改.
+
+
+## bui.loading
+1. 统一为页面跳转的效果;
+
+## bui.select 
+1. 修复 点击checkbox 无法选中的情况
+2. 新增参数可以控制单选是否可以取消
+3. 修复 data value 为数字,导致无法选择的情况
+
+## bui.upload
+1. 修复onFail 无效问题;
+
+## bui.list 
+1. 修复下拉刷新以后不继续请求分页问题
+
+## bui.btn 
+1. 新增?号传参的方式
+
+## 1.4.5 20180702
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js 
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js 
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js 
+$ buijs update -p apicloud 
+
+# 更新 appcan 平台 bui.css, bui.js 
+$ buijs update -p appcan    
+```
+
+会自动更新最新的 bui.css bui.js 文件
+
+### 重要修改
+
+新增秒数倒计时 bui.timer
+新增事件触发器 bui.emitter
+新增层级选择器 京东省市区 bui.levelselect
+内部重整 bui.select 控件, 着重看对你有没有造成影响.
+
+### 优化-修复-维护
+
+
+#### bui.router
+1. 在 bui.isWebapp = false 的情况下, 路由会加载2次问题;
+2. 新增路由的 router.$() 方法,确保查找的元素不跟另外页面冲突;
+3. 修复后退时,页面参数丢失问题
+4. 路由的进度条统一为黑块居中
+
+#### bui.pickerdate 
+1. 修复在微信上弹出时,日期的底部按钮,会跳到中间,布局错乱, (替换bui.css)
+2. 修复仅有时间的时候,点击取消无法返回上一个值;
+
+#### bui.slide 
+1. 新增可视个数控制参数
+
+#### bui.loading 
+1. 新增默认效果,并且把页面跳转的进度条做了统一.
+
+#### bui.list 
+1. 新增 localData 参数,用来做本地数据调试,支持分页
+
+#### bui.number 
+1. 支持静态初始化,而不需要id
+
+#### bui.select 
+
+1. 修复 value 方法修改值时, text方法拿不到值
+2. 新增 value 方法可以针对文本设置匹配
+3. 统一 bui.select change 的this 指向, function(e){ console.log(e.target) } (重要)
+4. bui.select 取值跟文本需要通过自带的方法, 不要通过属性取值的方式 (重要)
+5. 动态渲染,支持字段配置,可以根据数据的文本属性,值属性配置, 比方 数据的文本在 "n" field:{name:"n"}
+6. change 事件的监听, this 不再指向点击的input, 这里统一在实参的 target 获得, 这个target 单选多选统一为 input 数组
+
+
+#### bui.dropdown 
+1. 修复 relative 参数为true 时, 在单页的定位不准确问题.
+2. 新增二级分类菜单
+3. 新增下拉提醒效果
+
+#### bui.sidebar 
+1. 修复 双侧滑栏的时候,偶尔会出现关闭错乱问题.
+
+
+#### bui.emitter 事件发布订阅式, 具体查看API的示例
+
+
+#### bui 的离线模式  未完成
+
+#### bui 的模板绑定 或者跟 vue 的处理  未完成
+
+#### bui 的案例教程  未完成
+
 
 ## 1.4.4 20180531
 

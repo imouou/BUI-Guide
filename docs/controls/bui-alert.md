@@ -5,5 +5,5 @@
 
 ?> 调试框,如果是一个对象,会变成字符串. 如果要定制弹出框样式,可以使用 `bui.confirm`
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/CHZLwL/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/CHZLwL/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

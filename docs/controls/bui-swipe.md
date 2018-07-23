@@ -6,11 +6,11 @@
 
 ?> `bui.sidebar`,`bui.listview` 都是基于bui.swipe构建. 
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/R4hLDl/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/R4hLDl/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 ## 滑动后隐藏头部的例子
 
 ?> bui.swipe+bui.list 的复杂交互, 需要在手机才能看到效果.
 
-<iframe width="100%" height="450" src="https://code.hcharts.cn/easybui/R4hLDl/1/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/R4hLDl/1/share/js,html,css,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
