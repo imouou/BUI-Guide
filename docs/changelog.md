@@ -4,7 +4,8 @@
 ## 目录
 [TOC]
 
-## 1.4.6 20180730
+
+## 1.5.0 20180930
 
 ### 升级指南
 
@@ -26,10 +27,162 @@ $ buijs update -p apicloud
 $ buijs update -p appcan    
 ```
 
-## buijs 工程更新
-1. 修正json文件修改不更新
-2. 修复加入第三方插件时,会导致插件失效, 引入第三方插件需要以 .min.js .min.css 命名才不会被修改.
+## 重要更新
+原本 540规范,升级成750 规范, 切图的时候如果设计稿是750的, 不再需要转稿了.
 
+修改UI控件的参数的所有回调的this指向控件本身, 原本的点击对象this 在 e.target 获取
+一些无需传参的方法,支持bui.storage().get() 或者 bui.storage.get() bui.platform 等
+
+## css 更新
+1. 更新几种大小配置 mini,small,large,xlarge,xxlarge
+2. 更新几种颜色配置 default,primary,warning,success,danger
+3. 更新圆角配置 round
+4. 更新大圆配置 ring
+5. 新增图标
+6. 新增角标
+
+## bui-fast 插件
+1. 修复 bui-select 的初始化书写
+2. 新增 bui-levelselect 
+3. 
+
+## bui.sidebar
+1. 修复双侧滑遮罩偶尔不显示问题;
+
+## bui.tab
+1. 新增tab控件,简化tab的初始化
+2. 新增tab切换菜单动画效果
+3. 菜单在左边采用新的结构,更加整体
+
+## bui.dialog
+1. 新增弹窗里面又开弹窗的zIndex参数设置,避免被已有遮罩覆盖
+
+## bui.router
+1. 修复 router.$ 对数字开头id 不支持问题
+
+## bui.levelselect 
+1. 修复静态渲染
+
+
+## bui.storage
+1. 修复存储二维数据的时候,拿到的是一个半对象.
+
+## bui.timer
+1. 回调增加target的获取
+
+## bui.swipe
+1. 修复上下自定义移动位置的时候不正确
+
+
+
+
+
+
+## 1.4.7 20180831
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js 
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js 
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js 
+$ buijs update -p apicloud 
+
+# 更新 appcan 平台 bui.css, bui.js 
+$ buijs update -p appcan    
+```
+
+## bui-fast 插件
+1. 修复 bui-select 的初始化书写
+2. 新增 bui-levelselect 
+3. 
+
+## bui.mask
+1. 修复遮罩看不到
+
+## bui.select
+1. 新增对数据的自定义字段的支持
+2. 新增 empty 方法,用于清空数据
+3. 修复数据如果是普通字符串时,全选,反选,激活等方法无效
+4. 修复当值是1,2,3 的时候, 会导致数据不准确问题
+
+## bui.upload
+1. 新增拍照上传,如果直接转换展示的话,图片较大可能会出现卡死现象, 建议上传以后展示返回回来的地址较好.
+2. 修复pc无法测试选择文件问题
+
+## bui.list
+1. 新增empty 方法
+
+## bui.listview
+1. 修复jquery版本会导致高度变小问题
+
+## bui.levelselect
+1. 新增在change事件拿到当前的一些数据及操作信息
+
+## bui.slide
+1. 新增 add, remove 方法, 便于动态修改tab, 比方循环
+
+## bui.btn
+1. 修复多页开发的传参如果url? 会出现参数重复的情况
+
+## bui.on
+1. 新增 pageshow pagehide 事件监听, 用户捕获物理Home键
+
+
+## bui.number
+1. 修复动态创建的模板在不同平台下展示不一致,改成字体图标
+
+
+## buijs 0.4.2 工程更新
+
+### 升级指南 执行
+```
+buijs update -d
+```
+
+1. 修正json文件修改不更新
+2. 修复加入第三方插件时,会导致插件失效, 引入第三方插件需要放在js/plugins/目录下才不会被压缩编译.
+3. 修复app.json 等文件创建模板后会被覆盖问题
+4. 修复覆盖的文件,或者新增的文件,修改不会同步问题
+5. 修复删除文件夹以后,dist只删除文件,目录还存在的问题
+6. 新增图片压缩功能
+7. 新增对 *.min.js 结尾的文件不做编译
+
+## 1.4.6 20180801
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js 
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js 
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js 
+$ buijs update -p apicloud 
+
+# 更新 appcan 平台 bui.css, bui.js 
+$ buijs update -p appcan    
+```
+
+## 修复 page-chat , page-login, main-tab 模板
+
+
+## bui.router
+1. 修复路由开启缓存以后,刷新找不到currentPage
 
 ## bui.loading
 1. 统一为页面跳转的效果;
@@ -38,9 +191,15 @@ $ buijs update -p appcan
 1. 修复 点击checkbox 无法选中的情况
 2. 新增参数可以控制单选是否可以取消
 3. 修复 data value 为数字,导致无法选择的情况
+4. 修复 data 数据为普通数组问题
+
+## bui.levelselect 
+1. 修复无法选择第三层问题
 
 ## bui.upload
 1. 修复onFail 无效问题;
+2. 修复 bingotouch 版本的文件读取无法显示;
+3. 修复 remove 方法, 默认删除最后选择的一个图片数据, 不需要传名字, 不同系统的名字不一样
 
 ## bui.list 
 1. 修复下拉刷新以后不继续请求分页问题
@@ -48,13 +207,27 @@ $ buijs update -p appcan
 ## bui.btn 
 1. 新增?号传参的方式
 
+## bui.storage 
+1. 修复删除json数组的某个值无效
+
+## bui.scroll 
+1. 修复scrollTips 配置没有数据的时候,刷新后返回默认值
+
+
+## bui.slide 
+1. 新增跨屏切换效果示例
+
+## bui.alert 
+1. 新增对不同类型对象的调试支持
+
+
 ## 1.4.5 20180702
 
 ### 升级指南
 
 ** 一, 资源替换: **
 
-执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 命令才会生效
+执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 以上命令才会生效
 
 ```
 # 更新 webapp 平台 bui.css, bui.js 
@@ -86,7 +259,7 @@ $ buijs update -p appcan
 1. 在 bui.isWebapp = false 的情况下, 路由会加载2次问题;
 2. 新增路由的 router.$() 方法,确保查找的元素不跟另外页面冲突;
 3. 修复后退时,页面参数丢失问题
-4. 路由的进度条统一为黑块居中
+4. 路由的进度条统一为黑块居中, 需要替换 bui.css 
 
 #### bui.pickerdate 
 1. 修复在微信上弹出时,日期的底部按钮,会跳到中间,布局错乱, (替换bui.css)

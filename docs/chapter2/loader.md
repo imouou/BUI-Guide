@@ -193,7 +193,7 @@ loader.map({
 // 把路由实例化给 window.router 
 window.router = bui.router();
 
-bui.on("pageinit",function(){
+bui.ready(function(){
 
     // 加载页面到div容器里面, 更多参数请查阅API
     router.init({
