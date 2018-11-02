@@ -1,17 +1,12 @@
 # BUI 版本更新日志
 
-
-## 目录
-[TOC]
-
-
-## 1.5.0 20180930
+## 1.5.0 20181031
 
 ### 升级指南
 
 ** 一, 资源替换: **
 
-执行命令, 选择你使用的平台, buijs 需要更新到 0.4.1 命令才会生效
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
 
 ```
 # 更新 webapp 平台 bui.css, bui.js 
@@ -31,7 +26,13 @@ $ buijs update -p appcan
 原本 540规范,升级成750 规范, 切图的时候如果设计稿是750的, 不再需要转稿了.
 
 修改UI控件的参数的所有回调的this指向控件本身, 原本的点击对象this 在 e.target 获取
-一些无需传参的方法,支持bui.storage().get() 或者 bui.storage.get() bui.platform 等
+一些无需传参的方法.
+
+优化了gulpfile.js 针对es6的编译
+
+## 新增 bui.input 控件,用于输入表单类的交互.
+## 新增 progress 标签进度
+## 新增 bui.store 数据订阅器
 
 ## css 更新
 1. 更新几种大小配置 mini,small,large,xlarge,xxlarge
@@ -54,14 +55,23 @@ $ buijs update -p appcan
 2. 新增tab切换菜单动画效果
 3. 菜单在左边采用新的结构,更加整体
 
+## bui.unit.tel
+1. 去除电话号码的验证,由开发者自己判断
+
 ## bui.dialog
 1. 新增弹窗里面又开弹窗的zIndex参数设置,避免被已有遮罩覆盖
+2. 修复动态修改的高度自适应问题
 
 ## bui.router
 1. 修复 router.$ 对数字开头id 不支持问题
+2. 修复 router.refresh 对首页无效问题
 
 ## bui.levelselect 
 1. 修复静态渲染
+2. 修改value方法, 获取到的为 json数组, [{name:"",value:"",index:""}]
+
+## bui.dropdown 
+1. 支持动态渲染数据,数据格式跟bui.select保持一致
 
 
 ## bui.storage
@@ -70,10 +80,55 @@ $ buijs update -p appcan
 ## bui.timer
 1. 回调增加target的获取
 
+## bui.number
+1. 新增values 方法, 用于批量设置及获取对应的number 控件值
+2. 新增 autocheck 参数
+3. 新增 onChange 参数
+4. 新增 onInited 参数
+
 ## bui.swipe
 1. 修复上下自定义移动位置的时候不正确
+2. 修复在微信浏览器里面,下拉偶尔会触发微信的展示X5内核
 
 
+## bui.stepbar
+1. 新增 hasNumber 参数
+2. 增加对横向导航的动态控制
+
+
+## bui.slide
+1. 新增 loop 参数,允许循环处理
+2. 新增 cross 参数,简化跨屏处理
+3. 新增bui-slide-skin01,bui-slide-skin02 激活皮肤
+
+
+
+## bui.actionsheet
+1. 修复动态修改buttons数据会动态创建多个 actionsheet 问题
+
+
+
+## bui.pickerdate
+1. 修复日期如果是年份的时候,取消会变成最小日期
+
+
+## bui.number
+1. 新增图标字段,支持图标路径以及图标样式名,变成图标列表;
+1. 新增图片字段,支持图片路径以及图片样式名,变成图片列表;
+
+
+## bui.select
+1. 新增图标字段;
+2. 新增values方法,获取键值对;
+3. 修复value参数传值不显示问题
+
+
+## bui.pullrefresh
+1. 修复在微信浏览器里面,下拉偶尔会触发微信的展示X5内核
+
+
+## bui.hint
+1. 修复多页不显示问题
 
 
 
