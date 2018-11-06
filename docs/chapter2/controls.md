@@ -6,7 +6,7 @@
 
 - **滑动交互控件:** *例如:*
 
-    * 焦点图`bui.slide`, 选项卡`bui.slide`,列表下拉刷新及滚动加载`bui.list` , 下拉刷新`bui.pullrefresh`, 滚动加载`bui.scroll`, 抽屉控件`bui.swipe`, 侧边栏`bui.sidebar`, 侧滑菜单`bui.listview`, 日期选择 `bui.pickerdate`.
+    * 焦点图`bui.slide`, 选项卡`bui.tab`,列表下拉刷新及滚动加载`bui.list` , 下拉刷新`bui.pullrefresh`, 滚动加载`bui.scroll`, 抽屉控件`bui.swipe`, 侧边栏`bui.sidebar`, 侧滑菜单`bui.listview`, 日期选择 `bui.pickerdate`.
 
 - **点击交互控件:** *例如:*
     * 上拉菜单`bui.actionsheet`,下拉菜单`bui.dropdown`,折叠菜单`bui.accordion`,选择菜单`bui.select`,星级评分`bui.rating`,步骤条`bui.stepbar`
@@ -46,35 +46,35 @@
 *初始化, bui-fast 快速书写 `bui-list` <kbd>tab</kbd>*
 ```js
 var uiList = bui.list({
-        id: "#uiScroll",
-        url: "userlist.json",
-        data: {},
-        template: templateList,
-        height: 0,
-        page:1,
-        pageSize:10,
-        field: {
-            page: "page",        // 分页字段
-            size: "pageSize",    // 页数字段
-            data: "data"         // 数据
-        },
-        onLoad: function (scroll) {
-            // 自定义渲染
-        }
-    });
-
-    //生成列表的模板
-    function templateList (data) {
-
+    id: "#uiScroll",
+    url: "http://www.easybui.com/demo/json/shop.json",
+    pageSize:5,
+    data: {},
+    //如果分页的字段名不一样,通过field重新定义
+    field: {
+        page: "page",
+        size: "pageSize",
+        data: "data"
+    },
+    template: function (data) {
         var html = "";
+        data.map(function(el, index) {
 
-            $.each(data,function(index, el) {
-
-                html += '<li class="bui-btn"><i class="icon-facefill"></i>'+el.name+'</li>';
-            });
+            html +=`<li class="bui-btn bui-box">
+                <div class="bui-thumbnail"><img src="${el.image}" alt=""></div>
+                <div class="span1">
+                    <h3 class="item-title">${el.name}</h3>
+                    <p class="item-text">${el.address}</p>
+                    <p class="item-text">${el.distance}公里</p>
+                </div>
+                <span class="price"><i>￥</i>${el.price}</span>
+            </li>`
+        });
 
         return html;
-    };
+    }
+});
+    
 ```
 ?> `bui.list`控件有个新手比较难理解的地方,就是`field`字段映射, 经常出不来数据. `templateList` 接收的数据来源于你配置的字段, 返回数组才能做对应的分页比对. 
 
@@ -161,9 +161,8 @@ scroll.scrollTop();
 ?> 控件跟控件之间的相互嵌套, 甚至里面还可以继续嵌套列表刷新, 跟列表侧滑. 
 
 #### 效果预览 
-[新开窗口编辑](http://jsbin.com/teyudot/edit?js,html,output)
 
-<iframe src="http://jsbin.com/teyudot/edit?js,output" width="100%" height="500px" frameborder="0"></iframe>
+<iframe src="http://www.easybui.com/preview/?url=http://www.easybui.com/demo/#pages/ui_controls/bui.tab_foot_tab" frameborder="0" width="100%" height="800px"></iframe>
 
 
 #### 代码分析
@@ -219,14 +218,14 @@ scroll.scrollTop();
                                 <li>
                                     第1屏-1-内容
                                 </li>
-                                <li>
+                                <li style="display:none;">
                                     第1屏-2-内容
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </li>
-                <li>
+                <li style="display:none;">
                     第2屏
                 </li>
             </ul>
@@ -241,23 +240,18 @@ scroll.scrollTop();
 </footer>
 ```
 
-*初始化 bui-fast 快速书写 `bui-slide-tab` <kbd>tab</kbd>*
+*初始化 bui-fast 快速书写 `bui-tab` <kbd>tab</kbd>*
 ```js
 
 // 底部菜单TAB
-var uiSlideTab = bui.slide({
+var uiSlideTab = bui.tab({
     id:"#uiSlideTab",
-    menu:"#uiSlideTabNav",
-    children:".bui-tab-main > ul",
-    scroll: true
+    menu:"#uiSlideTabNav"
 })
 
 // 第1屏的TAB
-var uiSlideTabChild = bui.slide({
-    id:"#uiSlideTabChild",
-    menu:".bui-nav",
-    children:".bui-tab-main > ul",
-    scroll: true
+var uiSlideTabChild = bui.tab({
+    id:"#uiSlideTabChild"
 })
 
 // 禁止滑动操作,最新,最热.
@@ -275,7 +269,7 @@ uiSlideTabChild.lock();
 
 !> 列表侧滑控件需要右键打开,并开启chrome模拟,才能滑动.
 
-<iframe src="http://jsbin.com/pomafav/edit?js,output" frameborder="0" width="100%" height="500px"></iframe>
+<iframe src="http://www.easybui.com/preview/?url=http://www.easybui.com/demo/#pages/ui_controls/bui.list_listview" frameborder="0" width="100%" height="800px"></iframe>
 
 *例子2: *
 
@@ -301,7 +295,24 @@ var uiList = bui.list({
     handle:"li",
     page:1,
     pageSize:9,
-    template: templateList,
+    template: function (data) {
+        var html = "";
+        $.each(data,function(index, el) {
+            html +='<li status="1" style="height:46px;">';
+            html +='    <div class="bui-btn bui-box">';
+            html +='        <div class="span1">'+el.name+'</div>';
+            html +='        <i class="icon-listright"></i>';
+            html +='    </div>';
+            // 侧滑菜单结构
+            html +='    <div class="bui-listview-menu swipeleft">';
+            html +='        <div class="bui-btn primary">修改</div>';
+            html +='        <div class="bui-btn danger">删除</div>';
+            html +='    </div>';
+            html +='</li>';
+        });
+
+        return html;
+    },
     field: {
         data: "data"
     }
@@ -316,25 +327,6 @@ var uiListview = bui.listview({
     }
 });
 
-// 关键代码: 模板
-function templateList (data) {
-    var html = "";
-    $.each(data,function(index, el) {
-        html +='<li status="1" style="height:46px;">';
-        html +='    <div class="bui-btn bui-box">';
-        html +='        <div class="span1">'+el.name+'</div>';
-        html +='        <i class="icon-listright"></i>';
-        html +='    </div>';
-        // 侧滑菜单结构
-        html +='    <div class="bui-listview-menu swipeleft">';
-        html +='        <div class="bui-btn primary">修改</div>';
-        html +='        <div class="bui-btn danger">删除</div>';
-        html +='    </div>';
-        html +='</li>';
-    });
-
-    return html;
-}
 ```
 ?> 关键代码在于模板的生成, `li`标签上有 `status=1` 属性, 并且还有高度样式, 这是告诉`bui.listview`控件,菜单按钮我已经生成了,你不要再生成了, 减少重复渲染. 
 
@@ -400,7 +392,7 @@ $(".btn-scrolltop").on("click",function(e){
 
 ?> 这是一个综合例子, 结合事件方法一起使用, 理解了这个例子, 才算真的理解BUI的控件的灵活之处.  
 
-<iframe width="100%" height="450" src="https://jshare.com.cn/easybui/YJSLuW/4/share/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe src="http://www.easybui.com/preview/?url=http://www.easybui.com/demo/#pages/ui_controls/bui.select_level_popup" frameborder="0" width="100%" height="800px"></iframe>
 
 !> 上面的代码不能请求外部数据,想要预览效果,可以点击下面地址.
 

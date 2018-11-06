@@ -1,3 +1,8 @@
+* 请先选择文档版本阅读
+
+  * [1.5.x](http://www.easybui.com/docs/)
+  * [1.4.x](http://www.easybui.com/guide-1.4.x/)
+
 * 入门
 
   * [为什么用BUI?](chapter1/why.md)

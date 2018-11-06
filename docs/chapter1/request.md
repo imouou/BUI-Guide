@@ -44,7 +44,7 @@ bui.ajax({
 
 ## 模板渲染
 
-?> 这里你熟悉`$`的操作都可以直接在`bui.ready`里面使用, 模板渲染可以使用`$.html + 字符串`拼接, 也可以支持`ES6 的模板`, 你还可以引入第三方模板, [artTemplate](https://aui.github.io/art-template/zh-cn/docs/index.html), `BUI+Vuejs` 也是不错的选择. 
+?> 这里你熟悉`$`的jQuery及Dom操作都可以直接在`bui.ready`里面使用, 工程里面可以支持`ES6 的模板`. 
 
 ### 使用 `$` 渲染示例:
 
@@ -66,7 +66,7 @@ var templateList = function (data) {
     var html = '';
 
     data.forEach(function(el,index){
-        html += '<li class="bui-btn">'+el.name+'</li>';
+        html += `<li class="bui-btn">${el.name}</li>`;
     })
 
     return html;
@@ -83,42 +83,6 @@ $("#list").html(listTpl);
 ```html
 <ul id="list"></ul>
 ```
-### 使用 `artTemplate` 渲染示例:
-
-*list.js*
-```
-// 渲染
-<script>
-    // 示例数据,正常由请求返回
-    var data = [{
-            name: "hello"
-        },{
-            name: "bui"
-        }];
-
-    // 结合数据返回模板 script id="tpl-list"
-    var html = template("tpl-list",{ listData: data});
-
-　　　　$("#list").html(html);
-</script>
-
-```
-
-*list.html*
-```html
-// 引入artTemplate
-<script src="https://raw.githubusercontent.com/aui/art-template/master/lib/template-web.js"></script>
-
-<ul id="list"></ul>
-
-// 模板放html里
-<script id="tpl-list" type="text/html">
-{{each listData as item index}} 
-    <li class="bui-btn">{{item.name}}</li>
-{{/each}} 
-</script>
-```
-
 
 ## 数据存储
 
