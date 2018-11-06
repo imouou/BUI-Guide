@@ -14,10 +14,10 @@
 ## 页面跳转
 
 ?> 页面跳转有2种: `bui.btn` 跟 `bui.load`
-- `静态绑定跳转`,含有属性 `href` 则会调用跳转页面操作;
+- `静态属性绑定跳转`,含有属性 `href` 则会调用跳转页面操作;
 - `动态跳转`, 需要自己绑定按钮跳转操作;
 
-### 1. bui.btn(option) `静态绑定`  
+### 1. bui.btn(option) `静态属性绑定`  
 
 *参数: option是一个对象 *
 
@@ -29,13 +29,18 @@
 - Type: `string`
 - Detail: `要点击的目标`
 
+#### option.progress
+- Type: `boolean`
+- Detail: `是否开启进度条`
+
 ?> 绑定`.bui-page` 结构中 `.bui-btn`, `a`, 如果含有 `href` 属性则会跳转. `一个页面也只需要绑定一次`.  <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.btn API</a> 
 
 *示例:*
 
 ```html
 <div class="bui-page">
-  <div class="bui-btn" href="pages/page2/page2.html"></div>
+  <div class="bui-btn" href="pages/page2/page2.html">普通跳转</div>
+  <div class="bui-btn" href="pages/page2/page2.html?id=page1">传参跳转</div>
 </div>
 ```
 ```js
@@ -43,6 +48,7 @@
 bui.btn({id:".bui-page",handle:".bui-btn,a"}).load();
 
 ```
+!> 这里为什么还要初始化bui.btn,不直接使用a链接跳转呢? 因为这里针对连续快速点击做了处理. 
 
 ### 2. bui.load(option) `动态跳转`
 ?> 传参的时候比较方便 <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.load API</a> 
@@ -142,6 +148,11 @@ bui.load({ url: "pages/page2.html", replace:true });
 !> 注意, 以上的使用方式都需要在`bui.ready`的回调里面, `$` 选择器指 `Zepto`跟`jQuery`通用的方法.
 
 ## 使用原生方法
+
+```bash
+# 创建 bingotouch 平台版本
+$ buijs create -p bingotouch
+```
 在页面引入的公共脚本里面, 加入一个`bui.isWebapp = false;` 的配置项, 运行在 `bui.ready` 里面的综合方法, `bui.load`,`bui.back`,`bui.ajax` 等等, 都会采用原生的处理. Yes, 就是这么简单!
 
 ```js
@@ -149,7 +160,7 @@ bui.isWebapp = false;
 
 ```
 
-!> 启用原生以后,Chrome无法调试, 需要在`Bingotouch`或者对应的平台容器上才能调试. 
+!> 启用原生以后,Chrome无法调试, 需要在`Bingotouch`或者对应的平台容器上才能调试. Bingotouch 为公司内部开发使用.
 
 
 ?> 接下来可以继续学习

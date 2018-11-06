@@ -60,46 +60,19 @@ bui.ajax({
 
 ## Chrome跨域调试
 
-?> 打开chrome 开发者工具, 开启模拟手机效果, 这样才能模拟手机的滑动拖拽事件.
+?> 打开chrome 开发者工具, 开启模拟手机效果, 这样才能模拟手机的滑动拖拽事件. 
 
 ![chrome 预览图](../static/images/chrome.png)
 
-!> 在PC调试数据,界面等内容,需要打开跨域的chrome
-
-* **Chrome 49以上版本解决跨域问题**
-
-  **mac** 在终端上输入以下命令:
-  ```bash
-  $ open -a Google\ Chrome --args --disable-web-security  --user-data-dir
-  ```
-  **windows** 新建个快捷方式,右键->属性, 目标路径后面增加  `--args --disable-web-security  --user-data-dir`
-  ```
-  "C:\Program Files\Google\Chrome\Application\chrome.exe" --args --disable-web-security  --user-data-dir
-  ```
-    
-* **Chrome 49以下版本解决跨域问题**
-
-  **mac** 在终端上输入以下命令:
-  ```bash
-  $ open -a Google\ Chrome --args --disable-web-security
-  ```
-  **windows** 新建个快捷方式,右键->属性, 目标路径后面增加  `--args --disable-web-security` 
-  ```
-  "C:\Program Files\Google\Chrome\Application\chrome.exe" --args --disable-web-security 
-  ```
-
-如果以上方式不能解决你的跨域问题,请自行网上搜索 chrome对应的版本的跨域.
-
+!> 在PC调试数据,界面等内容,需要打开跨域的chrome, 搜索`chrome 跨域`
 
 ## Debugtool调试
 
-?> DebugTool是手机上的一个应用,使用 `buijs create -p bingotouch` 创建的工程, 可以在debugtool模拟打包后的调试效果,仅限于`Bingotouch`,`Link`开发的应用. 全局配置 `bui.isWebapp = false;` 可以切换成原生请求,以解决移动端跨域的问题.
+?> DebugTool是手机上的一个应用,可以预览远程地址,并输出console.log的相关信息, 必须使用第一种跨域方式,才能在手机预览.
 
 * [安卓版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v3.4.0.apk)
 * [IOS版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v1.0.ipa)
 
-
-手机安装应用以后,工程需要服务器部署起来,然后才能在手机预览. 手机端预览,请更改成您的 `http://IP+端口号`.
 
 ## 微信调试
 
@@ -110,7 +83,7 @@ bui.ajax({
 <script src="bui.js?t=2016073101"></script>
 ```
 
-?> 如果你使用的是`bui.loader`模块化开发, 重新初始化`window.loader`设置缓存参数为false, 加载的模块便会采用时间戳的方式加载.
+?> 如果你使用的是单页模块化开发, 重新初始化`window.loader`设置缓存参数为false, 加载的模块便会采用时间戳的方式加载.
 
 ```js
 window.loader = bui.loader({cache: false});

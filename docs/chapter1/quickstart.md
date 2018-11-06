@@ -6,14 +6,14 @@
 
 ![焦点图](../static/images/controls/bui-slide_low.gif)
 
-?> 这是BUI最简单的使用方式,引入相应的库即可使用. <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed?html,js,output" target="_blank">马上试试</a>
+?> 这是BUI最简单的使用方式,引入相应的库即可使用. 
 
 
 ```html
-  <link rel="stylesheet" href="//unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
   <!-- bui.js 依赖于Zepto或jQuery -->
-  <script src="//unpkg.com/buijs/lib/zepto.js"></script>
-  <script src="//unpkg.com/buijs/lib/latest/bui.js"></script>
+  <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+  <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
 ```
 
 *index.html*
@@ -25,11 +25,11 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>BUI 多页开发标准页面</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="//unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
   </head>
   <body>
-    <script src="//unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="//unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
           // 所有控件及方法需要在这里执行
@@ -80,14 +80,7 @@
             <li>
                 <!--第1屏-->
                 <img src="" alt="">
-                <div class="bui-slide-title">图片标题</div>
             </li>
-        </ul>
-    </div>
-    <!-- 分屏菜单 -->
-    <div class="bui-slide-head">
-        <ul >
-            <li>1</li>
         </ul>
     </div>
 </div>
@@ -101,8 +94,8 @@
   // 焦点图控件初始化
   var uiSlide = bui.slide({
       id:"#uiSlide",
-      height:200,
-      zoom: true
+      height:380,
+      autopage:true
   })
 ```
 ?> 给实例增加事件监听. 
@@ -127,7 +120,9 @@
 ## 在线预览
 
 
-?> 最终组合以后的代码, 你可以点击这里 <a class="jsbin-embed" href="http://jsbin.com/jukuvec/16/embed?html,js,output" target="_blank">在线编辑预览</a>
+?> 最终组合以后的代码, 你可以点击这里 <a href="http://www.easybui.com/preview/?url=/guide/examples/chapter1/slide.html" target="_blank">在线预览效果</a>
+
+<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/slide.html" width="100%" height="800px" frameborder="0"></iframe>
 
 *index.html*
 
@@ -138,7 +133,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>BUI 多页开发标准页面</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="//unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
   </head>
   <body>
     <!-- BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须) -->
@@ -158,20 +153,12 @@
                 <ul>
                     <li>
                         <!--第1屏-->
-                        <img src="" alt="">
-                        <div class="bui-slide-title">图片标题</div>
+                        <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
                     </li>
-                    <li>
-                        <!--第2屏-->
-                        <img src="" alt="">
-                        <div class="bui-slide-title">图片标题</div>
+                    <li style="display: none;">
+                        <!--第2屏 设置display:none;可以避免加载中闪跳问题-->
+                        <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
                     </li>
-                </ul>
-            </div>
-            <div class="bui-slide-head">
-                <ul >
-                    <li>1</li>
-                    <li>2</li>
                 </ul>
             </div>
         </div>
@@ -180,22 +167,22 @@
         <!-- 固定底部区 -->
       </footer>
     </div>
-    <script src="//unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="//unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
           // 焦点图控件初始化
             var uiSlide = bui.slide({
                 id:"#uiSlide",
-                height:200,
-                zoom: true
+                height:380,
+                autopage:true
             })
             // 监听跳转以后触发
             uiSlide.on("to",function(index){
               console.log(index)
             })
             // 跳转到第2个,索引值从0开始
-            uiSlide.to(1);
+            // uiSlide.to(1);
         })
     </script>
   </body>

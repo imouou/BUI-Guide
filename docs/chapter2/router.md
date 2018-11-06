@@ -387,20 +387,10 @@ router.preload([{
 
 ```
 
-## 获取当前页面dom对象
 
-### router.currentPage()
+## 页面重复加载
 
-*示例: *
-```js
-// 获取当前页面唯一ID
-var currentPage = router.currentPage();
-
-```
-
-## 页面需要重复加载
-
-### router.$ 替换 $
+### 使用 router.$ 替换 $ 选择器
 
 ?> `router.$` 跟 `$`的区别在于, router.$ 是相对于当前页面查找, 有一种情况, 页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种时候,`$`绑定页面的事件会被重复绑定, `router.$` 则不会.
 
@@ -504,27 +494,6 @@ router.on("loadpart",function(e){
 })
 ```
 
- 
-*index.js *
-
-```js
-bui.ready(function(){
-    // 执行事件绑定
-    bind();
-})
-
-function bind(){
-  // 静态绑定 bui-router 容器下所有带有 href 属性的按钮, 点击就会自动跳转, 一个单页应用只需要初始化一次.
-  bui.btn({id:"#bui-router",handle:".bui-btn"}).load();
-  
-  // 监听页面所有后退事件
-  router.on("back",function(e){
-    console.log(e);
-  })
-}
-
-```
-
 !> 注意: 建议全局事件都在 index.js 加载. 事件名全部为小写.
 
 
@@ -532,3 +501,4 @@ function bind(){
 ?> 接下来你可以继续学习
 
 - [模块化](chapter2/loader)
+- [微信Webapp开发的各种变态路由需求及解决办法!](https://segmentfault.com/a/1190000015493097)

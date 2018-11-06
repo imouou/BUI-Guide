@@ -1,9 +1,7 @@
 # 布局
-?> BUI 内置了3种布局,简单强大. 可以把以下代码,复制到 [在线尝试布局](http://jsbin.com/qoxexug/edit?html,output) 预览效果.
 
-<iframe src="http://jsbin.com/qoxexug/edit?output" frameborder="0" style="width:100%;height: 500px"></iframe>
 
-!> 以下示例为了能够一眼看到结果,会增加背景色,高度等,实际开发`不推荐把样式写在标签上`
+<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/layout.html" width="100%" height="800px" frameborder="0"></iframe>
 
 ## 流式12列布局 
 

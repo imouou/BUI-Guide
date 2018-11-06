@@ -1,0 +1,372 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>BUI 多页开发标准页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+<style>
+	.example-fluid > li,
+	.example-box2 > div,
+	.example-box > div{
+		background: #e1e1e1;
+		min-height: .8rem;
+		border-radius: 10px;
+		padding: .1rem;
+	}
+	.example-box div:nth-child(odd),
+	.example-box2 div:nth-child(odd),
+	.example-fluid li:nth-child(odd) {
+		background: #efefef;
+	}
+	.example-box3 div .bui-btn ,
+	.example-box3 div .bui-btn-inline ,
+	.example-fluid div .bui-btn {
+		background: #efefef;
+		border: 0;
+		border-radius: 10px;
+	}
+	.example-box3 div:nth-child(odd) .bui-btn,
+	.example-box3 div:nth-child(odd) .bui-btn-inline ,
+	.example-fluid div:nth-child(odd) .bui-btn,
+	.example-fluid div:nth-child(odd) .bui-btn-inline {
+		background: #e1e1e1;
+	}
+</style>
+  </head>
+  <body>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn btn-back"><i class="icon-back"></i></a>
+			
+		</div>
+		<div class="bui-bar-main">布局</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<h3 class="section-title"><a name="p1"></a>盒子弹性布局</h3>
+		<div class="bui-box example-box">
+			<div style="width:100px;">固定100px大小</div>
+			<div class="span1">剩余宽度自适应</div>
+			<div>自适应文本大小</div>
+		</div>
+		<h3 class="section-title"><a name="p2"></a>盒子等比布局</h3>
+		<div class="bui-box example-box2">
+			<div class="span1">
+				span1 = 1/3 大小
+			</div>
+			<div class="span2">
+				span2 = 2/3 大小
+			</div>
+		</div>
+		<h3 class="section-title"><a name="p3"></a>盒子留白布局</h3>
+		
+		<!-- 按钮左右布局 -->
+		<div class="bui-box-space example-box3">
+			<div class="span1">
+				<div class="bui-btn">左边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn">右边按钮</div>
+			</div>
+		</div>
+
+		<div class="bui-box-space example-box3">
+			<div class="span1">
+				<div class="bui-btn">左边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn">右边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn">右边按钮</div>
+			</div>
+		</div>
+		<div class="bui-box-space example-box3">
+			<div class="span1">
+				<div class="bui-btn">左边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn">右边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn">右边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn">右边按钮</div>
+			</div>
+		</div>
+		<div class="bui-box-space example-box3">
+			<div class="span1">
+				<div class="bui-btn-inline bui-left">左边按钮</div>
+			</div>
+			<div class="span1">
+				<div class="bui-btn-inline bui-right">右边按钮</div>
+			</div>
+		</div>
+		
+		<h3 class="section-title"><a name="p4"></a>流式布局</h3>
+		<ul class="bui-fluid example-fluid">
+			<li class="span10">10</li>
+			<li class="span2">2</li>
+			<li class="span8">8</li>
+			<li class="span4">4</li>
+			<li class="span6">6</li>
+			<li class="span6">6</li>
+			<li class="span4">4</li>
+			<li class="span4">4</li>
+			<li class="span4">4</li>
+			<li class="span3">3</li>
+			<li class="span3">3</li>
+			<li class="span3">3</li>
+			<li class="span3">3</li>
+			<li class="span2">2</li>
+			<li class="span2">2</li>
+			<li class="span2">2</li>
+			<li class="span2">2</li>
+			<li class="span2">2</li>
+			<li class="span2">2</li>
+		</ul>
+
+		<h3 class="section-title"><a name="p5"></a>流式留白布局</h3>
+		<!-- 列表的多列间隙布局 -->
+		<div class="bui-fluid-space example-fluid">
+			<div class="span6">
+				<div class="bui-btn">两列布局-左边</div>
+			</div>
+			<div class="span6">
+				<div class="bui-btn">两列布局-右边</div>
+			</div>
+			<div class="span4">
+				<div class="bui-btn">三列布局-左边</div>
+			</div>
+			<div class="span4">
+				<div class="bui-btn">三列布局-中间</div>
+			</div>
+			<div class="span4">
+				<div class="bui-btn">三列布局-右边</div>
+			</div>
+			<div class="span3">
+				<div class="bui-btn">四列布局-左边</div>
+			</div>
+			<div class="span3">
+				<div class="bui-btn">四列布局-中间</div>
+			</div>
+			<div class="span3">
+				<div class="bui-btn">四列布局-中间</div>
+			</div>
+			<div class="span3">
+				<div class="bui-btn">四列布局-右边</div>
+			</div>
+			<div class="span6">
+				<div class="bui-btn bui-btn-inline bui-left">两列布局-左边</div>
+			</div>
+			<div class="span6">
+				<div class="bui-btn bui-btn-inline bui-right">两列布局-右边</div>
+			</div>
+			<div class="span6 bui-align-center">
+				<div class="bui-btn bui-btn-inline">两列布局-左边</div>
+			</div>
+			<div class="span6 bui-align-center">
+				<div class="bui-btn bui-btn-inline">两列布局-右边</div>
+			</div>
+		</div>
+
+		<h3 class="section-title"><a name="p6"></a>流式盒子嵌套混搭布局</h3>
+		<ul class="bui-fluid example-fluid">
+			<li class="span6">
+				span6
+			</li>
+			<li class="span6">
+				span6
+			</li>
+			<li class="span6">
+				<div class="bui-fluid">
+					<div class="span6">span3</div>
+					<div class="span6">span3</div>
+				</div>
+			</li>
+			<li class="span6">
+				<div class="bui-box">
+					<div class="span1">span1</div>
+					<div class="span1">span1</div>
+				</div>
+			</li>
+		</ul>
+
+		
+		<a name="p7"></a>
+		<div class="section-title">流式等列布局 5列:bui-fluid-5</div>
+		<ul class="bui-fluid-1 example-fluid">
+			<li>1</li>
+		</ul>
+		<ul class="bui-fluid-2 example-fluid">
+			<li>1</li>
+			<li>2</li>
+		</ul>
+		<ul class="bui-fluid-3 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<ul class="bui-fluid-4 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ul class="bui-fluid-5 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<ul class="bui-fluid-6 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+		<ul class="bui-fluid-7 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+		</ul>
+		<ul class="bui-fluid-8 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+		<ul class="bui-fluid-9 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+		</ul>
+		<ul class="bui-fluid-10 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		<ul class="bui-fluid-11 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+		</ul>
+		<ul class="bui-fluid-12 example-fluid">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<a name="p8"></a>
+		<div class="section-title">流式等列留白布局 5列:bui-fluid-space-5</div>
+		<ul class="bui-fluid-space-3">
+			<li><div style="background:#e1e1e1;">1</div></li>
+			<li><div style="background:#e1e1e1;">2</div></li>
+			<li><div style="background:#e1e1e1;">3</div></li>
+		</ul>
+		<ul class="bui-fluid-space-4">
+			<li><div style="background:#e1e1e1;">1</div></li>
+			<li><div style="background:#e1e1e1;">2</div></li>
+			<li><div style="background:#e1e1e1;">3</div></li>
+			<li><div style="background:#e1e1e1;">4</div></li>
+		</ul>
+		<ul class="bui-fluid-space-5">
+			<li><div style="background:#e1e1e1;">1</div></li>
+			<li><div style="background:#e1e1e1;">2</div></li>
+			<li><div style="background:#e1e1e1;">3</div></li>
+			<li><div style="background:#e1e1e1;">4</div></li>
+			<li><div style="background:#e1e1e1;">5</div></li>
+		</ul>
+		<ul class="bui-fluid-space-6">
+			<li><div style="background:#e1e1e1;">1</div></li>
+			<li><div style="background:#e1e1e1;">2</div></li>
+			<li><div style="background:#e1e1e1;">3</div></li>
+			<li><div style="background:#e1e1e1;">4</div></li>
+			<li><div style="background:#e1e1e1;">5</div></li>
+			<li><div style="background:#e1e1e1;">6</div></li>
+		</ul>
+		<ul class="bui-fluid-space-7">
+			<li><div style="background:#e1e1e1;">1</div></li>
+			<li><div style="background:#e1e1e1;">2</div></li>
+			<li><div style="background:#e1e1e1;">3</div></li>
+			<li><div style="background:#e1e1e1;">4</div></li>
+			<li><div style="background:#e1e1e1;">5</div></li>
+			<li><div style="background:#e1e1e1;">6</div></li>
+			<li><div style="background:#e1e1e1;">7</div></li>
+		</ul>
+		<ul class="bui-fluid-space-8">
+			<li><div style="background:#e1e1e1;">1</div></li>
+			<li><div style="background:#e1e1e1;">2</div></li>
+			<li><div style="background:#e1e1e1;">3</div></li>
+			<li><div style="background:#e1e1e1;">4</div></li>
+			<li><div style="background:#e1e1e1;">5</div></li>
+			<li><div style="background:#e1e1e1;">6</div></li>
+			<li><div style="background:#e1e1e1;">7</div></li>
+			<li><div style="background:#e1e1e1;">8</div></li>
+		</ul>
+		<br>
+
+		<div class="section-title">高度嵌套等比布局示例</div>
+		<div class="bui-box" style="height: 200px;">
+			<div class="span1" style="background:#d1d1d1;">A 高度自适应</div>
+			<div class="span1">
+				<div class="bui-box bui-box-vertical" style="height: 200px">
+					<div class="span2" style="background:#efefef;">B 2/3 高</div>
+					<div class="span1" style="background:#e1e1e1;">C 1/3 高</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+
+
+
+    
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+  </body>
+</html>
