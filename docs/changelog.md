@@ -1,5 +1,48 @@
 # BUI 版本更新日志
 
+Bui 1. 统一多页模块化开发， 2，路由后退允许往后加载， 3，sketch设计转 bui模板，4，做好demo，5做好官网，6做好案例产品，7升级旧模板 8 puller fresh 换成 swipe
+
+## 目录
+[TOC]
+
+
+## 1.5.1 20181130
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js 
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js 
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js 
+$ buijs update -p apicloud 
+
+# 更新 appcan 平台 bui.css, bui.js 
+$ buijs update -p appcan    
+```
+
+## bui.dialog
+1. create 方法的参数支持不传,放在dialog作为公共创建的参数
+2. open,close 方法增加单次切换
+
+## bui.toggle
+1. show,hide 方法增加单次切换
+
+## bui.actionsheet
+1. show,hide 方法增加单次切换
+
+## bui.select
+1. show,hide 方法增加单次切换
+
+## bui.list
+1. 如果手动调用刷新数据为空不会清空
 
 ## 1.5.0 20181031
 
