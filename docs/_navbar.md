@@ -1,5 +1,5 @@
-- [Home](/)
-- [在线实例](controls/)
+- [文档](/)
+- [组件](controls/)
 - [Demo](http://www.easybui.com/demo/)
 - [API](http://www.easybui.com/demo/api/)
 - Native API

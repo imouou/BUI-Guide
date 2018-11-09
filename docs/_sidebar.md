@@ -1,7 +1,4 @@
-* 请先选择文档版本阅读
-
-  * [1.5.x](http://www.easybui.com/docs/)
-  * [1.4.x](http://www.easybui.com/guide-1.4.x/)
+* [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
 
 * 入门
 
