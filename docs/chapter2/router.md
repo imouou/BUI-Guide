@@ -9,7 +9,7 @@
 
 ![单页示例预览](../static/images/controls/bui-router_low.gif)
 
-[点击这里体验](http://www.easybui.com/case/preview.html?url=http://www.easybui.com/case/source/router/demo/index.html)
+[点击这里体验](http://www.easybui.com/demo/#pages/router/index)
 
 ### 路由功能
 
@@ -125,9 +125,9 @@ bui.ready(function(){
 })
 ```
 
-?> 当路由初始化以后,会自动查找首页`main`模块, 这个模块是内部定义好的, 默认指向路径 `pages/main/main.html` 并自动加载相同名字的js文件. 除了`main`, 正常我们都是创建匿名模块,这样只要通过路径跳转,就会自动加载同名的脚本.
+?> 当路由初始化以后,会自动查找首页`main`模块, 这个模块是内部定义好的, 默认指向路径 `pages/main/main.html` 并`自动加载`相同名字的`js文件`. 除了`main`, 正常我们都是创建匿名模块,这样只要通过路径跳转,就会自动加载相对路径同名的模块.
 
-### main模块
+### 模块名: main
 *src/pages/main/main.html*
 
 ```html
@@ -239,7 +239,7 @@ var params = router.getPageParams();
 ## 页面后退
 ### router.back(option) 
 
-?> 支持后退以后执行回调,具体查看<a href="http://www.easybui.com/demo/api/classes/bui.back.html" target="_blank">bui.back API</a> 
+?> router.back 跟 bui.back 的区别在于, bui.back 后退会把历史记录一起后退,router.back 只是后退页面. 正常建议使用 bui.load 及 bui.back.
 
 *参数: option是一个对象 *
 
@@ -390,6 +390,8 @@ router.preload([{
 
 ## 页面重复加载
 
+?> 页面重复加载的表现通常是, 渲染出不来,要刷新才有数据.
+
 ### 使用 router.$ 替换 $ 选择器
 
 ?> `router.$` 跟 `$`的区别在于, router.$ 是相对于当前页面查找, 有一种情况, 页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种时候,`$`绑定页面的事件会被重复绑定, `router.$` 则不会.
@@ -442,7 +444,7 @@ A->B->C->B->C
 ```js
 router.on("load",function(e){
   // 获取当前页的模块
-  console.log(e.currentTarget);
+  console.log(e.target);
   // 获取上一页的模块
   console.log(e.prevTarget);
 })
@@ -454,7 +456,7 @@ router.on("load",function(e){
 ```js
 router.on("complete",function(e){
   // 获取当前页的模块
-  console.log(e.currentTarget);
+  console.log(e.target);
   // 获取上一页的模块
   console.log(e.prevTarget);
 })
@@ -465,7 +467,7 @@ router.on("complete",function(e){
 ```js
 router.on("back",function(e){
   // 获取当前页的模块
-  console.log(e.currentTarget);
+  console.log(e.target);
   // 获取上一页的模块
   console.log(e.prevTarget);
 })
@@ -476,7 +478,7 @@ router.on("back",function(e){
 ```
 router.on("refresh",function(e){
   // 获取当前页的模块
-  console.log(e.currentTarget);
+  console.log(e.target);
   // 获取上一页的模块
   console.log(e.prevTarget);
 })
@@ -488,7 +490,7 @@ router.on("refresh",function(e){
 ```
 router.on("loadpart",function(e){
   // 获取当前页子模块
-  console.log(e.currentTarget);
+  console.log(e.target);
   // 获取当前页父模块
   console.log(e.prevTarget);
 })

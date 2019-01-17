@@ -19,7 +19,20 @@
   * [动画交互](chapter2/animate.md)
   * [常用方法](chapter2/method.md)
 
-* 效率
+* 数据驱动
+  * [介绍](store/about.md)
+  * [store 实例](store/distance.md)
+  * [计算属性与侦听器](store/computed.md)
+  * [模板语法](store/template-synatax.md)
+  * [属性与值绑定](store/attribute.md)
+  * [class与style绑定](store/class.md)
+  * [表单绑定](store/form.md)
+  * [模板渲染](store/template.md)
+  * [事件处理](store/event.md)
+  * [控件结合](store/controls.md)
+  * [综合案例](store/case.md)
+
+* 提高效率
   * [BUI-Fast](tools/buifast.md)
   * [buijs-cli](tools/buijs.md)
   * [bui-template](tools/bui-template.md)

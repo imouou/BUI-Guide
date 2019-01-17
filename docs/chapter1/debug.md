@@ -74,18 +74,30 @@ bui.ajax({
 * [IOS版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v1.0.ipa)
 
 
-## 微信调试
+## 微信调试缓存
 
 ?> 微信调试需要注意的是,微信里面的缓存很严重,每次修改,需要给修改的js引用,后面增加`?t=时间戳`之类的方式,来确保脚本的更新.
+
+### 去除脚本缓存
 
 *例如:*
 ```html
 <script src="bui.js?t=2016073101"></script>
 ```
-
 ?> 如果你使用的是单页模块化开发, 重新初始化`window.loader`设置缓存参数为false, 加载的模块便会采用时间戳的方式加载.
 
 ```js
 window.loader = bui.loader({cache: false});
+```
+
+### 去除模板缓存
+?> 如果你的页面是单页,则在路由初始化的时候,加上`cache:false`; 如果是多页,则在地址栏上,加上`?t=时间戳`
+
+```js
+router.init({
+    ...
+    cache: false
+    ...
+})
 ```
 
