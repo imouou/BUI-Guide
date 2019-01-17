@@ -1,12 +1,24 @@
 # BUI 版本更新日志
 
-Bui 1. 统一多页模块化开发， 2，路由后退允许往后加载， 3，sketch设计转 bui模板，4，做好demo，5做好官网，6做好案例产品，7升级旧模板 8 puller fresh 换成 swipe
-
 ## 目录
 [TOC]
 
 
-## 1.5.1 20181130
+## 1.5.1 20181230
+
+### 重要更新
+bui.ajax 的 needJsonString 参数, 由于用的人比较少, 所以默认更改为 false, 基本跟 $.ajax 的行为一致. 
+意思就是:
+```
+bui.ajax({data: {id:123} ,needJsonString: true }).then() 这里的data默认是对象, needJsonString 为true 会在内部序列化. JSON.stingify(); 默认改为 fasle,不序列化,不需要传. 如果对你的项目有影响, 请使用全局配置.
+
+bui.config.ajax = {needJsonString: true};
+```
+
+bui.ajax, bui.upload, bui.download 等bingotouch,link原生控件,不再受 bui.isWebapp 的状态影响, 可以通过 needNative 参数自由选择该控件是否使用原生. 默认为web上传. 如果对旧项目有影响, 请使用 全局配置 bui.config.upload = { needNative:true } 使用原生上传. bingotouch,link平台支持.
+
+
+新增数据驱动开发 bui.store, 具体使用请查看教程
 
 ### 升级指南
 
@@ -28,6 +40,37 @@ $ buijs update -p apicloud
 $ buijs update -p appcan    
 ```
 
+## buijs npm 插件 
+支持创建bui项目的公共文件夹, 用于共享node_modules, 在一个文件夹下创建多个工程, 安装以后的 node_modules 可以作为多个工程共享, 不用每次安装.
+1. 升级buijs 0.5.3
+2. 创建bui工程名,作为所有工程目录 `buijs create bui-projects`, 删除 src目录 app.json ,只保留 `package.json, gulpfile.js `
+3. `npm install` 安装模块
+4. `buijs create project1` 创建带工程名的工程
+5. `npm run dev-project1` 运行服务 或者 `npm run build-project1 ` 编译打包
+
+## bui-template 工程优化
+1. 去除imagemin的优化, 这样跑项目快很多
+
+
+## bui.guid 
+1. 修改为默认是bui前缀, 可以自行加前缀,最多36位
+
+## bui.back
+1. 新增 beforeBack 后退处理.
+
+## bui.router
+1. 新增 resize 方法
+2. 新增 beforeLoad 参数,用于全局校验处理
+2. 新增 beforeBack 参数,用于全局校验处理
+3. router.load 新增 beforeLoad 参数,用于单次权限校验
+4. 修复多次快速跳转导致跳转的历史记录不正确问题
+5. 在syncHistory = true 的时候, 后退使用 bui.back , 这样可以避免后退多层导致的路由混乱问题
+6. 新增hash 参数,采用这种方式,则无需开启reloadCache, 刷新也可以后退
+
+## bui.loader
+1. 修复模块在isWebapp=false的时候,模块并行创建导致依赖不正确问题.
+2. 修复第一个模块连续跳转的时候会获取不到的问题.
+
 ## bui.dialog
 1. create 方法的参数支持不传,放在dialog作为公共创建的参数
 2. open,close 方法增加单次切换
@@ -35,14 +78,61 @@ $ buijs update -p appcan
 ## bui.toggle
 1. show,hide 方法增加单次切换
 
+## bui.dropdown
+1. 新增 values 方法, 获取选中的对象;
+2. 新增 reset 方法, 重置默认选中的值;
+3. 修改 value 方法,支持 value,text 的设定, 以后只需要使用这个方法,就可以选中想要选择的值;
+4. 新增 value 参数, 可以支持静态,动态渲染的初始化值;
+
 ## bui.actionsheet
 1. show,hide 方法增加单次切换
+2. 修复点击取消以后还回弹问题
 
 ## bui.select
 1. show,hide 方法增加单次切换
 
+## bui.input
+1. 修复设置值的时候, 没有减去字数
+
 ## bui.list
 1. 如果手动调用刷新数据为空不会清空
+
+## bui.download Bingotouch Cordova 平台
+1. 修复转码文件无法下载问题
+## bui.swipe 
+1. 默认打开的高度不准确问题
+2. 修复跟bui.scroll,bui.tab的滚动冲突问题
+3. 新增支持内容滚动以后才触发
+
+## bui.sidebar 
+1. 修复跟 bui.list 冲突问题
+
+## bui.upload 
+1. 修复示例添加的图片在前面的问题
+2. toBase64 方法新增 needCompress 参数, 默认不再压缩, 部分手机可能会出现崩溃;
+3. 修复外部处理上传图片数据时,上传的还是原图片
+4. 修复web上传返回的数据为字符串,默认为对象
+5. 新增startAll 批量上传接口, 没有续传,大图慎用.
+
+## bui.store 
+1. 新增 b-click 绑定方法
+2. 新增 b-data b-template 
+3. 新增 b-style 
+4. 新增 b-bind 
+5. 新增 b-html
+6. 基本行为跟 vue 保持一致
+
+## bui.fileselect 
+1. 新增 toFile 方法
+2. toBase64 方法新增 needCompress 参数, 默认不再压缩, 部分手机可能会出现崩溃;
+
+## bui.btn
+1. 修复 submit 的遮罩点击问题, 并且默认不允许点击取消,由用户控制
+
+## bui.loader
+1. 修复 cache false 的情况,第二次进入不加载脚本
+## bui.scroll
+1. 新增跳到底部方法 toBottom
 
 ## 1.5.0 20181031
 

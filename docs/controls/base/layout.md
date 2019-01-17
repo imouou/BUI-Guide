@@ -1,7 +1,7 @@
 # 布局
 
 
-<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/layout.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/layout.html" width="100%" height="820px" frameborder="0"></iframe>
 
 
 ## 弹性布局 

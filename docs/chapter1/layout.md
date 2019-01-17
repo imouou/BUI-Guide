@@ -1,7 +1,7 @@
 # 布局
 
 
-<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/layout.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/layout.html" width="100%" height="820px" frameborder="0"></iframe>
 
 
 ## 弹性布局 
@@ -179,10 +179,10 @@
     </div>
 </div>
 ```
-### 流式等比间隙 `bui-fluid-2-space`
+### 流式等比间隙 `bui-fluid-space-2`
 *例子: *
 ```html
-<div class="bui-fluid-2-space">
+<div class="bui-fluid-space-2">
     <div class="span1">
         1/2大小
     </div>
