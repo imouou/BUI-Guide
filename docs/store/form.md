@@ -1,6 +1,7 @@
 
 # 表单绑定
 
+
 ## 1. 双向绑定
 
 ?> `b-model` 仅支持 `input`,`textarea`,`select`3种html标签. 这个行为属性做两件事情. 
@@ -8,6 +9,8 @@
 - 把字段的值设置在当前input的value; 
 - input输入修改会把value的值赋值给字段. 
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/input" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 示例: 
 
@@ -76,6 +79,9 @@ var bs = bui.store({
 
 ## 3. 多选双向
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/checkbox" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ?> 多选是一个数组, 里面的值会跟自己本身的值进行比较,如果一致,会是选中状态. `b-text` 输出数组会加上逗号.
 
 ```js
@@ -126,7 +132,12 @@ var bs = bui.store({
 
 ## 5. 选择列表
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/select" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ?> 下面只是展示 select 的用法, 实际上移动端我们一般使用 `bui.select`控件.
+
+
 
 ### 单选
 
@@ -266,5 +277,8 @@ var bs = bui.store({
 <a href="http://www.easybui.com/demo/index.html#pages/store/select" target="_blank">查看效果</a>
 
 ### 多选联动
+
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 这个例子是一个自定义的模拟select, 我们放在[综合案例](store/case.md)里面讲. 

@@ -6,6 +6,9 @@
 ?> 模板不支持表达式, 模板应该尽量精简, 把表达式定义到 `computed` 里面, 可以处理跟`data`相关的计算. 
 
 
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/computed" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
 ### 例子1: 
 
 点击按钮的时候,`a`更新,并触发页面上的 `aDouble` 的dom更新. 
@@ -53,6 +56,7 @@ a: <b b-text="page.a" ></b>
 - object
 
 ?> 区别: `function方式`,fullName的修改不会重新赋值到 firstName, lastName. 如果要实现双向联动绑定, 则采用`object方式`, 以对象的方式. 查看例子3.
+
 
 js: 
 
@@ -134,6 +138,9 @@ var bs = bui.store({
 ## 2. watch 选项
 
 ?> `watch` 可以用来监听 `data` 里面的键值的变化以后处理其它事情. `watch`函数返回当前监听变量的新值跟旧值`newVal,oldVal`.  比方下面的例子.
+
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/watch" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 例子4: 
 

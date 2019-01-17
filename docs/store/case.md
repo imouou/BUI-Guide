@@ -3,7 +3,9 @@
 
 ## 1. 待办处理
 
-建议先<a href="http://www.easybui.com/demo/index.html#pages/store/case" target="_blank">查看效果</a>以后, 再来理解这个思路. 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/case" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 
 核心思路: 定义了3个字段. 
 - `todo` 是当前已有的数据, 会通过 `b-template` 进行渲染. 
@@ -92,7 +94,7 @@ var bs = bui.store({
 
 ## 2. 多选联动
 
-建议先<a href="http://www.easybui.com/demo/index.html#pages/store/selectm.html" target="_blank">查看效果</a>, 操作一下, 再去理解思路. 
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm_step1.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 ### 2.1 简单思路版
@@ -245,6 +247,10 @@ var bs = bui.store({
 
 
 ### 2.2 代码优化版
+
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 
 优化了操作流程, 在原来的data增加多了2个状态: 这2个状态都是一个对象, 因为实际上想要的是 `disabled`这个样式名, 如果你的样式上, 是设计的 `canAdd`, `canDel` 作为样式名, 只需要布尔值就行.
 

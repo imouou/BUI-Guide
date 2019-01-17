@@ -6,3 +6,6 @@
 !> 注意: 使用 `bui.store` 意味着放弃了安卓低版本的兼容, 比方安卓4.3 是不支持这种数据解析方式. 
 
 [查看示例](http://easybui.com/demo/#pages/store/index)
+
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/index" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

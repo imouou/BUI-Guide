@@ -1,6 +1,11 @@
 
 # 实例
 
+在开始之前,我们先来看看这个待办处理的效果. 代码里面只需做相关的绑定操作, 操作dom的行为交给行为属性处理, 这个案例在[综合案例](store/case.md)会有详细说明. 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/case" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
 ## 1. 创建一个`store`实例.
 
 - `el`        挂载的根元素, 默认是: `.bui-page`
@@ -14,7 +19,6 @@
 - `beforeMount` 数据解析前执行
 - `mounted`   数据解析后执行
 
-!> 注意: 每个单独的模块里面都可以使用page, 但是,如果作为局部加载的模块, 则需要区分数据源.
 
 `bui.store`初始化, 单页一般在`loader.define` 里面, 多页在 `bui.ready` 里面.
 
@@ -39,6 +43,44 @@ loader.define(function(){
 
 ```
 
+!> 注意: 每个单独的模块里面都可以使用page, 如果作为局部加载的模块, 则需要区分数据源.
+
+比方模块A, 要把模块B的数据加载到模块A里面.
+
+模块A: 
+```js
+loader.define(function(){
+  // 当前数据源为 page 
+  var bs = bui.store({
+      scope: "page"  
+      data: {},
+      mounted: function(){
+        // 加载模块B
+        router.loadPart({
+          id: "#test",
+          url: "模块B.html"
+        })
+      }
+    })
+})
+```
+
+模块B: 
+```js
+loader.define(function(){
+
+  // 这里的数据源不能跟模块A的数据源名字相同 
+  var bs = bui.store({
+      scope: "pageB"  
+      data: {},
+      mounted: function(){
+        
+      }
+    })
+
+    return bs;
+})
+```
 
 ## 2. 基本使用
 
@@ -81,7 +123,6 @@ data : {
 ```
 
 !> 需要注意的是, 如果你希望通过 `bs.lists = [1,2]` 这种赋值操作来操作数组, `bs.lists` 的dom是不会进行响应的, 但你可以使用 `bs.lists.push()` 的方式, 或者使用 `bui.array` 的一些命令式方法, 来处理这些数组. 这个会在 [模板渲染的章节](store/template.md) 使用到.
-
 
 
 ## 3. 公共数据与私有数据

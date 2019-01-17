@@ -1,6 +1,9 @@
 
 # 事件处理
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/event" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ## 1. 基本使用
 
 ?> `b-click` 的值的字段在 `methods`里定义. 在方法里面,可以通过`event`拿到点击的上下文关系.

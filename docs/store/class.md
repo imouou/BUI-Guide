@@ -1,6 +1,9 @@
 
 # Class 与 Style 的绑定
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/style" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ## 1. Class 绑定 
 
 ?> `b-class` 绑定支持4种数据格式. 
@@ -79,6 +82,9 @@ html:
 
 
 ## 3. 显示与隐藏
+
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/checkbox" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ?> `b-show` 可以根据数据的状态来控制当前元素的显示或者隐藏. `b-model` 是双向绑定的内容,可以查看[表单绑定](store/form.md)的章节. 
 

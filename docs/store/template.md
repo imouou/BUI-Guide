@@ -1,6 +1,9 @@
 
 # 模板渲染
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/template" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ## 1. ES6模板
 
 ?> `b-template` 的值的字段在 `templates` 里面定义. 
@@ -298,4 +301,8 @@ var bs = bui.store({
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/template" target="_blank">查看效果</a>
 
+## 调试
+
 ?> 如果把里面的变量`bs`,改成 `window.bs`, 可以在控制面板里面调试数据, `window.bs.list.push("我是列表3")` 所有模板都会增加数据.
+
+初始化的时候, 还有一个 `log:true` 参数, 控制开启,可以看到数据获取的过程. 

@@ -1,7 +1,12 @@
 
 # 属性与值绑定
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/attribute" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
 ## 1. 属性动态绑定
+
 ?> `b-bind` 绑定支持2种数据格式. 并且通过 `bs.title="XXX"` 或者 `bs.attrs.title="xxx"` 可以触发属性的修改. 绑定的字段在 `data` 里面
 
 - Object : 键值为样式名,值为布尔值
@@ -32,6 +37,7 @@ html:
 ```
 
 ### 效果预览
+
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/attribute" target="_blank">查看效果</a>
 
@@ -71,7 +77,12 @@ var bs = bui.store({
 
 ### 效果预览
 
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/set" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 <a href="http://www.easybui.com/demo/index.html#pages/store/set" target="_blank">查看效果</a>
+
+
 
 ## 3. 静态解析
 
@@ -131,3 +142,5 @@ bui.ready(function() {
 ```
 
 ?> 把`store`挂载到路由, 就可以解析公共数据的 `{{app.firstName}}` 之类的数据, 在模块里面,你也可以使用 `router.store.firstName` 读取跟修改公共数据的值, 会在全局起作用, 比方商城的加入购物车. 
+
+
