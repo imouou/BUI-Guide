@@ -136,14 +136,15 @@ window.router = bui.router();
 bui.ready(function() {
 
     // 公共数据
-    var store = bui.store({
+    window.store = bui.store({
         scope: "app",
         isPublic: true, 
         data: {
             firstName: "Hello",
             lastName: "BUI"
         }
-    })
+    })    
+    
     // 初始化路由
     router.init({
         id: "#bui-router",
@@ -159,9 +160,9 @@ bui.ready(function() {
 ```
 
 
-如上面例子: `router.store.firstName="Bingo"` 的时候, 所有单页页面上有`<b b-text="app.firstName"></b>` 进行渲染的模板,都会一起改变. 
+如上面例子: `store.firstName="Bingo"` 的时候, 所有单页页面上有`<b b-text="app.firstName"></b>` 进行渲染的模板,都会一起改变. 
 
-?> 把`store`挂载到路由, 还可以解析公共数据的 `{{app.firstName}}` 之类的数据, 在模块里面,你也可以使用 `router.store.firstName` 读取跟修改公共数据的值, 会在全局起作用. 
+?> 把`store`挂载到路由, 还可以解析公共数据的 `{{app.firstName}}` 之类的数据, 在模块里面,你也可以使用 `store.firstName` 读取跟修改公共数据的值, 会更新页面相关数据的视图. 
 
 ## 4. 加载的时机
 
