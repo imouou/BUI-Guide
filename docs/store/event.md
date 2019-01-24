@@ -10,7 +10,7 @@
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     methods: {
         getMessage: function() {
             console.log(event)
@@ -28,11 +28,11 @@ var bs = bui.store({
 
 ### 常规参数
 
-示例: 
+示例:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     methods: {
         getMessage: function(a,b) {
             console.log(a)  // 输出3
@@ -44,8 +44,10 @@ var bs = bui.store({
 ```
 
 ```html
-<div class="bui-btn" b-click="page.getMessage(3,4)">点击输出2个参数:3,4</div>
+<div class="bui-btn" b-click='page.getMessage(3,[4],{"test":"对象"})'>点击输出3个参数:3,[4],{"test":"对象"}</div>
 ```
+
+?> 如果参数是对象,需要是一个标准JSON才能转换, `b-click` 属性值并且一定要用单引号`''`.
 
 ### 内置参数
 
@@ -59,11 +61,11 @@ var bs = bui.store({
 - $parent: 父层的dom
 - $children: 子集的$dom
 
-示例: 
+示例:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     methods: {
         getMessage: function(a,b) {
           console.log(a)  // 当前索引
@@ -87,11 +89,11 @@ var bs = bui.store({
 
 ## 3. 自定义事件传参
 
-示例: 
+示例:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     methods: {
         getMessage: function(index) {
           // 触发自定义事件,参数可以自定义
@@ -114,16 +116,16 @@ var bs = bui.store({
 
 ## 4. 事件与数据联动
 
-?> 通过点击触发a值的改变, 在 a 值改变的时候, 又可以处理不同的事情. 
+?> 通过点击触发a值的改变, 在 a 值改变的时候, 又可以处理不同的事情.
 
-示例: 
+示例:
 
 ```js
 var bs = bui.store({
     scope: "page",
     data: {
       a: 1
-    }, 
+    },
     methods: {
       changeA: function() {
         this.a++;

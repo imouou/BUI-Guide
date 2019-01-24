@@ -6,13 +6,13 @@
 
 ## 1. ES6模板
 
-?> `b-template` 的值的字段在 `templates` 里面定义. 
+?> `b-template` 的值的字段在 `templates` 里面定义. 注意: 子集的内容必须有标签包住. 例如模板里面的`li`标签.
 
 ### 数据支持数组
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
       list: ["我是列表1","我是列表2"],
     },
@@ -39,7 +39,7 @@ html:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
       obj: {
         title: "我的对象的标题",
@@ -59,17 +59,33 @@ var bs = bui.store({
 
 ```
 
-#### 渲染模板,不能动态改变 
+#### 渲染模板,数据是对象时,默认不会动态联动
 html:
 ```html
 <div b-template="page.tplObject(page.obj)"></div>
 
 ```
-?> 如果对象需要动态改变, 则在模板里面使用 `b-text="page.obj.${key}"` 这样改变会一起联动. 
+?> 如果对象需要动态联动, 有2种方法:
 
-!> 需要注意的是, 这种方式只在第一次渲染的时候有效, 如果你的数据需要新增的时候, 新增的数据是不会解析这种行为属性的. 所以你也可以改成这种模板方式, 就会根据你的数据改变而重新渲染内容. 
+方法1:  `obj` 为数据源
+```js
+// 改变数据
+bs.obj.title = "我的对象的标题2";
+// 告诉使用obj的模板,数据变更需要重新渲染
+bs.trigger("obj",{value:bs.obj});
+```
 
-#### 根据数据动态改变的模板 
+方法2: `obj` 为数据源
+```js
+// 改变数据
+bs.obj.title = "我的对象的标题2"
+// 告诉使用obj的模板,数据变更需要重新渲染
+bs.set("obj",bs.obj);
+```
+
+?> 方法1 跟 方法2的区别在于, 方法1只是变更并重新触发模板渲染, 方法2, 会对数据的所有键值重新赋值并触发模板渲染.
+
+#### 拆分对象数据,监听改变
 html:
 ```html
 <div >
@@ -85,7 +101,7 @@ html:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
       objList: {
           title: "我是标题",
@@ -122,14 +138,41 @@ var bs = bui.store({
 </ul>
 ```
 
+?> 如果 ul 的子集不止有li标签元素? `b-children` 就可以派上用场, 代表子集的重复元素是哪个选择器?
+
+- 可以是标签
+- 可以是类名
+
+比方:
+
+```html
+<ul b-template="page.tplObjectList(page.objList.data)" b-children=".bui-btn" class="bui-list">
+</ul>
+```
+
+这个生成的模板可能是这样的. 如果你使用 `bui.array.set` 修改数据的时候,变成新增, 这个时候你就要怀疑是不是需要设置 `b-children`.
+
+```html
+<ul b-template="page.tplObjectList(page.objList.data)" b-children=".bui-btn" class="bui-list">
+    <li class="section-title">我是二级标题</li>
+    <li class="bui-btn">我是内容0,索引0</li>
+    <li class="section-title">我是二级标题</li>
+    <li class="bui-btn">我是内容1,索引1</li>
+    <li class="section-title">我是二级标题</li>
+    <li class="bui-btn">我是内容2,索引2</li>
+</ul>
+```
+
+
+
 
 ## 2. 数据的增删改
 
-?> 通过`b-template`的绑定, 我们可以通过操作数据,便能得到页面的及时响应. 
+?> 通过`b-template`的绑定, 我们可以通过操作数组,便能得到页面的及时响应.
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
       list: ["我是列表1","我是列表2"],
     },
@@ -152,7 +195,7 @@ html:
 
 ```
 
-?> 这样绑定以后, 通过脚本操控 `bs.list.push("我是列表3")` , 页面便能及时渲染新的数据. 
+?> 这样绑定以后, 通过脚本操控 `bs.list.push("我是列表3")` , 页面便能及时渲染新的数据.
 
 !> 不过并非数组的所有操作都能得到及时响应, 目前我们可以监听到以下几种方法:
 
@@ -173,7 +216,9 @@ html:
 - `bui.array.set`  修改数组的某个值,支持对象
 - `bui.array.delete`  删除数组的某个值,支持对象
 
-!> 值得注意的是, 如果数组里面是一个对象, 对象的某个字段变更是不会反馈到视图的, 这种时候就可以使用 `bui.array.set` 来替换整条数据, 达到刷新视图的目的. 这个可以查看 [综合案例章节](store/case.md)的多选联动的 `setStatus` 方法, 会修改到数组对象的状态. 
+!> 值得注意的是, 如果数组里面是一个对象, 对象的某个字段变更是不会反馈到视图的, 这种时候就可以使用 `bui.array.set` 来替换整条数据, 达到刷新视图的目的. 这个可以查看 [综合案例章节](store/case.md)的多选联动的 `setStatus` 方法, 会修改到数组对象的状态.
+
+
 
 
 ## 3. 模板的交互
@@ -182,7 +227,7 @@ html:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
         citysCheck: ["广州","深圳"],
         citys: ["广州","深圳","上海","北京"],
@@ -211,7 +256,7 @@ var bs = bui.store({
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
         citysCheck: [],
         citys: [],
@@ -233,7 +278,7 @@ var bs = bui.store({
     mounted: function () {
         // 模拟数据动态改变
         setTimeout(()=>{
-            // 方法1: 
+            // 方法1:
             this.citysCheck.push("广州","深圳")
             this.citys.push("广州","深圳","上海","北京");
 
@@ -252,7 +297,7 @@ var bs = bui.store({
 mounted: function () {
     // 模拟数据动态改变
     setTimeout(()=>{
-        // 通过监听 citys 的数据变更并且视图渲染完成以后, 增加数据的解析, 这样就不用在模板里面做数据比对处理了. 
+        // 通过监听 citys 的数据变更并且视图渲染完成以后, 增加数据的解析, 这样就不用在模板里面做数据比对处理了.
 
         // 必须在数据更新之前
         this.oneTick("citys",function () {
@@ -269,17 +314,17 @@ mounted: function () {
 
 ## 4. 第三方模板
 
-?> 我们的页面只有干净的绑定, 其它都在模板的方法里面处理逻辑, 正常ES6模板其实已经能够很好的满足我们的需求了, 不过如果你习惯用第三方模板的话, 你也可以使用, 这里以 `artTemplate` 为例, 需要在首页引入这个模板的js文件. 
+?> 我们的页面只有干净的绑定, 其它都在模板的方法里面处理逻辑, 正常ES6模板其实已经能够很好的满足我们的需求了, 不过如果你习惯用第三方模板的话, 你也可以使用, 这里以 `artTemplate` 为例, 需要在首页引入这个模板的js文件.
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
         list: ["我是列表1","我是列表2"],
     },
     templates: {
         artTplList: function (data,e) {
-            
+
             var html = template("tpl-list",{ listData: data});
 
             return html;
@@ -293,7 +338,7 @@ var bs = bui.store({
 <script id="tpl-list" type="text/html">
   {{each listData item index}}
       <li class="bui-btn" href="pages/ui_controls/bui.store.html" >{{item}}</li>
-  {{/each}} 
+  {{/each}}
 </script>
 ```
 
@@ -305,4 +350,4 @@ var bs = bui.store({
 
 ?> 如果把里面的变量`bs`,改成 `window.bs`, 可以在控制面板里面调试数据, `window.bs.list.push("我是列表3")` 所有模板都会增加数据.
 
-初始化的时候, 还有一个 `log:true` 参数, 控制开启,可以看到数据获取的过程. 
+初始化的时候, 还有一个 `log:true` 参数, 控制开启,可以看到数据获取的过程.
