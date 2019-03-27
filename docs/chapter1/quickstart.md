@@ -10,10 +10,10 @@
 
 
 ```html
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   <!-- bui.js 依赖于Zepto或jQuery -->
-  <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-  <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
 ```
 
 *index.html*
@@ -25,11 +25,11 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>BUI 多页开发标准页面</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   </head>
   <body>
-    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
           // 所有控件及方法需要在这里执行
@@ -133,7 +133,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>BUI 多页开发标准页面</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   </head>
   <body>
     <!-- BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须) -->
@@ -167,8 +167,8 @@
         <!-- 固定底部区 -->
       </footer>
     </div>
-    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
           // 焦点图控件初始化

@@ -15,12 +15,12 @@ $ npm run dev
 
 ## 接口如何跨域
 
-?> 配合自动化构建工程, 打开根目录下的 `app.json` ,里面有个键值 `proxy` 的对象. 
+?> 配合自动化构建工程, 打开根目录下的 `app.json` ,里面有个键值 `proxy` 的对象.
 
-假设请求的接口地址为: http://www.easybui.com/api/getDetail/id/123 
+假设请求的接口地址为: http://www.easybui.com/api/getDetail/id/123
 *可以这样配置 proxy :*
 
-`"/api"` 为请求接口的二级目录
+`"/api"`: 为请求接口的二级目录, `"target": "http://www.easybui.com"`
 
 ```
 {
@@ -36,31 +36,33 @@ $ npm run dev
 }
 ```
 
-js: ajax请求的时候使用`相对路径`.
+js:
+
+!> ajax请求的时候使用`相对路径`.
 
 ```
 bui.ajax({
     url: "api/getDetail/id/123"
 }).then(function(res){
-    
+
 })
 ```
 
-!> 为了后面更改为正式地址, 建议可以把url部分作为配置项
+!> 建议可以把url前部分作为变量配置项, 调试的时候为空, 打包正式环境一般没有跨域问题.
 ```
 var apiUrl = "";
 
 bui.ajax({
     url: apiUrl+ "api/getDetail/id/123"
 }).then(function(res){
-    
+
 })
 ```
 > 关于代理的更多配置,可以查看 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) 的使用说明.
 
 ## Chrome跨域调试
 
-?> 打开chrome 开发者工具, 开启模拟手机效果, 这样才能模拟手机的滑动拖拽事件. 
+?> 打开chrome 开发者工具, 开启模拟手机效果, 这样才能模拟手机的滑动拖拽事件, 需要刷新一次.
 
 ![chrome 预览图](../static/images/chrome.png)
 
@@ -100,4 +102,3 @@ router.init({
     ...
 })
 ```
-
