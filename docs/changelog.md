@@ -3,7 +3,7 @@
 ## 目录
 [TOC]
 
-## 1.5.2 20190321
+## 1.5.2 20190328
 
 ### 升级指南
 
@@ -26,8 +26,9 @@ $ buijs update -p appcan
 ```
 
 ### 重要更新
-link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的情况, 之前bui.on("pageinit") 执行的初始化,不再生效, 需要在 bui.ready 里面. 建议更新 bui.css bui.js .
+link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的情况. 建议更新 bui.css bui.js .
 
+### bui 工程新增二维码,手机扫码即可预览效果. 确保手机跟电脑在同一个wifi下.
 
 ### bui.css 更新
 1. bui-box-reverse 的反序修复
@@ -46,7 +47,7 @@ link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的
 2. 新增html模板的加载
 
 ### bui.router
-1. bui.getPartParams 的传参问题, 之前必须接收一个id, 现在不用,可以拿到当前加载的id的参数 
+1. bui.getPartParams 的传参问题, 之前必须接收一个id, 现在不用,可以拿到当前加载的id的参数
 
 ### bui.store
 1. 新增 b-children 配合 b-template 模板使用, 应对复杂模板的情况
@@ -65,7 +66,11 @@ link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的
 3. 修改 轮播图,标题轮播图,跨屏轮播,公告为动态渲染例子,简化使用方式.
 4. 新增 相册简单效果
 
-### bui.tab 
+### bui.scroll
+1. 新增 onBeforeRefresh 参数
+2. 新增 onBeforeLoad 参数
+
+### bui.tab
 1. 新增 template 参数, 支持数据动态自定义
 
 ### bui.levelselect
@@ -75,6 +80,8 @@ link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的
 1. 调用init 以后重复初始化loading问题
 2. 修复数据返回对象,数组却是字符串的奇葩格式问题
 3. 在tab里面的高度不准确问题
+4. 新增 onBeforeRefresh 参数
+5. 新增 onBeforeLoad 参数
 
 ### bui.loading
 1. 允许一个容器下有多个进度条, 便于用户对进度条的灵活控制.
@@ -87,6 +94,13 @@ link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的
 
 ### bui.dropdown
 1. 修复 reset 方法以后还能获取到值的问题
+
+### bui.number
+1. 新增静态属性 max, min 在input. 便于每个number有自己单独的大小
+
+### bui.select
+1. 新增disabledSelect, enabledSelect 方法, 来控制某些元素不允许通过点击选择
+2. 新增unactive, unselected 方法
 
 ### bui.array
 1. 新增get 方法,获取该值是否存在, 存在返回当前值或对象
