@@ -3,7 +3,7 @@
 
 ## BUI 是什么?
 
-?> BUI 是用来`快速构建界面交互`的UI框架, 专注webapp开发, 开发者只需关注业务的开发, 界面的布局及交互交给BUI, 开发出来的应用, `可以嵌入平台` ( 微信, 小程序, 钉钉, 淘宝, 支付宝等 ), 亦可以跟其它第三方平台`打包成独立应用`( Bingotouch , Cordova , Dcloud , APICloud , Appcan , 前海圆舟 等), 最终可以`全跨平台展示`. 
+?> BUI 是用来`快速构建界面交互`的UI交互框架, 专注webapp开发, 开发者只需关注业务的开发, 界面的布局及交互交给BUI, 开发出来的应用, `可以嵌入平台` ( Link, 微信, 小程序, 钉钉, 淘宝, 支付宝等 ), 亦可以跟其它第三方平台`打包成独立应用`( Bingotouch , Cordova , Dcloud , APICloud , Appcan , 前海圆舟 等), 最终可以`全跨平台展示`. 
 
 ?> 结合BUI提供的[BUI-Fast编辑插件](buifast), [NPM工具](chapter1/installation), BUI更是一个移动快速开发的解决方案. 可以解决以下常见问题.
 

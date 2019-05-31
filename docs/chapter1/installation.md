@@ -5,13 +5,13 @@
 
 1. 编辑器 ( 推荐: `vscode`, `Atom` 或 `Sublimetext3` );
 2. `bui-fast` [点击下载](https://github.com/imouou/BUI-Fast-Snippets/releases) (配合编辑器快速书写插件, 支持 Vscode, Atom , Sublimetext , Webstorm , APICloudIDE ) [查看安装说明](tools/buifast.md);
+3. [`buijs`](tools/buijs) cli工程构建工具, 用于快速构建工程,模板,更新平台等功能
 
 ## 下载开发包
 
 !> 用过npm, 我们推荐您学习使用[buijs](tools/buijs.md)`自动化构建`, 自动化构建默认是最新的`bui`版本.
 
 - [下载BUI单页开发包](http://www.easybui.com/downloads/source/bui/bui_router_dev_latest.zip)
-
 
 - [下载BUI多页开发包](http://www.easybui.com/downloads/source/bui/bui_dev_latest.zip)
 

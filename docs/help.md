@@ -101,7 +101,8 @@ bui.unit.mailto({
 多页开发需要手动修改js的引用加入时间戳
 <script src="index.js?t=20180518"></script>
 
-单页开发只要在index.js, 重新初始化 window.loader, 动态加载的模块就会自动加上时间戳
+单页开发只要在index.js, 重新初始化 window.loader, 动态加载的模块就会自动加上时间戳, 这句需要在 `window.router = bui.router()` 初始化之前
+
 window.loader = bui.loader({
     cache: false
 })
@@ -170,7 +171,7 @@ $('.bui-input').on('click', function () {
 *答:*
 
 ```text
-指定后退到B模块, B模块如果不是自定义名称, 则输入B页面的路径.
+指定后退到B模块, B模块如果不是自定义名称, 则输入B页面的路径名,无后缀.
 router.back({
   name: "B"
 })

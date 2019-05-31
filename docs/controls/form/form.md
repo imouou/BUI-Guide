@@ -2,7 +2,7 @@
 
 ## 按钮效果
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/btn&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/btn&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 单选框
 
@@ -12,27 +12,35 @@
 
 ```js
 
-// 设置
+// 设置选中
 $(".radio").prop("checked",true);
 
-// 取值
-$(".radio").prop("checked");
+// 设置不选中
+$(".radio").prop("checked",false);
+
+// 获取选中状态
+var hasChecked = $(".radio").prop("checked");
+
+// 获取某一组单选框选中的值
+var val = $('.radio[name="interest2"]:checked').val();
+
+
 ```
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/radio&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/radio&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 复选框
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/checkbox&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/checkbox&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 开关按钮
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/switch&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/switch&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 滑动条
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/range&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/range&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 进度条
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/progress&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/progress&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

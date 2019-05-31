@@ -3,7 +3,87 @@
 ## 目录
 [TOC]
 
-## 1.5.2 20190328
+## 1.5.3 20190501
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+b-el bs.$els.demo.innerText
+bs.items.$set
+b-on 
+bs.$set
+b-key
+b-ref 子组件
+
+
+### 重要更新
+
+微信IOS版运行的表单, 如果出现底部有灰色的区域, 监听取消焦点以后,调用scrollIntoView可以解决.
+```
+router.$("input,textarea").on("blur", function() {
+    this.scrollIntoView(false)
+})
+```
+
+### bui.css
+1. 修复默认路由跳转效果,在IPhone第一次跳会闪白问题.
+
+### bui.router
+1. 优化firstAnimate参数, 当等于true时, 要跳转过去的页面如果是地图,chart等比较耗性能的页面, 应该采用这种动画优先的方式,避免跳转过程中渲染图表导致卡顿. 如果是跟 store 一起使用,则不建议开启, 会先跳转过去后再进行数据渲染.
+2. 修复bui.back 如果是指定模块名时,后退的页面不正确.
+
+### bui.extend
+1. 新增插件扩展
+
+### bui.array
+1. bui.array.set 支持替换整个数据
+2. bui.array.getAll 支持获取多个数组是否存在
+
+### bui.store
+1. 修复set 方法会触发2次trigger问题
+2. 
+
+### bui.number
+1. 新增 parentId 参数, 默认: .bui-page , 正常初始化一组, 只需一次, 不用id 参数, 这样即使在列表里的 number 动态的也能正常初始化.
+2. 
+
+### bui.getPageParams
+1. 修复在单页路由的 bui.ready 里面拿不到页面参数问题
+
+### bui.upload
+1. startAll 方法,新增 needFileinfo参数, 可以把文件的基本信息一起传给接口, 对于实现一个页面多个上传类型,共享一个文件上传控件.
+
+### bui.searchbar
+1. 新增value方法,获取当前的关键字.
+
+### bui.list, bui.pullrefresh, bui.scroll, bui.router, bui.tab, bui.slide
+1. 新增resize方法
+
+### bui.upload, bui.fileselect
+1. 新增resize方法, 压缩图片
+
+### bui.list
+1. 新增autoUpdatePage参数,默认true
+1. 新增updatePage方法, 用于手动更新判断是否还有最后一页数据.
+
+## 1.5.2 20190401
 
 ### 升级指南
 

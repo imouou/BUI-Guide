@@ -47,8 +47,18 @@ loader.define(function(require,exports,module){
 page2.js
 ```
 loader.define(function(require,exports,module){
-  
+
+    // 定义初始化
+    function init(text){
+      // console.log("init:"+text)
+    }
+
+    // 自执行初始化, 如果要给tab 使用,建议不要自执行.
+    init("第一次会自执行");
+
+    // 抛出方法及变量给外部访问.
     return {
+      init: init,
       pageName: "page2"
     }
 })
@@ -59,11 +69,13 @@ main.js
 ```
 loader.define(function(require,exports,module){
     
-    // 加载pages/page2/page2模块
-    require("pages/page2/page2",function(page2){
+    // 1. 加载pages/page2/page2模块 方法1: 这里会自执行一次 init. 输出自执行.
+    require("pages/page2/page2"); 
 
-        // 访问page2模块的名称
-        console.log( page2.pageName )
+    // 2. 有回调的时候,是会每次都执行, 加上define的时候,有一次自执行, 会变成执行2次.
+    require("pages/page2/page2",function(page2){
+        // 这里会执行第2次.
+        page2.init("回调执行")
     })
 
     return {
@@ -71,8 +83,9 @@ loader.define(function(require,exports,module){
     }
 })
 ```
-这样打开首页的时候,就会加载main.js, main.js 会去加载pages/page2/page2模块,成功以后输出名称.
+这样打开首页的时候,就会加载main.js, main.js 会去加载pages/page2/page2模块,并调用对应的方法.
 
+?> 造成重复执行一般在tab比较常见, `bui.tab`的`to` 事件是会每次都执行, 如果 `loader.require` 的模块有相同`init`回调, 则每次都会执行两次, 解决的办法是, 外部要操作里面的`init`方法时, `define` 的时候,不要自执行`init`. 
 
 模块的定义及加载更多用法，请大家自行查阅 <a href="http://www.easybui.com/demo/api/classes/bui.loader.html" target="_blank">bui.loader API</a> 
 
@@ -143,6 +156,133 @@ loader.map({
 - 定义了模块名以后,单页跳转则不能使用路径跳转,而需要传模块跳转, 例如, `router.load({url:"home"})`
 - 如果`loader.define`的第一个参数有自定义名称, 则还需要通过`loader.map`配置下模块的路径及模板指向. 
 
+
+## 获取模块的信息
+
+?> 1.5.3 新增
+
+### loader.get
+
+```js
+var main = loader.get("main");
+```
+
+## 设置模块的信息
+
+?> 1.5.3 新增
+
+### loader.set
+
+?> 设置的模块, 必须在 `window.router = bui.router()` 之后.
+
+```js
+loader.set("main",{
+  template:"pages/login/login.html",
+  script: "pages/login/login.js"
+});
+```
+
+## 页面模块的生命周期
+
+?> 1.5.3 新增. 需要配合路由使用,路由里面会去调用模块定义的生命周期.
+
+- `beforeCreate`,`create` 只在模块第一次创建的时候执行,如果相同模块第2次拿的是缓存, 不会触发;
+- `beforeLoad`,`loaded` 每次进入页面都会执行, `loaded` 就相当于 `loader.define(function(){})` 里面的function;
+- `show`,`hide` 每次页面前进后退都会分别执行, 可以通过形参拿到 show,hide 的 type 是 load, 还是 back, 默认当前页刷新, 也会触发 show, type 则等于 firstload;
+- `beforeDestroy`,`destroyed` 每次后退前跟后退后执行;
+
+```js
+loader.define({
+    beforeCreate: function() {
+        // 只在创建脚本前执行,缓存的时候不执行
+        console.log(this.moduleName + " before create")
+    },
+    created: function() {
+        // 只在创建后执行,缓存的时候不执行
+        console.log(this.moduleName + " createed")
+    },
+    beforeLoad: function() {
+        // 页面每次跳转前都会执行
+        console.log(this.moduleName + " before load")
+    },
+    loaded: function() {
+        // 页面每次跳转后都会执行
+        console.log(this.moduleName + " loaded")
+    },
+    hide: function(e) {
+        // 页面每次跳转后退都会执行当前模块的触发
+        console.log(this.moduleName + " hide")
+        console.log(e.type)
+    },
+    show: function(e) {
+        // 页面每次跳转后退都会执行当前模块的触发
+        console.log(this.moduleName + " show")
+        console.log(e.type)
+    },
+    beforeDestroy: function() {
+        // 页面每次后退前执行
+        console.log(this.moduleName + " before destroy")
+    },
+    destroyed: function() {
+        // 页面每次后退后执行
+        console.log(this.moduleName + " destroyed")
+    }
+})
+```
+
+?> 当然,你依然可以使用默认最简单的模块创建方式, 只是特殊模块你可以给它自己的生命周期, 比方我在列表页面,进去详情页, 后退到列表页, 是不会刷新的, 之前的方式是在后退的时候执行某个方法. 现在只要在 `show` 的这个生命周期里, 我可以调用这个页面的某个局部刷新的方法, 不管是前进后退, 都可以执行. 
+
+```js
+loader.define({
+    loaded: function() {
+        this.pageview = {};
+        
+        // 初始化
+        this.pageview.init = function(){
+          
+        }
+        // 局部刷新
+        this.pageview.refresh = function(){
+
+        }
+        
+        // 这个是抛出给 loader.require 访问的, 不能return this
+        return this.pageview;
+    },
+    show: function(e) {
+      
+        // 后退才触发刷新操作
+        if( e.type == "back" ){
+          this.pageview.refresh();
+        }
+    }
+})
+```
+
+?> 比方跳转的页面里面有个定时器, 后退的时候, 需要清理掉这个定时器, 这些是需要自己清除的. 
+
+```js
+loader.define({
+    loaded: function() {
+        // 页面每次跳转后都会执行
+        console.log(this.moduleName + " loaded")
+
+        // 定时刷新
+        this.timetoRefresh = window.setInterval(function(){
+            // 4秒后执行刷新
+        },2000)
+    },
+    beforeDestroy: function() {
+        // 页面每次后退前执行
+        console.log(this.moduleName + " before destroy")
+
+        if( this.timetoRefresh ){
+          window.clearInterval(this.timetoRefresh);
+        }
+    }
+})
+```
+
 ## 疑难解答
 
 ?> 1. 如何抛出当前模块的方法共享 
@@ -155,7 +295,7 @@ loader.map({
 
 ?> 2. 微信调试的缓存问题怎么解决?
 
-*在 index.js 配置`bui.loader`的cache参数*
+*在 index.js 配置`bui.loader`的cache参数* 初始化必须在 `window.router` 前面
 ```js
 window.loader = bui.loader({
     cache: false

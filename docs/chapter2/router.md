@@ -194,13 +194,6 @@ loader.define(function(require,exports,module){
 ----
 
 
-## 路由原理
-
-?> 这就是一个简单的路由跳转过程. 
-
-![BUI 路由模块加载流程图](../static/images/router/router_flow.png)
-
-
 ## 页面跳转
 ### router.load(option) 
 
@@ -497,6 +490,7 @@ router.on("loadpart",function(e){
 ```
 
 !> 注意: 建议全局事件都在 index.js 加载. 事件名全部为小写.
+
 
 
 

@@ -74,16 +74,7 @@
 *焦点图结构*
 
 ```html
-<div id="uiSlide" class="bui-slide">
-    <div class="bui-slide-main">
-        <ul>
-            <li>
-                <!--第1屏-->
-                <img src="" alt="">
-            </li>
-        </ul>
-    </div>
-</div>
+<div id="uiSlide" class="bui-slide"></div>
 ```
 
 !> 脚本初始化必须在 `bui.ready` 里面执行, 多页开发`一个页面对应一个` bui.ready 其它自由编写, 便于自己维护就好.
@@ -93,10 +84,17 @@
 ```js
   // 焦点图控件初始化
   var uiSlide = bui.slide({
-      id:"#uiSlide",
-      height:380,
-      autopage:true
-  })
+        id: "#slide",
+        height: 380,
+        autopage: true,
+        data: [{
+          image: "images/banner01.png",
+          url: "pages/ui_controls/bui.slide_title.html",
+        },{
+          image: "images/banner02.png",
+          url: "pages/ui_controls/bui.slide_title.html",
+        }]
+    })
 ```
 ?> 给实例增加事件监听. 
 
@@ -148,20 +146,7 @@
       </header>
       <main>
         <!-- 焦点图 -->
-        <div id="uiSlide" class="bui-slide">
-            <div class="bui-slide-main">
-                <ul>
-                    <li>
-                        <!--第1屏-->
-                        <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
-                    </li>
-                    <li style="display: none;">
-                        <!--第2屏 设置display:none;可以避免加载中闪跳问题-->
-                        <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div id="uiSlide" class="bui-slide"></div>
       </main>
       <footer>
         <!-- 固定底部区 -->
@@ -173,9 +158,16 @@
         bui.ready(function() {
           // 焦点图控件初始化
             var uiSlide = bui.slide({
-                id:"#uiSlide",
-                height:380,
-                autopage:true
+                id: "#slide",
+                height: 380,
+                autopage: true,
+                data: [{
+                  image: "images/banner01.png",
+                  url: "pages/ui_controls/bui.slide_title.html",
+                },{
+                  image: "images/banner02.png",
+                  url: "pages/ui_controls/bui.slide_title.html",
+                }]
             })
             // 监听跳转以后触发
             uiSlide.on("to",function(index){
@@ -207,7 +199,7 @@
 *方案2: *
 - ui-html <kbd>Tab</kbd>    生成bui页面引用
 - ui-page <kbd>Tab</kbd>    生成bui标准页面结构
-- ui-slide <kbd>Tab</kbd>   生成焦点图控件结构
+- ui-slide <kbd>Tab</kbd>   生成焦点图控件静态结构
 - bui-slide <kbd>Tab</kbd>  生成焦点图控件初始化代码
 
 

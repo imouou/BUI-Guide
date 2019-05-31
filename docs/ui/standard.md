@@ -146,7 +146,7 @@
 
 ?> UI控件初始化可以在下面执行: 
 
-```
+```js
 // dom及bui控件初始化完毕 
 bui.on("pageinit",function(){
   // dom ready , bui ready
@@ -155,7 +155,7 @@ bui.on("pageinit",function(){
 
 ?> 多页开发控件及原生方法都必须在`bui.ready` 里面
 
-```
+```js
 // dom及bui及原生方法都初始化完毕 
 bui.ready(function(){
   // dom ready , bui ready, native ready 

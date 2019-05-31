@@ -9,7 +9,7 @@
     * 焦点图`bui.slide`, 选项卡`bui.tab`,列表下拉刷新及滚动加载`bui.list` , 下拉刷新`bui.pullrefresh`, 滚动加载`bui.scroll`, 抽屉控件`bui.swipe`, 侧边栏`bui.sidebar`, 侧滑菜单`bui.listview`, 日期选择 `bui.pickerdate`.
 
 - **点击交互控件:** *例如:*
-    * 上拉菜单`bui.actionsheet`,下拉菜单`bui.dropdown`,折叠菜单`bui.accordion`,选择菜单`bui.select`,星级评分`bui.rating`,步骤条`bui.stepbar`
+    * 上拉菜单`bui.actionsheet`,下拉菜单`bui.dropdown`,折叠菜单`bui.accordion`,选择菜单`bui.select`,星级评分`bui.rating`,步骤条`bui.stepbar`,层级选择`bui.levelselect`.
 
 - **弹出交互控件:** *例如:*
     * 遮罩`bui.mask`,正在加载`bui.loading`, 弹窗控件`bui.dialog`,提醒框`bui.alert`,确认框`bui.confirm`,输入框`bui.prompt`,自动消失提醒`bui.hint`
@@ -17,7 +17,6 @@
 *注意:*
 
 - BUI的控件主张以相同交互作为相同控件, 也就是一个控件不只做一件事, 比如, tab 是由 `bui.slide` 实现的, 结构一致,交互一致,配合样式来实现不同的效果. 
-- 还有一个公共控件的概念需要注意, 同一个位置,只允许出现一个, 例如,遮罩`bui.mask`,正在加载`bui.loading`
 - 参数 `height:0` 则是会自动计算高度,在布局比较复杂的情况下,需要自己计算后传进去.
 - 每个控件都有一个全局配置,可以修改控件的默认配置`bui.config.控件名.参数`.
 

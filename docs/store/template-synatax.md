@@ -19,7 +19,7 @@
 | b-command  | `<ul b-template="page.list" b-command="append"></ul>`   | 非必须,配合b-template一起使用,代表第一次模板渲染采用什么方法, 默认是html, append, prepend |
 | b-children  | `<ul b-template="page.list" b-children="li"></ul>`   | 非必须,配合b-template一起使用, 代表子集的元素,当子集里面有其它布局元素干扰的时候,才做配置, 可以是标签,类名 |
 | b-click  | `<b b-click="page.openDialog"></b>`   | 点击事件, openDialog 在 methods 定义.  |
-| b-target  | `<div class="parentDom"<b b-click="page.openDialog" b-target=".parentDom"></b></div>`   | 1.5.2新增 可以控制当前this的指向,这样会影响到 $index $this 等内置值,会在当前往上查找 b-target. 一般用于嵌套的层级过深,找不到父级index使用  |
+| b-target  | `<div class="parentDom"><b b-click="page.openDialog" b-target=".parentDom"></b></div>`   | 1.5.2新增 可以控制当前this的指向,这样会影响到 $index $this 等内置值,会在当前往上查找 b-target. 一般用于嵌套的层级过深,找不到父级index使用  |
 | b-src  | `<img b-src="page.imgurl" />`   | 1.5.2新增 动态图片地址 |
 | b-href  | `<a b-href="page.linkurl"></a>`   | 1.5.2新增 动态跳转地址 |
 

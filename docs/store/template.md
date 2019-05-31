@@ -163,9 +163,6 @@ var bs = bui.store({
 </ul>
 ```
 
-
-
-
 ## 2. 数据的增删改
 
 ?> 通过`b-template`的绑定, 我们可以通过操作数组,便能得到页面的及时响应.
@@ -218,8 +215,100 @@ html:
 
 !> 值得注意的是, 如果数组里面是一个对象, 对象的某个字段变更是不会反馈到视图的, 这种时候就可以使用 `bui.array.set` 来替换整条数据, 达到刷新视图的目的. 这个可以查看 [综合案例章节](store/case.md)的多选联动的 `setStatus` 方法, 会修改到数组对象的状态.
 
+`1.5.3 以后, 上面那些方法, 可以有更方便的使用方式`, 比方: 
 
+1. 清空数组 [].$empty()
+```js
+var arr = ["hello","bui","hi","easybui"];
+bui.array.empty( arr );
 
+// 1.5.3 版本以后可以这样
+arr.$empty();
+
+```
+
+2. 替换数组 [].$replace()
+```js
+var arr = ["hello","hi","easybui"];
+bui.array.replace( arr, ["new","bui"]);
+
+// 1.5.3 版本以后可以这样
+arr.$replace(["new","bui"]);
+
+```
+
+3. 合并数组 [].$merge()
+```js
+
+var arr = ["hello","hi","easybui"];
+bui.array.merge( arr, ["new","bui"]);
+
+// 1.5.3 版本以后可以这样
+arr.$merge(["new","bui"],["easy"]);
+
+```
+
+4. 修改数组 [].$set()
+```js
+
+// 例子1: 修改第几个
+var arr = ["hello","hi","easybui"];
+bui.array.set( arr, 1, "new hi");
+// ["hello","new hi","easybui"]
+
+// 1.5.3 版本以后可以这样
+arr.$set(1, "new hi");
+// arr 结果: ["hello","new hi","easybui"]
+
+// 例子2: 修改值等于 hi 为新值 new hi
+var arr = ["hello","hi","easybui"];
+bui.array.set( arr, "hi", "new hi");
+// ["hello","new hi","easybui"]
+
+// 1.5.3 版本以后可以这样
+arr.$set("hi", "new hi");
+// arr 结果: ["hello","new hi","easybui"]
+
+// 例子3: 修改对象值
+var arr = [{name:"hello"},{name:"hi"},{name:"easybui"}];
+bui.array.set( arr, 1, {name:"new hi"} );
+// [{name:"hello"},{name:"new hi"},{name:"easybui"}]
+
+// 1.5.3 版本以后可以这样
+arr.$set(1, {name:"new hi"});
+// arr 结果: [{name:"hello"},{name:"new hi"},{name:"easybui"}]
+
+// 例子4: 修改对象某个字段值, 需要传多一个唯一值的字段名
+var arr = [{name:"hello"},{name:"hi"},{name:"easybui"}];
+bui.array.set( arr, "hi", {name:"new hi"}, "name" );
+// [{name:"hello"},{name:"new hi"},{name:"easybui"}]
+
+// 1.5.3 版本以后可以这样
+// 单独修改某个值
+arr.$set("hello", "hi bui", "name");
+// 修改整个对象,不同的key值则会一起合并过去
+arr.$set("hi", {name:"new hi"}, "name");
+// arr 结果: [{name:"hello"},{name:"new hi"},{name:"easybui"}]
+```
+
+5. 删除数据并触发视图更新
+```js
+//例子1: 删除值或索引:
+var arr = ["hello","bui","hi","bui"];
+bui.array.delete(arr , "bui" );
+
+// 1.5.3 版本以后可以这样
+arr.$delete("hi");
+// arr 结果: ["hello","hi"]
+
+// 例子2: 删除值在哪个字段:
+var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"}];
+bui.array.delete( arr, "bui", "value" );
+
+// 1.5.3 版本以后可以这样
+arr.$delete("bui", "value");
+// arr 结果: [{ "id":1,value:"hello"}]
+```
 
 ## 3. 模板的交互
 
@@ -345,9 +434,3 @@ var bs = bui.store({
 ### 效果预览
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/template" target="_blank">查看效果</a>
-
-## 调试
-
-?> 如果把里面的变量`bs`,改成 `window.bs`, 可以在控制面板里面调试数据, `window.bs.list.push("我是列表3")` 所有模板都会增加数据.
-
-初始化的时候, 还有一个 `log:true` 参数, 控制开启,可以看到数据获取的过程.
