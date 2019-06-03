@@ -1,14 +1,14 @@
-# 多页路由
+# 多页路由开发
 
 ?> [上一节](chapter1/quickstart) 我们用最简单的方式,创建了一个`index.html`, 当我们创建了多个页面以后, 就需要页面跳转了.
 
-!> 多页开发只需直接引入对应的脚本就可以开发. 
+!> 多页开发只需直接引入对应的脚本就可以开发.
 
 ```html
-  <link rel="stylesheet" href="//unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   <!-- bui.js 依赖于Zepto或jQuery -->
-  <script src="//unpkg.com/buijs/lib/zepto.js"></script>
-  <script src="//unpkg.com/buijs/lib/latest/bui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
 ```
 
 ## 页面跳转
@@ -33,7 +33,7 @@
 - Type: `boolean`
 - Detail: `是否开启进度条`
 
-?> 绑定`.bui-page` 结构中 `.bui-btn`, `a`, 如果含有 `href` 属性则会跳转. `一个页面也只需要绑定一次`.  <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.btn API</a> 
+?> 绑定`.bui-page` 结构中 `.bui-btn`, `a`, 如果含有 `href` 属性则会跳转. `一个页面也只需要绑定一次`.  <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.btn API</a>
 
 *示例:*
 
@@ -44,14 +44,14 @@
 </div>
 ```
 ```js
-// .bui-page 下的所有按钮及a 标签,带href属性,点击会调用 bui.load 
+// .bui-page 下的所有按钮及a 标签,带href属性,点击会调用 bui.load
 bui.btn({id:".bui-page",handle:".bui-btn,a"}).load();
 
 ```
-!> 这里为什么还要初始化bui.btn,不直接使用a链接跳转呢? 因为这里针对连续快速点击做了处理. 
+!> 这里为什么还要初始化bui.btn,不直接使用a链接跳转呢? 因为这里针对连续快速点击做了处理.
 
 ### 2. bui.load(option) `动态跳转`
-?> 传参的时候比较方便 <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.load API</a> 
+?> 传参的时候比较方便 <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.load API</a>
 
 *参数: option是一个对象 *
 
@@ -83,7 +83,7 @@ $("#btnGo").on("click",function(e){
 
 ### bui.getPageParams()
 
-?> 页面接收参数, 这里参数的值是在回调里面, 部分原生参数的接收是异步的, 这是为了保持接收参数的方式统一 <a href="http://www.easybui.com/demo/api/classes/bui.getPageParams.html" target="_blank">bui.getPageParams API</a> 
+?> 页面接收参数, 这里参数的值是在回调里面, 部分原生参数的接收是异步的, 这是为了保持接收参数的方式统一 <a href="http://www.easybui.com/demo/api/classes/bui.getPageParams.html" target="_blank">bui.getPageParams API</a>
 
 *page2.html 示例:*
 
@@ -98,7 +98,7 @@ var getParams = bui.getPageParams();
 
 ### bui.back(option)
 
-?> 后退页面 <a href="http://www.easybui.com/demo/api/classes/bui.back.html" target="_blank">bui.back API</a> 
+?> 后退页面 <a href="http://www.easybui.com/demo/api/classes/bui.back.html" target="_blank">bui.back API</a>
 
 *参数: option是一个对象 *
 
@@ -118,7 +118,7 @@ bui.back();
 ## 页面刷新
 ### bui.refresh()
 
-?> 后退页面 <a href="http://www.easybui.com/demo/api/classes/bui.refresh.html" target="_blank">bui.refresh API</a> 
+?> 后退页面 <a href="http://www.easybui.com/demo/api/classes/bui.refresh.html" target="_blank">bui.refresh API</a>
 
 *示例:*
 
@@ -129,7 +129,7 @@ bui.refresh();
 ## 页面替换
 ### bui.load(option)
 
-?> 页面替换不会有历史记录 <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.load API</a> 
+?> 页面替换不会有历史记录 <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.load API</a>
 
 *示例:*
 
@@ -138,7 +138,7 @@ bui.load({ url: "pages/page2.html", replace:true });
 ```
 
 
-## bui.ready 
+## bui.ready
 ?> 设备准备完毕, 一个页面只需要一个 `bui.ready`, 里面可以执行`$`的方法.
 ```
   bui.ready(function(){

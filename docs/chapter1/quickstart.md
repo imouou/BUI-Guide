@@ -10,10 +10,10 @@
 
 
 ```html
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   <!-- bui.js 依赖于Zepto或jQuery -->
-  <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-  <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
 ```
 
 *index.html*
@@ -25,11 +25,11 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>BUI 多页开发标准页面</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   </head>
   <body>
-    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
           // 所有控件及方法需要在这里执行
@@ -74,16 +74,7 @@
 *焦点图结构*
 
 ```html
-<div id="uiSlide" class="bui-slide">
-    <div class="bui-slide-main">
-        <ul>
-            <li>
-                <!--第1屏-->
-                <img src="" alt="">
-            </li>
-        </ul>
-    </div>
-</div>
+<div id="uiSlide" class="bui-slide"></div>
 ```
 
 !> 脚本初始化必须在 `bui.ready` 里面执行, 多页开发`一个页面对应一个` bui.ready 其它自由编写, 便于自己维护就好.
@@ -93,10 +84,17 @@
 ```js
   // 焦点图控件初始化
   var uiSlide = bui.slide({
-      id:"#uiSlide",
-      height:380,
-      autopage:true
-  })
+        id: "#slide",
+        height: 380,
+        autopage: true,
+        data: [{
+          image: "images/banner01.png",
+          url: "pages/ui_controls/bui.slide_title.html",
+        },{
+          image: "images/banner02.png",
+          url: "pages/ui_controls/bui.slide_title.html",
+        }]
+    })
 ```
 ?> 给实例增加事件监听. 
 
@@ -133,7 +131,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>BUI 多页开发标准页面</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
   </head>
   <body>
     <!-- BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须) -->
@@ -148,34 +146,28 @@
       </header>
       <main>
         <!-- 焦点图 -->
-        <div id="uiSlide" class="bui-slide">
-            <div class="bui-slide-main">
-                <ul>
-                    <li>
-                        <!--第1屏-->
-                        <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
-                    </li>
-                    <li style="display: none;">
-                        <!--第2屏 设置display:none;可以避免加载中闪跳问题-->
-                        <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div id="uiSlide" class="bui-slide"></div>
       </main>
       <footer>
         <!-- 固定底部区 -->
       </footer>
     </div>
-    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
           // 焦点图控件初始化
             var uiSlide = bui.slide({
-                id:"#uiSlide",
-                height:380,
-                autopage:true
+                id: "#slide",
+                height: 380,
+                autopage: true,
+                data: [{
+                  image: "images/banner01.png",
+                  url: "pages/ui_controls/bui.slide_title.html",
+                },{
+                  image: "images/banner02.png",
+                  url: "pages/ui_controls/bui.slide_title.html",
+                }]
             })
             // 监听跳转以后触发
             uiSlide.on("to",function(index){
@@ -207,7 +199,7 @@
 *方案2: *
 - ui-html <kbd>Tab</kbd>    生成bui页面引用
 - ui-page <kbd>Tab</kbd>    生成bui标准页面结构
-- ui-slide <kbd>Tab</kbd>   生成焦点图控件结构
+- ui-slide <kbd>Tab</kbd>   生成焦点图控件静态结构
 - bui-slide <kbd>Tab</kbd>  生成焦点图控件初始化代码
 
 

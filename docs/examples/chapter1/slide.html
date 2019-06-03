@@ -1,60 +1,63 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-  <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <title>BUI 多页开发标准页面</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
-  </head>
-  <body>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BUI 多页开发标准页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
+</head>
+
+<body>
     <!-- BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须) -->
     <div class="bui-page">
-      <!-- 固定顶部区 -->
-      <header class="bui-bar">
-        <div class="bui-bar-left">
-          <a class="bui-btn"><i class="icon-back"></i></a>
-        </div>
-        <div class="bui-bar-main">BUI标准页面</div>
-        <div class="bui-bar-right"></div>
-      </header>
-      <main>
-        <!-- 焦点图 -->
-        <div id="uiSlide" class="bui-slide">
-            <div class="bui-slide-main">
-                <ul>
-                    <li>
-                        <!--第1屏-->
-                        <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
-                    </li>
-                    <li style="display: none;">
-                        <!--第2屏 设置display:none;可以避免加载中闪跳问题-->
-                        <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
-                    </li>
-                </ul>
+        <!-- 固定顶部区 -->
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn"><i class="icon-back"></i></a>
             </div>
-        </div>
-      </main>
-      <footer>
-        <!-- 固定底部区 -->
-      </footer>
+            <div class="bui-bar-main">BUI标准页面</div>
+            <div class="bui-bar-right"></div>
+        </header>
+        <main>
+            <!-- 焦点图 -->
+            <div id="uiSlide" class="bui-slide">
+                <div class="bui-slide-main">
+                    <ul>
+                        <li>
+                            <!--第1屏-->
+                            <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
+                        </li>
+                        <li style="display: none;">
+                            <!--第2屏 设置display:none;可以避免加载中闪跳问题-->
+                            <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <!-- 固定底部区 -->
+        </footer>
     </div>
-    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
-    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
     <script>
         bui.ready(function() {
-          // 焦点图控件初始化
+            // 焦点图控件初始化
             var uiSlide = bui.slide({
-                id:"#uiSlide",
-                height:380,
-                autopage:true
-            })
-            // 监听跳转以后触发
-            uiSlide.on("to",function(index){
-              console.log(index)
-            })
-            // 跳转到第2个,索引值从0开始
-            // uiSlide.to(1);
+                    id: "#uiSlide",
+                    height: 380,
+                    autopage: true
+                })
+                // 监听跳转以后触发
+            uiSlide.on("to", function(index) {
+                    console.log(index)
+                })
+                // 跳转到第2个,索引值从0开始
+                // uiSlide.to(1);
         })
     </script>
-  </body>
+</body>
+
 </html>

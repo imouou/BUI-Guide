@@ -1,4 +1,7 @@
-* [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
+* 链接
+    * [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
+    * [Link 专栏](linkapi.md)
+    * [BUI 专栏](article.md)
 
 
 * 入门
@@ -14,8 +17,9 @@
 
 
 * 进阶
-  * [单页路由](chapter2/router.md)
   * [模块化](chapter2/loader.md)
+  * [单页路由](chapter2/router.md)
+  * [单页生命周期](chapter2/life.md)
   * [控件用法](chapter2/controls.md)
   * [动画交互](chapter2/animate.md)
   * [常用方法](chapter2/method.md)
@@ -30,6 +34,7 @@
   * [表单绑定](store/form.md)
   * [模板渲染](store/template.md)
   * [事件处理](store/event.md)
+  * [数据调试](store/debug.md)
   * [控件结合](store/controls.md)
   * [综合案例](store/case.md)
 

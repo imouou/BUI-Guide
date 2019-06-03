@@ -14,7 +14,7 @@
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
         title: "这是动态标题",
         attrs: {
@@ -51,7 +51,7 @@ html:
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
         value: "Hello bui.js",
         attrs: {
@@ -86,7 +86,7 @@ var bs = bui.store({
 
 ## 3. 静态解析
 
-?> 静态解析{{}}里面的值. 默认没有开启, 如果需要, 初始化时设置 `needStatic: true` 才会解析. `templates`定义的模板方法里面不要使用`{{}}` 或者 `b-`开头的模板命令. 
+?> 静态解析{{}}里面的值. 默认没有开启, 如果需要, 初始化时设置 `needStatic: true` 才会解析. `templates`定义的模板方法里面不要使用`{{}}` 或者 `b-`开头的模板命令.
 
 - 不支持表达式
 - 不支持动态修改
@@ -94,7 +94,7 @@ var bs = bui.store({
 
 ```js
 var bs = bui.store({
-    scope: "page", 
+    scope: "page",
     data: {
         title: "这是动态标题2",
         attrs: {
@@ -120,16 +120,16 @@ html:
 window.router = bui.router();
 
 bui.ready(function() {
-
     // 公共数据
-    var store = bui.store({
+    window.store = bui.store({
         scope: "app",
-        isPublic: true, 
+        isPublic: true,
         data: {
             firstName: "Hello",
             lastName: "BUI"
         }
     })
+
     // 初始化路由
     router.init({
         id: "#bui-router",
@@ -141,6 +141,19 @@ bui.ready(function() {
 })
 ```
 
-?> 把`store`挂载到路由, 就可以解析公共数据的 `{{app.firstName}}` 之类的数据, 在模块里面,你也可以使用 `router.store.firstName` 读取跟修改公共数据的值, 会在全局起作用, 比方商城的加入购物车. 
+?> 把`store`挂载到路由, 就可以解析公共数据的 `{{app.firstName}}` 之类的数据, 在模块里面,你也可以使用 `store.firstName` 读取跟修改公共数据的值, 会在全局起作用, 比方商城的加入购物车.
 
+!> 注意, 如果是异步加载,比方TAB的动态加载,你想要解析这个 `store` 里面的模板的话, 需要在tab这个模块里面执行一次.
 
+tab-setting.html
+```
+<div b-text="app.firstName"></div>
+```
+
+tab-setting.js
+```
+loader.define(function(){
+  // tab-xxx 为当前tab的样式或id名称.
+  store.compile(".tab-setting");
+})
+```

@@ -9,6 +9,7 @@
 - 把字段的值设置在当前input的value; 
 - input输入修改会把value的值赋值给字段. 
 
+!> 注意: input 的type类型必须声明是哪种类型(text,radio,checkbox)等.
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/input" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -278,7 +279,11 @@ var bs = bui.store({
 
 ### 多选联动
 
-
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 这个例子是一个自定义的模拟select, 我们放在[综合案例](store/case.md)里面讲. 
+
+### 弹窗选择交互
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/choose" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+

@@ -91,8 +91,118 @@ var bs = bui.store({
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/case" target="_blank">查看效果</a>
 
+## 2. 弹窗选择交互
 
-## 2. 多选联动
+?> 如果数据一开始有值,还需要把值跟模板里的数据进行比对,处理成选中状态.
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/choose.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+### js
+
+```js
+var bs = bui.store({
+        scope: "page", // 用于区分公共数据及当前数据的唯一值
+        data: {
+            items: [{
+                id: "guangzhou",
+                name: "广州",
+            }, {
+                id: "shenzhen",
+                name: "深圳",
+            }, {
+                id: "dongguan",
+                name: "东莞",
+            }],
+            checked: ["shenzhen"], //缓存选中的值, 默认选中深圳
+            checkedObj: [{
+                id: "shenzhen",
+                name: "深圳",
+            }],
+        },
+        methods: {
+            open: function() {
+                this.uiDialog.open();
+            }
+        },
+        watch: {
+            checked: function(val) {
+                var _self = this;
+                // 获取的使用 this.$data.xxx
+                var items = bui.array.getAll(_self.$data.items, val, "id");
+
+                // 替换新的值 this.xxx
+                bui.array.replace(this.checkedObj, items);
+            }
+        },
+        computed: {},
+        templates: {
+            tplItem: function(data) {
+                var html = "";
+
+                data.forEach(function(item, i) {
+                    html += `<li class="bui-btn" id="${item.id}">${item.name}</li>`
+                })
+
+                return html;
+            },
+            tplCity: function(data) {
+                var html = "";
+                var _self = this;
+                data.forEach(function(item, i) {
+                    // 渲染已经选择的城市
+                    var hasChoose = _self.checkedObj && bui.array.compare(_self.checkedObj, item.id, "id");
+                    var hasChecked = hasChoose ? "checked" : "";
+                    html += `<li class="bui-btn bui-box bui-btn-line">
+                      <div class="span1">
+                          <label for="interest+${i}">${item.name}</label>
+                      </div>
+                      <input id="interest+${i}" type="checkbox" class="bui-choose" name="interest" value="${item.id}" text="" ${hasChecked} b-model="page.checked">
+                  </li>`
+                })
+
+                return html;
+            }
+        },
+        mounted: function() {
+            // 加载后执行
+
+            this.uiDialog = bui.dialog({
+                id: "#uiDialog"
+            });
+
+        }
+    })
+```
+
+?> **注意:** `checkedObj: null` 数组如果需要通过`this.checkedObj = []`赋值操作, 先设置为空; 如果初始值是数组, 则需要通过 `bui.array.xxx` 去操作才会触发界面响应.
+
+### 核心html
+
+```html
+<div class="bui-page page-store">
+    <main>
+        <div class="bui-btn" b-click="page.open()">点击选择喜欢的城市</div>
+        <div class="subtitle">您已选择:</div>
+        <!-- 列表控件 html 对应的结构:  -->
+        <ul class="bui-list" b-template="page.tplItem(page.checkedObj)"></ul>
+    </main>
+    <!-- 对话框需要在 bui-page 里面, 这样默认才会解析 b- 行为属性的值 page.xxx  -->
+    <div id="uiDialog" class="bui-dialog">
+        <div class="bui-dialog-head">选择喜欢的城市</div>
+        <div class="bui-dialog-main">
+          <ul class="bui-list" b-template="page.tplCity(page.items)"></ul>
+        </div>
+        <div class="bui-dialog-close"><i class="icon-close"></i></div>
+    </div>
+</div>
+```
+
+### 预览
+
+<a href="http://www.easybui.com/demo/index.html#pages/store/choose" target="_blank">查看效果</a>
+
+
+## 3. 多选联动复杂场景
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm_step1.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -173,7 +283,7 @@ var bs = bui.store({
             // 合并并触发 this.selectB
             bui.array.merge(this.selectB,this.selectAChecked);
             // 删除this.selectA选中数据,通过value字段比对,支持多个
-            bui.array.remove(this.selectAChecked,this.selectA,"value")
+            bui.array.remove(this.selectA,this.selectAChecked,"value")
 
             // 清空A暂存区数据
             bui.array.empty(this.selectAChecked);
@@ -187,7 +297,7 @@ var bs = bui.store({
             bui.array.merge(this.selectA,this.selectBChecked);
 
             // 删除选中数据,通过value字段比对
-            bui.array.remove(this.selectBChecked,this.selectB,"value")
+            bui.array.remove(this.selectB,this.selectBChecked,"value")
             // 清空B暂存区数据
             bui.array.empty(this.selectBChecked);
         },
