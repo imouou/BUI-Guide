@@ -1,6 +1,6 @@
 # LINK API
 
-?> Link API 为内部开发平台, 供开发商及内部人员使用.
+?> Link API 为原生开发平台, 供Link轻应用原生开发使用.
 
 * [Link API PC](http://dev.bingocc.com/btapi/) 
 
