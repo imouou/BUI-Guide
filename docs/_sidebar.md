@@ -50,6 +50,7 @@
 
 * 帮助
   * [我要提问](https://github.com/imouou/BUI-Guide/issues)
+  * [查看留言](https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed)
   * [常见问题](help.md)
   
 * [更新日志](changelog.md)

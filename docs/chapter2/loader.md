@@ -191,6 +191,8 @@ loader.set("main",{
 - `show`,`hide` 每次页面前进后退都会分别执行, 可以通过形参拿到 show,hide 的 type 是 load, 还是 back, 默认当前页刷新, 也会触发 show, type 则等于 firstload;
 - `beforeDestroy`,`destroyed` 每次后退前跟后退后执行;
 
+!> 注意: `beforeLoad` 这里return false 并不能阻止页面跳转及执行, 如果要阻止应该在 `bui.load({url:"",beforeLoad:function(){ return false; }})`.
+
 ```js
 loader.define({
     beforeCreate: function() {

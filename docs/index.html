@@ -2,111 +2,117 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>BUI 文档</title>
-  <link rel="icon" href="_media/favicon.ico">
-  <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
-  <meta name="description" content="A magical documentation generator.">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="static/css/vue.css" title="vue">
-  <style>
-    nav.app-nav li ul {
-      min-width: 100px;
-    }
-    .sidebar-toggle span{
-      background: #42b983;
-    }
-    @media screen and (max-width: 768px){
-      .sidebar-toggle {
-        bottom: auto;
-        top: 0;
-        right: 0;
-        left: auto;
-        padding: 20px 20px 10px 10px;
-      }
-      body.close .sidebar-toggle {
-        width: auto;
-        padding: 20px 20px 10px 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>BUI 文档</title>
+    <link rel="icon" href="_media/favicon.ico">
+    <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
+    <meta name="description" content="A magical documentation generator.">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="static/css/vue.css" title="vue">
+    <style>
+        nav.app-nav li ul {
+            min-width: 100px;
+        }
+        
+        .sidebar-toggle span {
+            background: #42b983;
+        }
+        
+        .emoji {
+            display: none;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .sidebar-toggle {
+                bottom: auto;
+                top: 0;
+                right: 0;
+                left: auto;
+                padding: 20px 20px 10px 10px;
+            }
+            body.close .sidebar-toggle {
+                width: auto;
+                padding: 20px 20px 10px 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div id="app">Loading ...</div>
-  <!-- <script src="//unpkg.com/docsify-plugin-codefund/index.js"></script> -->
-  
-  <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <div id="app">Loading ...</div>
+    <!-- <script src="//unpkg.com/docsify-plugin-codefund/index.js"></script> -->
+
+    <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
    -->
-  <script src="static/js/docsify.min.js"></script>
-  <script>
-    window.$docsify = {
-      alias: {
-        // 编写插件
-        '.*?/tools/buifast': 'https://raw.githubusercontent.com/imouou/BUI-Fast-Snippets/master/README.md',
-        // 模板库
-        '.*?/tools/bui-template': 'https://raw.githubusercontent.com/imouou/BUI-Template/master/README.md',
-        // npm工具
-        '.*?/tools/buijs': 'https://raw.githubusercontent.com/imouou/buijs-cli/master/README.md',
-        //'.*?/changelog': 'https://raw.githubusercontent.com/imouou/BUI-Guide/master/docs/CHANGELOG.md',
-        '/.*/_navbar.md': '/_navbar.md'
-      },
-      auto2top: true,
-      // coverpage: true,
-      executeScript: true,
-      loadSidebar: true,
-      loadNavbar: true,
-      mergeNavbar: true,
-      maxLevel: 4,
-      subMaxLevel: 2,
-      ga: 'UA-106147152-1',
-      name : 'BUI 文档 1.5.x',
-      search: {
-        noData: {
-          '/': '没有结果!',
-          '/en/': 'No results!'
-        },
-        paths: 'auto',
-        placeholder: {
-          '/': '搜索',
-          '/en/': 'Search'
-        }
-      },
-      pagination: {
-        previousText: '上一节',
-        nextText: '下一节',
-      },
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            var url = 'https://github.com/imouou/BUI-Guide/blob/master/docs/' + vm.route.file
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+    <script src="static/js/docsify.min.js"></script>
+    <script>
+        window.$docsify = {
+            alias: {
+                // 编写插件
+                '.*?/tools/buifast': 'https://raw.githubusercontent.com/imouou/BUI-Fast-Snippets/master/README.md',
+                // 模板库
+                '.*?/tools/bui-template': 'https://raw.githubusercontent.com/imouou/BUI-Template/master/README.md',
+                // npm工具
+                '.*?/tools/buijs': 'https://raw.githubusercontent.com/imouou/buijs-cli/master/README.md',
+                //'.*?/changelog': 'https://raw.githubusercontent.com/imouou/BUI-Guide/master/docs/CHANGELOG.md',
+                '/.*/_navbar.md': '/_navbar.md'
+            },
+            auto2top: true,
+            // coverpage: true,
+            executeScript: true,
+            loadSidebar: true,
+            loadNavbar: true,
+            mergeNavbar: true,
+            maxLevel: 4,
+            subMaxLevel: 2,
+            ga: 'UA-106147152-1',
+            name: 'BUI 文档 1.5.x',
+            search: {
+                noData: {
+                    '/': '没有结果!',
+                    '/en/': 'No results!'
+                },
+                paths: 'auto',
+                placeholder: {
+                    '/': '搜索',
+                    '/en/': 'Search'
+                }
+            },
+            pagination: {
+                previousText: '上一节',
+                nextText: '下一节',
+            },
+            formatUpdated: '{MM}/{DD} {HH}:{mm}',
+            plugins: [
+                function(hook, vm) {
+                    hook.beforeEach(function(html) {
+                        var url = 'https://github.com/imouou/BUI-Guide/blob/master/docs/' + vm.route.file
+                        var editHtml = '[:memo: Edit Document](' + url + ')\n'
 
-            return editHtml
-              + html
-              + '\n\n----\n\n'
-              + '<a href="http://www.easybui.com" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">&copy; 2016-2018 easybui.com Powered by docsify</a>'
-          })
+                        return editHtml +
+                            html +
+                            '\n\n----\n\n' +
+                            '<a href="http://www.easybui.com" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">&copy; 2016-2018 easybui.com Powered by docsify</a>'
+                    })
+                }
+            ]
         }
-      ]
-    }
-  </script>
-  <script src="static/js/plugins/search.min.js"></script>
-  <script src="static/js/prism/prism-bash.min.js"></script>
-  <script src="static/js/prism/prism-markdown.min.js"></script>
-  <script src="static/js/prism/prism-nginx.min.js"></script>
-  <script src="static/js/plugins/docsify-plugin-codefund.js"></script>
-  <script src="static/js/plugins/docsify-copy-code.min.js"></script>
-  <script src="static/js/plugins/docsify-pagination.min.js"></script>
-  <!-- <script>
+    </script>
+    <script src="static/js/plugins/search.min.js"></script>
+    <script src="static/js/prism/prism-bash.min.js"></script>
+    <script src="static/js/prism/prism-markdown.min.js"></script>
+    <script src="static/js/prism/prism-nginx.min.js"></script>
+    <script src="static/js/plugins/docsify-plugin-codefund.js"></script>
+    <script src="static/js/plugins/docsify-copy-code.min.js"></script>
+    <script src="static/js/plugins/docsify-pagination.min.js"></script>
+    <!-- <script>
   // 开启离线缓存
   if (typeof navigator.serviceWorker !== 'undefined') {
   navigator.serviceWorker.register('sw.js')

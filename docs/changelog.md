@@ -3,7 +3,8 @@
 ## 目录
 [TOC]
 
-## 1.5.3 20190501
+
+## 1.5.3 20190529
 
 ### 升级指南
 
@@ -25,13 +26,6 @@ $ buijs update -p apicloud
 $ buijs update -p appcan    
 ```
 
-b-el bs.$els.demo.innerText
-bs.items.$set
-b-on 
-bs.$set
-b-key
-b-ref 子组件
-
 
 ### 重要更新
 
@@ -44,31 +38,58 @@ router.$("input,textarea").on("blur", function() {
 
 ### bui.css
 1. 修复默认路由跳转效果,在IPhone第一次跳会闪白问题.
+2. bui-box-center 在flex 下导致的高度过高被截掉的问题.
 
 ### bui.router
 1. 优化firstAnimate参数, 当等于true时, 要跳转过去的页面如果是地图,chart等比较耗性能的页面, 应该采用这种动画优先的方式,避免跳转过程中渲染图表导致卡顿. 如果是跟 store 一起使用,则不建议开启, 会先跳转过去后再进行数据渲染.
 2. 修复bui.back 如果是指定模块名时,后退的页面不正确.
+3. 新增 path 参数,设置路由的根目录, 便于路径跳转的简写 "pages/";
+4. 新增 ../ ./ 等相对路径的处理, 如果该应用需要迁移, 就不需要每个都改路径了.
+5. 修复?号参数在前,不获取模块参数问题, 这个公众号可能会对url重新处理,导致参数在前
+
+### bui.loader
+4. 新增 define 的依赖对相对当前模块的处理, ["../new", "./new" ] 如果该应用需要迁移, 就不需要每个都改路径了.
+5. 新增 get 根据模块名获取模块的信息
+6. 新增 set 根据模块名,设置模块的信息
+7. 新增模块的生命周期,配合 router 使用.
 
 ### bui.extend
 1. 新增插件扩展
 
+### bui.pickerdate
+1. 新增bindValue参数, 开启以后,可以自动绑定 handle 设置值. 
+2. 新增对多个日期的支持, 不再需要重复初始化, 开始时间,结束时间, 只需要一个初始化.
+3. 修复日期的部分格式化导致回到原始时间问题.
+
 ### bui.array
-1. bui.array.set 支持替换整个数据
+1. bui.array.set 修改单条,或者修改某个值
 2. bui.array.getAll 支持获取多个数组是否存在
+3. 支持 [].$set() [].$get() [].$merge [].$empty() [].$replace() 等数组的操作并触发
 
 ### bui.store
 1. 修复set 方法会触发2次trigger问题
-2. 
+2. 修复oneTick 监听, 在不同模板使用相同数据源会触发2次问题
+3. 新增模板对行为属性的支持
+
 
 ### bui.number
 1. 新增 parentId 参数, 默认: .bui-page , 正常初始化一组, 只需一次, 不用id 参数, 这样即使在列表里的 number 动态的也能正常初始化.
-2. 
+2.
+
+### bui.input
+1. 修复计算长度的时候,第一次不触发.
+2.
+
+### bui.array
+1. 针对数组的扩展, 配合 bui.store 这里的方法多了一种使用方式 [].$include [].$set [].$delete [].$empty [].$replace [].$merge [].$index [].$indexs 等方法
+2.
 
 ### bui.getPageParams
 1. 修复在单页路由的 bui.ready 里面拿不到页面参数问题
 
 ### bui.upload
 1. startAll 方法,新增 needFileinfo参数, 可以把文件的基本信息一起传给接口, 对于实现一个页面多个上传类型,共享一个文件上传控件.
+2. 修复showProgress设置为false还是会有进度条问题.
 
 ### bui.searchbar
 1. 新增value方法,获取当前的关键字.
@@ -82,6 +103,20 @@ router.$("input,textarea").on("blur", function() {
 ### bui.list
 1. 新增autoUpdatePage参数,默认true
 1. 新增updatePage方法, 用于手动更新判断是否还有最后一页数据.
+
+### bui.listview
+1. 修复 listview 跟 list 配合的时候,有时候点击后按钮会掉行变空白.
+
+### bui.slide
+1. 新增 data 动态数据里面支持 iframe, reload 参数, 便于外部跳转
+
+
+### bui.levelselect 
+1. 修复顶部面包屑的跳转问题;
+
+### bui.checkVersion  bingotouch link 才能用
+1. 新增 field 参数, 配置返回的数据字段
+2. 修改 isForced 为 forced , 部分json接口会过滤掉 is 参数.
 
 ## 1.5.2 20190401
 
