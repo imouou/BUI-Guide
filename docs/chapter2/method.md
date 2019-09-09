@@ -83,7 +83,9 @@ bui.checkVersion({
 ## 数组操作
 ?> 常见的数组比对,去重,复制,过滤,移除 等.
 
-### bui.array.index(name,arr,key)
+!> <del>1.5.2 以下, 第1个参数为要比对的值,第2个参数为数组. </del> 1.5.2 以上,第1个参数统一为数组, 第2个参数为比对的值, 1.5.2有向下兼容, 但建议全部统一数组在前.
+
+### bui.array.index(arr,name,key)
 
 ?> 返回存在的第1个索引,支持普通数组及JSON数组
 
@@ -91,17 +93,17 @@ bui.checkVersion({
 ```js
 //普通数组:
 var arr = ["hello","bui","hi","bui"];
-var index = bui.array.index( "bui", arr );
+var index = bui.array.index( arr,"bui" );
 
 // console.log(index) //结果: 1
 
 //JSON数组: 
 var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"}];
-var index = bui.array.index( "bui", arr, "value" );
+var index = bui.array.index( arr, "bui", "value" );
 // console.log(index) //结果: 1 
 ```
 
-### bui.array.indexs(name,arr,key)
+### bui.array.indexs(arr,name,key)
 
 ?> 返回存在的所有索引,支持普通数组及JSON数组
 
@@ -109,17 +111,17 @@ var index = bui.array.index( "bui", arr, "value" );
 ```js
 //普通数组:
 var arr = ["hello","bui","hi","bui"];
-var index = bui.array.indexs( "bui", arr );
+var index = bui.array.indexs( arr, "bui" );
 
 // console.log(index) //结果: [1,3]
 
 //JSON数组: 
 var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"}];
-var index = bui.array.indexs( "bui", arr, "value" );
+var index = bui.array.indexs( arr,"bui", "value" );
 // console.log(index) //结果: [1]
 ```
 
-### bui.array.compare(name,arr,key)
+### bui.array.compare(arr,name,key)
 
 ?> 检测是否存在
 
@@ -127,17 +129,17 @@ var index = bui.array.indexs( "bui", arr, "value" );
 ```js
 //普通数组:
 var arr = ["hello","bui","hi","bui"];
-var index = bui.array.compare( "bui", arr );
+var index = bui.array.compare( arr,"bui" );
 
 // console.log(index) //结果: 1
 
 //JSON数组: 
 var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"}];
-var index = bui.array.compare( "bui", arr, "value" );
+var index = bui.array.compare( arr, "bui", "value" );
 // console.log(index) //结果: 1 
 ```
 
-### bui.array.remove(name,arr,key)
+### bui.array.remove(arr,name,key)
 
 ?> 删除数组里的某个值,返回一个新数组
 
@@ -145,18 +147,18 @@ var index = bui.array.compare( "bui", arr, "value" );
 ```js
 //普通数组:
 var arr = ["hello","bui","hi","bui"];
-var newArr = bui.array.remove( "bui", arr );
+var newArr = bui.array.remove( arr,"bui" );
 
 // console.log(newArr) //结果: ["hello","hi"]
 
 //JSON数组: 
 var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"}];
-var newArr = bui.array.remove( "bui", arr, "value" );
+var newArr = bui.array.remove( arr, "bui", "value" );
 // console.log(newArr) //结果: [{ "id":1,value:"hello"}] 
 ```
 
 
-### bui.array.excess(name,arr,key)
+### bui.array.uniq(arr,name,key)
 
 ?> 去除重复的值
 
@@ -164,17 +166,17 @@ var newArr = bui.array.remove( "bui", arr, "value" );
 ```js
 //普通数组:
 var arr = ["hello","bui","hi","bui"];
-var newArr = bui.array.excess( "bui", arr );
+var newArr = bui.array.excess(  arr,"bui" );
 
 // console.log(newArr) //结果: ["hello","bui","hi"]
 
 //JSON数组: 
 var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"},{ "id":3,value:"bui"}];
-var newArr = bui.array.excess( "bui", arr, "value" );
+var newArr = bui.array.excess( arr, "bui", "value" );
 // console.log(newArr) //结果: [{ "id":1,value:"hello"},{ "id":2,value:"bui"}] 
 ```
 
-### bui.array.filter(name,arr,key)
+### bui.array.filter(arr,name,key)
 
 ?> 筛选数组,可以用于搜索关键字的检测
 
@@ -182,13 +184,13 @@ var newArr = bui.array.excess( "bui", arr, "value" );
 ```js
 //普通数组:
 var arr = ["hello","bui","hi","easybui"];
-var newArr = bui.array.filter( "bui", arr );
+var newArr = bui.array.filter( arr,"bui" );
 
 // console.log(newArr) //结果: ["bui","easybui"]
 
 //JSON数组: 
 var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"},{ "id":3,value:"easybui"}];
-var newArr = bui.array.filter( "bui", arr, "value" );
+var newArr = bui.array.filter( arr,"bui", "value" );
 // console.log(newArr) //结果: [{ "id":2,value:"bui"},{ "id":3,value:"easybui"}] 
 ```
 

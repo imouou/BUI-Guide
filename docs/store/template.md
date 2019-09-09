@@ -217,34 +217,48 @@ html:
 
 `1.5.3 以后, 上面那些方法, 可以有更方便的使用方式`, 比方: 
 
+!> 1.5.4修正: 只有通过 bui.store 初始化劫持的数组,才会有 $方法操作
+
 1. 清空数组 [].$empty()
 ```js
-var arr = ["hello","bui","hi","easybui"];
-bui.array.empty( arr );
 
-// 1.5.3 版本以后可以这样
-arr.$empty();
+var bs = bui.store({
+    data: {
+        arr:["hello","bui","hi","easybui"]
+    }
+})
+bui.array.empty( bs.arr );
+
+// 1.5.4 版本以后可以这样
+bs.arr.$empty();
 
 ```
 
 2. 替换数组 [].$replace()
 ```js
-var arr = ["hello","hi","easybui"];
-bui.array.replace( arr, ["new","bui"]);
+var bs = bui.store({
+    data: {
+        arr:["hello","bui","hi","easybui"]
+    }
+})
+bui.array.replace( bs.arr, ["new","bui"]);
 
-// 1.5.3 版本以后可以这样
-arr.$replace(["new","bui"]);
+// 1.5.4 版本以后可以这样
+bs.arr.$replace(["new","bui"]);
 
 ```
 
 3. 合并数组 [].$merge()
 ```js
+var bs = bui.store({
+    data: {
+        arr:["hello","bui","hi","easybui"]
+    }
+})
+bui.array.merge( bs.arr, ["new","bui"]);
 
-var arr = ["hello","hi","easybui"];
-bui.array.merge( arr, ["new","bui"]);
-
-// 1.5.3 版本以后可以这样
-arr.$merge(["new","bui"],["easy"]);
+// 1.5.4 版本以后可以这样
+bs.arr.$merge(["new","bui"],["easy"]);
 
 ```
 
@@ -252,61 +266,90 @@ arr.$merge(["new","bui"],["easy"]);
 ```js
 
 // 例子1: 修改第几个
-var arr = ["hello","hi","easybui"];
-bui.array.set( arr, 1, "new hi");
+var bs = bui.store({
+    data: {
+        arr:["hello","bui","easybui"]
+    }
+})
+bui.array.set( bs.arr, 1, "new hi");
 // ["hello","new hi","easybui"]
 
-// 1.5.3 版本以后可以这样
-arr.$set(1, "new hi");
+// 1.5.4 版本以后可以这样
+bs.arr.$set(1, "new hi");
 // arr 结果: ["hello","new hi","easybui"]
 
-// 例子2: 修改值等于 hi 为新值 new hi
-var arr = ["hello","hi","easybui"];
-bui.array.set( arr, "hi", "new hi");
-// ["hello","new hi","easybui"]
+```
+```js
+// 例子2: 修改值等于 bui 为新值 new bui
+var bs = bui.store({
+    data: {
+        arr:["hello","bui","easybui"]
+    }
+})
+bui.array.set( bs.arr, "bui", "new bui");
+// ["hello","new bui","easybui"]
 
-// 1.5.3 版本以后可以这样
-arr.$set("hi", "new hi");
-// arr 结果: ["hello","new hi","easybui"]
+// 1.5.4 版本以后可以这样
+bs.arr.$set("bui", "new bui");
+// arr 结果: ["hello","new bui","easybui"]
 
+```
+```js
 // 例子3: 修改对象值
-var arr = [{name:"hello"},{name:"hi"},{name:"easybui"}];
-bui.array.set( arr, 1, {name:"new hi"} );
+var bs = bui.store({
+    data: {
+        arr:[{name:"hello"},{name:"hi"},{name:"easybui"}]
+    }
+})
+bui.array.set( bs.arr, 1, {name:"new hi"} );
 // [{name:"hello"},{name:"new hi"},{name:"easybui"}]
 
-// 1.5.3 版本以后可以这样
-arr.$set(1, {name:"new hi"});
+// 1.5.4 版本以后可以这样
+bs.arr.$set(1, {name:"new hi"});
 // arr 结果: [{name:"hello"},{name:"new hi"},{name:"easybui"}]
 
+```
+```js
 // 例子4: 修改对象某个字段值, 需要传多一个唯一值的字段名
-var arr = [{name:"hello"},{name:"hi"},{name:"easybui"}];
-bui.array.set( arr, "hi", {name:"new hi"}, "name" );
-// [{name:"hello"},{name:"new hi"},{name:"easybui"}]
+var bs = bui.store({
+    data: {
+        arr:[{name:"hello"},{name:"hi"},{name:"easybui"}]
+    }
+})
 
-// 1.5.3 版本以后可以这样
+// 1.5.4 版本以后可以这样
 // 单独修改某个值
-arr.$set("hello", "hi bui", "name");
+bs.arr.$set("hello", "hi bui", "name");
 // 修改整个对象,不同的key值则会一起合并过去
-arr.$set("hi", {name:"new hi"}, "name");
+bs.arr.$set("hi", {name:"new hi"}, "name");
 // arr 结果: [{name:"hello"},{name:"new hi"},{name:"easybui"}]
 ```
 
 5. 删除数据并触发视图更新
 ```js
 //例子1: 删除值或索引:
-var arr = ["hello","bui","hi","bui"];
-bui.array.delete(arr , "bui" );
+var bs = bui.store({
+    data: {
+        arr:["hello","bui","hi","bui"]
+    }
+})
+bui.array.delete(bs.arr , "bui" );
 
-// 1.5.3 版本以后可以这样
-arr.$delete("hi");
+// 1.5.4 版本以后可以这样
+bs.arr.$delete("hi");
 // arr 结果: ["hello","hi"]
-
+```
+```js
 // 例子2: 删除值在哪个字段:
-var arr = [{ "id":1,value:"hello"},{ "id":2,value:"bui"}];
-bui.array.delete( arr, "bui", "value" );
+var bs = bui.store({
+    data: {
+        arr:[{ "id":1,value:"hello"},{ "id":2,value:"bui"}]
+    }
+})
+bui.array.delete( bs.arr, "bui", "value" );
 
 // 1.5.3 版本以后可以这样
-arr.$delete("bui", "value");
+bs.arr.$delete("bui", "value");
 // arr 结果: [{ "id":1,value:"hello"}]
 ```
 
