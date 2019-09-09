@@ -3,6 +3,114 @@
 ## 目录
 [TOC]
 
+## 1.5.4 20190829
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+### 重要更新
+1. 去除默认数组原型链的自定义方法, 改为通过 bui.store 定义的数组,才会有 $empty, $replace, $merge 等方法,其它通过 bui.array.empty(arr) 这种方式去操作. 
+
+### 样式更新
+1. 新增 bui-box-vertical 对 bui-page bui-tab 的影响，可以解决移动端微信 IOS 版的导航遮挡问题； `buijs create -t main-tab` 默认就是这种方式.
+2. 修复 bui-text-select, bui-text-unselect 对文本复制的支持.
+3. 新增 bui-scroll-hide(去掉滚动条), bui-scroll-auto(去掉ios缓冲), bui-scroll-touch(加上ios缓冲) 三种滚动方式
+
+### bui.router 
+1. 修复 router.$ 在 loaderPart 局部加载以后, 获取不到选择器问题;
+2. 修复公共的 beforeBack 没有执行;
+3. 修复 router.currentPage , router.currentModule的在不同的切换指向问题
+
+### bui.store
+1. 修复b-model在IOS下输入中文输入法变拼音问题;
+2. 修复在数组的操作上 $replace 不会把旧版的模板删除的问题;
+3. 修复b-click 在tab里面加载会导致触发2次问题;
+4. 新增 b-model 的 checkbox 相关联, 相同值可以触发相同的选中效果
+5. 修复b-model type=tel 不会实时监听问题
+6. 新增 ref 属性，this.$refs 的dom访问  
+7. 优化 computed, 仅支持对第一层数组的length 读取触发, 比如 this.list.length 会触发
+8. 完善一些常用的报错信息
+9. 修复数组push,unshift 多条数据的时候,不解析dom
+
+### bui.loader
+1. 修复loader.get 获取不到该模块的template模板信息;
+2. 修复 loader.import 如果多次导入到id不执行
+3. 支持相对路径
+
+### bui.ajax
+1. 新增 baseUrl,transformRequest transformResponse 参数,对提交前的数据及返回的数据做处理;
+2. 新增 bui.get, bui.post, bui.put, bui.delete, bui.all 方法对 bui.ajax 的简化;
+
+
+### bui.$
+1. 新增 bui.$ 选择器,可以用来替换 router.$，以及 $ , 会在单页跟多页之间进行选择, 仅在 loader.define 里面使用; 
+
+### bui.hint 
+1. 支持宽度高度定义.
+
+### bui.number
+1. 修复受parentId 影响, 单独的 number控件无法初始化问题;
+
+### bui.btn
+1. 新增 click 方法, 可以解决事件绑定中快速点击导致多次触发问题
+2. 修复 submit loading 多次创建问题
+
+### bui.select
+1. 修复右边有title的时候,会把title显示出来;
+2. 修复选项内容过多,导致页面高过屏幕,无滚动条问题;
+
+### bui.levelselect
+1. 修复右边有title的时候,会把title显示出来;
+
+### bui.scroll
+1. 修复lock方法;
+
+
+### bui.searchbar
+1. 修复onInput在IOS下输入中文输入法变拼音问题;
+
+
+### bui.tab
+1. 新增 onBeforeTo 参数, 里面可以拿到 e.currentIndex e.prevIndex 来判断是否可以跳转过去, return false 则不行
+2. 支持动态加载相对路径
+
+### bui.actionsheet
+1. 修复 option 不能直接修改对象 buttons 的值
+
+
+### bui.storage
+1. 新增 deep参数，默认false，可以修复 数据量大的时候，取值太慢问题；
+
+
+### bui.rating
+1. 修复 value 方法 0 无法重置星星；
+
+
+### bui.toggle
+1. 新增 useBox 参数,默认不开启,
+ 开启可以修复一些切换box导致的错位问题;
+
+
+### bui.dropdown
+1. 新增 onChange 参数, 只有改变的时候才会触发;
+
+
 
 ## 1.5.3 20190529
 
@@ -117,6 +225,7 @@ router.$("input,textarea").on("blur", function() {
 ### bui.checkVersion  bingotouch link 才能用
 1. 新增 field 参数, 配置返回的数据字段
 2. 修改 isForced 为 forced , 部分json接口会过滤掉 is 参数.
+
 
 ## 1.5.2 20190401
 

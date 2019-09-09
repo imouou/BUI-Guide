@@ -23,6 +23,7 @@
   * [控件用法](chapter2/controls.md)
   * [动画交互](chapter2/animate.md)
   * [常用方法](chapter2/method.md)
+  * [插件扩展](chapter2/extend.md)
 
 * 数据驱动
   * [介绍](store/about.md)
@@ -52,5 +53,5 @@
   * [我要提问](https://github.com/imouou/BUI-Guide/issues)
   * [查看留言](https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed)
   * [常见问题](help.md)
-  
+
 * [更新日志](changelog.md)
