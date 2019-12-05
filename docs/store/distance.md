@@ -26,7 +26,7 @@
 loader.define(function(){
 
   var bs = bui.store({
-      scope: "page"  
+      scope: "page",  
       data: {},
       methods: {},
       watch: {},
@@ -34,7 +34,7 @@ loader.define(function(){
       templates: {},
       beforeMount: function(){
         // 数据解析前执行
-      }
+      },
       mounted: function(){
         // 数据解析后执行
       }
@@ -52,7 +52,7 @@ loader.define(function(){
 loader.define(function(){
   // 当前数据源为 page
   var bs = bui.store({
-      scope: "page"  
+      scope: "page",  
       data: {},
       mounted: function(){
         // 加载模块B
@@ -71,7 +71,7 @@ loader.define(function(){
 
   // 这里的数据源不能跟模块A的数据源名字相同
   var bs = bui.store({
-      scope: "pageB"  
+      scope: "pageB",  
       data: {},
       mounted: function(){
 

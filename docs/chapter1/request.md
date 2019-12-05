@@ -10,7 +10,7 @@
 
 ### bui.ajax(option) 
 
-?> 数据请求 <a href="http://www.easybui.com/demo/api/classes/bui.ajax.html" target="_blank">bui.ajax API</a>
+?> 数据请求 <a href="http://www.easybui.com/demo/api/classes/bui.ajax.html" target="_blank">bui.ajax API</a> 数据请求的跨域处理,请查看[调试](chapter1/debug.md)章节.
 
 *参数: option 是一个对象* 
 
@@ -88,13 +88,13 @@ $("#list").html(listTpl);
 
 ### bui.storage(option)
 
-?> `bui.storage` 是基于 `localStorage` 及 `sessionStorage` 封装的, 主要解决两者之间的API统一问题, 并且支持JSON存储, 以及支持限制多少条数据等问题, 常用来做历史记录.
+?> `bui.storage` 是基于 `localStorage` 及 `sessionStorage` 封装的, 主要解决两者之间的API统一问题, 并且支持JSON存储, 以及支持限制多少条数据等问题, 常用来做历史记录. 默认返回的是一个数组.
 
 *参数: option 是一个对象* 
 
 #### option.local
 - Type: `boolean`
-- Detail: `设置是否为本地存储,默认:true`
+- Detail: `设置是否为本地存储,默认:true 为localStorage, false 则为 sessionStorage`
 
 #### option.size
 - Type: `number`
@@ -131,6 +131,7 @@ var storage2 = bui.storage({size:2});
 var names = storage.get("name");
     // names 为数组, 可以通过 names[0] 获取到内容. 
     console.log(names) // ["bui"] 
+    
 
 // 获取对象
 var users = storage2.get("user");
@@ -141,4 +142,11 @@ var users = storage2.get("user");
 
 !> 注意: bui.storage 不管存什么数据,获取到的内容都在一个数组里面.
 
+?> 如果想要取到存进去的值, 可以这样 
+
+```js
+// 获取第一个值
+var name = storage.get("name",0);
+    console.log(name) // "bui"
+```
 

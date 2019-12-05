@@ -1,8 +1,10 @@
 # 多页路由开发
 
-?> [上一节](chapter1/quickstart) 我们用最简单的方式,创建了一个`index.html`, 当我们创建了多个页面以后, 就需要页面跳转了.
+?> [上一节](chapter1/quickstart) 我们用最简单的方式,创建了一个`index.html`, 当我们创建了多个页面以后, 就需要页面跳转了. 
 
-!> 多页开发只需直接引入对应的脚本就可以开发.
+!> 注意, 多页开发跟单页开发用到的方法可以是一致的. 
+
+?> 多页开发只需直接引入对应的脚本就可以开发. 以下地址为cdn地址,仅用于测试.
 
 ```html
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
@@ -13,8 +15,8 @@
 
 ## 页面跳转
 
-?> 页面跳转有2种: `bui.btn` 跟 `bui.load`
-- `静态属性绑定跳转`,含有属性 `href` 则会调用跳转页面操作;
+?> 页面跳转有2种: `bui.btn`(绑定属性href跳转) 跟 `bui.load`(动态跳转)
+- `绑定属性href跳转`,含有属性 `href` 则会调用跳转页面操作;
 - `动态跳转`, 需要自己绑定按钮跳转操作;
 
 ### 1. bui.btn(option) `静态属性绑定`  
@@ -33,7 +35,9 @@
 - Type: `boolean`
 - Detail: `是否开启进度条`
 
-?> 绑定`.bui-page` 结构中 `.bui-btn`, `a`, 如果含有 `href` 属性则会跳转. `一个页面也只需要绑定一次`.  <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.btn API</a>
+?> 绑定`.bui-page` 结构中 `.bui-btn`, `a`, 如果含有 `href` 属性则会跳转. <a href="http://www.easybui.com/demo/api/classes/bui.load.html" target="_blank">bui.btn API</a>
+- 多页开发:`一个页面绑定一次`.  
+- 单页开发:`只在首页绑定一次`.  
 
 *示例:*
 
@@ -150,17 +154,17 @@ bui.load({ url: "pages/page2.html", replace:true });
 ## 使用原生方法
 
 ```bash
-# 创建 bingotouch 平台版本
-$ buijs create -p bingotouch
+# 创建 dcloud 平台版本
+$ buijs create -p dcloud
 ```
-在页面引入的公共脚本里面, 加入一个`bui.isWebapp = false;` 的配置项, 运行在 `bui.ready` 里面的综合方法, `bui.load`,`bui.back`,`bui.ajax` 等等, 都会采用原生的处理. Yes, 就是这么简单!
+在页面引入的公共脚本里面, 加入一个`bui.isWebapp = false;` 的配置项, 运行在 `bui.ready` 里面的综合方法, `bui.load`,`bui.back`,`bui.getPageparams` 等等, 都会采用原生的处理. Yes, 就是这么简单! `bui.upload` 的切换需要通过 `{needNative:true}` 参数.
 
 ```js
 bui.isWebapp = false;
 
 ```
 
-!> 启用原生以后,Chrome无法调试, 需要在`Bingotouch`或者对应的平台容器上才能调试. Bingotouch 为公司内部开发使用.
+!> 启用原生以后,Chrome无法调试, 需要在`dcloud`或者对应的平台容器上才能调试..
 
 
 ?> 接下来可以继续学习
