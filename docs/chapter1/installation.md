@@ -23,7 +23,7 @@
 
 ## 部署运行
 
-第1种, 通过npm
+第1种, 通过npm (推荐使用 cnpm 或者 yarn 模块安装)
 
 ?> 解压,进入工程目录, 通过这种运行, `app.json`可以配置域名代理,解决移动端调试的跨域问题. 生成的`dist目录`为最终要打包的目录, src 保持源文件的方式.
 
@@ -34,7 +34,7 @@ $ npm install
 $ npm run dev
 ```
 
-!> 注意, windows的开发者,如果报错, 可以尝试安装[cnpm](https://npm.taobao.org/), 使用 `cnpm install` 安装依赖.
+!> 注意, 如果报错, 推荐安装[cnpm](https://npm.taobao.org/), 使用 `cnpm install` 安装依赖.
 另一个报错的原因是, [node-sass](https://github.com/sass/node-sass) 版本跟你的 [node](https://nodejs.org/en/) 版本不一致, 建议下载[node 8.x](https://nodejs.org/dist/v8.15.1/). 如果你下载的 node 是`10.15.3 LTS`. `node-sass` 的版本要在 4.9+ , 需要先`npm remove node-sass` 再安装指定版本.
 
 | **NodeJS**             | **Minimum node-sass version**    |
