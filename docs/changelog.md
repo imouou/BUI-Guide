@@ -3,6 +3,93 @@
 ## 目录
 [TOC]
 
+## 1.5.5 20191202
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+### 重要更新
+
+### 新增
+新增控件全局配置获取修改的方法 bui.setting
+
+### 修复
+
+### bui.loader 
+1. 修复多个依赖都时候,并且最后一个依赖被上一个页面使用,会导致第一次跳转不执行问题;
+
+
+### header
+1. 里面有下拉菜单，及有搜索的时候，样式问题 
+
+### 修复APICloud打包全屏以后导致顶部遮住问题 
+
+### buijs
+buijs create -m 一些命令都需要先获取新版本会导致比较慢
+
+### bui.store
+1. 修正 b-show 对内联标签,块状标签的解析;
+2. 增加 b-template 多个数据的传参; 
+3. 修正 b-model 对checkbox的双向绑定;
+
+### bui.ajax
+1. 新增 proxy 参数, 结合工程的 app.json, 把绝对路径的接口,改成相对路径接口, 这样就可以解决跨域调试问题(部分应用未预留域名变量,所以没法更改,而且部分平台并无原生请求);
+
+### bui.slide
+1. onBeforeTo 跟 bui.list 冲突 
+
+### bui.unit
+1. 新增filterField方法 对象提取，字段提取，映射等，比方下拉菜单提取name,value 返回过来。 
+
+### bui.hint
+1. 修正隐藏时文本变左对齐;
+
+### bui.btn
+1. 修正 bui.btn.submit 导致进度条不对齐;
+
+### bui.number
+1. 修正 value无法设置零;
+
+### bui.list
+1. 修正 没有数据的时候, 刷新的进度条跟滚动的进度条重叠问题;
+
+### bui.select
+1. 多级选择的第一次初始化,如果数据格式只有数组,会导致不能初始化第一个值
+2. 新增 allValues 方法, 用于返回所有的数据, 包含未选中的值, 有一个 checked 状态做区分;
+
+### bui.upload
+1. 添加图片及删除图片时,会导致删除的索引不对,修正例子;
+2. 修复start上传文件时,会变base32;
+
+### bui.pickerdate
+1. cols参数会导致执行两次,而且日期不一样;
+
+### bui.storage
+1. 新增 prefix 参数, 用于区分不同字段数据;
+2. 新增 getAll 方法, 获取存储的所有字段;
+
+### bui.hint
+1. 新增 text 方法;
+2. 新增 autoTrigger 参数,支持像对象一样操作;
+
+
 ## 1.5.4 20190829
 
 ### 升级指南
@@ -25,14 +112,14 @@ $ buijs update -p apicloud
 $ buijs update -p appcan    
 ```
 ### 重要更新
-1. 去除默认数组原型链的自定义方法, 改为通过 bui.store 定义的数组,才会有 $empty, $replace, $merge 等方法,其它通过 bui.array.empty(arr) 这种方式去操作. 
+1. 去除默认数组原型链的自定义方法, 改为通过 bui.store 定义的数组,才会有 $empty, $replace, $merge 等方法,其它通过 bui.array.empty(arr) 这种方式去操作.
 
 ### 样式更新
 1. 新增 bui-box-vertical 对 bui-page bui-tab 的影响，可以解决移动端微信 IOS 版的导航遮挡问题； `buijs create -t main-tab` 默认就是这种方式.
 2. 修复 bui-text-select, bui-text-unselect 对文本复制的支持.
 3. 新增 bui-scroll-hide(去掉滚动条), bui-scroll-auto(去掉ios缓冲), bui-scroll-touch(加上ios缓冲) 三种滚动方式
 
-### bui.router 
+### bui.router
 1. 修复 router.$ 在 loaderPart 局部加载以后, 获取不到选择器问题;
 2. 修复公共的 beforeBack 没有执行;
 3. 修复 router.currentPage , router.currentModule的在不同的切换指向问题
@@ -59,9 +146,9 @@ $ buijs update -p appcan
 
 
 ### bui.$
-1. 新增 bui.$ 选择器,可以用来替换 router.$，以及 $ , 会在单页跟多页之间进行选择, 仅在 loader.define 里面使用; 
+1. 新增 bui.$ 选择器,可以用来替换 router.$，以及 $ , 会在单页跟多页之间进行选择, 仅在 loader.define 里面使用;
 
-### bui.hint 
+### bui.hint
 1. 支持宽度高度定义.
 
 ### bui.number
@@ -165,7 +252,7 @@ router.$("input,textarea").on("blur", function() {
 1. 新增插件扩展
 
 ### bui.pickerdate
-1. 新增bindValue参数, 开启以后,可以自动绑定 handle 设置值. 
+1. 新增bindValue参数, 开启以后,可以自动绑定 handle 设置值.
 2. 新增对多个日期的支持, 不再需要重复初始化, 开始时间,结束时间, 只需要一个初始化.
 3. 修复日期的部分格式化导致回到原始时间问题.
 
@@ -219,7 +306,7 @@ router.$("input,textarea").on("blur", function() {
 1. 新增 data 动态数据里面支持 iframe, reload 参数, 便于外部跳转
 
 
-### bui.levelselect 
+### bui.levelselect
 1. 修复顶部面包屑的跳转问题;
 
 ### bui.checkVersion  bingotouch link 才能用

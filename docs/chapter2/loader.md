@@ -40,7 +40,7 @@ loader.define(function(require,exports,module){
 4. 避免循环嵌套自身, 在loader.define 里面 又 require 加载当前模块, 这个时候还没实例化,就会造成死循环;
 
 ## 加载模块
-### bui.require 
+### loader.require 
 
 >假设我们定义了一个匿名模块, 是在pages/page2/目录下, 目录下有 page2.html ,page2.js 两个文件. 则默认匿名模块的 模块名是 pages/page2/page2 会根据.html 文件提取前面路径作为模块名.
 
@@ -69,10 +69,10 @@ main.js
 ```
 loader.define(function(require,exports,module){
     
-    // 1. 加载pages/page2/page2模块 方法1: 这里会自执行一次 init. 输出自执行.
+    // 1. 加载pages/page2/page2模块 方法1: 这里会自执行一次 init. 输出自执行. 如果该模块已经加载过了,这里则不会执行.
     require("pages/page2/page2"); 
 
-    // 2. 有回调的时候,是会每次都执行, 加上define的时候,有一次自执行, 会变成执行2次.
+    // 2. 有回调的时候,是会每次都执行, 如果define的时候,有一次自执行, 会变成执行2次.
     require("pages/page2/page2",function(page2){
         // 这里会执行第2次.
         page2.init("回调执行")
@@ -111,6 +111,18 @@ loader.import("main.js",function(){
 例子3: 动态加载多个脚本
 loader.import(["js/plugins/baiduTemplate.js","js/plugins/map.js"],function(){
   // 创建成功以后执行回调
+});
+
+例子4: 1.5.2新增, 动态加载模板,回调每次都执行, 如果放在 loader.require 里面执行,则默认只初始化一次;
+
+loader.import("pages/ui/list.html",function(res){
+  // 拿到模板信息
+});
+
+例子5: 1.5.4新增, 把html,渲染到某个id下,只渲染一次. 有回调也只执行一次
+
+loader.import("pages/ui/list.html","#id",function(res){
+    // 在渲染模板到#id以后,回调只执行一次
 });
 
 ```
@@ -173,7 +185,7 @@ var main = loader.get("main");
 
 ### loader.set
 
-?> 设置的模块, 必须在 `window.router = bui.router()` 之后.
+?> 如要设置main模块, 必须在 `window.router = bui.router()` 之后, `router.init` 之前.
 
 ```js
 loader.set("main",{
@@ -233,6 +245,8 @@ loader.define({
 ```
 
 ?> 当然,你依然可以使用默认最简单的模块创建方式, 只是特殊模块你可以给它自己的生命周期, 比方我在列表页面,进去详情页, 后退到列表页, 是不会刷新的, 之前的方式是在后退的时候执行某个方法. 现在只要在 `show` 的这个生命周期里, 我可以调用这个页面的某个局部刷新的方法, 不管是前进后退, 都可以执行. 
+
+例子: 利用生命周期实现后退刷新.
 
 ```js
 loader.define({
