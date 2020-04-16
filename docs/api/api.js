@@ -12,6 +12,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "bui.btn",
         "bui.config",
         "bui.confirm",
+        "bui.date",
         "bui.delete",
         "bui.dialog",
         "bui.download",

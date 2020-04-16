@@ -29,8 +29,8 @@
                 
                 </h1>
             
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.5.0</option><option value="../api-1.4.8/index.html">1.4.8</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.6 </p>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.0 </p>
             
         </div>
     </div>
@@ -74,6 +74,8 @@
                 <li><a href="../classes/bui.config.html">bui.config</a></li>
             
                 <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.date.html">bui.date</a></li>
             
                 <li><a href="../classes/bui.delete.html">bui.delete</a></li>
             
@@ -252,7 +254,8 @@
 
 
 <div class="box intro">
-    <p>计时器,可以递减或者递增</p>
+    <p>计时器,可以递减或者递增, 可以用来做秒杀, 1.5.6新增,支持不同类型设定times
+预览地址: <a href="../../index.html#pages/ui_controls/bui.timer.html" target="_blank">demo</a></p>
 
 </div>
 
@@ -385,13 +388,13 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[times]</code>
-                                    <span class="type">Number</span>
+                                    <code class="param-name optional">[type]</code>
+                                    <span class="type">String</span>
                                     <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
-                                    <p>[多少秒, 默认:10]</p>
+                                    <p>[1.5.6新增, 定义times的类型, 默认 number(跟second类似,输出是大于60的数字) | second | minute | hour  | date | day ]</p>
 
                                 </div>
 
@@ -400,13 +403,43 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[interval]</code>
+                                    <code class="param-name optional">[time]</code>
                                     <span class="type">Number</span>
                                     <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
-                                    <p>[间隔,默认: 1000]</p>
+                                    <p>[1.5.6新增, 默认:10秒 当 type=minute 10等于10分钟 依次类推, 当type=&quot;date&quot; 时, time 传某个日期 &quot;2020-3-20 10:00&quot; ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[times]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 废弃 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[fixZero]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[1.5.6新增, 小余10是否在前面补零, 默认 true | false]</p>
 
                                 </div>
 
@@ -457,14 +490,59 @@
             <h4>Example:</h4>
 
             <div class="example-content">
-                <pre class="code prettyprint"><code>    var timer = bui.timer({
+                <pre class="code prettyprint"><code>   // 例子1: 倒计时10秒
+   html: 
+   &lt;div id=&quot;time&quot;&gt;&lt;/div&gt;
+
+   js: 
+   var timer = bui.timer({
+       target: &quot;#time&quot;,
        onEnd: function (argument) {
            bui.alert(&quot;时间到&quot;)
        },
-       times: 10
+       type: &quot;number&quot;,
+       time: 10
    })
 
-   timer.start();</code></pre>
+   timer.start();
+
+   // 例子2: 倒计时10分钟
+   js: 
+   var timer = bui.timer({
+       target: &quot;#time&quot;,
+       onEnd: function (argument) {
+           bui.alert(&quot;时间到&quot;)
+       },
+       type: &quot;minute&quot;,
+       time: 10
+   })
+
+   timer.start();
+
+   // 例子3:倒计时1天
+   js: 
+   var timer = bui.timer({
+       target: &quot;#time&quot;,
+       onEnd: function (argument) {
+           bui.alert(&quot;时间到&quot;)
+       },
+       type: &quot;minute&quot;,
+       time: 10
+   })
+
+   timer.start();
+
+   // 例子4: 离今晚12点还有多少时间
+   var afterDate = bui.date.after(new Date(), 1);
+   time = bui.timer({
+       target: &quot;#time&quot;,
+       onEnd: function (argument) {
+           bui.alert(&quot;时间到&quot;)
+       },
+       type: &quot;date&quot;,
+       time: afterDate
+   });
+   time.start();</code></pre>
 
             </div>
         </div>
@@ -512,6 +590,13 @@
                         
                             <li class="index-item method">
                                 <a href="#method_start">start</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_status">status</a>
 
                                 
                                 
@@ -572,7 +657,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l55"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:55</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l140"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:140</code></a>
         
         </p>
 
@@ -636,7 +721,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l74"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:74</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l159"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:159</code></a>
         
         </p>
 
@@ -700,7 +785,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l94"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:94</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l244"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:244</code></a>
         
         </p>
 
@@ -725,6 +810,71 @@
 
             <div class="example-content">
                 <pre class="code prettyprint"><code>       timer.start();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_status" class="method item">
+    <h3 class="name"><code>status</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l330"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:330</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>是否在计时中</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       // true 正在进行倒计时
+       var status = timer.status();</code></pre>
 
             </div>
         </div>
@@ -764,7 +914,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l166"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:166</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.timer.js.html#l318"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.timer.js:318</code></a>
         
         </p>
 

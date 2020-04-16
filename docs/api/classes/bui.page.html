@@ -29,8 +29,8 @@
                 
                 </h1>
             
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.5.0</option><option value="../api-1.4.8/index.html">1.4.8</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.6 </p>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.0 </p>
             
         </div>
     </div>
@@ -74,6 +74,8 @@
                 <li><a href="../classes/bui.config.html">bui.config</a></li>
             
                 <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.date.html">bui.date</a></li>
             
                 <li><a href="../classes/bui.delete.html">bui.delete</a></li>
             
@@ -257,7 +259,7 @@
     <div class="oui-fluid">
   <div class="span8">
     <h2>页面加载器</h2>
-    <p>用于在单页或者多页里面穿插一个新的页面, 比方登录.按照模块化的方式</p>
+    <p>用于在单页或者多页里面穿插一个新的页面, 比方登录.那就很方便的用来处理权限问题</p>
     <h3>预览地址: <a href="../../index.html#pages/ui_controls/bui.page.html" target="_blank">demo</a></h3>
   </div>
   <div class="span4"><a href="../../index.html#pages/ui_controls/bui.page.html" target="_blank"><img src="http://www.easybui.com/static/images/controls/bui-page_low.gif" alt="控件预览"/></a></div>
@@ -362,13 +364,13 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[id]</code>
-                                    <span class="type">String</span>
+                                    <code class="param-name optional">[param]</code>
+                                    <span class="type">Object</span>
                                     <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
-                                    <p>[加载到哪个容器下]</p>
+                                    <p>[传给 url的参数, url里面的模块需要使用 bui.history.getParams(module.id) 获取 ]</p>
 
                                 </div>
 
@@ -377,12 +379,268 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name">script</code>
+                                    <code class="param-name optional">[script]</code>
                                     <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
-                                    <p>[页面id]</p>
+                                    <p>[ 可以指定模块的脚本, 默认不需要写, 按模块的同名规范加载. ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[appendTo]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 打开的页面要加载到哪个容器下, 默认是&quot;.bui-page&quot;, 如果是 body, bui-router 等非单页里面的选择器, 则模块里面,不能使用 router.$, 应该使用 $, 包括里面用到的控件id, 之前是字符串, 现在是对象 $(&quot;#xxx&quot;), 控件才能正常. ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[autoload]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[默认 true 自动执行 | false ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[syncHistory]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[是否同步历史记录, 默认 false | true; 同步历史记录用户使用后退可以回到创建的页面 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[cache]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 true (只加载一次) | false (每次调用打开都执行一次)]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[iframe]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 false | true 打开外部地址 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[effect]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 &quot;fadeInRight&quot; 打开的动画, 具体查看 bui.toggle 的api  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[close]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 false | true 需要右上角有关闭按钮 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[needRemove]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 false | true 点击右上角关闭按钮,是否移除对话框,默认不需要 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[openFirst]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 true 先打开动画以后再执行模块 | false 先执行模块再打开动画 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[closeFirst]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认 false 如果模块有hide,执行模块的hide 跟关闭一起执行. | true 先执行关闭动画, 如果模块有hide,再执行模块的hide  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[beforeOpen]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 打开前执行, return false 则不执行打开操作 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[opened]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 每次打开后执行 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[beforeClose]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 关闭前执行, return false 则不执行关闭操作 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[closed]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 每次关闭后执行 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[beforeLoad]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 加载前执行,只执行一次 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onError]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 找不到页面执行 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[loaded]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 初始化后执行,只执行一次 ]</p>
 
                                 </div>
 
@@ -413,10 +671,27 @@
        方法2: 
            var uiPage = bui.page({
              url:&quot;pages/login/login.html&quot;,
-             autoload: false;
+             autoload: false
            })
 
-           uiPage.open();</code></pre>
+           $(&quot;#id&quot;).click(function(){
+               uiPage.open();
+           })
+
+       注意: bui.page 加载的页面,不会自动计算main 的高度, 建议里面的页面采用新的 page 结构,会自动适配.
+       &lt;div class=&quot;bui-page bui-vertical-box&quot;&gt;
+           &lt;header&gt;
+               &lt;div class=&quot;bui-bar&quot;&gt;
+                   &lt;div class=&quot;bui-bar-left&quot;&gt;&lt;/div&gt;
+                   &lt;div class=&quot;bui-bar-main&quot;&gt;标题栏&lt;/div&gt;
+                   &lt;div class=&quot;bui-bar-right&quot;&gt;&lt;/div&gt;
+               &lt;/div&gt;
+           &lt;/header&gt;
+           &lt;main&gt;
+               主要内容会自动减去 footer header 的高度.
+           &lt;/main&gt;
+           &lt;footer&gt;&lt;/footer&gt;
+       &lt;/div&gt;</code></pre>
 
             </div>
         </div>
@@ -450,6 +725,13 @@
                         
                             <li class="index-item method">
                                 <a href="#method_close">close</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_compile">compile</a>
 
                                 
                                 
@@ -543,7 +825,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l187"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:187</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l284"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:284</code></a>
         
         </p>
 
@@ -601,6 +883,73 @@
 </div>
 
                 
+                    <div id="method_compile" class="method item">
+    <h3 class="name"><code>compile</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l215"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:215</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>重新编译执行, 默认打开第一次已经编译过了, 无需继续编译</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>           // 切换
+           uiPage.compile();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
                     <div id="method_isOpen" class="method item">
     <h3 class="name"><code>isOpen</code></h3>
 
@@ -639,7 +988,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l173"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:173</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l270"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:270</code></a>
         
         </p>
 
@@ -728,7 +1077,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l239"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:239</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l342"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:342</code></a>
         
         </p>
 
@@ -830,7 +1179,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l221"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:221</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l324"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:324</code></a>
         
         </p>
 
@@ -938,7 +1287,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l144"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:144</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.page.js.html#l241"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.page.js:241</code></a>
         
         </p>
 

@@ -41,15 +41,19 @@
 
 ?> 你还需要一个BUI的标准结构, 放在body中间. 
 
+!> 1.6.x以后推荐使用以下结构,适配性更强
+
 ```html
-<div class="bui-page">
-  <!-- 固定顶部区 -->
-  <header class="bui-bar">
-    <div class="bui-bar-left">
-      <a class="bui-btn"><i class="icon-back"></i></a>
+<div class="bui-page bui-box-vertical">
+  <header>
+    <!-- 固定顶部区 -->
+    <div class="bui-bar">
+      <div class="bui-bar-left">
+        <a class="bui-btn"><i class="icon-back"></i></a>
+      </div>
+      <div class="bui-bar-main">BUI标准页面</div>
+      <div class="bui-bar-right"></div>
     </div>
-    <div class="bui-bar-main">BUI标准页面</div>
-    <div class="bui-bar-right"></div>
   </header>
   <main>
     <!-- 内容区滚动 -->
@@ -60,7 +64,7 @@
 </div>
 ```
 
-!> 一个页面对应一个 bui-page. BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须), 无需使用 fixed 样式,footer也会固定在底部. 
+!> 一个页面对应一个 bui-page, `bui-box-vertical`代表纵向布局, main自适应. BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须), 不建议使用 `position:fixed` `position:absolute` 样式. 
 
 ## 效果预览
 ?> 效果有点像这样: 可以直接在chrome浏览器打开html文件.
@@ -84,7 +88,7 @@
 ```js
   // 焦点图控件初始化
   var uiSlide = bui.slide({
-        id: "#slide",
+        id: "#uiSlide",
         height: 380,
         autopage: true,
         data: [{
@@ -96,11 +100,13 @@
         }]
     })
 ```
-?> 给实例增加事件监听. 
+?> 给实例增加事件监听. tab可以通过滑动、点击等方式触发, 需要通过以下方式来监听.
 
 ```js
   // 监听跳转以后触发
-  uiSlide.on("to",function(index){
+  uiSlide.on("to",function(){
+    // 获取跳转后的索引，从0开始
+    var index = this.index();
     console.log(index)
   })
 
@@ -135,14 +141,16 @@
   </head>
   <body>
     <!-- BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须) -->
-    <div class="bui-page">
+    <div class="bui-page bui-box-vertical">
       <!-- 固定顶部区 -->
-      <header class="bui-bar">
-        <div class="bui-bar-left">
-          <a class="bui-btn"><i class="icon-back"></i></a>
+      <header>
+        <div class="bui-bar">
+          <div class="bui-bar-left">
+            <a class="bui-btn"><i class="icon-back"></i></a>
+          </div>
+          <div class="bui-bar-main">BUI标准页面</div>
+          <div class="bui-bar-right"></div>
         </div>
-        <div class="bui-bar-main">BUI标准页面</div>
-        <div class="bui-bar-right"></div>
       </header>
       <main>
         <!-- 焦点图 -->
@@ -184,7 +192,7 @@
 
 ## BUI-Fast 让编写更简单
 
-?> 这是BUI的多页开发方式, 是不是很简单? BUI不止简单,还快. 上面的代码如果使用 `BUI-Fast` 插件来使用的话, 只需这几行代码就可以了. [如何安装BUI-Fast插件](tools/buifast)
+?> 这是BUI的多页开发方式, 是不是很简单? BUI不止简单,还快. 上面的代码如果使用 `BUI-Fast` 插件来使用的话, 只需这几行代码就可以了. [如何安装BUI-Fast插件](https://github.com/imouou/BUI-Fast-Snippets/)
 
 *方案1:*
 - ui-html <kbd>Tab</kbd>    生成bui页面引用
@@ -208,4 +216,5 @@
 ?> `bui-fast` 跟 `buijs` 这里给大家做个简单的介绍, 接下来你可以继续学习
 
 - [多页路由](chapter1/multipage)
+- [组件化](chapter2/component)
 

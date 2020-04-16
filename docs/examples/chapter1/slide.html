@@ -10,14 +10,16 @@
 
 <body>
     <!-- BUI 页面标准模板,包含 header(非必须) main(内容滚动区) footer(非必须) -->
-    <div class="bui-page">
+    <div class="bui-page bui-box-vertical">
         <!-- 固定顶部区 -->
-        <header class="bui-bar">
-            <div class="bui-bar-left">
-                <a class="bui-btn"><i class="icon-back"></i></a>
+        <header>
+            <div class="bui-bar">
+                <div class="bui-bar-left">
+                    <a class="bui-btn"><i class="icon-back"></i></a>
+                </div>
+                <div class="bui-bar-main">BUI标准页面</div>
+                <div class="bui-bar-right"></div>
             </div>
-            <div class="bui-bar-main">BUI标准页面</div>
-            <div class="bui-bar-right"></div>
         </header>
         <main>
             <!-- 焦点图 -->
@@ -51,7 +53,9 @@
                     autopage: true
                 })
                 // 监听跳转以后触发
-            uiSlide.on("to", function(index) {
+            uiSlide.on("to", function() {
+                    // 获取跳转的索引
+                    var index = this.index();
                     console.log(index)
                 })
                 // 跳转到第2个,索引值从0开始

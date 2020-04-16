@@ -3,7 +3,8 @@
 
 ## BUI 是什么?
 
-?> BUI 是用来`快速构建界面交互`的UI交互框架, 专注webapp开发, 开发者只需关注业务的开发, 界面的布局及交互交给BUI, 开发出来的应用, `可以嵌入平台` ( Link, 微信, 小程序, 钉钉, 淘宝, 支付宝等 ), 亦可以跟其它第三方平台`打包成独立应用`( Bingotouch , Cordova , Dcloud , APICloud , Appcan , 前海圆舟 等), 最终可以`全跨平台展示`. 
+?> BUI 是用来快速构建界面交互的UI框架, 专注webapp开发, 开发者只需关注业务的开发, 界面的布局及交互交给BUI, 开发出来的应用, 可以嵌入平台 ( 微信公众号, 微信小程序webview, 聆客, 钉钉, 淘宝, 支付宝等 ), 亦可以跟其它第三方平台打包成独立应用( Bingotouch , Cordova , Dcloud , APICloud , Appcan 等), 最终可以全跨平台展示. (包括Ipad) 
+
 
 ?> 结合BUI提供的[BUI-Fast编辑插件](buifast), [NPM工具](chapter1/installation), BUI更是一个移动快速开发的解决方案. 可以解决以下常见问题.
 
@@ -25,6 +26,20 @@
 
 ?> 欢迎加入我们的QQ技术交流群: 1群:`691560280` 2群:`4170980` (问题反馈请按文档指引,QQ群只供开发者技术交流的平台)
 
+**加群原则:**
+1. 文档搜索不到你要的答案?
+2. [已解决的issue](https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed)没有你要的答案?
+3. 我想发扬友爱互助精神, 我帮你, 你帮他, 共建和谐靠大家?
+
+
+## 案例效果
+?> 基于BUI制作的`高保真还原`App交互效果
+
+| <img src="static/images/case/163_low.gif" alt="" width="240px">             | <img src="static/images/case/qq_low.gif" alt="" width="240px">    | <img src="static/images/case/weixin_low.gif" alt="" width="240px">    |
+|:--------------------:|:---------------:|:---------------:|
+| 网易新闻: 耗时`半天`  |QQ: 耗时`1天`      | 微信: 耗时`2小时`      |
+
+!> 默认的案例及模板都是单页开发, 对于理解模块有一定的帮助. 以上案例都可以在[官网的资源](http://www.easybui.com/resource/)找到
 
 ## 起步
 
@@ -47,6 +62,7 @@
 * 开发一次,多平台适用;
 * 轻松定制UI;
 * 兼容requirejs,seajs模块;
+* 类似于vuejs的开发API;
 
 
 ## 适用场景
@@ -85,8 +101,22 @@
 
 
 ## 谁在使用
-内部上百个移动终端项目,客户有移动,电信,地铁,政府等行业.
+几百个移动终端项目,客户有移动,电信,地铁,政府等行业.
 
 ?> 可以下载BUI安卓体验包, 用不同平台打包以后的效果. <a href="http://www.easybui.com/downloads/" target="_target">进入下载中心</a>
 
+
+## 面向的开发者
+
+?> 需要掌握一点前端基础知识, `html`,`css`,`javascript`或`jQuery`  
+
+- 后端开发者
+- 美工
+- 前端开发者
+  - Javascript 开发者 
+  - jQuery 开发者
+  - Vuejs 开发者
+
+## 扫码体验Demo
+![BUI Demo](http://www.easybui.com/static/images/qrcode.png)
 

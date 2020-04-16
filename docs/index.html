@@ -56,12 +56,11 @@
         window.$docsify = {
             alias: {
                 // 编写插件
-                '.*?/tools/buifast': 'https://raw.githubusercontent.com/imouou/BUI-Fast-Snippets/master/README.md',
+                '.*?/tools/buifast': 'https://github.com/imouou/BUI-Fast-Snippets/raw/master/README.md',
                 // 模板库
-                '.*?/tools/bui-template': 'https://raw.githubusercontent.com/imouou/BUI-Template/master/README.md',
+                '.*?/tools/bui-template': 'https://github.com/imouou/BUI-Template/raw/master/README.md',
                 // npm工具
-                '.*?/tools/buijs': 'https://raw.githubusercontent.com/imouou/buijs-cli/master/README.md',
-                //'.*?/changelog': 'https://raw.githubusercontent.com/imouou/BUI-Guide/master/docs/CHANGELOG.md',
+                '.*?/tools/buijs': 'https://github.com/imouou/buijs-cli/raw/master/README.md',
                 '/.*/_navbar.md': '/_navbar.md'
             },
             auto2top: true,
@@ -73,7 +72,7 @@
             maxLevel: 4,
             subMaxLevel: 2,
             ga: 'UA-106147152-1',
-            name: 'BUI 文档 1.5.x',
+            name: 'BUI 文档 1.6.x',
             search: {
                 noData: {
                     '/': '没有结果!',
@@ -81,7 +80,7 @@
                 },
                 paths: 'auto',
                 placeholder: {
-                    '/': '搜索',
+                    '/': '搜索文档',
                     '/en/': 'Search'
                 }
             },
@@ -112,14 +111,12 @@
     <script src="static/js/plugins/docsify-plugin-codefund.js"></script>
     <script src="static/js/plugins/docsify-copy-code.min.js"></script>
     <script src="static/js/plugins/docsify-pagination.min.js"></script>
-    <!-- <script>
-  // 开启离线缓存
-  if (typeof navigator.serviceWorker !== 'undefined') {
-  navigator.serviceWorker.register('sw.js')
-  }
-
-
-  </script> -->
+    <script>
+        // 开启离线缓存
+        //   if (typeof navigator.serviceWorker !== 'undefined') {
+        //   navigator.serviceWorker.register('sw.js')
+        //   }
+    </script>
 </body>
 
 </html>

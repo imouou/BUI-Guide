@@ -45,7 +45,7 @@ loader.define(function(require,exports,module){
 >假设我们定义了一个匿名模块, 是在pages/page2/目录下, 目录下有 page2.html ,page2.js 两个文件. 则默认匿名模块的 模块名是 pages/page2/page2 会根据.html 文件提取前面路径作为模块名.
 
 page2.js
-```
+```js
 loader.define(function(require,exports,module){
 
     // 定义初始化
@@ -66,7 +66,7 @@ loader.define(function(require,exports,module){
 >现在我们想在刚刚的main.js里面加载这个模块,调用pages/page2/page2 的名称.
 
 main.js
-```
+```js
 loader.define(function(require,exports,module){
     
     // 1. 加载pages/page2/page2模块 方法1: 这里会自执行一次 init. 输出自执行. 如果该模块已经加载过了,这里则不会执行.
@@ -127,6 +127,16 @@ loader.import("pages/ui/list.html","#id",function(res){
 
 ```
 !> 样式的引入没有局部作用域,所以加载样式文件可能会造成影响全局,最好样式还是统一`sass模块化`管理.
+
+## 同步加载多个文件
+如果需要同步加载多个文件, 应该使用`loader.importSync`来替代`loader.import`;
+
+```js
+例子: 动态加载多个脚本
+loader.importSync(["js/plugins/baiduTemplate.js","js/plugins/map.js"],function(){
+  // 创建成功以后执行回调
+});
+```
 
 ## 获取及配置模块
 ### loader.map 
@@ -326,14 +336,36 @@ window.loader = bui.loader({
 
 main.js
 ```js
-// 依赖前置, 这种会优先加载完 page2,page3模块以后再执行main的回调.
-loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3){
+// 依赖前置, 这种会优先加载完 page2,page3模块以后再执行main的回调. page2,page3 只定义,不执行.
+loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3,require,exports,module){
   // 如果需要用到当前模块信息的话, page3后面依次还有 require,exports,module 
   
 })
 ```
 
 ?> 5. 如何定义一个自定义名字的模块呢?
+
+**第1种: **
+
+* 第1步: 声明自定义模块, 名称需要跟映射的模块名一致
+
+*pages/page2/page2.js*
+```js
+loader.define("page2",function(require,exports,module){
+  // 这里是page2的业务逻辑 
+})
+
+```
+* 第2步: 在首页 index.html 的 bui.js 下面引入该文件.
+
+index.html
+```html
+<script src="js/bui.js"></script>
+<!-- 加入自定义模块 -->
+<script src="pages/page2/page2.js"></script>
+```
+
+**第2种:**
 
 * 第1步: 映射脚本路径
 
@@ -351,10 +383,6 @@ window.router = bui.router();
 
 bui.ready(function(){
 
-    // 加载页面到div容器里面, 更多参数请查阅API
-    router.init({
-        id: "#bui-router"
-    })
 })
 ```
 * 第2步: 声明自定义模块, 名称需要跟映射的模块名一致
@@ -366,6 +394,8 @@ loader.define("page2",function(require,exports,module){
 })
 
 ```
+
+
 
 模块的定义及加载更多用法，请大家自行查阅  <a href="http://www.easybui.com/docs/index.html?id=api" target="_blank">bui.loader API</a> 
 
