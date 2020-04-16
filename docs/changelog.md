@@ -3,6 +3,135 @@
 ## 目录
 [TOC]
 
+
+## 1.6.0 2020412
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+### 重要更新
+
+建议重新安装 `buijs`, `bui-fast` 插件.
+
+bui-page 使用弹性结构, 模板等示例都统一更新.适应性更强, 但要注意对旧项目的头部有没有影响(没改过颜色的一般没影响);
+
+```
+// 安卓无跨域问题, 默认bui.ajax 就可以
+if( bui.platform.isIos() ){
+    // 请求使用原生
+    bui.config.ajax = {
+        needNative: true
+    }
+    // 列表请求使用原生
+    bui.config.list = {
+        needNative: true
+    }
+    // 模块的import本地文件使用原生
+    window.loader = bui.loader({
+        needNative: true
+    })
+}
+```
+
+### 控件更新
+
+#### bui.page
+1. 新增页面加载器控件, 可以用于在当前页插入其它模块页面, 比方需要权限的时候, 把登录页面插入进来
+
+#### bui.history
+1. 新增历史记录, 单页的路由1.6以后统一改在这里操作.
+
+#### bui.date
+1. 新增日期的常用方法; 日期格式化, 多少天前, 多少分钟前, 星期几等
+
+#### bui.floor
+1. 新增楼层插件; 常用的滚动效果,比方通讯录固定字母栏;
+
+#### bui.router 
+1. 修正 refresh 方法导致重复加载事件问题;
+2. 新增 errorPage 参数,比方 可以配置为 404.html 这样页面找不到就会跳转到 404.html
+
+#### bui.select 
+1. 新增needSearch 参数,数据多的时候可以开启本地搜索;
+
+#### bui.stepbar 
+1. value新增错误状态以及自定义错误样式;
+
+#### bui.array
+1. 多个方法做了更新
+2. 新增了 bui.array.deleteIndex 方法
+3. 修复 bui.array.remove bui.array.delete 删除多个相同值可能存在不一致的情况;
+
+#### bui.loader 
+1. 修复模块多个依赖的加载顺序会导致加载异常;
+2. 新增多个方法 loader.component loader.view loader.components loader.views  ...
+
+#### bui.store
+1. 修复 compiled 的时候,同一页面多个相同键名只触发了一次的问题;
+2. b-show的问题
+3. b-template中使用b指令的问题
+4. null值问题
+5. 修复 b-class 默认第一次不能为空的问题;
+6. 其它问题
+
+#### bui.scroll 
+1. 横向自动加载  ok
+2. 简化toBottom方法的处理;
+3. 
+
+#### bui.timer
+1. 新增支持不同类型设定,可以用于秒杀的倒计时,支持 数字,秒,分,时,天,日期
+
+#### bui.list 
+1. 新增toBottom方法
+2. 新增scrollTop方法;
+3. 新增to方法;
+4. 新增对聊天记录下拉新增的处理
+
+
+#### bui.dialog 
+1. 新增 useBox  参数, 是否使用弹性布局, 默认false, 部分全屏弹窗的底部按钮会被微信的导航遮盖住, 则可以开启这个参数. 
+2. 新增toggle方法
+3. 新增 style 参数,便于对全屏窗口的处理
+
+
+#### bui.dropdown 
+1. 修复 on change 的方式可能会触发2次的情况;
+
+#### bui.slide 
+1. 新增relative参数, 相对父级;
+
+#### bui.tab 
+1. 新增relative参数, 相对父级;
+2. 修正autoheight参数,让每个li保持当前内容高度;
+
+#### bui.upload
+1. 新增dcloud平台的原生上传支持;
+
+#### bui.pickerdate
+1. 新增empty方法,便于清空数据;
+2. 优化了最小日期跟最大日期为 前年今年明年 
+3. 修复只显示年份,月份,日期导致回到最小时间问题;
+
+
+
 ## 1.5.5 20191202
 
 ### 升级指南
