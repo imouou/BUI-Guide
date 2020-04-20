@@ -4,6 +4,53 @@
 [TOC]
 
 
+## 1.6.1 2020420
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 1.6.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+### 多页开发
+
+1. 新增对bui组件化的支持, 保持跟单页开发一致.
+
+### bui.levelselect
+
+1. 修复不支持4级菜单问题
+
+### bui.router
+1. 修复 iframe 在ios问题
+
+### bui.page
+1. 修复 iframe 在ios问题
+
+### bui.viewport
+1. 横屏竖屏统一采用竖屏的宽度比例;
+
+### bui.ajax
+1. dcloud平台在ios13.4 对本地文件的支持
+
+### bui.select
+1. 修改数据为空的时候不会重新清空数据问题
+
+
+
 ## 1.6.0 2020412
 
 ### 升级指南
