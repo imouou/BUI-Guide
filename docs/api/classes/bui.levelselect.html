@@ -29,8 +29,8 @@
                 
                 </h1>
             
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.5.0</option><option value="../api-1.4.8/index.html">1.4.8</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.6 </p>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.1 </p>
             
         </div>
     </div>
@@ -74,6 +74,8 @@
                 <li><a href="../classes/bui.config.html">bui.config</a></li>
             
                 <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.date.html">bui.date</a></li>
             
                 <li><a href="../classes/bui.delete.html">bui.delete</a></li>
             
@@ -778,6 +780,13 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
                                 <a href="#method_hide">hide</a>
 
                                 
@@ -786,6 +795,13 @@
                         
                             <li class="index-item method">
                                 <a href="#method_next">next</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_option">option</a>
 
                                 
                                 
@@ -871,6 +887,73 @@
                 <h2 class="off-left">Methods</h2>
 
                 
+                    <div id="method_destroy" class="method item">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l703"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:703</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[销毁控件]</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //销毁
+       citySelect.destroy();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
                     <div id="method_hide" class="method item">
     <h3 class="name"><code>hide</code></h3>
 
@@ -905,7 +988,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l457"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:457</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l460"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:460</code></a>
         
         </p>
 
@@ -972,7 +1055,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l417"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:417</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l420"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:420</code></a>
         
         </p>
 
@@ -998,6 +1081,142 @@
             <div class="example-content">
                 <pre class="code prettyprint"><code>       //下一个
        citySelect.next();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_option" class="method item">
+    <h3 class="name"><code>option</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[key]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[value]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l677"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:677</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取设置参数</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[key]</code>
+                        <span class="type">String | object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[value]</code>
+                        <span class="type">String | number | boolean | function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>        //获取所有参数
+       var option = citySelect.option();
+
+       //获取某个参数
+       var id = citySelect.option( &quot;id&quot; );
+
+       //修改一个参数
+       citySelect.option( &quot;popup&quot;,false );
+
+       //修改多个参数
+       citySelect.option( {&quot;popup&quot;:false} );</code></pre>
 
             </div>
         </div>
@@ -1039,7 +1258,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l403"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:403</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l406"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:406</code></a>
         
         </p>
 
@@ -1122,7 +1341,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l551"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:551</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l555"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:555</code></a>
         
         </p>
 
@@ -1231,7 +1450,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l432"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:432</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l435"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:435</code></a>
         
         </p>
 
@@ -1298,7 +1517,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l388"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:388</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l391"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:391</code></a>
         
         </p>
 
@@ -1365,7 +1584,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l508"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:508</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l512"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:512</code></a>
         
         </p>
 
@@ -1447,7 +1666,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l673"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:673</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l744"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:744</code></a>
         
         </p>
 
@@ -1542,7 +1761,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l646"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:646</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l650"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:650</code></a>
         
         </p>
 
@@ -1639,7 +1858,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l626"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:626</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.levelselect.js.html#l630"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:630</code></a>
         
         </p>
 

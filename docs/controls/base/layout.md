@@ -3,7 +3,6 @@
 
 <iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/layout.html" width="100%" height="820px" frameborder="0"></iframe>
 
-
 ## 弹性布局 
 
 ?> 弹性布局这里也叫行布局,不管子集有多少元素,都会挤在一行.  

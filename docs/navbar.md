@@ -1,8 +1,13 @@
 - [文档](/)
 - [组件](controls/)
 - [Demo](http://www.easybui.com/demo/)
-- [API](http://www.easybui.com/demo/api/)
-- Native API
-  - [Link API](http://dev.bingocc.com/btapi/)
-- [BUI专栏](article.md)
+- [文章](article.md)
+  - [BUI 专栏](article.md)
+  - [Link 专栏](linkapi.md)
+- API
+  - [BUI API](api/index.html ':ignore')
+  - [Link 原生API](http://dev.bingocc.com/btapi/)
+- 链接
+  - [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
+  - [1.5.x 旧版教程入口](http://www.easybui.com/guide-1.5.x/)
 

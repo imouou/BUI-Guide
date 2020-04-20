@@ -29,8 +29,8 @@
                 
                 </h1>
             
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.5.0</option><option value="../api-1.4.8/index.html">1.4.8</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.6 </p>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.1 </p>
             
         </div>
     </div>
@@ -74,6 +74,8 @@
                 <li><a href="../classes/bui.config.html">bui.config</a></li>
             
                 <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.date.html">bui.date</a></li>
             
                 <li><a href="../classes/bui.delete.html">bui.delete</a></li>
             
@@ -514,6 +516,21 @@
                             
                             <li class="param">
                                 
+                                    <code class="param-name optional">[needComponent]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[1.6.0 默认: true 解析component标签 | false 不解析component标签 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
                                     <code class="param-name optional">[beforeBack]</code>
                                     <span class="type">Function |  | Boolean</span>
                                     <span class="flag optional" title="This parameter is optional.">optional</span>
@@ -602,7 +619,7 @@
         hash:true
     })
   })
- js: 路由权限拦截
+ js: 路由权限拦截, 
   // 判断示例,正常用户信息应该使用 bui.storage 来操作. 
   var userinfo = null;
   bui.ready(function(){
@@ -610,7 +627,8 @@
         id: &quot;#bui-router&quot;,
         beforeLoad: function(e) {
             // 如果没有登录,并且当前页面不是登录页面,则执行跳转, 并且要return false; 这样没有历史记录,不能使用后退.
-            if( !userinfo &amp;&amp; e.target.pid !== &quot;pages/login/login&quot;){
+            // 1.6.x 统一使用 e.target.name , 1.4.x-1.5.x 使用 e.target.pid ;
+            if( !userinfo &amp;&amp; e.target.name !== &quot;pages/login/login&quot;){
                 router.load({
                     url:&quot;pages/login/login.html&quot;
                 })
@@ -854,7 +872,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2483"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2483</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2454"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2454</code></a>
         
         </p>
 
@@ -954,7 +972,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l1815"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1815</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l1818"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1818</code></a>
         
         </p>
 
@@ -1141,7 +1159,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2439"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2439</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2410"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2410</code></a>
         
         </p>
 
@@ -1225,7 +1243,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2454"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2454</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2425"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2425</code></a>
         
         </p>
 
@@ -1329,7 +1347,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2006"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2006</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2009"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2009</code></a>
         
         </p>
 
@@ -1423,7 +1441,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2177"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2177</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2154"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2154</code></a>
         
         </p>
 
@@ -1516,7 +1534,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2198"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2198</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2175"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2175</code></a>
         
         </p>
 
@@ -1583,8 +1601,7 @@
             <div class="example-content">
                 <pre class="code prettyprint"><code>       loader.define(function(require,exports,module) {
 
-         var pid = module.moduleName,
-             params = router.getPartParams(pid);
+           var params = router.getPartParams();
 
        })</code></pre>
 
@@ -1632,7 +1649,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l240"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:240</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l249"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:249</code></a>
         
         </p>
 
@@ -1645,7 +1662,7 @@
     </div>
 
     <div class="description">
-        <p>路由的历史记录对象</p>
+        <p>路由的历史记录对象(废弃), 1.6.x 以后使用 bui.history.xxx 替代 router.history</p>
 
     </div>
 
@@ -1727,7 +1744,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l495"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:495</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l504"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:504</code></a>
         
         </p>
 
@@ -1822,7 +1839,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2513"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2513</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2484"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2484</code></a>
         
         </p>
 
@@ -1927,7 +1944,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2232"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2232</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2201"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2201</code></a>
         
         </p>
 
@@ -2040,7 +2057,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l991"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:991</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l1002"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1002</code></a>
         
         </p>
 
@@ -2249,7 +2266,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l1716"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1716</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l1719"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1719</code></a>
         
         </p>
 
@@ -2260,7 +2277,7 @@
     </div>
 
     <div class="description">
-        <p>局部加载</p>
+        <p>局部加载, 1.5.6以后推荐使用 loader.load ,可以单页多页使用</p>
 
     </div>
 
@@ -2426,7 +2443,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2365"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2365</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2336"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2336</code></a>
         
         </p>
 
@@ -2556,7 +2573,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l889"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:889</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l900"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:900</code></a>
         
         </p>
 
@@ -2718,7 +2735,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2131"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2131</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2103"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2103</code></a>
         
         </p>
 
@@ -2797,7 +2814,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2148"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2148</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2125"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2125</code></a>
         
         </p>
 
@@ -2932,7 +2949,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l590"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:590</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l600"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:600</code></a>
         
         </p>
 
@@ -3002,7 +3019,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2413"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2413</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2384"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2384</code></a>
         
         </p>
 
@@ -3099,7 +3116,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2391"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2391</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_core_bui.router.js.html#l2362"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2362</code></a>
         
         </p>
 

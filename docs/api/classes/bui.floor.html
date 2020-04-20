@@ -29,8 +29,8 @@
                 
                 </h1>
             
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.5.0</option><option value="../api-1.4.8/index.html">1.4.8</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.6 </p>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.1 </p>
             
         </div>
     </div>
@@ -74,6 +74,8 @@
                 <li><a href="../classes/bui.config.html">bui.config</a></li>
             
                 <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.date.html">bui.date</a></li>
             
                 <li><a href="../classes/bui.delete.html">bui.delete</a></li>
             
@@ -410,7 +412,21 @@
                                 
 
                                 <div class="param-description">
-                                    <p>[默认:0.5  当滚动内容到一半的距离的时候,就会跳转菜单的激活效果 ]</p>
+                                    <p>[默认:0.5  当滚动内容到一半的距离的时候,就会跳转菜单的激活效果, 0.1则接近顶部 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">height</code>
+                                    <span class="type">Number</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[默认:&quot;inherit&quot;(由外部样式定义) | &quot;auto&quot;(自动计算) | 300(计算以后传入) ]</p>
 
                                 </div>
 
@@ -439,11 +455,23 @@
                 &lt;li class=&quot;bui-btn active&quot;&gt;表单&lt;/li&gt;
                 &lt;li class=&quot;bui-btn&quot;&gt;正文&lt;/li&gt;
                 &lt;li class=&quot;bui-btn&quot;&gt;附件(2)&lt;/li&gt;
-                &lt;li class=&quot;bui-btn&quot;&gt;关联&lt;/li&gt;
-                &lt;li class=&quot;bui-btn&quot;&gt;意见&lt;/li&gt;
             &lt;/ul&gt;
             &lt;div id=&quot;floor&quot; class=&quot;bui-floor&quot;&gt;
-                &lt;div class=&quot;bui-floor-main&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bui-floor-main&quot;&gt;
+                   &lt;!-- 关联 bui-floor-item 选择器 --&gt;
+                   &lt;div class=&quot;bui-panel bui-floor-item&quot;&gt;
+                       &lt;div class=&quot;bui-panel-head&quot;&gt;表单&lt;/div&gt;
+                       &lt;div class=&quot;bui-panel-main&quot;&gt;表单内容&lt;/div&gt;
+                   &lt;/div&gt;
+                   &lt;div class=&quot;bui-panel bui-floor-item&quot;&gt;
+                       &lt;div class=&quot;bui-panel-head&quot;&gt;正文&lt;/div&gt;
+                       &lt;div class=&quot;bui-panel-main&quot;&gt;正文内容&lt;/div&gt;
+                   &lt;/div&gt;
+                   &lt;div class=&quot;bui-panel bui-floor-item&quot;&gt;
+                       &lt;div class=&quot;bui-panel-head&quot;&gt;附件&lt;/div&gt;
+                       &lt;div class=&quot;bui-panel-main&quot;&gt;附件内容&lt;/div&gt;
+                   &lt;/div&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;bui-floor-foot&quot;&gt;&lt;/div&gt;
             &lt;/div&gt;
 
@@ -451,7 +479,7 @@
            var uiFloor = bui.floor({
                id: &quot;#floor&quot;,
                menu: &quot;#floorNav&quot;,          // id两个单词必须驼峰氏写法,不能中横杠
-               handle: &quot;.bui-floor-item&quot;,  // 默认,可不填
+               floorItem: &quot;.bui-floor-item&quot;,  // 默认,可不填
            })</code></pre>
 
             </div>
@@ -485,6 +513,13 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
                                 <a href="#method_init">init</a>
 
                                 
@@ -512,6 +547,71 @@
         
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_destroy" class="method item">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.floor.js.html#l263"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.floor.js:263</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>[销毁控件]</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>          //销毁
+          uiDropdown.destroy();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
 
                 
                     <div id="method_init" class="method item">
@@ -546,7 +646,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.floor.js.html#l82"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.floor.js:82</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.floor.js.html#l101"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.floor.js:101</code></a>
         
         </p>
 
@@ -626,7 +726,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.floor.js.html#l164"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.floor.js:164</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.floor.js.html#l227"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.floor.js:227</code></a>
         
         </p>
 

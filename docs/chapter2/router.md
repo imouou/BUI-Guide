@@ -3,7 +3,23 @@
 
 ## 前言
 
-?> 单页路由可以实现对路由的复杂操作, 弥补多页开发的不足, 在体验上, 效果也会更佳. 从多页转单页开发, 保持了接口的一致性, 上手非常简单, 但需要你对模块化也有一定的了解.
+?> 单页路由可以实现对路由的复杂操作, 弥补多页开发的不足, 在体验上, 效果也会更佳. 每一个单页都是一个组件.
+
+!> 单页的原理是通过ajax请求,把其它页面以局部加载的方式,渲染到路由里面, 那页面重复加载就势必会导致ID重复, 必须遵守以下几个原则.
+
+1. 使用 `router.$` 替换 `$` 选择器;
+  例如: 
+    - 获取或者设置 `$("#id").text()` 改成  `router.$("#id").text()`; 
+    - 事件绑定 `$("#id").click(function(){})` 改成 `router.$("#id").click(function(){})` 才能确保你操作的是当前页面选择器.
+    - `$.each` `$.extend` ... 这类非选择器的操作无需改变;
+2. 加载过的页面, 使用后退刷新处理;
+  - 例如: 从首页 main 跳转到登录页, 在登录的时候,就应该使用后退页面刷新或者局部刷新处理, 而不是使用 `bui.load` 继续跳转; 可以了解下[登录权限](chapter2/auth.md).
+3. 样式没有局部作用域, 需要手动加上父级选择器;
+4. 路径问题;
+  - 例如: `/pages/ui/list.html` 跟 `pages/ui/list.html`是不一样的, 在打包以后, `/`开头的文件将会从内存的根目录开始查找, 会导致404, 应该统一使用相对 `index.html`路径的写法 `pages/ui/list.html`.
+5. 页面预览;
+  - 单页里面只有模板跟模块, 直接打开里面什么都没有, 可以通过`index.html#+模块名`的方式进行预览. `index.html#pages/ui_controls/bui.list`
+
 
 ### 效果预览
 
@@ -31,7 +47,7 @@
 
 ## 创建单页工程 
 
-?> 使用`buijs`命令行构建. <a href="https://github.com/imouou/buijs-cli" target="_blank">如何使用buijs命令行工具?</a>
+?> 使用`buijs`命令行构建. 建议版本在`1.6.0以上`, <a href="https://github.com/imouou/buijs-cli" target="_blank">如何使用buijs命令行工具?</a> 
 
 ![buijs 创建工程预览](../static/images/buijs/buijs-create-demo_low.gif) 
 
@@ -151,7 +167,7 @@ bui.ready(function(){
 loader.define(function(require,exports,module){
     // 绑定按钮跳转
     $("#btn").on("click",function(){
-      router.load({ url: "pages/page2/page2.html", param: {} });
+      bui.load({ url: "pages/page2/page2.html", param: {} });
     })
 })
 
@@ -159,7 +175,7 @@ loader.define(function(require,exports,module){
 
 ### pages/page2/page2模块
 
-?> 我们再创建一个 `src/pages/page2/page2.html`,及 `src/pages/page2/page2.js` ,那通过下面的方式跳转,则创建了一个 `src/pages/page2/page2` 的模块.
+?> 我们再创建一个 `src/pages/page2/page2.html`,及 `src/pages/page2/page2.js` ,那通过上面的方式跳转,则创建了一个 `src/pages/page2/page2` 的模块.
 
 *src/pages/page2/page2.html*
 
@@ -213,9 +229,11 @@ loader.define(function(require,exports,module){
 
 ```js
 router.load({ url: "pages/page2/page2.html", param: {} });
+// 路由初始化以后,下面的跳转也是单页跳转
+bui.load({ url: "pages/page2/page2.html", param: {} });
 ```
 
-!> 注意: 仔细查看下跟多页路由接口都是保持的一致,甚至你可以直接使用 `bui.load` 来代替 `router.load` , 这个也是最早我们推荐的方式, 所以你会看到部分例子还是保持这样的写法. 现在我们更推荐您使用 `router.load` 等统一单页路由的接口.
+!> 注意: 仔细查看下跟多页路由接口都是保持的一致,甚至你可以直接使用 `bui.load` 来代替 `router.load` , 这个也是最早我们推荐的方式, 所以你会看到部分例子还是保持这样的写法. 
 
 
 ## 接收参数
@@ -232,7 +250,7 @@ var params = router.getPageParams();
 ## 页面后退
 ### router.back(option) 
 
-?> router.back 跟 bui.back 的区别在于, bui.back 后退会把历史记录一起后退,router.back 只是后退页面. 正常建议使用 bui.load 及 bui.back.
+?> router.back 跟 bui.back 的区别在于, bui.back 后退会把历史记录一起后退,router.back 只是后退页面. 开发中推荐使用 `bui.load` 及 `bui.back`.
 
 *参数: option是一个对象 *
 
@@ -253,38 +271,28 @@ var params = router.getPageParams();
 // 普通后退
 router.back();
 
-// 后退2层刷新
-router.back({
-  index: -2,
-  callback: function(){
-    router.refresh()
-  }
-});
-
 // 后退局部刷新
 router.back({
   callback: function(module){
-    // 后退的页面有抛出一个init方法
+    // 后退的页面有抛出一个init方法 或者刷新方法, 做内容修改
     module.init();
   }
 });
 
+// 后退2层刷新
+bui.back({
+  index: -2,
+  callback: function(){
+    bui.refresh()
+  }
+});
+
 // 不管在哪层,都可以后退到首页
-router.back({
+bui.back({
   name: "main"
 });
 ```
 
-## 页面刷新
-### router.refresh 
-
-?> 页面刷新有可能造成事件重复绑定, 所以一般不建议这样使用. 可以结合 `loader.require` 调用模块抛出的方法, 实现局部刷新功能. 
-
-*例子:*
-
-```js
-router.refresh();
-```
 
 ## 页面替换
 ### router.replace(option) 
@@ -330,6 +338,14 @@ router.replace({ url: "pages/page3/page3.html" });
 router.loadPart({ id:"#part", url: "pages/page2/page2.html", param: {} });
 
 ```
+
+?> 局部加载在1.6.x 有更简单的方式, 使用 component标签, 便可自动加载.
+
+```html
+<component name="pages/page2/page2"></component>
+
+```
+
 
 ## 局部接收参数
 ### router.getPartParams(moduleName)
@@ -383,18 +399,18 @@ router.preload([{
 
 ## 页面重复加载
 
-?> 页面重复加载的表现通常是, 渲染出不来,要刷新才有数据.
+?> 页面重复加载的表现通常是, 渲染出不来,要刷新才有数据. 事件被重复绑定等. 
 
 ### 使用 router.$ 替换 $ 选择器
 
-?> `router.$` 跟 `$`的区别在于, router.$ 是相对于当前页面查找, 有一种情况, 页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种时候,`$`绑定页面的事件会被重复绑定, `router.$` 则不会.
+?> `router.$` 跟 `$`的区别在于, router.$ 是相对于当前路由的页面查找, 有一种情况, 页面需要被重复加载, 比方列表页,跳转到详情页,详情页又有推荐的列表,点击又会跳转到详情, 这种时候,`$`绑定页面的事件会被重复绑定, `router.$` 则不会.
 
 
 *事件绑定示例: *
 ```js
 
-// 绑定当前页面下样式为 btn 的事件
-router.$(".bui-page").on("click",".btn",function(e){
+// 静态的结构绑定事件
+router.$(".bui-page .btn").click(function(e){
   
 })
 ```
@@ -409,22 +425,6 @@ A->B->C->D->E
 A->B->C->B->C
 ```
 
-## 获取历史记录
-
-### router.history.get()
-
-?> 获取当前路由的历史记录
-
-```js
-  var routerHistory = router.history.get();
-```
-
-### router.history.getLast()
-?> 获取路由的最后一条记录
-
-```js
-  var routerLastHistory = router.history.getLast();
-```
 
 ----
 
@@ -492,7 +492,7 @@ router.on("loadpart",function(e){
 !> 注意: 建议全局事件都在 index.js 加载. 事件名全部为小写.
 
 
-
+[单页生命周期](life.md ':include')
 
 ?> 接下来你可以继续学习
 

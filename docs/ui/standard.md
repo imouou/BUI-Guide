@@ -33,9 +33,7 @@
 
 1. 单页开发, 使用相对根目录的路径, 无论你的页面的层级目录有多深, 里面的图片路径,跳转路径, 应该使用 `images/xxx.jpg`, `pages/xxx/xxx.html` 的写法;
 
-2. 多页开发, 路径则需要像web开发一样, 应该使用 `../../images/xxx.jpg`, `../../pages/xxx/xxx.html` 的写法;
-
-3. 不使用绝对根路径的写法 `/images/xxx.jpg`, `/pages/xxx/xxx.html`; 打包后本地的路径查找会从 file:///xxxx 来查找你的文件, 最终导致路径错误.
+2. 不使用绝对根路径的写法 `/images/xxx.jpg`, `/pages/xxx/xxx.html`; 打包后本地的路径查找会从 file:///xxxx 来查找你的文件, 最终导致路径错误.
 
 ## 页面结构规范
 ?> 一个标准的结构包含, .bui-page 子集分别是 `header`, `main`, `footer` 等标签, `main` 标签必须有, 因为页面初始化的时候会自动撑开main的高度. 快速书写 `ui-page` <kbd>Tab</kbd>

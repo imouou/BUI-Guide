@@ -28,6 +28,8 @@ loader.define(function(require,exports,module){
     // require : 相当于 loader.require, 获取依赖的模块
     // exports : 如果没有return 可以采用这种方式输出模块
     // module : 拿到当前模块信息
+
+    // 第一次加载会执行一次
     
     // 模块如果需要给其它模块加载,通过 return 的方式抛出来,或者module.exports的方式
     return {};
@@ -38,6 +40,7 @@ loader.define(function(require,exports,module){
 2. 业务逻辑需要在 `loader.define` 里面,防止加载其它模块的时候冲突;
 3. 避免循环依赖 A ->依赖 B 模块, 而 B模块 -> A模块, 这就造成循环依赖,一般需要避免这种设计,如果一定要用, 不使用依赖前置的方式;
 4. 避免循环嵌套自身, 在loader.define 里面 又 require 加载当前模块, 这个时候还没实例化,就会造成死循环;
+5. 作为依赖的模块, 里面不要执行, 应该返回对象给外层调用的方式;
 
 ## 加载模块
 ### loader.require 
@@ -45,7 +48,7 @@ loader.define(function(require,exports,module){
 >假设我们定义了一个匿名模块, 是在pages/page2/目录下, 目录下有 page2.html ,page2.js 两个文件. 则默认匿名模块的 模块名是 pages/page2/page2 会根据.html 文件提取前面路径作为模块名.
 
 page2.js
-```
+```js
 loader.define(function(require,exports,module){
 
     // 定义初始化
@@ -66,7 +69,7 @@ loader.define(function(require,exports,module){
 >现在我们想在刚刚的main.js里面加载这个模块,调用pages/page2/page2 的名称.
 
 main.js
-```
+```js
 loader.define(function(require,exports,module){
     
     // 1. 加载pages/page2/page2模块 方法1: 这里会自执行一次 init. 输出自执行. 如果该模块已经加载过了,这里则不会执行.
@@ -83,7 +86,7 @@ loader.define(function(require,exports,module){
     }
 })
 ```
-这样打开首页的时候,就会加载main.js, main.js 会去加载pages/page2/page2模块,并调用对应的方法.
+这样打开首页的时候,就会加载`main.js`, `main.js` 会去加载`pages/page2/page2`模块,并调用对应的方法.
 
 ?> 造成重复执行一般在tab比较常见, `bui.tab`的`to` 事件是会每次都执行, 如果 `loader.require` 的模块有相同`init`回调, 则每次都会执行两次, 解决的办法是, 外部要操作里面的`init`方法时, `define` 的时候,不要自执行`init`. 
 
@@ -127,6 +130,18 @@ loader.import("pages/ui/list.html","#id",function(res){
 
 ```
 !> 样式的引入没有局部作用域,所以加载样式文件可能会造成影响全局,最好样式还是统一`sass模块化`管理.
+
+## 同步加载多个文件
+
+### loader.importSync
+如果需要同步加载多个文件, 应该使用`loader.importSync`来替代`loader.import`;
+
+```js
+例子: 动态加载多个脚本
+loader.importSync(["js/plugins/baiduTemplate.js","js/plugins/map.js"],function(){
+  // 创建成功以后执行回调
+});
+```
 
 ## 获取及配置模块
 ### loader.map 
@@ -299,6 +314,8 @@ loader.define({
 })
 ```
 
+?> 还有一些比较有用的方法, 会在组件那里介绍.
+
 ## 疑难解答
 
 ?> 1. 如何抛出当前模块的方法共享 
@@ -326,14 +343,36 @@ window.loader = bui.loader({
 
 main.js
 ```js
-// 依赖前置, 这种会优先加载完 page2,page3模块以后再执行main的回调.
-loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3){
+// 依赖前置, 这种会优先加载完 page2,page3模块以后再执行main的回调. page2,page3 只定义,不执行.
+loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3,require,exports,module){
   // 如果需要用到当前模块信息的话, page3后面依次还有 require,exports,module 
   
 })
 ```
 
 ?> 5. 如何定义一个自定义名字的模块呢?
+
+**第1种: **
+
+* 第1步: 声明自定义模块, 名称需要跟映射的模块名一致
+
+*pages/page2/page2.js*
+```js
+loader.define("page2",function(require,exports,module){
+  // 这里是page2的业务逻辑 
+})
+
+```
+* 第2步: 在首页 index.html 的 bui.js 下面引入该文件.
+
+index.html
+```html
+<script src="js/bui.js"></script>
+<!-- 加入自定义模块 -->
+<script src="pages/page2/page2.js"></script>
+```
+
+**第2种:**
 
 * 第1步: 映射脚本路径
 
@@ -351,10 +390,6 @@ window.router = bui.router();
 
 bui.ready(function(){
 
-    // 加载页面到div容器里面, 更多参数请查阅API
-    router.init({
-        id: "#bui-router"
-    })
 })
 ```
 * 第2步: 声明自定义模块, 名称需要跟映射的模块名一致
@@ -366,6 +401,8 @@ loader.define("page2",function(require,exports,module){
 })
 
 ```
+
+
 
 模块的定义及加载更多用法，请大家自行查阅  <a href="http://www.easybui.com/docs/index.html?id=api" target="_blank">bui.loader API</a> 
 

@@ -29,8 +29,8 @@
                 
                 </h1>
             
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.5.0</option><option value="../api-1.4.8/index.html">1.4.8</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.6 </p>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.1 </p>
             
         </div>
     </div>
@@ -74,6 +74,8 @@
                 <li><a href="../classes/bui.config.html">bui.config</a></li>
             
                 <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.date.html">bui.date</a></li>
             
                 <li><a href="../classes/bui.delete.html">bui.delete</a></li>
             
@@ -302,6 +304,13 @@
                             </li>
                         
                             <li class="index-item method">
+                                <a href="#method_getAttributes">getAttributes</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
                                 <a href="#method_getKeyObj">getKeyObj</a>
 
                                 
@@ -331,6 +340,13 @@
                         
                             <li class="index-item method">
                                 <a href="#method_pxToRemZoom">pxToRemZoom</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_relativePath">relativePath</a>
 
                                 
                                 
@@ -695,7 +711,7 @@
             
         
         
-        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_method_bui.unit.js.html#l750"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;method&#x2F;bui.unit.js:750</code></a>
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_method_bui.unit.js.html#l752"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;method&#x2F;bui.unit.js:752</code></a>
         
         </p>
 
@@ -783,6 +799,107 @@ var filter = bui.unit.filterField(target,dropdownData);
 var target = [{ id:12,title:&quot;我是标题&quot;,sex:&quot;男&quot;},{ id:13,title:&quot;我是标题2&quot;,sex:&quot;男&quot;}];
 var filter = bui.unit.filterField(target,dropdownData);
 // console.log(filter) // 输出  [{name: &quot;我是标题&quot;, value: 12},{name: &quot;我是标题2&quot;, value: 13}]</p>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getAttributes" class="method item">
+    <h3 class="name"><code>getAttributes</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>target</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_method_bui.unit.js.html#l837"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;method&#x2F;bui.unit.js:837</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.5.6</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取所有属性及值</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">target</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[要提取的目标对象]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>   // 例子1： 获取某个dom的所有属性和值</code></pre>
+<p>var attrs = bui.unit.getAttributes()</p>
 
             </div>
         </div>
@@ -1424,6 +1541,131 @@ var filter = bui.unit.filterField(target,dropdownData);
 
             <div class="example-content">
                 <pre class="code prettyprint"><code> var size = bui.unit.pxToRemZoom(200);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_relativePath" class="method item">
+    <h3 class="name"><code>relativePath</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>url</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[path]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_method_bui.unit.js.html#l904"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;method&#x2F;bui.unit.js:904</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.5.6</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取多页相对路径</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">url</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[提取多页的相对路径]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[path]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[默认: &quot;pages&quot; 静态页面的根路径,所有路径都相对当前路径 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>   // 例子： </code></pre>
+<p>var path = bui.unit.relativePath(&quot;pages/ui_controls/bui.list&quot;)
+         // 在首页 index.html 打开则输出 pages/ui_controls/bui.list , 在二级页面 pages/index.html 打开, 则是ui_controls/bui.list;</p>
 
             </div>
         </div>

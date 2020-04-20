@@ -254,4 +254,59 @@ bui.unit.pxToRem("200");
 
 ```
 
+## 日期处理
+bui版本 1.6.0 以上
+### bui.date.format
+日期格式化, 兼容IOS的日期格式转换
+
+例子:
+```js
+      // 时间戳转日期
+ var date = bui.date.format(1584781609309,"yyyy-MM-dd hh:mm:ss");
+       // 2020-03-21 17:06:49
+       // 日期转日期
+ var date = bui.date.format("2020-3-20","MM/dd");
+       // 03/20
+```
+
+### bui.date.convert
+转日期对象
+
+例子:
+```js
+ var date = bui.date.convert(1584781609309);
+ date.getFullYear();
+ // 2020
+```
+
+### bui.date.toWeek
+某个日期为星期几, 或者周几
+
+例子:
+```js
+var week = bui.date.toWeek("2020-3-20");
+// 星期六
+var week = bui.date.toWeek("2020-3-20",1);
+// 周六
+```
+
+
+### bui.date.after
+某个日期后多少天
+
+例子:
+```js
+var date = bui.date.after("2020-3-20",5);
+    // 2020-3-25
+```
+
+### bui.date.afterTime
+某个日期后多少天
+
+例子:
+```js
+var time = bui.date.afterTime("15:00",30);
+       // 15:30
+```
+
 
