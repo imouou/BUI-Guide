@@ -70,6 +70,10 @@
 
 [BUI文档](https://github.com/imouou/BUI-Guide/)
 
+## 在线观看
+
+[BUI在线阅读](https://imouou.github.io/BUI-Guide/)
+
 
 ## 扫码体验Demo
 ![BUI Demo](http://www.easybui.com/static/images/qrcode.png)
