@@ -18,7 +18,7 @@
 !> 注意: `1.6.x`,`1.5.x` 的切图规范为 `750px` 设计稿, `1.4.x` 旧版切图规范为 `540px` 设计稿, `1.4.x`不能直接替换更新, 请先确保你的文档跟你当前开发的bui版本一致. `bui.version`可以查看版本, `bui.currentPlatform`可以查看当前`bui.js` 属于哪个平台.
 
 ## 订阅号
-<img src="http://easybui.com/guide/static/images/buishensu.png" width="400">
+<img src="http://www.easybui.com/guide/static/images/buishensu.png" width="400">
 
 ?> 这是我们的订阅号, 专注BUI App移动开发, 会陆续在这整理一些相关的文章跟案例, 码字不易, 欢迎关注一波.
 
@@ -36,7 +36,7 @@
 ## 案例效果
 ?> 基于BUI制作的`高保真还原`App交互效果
 
-| <img src="static/images/case/163_low.gif" alt="" width="240px">             | <img src="static/images/case/qq_low.gif" alt="" width="240px">    | <img src="static/images/case/weixin_low.gif" alt="" width="240px">    |
+| <img src="http://www.easybui.com/guide/static/images/case/163_low.gif" alt="" width="240px">             | <img src="http://www.easybui.com/guide/static/images/case/qq_low.gif" alt="" width="240px">    | <img src="http://www.easybui.com/guide/static/images/case/weixin_low.gif" alt="" width="240px">    |
 |:--------------------:|:---------------:|:---------------:|
 | 网易新闻: 耗时`半天`  |QQ: 耗时`1天`      | 微信: 耗时`2小时`      |
 
