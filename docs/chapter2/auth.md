@@ -1,4 +1,4 @@
-# 登录权限处理
+# 权限处理
 
 ?> 目前常用的登录权限有3种, 都放在了github上, [BUI登录权限处理](https://github.com/imouou/BUI-Login).
 

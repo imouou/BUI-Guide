@@ -150,6 +150,28 @@
 <view name="pages/components/slide/index"></view>
 ```
 
+## view标签属性
+
+?> `view`有3个内置的属性. 支持自定义属性, 具体查看组件的传参.
+
+  - `name="xxx"` 模块名.
+  - `render="true"` 代表已经渲染结束,不会再次渲染.
+  - `delay="true"` 代表暂时不加载,直到调用 `loader.delay`方法. 查看组件的延迟加载
+
+## view延迟加载
+
+?> 不会自动加载模板, 直到手动调用 `loader.delay`方法.
+```html
+<view class="delayview" name="pages/list/index" delay="true"></view>
+```
+
+```js
+loader.delay({
+  id: ".delayview"
+})
+```
+
+
 ## 模板手动编译
 
 **loader.view**

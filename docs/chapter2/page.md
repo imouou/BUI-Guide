@@ -2,6 +2,7 @@
 
 ?> 弹窗加载组件把路由跳转的页面直接插入到当前页, 是组件的第3种表现形式. `bui.dialog`做的事情是自定义内容提醒, `bui.page`做的事情除了加载模板,还执行了模块.
 
+
 ## 初始化
 
 **自动加载**
@@ -35,7 +36,7 @@ $(".bui-page").click(function(){
 - `autoload` [boolean] 自动执行 默认 true | false;
 - `syncHistory` [boolean] 是否需要同步历史记录, 默认 false | true  (如果为true, bui.back会退到上一个页面, false则跳过上一个页面);
 - `cache` [boolean] 默认 true(只执行一次) | false(每次打开都重新执行);
-- `iframe` [boolean] 默认 false | true  是否以iframe 的形式打开, 适合加载远程地址, 注意, IOS对iframe的支持并不好;
+- `iframe` [boolean] 默认 false | true  是否以iframe 的形式打开, 适合加载远程地址;
 - `effect` [boolean] 默认 "fadeInRight" 跟路由一样打开, 还有一些其它效果, 请查看 [bui.toggle API](http://www.easybui.com/demo/api/classes/bui.toggle.html);
 - `beforeClose` [function] 关闭前执行回调;
 - `closed` [function] 关闭后执行回调;

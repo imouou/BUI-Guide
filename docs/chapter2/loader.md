@@ -28,6 +28,8 @@ loader.define(function(require,exports,module){
     // require : 相当于 loader.require, 获取依赖的模块
     // exports : 如果没有return 可以采用这种方式输出模块
     // module : 拿到当前模块信息
+
+    // 第一次加载会执行一次
     
     // 模块如果需要给其它模块加载,通过 return 的方式抛出来,或者module.exports的方式
     return {};
@@ -38,6 +40,7 @@ loader.define(function(require,exports,module){
 2. 业务逻辑需要在 `loader.define` 里面,防止加载其它模块的时候冲突;
 3. 避免循环依赖 A ->依赖 B 模块, 而 B模块 -> A模块, 这就造成循环依赖,一般需要避免这种设计,如果一定要用, 不使用依赖前置的方式;
 4. 避免循环嵌套自身, 在loader.define 里面 又 require 加载当前模块, 这个时候还没实例化,就会造成死循环;
+5. 作为依赖的模块, 里面不要执行, 应该返回对象给外层调用的方式;
 
 ## 加载模块
 ### loader.require 
@@ -83,7 +86,7 @@ loader.define(function(require,exports,module){
     }
 })
 ```
-这样打开首页的时候,就会加载main.js, main.js 会去加载pages/page2/page2模块,并调用对应的方法.
+这样打开首页的时候,就会加载`main.js`, `main.js` 会去加载`pages/page2/page2`模块,并调用对应的方法.
 
 ?> 造成重复执行一般在tab比较常见, `bui.tab`的`to` 事件是会每次都执行, 如果 `loader.require` 的模块有相同`init`回调, 则每次都会执行两次, 解决的办法是, 外部要操作里面的`init`方法时, `define` 的时候,不要自执行`init`. 
 
@@ -129,6 +132,8 @@ loader.import("pages/ui/list.html","#id",function(res){
 !> 样式的引入没有局部作用域,所以加载样式文件可能会造成影响全局,最好样式还是统一`sass模块化`管理.
 
 ## 同步加载多个文件
+
+### loader.importSync
 如果需要同步加载多个文件, 应该使用`loader.importSync`来替代`loader.import`;
 
 ```js
@@ -308,6 +313,8 @@ loader.define({
     }
 })
 ```
+
+?> 还有一些比较有用的方法, 会在组件那里介绍.
 
 ## 疑难解答
 

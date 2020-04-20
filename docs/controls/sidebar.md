@@ -9,7 +9,7 @@
 * 基础
   * [布局](controls/base/layout.md)
   * [头部](controls/base/header.md)
-  * [导航](controls/base/navbar.md)
+  * [导航](controls/base/nav.md)
   * [图标](controls/base/icons.md)
   * [角标](controls/base/sub.md)
   * [标签](controls/base/tag.md)
@@ -22,6 +22,7 @@
 * [侧滑菜单](controls/main/sidebar.md)
 * [抽屉菜单](controls/main/swipe.md)
 * [折叠菜单](controls/main/accordion.md)
+* [楼层插件](controls/main/floor.md)
 * 弹出交互类
   * [遮罩](controls/main/mask.md)
   * [加载进度](controls/main/loading.md)

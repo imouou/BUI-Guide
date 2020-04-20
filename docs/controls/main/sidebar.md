@@ -2,7 +2,7 @@
 
 [查看API](http://www.easybui.com/demo/api/classes/bui.sidebar.html)
 
-?> 滑动效果请扫码在手机观看.
+?> 滑动效果请扫码在手机观看. 样式在源码预览失效, 请直接点击到新窗口[预览](http://www.easybui.com/demo/index.html#pages/ui_controls/bui.sidebar). 
 
 ## 左侧菜单
 

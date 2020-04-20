@@ -49,6 +49,28 @@ var bs = bui.store({
 
 ?> 如果参数是对象,需要是一个标准JSON才能转换, `b-click` 属性值并且一定要用单引号`''`.
 
+### 复杂参数
+
+示例:
+
+```js
+var bs = bui.store({
+    scope: "page",
+    methods: {
+        getMessage: function(dom) {
+            // 这个名字太复杂只能通过属性的方式获取, 或者传索引跟数据匹配的方式
+            var name = $(dom).attr("name");
+        }
+    }
+})
+
+```
+
+```html
+<div class="bui-btn" b-click='page.getMessage($this)' name="abc复杂名字(a).pdf">点击输出3个参数:3,[4],{"test":"对象"}</div>
+```
+
+
 ### 内置参数
 
 ?> 有些时候,我们不得不通过dom去操作的时候, 可以通过一些内置的参数传给方法.
@@ -86,6 +108,24 @@ var bs = bui.store({
 ```
 
 ?> 示例里面的`remove`方法, 如果传的是 `$index`, 那它永远等于0, 而`$parentIndex` 是会根据父级的元素改变的.
+
+如果层级太深, 通过`$parentIndex` 都不能获取到, 那`b-target`属性就可以派上用场了
+
+例如: 
+
+```html
+<ul class="bui-list">
+  <li>
+    <div class="bui-btn">
+      <h3>标题名</h3>
+      <!-- $parentIndex 指向的是 bui-btn 而我们要删除的,其实是li的索引才是跟数据一一对应的 -->
+      <div b-click="page.remove($parentIndex)" >删除</div>
+      <!-- 通过b-target 修改了 $index 指向 li -->
+      <div b-click="page.remove($index)" b-target="li">删除</div>
+    </div>
+  </li>
+</ul>
+```
 
 ## 3. 自定义事件传参
 

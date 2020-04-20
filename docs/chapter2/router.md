@@ -13,10 +13,12 @@
     - 事件绑定 `$("#id").click(function(){})` 改成 `router.$("#id").click(function(){})` 才能确保你操作的是当前页面选择器.
     - `$.each` `$.extend` ... 这类非选择器的操作无需改变;
 2. 加载过的页面, 使用后退刷新处理;
-  例如: 从首页 main 跳转到登录页, 在登录的时候,就应该使用后退页面刷新或者局部刷新处理, 而不是使用 `bui.load` 继续跳转;
+  - 例如: 从首页 main 跳转到登录页, 在登录的时候,就应该使用后退页面刷新或者局部刷新处理, 而不是使用 `bui.load` 继续跳转; 可以了解下[登录权限](chapter2/auth.md).
 3. 样式没有局部作用域, 需要手动加上父级选择器;
 4. 路径问题;
-  例如: `/pages/ui/list.html` 跟 `pages/ui/list.html`是不一样的, 在打包以后, `/`开头的文件将会从内存的根目录开始查找, 会导致404, 应该统一使用相对 `index.html`路径的写法 `pages/ui/list.html`.
+  - 例如: `/pages/ui/list.html` 跟 `pages/ui/list.html`是不一样的, 在打包以后, `/`开头的文件将会从内存的根目录开始查找, 会导致404, 应该统一使用相对 `index.html`路径的写法 `pages/ui/list.html`.
+5. 页面预览;
+  - 单页里面只有模板跟模块, 直接打开里面什么都没有, 可以通过`index.html#+模块名`的方式进行预览. `index.html#pages/ui_controls/bui.list`
 
 
 ### 效果预览
@@ -45,7 +47,7 @@
 
 ## 创建单页工程 
 
-?> 使用`buijs`命令行构建. <a href="https://github.com/imouou/buijs-cli" target="_blank">如何使用buijs命令行工具?</a>
+?> 使用`buijs`命令行构建. 建议版本在`1.6.0以上`, <a href="https://github.com/imouou/buijs-cli" target="_blank">如何使用buijs命令行工具?</a> 
 
 ![buijs 创建工程预览](../static/images/buijs/buijs-create-demo_low.gif) 
 
@@ -173,7 +175,7 @@ loader.define(function(require,exports,module){
 
 ### pages/page2/page2模块
 
-?> 我们再创建一个 `src/pages/page2/page2.html`,及 `src/pages/page2/page2.js` ,那通过下面的方式跳转,则创建了一个 `src/pages/page2/page2` 的模块.
+?> 我们再创建一个 `src/pages/page2/page2.html`,及 `src/pages/page2/page2.js` ,那通过上面的方式跳转,则创建了一个 `src/pages/page2/page2` 的模块.
 
 *src/pages/page2/page2.html*
 
@@ -490,7 +492,7 @@ router.on("loadpart",function(e){
 !> 注意: 建议全局事件都在 index.js 加载. 事件名全部为小写.
 
 
-
+[单页生命周期](life.md ':include')
 
 ?> 接下来你可以继续学习
 

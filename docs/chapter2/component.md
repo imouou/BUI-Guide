@@ -292,10 +292,11 @@ loader.load({
 ## 组件的交互
 ?> 前面讲的是同一个组件的传参跟交互, 如果页面上有多个组件呢? 
 
-![搜索交互](../static/images/component/search.png) 
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/ui_loader/component" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ?> 例如: 待办页面, 页面上有`搜索组件`,有`list组件`,还有`tab组件`. 点击搜索如果在待办列表,则搜索待办数据, 在已办列表则搜索已办数据.
 [预览效果](http://www.easybui.com/demo/#pages/ui_loader/component). 点击里面的源码可以看到代码, 但看不到效果. 
+
 
 **主入口, 待办已办**  
 
