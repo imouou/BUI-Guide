@@ -4,6 +4,39 @@
 [TOC]
 
 
+## 1.6.2 2020426
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 1.6.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+### 1. component
+1. 完善组件的交互
+
+### 2. bui.dropdown
+1. 修复自定义三级菜单的时候, 定位问题;
+
+### 3. bui.unit.getAttributes 
+1. 支持对象转换
+
+
+
 ## 1.6.1 2020420
 
 ### 升级指南
@@ -80,8 +113,10 @@ $ buijs update -p appcan
 bui-page 使用弹性结构, 模板等示例都统一更新.适应性更强, 但要注意对旧项目的头部有没有影响(没改过颜色的一般没影响);
 
 ```
+
 // 安卓无跨域问题, 默认bui.ajax 就可以
 if( bui.platform.isIos() ){
+    bui.isWebapp = false;
     // 请求使用原生
     bui.config.ajax = {
         needNative: true

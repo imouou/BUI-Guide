@@ -1,7 +1,16 @@
 # BUI 专栏
 
+
+## 订阅号
+
+<img src="http://www.easybui.com/guide/static/images/buishensu.png" width="400">
+
+?> 这是我们的订阅号, 专注BUI App移动开发, 会陆续在这整理一些相关的文章跟案例, 码字不易, 欢迎关注一波.
+
+
 ## BUI 技巧
 
+* [BUI Webapp 跨平台框架 1.6 新版功能盘点](https://segmentfault.com/a/1190000022438413) `@王小o`
 * [【BUI实战篇】好快, 1分钟开发好一个下拉刷新,滚动加载列表](https://segmentfault.com/a/1190000020205347) `@王小o`
 * [【BUI实战篇】BUI数据驱动做的拼图游戏 Webapp移动适配版，基于vuejs拼图游戏改造](https://segmentfault.com/a/1190000019865515) `@王小o`
 * [一张脑图看懂BUI Webapp移动快速开发框架【上】--框架与工具、资源](https://segmentfault.com/a/1190000019835124) `@王小o`

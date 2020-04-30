@@ -12,6 +12,7 @@
   * [模板](chapter2/template.md)
   * [模块](chapter2/loader.md)
   * [组件化](chapter2/component.md)
+  * [组件通讯](chapter2/link.md)
   * [单页路由](chapter2/router.md)
   * [弹窗加载组件](chapter2/page.md)
   * [历史记录](chapter2/history.md)
