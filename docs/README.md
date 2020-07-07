@@ -1,7 +1,11 @@
 
 # BUI 文档 1.6.x
 
-<img src="static/images/applogo.png" height="100px" alt="">
+## 订阅号
+
+<img src="http://www.easybui.com/guide/static/images/buishensu.png" width="400">
+
+?> 我们的订阅号, 专注BUI App移动开发, 正在连载中, 会陆续整理一些相关的文章跟案例, 您也可以给我们留言.
 
 | **描述**             | **修订日期**    |
 |:--------------------|---------------:|
@@ -17,12 +21,6 @@
 
 !> 注意: `1.6.x`,`1.5.x` 的切图规范为 `750px` 设计稿, `1.4.x` 旧版切图规范为 `540px` 设计稿, `1.4.x`不能直接替换更新, 请先确保你的文档跟你当前开发的bui版本一致. `bui.version`可以查看版本, `bui.currentPlatform`可以查看当前`bui.js` 属于哪个平台.
 
-## 订阅号
-
-<img src="http://www.easybui.com/guide/static/images/buishensu.png" width="400">
-
-
-?> 这是我们的订阅号, 专注BUI App移动开发, 会陆续在这整理一些相关的文章跟案例, 码字不易, 欢迎关注一波.
 
 ## 简介
 

@@ -5,7 +5,9 @@
 
 ![BUI 单页示例目录说明](../static/images/router/catalog.png)  
 
-!> `src`目录及外层 `app.json`,`gulpfile.js`,`package.json`, 不使用npm时,非必须.
+> `src`目录及外层 `app.json`,`gulpfile.js`,`package.json`, 不使用npm时,非必须. 
+
+!> 注意: 工程目录下不能有中文文件名,会影响打包. 整个工程目录也不能有中文的路径, 保存代码热更新才会有效. 
 
 **目录说明:**
 

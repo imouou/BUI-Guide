@@ -61,7 +61,7 @@ main--------->页面A--------->页面B------------>页面C
 
 ```js
 // 定义一个模块
-loader.define(function(require,export,module){
+loader.define(function(require,exports,module){
 // 轮播图控件初始化
   var uiSlide = bui.slide({
         id: "#uiSlide",
@@ -113,7 +113,7 @@ loader.define(function(require,export,module){
 
 ```js
 // 定义一个模块
-loader.define(function(require,export,module){
+loader.define(function(require,exports,module){
   // module.id 如果component没有id则随机生成, 通过外层component生成的id 来区分不同的控件slide
   var uiSlide = bui.slide({
         id: `#${module.id} .bui-slide`,
@@ -149,7 +149,7 @@ loader.define(function(require,export,module){
 
 ```js
 // 定义一个模块
-loader.define(function(require,export,module){
+loader.define(function(require,exports,module){
 
   // 通过模块的id来获取不同的参数, 所有属性的参数都会被拿到. 
   var params = bui.history.getParams(module.id);
@@ -224,7 +224,7 @@ loader.define(function(require,export,module){
 ?> tab有多种操作跳转,滑动,点击,都会触发to事件.
 ```js
 // 定义一个模块
-loader.define(function(require,export,module){
+loader.define(function(require,exports,module){
 
     var uiTab = bui.tab({
       id:"#uiTab"

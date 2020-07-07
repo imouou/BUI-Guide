@@ -4,7 +4,7 @@
 ?> 你可能只需要一个系统自带的编辑器,就可以使用BUI开发应用, 但通过以下软件相互配合,对开发效率会有一定的帮助.
 
 1. 编辑器 ( 推荐: `vscode`, `Atom` 或 `Sublimetext3` );
-2. `bui-fast` [点击下载](https://github.com/imouou/BUI-Fast-Snippets/releases) (配合编辑器快速书写插件, 支持 Vscode(搜索安装bui-fast插件), Atom , Sublimetext , Webstorm , APICloudIDE ) [查看安装说明](tools/buifast.md);
+2. `bui-fast` [点击下载](https://github.com/imouou/BUI-Fast-Snippets/releases) (配合编辑器快速书写插件, 支持 Vscode(搜索安装bui-fast插件), Atom , Sublimetext , Webstorm , APICloudIDE ) [查看安装说明](https://github.com/imouou/BUI-Fast-Snippets/);
 3. [`buijs`](tools/buijs) cli工程构建工具, 用于快速构建工程,模板,更新平台等功能
 
 ## 下载开发包
@@ -58,6 +58,14 @@ $ cnpm run dev
 
 第3种, 把src 目录放在 IIS 或者 phpstudy 之类的服务器, 运行就能直接观看效果, 单页工程打开空白需要解决浏览器跨域问题, [Chrome跨域调试](chapter1/debug.md).
 
+## 支持热更新
+
+```bash
+npm run dev
+```
+跑起项目后, 保存代码就会自动刷新浏览器内容.
+
+!> 注意, 工程目录上不能有中文路径, 工程包里面也不能有中文命名.
 
 ## 编译sass或less
 需要先安装 [buijs](https://github.com/imouou/buijs-cli), 1.6.x工程, 默认已经去掉对sass的支持, 需要自己选择创建. 
