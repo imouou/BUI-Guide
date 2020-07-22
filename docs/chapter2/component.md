@@ -290,6 +290,48 @@ loader.load({
 ```
 
 
+
+## 组件全局方法
+
+?> `npm run build` 在新的工程执行这个命令以后, js 文件全部变成了闭包, 原本你的var 声明的全局变量, 变成了局部变量, 控制面板会抛出一堆错误. 如果有这个情况, 建议及早处理. 在1.6.2版本. 使用 `loader.global()` 来定义全局方法.
+
+例子: 
+
+**js/common.js**
+
+```js
+// 定义全局方法
+loader.global(function(global){
+
+    return {
+      config: {},
+      getDate: function(){
+        console.log("获取日期")
+      }
+    }
+})
+```
+
+?> 全局使用
+
+```js
+bui.ready(function(){
+
+  // 全局调用
+  loader.globals.getDate();
+})
+```
+
+?> 模块里面调用, 新增第4个参数.
+
+```js
+loader.define(function(require,exports,module,global){
+
+  // 全局调用
+  global.getDate();
+})
+```
+
 ## 综合案例
 
 ?> 最新安装了[buijs](https://github.com/imouou/buijs-cli)的开发者, 可以使用以下命令, 创建一个更加复杂的`163` component示例. 

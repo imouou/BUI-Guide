@@ -27,11 +27,12 @@
 ?> BUI 是用来快速构建界面交互的UI框架, 专注webapp开发, 开发者只需关注业务的开发, 界面的布局及交互交给BUI, 开发出来的应用, 可以嵌入平台 ( 微信公众号, 微信小程序webview, 聆客, 钉钉, 淘宝, 支付宝等 ), 亦可以跟其它第三方平台打包成独立应用( Bingotouch , Cordova , Dcloud , APICloud , Appcan 等), 最终可以全跨平台展示 (包括Ipad).
 
 
-?> 欢迎加入我们的QQ技术交流群: 1群:`691560280` 2群:`4170980` 
+?> 欢迎加入我们的QQ技术交流群: 1群:`691560280` 2群:`4170980`  (问题反馈请按文档指引,QQ群只供开发者技术交流的平台)
 
 **加群原则:**
 1. 文档搜索不到你要的答案?
 2. [已解决的issue](https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed)没有你要的答案?
+3. 我想发扬友爱互助精神, 我帮你, 你帮他, 共建和谐靠大家?
 
 ## 案例效果
 ?> 基于BUI制作的`高保真还原`App交互效果
@@ -42,16 +43,16 @@
 
 !> 默认的案例及模板都是单页开发, 对于理解模块有一定的帮助. 以上案例都可以在[官网的资源](http://www.easybui.com/resource/)找到
 
-## 面向的开发者
 
-?> 需要掌握一点前端基础知识, `html`,`css`,`javascript`或`jQuery`  
+## 扫码体验Demo
+![BUI Demo](http://www.easybui.com/static/images/qrcode.png)
 
-- 后端开发者
-- 美工
-- 前端开发者
-  - Javascript 开发者 
-  - jQuery 开发者
-  - Vuejs 开发者
+
+## 下载安卓体验版
+![BUI Demo](http://www.easybui.com/static/images/qrcode/bui_dcloud_qrcode.png) 
+
+基于Dcloud打包
+
 
 ## 开发者约定
 
@@ -66,6 +67,7 @@
 
 > 如果要指定版本 https://cdn.jsdelivr.net/npm/buijs@1.5.40/lib/latest/bui.js
 
+
 ## 文档下载
 
 [BUI文档](https://github.com/imouou/BUI-Guide/)
@@ -73,11 +75,6 @@
 ## 在线阅读
 
 [BUI在线阅读](https://imouou.github.io/BUI-Guide/)
-
-
-## 扫码体验Demo
-![BUI Demo](http://www.easybui.com/static/images/qrcode.png)
-
 
 ## 链接
 
