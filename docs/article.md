@@ -10,6 +10,7 @@
 
 ## BUI 技巧
 
+* [【快速开发App实战】BUI高仿网易新闻App系列一、搭建App开发环境和工作空间](https://segmentfault.com/a/1190000023534270) `@王小o`
 * [BUI Webapp 跨平台框架 1.6 新版功能盘点](https://segmentfault.com/a/1190000022438413) `@王小o`
 * [【BUI实战篇】好快, 1分钟开发好一个下拉刷新,滚动加载列表](https://segmentfault.com/a/1190000020205347) `@王小o`
 * [【BUI实战篇】BUI数据驱动做的拼图游戏 Webapp移动适配版，基于vuejs拼图游戏改造](https://segmentfault.com/a/1190000019865515) `@王小o`

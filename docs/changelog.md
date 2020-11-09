@@ -4,6 +4,68 @@
 [TOC]
 
 
+## 1.6.3 20201109
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+
+### 重要更新
+内部创建新项目, 如果是link轻应用, 请使用 `buijs create -p link`, 原本的 `buijs create -p bingotouch` 平台的bui.js 已经更新为 cordova 8.x 的平台, 引入方式也有一些新的变化. 
+
+### bui.store
+
+1. connect 的watch不触发问题 ok
+2. mixins 参数第二次进入不渲染, 公共数据不再编译view标签 ok
+
+
+### bui.router
+
+1. 新增 swipe ,swipeBack 等参数, 默认为false, true可以滑动返回.
+
+
+### bui.loader
+
+1. 新增 waited 方法, 返回每个组件的实例, wait方法返回了每个组件的信息
+2. 修复 wait 多个的时候, 拿不到exports操作.
+3. 修复 同时编译同一个组件时, 参数及组件只加载了一次的问题;
+### bui.rating
+
+1. 新增 enabled 方法
+
+### bui.tab
+
+1. 新增 currentMenu 方法, 获取菜单dom
+2. 新增 currentmain 方法, 获取内容dom
+
+
+### bui.number
+
+1. 新增 小数点的支持
+2. 修复 批量初始化的时候导致多个设置问题
+
+### bui.levelselect
+
+1. 优化 需要绑定多一次事件才能触发
+
+
 ## 1.6.2 2020426
 
 ### 升级指南

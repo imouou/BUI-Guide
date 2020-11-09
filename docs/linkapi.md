@@ -2,12 +2,12 @@
 
 ?> Link API 为原生开发平台, 供Link轻应用原生开发使用.
 
-* [Link API PC](http://dev.bingocc.com/btapi/) 
+* [Link API PC](http://docs.bingocloud.cn/btapi/) 
 * [Link 平台相关文件](https://github.com/bingo-oss/mobile-btjsapi/) 
 
 **link API 移动版, 请使用Link 扫码体验**
 
-<a href="http://dev.bingocc.com/btapi-demo/index.html#main" target="_blank"><img src="http://www.easybui.com/static/images/qrcode-bt-api.png" alt="link API 移动版"/></a>
+<a href="http://docs.bingocloud.cn/btapi-demo/index.html#main" target="_blank"><img src="http://www.easybui.com/static/images/qrcode-bt-api.png" alt="link API 移动版"/></a>
 
 
 ## 常见问题

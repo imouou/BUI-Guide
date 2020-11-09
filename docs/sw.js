@@ -23,6 +23,7 @@ const getFixedUrl = (req) => {
     // Just keep syncing with location.protocol
     // fetch(httpURL) belongs to active mixed content.
     // And fetch(httpRequest) is not supported yet.
+
     url.protocol = self.location.protocol
 
     // 2. add query for caching-busting.
@@ -33,6 +34,7 @@ const getFixedUrl = (req) => {
     if (url.hostname === self.location.hostname) {
         url.search += (url.search ? '&' : '?') + 'cache-bust=' + now
     }
+
     return url.href
 }
 
@@ -43,6 +45,7 @@ const getFixedUrl = (req) => {
  *  waitUntil(): activating ====> activated
  */
 self.addEventListener('activate', event => {
+    console.log("activate")
     event.waitUntil(self.clients.claim())
 })
 
@@ -53,8 +56,11 @@ self.addEventListener('activate', event => {
  *  void respondWith(Promise<Response> r)
  */
 self.addEventListener('fetch', event => {
+
+    // console.log("fetch",event)
     // Skip some of cross-origin requests, like those for Google Analytics.
-    if (HOSTNAME_WHITELIST.indexOf(new URL(event.request.url).hostname) > -1) {
+    if (HOSTNAME_WHITELIST.indexOf(new URL(event.request.url).hostname)>-1) {
+        
         // Stale-while-revalidate
         // similar to HTTP's stale-while-revalidate: https://www.mnot.net/blog/2007/12/12/stale
         // Upgrade from Jake's to Surma's: https://gist.github.com/surma/eb441223daaedf880801ad80006389f1
@@ -62,6 +68,8 @@ self.addEventListener('fetch', event => {
         const fixedUrl = getFixedUrl(event.request)
         const fetched = fetch(fixedUrl, { cache: 'no-store' })
         const fetchedCopy = fetched.then(resp => resp.clone())
+
+        console.log(cached,fixedUrl)
 
         // Call respondWith() with whatever we get first.
         // If the fetch fails (e.g disconnected), wait for the cache.
