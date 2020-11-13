@@ -26,7 +26,7 @@
 ?> 解压,进入工程目录, 通过这种运行, `app.json`可以配置域名代理,解决移动端调试的跨域问题. 生成的`dist`目录为最终要打包的目录, `src`目录保持源文件的方式.
 
 
-第1种, 通过npm
+第1种, 通过npm, (安装较慢)
 
 ```bash
 # 安装依赖
@@ -35,37 +35,28 @@ $ npm install
 $ npm run dev
 ```
 
-第2种, cnpm安装 (推荐)
+第2种, yarn安装 (推荐)
 ```bash
-# 安装cnpm
-$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+# 安装
+$ npm install -g yarn
 # 安装依赖
-$ cnpm install
+$ yarn install
 # 运行服务
-$ cnpm run dev
+$ npm run dev
 ```
-
-
-!> 注意, 如果报错, 推荐安装[cnpm](https://npm.taobao.org/), 使用 `cnpm install` 安装依赖.
-另一个报错的原因是, [node-sass](https://github.com/sass/node-sass) 版本跟你的 [node](https://nodejs.org/en/) 版本不一致, 建议下载[node 8.x](https://nodejs.org/dist/v8.15.1/). 如果你下载的 node 是`10.15.3 LTS`. `node-sass` 的版本要在 4.9+ , 需要先`npm remove node-sass` 再安装指定版本. 
-
-| **NodeJS**             | **Minimum node-sass version**    |
-|:--------------------|---------------:|
-| Node 11  |4.10+      |
-| Node 10  |4.9+      |
-| Node 8  |4.5.3+      |
-
-
-第3种, 把src 目录放在 IIS 或者 phpstudy 之类的服务器, 运行就能直接观看效果, 单页工程打开空白需要解决浏览器跨域问题, [Chrome跨域调试](chapter1/debug.md).
 
 ## 支持热更新
 
 ```bash
 npm run dev
 ```
+
+
 跑起项目后, 保存代码就会自动刷新浏览器内容.
 
 !> 注意, 工程目录上不能有中文路径, 工程包里面也不能有中文命名.
+
+第3种, 如果使用es5开发, 无需工程化, 把src 目录放在 IIS 或者 phpstudy 之类的服务器, 运行就能直接观看效果, 单页工程打开空白需要解决浏览器跨域问题, [Chrome跨域调试](chapter1/debug.md).
 
 ## 编译sass或less
 需要先安装 [buijs](https://github.com/imouou/buijs-cli), 1.6.x工程, 默认已经去掉对sass的支持, 需要自己选择创建. 
