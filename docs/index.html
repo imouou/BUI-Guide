@@ -12,6 +12,17 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="static/css/vue.css" title="vue">
     <style>
+        .search {
+            background: #f1f1f1;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .search input {
+            border: 1px solid #ccc !important;
+            border-radius: 40px;
+            line-height: 30px !important;
+        }
+        
         nav.app-nav li ul {
             min-width: 100px;
         }
@@ -51,6 +62,7 @@
   <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
    -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
     <script src="static/js/docsify.min.js"></script>
     <script>
         window.$docsify = {
@@ -113,9 +125,9 @@
     <script src="static/js/plugins/docsify-pagination.min.js"></script>
     <script>
         // 开启离线缓存
-        //   if (typeof navigator.serviceWorker !== 'undefined') {
-        //   navigator.serviceWorker.register('sw.js')
-        //   }
+          if (typeof navigator.serviceWorker !== 'undefined') {
+          navigator.serviceWorker.register('sw.js')
+          }
     </script>
 </body>
 

@@ -19,6 +19,7 @@
 
 ## 路由订阅
 
+全局事件
 ?> 具体查看 [bui.router API](http://www.easybui.com/demo/api/classes/bui.router.html)
 ```js
   // 监听后退事件,只要触发了后退, 不管通过按钮触发,还是通过物理后退
@@ -51,6 +52,8 @@
     console.log(index);
   })
 
+  // 执行就会触发一次
+  tab.to(0)
 
 ```
 
@@ -74,6 +77,45 @@
 
 ```
 
+
+## 组件发布订阅
+
+?> 单页面上的组件通讯, 可以通过全局的 `loader.on` `loader.trigger` 等方法. 
+
+### 初始化
+
+页面组件加载了搜索组件跟列表组件
+
+```html
+<component name="page/search/index"></component>
+<component name="page/list/index"></component>
+```
+
+
+搜索组件: page/search/index.js
+
+```js
+loader.define(["page/list/index"], function(list,require,export,module){
+    // 组件从上到下执行, on的监听必须在前面, 搜索组件监听了列表组件的点击事件, 
+    loader.on("clickid",function(e){
+        // 传过来的参数
+        console.log(e);
+    })
+})
+```
+
+列表组件: page/list/index.js
+```js
+loader.define(function(require,export,module){
+    
+
+    $("#id").click(function(e){
+      // 触发了click事件, 搜索组件那边会拿到对应的参数做相应处理.
+      loader.trigger("clickid",e);
+    })
+
+})
+```
 
 
 ## 自定义全局订阅
@@ -131,41 +173,3 @@ $("#login").click(function(){
 })
 
 ```
-
-
-## 局部发布订阅
-
-?> 像上面这些, 都是 `bui.emitter` 的一个实例, 为了避免冲突, 我们可以利用模块的独立作用域, 也常用于插件扩展. 更多使用请查看 [bui.emitter API](http://www.easybui.com/demo/api/classes/bui.emitter.html)
-
-### 初始化
-
-列表模块: page/list/index.js
-```js
-loader.define(function(require,export,module){
-    var emitter = bui.emitter();
-
-    // 内部监听.
-    emitter.on("clickid",function(){
-        
-    })
-
-    $("#id").click(function(e){
-      // 触发了click事件
-      emitter.trigger("clickid",e);
-    })
-
-    return {emitter: emitter};
-})
-```
-
-其它模块调用: page/detail/index.js
-
-```js
-loader.define(["page/list/index"], function(list,require,export,module){
-  // detail模块监听了list模块的点击事件, 那边点击了就会触发, 必须比它先执行.
-    list.emitter.on("clickid",function(){
-        
-    })
-})
-```
-

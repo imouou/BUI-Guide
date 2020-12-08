@@ -91,14 +91,3 @@ bui.ajax({
 ```js
 window.loader = bui.loader({cache: false});
 ```
-
-### 去除模板缓存
-?> 如果你的页面是单页,则在路由初始化的时候,加上`cache:false`; 如果是多页,则在地址栏上,加上`?t=时间戳`
-
-```js
-router.init({
-    ...
-    cache: false
-    ...
-})
-```

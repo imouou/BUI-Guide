@@ -6,7 +6,7 @@
   - [Link 专栏](linkapi.md)
 - API
   - [BUI API](api/index.html ':ignore')
-  - [Link 原生API](http://dev.bingocc.com/btapi/)
+  - [Link 原生API](http://docs.bingocloud.cn/btapi/)
 - 链接
   - [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
   - [1.5.x 旧版教程入口](http://www.easybui.com/guide-1.5.x/)

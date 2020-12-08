@@ -31,7 +31,7 @@ loader.define(function(require,exports,module){
 
     // 第一次加载会执行一次
     
-    // 模块如果需要给其它模块加载,通过 return 的方式抛出来,或者module.exports的方式
+    // 模块如果需要给其它模块加载,通过 return 的方式抛出来
     return {};
 })
 ```
@@ -321,9 +321,6 @@ loader.define({
 ?> 1. 如何抛出当前模块的方法共享 
 
 >1. 推荐 使用return 的方式 ;
->2. 使用module.exports 的方式; 
->3. exports 的方式;
->使用任意一种就可以.
 
 
 ?> 2. 微信调试的缓存问题怎么解决?

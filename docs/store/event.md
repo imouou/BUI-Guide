@@ -47,7 +47,7 @@ var bs = bui.store({
 <div class="bui-btn" b-click='page.getMessage(3,[4],{"test":"对象"})'>点击输出3个参数:3,[4],{"test":"对象"}</div>
 ```
 
-?> 如果参数是对象,需要是一个标准JSON才能转换, `b-click` 属性值并且一定要用单引号`''`.
+?> 如果参数是对象,需要是一个标准JSON才能转换, `b-click` 属性值并且一定要用单引号`''`. 另外传参里面不能有`()`,`&` 之类的特殊字符,会导致解析出错或者数据出错, 可以看复杂参数的处理. 
 
 ### 复杂参数
 
@@ -70,6 +70,32 @@ var bs = bui.store({
 <div class="bui-btn" b-click='page.getMessage($this)' name="abc复杂名字(a).pdf">点击输出3个参数:3,[4],{"test":"对象"}</div>
 ```
 
+示例2:
+
+```js
+var bs = bui.store({
+    scope: "page",
+    data: {
+      datas: [{id:"1","name":"test1"},{id:"2","name":"test2"}]
+    },
+    methods: {
+        getMessage: function(index) {
+            // 这个名字太复杂只能通过属性的方式获取, 或者传索引跟数据匹配的方式
+            console.log(this.$data.datas[index])
+        }
+    }
+})
+
+```
+
+```html
+<ul class="bui-list">
+  <li class="bui-btn" b-click='page.getMessage($index)'>通过索引来取这个数据</li>
+  <li class="bui-btn" b-click='page.getMessage($index)'>通过索引来取这个数据</li>
+</ul>  
+```
+
+> $index 是动态索引, 代表点击的元素li 在第几个索引, 跟你渲染的数据是一一对应的. 类似的还有 $parentIndex 
 
 ### 内置参数
 

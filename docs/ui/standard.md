@@ -5,7 +5,9 @@
 
 ![BUI 单页示例目录说明](../static/images/router/catalog.png)  
 
-!> `src`目录及外层 `app.json`,`gulpfile.js`,`package.json`, 不使用npm时,非必须.
+> `src`目录及外层 `app.json`,`gulpfile.js`,`package.json`, 不使用npm时,非必须. 
+
+!> 注意: 工程目录下不能有中文文件名,会影响打包. 整个工程目录也不能有中文的路径, 保存代码热更新才会有效. 
 
 **目录说明:**
 
@@ -20,6 +22,8 @@
 | /src/font/      | bui.css用到的字体图标        | 是 |
 | /src/images/       | 应用图片目录        | 否 |
 | /src/js/       | 应用脚本        | 是 |
+| /src/js/plugins       | 第三方插件目录,避免编译错误        | 否 |
+| /src/js/platform       | 第三方平台脚本,避免编译错误        | 否 |
 | /src/js/zepto.js   | bui.js默认依赖于zepto.js 或 jquery      | 是 |
 | /src/js/bui.js     | BUI交互控件库        | 是 |
 | /src/pages/       | 应用的模块        | 是 |
@@ -188,3 +192,68 @@ uiAccordion.on("show",function(){
 
 !> <strong class="hint">注意:</strong> 控件的事件监听要在控件初始化之后. 
 
+
+### Dom事件
+
+?> 单页开发里面很容易造成事件重复绑定, 首先, `$` 选择器要改成 `router.$` 选择器.
+
+```js
+
+// 单页不应该这样绑定
+$(".bui-page").click(function(e){
+
+})
+
+// 应该使用
+router.$(".bui-page").click(function(e){
+  console.log("点击了页面")
+})
+
+```
+
+动态dom的事件绑定, 采用事件委托的形式找到子集. 
+```js
+// 应该使用
+router.$(".bui-page").on("click",".bui-bar",function(e){
+  // 点击了头部
+  console.log("点击了头部")
+})
+```
+
+如果事件绑定放在方法被重复执行, 就会造成事件重复绑定
+```js
+function bind(){
+  // 应该使用
+  router.$(".bui-page").on("click",".bui-bar",function(e){
+    // 点击了头部
+    console.log("点击了头部")
+  })
+};
+
+// 绑定1次
+bind();
+// 绑定2次
+bind();
+
+// 最终点击输出了2次.
+```
+
+为确保事件的正确, 应该加上off("click","target")事件.
+
+```js
+function bind(){
+  // 应该使用
+  router.$(".bui-page").off("click",".bui-bar").on("click",".bui-bar",function(e){
+    // 点击了头部
+    console.log("点击了头部")
+  })
+};
+
+
+// 绑定1次
+bind();
+// 绑定2次
+bind();
+
+// 最终点击还是只执行一次.
+```
