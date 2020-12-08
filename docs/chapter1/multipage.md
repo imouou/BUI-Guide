@@ -89,16 +89,22 @@ $("#btnGo").on("click",function(e){
 
 ### bui.getPageParams() 
 
-?> 页面接收参数, 这里参数的值是在回调里面, 部分原生参数的接收是异步的, 这是为了保持接收参数的方式统一 <a href="http://www.easybui.com/demo/api/classes/bui.getPageParams.html" target="_blank">bui.getPageParams API</a>
+?> <del>页面接收参数, 这里参数的值是在回调里面, 部分原生参数的接收是异步的, 这是为了保持接收参数的方式统一 <a href="http://www.easybui.com/demo/api/classes/bui.getPageParams.html" target="_blank">bui.getPageParams API</a></del>
+1.6.x的版本可以使用 <a href="http://www.easybui.com/demo/api/classes/bui.history.html#method_getParams" target="_blank">bui.history.getParams("url")</a>;
 
 *page2.html 示例:*
 
 ```js
+// 需要跟原生结合使用这种异步方式
 var getParams = bui.getPageParams();
     getParams.done(function(result){
         console.log(result);
         // {id:"page2"}
     })
+
+// 1.6.x 默认不再推荐原生路由,因此可以使用
+var urlparams = bui.history.getParams("url");
+
 ```
 
 ## 页面后退

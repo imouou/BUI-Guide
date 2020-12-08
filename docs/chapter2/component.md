@@ -318,7 +318,7 @@ loader.global(function(global){
 bui.ready(function(){
 
   // 全局调用
-  loader.globals.getDate();
+  loader.global().getDate();
 })
 ```
 
