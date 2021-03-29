@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bui.toggle</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+<div id="sidemenu" class="sidebar-menu">菜单</div>
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="" width="30px"></a>
+                <a href="../index.html">BUI</a>
+                
+                </h1>
+            
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="/demo/api/index.html">1.5.0</option><option value="/demo/api-1.4.8/index.html" selected>1.4.8</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.4.8 </p>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div id="sidebar" class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <div id="api-tabview" class="tabview">
+
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+            
+                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+            
+                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+            
+                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+            
+                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+            
+                <li><a href="../classes/bui.array.html">bui.array</a></li>
+            
+                <li><a href="../classes/bui.back.html">bui.back</a></li>
+            
+                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+            
+                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+            
+                <li><a href="../classes/bui.config.html">bui.config</a></li>
+            
+                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+            
+                <li><a href="../classes/bui.download.html">bui.download</a></li>
+            
+                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+            
+                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+            
+                <li><a href="../classes/bui.file.html">bui.file</a></li>
+            
+                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+            
+                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+            
+                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+            
+                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+            
+                <li><a href="../classes/bui.init.html">bui.init</a></li>
+            
+                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+            
+                <li><a href="../classes/bui.list.html">bui.list</a></li>
+            
+                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+            
+                <li><a href="../classes/bui.load.html">bui.load</a></li>
+            
+                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+            
+                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+            
+                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+            
+                <li><a href="../classes/bui.number.html">bui.number</a></li>
+            
+                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+            
+                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+            
+                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+            
+                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+            
+                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+            
+                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+            
+                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+            
+                <li><a href="../classes/bui.router.html">bui.router</a></li>
+            
+                <li><a href="../classes/bui.run.html">bui.run</a></li>
+            
+                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+            
+                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+            
+                <li><a href="../classes/bui.select.html">bui.select</a></li>
+            
+                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+            
+                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+            
+                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+            
+                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+            
+                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+            
+                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+            
+                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+            
+                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+            
+                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+            
+                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+            
+                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Animate.html">Animate</a></li>
+            
+                <li><a href="../modules/Core.html">Core</a></li>
+            
+                <li><a href="../modules/Event.html">Event</a></li>
+            
+                <li><a href="../modules/Method.html">Method</a></li>
+            
+                <li><a href="../modules/Native.html">Native</a></li>
+            
+                <li><a href="../modules/UI.html">UI</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+ 
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>bui.toggle Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l7"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:7</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/Animate.html">Animate</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>常用动画切换器,只能运行已经配置好的动画,更多效果需要引入animate.css 外部样动画库 <br></p>
+ <h3>预览地址: <a href="../../index.html#pages/ui_method/bui.toggle.html" target="_blank">demo</a></h3>
+
+<p><a href="../classes/bui.toggle.html#method_option" class="crosslink">option</a>: 获取设置参数 <br>
+<a href="../classes/bui.toggle.html#method_widget" class="crosslink">widget</a>: 获取依赖控件 <br>
+<a href="../classes/bui.toggle.html#method_show" class="crosslink">show</a>: 显示 <br>
+<a href="../classes/bui.toggle.html#method_hide" class="crosslink">hide</a>: 隐藏 <br>
+<a href="../classes/bui.toggle.html#method_remove" class="crosslink">remove</a>: 移除 <br>
+<a href="../classes/bui.toggle.html#method_isShow" class="crosslink">isShow</a>: 显示状态 since 1.3.5 <br></p>
+
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_bui.toggle" class="method item">
+    <h3 class="name"><code>bui.toggle</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>id</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>effect</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>inOrder</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l7"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:7</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">id</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[要操控的元素的选择器]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">effect</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[内置的效果, showIn(无动画) | fadeIn | fadeInLeft | fadeInRight | fadeInDown | fadeInUp | zoomIn | bounceIn | rotateIn | flipInX | flipInY]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">inOrder</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 是否按顺序出场, 默认:false (从哪进,就从哪出) | true (从进来的方向出) ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>   方法1: </p>
+<pre class="code prettyprint"><code>       //初始化page对象
+   var uiToggle = bui.toggle(&quot;#page&quot;);
+
+       //显示动画
+       uiToggle.show();
+
+       //隐藏动画
+       uiToggle.hide();</code></pre>
+<p>   方法2:</p>
+<pre class="code prettyprint"><code>   var uiToggle = bui.toggle({ id:&quot;#page&quot; ,effect:&quot;fadeInLeft&quot;});
+       uiToggle.show();
+       uiToggle.hide();</code></pre>
+<p>   方法3: 自定义动画库里面没有的动画</p>
+<pre class="code prettyprint"><code>   var uiToggle = bui.toggle(&quot;#page&quot;);
+       uiToggle.show(&quot;fadeInLeft&quot;);
+       uiToggle.hide(&quot;fadeOutLeft&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_hide">hide</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_isShow">isShow</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_option">option</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_remove">remove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_show">show</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_widget">widget</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_destroy" class="method item">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[bool]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l311"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:311</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>[销毁控件]</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[bool]</code>
+                        <span class="type">Boolean</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 默认: false 销毁部分 | true 销毁全部   ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //销毁
+       uiToggle.destroy();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hide" class="method item">
+    <h3 class="name"><code>hide</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[effect]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[callback]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l230"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:230</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>隐藏动画</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[effect]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>指定动画效果</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>回调</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>      var uiToggle = bui.toggle(&quot;#page&quot;);
+          uiToggle.hide();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isShow" class="method item">
+    <h3 class="name"><code>isShow</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l149"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:149</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.3.5</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当前元素的显示状态</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>      var uiToggle = bui.toggle(&quot;#page&quot;);
+          uiToggle.isShow();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_option" class="method item">
+    <h3 class="name"><code>option</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[key]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[value]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l344"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:344</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取设置参数</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[key]</code>
+                        <span class="type">String | object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[value]</code>
+                        <span class="type">String | number | boolean | function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取所有参数
+        //获取所有参数
+       var option = uiToggle.option();
+
+       //获取某个参数
+       var id = uiToggle.option( &quot;id&quot; );
+
+       //修改一个参数
+       uiToggle.option( &quot;time&quot;,10 );
+
+       //修改多个参数
+       uiToggle.option( {&quot;time&quot;:10} );</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_remove" class="method item">
+    <h3 class="name"><code>remove</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l296"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:296</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>删除动画元素</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>      var uiToggle = bui.toggle(&quot;#page&quot;);
+          uiToggle.remove();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_show" class="method item">
+    <h3 class="name"><code>show</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[effect]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[callback]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l161"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:161</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>显示动画</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[effect]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>指定动画效果</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>回调</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>      var uiToggle = bui.toggle(&quot;#page&quot;);
+          uiToggle.show();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_widget" class="method item">
+    <h3 class="name"><code>widget</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[name]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_animate_bui.toggle.js.html#l329"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;animate&#x2F;bui.toggle.js:329</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取依赖的控件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[name]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 依赖控件名 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取依赖控件
+       var uiToggleWidget = uiToggle.widget();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?50f5631d37bf0ccb2034e80da6eb2972";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>

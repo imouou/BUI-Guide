@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bui.dropdown</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+<div id="sidemenu" class="sidebar-menu">菜单</div>
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="" width="30px"></a>
+                <a href="../index.html">BUI</a>
+                
+                </h1>
+            
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="/demo/api/index.html">1.5.0</option><option value="/demo/api-1.4.8/index.html" selected>1.4.8</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.4.8 </p>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div id="sidebar" class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <div id="api-tabview" class="tabview">
+
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+            
+                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+            
+                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+            
+                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+            
+                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+            
+                <li><a href="../classes/bui.array.html">bui.array</a></li>
+            
+                <li><a href="../classes/bui.back.html">bui.back</a></li>
+            
+                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+            
+                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+            
+                <li><a href="../classes/bui.config.html">bui.config</a></li>
+            
+                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+            
+                <li><a href="../classes/bui.download.html">bui.download</a></li>
+            
+                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+            
+                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+            
+                <li><a href="../classes/bui.file.html">bui.file</a></li>
+            
+                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+            
+                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+            
+                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+            
+                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+            
+                <li><a href="../classes/bui.init.html">bui.init</a></li>
+            
+                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+            
+                <li><a href="../classes/bui.list.html">bui.list</a></li>
+            
+                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+            
+                <li><a href="../classes/bui.load.html">bui.load</a></li>
+            
+                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+            
+                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+            
+                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+            
+                <li><a href="../classes/bui.number.html">bui.number</a></li>
+            
+                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+            
+                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+            
+                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+            
+                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+            
+                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+            
+                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+            
+                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+            
+                <li><a href="../classes/bui.router.html">bui.router</a></li>
+            
+                <li><a href="../classes/bui.run.html">bui.run</a></li>
+            
+                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+            
+                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+            
+                <li><a href="../classes/bui.select.html">bui.select</a></li>
+            
+                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+            
+                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+            
+                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+            
+                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+            
+                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+            
+                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+            
+                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+            
+                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+            
+                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+            
+                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+            
+                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Animate.html">Animate</a></li>
+            
+                <li><a href="../modules/Core.html">Core</a></li>
+            
+                <li><a href="../modules/Event.html">Event</a></li>
+            
+                <li><a href="../modules/Method.html">Method</a></li>
+            
+                <li><a href="../modules/Native.html">Native</a></li>
+            
+                <li><a href="../modules/UI.html">UI</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+ 
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>bui.dropdown Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l7"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:7</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/UI.html">UI</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <div class="oui-fluid">
+   <div class="span8">
+     <h2>下拉菜单</h2>
+     <p>下拉的菜单默认是相对于页面宽度的,当你需要相对按钮宽度时,relative改为false;下拉菜单可以选中不修改值,一般在点击的时候触发,也可以控制小三角的显示,具体可以查看demo.</p>
+     <h3>预览地址: <a href="../../index.html#pages/ui_controls/bui.dropdown.html" target="_blank">demo</a></h3>
+     <h3>方法说明:</h3>
+ <a href="../classes/bui.dropdown.html#method_active" class="crosslink">active</a>: 初始化显示第几个二级菜单的值 <br>
+ <a href="../classes/bui.dropdown.html#method_value" class="crosslink">value</a>: 不传参则获取,传参则设置 <br>
+ <a href="../classes/bui.dropdown.html#method_text" class="crosslink">text</a>: 不传参则获取文本,传参则设置文本 <br>
+ <a href="../classes/bui.dropdown.html#method_hide" class="crosslink">hide</a>: 隐藏二级菜单 <br>
+ <a href="../classes/bui.dropdown.html#method_show" class="crosslink">show</a>: 显示二级菜单 <br>
+ <a href="../classes/bui.dropdown.html#method_hideAll" class="crosslink">hideAll</a>: 隐藏所有二级菜单 <br>
+ <a href="../classes/bui.dropdown.html#method_option" class="crosslink">option</a>: 获取设置参数 <br>
+ <a href="../classes/bui.dropdown.html#method_widget" class="crosslink">widget</a>: 获取依赖控件 <br>
+   </div>
+   <div class="span4"><a href="../../index.html#pages/ui_controls/bui.dropdown.html" target="_blank"><img src="http://www.easybui.com/static/images/controls/bui-dropdown-scenes_low.gif" alt="控件预览"/></a></div>
+ </div>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_bui.dropdown" class="method item">
+    <h3 class="name"><code>bui.dropdown</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>option</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l7"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:7</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">option</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">id</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[控件id]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[handle]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[一级菜单的按钮]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[handleChildren]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[文本值的位置]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[target]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[二级菜单,默认是按钮的下一个]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[targetHandle]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[二级菜单的按钮,点击触发callback]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[width]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 二级菜单的宽度,一级自适应宽度 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[showArrow]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否显示箭头 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[showActive]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否显示选中的高亮效果 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[relative]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ true相对于屏幕两边 false相对于父层 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[change]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ true修改文本, false只是做选择操作,可以通过change属性定义 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[autoClose]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4.5新增,点击二级菜单的时候自动关闭, 默认:true | false ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[stopPropagation]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4.5新增,点击二级菜单的时候自动关闭, 默认:true | false ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[position]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 显示的位置 bottom | top | left | right 也可以通过position属性设置,权限会更高 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[callback]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 点击按钮的回调,第一个参数是自己的引用 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>  html:</p>
+<pre class="code prettyprint"><code>        &lt;div id=&quot;dropdown&quot; class=&quot;bui-dropdown&quot;&gt;
+            &lt;div class=&quot;bui-btn&quot;&gt;
+                下拉菜单
+            &lt;/div&gt;
+            &lt;ul class=&quot;bui-dropdown-menu&quot;&gt;
+                &lt;li class=&quot;bui-btn bui-box&quot; value=&quot;11&quot;&gt;
+                    &lt;div class=&quot;span1&quot;&gt;
+                        列表1
+                    &lt;/div&gt;
+                    &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;</code></pre>
+<p>   js: </p>
+<pre class="code prettyprint"><code>        // 初始化
+        var uiDropdown = bui.dropdown({
+            id: &quot;#dropdown&quot;
+        })</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_active">active</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_disabled">disabled</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_enabled">enabled</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_hide">hide</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_hideAll">hideAll</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_init">init</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_option">option</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_show">show</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_text">text</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_value">value</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_widget">widget</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events">
+                        
+                            <li class="index-item event">
+                                <a href="#event_off">off</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_on">on</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_active" class="method item">
+    <h3 class="name"><code>active</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[index]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l321"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:321</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>设置某一个二级菜单的值</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[index]</code>
+                        <span class="type">Number</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[第几个二级菜单]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //设置值
+       uiDropdown.active(1);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_destroy" class="method item">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[bool]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l468"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:468</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.2</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[销毁控件]</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[bool]</code>
+                        <span class="type">Boolean</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 默认: false 销毁部分 | true 销毁全部   ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //销毁
+       uiDropdown.destroy();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_disabled" class="method item">
+    <h3 class="name"><code>disabled</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l434"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:434</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4</p>
+        
+    </div>
+
+    <div class="description">
+        <p>阻止触发</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiDropdown.disabled();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_enabled" class="method item">
+    <h3 class="name"><code>enabled</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l451"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:451</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4</p>
+        
+    </div>
+
+    <div class="description">
+        <p>允许触发</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiDropdown.enabled();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hide" class="method item">
+    <h3 class="name"><code>hide</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l384"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:384</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>隐藏二级菜单</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //隐藏二级菜单
+       uiDropdown.hide();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hideAll" class="method item">
+    <h3 class="name"><code>hideAll</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l417"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:417</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>隐藏所有二级菜单</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //显示二级菜单
+       uiDropdown.hideAll();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_init" class="method item">
+    <h3 class="name"><code>init</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[option]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l131"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:131</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>初始化方法,用于重新初始化结构,事件只初始化一次</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[option]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[参数控件本身]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_option" class="method item">
+    <h3 class="name"><code>option</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[key]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[value]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l512"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:512</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取设置参数</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[key]</code>
+                        <span class="type">String | object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[value]</code>
+                        <span class="type">String | number | boolean | function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取所有参数
+       var option = uiDropdown.option();
+
+       //获取某个参数
+       var id = uiDropdown.option( &quot;id&quot; );
+
+       //修改一个参数
+       uiDropdown.option( &quot;width&quot;,200 );
+
+       //修改多个参数
+       uiDropdown.option( {&quot;width&quot;:200} );</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_show" class="method item">
+    <h3 class="name"><code>show</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l401"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:401</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>显示二级菜单</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //显示二级菜单
+       uiDropdown.show();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_text" class="method item">
+    <h3 class="name"><code>text</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[text]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l350"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:350</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>设置或者获取文本</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[text]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[设置文本]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //设置文本
+       uiDropdown.text(&quot;广东省&quot;);
+
+       //获取文本
+       var val = uiDropdown.text();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_value" class="method item">
+    <h3 class="name"><code>value</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[text]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l290"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:290</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>设置或者获取值</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[text]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[设置的值]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //设置值
+       uiDropdown.value(&quot;10&quot;);
+
+       //获取值
+       var val = uiDropdown.value();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_widget" class="method item">
+    <h3 class="name"><code>widget</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[name]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l497"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:497</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取依赖的控件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[name]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 依赖控件名 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取依赖控件
+       var uiDropdownWidget = uiDropdown.widget();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_off" class="events item">
+    <h3 class="name"><code>off</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l559"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:559</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为控件取消绑定事件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[type]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 事件类型: &quot;show&quot; | &quot;hide&quot; | &quot;change&quot; [文本值改变的时候] ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 绑定的事件, this 为当前点击的菜单 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiDropdown.off(&quot;show&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="event_on" class="events item">
+    <h3 class="name"><code>on</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.dropdown.js.html#l539"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.dropdown.js:539</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为控件绑定事件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[type]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 事件类型: &quot;show&quot; | &quot;hide&quot; | &quot;change&quot; [文本值改变的时候] ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 绑定的事件, this 为当前点击的菜单 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiDropdown.on(&quot;show&quot;,function () {
+           // 点击的菜单
+           console.log(this);
+       });</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?50f5631d37bf0ccb2034e80da6eb2972";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>

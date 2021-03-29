@@ -10,6 +10,15 @@
 
 ## BUI 技巧
 
+* [网易云音乐年度歌单的卡通形象联动制作](https://mp.weixin.qq.com/s/Rov3hjV-xf-O7FvU8dpQZA) `@王小o`
+* [一、搭建App开发环境和工作空间[BUIApp实战案例]](https://mp.weixin.qq.com/s/dmTUYhL55eMDbPtSdSwRlA) `@王小o`
+* [二、通过模板快速构建入口页[BUIApp实战案例]](https://mp.weixin.qq.com/s/uflbMibIpFsIVsUrv0Inyw) `@王小o`
+* [三、结合bui-fast插件制作首页交互[BUIApp实战案例]](https://mp.weixin.qq.com/s/gH170JaJqhMWCShD7-hqZw) `@王小o`
+* [四、分离下拉刷新滚动分页组件[BUIApp实战案例]](https://mp.weixin.qq.com/s/VlfCApSDK87e8FW7DGbXpg) `@王小o`
+* [五、打包App[BUIApp实战案例]](https://mp.weixin.qq.com/s/SRqAouZAwDTAtvn4wmN5gA) `@王小o`
+* [六、打包后的优化原理篇](https://mp.weixin.qq.com/s/FLYrsT2Hv1TVC-oaiiBYNg) `@王小o`
+* [七、适配深色模式/暗黑模式/夜间模式/换肤](https://mp.weixin.qq.com/s/uVQIu7640pim5L6GxvLHVw) `@王小o`
+* [八、几行代码实现一个树组件](https://mp.weixin.qq.com/s/xZgCqdOANJyd4m7eR_z6wg) `@王小o`
 * [【快速开发App实战】BUI高仿网易新闻App系列一、搭建App开发环境和工作空间](https://segmentfault.com/a/1190000023534270) `@王小o`
 * [BUI Webapp 跨平台框架 1.6 新版功能盘点](https://segmentfault.com/a/1190000022438413) `@王小o`
 * [【BUI实战篇】好快, 1分钟开发好一个下拉刷新,滚动加载列表](https://segmentfault.com/a/1190000020205347) `@王小o`

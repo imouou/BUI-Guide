@@ -1,12 +1,14 @@
 - [文档](/)
 - [组件](controls/)
 - [Demo](http://www.easybui.com/demo/)
-- [文章](article.md)
+- [文章专栏](article.md)
   - [BUI 专栏](article.md)
   - [Link 专栏](linkapi.md)
 - API
   - [BUI API](api/index.html ':ignore')
-  - [Link 原生API](http://docs.bingocloud.cn/btapi/)
+  - [Link API文档](http://docs.bingocloud.cn/btapi/)
+  - [Link API演示](https://developer.bingosoft.net/btapi-demo/index.html)
+  - [Cordova2.6 API](https://cordova.apache.org/docs/en/2.6.0/index.html)
 - 链接
   - [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
   - [1.5.x 旧版教程入口](http://www.easybui.com/guide-1.5.x/)

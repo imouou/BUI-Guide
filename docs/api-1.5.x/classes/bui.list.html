@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bui.list</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+<div id="sidemenu" class="sidebar-menu">菜单</div>
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="" width="30px"></a>
+                <a href="../index.html">BUI</a>
+                
+                </h1>
+            
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="/demo/api/index.html" selected>1.5.0</option><option value="/demo/api-1.4.8/index.html">1.4.8</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.5.2 </p>
+            
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div id="sidebar" class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <div id="api-tabview" class="tabview">
+
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+            
+                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+            
+                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+            
+                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+            
+                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+            
+                <li><a href="../classes/bui.array.html">bui.array</a></li>
+            
+                <li><a href="../classes/bui.back.html">bui.back</a></li>
+            
+                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+            
+                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+            
+                <li><a href="../classes/bui.config.html">bui.config</a></li>
+            
+                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+            
+                <li><a href="../classes/bui.download.html">bui.download</a></li>
+            
+                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+            
+                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+            
+                <li><a href="../classes/bui.file.html">bui.file</a></li>
+            
+                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+            
+                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+            
+                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+            
+                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+            
+                <li><a href="../classes/bui.init.html">bui.init</a></li>
+            
+                <li><a href="../classes/bui.input.html">bui.input</a></li>
+            
+                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+            
+                <li><a href="../classes/bui.list.html">bui.list</a></li>
+            
+                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+            
+                <li><a href="../classes/bui.load.html">bui.load</a></li>
+            
+                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+            
+                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+            
+                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+            
+                <li><a href="../classes/bui.number.html">bui.number</a></li>
+            
+                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+            
+                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+            
+                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+            
+                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+            
+                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+            
+                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+            
+                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+            
+                <li><a href="../classes/bui.router.html">bui.router</a></li>
+            
+                <li><a href="../classes/bui.run.html">bui.run</a></li>
+            
+                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+            
+                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+            
+                <li><a href="../classes/bui.select.html">bui.select</a></li>
+            
+                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+            
+                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+            
+                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+            
+                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+            
+                <li><a href="../classes/bui.store.html">bui.store</a></li>
+            
+                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+            
+                <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+            
+                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+            
+                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+            
+                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+            
+                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+            
+                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+            
+                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Animate.html">Animate</a></li>
+            
+                <li><a href="../modules/Core.html">Core</a></li>
+            
+                <li><a href="../modules/Event.html">Event</a></li>
+            
+                <li><a href="../modules/Method.html">Method</a></li>
+            
+                <li><a href="../modules/Native.html">Native</a></li>
+            
+                <li><a href="../modules/UI.html">UI</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+ 
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>bui.list Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l8"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:8</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/UI.html">UI</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <div class="oui-fluid">
+   <div class="span8">
+     <h2>列表自动分页加载及刷新</h2>
+     <p>注意field的配置,其中的field:{data:"data"} 为请求以后返回的数组所在字段, 对比示例的json理解. 如果结果是数组, 无需配置</p>
+     <p>list = scroll + pullrefresh 把scroll的数据请求逻辑封装,只需要传id,url,data,模板的生成器,field(把数据映射),如果需要你的页面的逻辑比较复杂,建议参考 <a href="../../index.html#pages/ui_controls/bui.scroll.html" target="_blank">bui.scroll</a> </p>
+     <h3>预览地址: <a href="../../index.html#pages/ui_controls/bui.list.html" target="_blank">demo</a></h3>
+     <h3>方法说明:</h3>
+ <a href="../classes/bui.list.html#method_refresh" class="crosslink">refresh</a>: 手动刷新数据 <br>
+ <a href="../classes/bui.list.html#method_option" class="crosslink">option</a>: 获取设置参数 <br>
+ <a href="../classes/bui.list.html#method_widget" class="crosslink">widget</a>: 获取依赖的scroll控件,然后使用scroll的方法 <br>
+   </div>
+   <div class="span4"><a href="../../index.html#pages/ui_controls/bui.list_news.html" target="_blank"><img src="http://www.easybui.com/static/images/controls/bui-list_low.gif" alt="控件预览"/></a></div>
+ </div>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_bui.list" class="method item">
+    <h3 class="name"><code>bui.list</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>option</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l8"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:8</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">option</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">id</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[控件id]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">url</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[数据请求地址]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[data]</code>
+                                    <span class="type">Object</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[数据请求许可参数, 分页及分页大小在field 配置, 默认请求的分页是: &quot;page&quot;,&quot;pageSize&quot;]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[method]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[&quot;GET&quot; || &quot;POST&quot;]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[timeout]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[默认:20000]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[headers]</code>
+                                    <span class="type">Object</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ {} ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[localData]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[1.4.5新增,本地数据,格式保持跟接口返回数据一致,如果有本地数据,不再请求]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[field]</code>
+                                    <span class="type">Object</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 请求及返回的真实字段, 例如: 请求的分页字段为 &quot;pagination&quot;, 大小字段名为: &quot;psize&quot; , 返回的数据为 {&quot;result&quot;:[]}, 则filed = { page:&quot;pagination&quot;,size:&quot;psize&quot;,data:&quot;result&quot; }  ]</p>
+
+                                </div>
+
+                                
+                                    <ul class="params-list">
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name optional">[page]</code>
+                                                <span class="type">String</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 默认: "page", 分页的字段名, 如果分页的字段名不是"page",需要更改]
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name optional">[size]</code>
+                                                <span class="type">String</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 默认: "pageSize", 每页多少条的字段名, 如果条数的字段名不是"pageSize",需要更改,但不能为"length"]
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name optional">[data]</code>
+                                                <span class="type">String</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 默认: "", 返回的字段的数组在哪个字段, 例如, 返回的数据为 {"result":[]}, 则filed = {data:"result"} , 返回的数据有层级,则使用对象字符串, 例如 {"result":{ data: [] }}'result.data' ]
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[page]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[映射的请求的数据页数, 默认:1]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[pageSize]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[映射的请求每页多少条, 默认:10]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[children]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[列表的选择器,默认: &quot;.bui-list&quot;]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[handle]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[列表的循环子元素,默认: &quot;.bui-btn&quot;]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[stopHandle]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于下拉刷新里面的某个样式,不触发下拉刷新,一般用于事件冲突,比方 input[type=range] 无法滑动的时候]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[height]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[列表的高度,0 自适应]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[commandRefresh]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[刷新的操作,跟jquery操作dom一样, 默认是&quot;html&quot;|&quot;append&quot;|&quot;prepend&quot;|]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[commandLoad]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[加载的操作,跟jquery操作dom一样, 默认是&quot;append&quot;|&quot;prepend&quot;|]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">autoNext</code>
+                                    <span class="type">Boolean</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认true 当高度不足时,会继续请求下一页,直到高度出现滚动条 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">autoScroll</code>
+                                    <span class="type">Boolean</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认true 滚动到底部触发, false 自己监听 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">refresh</code>
+                                    <span class="type">Boolean</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 允许下拉刷新, 默认true | false  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[template]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 请求到数据以后生成的模板,需要返回html字符串 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onBeforeInit]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.5.1新增 初始化前触发 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onInited]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.5.1新增 初始化以后触发 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onBeforeRefresh]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.5.2新增, 刷新前执行]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onRefresh]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 刷新数据以后的回调 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onBeforeLoad]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.5.2新增, 加载前执行]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onLoad]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 第1次及加载以及滚动加载以后执行,在数据渲染后 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[onFail]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 失败的回调 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[callback]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 点击每个handle的回调 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">refreshTips.start</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 开始加载的文本提醒,&quot;刷新中..&quot; ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">refreshTips.release</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 下拉的文本提醒,&quot;松开刷新&quot; ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">refreshTips.end</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 下拉高度不足提醒,&quot;下拉刷新&quot; ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">refreshTips.fail</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 下拉加载失败提醒,&quot;点击加载&quot; ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">refreshTips.success</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 成功提醒,&quot;刷新成功&quot; ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">scrollTips</code>
+                                    <span class="type">Object</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                                    <ul class="params-list">
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name">start</code>
+                                                <span class="type">String</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 开始加载的文本提醒,"努力加载中.." ]
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name">end</code>
+                                                <span class="type">String</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 上拉加载的提醒,"上拉加载更多" ]
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name">fail</code>
+                                                <span class="type">String</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 上拉加载失败提醒,"点击重新加载" ]
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="param">
+                                            
+                                                <code class="param-name">nodata</code>
+                                                <span class="type">String</span>
+                                            
+
+                                            <div class="param-description">
+                                                [ 没有数据的提醒,"没有更多内容" ]
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>  html:
+           <div id="scrollList" class="bui-scroll">
+                <div class="bui-scroll-head"></div>
+                <div class="bui-scroll-main">
+                    <ul class="bui-list">
+                    </ul>
+                </div>
+                <div class="bui-scroll-foot"></div>
+            </div>
+  js:
+         // 假设: userlist.json 返回的数据格式为: { status:200, list:[] }, 配置 field: {data:&quot;list&quot;}
+           // 初始化
+            var uiList = bui.list({
+                id: &quot;#scrollList&quot;,
+                url: &quot;<a href="http://www.easybui.com/demo/json/shop.json">http://www.easybui.com/demo/json/shop.json</a>&quot;,
+                pageSize:5,
+                data: {},
+                // 如果返回的数组字段不在data,通过field重新定义
+                field: {
+                    page: &quot;page&quot;,
+                    size: &quot;pageSize&quot;,
+                    data: &quot;data&quot;
+                },
+                template: function (data) {
+                    var html = &quot;&quot;;
+                    data.map(function(el, index) {
+                       html +=<code>&lt;li class=&quot;bui-btn bui-box&quot;&gt;
+                            &lt;div class=&quot;bui-thumbnail&quot;&gt;&lt;img src=&quot;${el.image}&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;span1&quot;&gt;
+                                &lt;h3 class=&quot;item-title&quot;&gt;${el.name}&lt;/h3&gt;
+                                &lt;p class=&quot;item-text&quot;&gt;${el.address}&lt;/p&gt;
+                                &lt;p class=&quot;item-text&quot;&gt;${el.distance}公里&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;price&quot;&gt;&lt;i&gt;￥&lt;/i&gt;${el.price}&lt;/span&gt;
+                        &lt;/li&gt;</code>
+                    });
+                   return html;
+                }</p>
+
+            </div>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_empty">empty</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_init">init</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_modify">modify</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_option">option</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_refresh">refresh</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_widget">widget</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events">
+                        
+                            <li class="index-item event">
+                                <a href="#event_off">off</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_on">on</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_destroy" class="method item">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[bool]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l495"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:495</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.2</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[销毁控件]</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[bool]</code>
+                        <span class="type">Boolean</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 默认: false 销毁部分 | true 销毁全部   ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //销毁
+       uiList.destroy();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_empty" class="method item">
+    <h3 class="name"><code>empty</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[bool]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l479"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:479</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[清空数据]</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[bool]</code>
+                        <span class="type">Boolean</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 默认: false 销毁部分 | true 销毁全部   ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //清空数据
+       uiList.empty();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_init" class="method item">
+    <h3 class="name"><code>init</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[option]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l211"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:211</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>初始化方法,用于重新初始化结构,事件只初始化一次</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[option]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[参数控件本身]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_modify" class="method item">
+    <h3 class="name"><code>modify</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[option]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l577"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:577</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>修改多个参数,但不执行初始化</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[option]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 修改参数,跟初始化一样是一个对象. ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //修改多个参数
+       uiList.modify( {&quot;height&quot;:200, data:{&quot;keyword&quot;:&quot;关键字&quot;}  );</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_option" class="method item">
+    <h3 class="name"><code>option</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[key]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[value]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l542"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:542</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取设置参数</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[key]</code>
+                        <span class="type">String | object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[value]</code>
+                        <span class="type">String | number | boolean | function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取所有参数
+       var option = uiList.option();
+
+       //获取某个参数
+       var id = uiList.option( &quot;id&quot; );
+
+       //修改data参数,只是修改,不初始化. 如果修改多个参数,会自动初始化, 在onLoad 参数里面变成死循环.
+       uiList.option( &quot;data&quot;,{&quot;keyword&quot;:&quot;关键字&quot;} );
+
+       //修改多个参数
+       uiList.option( {&quot;height&quot;:200} );</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_refresh" class="method item">
+    <h3 class="name"><code>refresh</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l441"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:441</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>刷新方法</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取依赖控件
+       uiList.refresh();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_widget" class="method item">
+    <h3 class="name"><code>widget</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[name]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l523"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:523</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取依赖的控件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[name]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 依赖控件名 scroll ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取依赖控件
+       var uiListScroll = uiList.widget(&quot;scroll&quot;);
+
+       //使用scroll的方法
+       uiListScroll.nextPage();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_off" class="events item">
+    <h3 class="name"><code>off</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l617"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:617</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为控件取消绑定事件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[type]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 事件类型:  &quot;refreshbefore&quot;(刷新前触发) | &quot;refresh&quot;(刷新后触发) | &quot;success&quot;(请求成功时触发) | &quot;fail&quot; (请求失败时触发) | &quot;onloadbefore&quot; | &quot;onload&quot;  ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 绑定的事件, this 为当前点击的菜单 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiListScroll.off(&quot;refresh&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="event_on" class="events item">
+    <h3 class="name"><code>on</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_bui-rollup_src_scripts_ui_bui.list.js.html#l597"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;bui-rollup&#x2F;src&#x2F;scripts&#x2F;ui&#x2F;bui.list.js:597</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为控件绑定事件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[type]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 事件类型:  &quot;refreshbefore&quot;(刷新前触发) | &quot;refresh&quot;(刷新后触发) | &quot;success&quot;(请求成功时触发) | &quot;fail&quot; (请求失败时触发) | &quot;onload&quot; ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 绑定的事件, this 为当前点击的菜单 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiList.on(&quot;refresh&quot;,function () {
+           // 点击的菜单
+           console.log(this);
+       });</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?50f5631d37bf0ccb2034e80da6eb2972";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>

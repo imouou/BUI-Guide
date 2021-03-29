@@ -1,3 +1,6 @@
+* 文章专栏
+  * [BUI 专栏](article.md)
+  * [Link 专栏](linkapi.md)
 * 入门
   * [介绍](chapter1/about.md)
   * [安装](chapter1/installation.md)
@@ -56,5 +59,3 @@
 * 链接 
   * [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
   * [1.5.x 旧版教程入口](http://www.easybui.com/guide-1.5.x/)
-  * [Link 专栏](linkapi.md)
-  * [BUI 专栏](article.md)
