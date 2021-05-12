@@ -19,15 +19,16 @@
 
 ### loader.define
 
-*loader.define 定义一个匿名模块. *
+*loader.define 定义一个匿名模块.*
 
 ```js
-loader.define(function(require,exports,module){
+loader.define(function(require,exports,module,global){
     
     // 以下几个参数非必须,如果前面加载了依赖,则这三个参数后移;
     // require : 相当于 loader.require, 获取依赖的模块
     // exports : 如果没有return 可以采用这种方式输出模块
     // module : 拿到当前模块信息
+    // global: 全局定义的方法
 
     // 第一次加载会执行一次
     
@@ -42,14 +43,85 @@ loader.define(function(require,exports,module){
 4. 避免循环嵌套自身, 在loader.define 里面 又 require 加载当前模块, 这个时候还没实例化,就会造成死循环;
 5. 作为依赖的模块, 里面不要执行, 应该返回对象给外层调用的方式;
 
+!> 模块是一个闭包，如果不抛出方法，外部无法访问，如果html使用 `onclick="getName"` 这样的事件属性，是找不到定义的 `getName`方法的，应该在模块里面使用事件绑定的方式或者使用`bui.store`，例如：
+
+1. *错误的事件绑定做法*
+```html
+// 错误的事件绑定做法，访问不到对应的方法名
+<div id="btnGetName" onclick="getName('姓名')">点击弹出姓名</div>
+```
+
+```js
+loader.define(function(){
+  function getName(str){
+    alert(str)
+  }
+
+  return {
+    getName
+  }
+})
+```
+
+2. *常用的事件绑定做法*
+
+事件需要做好管理
+```html
+<div id="btnGetName">点击弹出姓名</div>
+```
+
+```js
+loader.define(function(){
+  function getName(str){
+    alert(str)
+  }
+
+  // 普通的事件绑定, router.$ 用于解决单页面多次加载id冲突问题
+  router.$("#btnGetName").click(function(e){
+    getName("姓名")
+  })
+
+  return {
+    getName
+  }
+})
+```
+
+3. *推荐做法，需要了解更多知识*
+
+```html
+<div class="bui-page">
+  <div id="btnGetName" b-click="page.getName('姓名')">点击弹出姓名</div>
+</div>
+```
+
+```js
+// 推荐做法，需要了解更多知识
+loader.define(function(){
+
+  var bs = bui.store({
+    el:".bui-page", // 默认值
+    scope:"page",
+    methods:{
+      getName:function (str){
+        alert(str)
+      }
+    }
+  })
+
+  return bs;
+})
+```
+
+
 ## 加载模块
 ### loader.require 
 
->假设我们定义了一个匿名模块, 是在pages/page2/目录下, 目录下有 page2.html ,page2.js 两个文件. 则默认匿名模块的 模块名是 pages/page2/page2 会根据.html 文件提取前面路径作为模块名.
+>假设我们定义了一个匿名模块, 是在`pages/page2/`目录下, 目录下有 page2.html ,page2.js 两个文件. 则默认匿名模块的 模块名是 `pages/page2/page2` 会根据.html 文件提取前面路径作为模块名.
 
 page2.js
 ```js
-loader.define(function(require,exports,module){
+loader.define(function(require,exports,module,global){
 
     // 定义初始化
     function init(text){
@@ -66,11 +138,11 @@ loader.define(function(require,exports,module){
     }
 })
 ```
->现在我们想在刚刚的main.js里面加载这个模块,调用pages/page2/page2 的名称.
+>现在我们想在刚刚的main.js里面加载这个模块,调用`pages/page2/page2` 的名称.
 
 main.js
 ```js
-loader.define(function(require,exports,module){
+loader.define(function(require,exports,module,global){
     
     // 1. 加载pages/page2/page2模块 方法1: 这里会自执行一次 init. 输出自执行. 如果该模块已经加载过了,这里则不会执行.
     require("pages/page2/page2"); 
@@ -341,8 +413,8 @@ window.loader = bui.loader({
 main.js
 ```js
 // 依赖前置, 这种会优先加载完 page2,page3模块以后再执行main的回调. page2,page3 只定义,不执行.
-loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3,require,exports,module){
-  // 如果需要用到当前模块信息的话, page3后面依次还有 require,exports,module 
+loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3,require,exports,module,global){
+  // 如果需要用到当前模块信息的话, page3后面依次还有 require,exports,module,global 
   
 })
 ```
@@ -355,7 +427,7 @@ loader.define(["pages/page2/page2","pages/page3/page3"],function(page2,page3,req
 
 *pages/page2/page2.js*
 ```js
-loader.define("page2",function(require,exports,module){
+loader.define("page2",function(require,exports,module,global){
   // 这里是page2的业务逻辑 
 })
 
@@ -393,7 +465,7 @@ bui.ready(function(){
 
 *pages/page2/page2.js*
 ```js
-loader.define("page2",function(require,exports,module){
+loader.define("page2",function(require,exports,module,global){
   // 这里是page2的业务逻辑 
 })
 

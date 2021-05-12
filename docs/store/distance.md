@@ -23,9 +23,10 @@
 `bui.store`初始化, 单页一般在`loader.define` 里面, 多页在 `bui.ready` 里面.
 
 ```js
-loader.define(function(){
+loader.define(function(require,exports,module,global){
 
   var bs = bui.store({
+      el:'.bui-page', // 如果一个页面加载两个相同组件，这里需要更改 el为动态ID， el:`#${module.id}` 
       scope: "page",  
       data: {},
       methods: {},

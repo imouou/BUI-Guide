@@ -478,7 +478,7 @@ router.on("refresh",function(e){
 ```
 ### loadpart 事件
 
-?> 页面局部加载后触发
+?> 页面局部加载后触发，不再推荐，可以留意组件方面的介绍
 
 ```
 router.on("loadpart",function(e){

@@ -132,6 +132,24 @@
 </div>
 ```
 
+
+!> 1.6.5 新增，支持作用域， `#module.id` 会替换为该组件唯一的id， 仅支持单页。
+
+
+```html
+<style>
+  #module.id .bui-page .bui-bar {
+    background:red;
+  }
+  #module.id .bui-page main {
+    background:#ddd;
+  }
+</style>
+<div class="bui-page bui-box-vertical page-home">
+    ...
+</div>
+```
+
 ## 组件模板
 
 ?> 跟单页模板一样, 但颗粒度会更小一点. 比方轮播图.

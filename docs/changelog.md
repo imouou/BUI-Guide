@@ -4,6 +4,131 @@
 [TOC]
 
 
+## 1.6.5 20210511
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+### bui.swipe 
+1. 修复滑动类冲突
+
+### bui.listview 
+1. 修复滑动类冲突
+
+### bui.sidebar 
+1. 修复滑动类冲突
+
+### bui.store
+1. 修复b-click 的传参修复;
+2. 新增 $itemIndex, $itemText, $itemHtml, $itemId, $item 等参数 直接返回跟数组索引相关的参数， 比 $index b-target 简单些。
+
+### bui.select
+1. 修复搜索的选项点击会触发2次,后续操作也无法选中
+
+
+### bui.dialog
+1. 新增 disableOpen，enableOpen，disableClose，enableClose等方法
+
+
+## 1.6.4 20210202
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+
+### API文档错乱问题
+### 适配新机型 iphonex iphone12 
+### bui.slide, bui.sidebar, bui.swipe, bui.listview, bui.pullrefresh 全面支持PC滑动交互.
+
+### bui.router
+1. 新增路由对?module=pages/xxx 的自动解析, 便于跟第三方网址配合
+2. 修复 fisrstAnimate 路由跳转优先问题
+3. 修复 beforeLoad 参数问题
+4. 新增 #module.id 编译成页面id, 实现局部样式处理, 例如 #module.id header {} 就会替换成页面id.
+5. 修复路由的progress问题
+6. 新增后退传参给show生命周期
+
+### bui.store
+1. 模板对component 标签的支持, 自动编译;
+2. 修复b-click 传数字大于16位的时候, 被四舍五入的问题
+
+### bui.select
+1. 静态自定义模板的选中问题;
+2. 修复check 事件获取 this.value 问题;
+
+### bui.dialog
+1. 修复通过iframe调用父层的对话框,会导致按钮报错问题;
+
+### bui.pickerdate
+1. 新增values方法, 设置获取多个日期的值
+
+
+### bui.slide
+1. 修复跨屏效果;
+2. 支持PC滑动 
+
+### bui.sidebar
+1. 支持PC滑动 
+
+### bui.tab
+1. 支持PC滑动 
+2. 支持组件传参, 需要everytime:true才会有效.
+
+### bui.listview
+1. 支持PC滑动 
+
+### bui.pullrefresh
+1. 支持PC滑动 
+
+### bui.swipe
+1. 支持PC滑动 
+
+### bui.number
+1. 新增小数点支持;
+
+### bui.platform
+1. 修复了 isMac 的判断, 之前会对iphone12 跟 mac 造成相同类型. 
+2. 新增isPC方法, 非(安卓,iphone,ipad) 都算是PC端 
+3. 新增isMobile方法, 安卓,iphone,ipad 都算是移动端
+
+### bui.floor 
+1. 修复若干问题
+
+
 ## 1.6.3 20201109
 
 ### 升级指南

@@ -15,9 +15,9 @@
 | b-bind  | `<b b-bind="page.attrs"></b>`   | 设置属性, key值为属性名, 结果: `<b title="我是动态标题"></b>`|
 | b-style  | `<b b-style="page.styles"></b>`   | 设置style的样式, key值为样式属性, 结果: `<b style="color:red;border:1px solid #ddd"></b>` |
 | b-class  | `<b b-bind="page.classNames"></b>`   | 设置class的样式, 结果: `<b class="active"></b>`, classNames可以是对象,也可以是字符串,或者是布尔值 |
-| b-template  | `<ul b-template="page.list"></ul>`   | 绑定模板,page.list的数据更新会及时反应到页面上 |
-| b-command  | `<ul b-template="page.list" b-command="append"></ul>`   | 非必须,配合b-template一起使用,代表第一次模板渲染采用什么方法, 默认是html, append, prepend |
-| b-children  | `<ul b-template="page.list" b-children="li"></ul>`   | 非必须,配合b-template一起使用, 代表子集的元素,当子集里面有其它布局元素干扰的时候,才做配置, 可以是标签,类名 |
+| b-template  | `<ul b-template="page.tplList(page.list)"></ul>`   | 绑定模板,page.list的数据更新会及时反应到页面上 |
+| b-command  | `<ul b-template="page.tplList(page.list)" b-command="append"></ul>`   | 非必须,配合b-template一起使用,代表第一次模板渲染采用什么方法, 默认是html, append, prepend |
+| b-children  | `<ul b-template="page.tplList(page.list)" b-children="li"></ul>`   | 非必须,配合b-template一起使用, 代表子集的元素,当子集里面有其它布局元素干扰的时候,才做配置, 可以是标签,类名 |
 | b-click  | `<b b-click="page.openDialog"></b>`   | 点击事件, openDialog 在 methods 定义.  |
 | b-target  | `<div class="parentDom"><b b-click="page.openDialog" b-target=".parentDom"></b></div>`   | 1.5.2新增 可以控制当前this的指向,这样会影响到 $index $this 等内置值,会在当前往上查找 b-target. 一般用于嵌套的层级过深,找不到父级index使用  |
 | b-src  | `<img b-src="page.imgurl" />`   | 1.5.2新增 动态图片地址 |
@@ -27,3 +27,55 @@
 !> 注意, `b-`语法属性不能在dom动态修改的时候解析.
 
 ?> 行为属性可以让你减少手动操作dom的机会, 但却不是任何时候都应该使用这种属性, 理解什么是需要改变的数据很重要. 比方购物车,购物车的商品的数量改变的时候,需要去重新计算金额,总数量,总金额就可以采用这种绑定, 而像商店名称这些, 应该在整个模板上去处理.
+
+!> 1.6.5 新增了一些内置动态属性，`$index`(当前索引),`$this`(当前dom),`$text`(当前文本),`$html`(当前结构html),`$id`(当前id), `$itemIndex`(子级索引),`$item`(子级dom),`$itemText`(子级文本),`$itemHtml`(子级结构html),`$itemId`(子级id) 等.
+
+比如：
+
+```html
+<div class="bui-page">
+    <ul b-template="page.tplList(page.list)">
+        <!-- 注释掉静态模板，便于理解结构
+        <li>
+            <div b-click="page.getIndex($index,$itemIndex)">第0条获取索引</div>
+        </li>
+        -->
+    </ul>
+</div>
+```
+
+```js
+loader.define(function(require,exports,module,global){
+
+  var bs = bui.store({
+      el:'.bui-page', // 如果一个页面加载两个相同组件，这里需要更改 el为动态ID， el:`#${module.id}` 
+      scope: "page",  
+      data: {
+          list:["第0条获取索引","第1条获取索引"]
+      },
+      methods: {
+          getIndex:function(index,itemIndex,i){
+              console.log(index,itemIndex,i);
+          }
+      },
+      templates:{
+          tplList:function(data){
+              var html = "";
+              data.forEach(function(item,i){
+                  html +=`<li>
+                            <div b-click="page.getIndex($index,$itemIndex,${i})">${item}</div>
+                        </li>`
+              })
+              return html;
+          }
+      }
+    })
+})
+
+```
+ul里面会生成两条li，点击第1条div的时候，会在控制面板输出 `0,0,0`； 点击第2条div的时候，会在控制面板输出 `0,1,1`; 第1个参数代表当前div的索引，第2个参数，代表li的索引，这个li的索引跟数组是一一对应的，第3个参数是数组的`静态索引`，生成一次就固定了。早期通过 `b-target="li"` 属性，更改 `$index` 的指向, 现在不需要这么麻烦了。
+
+?> 思考下，这里能否 使用 `i` 的索引，来替代 `$itemIndex` ?
+
+答案，当然是不能了，数组是随时变化都会触发模板的渲染的，如果删除掉中间的数据，再新增一条数据，点击div得到的索引就不准确了，可以参考 综合案例待办事项那个demo，加深理解。
+

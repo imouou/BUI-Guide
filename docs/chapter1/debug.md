@@ -72,8 +72,8 @@ bui.ajax({
 
 ?> DebugTool是手机上的一个应用,可以预览远程地址,并输出console.log的相关信息, 必须使用第一种跨域方式,才能在手机预览.
 
-* [安卓版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v3.4.0.apk)
-* [IOS版下载](http://www.easybui.com/downloads/source/debugtool/DebugTool-v1.0.ipa)
+* [安卓版下载](http://www.easybui.com/downloads/source/debugtool/com.gz.debugtool.apk)
+* [IOS版下载](http://www.easybui.com/downloads/source/debugtool/com.gz.debugtool.ipa)
 
 
 ## 微信调试缓存
