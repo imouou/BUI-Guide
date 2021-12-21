@@ -26,11 +26,11 @@
 ?> 解压,进入工程目录, 通过这种运行, `app.json`可以配置域名代理,解决移动端调试的跨域问题. 生成的`dist`目录为最终要打包的目录, `src`目录保持源文件的方式.
 
 
-第1种, 通过npm, (安装较慢)
+第1种, 通过npm
 
 ```bash
-# 安装依赖
-$ npm install
+# 安装依赖（使用淘宝源会更快）
+$ npm install --registry=https://registry.npm.taobao.org
 # 运行服务
 $ npm run dev
 ```
