@@ -1,0 +1,33 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <!-- 左边有图标示例 -->
+                <div class="bui-btn btn-back"><i class="icon-back"></i></div>
+            </div>
+            <div class="bui-bar-main">BUI单页开发工程模板</div>
+            <div class="bui-bar-right">
+                <!-- 右边有图标示例 -->
+                <div class="bui-btn" b-click="list.login"><i class="icon-info"></i></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <component id="slide" name="pages/components/slide/slide" height="300" delay="true"></component>
+
+        <!-- 中间内容 -->
+        <ul class="bui-list" b-template="list.tplList(list.datas)">
+            <!-- 
+                <li class="bui-btn bui-box">
+                    <div class="thumbnail"><img src="images/applogo.png"></div>
+                    <div class="span1">文本</div>
+                    <i class="icon-listright"></i>
+                </li> 
+            -->
+        </ul>
+    </main>
+    <footer>
+        <!-- 底部内容 -->
+    </footer>
+</div>

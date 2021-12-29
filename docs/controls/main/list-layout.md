@@ -15,13 +15,13 @@
 <iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/list_icon&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 图文列表
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/list_thumbnail&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/list_thumbnail&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 图片列表
 <iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/list_pic&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 宫格列表
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/list_grid&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui/list_grid&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 交互列表
 

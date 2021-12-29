@@ -1,0 +1,11 @@
+{
+    "status": 200,
+    "info": "获取成功",
+    "data": [{
+        "image": "images/banner01.png",
+        "url": "pages/ui_controls/bui.slide_title.html"
+    },{
+        "image": "images/banner02.png",
+        "url": "pages/ui_controls/bui.slide_title.html"
+    }]
+}

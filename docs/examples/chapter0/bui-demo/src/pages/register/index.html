@@ -1,0 +1,54 @@
+<div id="formpage" class="bui-page bui-box-vertical">
+    <header>
+       <div class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">注册页</div>
+        <div class="bui-bar-right">
+            <!-- 右边按钮 -->
+        </div>
+       </div>
+    </header>
+    <main>
+        <ul class="bui-list">
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">帐号</label>
+                <div class="span1">
+                    <input type="text" class="bui-input" value="" placeholder="请输入邮箱@qq.com" b-model="form.datas.username" b-blur="form.checkRule($this,'username')" rule="/.+@qq.com/gim" tip="正确格式为：xxx@qq.com">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">密码</label>
+                <div class="span1">
+                    <input type="password" class="bui-input" value="" placeholder="请输入密码" b-model="form.datas.password">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">确认密码</label>
+                <div class="span1">
+                    <input type="password" class="bui-input" value="" placeholder="请再次输入密码" b-model="form.datas.comfirmpassword">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">性别</label>
+                <div class="span1">
+                    <label><input type="radio" class="bui-radio" value="woman" b-model="form.datas.sex">女</label>
+                    <label><input type="radio" class="bui-radio" value="man" b-model="form.datas.sex">男</label>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <div class="container-y">
+            <div class="bui-box-space">
+                <div class="span1">
+                    <div class="bui-btn round" b-click="form.reset">重置</div>
+                </div>
+                <div class="span1">
+                    <div class="bui-btn round primary" b-click="form.submit">提交</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

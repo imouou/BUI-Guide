@@ -1,13 +1,21 @@
-- [文档](/)
+- [入门](/)
+- [高级](chapter2/)
 - [组件](controls/)
 - [Demo](http://www.easybui.com/demo/)
-- [文章](article.md)
-  - [BUI 专栏](article.md)
-  - [Link 专栏](linkapi.md)
-- API
-  - [BUI API](api/index.html ':ignore')
+- API文档
+  - [BUI 控件API](api/index.html ':ignore')
   - [Link 原生API](http://docs.bingocloud.cn/btapi/)
-- 链接
-  - [1.4.x 旧版教程入口](http://www.easybui.com/guide-1.4.x/)
-  - [1.5.x 旧版教程入口](http://www.easybui.com/guide-1.5.x/)
+- 专栏
+  - [Link 专栏](linkapi.md)
+  - [BUI 专栏](article.md)
 
+- 帮助
+  - [我要提问](https://github.com/imouou/BUI-Guide/issues)
+  - [查看留言](https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed)
+  - [常见问题](help.md)
+
+- 链接 
+  - [1.4.x 文档](http://www.easybui.com/guide-1.4.x/)
+  - [1.5.x 文档](http://www.easybui.com/guide-1.5.x/)
+  - [1.6.x 文档](http://www.easybui.com/guide-1.6.x/)
+  - [更新日志](changelog.md)

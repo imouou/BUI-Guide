@@ -3,6 +3,308 @@
 ## 目录
 [TOC]
 
+## 1.7.0 20220101
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+## 重要更新
+这个可能会对原有页面，组件造成影响的地方，统一了路由跳转，刷新，组件，弹窗组件的接收参数，如果涉及到 'false' 'true' 都统一转成布尔值 false true ，这个如果你之前的判断是 params.xxx == 'false' 之类的，要改成 params.xxx === false 。
+
+## 解决组件局部样式不影响全局问题
+
+
+## bui.loader
+1. 修正路径 “/pages” 加载不到路径问题
+2. 样式局部作用域，  .xxx,.xxxx {} 之类的还没匹配
+3. 修正多页 loader.import 导入资源地址出错问题
+4. 新增 syncLoad 方法，同步组件会让业务交互更加清晰，具体查看api的用法
+5. 优化 module.$ module.props (包含page)
+
+## bui.store
+1. 修正二级数组操作不生效问题
+2. 新增 b-model-lazy 的处理
+3. 修正 b-model 多个 input 不同步的问题
+4. 新增 b-prop(不合并参数),b-props(合并旧参数) 的组件参数同步
+5. 增加数组操作不触发索引值问题
+6. b-focus 在组件内部不触发问题
+7. 优化数组操作
+8. 新增 b-linked （当linked里面的值变更的时候，触发关联） b-trigger 属性（主动触发关联）
+9. 新增 $key,$key1,$key01 展示数组的动态索引
+
+## bui.router
+1. bui.load 跳转传参统一为字符串
+2. 修正 双问号的url传参
+
+## bui.setUrlParams
+1. 优化setUrlParams
+
+## bui.slide
+1. 新增 getItem 方法
+2. 新增 video 的处理
+
+## bui.tab
+1. 新增 getItem 方法
+2. 新增 setItem 方法
+3. 新增 getItemParam 方法
+4. 新增 setItemParam 方法
+
+## bui.dropdown
+1. 修正在右上角的位置问题
+2. 新增 getItem 方法
+3. 第一次有值会触发onChange
+
+## bui.select
+1. 修正静态结构结合vue一起使用的情况会导致vue数据出不来问题
+2. 新增 selected 方法，不改变原本选中数据的情况下，选中新的值
+3. 第一次有值会触发onChange
+
+## bui.searchbar
+1. 新增 readonly, placeholder 参数及方法
+
+## bui.number
+1. 新增 parentId ，用于多个number组件的渲染
+
+## bui.accordion
+1. 优化结构，支持同级或者嵌套的形式
+
+
+## bui.levelselect
+1. 新增对数据层级不确定的交互处理
+2. 新增分隔符及导航滚动的配置
+
+
+## bui.list
+1. 修正请求参数含有中文被转码问题
+
+## bui.unit
+1. 新增filterField 支持深层次数据
+
+## bui.stepbar
+1. 新增 getItem 方法
+
+## bui.pickerdate
+1. 修复values的取值问题
+
+
+## bui.upload
+1. 修正上传控件的选择相册问题
+
+
+## bui.page
+1. 修正样式没有局部作用域问题
+
+
+## bui.array
+1. 优化compare, remove,delete 方法
+
+## bui.rating
+1. 新增clickFull 参数，是否第一次点击为全星
+
+
+## 1.6.6 20210802
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+## bui.store
+1. 修复数组在computed多次的时候，只有最后一个有效；
+2. 优化 b-show, b-hide, b-visible 对数组的长度支持;
+3. 修复 数组层级较深时，删除导致报错的问题；
+4. 把新增 setState 方法，把数组，对象都放到这个方法统一处理；
+
+## bui.viewport
+1. 优化viewport的参数控制。
+
+## bui.upload
+1. 修复默认不传data报错问题。
+
+## bui.hint
+1. 修复手动控制无效的问题。
+
+## bui.select
+1. 修复点击选择框无效
+2. 修复id跟trigger一样导致的问题
+3. 修复搜索结果遮挡问题
+
+## bui.pickerdate
+1. 修复格式化 MM-dd hh:mm 
+
+## bui.levelselect
+1. 优化 trigger 参数，支持动态创建
+
+## bui.stepbar
+1. 新增 direction 参数
+2. 新增 onChange 参数
+
+## bui.actionsheet
+1. 新增 disable 参数
+
+## bui.tab
+1. 新增 add,load,back,remove 等方法
+
+## bui.list
+1. 新增 replace 方法,用于清空数据并修改参数
+2. 新增 getData,getItem 方法，获取对应的数据对象
+
+## 1.6.5 20210511
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+### bui.swipe 
+1. 修复滑动类冲突
+
+### bui.listview 
+1. 修复滑动类冲突
+
+### bui.sidebar 
+1. 修复滑动类冲突
+
+### bui.store
+1. 修复b-click 的传参修复;
+2. 新增 $itemIndex, $itemText, $itemHtml, $itemId, $item 等参数 直接返回跟数组索引相关的参数， 比 $index b-target 简单些。
+
+### bui.select
+1. 修复搜索的选项点击会触发2次,后续操作也无法选中
+
+
+### bui.dialog
+1. 新增 disableOpen，enableOpen，disableClose，enableClose等方法
+
+
+## 1.6.4 20210202
+
+### 升级指南
+
+** 一, 资源替换: **
+
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
+
+```
+# 更新 webapp 平台 bui.css, bui.js
+$ buijs update   
+
+# 更新 dcloud 平台 bui.css, bui.js
+$ buijs update -p dcloud   
+
+# 更新 apicloud 平台 bui.css, bui.js
+$ buijs update -p apicloud
+
+# 更新 appcan 平台 bui.css, bui.js
+$ buijs update -p appcan    
+```
+
+
+### API文档错乱问题
+### 适配新机型 iphonex iphone12 
+### bui.slide, bui.sidebar, bui.swipe, bui.listview, bui.pullrefresh 全面支持PC滑动交互.
+
+### bui.router
+1. 新增路由对?module=pages/xxx 的自动解析, 便于跟第三方网址配合
+2. 修复 fisrstAnimate 路由跳转优先问题
+3. 修复 beforeLoad 参数问题
+4. 新增 #module.id 编译成页面id, 实现局部样式处理, 例如 #module.id header {} 就会替换成页面id.
+5. 修复路由的progress问题
+6. 新增后退传参给show生命周期
+
+### bui.store
+1. 模板对component 标签的支持, 自动编译;
+2. 修复b-click 传数字大于16位的时候, 被四舍五入的问题
+
+### bui.select
+1. 静态自定义模板的选中问题;
+2. 修复check 事件获取 this.value 问题;
+
+### bui.dialog
+1. 修复通过iframe调用父层的对话框,会导致按钮报错问题;
+
+### bui.pickerdate
+1. 新增values方法, 设置获取多个日期的值
+
+
+### bui.slide
+1. 修复跨屏效果;
+2. 支持PC滑动 
+
+### bui.sidebar
+1. 支持PC滑动 
+
+### bui.tab
+1. 支持PC滑动 
+2. 支持组件传参, 需要everytime:true才会有效.
+
+### bui.listview
+1. 支持PC滑动 
+
+### bui.pullrefresh
+1. 支持PC滑动 
+
+### bui.swipe
+1. 支持PC滑动 
+
+### bui.number
+1. 新增小数点支持;
+
+### bui.platform
+1. 修复了 isMac 的判断, 之前会对iphone12 跟 mac 造成相同类型. 
+2. 新增isPC方法, 非(安卓,iphone,ipad) 都算是PC端 
+3. 新增isMobile方法, 安卓,iphone,ipad 都算是移动端
+
+### bui.floor 
+1. 修复若干问题
+
 
 ## 1.6.3 20201109
 
@@ -27,9 +329,6 @@ $ buijs update -p appcan
 ```
 
 
-### 重要更新
-内部创建新项目, 如果是link轻应用, 请使用 `buijs create -p link`, 原本的 `buijs create -p bingotouch` 平台的bui.js 已经更新为 cordova 8.x 的平台, 引入方式也有一些新的变化. 
-
 ### bui.store
 
 1. connect 的watch不触发问题 ok
@@ -39,7 +338,7 @@ $ buijs update -p appcan
 ### bui.router
 
 1. 新增 swipe ,swipeBack 等参数, 默认为false, true可以滑动返回.
-
+2. 路由支持滑动返回之类的操作
 
 ### bui.loader
 
@@ -65,14 +364,21 @@ $ buijs update -p appcan
 
 1. 优化 需要绑定多一次事件才能触发
 
+### bui.levelselect
+1. bui.array.delete 会导致 store的数组整个清除;
 
-## 1.6.2 2020426
+### 工程化
+1. 对import 之类的支持
+2. node 工程在修改的过程, 只要出现es6的内容被编译的时候, 会出现require无法找到等问题; 
+
+
+## 1.6.2 2020722
 
 ### 升级指南
 
 ** 一, 资源替换: **
 
-执行命令, 选择你使用的平台, buijs 需要更新到 1.6.0 命令才会生效
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
 
 ```
 # 更新 webapp 平台 bui.css, bui.js
@@ -88,14 +394,85 @@ $ buijs update -p apicloud
 $ buijs update -p appcan    
 ```
 
+### bui.store
+
+1. b-model 在ios重复获取焦点问题
+2. 新增 unwatch 的实现
+3. 新增 对象及数组的深度监听
+4. 新增 数组的动态索引监听
+5. 新增 connect 方法, 建立两个实例的关联
+6. 新增 disconnect 方法, 取消关联
+7. 修复 b-show 反选问题
+
 ### 1. component
 1. 完善组件的交互
 
 ### 2. bui.dropdown
 1. 修复自定义三级菜单的时候, 定位问题;
 
-### 3. bui.unit.getAttributes 
-1. 支持对象转换
+### 3. bui.unit 
+1. 新增属性转对象方法 bui.unit.getAttributes
+2. 新增检测数字或者日期区间方法 bui.unit.between
+3. 新增数字超过1万转成小数点1位方法 bui.unit.numberunit
+
+### 4. bui.date
+1. 新增 bui.date.count 计算日期方法
+2. 新增 2020-12-18T09:23:15.123 , Fri Dec 18 2020 09:23:15 GMT+0800 (中国标准时间) 两种日期的格式转换
+3. 新增 bui.date.fromnow 方法, 返回多少小时前
+
+### 5. bui.loader
+1. 新增 loader.wait 方法
+2. 新增 loader.one 方法
+3. 修复 多层相互依赖导致不执行问题
+4. 修复 模块的map获取到的是绝对路径问题,改为相对路径
+5. 修复 module.exports 在 loader.load 里面多次获取不到的问题;
+6. 新增 loader.global 方法, 用于定义全局方法或变量, 执行 npm run build 以后,新的工程会导致整个js变成闭包,原本var声明的变量,变成局部变量. 
+
+### 6. bui.history
+1. 新增 getParentParams 方法
+2. 新增 getParentComponent 方法
+3. 修复历史记录导致的多页无法初始化问题
+4. 修复使用page导致历史记录获取报错问题
+
+### 7. bui.select
+1. 新增 搜索对自定义 field 字段的支持
+
+
+### 8. bui.router
+1. 修复 loadpart 方法修改了路由id问题;
+2. 修复 back 的时候偶尔会出现拿不到上个页面模块的方法的情况.
+
+### 9. bui.upload
+1. 修复安卓5上传问题
+
+### 10. bui.page
+1. 新增对component的编译支持.
+2. 修复 needRemove 无效问题;
+3. 新增 setParam 方法;
+4. 新增 dialogid 参数;
+5. 新增 reload 方法
+
+### 11. bui.array
+1. 修复 bui.array.set 对索引的支持
+
+### 12. bui.levelselect
+1. 新增 reset 方法
+2. 修复 option data数据的时候,导致弹出层错位问题.
+
+
+### 13. bui.dialog
+1. 新增 top 方法
+
+
+### 14. bui.searchbar
+1. 优化 value 方法支持设置
+
+### 15. bui.hint
+1. 新增 onHided 参数, 隐藏以后才执行回调
+
+### 16. bui.tab
+1. 新增 data ,position,iconPosition 等参数, 支持tab动态化
+2. 修复 菜单滚动的时候触发整个tab滑动问题
 
 
 
@@ -105,7 +482,7 @@ $ buijs update -p appcan
 
 ** 一, 资源替换: **
 
-执行命令, 选择你使用的平台, buijs 需要更新到 1.6.0 命令才会生效
+执行命令, 选择你使用的平台, buijs 需要更新到 0.5.0 命令才会生效
 
 ```
 # 更新 webapp 平台 bui.css, bui.js
@@ -146,6 +523,7 @@ $ buijs update -p appcan
 
 
 
+
 ## 1.6.0 2020412
 
 ### 升级指南
@@ -170,15 +548,15 @@ $ buijs update -p appcan
 
 ### 重要更新
 
-建议重新安装 `buijs`, `bui-fast` 插件.
-
 bui-page 使用弹性结构, 模板等示例都统一更新.适应性更强, 但要注意对旧项目的头部有没有影响(没改过颜色的一般没影响);
 
+es6 工程化  ok
+gulpjs 模块更新   ok
+解决Dcloud平台的IOS打包跨域问题 ok
+IOS wkwebview 加多一个配置, `bui.isWebapp = false;` 的情况下,加多一个配置
 ```
-
 // 安卓无跨域问题, 默认bui.ajax 就可以
 if( bui.platform.isIos() ){
-    bui.isWebapp = false;
     // 请求使用原生
     bui.config.ajax = {
         needNative: true
@@ -193,6 +571,21 @@ if( bui.platform.isIos() ){
     })
 }
 ```
+
+待办: 
+1. bui.list 实现本地存储, 有数据自动展示本地数据, 刷新执行异步操作, 或者刷新的时候用户执行一个方法才会异步重新请求.
+2. <commpent> 新增ui组件的快速加载方式; ok
+3. 模块的选择器的局部加载要做好局部划分, module.$ 选择器 不处理
+4. bui.page 实现局部加载,弹窗加载  ok
+5. loader的局部加载好好考虑  ok
+6. loader.import 能否同步  ok
+6. bui.history 能够更方便的执行 ok
+7. bui.form 来处理表单的验证及数据的缓存 
+8. bui.dropdown bui.select 的自定义通过input的处理,兼容外部表单验证  
+9. bui.list 实现聊天记录的请求方式 ok
+10. 增加工程对typescript 的支持;
+11. 单页一个文件的探索;
+
 
 ### 控件更新
 
@@ -659,6 +1052,9 @@ link轻应用在安卓9,在打开第2次的时候,会出现获取不到宽高的
 
 ### bui.levelselect
 3. 修复全屏以后,蓝色区域不自适应问题
+
+### bui.ajax
+1. 新增对相对路径的支持,这样可以在模块旁边放测试数据
 
 ### bui.list
 1. 调用init 以后重复初始化loading问题

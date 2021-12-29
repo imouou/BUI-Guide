@@ -1,0 +1,42 @@
+<div id="loginpart" class="bui-page bui-box-vertical">
+    <header>
+       <div class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" b-click="form.close"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">弹出登录页</div>
+        <div class="bui-bar-right">
+            <!-- 右边按钮 -->
+        </div>
+       </div>
+    </header>
+    <main>
+        <ul class="bui-list">
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">帐号</label>
+                <div class="span1">
+                    <input type="text" class="bui-input" value="" placeholder="请输入邮箱@qq.com" b-model="form.datas.username">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">密码</label>
+                <div class="span1">
+                    <input type="password" class="bui-input" value="" placeholder="请输入密码" b-model="form.datas.password">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">保存密码</label>
+                <div class="span1">
+                    <input type="checkbox" class="bui-checkbox" b-model="form.datas.save">
+                </div>
+            </li>
+        </ul>
+        <div class="container-y">
+            <div class="bui-box-space">
+                <div class="span1">
+                    <div class="bui-btn round primary" b-click="form.submit">登录</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

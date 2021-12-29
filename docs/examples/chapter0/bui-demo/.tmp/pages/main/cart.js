@@ -1,0 +1,1 @@
+"use strict";loader.define(function(e,n,o,r){var t=[];return{data:t,add:function(e){t.push(e),console.log(t)},remove:function(e){bui.array.delete(t,e,"id")}}});
