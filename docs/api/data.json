@@ -10029,7 +10029,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 1415,
+            "line": 1422,
             "description": "<p>1.6.0新增, 编译页面 component标签, 默认路由跳转的时候就会编译, 一般无需手动处理</p>",
             "itemtype": "method",
             "name": "component",
@@ -10062,7 +10062,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 1638,
+            "line": 1645,
             "description": "<p>1.6.0新增, 编译容器下的 所有component标签 一般无需使用, router(默认needComponent:true), store(默认needComponent:false), page(默认needComponent:false) </p>",
             "itemtype": "method",
             "name": "components",
@@ -10106,7 +10106,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 1729,
+            "line": 1736,
             "description": "<p>加载之前延迟加载的组件</p>",
             "itemtype": "method",
             "name": "delay",
@@ -10151,7 +10151,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 1811,
+            "line": 1818,
             "description": "<p>同步加载</p>",
             "itemtype": "method",
             "name": "syncLoad",
@@ -10196,7 +10196,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 1954,
+            "line": 1961,
             "description": "<p>1.6.0新增, 编译容器下的 多个view标签, 一般无需使用, router(默认needView:false), store(默认needView:true), page(默认needView:false) </p>",
             "itemtype": "method",
             "name": "views",
@@ -10229,7 +10229,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 1992,
+            "line": 1999,
             "description": "<p>1.6.0新增, 编译页面 view标签, 把模板加载进来, 默认只编译一次,一般不需要调用, view标签主要配合 bui.store 的mixins而来, 自带解析view标签</p>",
             "itemtype": "method",
             "name": "view",
@@ -10262,7 +10262,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2150,
+            "line": 2157,
             "description": "<p>动态加载脚本资源,或者css资源,1.5.2 新增html的加载</p>",
             "itemtype": "method",
             "name": "import",
@@ -10301,7 +10301,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2252,
+            "line": 2259,
             "description": "<p>按先后顺序同步处理加载资源</p>",
             "itemtype": "method",
             "name": "importSync",
@@ -10347,7 +10347,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2319,
+            "line": 2326,
             "description": "<p>动态加载html</p>",
             "itemtype": "method",
             "name": "importHtml",
@@ -10393,7 +10393,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2512,
+            "line": 2519,
             "description": "<p>动态加载带id的css, 可以用来更换皮肤</p>",
             "itemtype": "method",
             "name": "importCss",
@@ -10431,7 +10431,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2611,
+            "line": 2618,
             "description": "为模块绑定事件,比方依赖的模块是异步的,这个时候可以监听该数据请求结束以后再执行.",
             "itemtype": "event",
             "name": "on",
@@ -10459,7 +10459,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2642,
+            "line": 2649,
             "description": "只绑定一次事件",
             "itemtype": "event",
             "name": "one",
@@ -10487,7 +10487,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2664,
+            "line": 2671,
             "description": "在父层获取子组件的处理, 等待多个模块完成后触发一次",
             "itemtype": "event",
             "name": "wait",
@@ -10515,7 +10515,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2689,
+            "line": 2696,
             "description": "在父层获取子组件的处理, 等待多个模块完成后触发一次",
             "itemtype": "event",
             "name": "waited",
@@ -10543,7 +10543,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2732,
+            "line": 2739,
             "description": "为控件取消绑定事件",
             "itemtype": "event",
             "name": "off",
@@ -10571,7 +10571,7 @@
         },
         {
             "file": "src/scripts/core/bui.loader.js",
-            "line": 2758,
+            "line": 2765,
             "description": "触发自定义事件, 名称不能跟component 的id相同. componet id 内部会自动触发",
             "itemtype": "event",
             "name": "trigger",
@@ -10599,7 +10599,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 243,
+            "line": 246,
             "description": "重新编译执行, 默认打开第一次已经编译过了, 无需继续编译",
             "itemtype": "method",
             "name": "compile",
@@ -10613,7 +10613,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 271,
+            "line": 274,
             "description": "重新加载",
             "itemtype": "method",
             "name": "reload",
@@ -10635,7 +10635,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 344,
+            "line": 350,
             "description": "切换展示, 打开就关闭,关闭就打开",
             "itemtype": "method",
             "name": "toggle",
@@ -10663,7 +10663,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 373,
+            "line": 379,
             "description": "打开的状态",
             "itemtype": "method",
             "name": "isOpen",
@@ -10681,7 +10681,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 387,
+            "line": 393,
             "description": "关闭",
             "itemtype": "method",
             "name": "close",
@@ -10703,7 +10703,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 430,
+            "line": 436,
             "description": "移除对话框",
             "itemtype": "method",
             "name": "remove",
@@ -10725,7 +10725,7 @@
         },
         {
             "file": "src/scripts/core/bui.page.js",
-            "line": 449,
+            "line": 455,
             "description": "打开",
             "itemtype": "method",
             "name": "open",
@@ -10906,7 +10906,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2167,
+            "line": 2171,
             "description": "局部加载, 1.5.6以后推荐使用 loader.load ,可以单页多页使用",
             "itemtype": "method",
             "name": "loadPart",
@@ -10950,7 +10950,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2275,
+            "line": 2279,
             "description": "页面返回,支持回调,跟返回多层",
             "itemtype": "method",
             "name": "back",
@@ -10998,7 +10998,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2506,
+            "line": 2510,
             "description": "页面返回,支持回调,跟返回多层",
             "itemtype": "method",
             "name": "destroy",
@@ -11020,7 +11020,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2617,
+            "line": 2621,
             "description": "刷新当前页",
             "itemtype": "method",
             "name": "refresh",
@@ -11033,7 +11033,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2642,
+            "line": 2646,
             "description": "替换当前页面,为新页面",
             "itemtype": "method",
             "name": "replace",
@@ -11071,7 +11071,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2671,
+            "line": 2675,
             "description": "获取页面的参数,可以直接使用 bui.getPageParams() 方法获取",
             "itemtype": "method",
             "name": "getPageParams",
@@ -11088,7 +11088,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2692,
+            "line": 2696,
             "description": "[获取当前页面下的局部模块参数]",
             "itemtype": "method",
             "name": "getPartParams",
@@ -11114,7 +11114,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2718,
+            "line": 2722,
             "description": "默认检查模块是否已经加载过,防止事件重复绑定",
             "itemtype": "method",
             "name": "isLoad",
@@ -11139,7 +11139,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2858,
+            "line": 2862,
             "description": "获取设置参数",
             "itemtype": "method",
             "name": "option",
@@ -11167,7 +11167,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2884,
+            "line": 2888,
             "description": "为控件绑定事件,以下事件均为全局事件.\n全局事件建议写在index.js监听, 如果写在当前模块里面监听,当路由的参数cache=false时,需要先off掉,否则会有加载两次的,如果cache=true,相同模板只执行1次,则不需要off",
             "itemtype": "event",
             "name": "on",
@@ -11195,7 +11195,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2906,
+            "line": 2910,
             "description": "为控件取消绑定事件",
             "itemtype": "event",
             "name": "off",
@@ -11223,7 +11223,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2932,
+            "line": 2936,
             "description": "获取最后一个历史记录的模块信息,可以用于检测当前在某个模块下",
             "itemtype": "method",
             "name": "currentModule",
@@ -11241,7 +11241,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2947,
+            "line": 2951,
             "description": "<del>获取当前页面下的DOM对象, 常用于当前模块事件绑定,\n防止重复加载相同模块,导致事件重复绑定, 也适用于控件的重复,</del> 1.5以后，直接使用 router.$ 替换 $ 选择器就可以了",
             "itemtype": "method",
             "name": "currentPage",
@@ -11259,7 +11259,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 2976,
+            "line": 2980,
             "description": "单页里面的选择器,只选择当前页面的元素",
             "itemtype": "method",
             "name": "$",
@@ -11277,7 +11277,7 @@
         },
         {
             "file": "src/scripts/core/bui.router.js",
-            "line": 3006,
+            "line": 3010,
             "description": "单页里面如果需要设置footer显示隐藏,会导致初始化高度不准确,需要手动设置",
             "itemtype": "method",
             "name": "initScroll",
@@ -11964,7 +11964,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4150,
+            "line": 4153,
             "description": "获取数据",
             "itemtype": "method",
             "name": "get",
@@ -11986,7 +11986,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4173,
+            "line": 4176,
             "description": "把两个不同的 bui.store 创建的实例里面data相同字段关联起来, 一般用于把父组件的参数同步给子组件",
             "itemtype": "method",
             "name": "connect",
@@ -12026,7 +12026,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4418,
+            "line": 4421,
             "description": "取消两个实例之间的关联字段.",
             "itemtype": "method",
             "name": "disconnect",
@@ -12049,7 +12049,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4454,
+            "line": 4457,
             "description": "保存数据,并会触发 通过 bs.on 监听的事件. 1.6.6有 setState 代替。",
             "itemtype": "method",
             "name": "set",
@@ -12077,7 +12077,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4601,
+            "line": 4604,
             "description": "修改，替换",
             "itemtype": "method",
             "name": "setState",
@@ -12105,7 +12105,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4918,
+            "line": 4921,
             "description": "删除数据.并触发事件",
             "itemtype": "method",
             "name": "delete",
@@ -12127,7 +12127,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 4967,
+            "line": 4970,
             "description": "监听数据的修改, on事件监听必须在 set 数据修改之前.",
             "itemtype": "method",
             "name": "on",
@@ -12155,7 +12155,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 5005,
+            "line": 5008,
             "description": "监听数据的修改, 只监听一次, one事件监听必须在 set 数据修改之前.",
             "itemtype": "method",
             "name": "one",
@@ -12183,7 +12183,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 5043,
+            "line": 5046,
             "description": "取消监听某个数据",
             "itemtype": "method",
             "name": "off",
@@ -12211,7 +12211,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 5078,
+            "line": 5081,
             "description": "手动触发",
             "itemtype": "method",
             "name": "trigger",
@@ -12233,7 +12233,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 5112,
+            "line": 5115,
             "description": "清除键值的访问",
             "itemtype": "method",
             "name": "clearKey",
@@ -12248,7 +12248,7 @@
         },
         {
             "file": "src/scripts/core/bui.store.js",
-            "line": 5135,
+            "line": 5138,
             "description": "销毁实例，不再支持双向绑定",
             "itemtype": "method",
             "name": "destroy",
@@ -21846,7 +21846,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 648,
+            "line": 657,
             "description": "锁住拖动刷新,跟unlock配合使用",
             "itemtype": "method",
             "name": "lock",
@@ -21868,7 +21868,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 682,
+            "line": 691,
             "description": "绑定拖动刷新,跟lock配合使用",
             "itemtype": "method",
             "name": "unlock",
@@ -21890,7 +21890,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 722,
+            "line": 731,
             "description": "返回原位",
             "itemtype": "method",
             "name": "reverse",
@@ -21924,7 +21924,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 834,
+            "line": 843,
             "description": "请求失败改为点击加载,一般在请求的fail里面",
             "itemtype": "method",
             "name": "fail",
@@ -21946,7 +21946,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 855,
+            "line": 864,
             "description": "手动刷新数据",
             "itemtype": "method",
             "name": "refresh",
@@ -21960,7 +21960,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 877,
+            "line": 886,
             "description": "设置滚动的高度,常用于$(window).resize(fun)",
             "itemtype": "method",
             "name": "setHeight",
@@ -21982,7 +21982,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 920,
+            "line": 929,
             "description": "重新计算高度",
             "itemtype": "method",
             "name": "resize",
@@ -22019,7 +22019,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 953,
+            "line": 962,
             "description": "[销毁控件]",
             "itemtype": "method",
             "name": "destroy",
@@ -22041,7 +22041,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 979,
+            "line": 988,
             "description": "获取依赖的控件",
             "itemtype": "method",
             "name": "widget",
@@ -22062,7 +22062,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 996,
+            "line": 1005,
             "description": "获取设置参数",
             "itemtype": "method",
             "name": "option",
@@ -22090,7 +22090,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 1024,
+            "line": 1033,
             "description": "为控件绑定事件",
             "itemtype": "event",
             "name": "on",
@@ -22118,7 +22118,7 @@
         },
         {
             "file": "src/scripts/ui/bui.pullrefresh.js",
-            "line": 1044,
+            "line": 1053,
             "description": "为控件取消绑定事件",
             "itemtype": "event",
             "name": "off",
@@ -24480,11 +24480,11 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1524,
+            "line": 1525,
             "description": "上一个",
             "itemtype": "method",
             "name": "prev",
-            "option": "{function} option.loaded [1.6.6新增，跳转后执行]",
+            "since": "1.3.0",
             "chainable": 1,
             "example": [
                 "\n\n           uiSlide.prev();\n"
@@ -24495,11 +24495,11 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1560,
-            "description": "下一个",
+            "line": 1559,
+            "description": "上一个",
             "itemtype": "method",
             "name": "next",
-            "option": "{function} option.loaded [1.6.6新增，跳转后执行]",
+            "since": "1.3.0",
             "chainable": 1,
             "example": [
                 "\n\n           uiSlide.next();\n"
@@ -24510,7 +24510,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1622,
+            "line": 1619,
             "description": "不允许拖拽",
             "itemtype": "method",
             "name": "lock",
@@ -24524,7 +24524,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1666,
+            "line": 1663,
             "description": "允许拖拽",
             "itemtype": "method",
             "name": "unlock",
@@ -24538,7 +24538,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1805,
+            "line": 1802,
             "description": "<div class=\"oui-fluid\">\n  <div class=\"span12\">\n    <h2>动态加载页面,模拟路由, 1.6.6重写load方法，可以用于多页的多路由</h2>\n    <p>由于多页开发,后退不能刷新页面,所以便有这个slide来模拟简单的路由加载, 用于跟多页配合</p>\n    <h3>预览地址: <a href=\"http://www.easybui.com/demo/index.html#pages/ui_controls/bui.slide_tab_router.html\" target=\"_blank\">demo</a></h3>\n  </div>\n</div>",
             "itemtype": "method",
             "name": "load",
@@ -24596,7 +24596,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1862,
+            "line": 1859,
             "description": "<div class=\"oui-fluid\">\n  <div class=\"span12\">\n    <h2>后退上一个页面，跟 prev方法的区别在于，这个后退会删除掉上一页</h2>\n    <p>由于多页开发,后退不能刷新页面,所以便有这个slide来模拟简单的路由加载, 用于跟多页配合</p>\n  </div>\n</div>",
             "itemtype": "method",
             "name": "back",
@@ -24644,7 +24644,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1909,
+            "line": 1906,
             "description": "<div class=\"oui-fluid\">\n  <div class=\"span12\">\n    <h2>replace替换当前选项</h2>\n  </div>\n</div>",
             "itemtype": "method",
             "name": "replace",
@@ -24698,7 +24698,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 1951,
+            "line": 1948,
             "description": "<div class=\"oui-fluid\">\n  <div class=\"span12\">\n    <h2>动态新增一个组件</h2>\n  </div>\n</div>",
             "itemtype": "method",
             "name": "add",
@@ -24800,7 +24800,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2061,
+            "line": 2058,
             "description": "<div class=\"oui-fluid\">\n  <div class=\"span12\">\n    <h2> 移除某个选项</h2>\n  </div>\n</div>",
             "itemtype": "method",
             "name": "remove",
@@ -24841,7 +24841,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2185,
+            "line": 2182,
             "description": "获取内容的当前dom",
             "itemtype": "method",
             "name": "currentMain",
@@ -24863,7 +24863,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2202,
+            "line": 2199,
             "description": "获取菜单的当前dom",
             "itemtype": "method",
             "name": "currentMenu",
@@ -24885,7 +24885,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2258,
+            "line": 2255,
             "description": "重新计算宽高",
             "itemtype": "method",
             "name": "resize",
@@ -24922,7 +24922,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2283,
+            "line": 2280,
             "description": "[销毁控件]",
             "itemtype": "method",
             "name": "destroy",
@@ -24944,7 +24944,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2315,
+            "line": 2312,
             "description": "获取依赖的控件",
             "itemtype": "method",
             "name": "widget",
@@ -24965,7 +24965,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2332,
+            "line": 2329,
             "description": "获取设置参数",
             "itemtype": "method",
             "name": "option",
@@ -24993,7 +24993,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2360,
+            "line": 2357,
             "description": "为控件绑定事件",
             "itemtype": "event",
             "name": "on",
@@ -25021,7 +25021,7 @@
         },
         {
             "file": "src/scripts/ui/bui.slide.js",
-            "line": 2380,
+            "line": 2377,
             "description": "为控件取消绑定事件",
             "itemtype": "event",
             "name": "off",
@@ -25703,30 +25703,5 @@
             "namespace": "bui"
         }
     ],
-    "warnings": [
-        {
-            "message": "unknown tag: option",
-            "line": " src/scripts/ui/bui.slide.js:1524"
-        },
-        {
-            "message": "unknown tag: option",
-            "line": " src/scripts/ui/bui.slide.js:1524"
-        },
-        {
-            "message": "unknown tag: option",
-            "line": " src/scripts/ui/bui.slide.js:1524"
-        },
-        {
-            "message": "unknown tag: option",
-            "line": " src/scripts/ui/bui.slide.js:1560"
-        },
-        {
-            "message": "unknown tag: option",
-            "line": " src/scripts/ui/bui.slide.js:1560"
-        },
-        {
-            "message": "unknown tag: option",
-            "line": " src/scripts/ui/bui.slide.js:1560"
-        }
-    ]
+    "warnings": []
 }
