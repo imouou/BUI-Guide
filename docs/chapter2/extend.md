@@ -1,12 +1,12 @@
 # 插件扩展
 
-## 以一个折叠菜单为例
+### 以一个折叠菜单为例
 
 ![折叠菜单交互](http://www.easybui.com/static/images/controls/bui-accordion_low.gif)
 
-## 控件分析
+### 控件分析
 
-### 控件结构
+#### 控件结构
 > 一个点击显示隐藏的效果, 并且点击的时候, 会先把展开进行隐藏, 再展开自己的. 从界面上我们来看看结构的设计.
 
 ```html
@@ -55,7 +55,7 @@
 </dl>
 ```
 
-### 控件样式
+#### 控件样式
 一般作为插件的独立样式引入, `bui-foldmenu.css`文件
 ```css
 .bui-foldmenu {}
@@ -93,11 +93,11 @@
 ```
 > 样式里面就默认隐藏内容标签(dt相邻的dd),由控件初始化, 其它都是一些修饰, 设置激活状态的时候,箭头翻转.
 
-### 控件脚本
+#### 控件脚本
 
 > 1.5.4 新增 bui.extend 方法,可以用来扩展插件, 并且保持跟 bui原本的使用方式一致.
 
-#### bui.extend 控件参数是一个对象, 其中包含以下参数
+##### bui.extend 控件参数是一个对象, 其中包含以下参数
 
 - name `string` 控件名称
 - config `object` 控件默认参数
@@ -167,7 +167,7 @@ bui.extend({
 
 ```
 
-### 控件使用
+#### 控件使用
 
 ```html
 <dl id="folder" class="bui-foldmenu">
@@ -185,14 +185,14 @@ bui.extend({
   // uiFloder.config 可以拿到一些实例的参数
 ```
 
-### 插件预览
+#### 插件预览
 
 [在线预览bui.folder插件](http://www.easybui.com/demo/index.html#pages/ui_controls/bui.extend)
 
-## 完善插件
+### 完善插件
 
 
-### 用闭包防止全局污染
+#### 用闭包防止全局污染
 > 放在一个闭包里,这样可以防止控件受到污染, `window.libs` 指的是 `zepto` 或者 `jquery`, 当你去掉引入 zepto.js 的时候, 引入 `jquery.js` 就可以完美切换成jquery版本. (jquery版本建议在: 1.9.x - 1.11.x)
 
 ```js
@@ -203,7 +203,7 @@ bui.extend({
 })(window.bui || {}, window.libs);
 ```
 
-### 加上注释
+#### 加上注释
 
 ```js
 /* @namespace bui
@@ -223,7 +223,7 @@ bui.extend({
   */
 ```
 
-### 完整版
+#### 完整版
 
 ```js
 ;(function(ui, $) {
@@ -304,6 +304,6 @@ bui.extend({
 })(window.bui || {}, window.libs);
 ```
 
-## 结语
+### 结语
 
 上面我们示例了一个最简单的插件的开发及使用, 但插件的适应性还不够, 还需要考虑各种扩展性,复杂的场景如何去适应, 比方内容是需要固定高度,选择器换成其它,只展示一个,等各种需求都不能满足, 我们需要考虑更多的场景, 抽取更多的变量作为可配置.

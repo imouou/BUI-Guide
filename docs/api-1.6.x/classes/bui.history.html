@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bui.history - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+<div id="sidemenu" class="sidebar-menu">菜单</div>
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="BUI" width="30px"></a>
+                <a href="../index.html">BUI</a>
+                </h1>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.x </p>
+            
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div id="sidebar" class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <div id="api-tabview" class="tabview">
+                
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                            </ul>
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/Animate.html">Animate</a></li>
+                                <li><a href="../modules/Core.html">Core</a></li>
+                                <li><a href="../modules/Event.html">Event</a></li>
+                                <li><a href="../modules/Method.html">Method</a></li>
+                                <li><a href="../modules/Native.html">Native</a></li>
+                                <li><a href="../modules/UI.html">UI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>bui.history Class</h1>
+                        <div class="box meta">
+                        
+                        
+                                <div class="foundat">
+                                    Defined in: <a href="../files/src_scripts_core_bui.history.js.html#l9"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:9</code></a>
+                                </div>
+                        
+                                    Module: <a href="../modules/Core.html">Core</a>
+                        
+                                <p>Available since 1.5.6</p>
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>[单页跟多页的公共历史记录,反映模块的加载关系, router.history 将废弃使用 ]</p>
+                        
+                        </div>
+                        
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                                    <li class="api-class-tab events"><a href="#events">Events</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods">
+                                                    <li class="index-item method">
+                                                        <a href="#method_check">check</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_checkComponent">checkComponent</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_checkPage">checkPage</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_destroy">destroy</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_epmty">epmty</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_get">get</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getComponent">getComponent</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getLast">getLast</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getPage">getPage</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getPageDialog">getPageDialog</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getParams">getParams</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getParentComponent">getParentComponent</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getParentParams">getParentParams</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getPrev">getPrev</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_init">init</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_option">option</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_prefix">prefix</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_refresh">refresh</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_reinit">reinit</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_showLog">showLog</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_widget">widget</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                        <div class="index-section events">
+                                            <h3>Events</h3>
+                        
+                                            <ul class="index-list events">
+                                                    <li class="index-item event">
+                                                        <a href="#event_off">off</a>
+                        
+                                                    </li>
+                                                    <li class="index-item event">
+                                                        <a href="#event_on">on</a>
+                        
+                                                    </li>
+                                                    <li class="index-item event">
+                                                        <a href="#event_trigger">trigger</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                                            <div id="method_check" class="method item">
+                                                <h3 class="name"><code>check</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[页面id,或者url,或者模块id]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l659"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:659</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>检测有没有当前页面历史记录</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[页面id,或者url,或者模块id]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       //  var hasLoadLogin = bui.history.check(&quot;pages/login/login.html&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_checkComponent" class="method item">
+                                                <h3 class="name"><code>checkComponent</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[id] [组件的id]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l676"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:676</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>检测component标签是否已经加载</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[id] [组件的id]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       //  var hasLoad = bui.history.checkComponent(&quot;tab1&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_checkPage" class="method item">
+                                                <h3 class="name"><code>checkPage</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[id] [组件的模块名,或者id]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l694"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:694</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                        <p>Available since 1.6.0 20200415</p>
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>检测模块有没有以 page 方式加载</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[id] [组件的模块名,或者id]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       //  var hasLoad = bui.history.checkPage(&quot;pages/login/login&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_destroy" class="method item">
+                                                <h3 class="name"><code>destroy</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[callback] [ 销毁后做什么]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l191"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:191</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>插件的公共方法,销毁控件.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[callback] [ 销毁后做什么]</code>
+                                                                    <span class="type">Function</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       插件内部使用: 
+                                                   // 插件内部要销毁的东西, 比方 定时器,事件绑定, 外部是不知道的, 所以要内部处理
+                                                   that.beforeDestroy = function(){
+                                            
+                                                   }
+                                            
+                                                   实例的销毁:
+                                                   var accordion = bui.accordion();
+                                                   // 调用这个方法前, 会先执行 beforeDestroy. 
+                                                   accordion.destroy();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_epmty" class="method item">
+                                                <h3 class="name"><code>epmty</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l726"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:726</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>清空历史记录</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       //  var hasLoadLogin = bui.history.epmty();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_get" class="method item">
+                                                <h3 class="name"><code>get</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[value] [通过模块名获取某个历史记录,或者历史记录]</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[key] [默认:&quot;name&quot;, 也可以传页面id]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">Array</span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l29"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:29</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取所有历史记录</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[value] [通过模块名获取某个历史记录,或者历史记录]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[key] [默认:&quot;name&quot;, 也可以传页面id]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <span class="type">Array</span>:
+                                                                <p>option [返回数组]</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法:</p>
+                                            <pre class="code prettyprint"><code>       var allHistory = bui.history.get();
+                                                   
+                                                  方法2:
+                                                   // 通过模块名获取某个历史记录
+                                                   bui.history.get(&quot;pages/login/login&quot;)
+                                            
+                                                  方法3:
+                                                   // 通过页面id获取某个历史记录
+                                                   bui.history.get(&quot;buife172-aafb-0295-180b-6bc17fbd1cfb&quot;,&quot;id&quot;)
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getComponent" class="method item">
+                                                <h3 class="name"><code>getComponent</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>id</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[field] [默认: exports 字段, 可以不传]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l215"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:215</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取编译后的组件实例</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">id</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[获取编译后的组件实例,如果有return, 就能拿到该对象]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[field] [默认: exports 字段, 可以不传]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法1: 获取编译后的实例
+                                            <component id="list" name="pages/list/index"></component></p>
+                                            <pre class="code prettyprint"><code>       var distance = bui.history.getComponent(&quot;list&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getLast" class="method item">
+                                                <h3 class="name"><code>getLast</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[field] [返回最后一条记录的某个key值]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">Object</span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l60"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:60</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取最后的历史记录</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[field] [返回最后一条记录的某个key值]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <span class="type">Object</span>:
+                                                                <p>option [返回对象]</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法:</p>
+                                            <pre class="code prettyprint"><code>       var lastHistory = bui.history.getLast();
+                                            
+                                                   方法2: 1.6.x
+                                                   var currentDistance = bui.history.getLast(&quot;exports&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getPage" class="method item">
+                                                <h3 class="name"><code>getPage</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>id</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[field] [默认: exports 字段, 可以不传]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l281"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:281</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取插入页面的实例</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">id</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[ id 或者模块名, 不传则是最后一次打开的实例 ]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[field] [默认: exports 字段, 可以不传]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法:</p>
+                                            <pre class="code prettyprint"><code>       var distance = bui.history.getPage(&quot;pages/list&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getPageDialog" class="method item">
+                                                <h3 class="name"><code>getPageDialog</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>id</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l324"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:324</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>在模块内部获取对话框的实例</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">id</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[获取编译后的组件实例,如果有return, 就能拿到该对象]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法1: 获取编译后的实例</p>
+                                            <pre class="code prettyprint"><code>       var distance = bui.history.getPageDialog(module.id);
+                                                   distance.close();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getParams" class="method item">
+                                                <h3 class="name"><code>getParams</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[type] [ 参数的类型, 如果不传则获取多种方式,依次获取, component, page, url, 也可以指定某种类型 page(弹窗加载) | component(局部加载的参数) | url(路由跳转的参数)]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l119"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:119</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>综合的获取参数方法, 如果模块会被多种方式加载, 则应该这个方法 bui.history.getParams</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[type] [ 参数的类型, 如果不传则获取多种方式,依次获取, component, page, url, 也可以指定某种类型 page(弹窗加载) | component(局部加载的参数) | url(路由跳转的参数)]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法1: 如果不确定该模块会被哪种方式使用, 则可以使用这种方式获取. <a href="http://module.id">module.id</a> 在loader.define(function(req,ext,module){ }) 的第三个参数</p>
+                                            <pre class="code prettyprint"><code>  var params = bui.history.getParams(module.id);
+                                            </code></pre>
+                                            <p>方法2: 获取单页路由或者多页路由的跳转传参 bui.load({url:&quot;&quot;,param:{}})</p>
+                                            <pre class="code prettyprint"><code>  var params = bui.history.getParams(&quot;url&quot;);
+                                            </code></pre>
+                                            <p>方法3: 获取以bui.page({url:&quot;&quot;,param:{}}) 加载的的参数, 通过以下方式获取</p>
+                                            <pre class="code prettyprint"><code>  var pageParams = bui.history.getParams(&quot;page&quot;);
+                                            </code></pre>
+                                            <p>方法4: 获取以router.loadPart, loader.load , component标签 加载的的参数, 通过以下方式获取</p>
+                                            <pre class="code prettyprint"><code>  var partParams = bui.history.getParams(&quot;component&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getParentComponent" class="method item">
+                                                <h3 class="name"><code>getParentComponent</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l242"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:242</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                        <p>Available since 1.6.2</p>
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取父组件实例, 在第一层component获取到的是页面组件</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法1:
+                                            var distance = bui.history.getParentComponent();</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getParentParams" class="method item">
+                                                <h3 class="name"><code>getParentParams</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l261"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:261</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                        <p>Available since 1.6.2</p>
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取父组件实例, 在第一层component获取到的是页面组件</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法1:
+                                            var distance = bui.history.getParentParams();</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getPrev" class="method item">
+                                                <h3 class="name"><code>getPrev</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[field] [返回最后一条记录的某个key值]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">Object</span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l88"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:88</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                        <p>Available since 1.6.0</p>
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取上一页历史记录</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[field] [返回最后一条记录的某个key值]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <span class="type">Object</span>:
+                                                                <p>option [返回对象]</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>方法:</p>
+                                            <pre class="code prettyprint"><code>       var lastHistory = bui.history.getPrev();
+                                            
+                                                   方法2: 1.6.x
+                                                   var currentDistance = bui.history.getPrev(&quot;exports&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_init" class="method item">
+                                                <h3 class="name"><code>init</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l126"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:126</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                        <p>Available since 1.5.3</p>
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>[控件的初始化]</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       //初始化生命周期,默认已经初始化1次
+                                                   var accordion = bui.accordion();
+                                            
+                                                   // 执行多一次初始化
+                                                   accordion.init();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_option" class="method item">
+                                                <h3 class="name"><code>option</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[key] [ 获取依赖的时候]</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[value] [ 获取依赖的时候]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l272"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:272</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>外部统一的修改获取参数, 修改this.config 的参数, 并且重新调用 init 方法.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[key] [ 获取依赖的时候]</code>
+                                                                    <span class="type">String | Object</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[value] [ 获取依赖的时候]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       比方初始化了插件: 
+                                                   var accordion = bui.accordion();
+                                            
+                                                   // 实例获取参数
+                                                   accordion.option(&quot;id&quot;);
+                                            
+                                                   // 修改一个参数
+                                                   accordion.option(&quot;height&quot;,500);
+                                            
+                                                   // 修改多个参数
+                                                   accordion.option({&quot;height&quot;:500,handle:&quot;.bui-btn-test&quot;});
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_prefix" class="method item">
+                                                <h3 class="name"><code>prefix</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[str] [ 去除前缀以后的值]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">String</span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l229"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:229</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>处理样式的前缀.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[str] [ 去除前缀以后的值]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <span class="type">String</span>:
+                                                                <p>[ 出现问题的位置 ]</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       var className = that.prefix(&quot;accordion&quot;);
+                                            
+                                                   // bui-accordion
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_refresh" class="method item">
+                                                <h3 class="name"><code>refresh</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.history.js.html#l574"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:574</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>刷新页面</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       bui.history.refresh();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_reinit" class="method item">
+                                                <h3 class="name"><code>reinit</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l168"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:168</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>插件的公共方法,重新初始化.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       实例:
+                                                   var accordion = bui.accordion();
+                                                   // 重新初始化
+                                                   accordion.reinit();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_showLog" class="method item">
+                                                <h3 class="name"><code>showLog</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[str] [ 日志说明, try{}catche(e){ that.showLog(e) }]</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[where] [ 出现问题的位置]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l245"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:245</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>插件内部统一的抛出日志方法.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[str] [ 日志说明, try{}catche(e){ that.showLog(e) }]</code>
+                                                                    <span class="type">String | Object</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[where] [ 出现问题的位置]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       // 抛出异常, 在bui.accordion init 方法
+                                                   that.showLog(&quot;初始化错误&quot;,&quot;bui.accordion init&quot;)
+                                            
+                                                   // 支持对象
+                                                   try{}catche(e){ that.showLog(e) }
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_widget" class="method item">
+                                                <h3 class="name"><code>widget</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[name] [ 获取依赖的时候]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l107"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:107</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>实例的公共方法, 获取插件里面的实例,</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[name] [ 获取依赖的时候]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       插件内部使用 that.widgets.loading = bui.loading(); 初始化, 实例才能通过widget方法获取得到内部依赖.
+                                            
+                                                   比方初始化了插件: 
+                                                   var accordion = bui.accordion();
+                                            
+                                                   // 实例获取依赖
+                                                   accordion.widget(&quot;loading&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div>
+                        
+                        
+                        
+                                    <div id="events" class="api-class-tabpanel">
+                                        <h2 class="off-left">Events</h2>
+                        
+                                            <div id="event_off" class="events item">
+                                                <h3 class="name"><code>off</code></h3>
+                                                <span class="type"></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l349"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:349</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>为控件取消绑定事件</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Event Payload:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[type] [ 事件类型: &quot;show&quot;(显示目标时) | &quot;hide&quot;(隐藏目标时)]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[callback] [ 绑定的事件, this 为当前点击的菜单]</code>
+                                                                    <span class="type">Function</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       that.off(&quot;show&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="event_on" class="events item">
+                                                <h3 class="name"><code>on</code></h3>
+                                                <span class="type"></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l331"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:331</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>为控件绑定事件</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Event Payload:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[type] [ 事件类型: &quot;show&quot;(显示目标时) | &quot;hide&quot;(隐藏目标时)]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[callback] [ 绑定的事件, this 为当前点击的菜单]</code>
+                                                                    <span class="type">Function</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       that.on(&quot;show&quot;,function () {
+                                                       // 点击的菜单
+                                                       console.log(this);
+                                                   });
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="event_trigger" class="events item">
+                                                <h3 class="name"><code>trigger</code></h3>
+                                                <span class="type"></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_core_bui.extend.js.html#l363"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.extend.js:363</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>触发自定义事件</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Event Payload:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[type] [ 自定义事件名称]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[arguments] [ 需要传给自定义事件的参数,可以有多个]</code>
+                                                                    <span class="type">String | Object | Number</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       $(&quot;#id&quot;).click(function (e) {
+                                                   that.trigger(&quot;show&quot;,e);
+                                                   })</code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1e19beda5d47048a31939f0f67d9b1f9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</body>
+</html>

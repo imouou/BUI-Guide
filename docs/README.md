@@ -6,17 +6,19 @@
 <a href="https://github.com/imouou/BUI-Guide"><img src="https://img.shields.io/github/stars/imouou/BUI-Guide.svg?style=social&label=Star"></a>
 </p>
 
-## 简介 
+### 简介 
 
-?> BUI 是一个快速构建界面交互的UI组件框架，集动态组件、静态组件，模块化，单页路由于一身，专注webapp开发，完美嵌入各个平台 ( 微信公众号，微信小程序webview，聆客，钉钉，淘宝，支付宝等 )，亦可以跟其它第三方平台打包成独立应用( Bingotouch ，Cordova ，Dcloud ，APICloud ，Appcan 等)。
+> BUI 是一个更快的UI开发框架，专注Webapp快速开发，完美嵌入各平台或打包，媲美APP体验。
 
 
-### 特点优势 
+#### 特点优势 
 
 - 开箱即用
 - 零配置路由
 - 完美还原界面
 - 跨平台适配
+- 轻量化
+- 高性能
 - 按需加载
 - 一次性加载
 - 单页开发（SPA）媲美原生的交互效果
@@ -35,7 +37,7 @@
 > BUI还提供[编辑器插件 BUI-Fast](https://github.com/imouou/BUI-Fast-Snippets/)，[buijs-cli工程构建工具](chapter1/installation)，开发速度嗖嗖嗖。
 
 
-### 适用场景 <!-- {docsify-ignore} -->
+#### 适用场景 <!-- {docsify-ignore} -->
 
 * 中小型应用webapp开发;
 * 微信公众号开发;
@@ -44,7 +46,7 @@
 * demo交互原型投标;
 
 
-### 第三方打包独立应用 <!-- {docsify-ignore} -->
+#### 第三方打包独立应用 <!-- {docsify-ignore} -->
 - Cordova
 - DCloud
 - APICloud
@@ -53,12 +55,12 @@
 
 ?> 可以下载BUI安卓体验包，用不同平台打包以后的效果. <a href="http://www.easybui.com/downloads/" target="_target">进入下载中心</a>
 
-### 谁在使用 <!-- {docsify-ignore} -->
+#### 谁在使用 <!-- {docsify-ignore} -->
 
 移动、电信、地铁、政府、银行等行业。
 
 
-## 案例效果 
+### 案例效果 
 ?> 基于BUI制作的`高保真还原`App交互效果
 
 | <img src="static/images/case/163_low.gif" alt="" width="240px">             | <img src="static/images/case/qq_low.gif" alt="" width="240px">    | <img src="static/images/case/weixin_low.gif" alt="" width="240px">    |
@@ -80,12 +82,12 @@
 
 
 
-## 开发者约定
+### 开发者约定
 
-### 1. 问题反馈
+#### 1. 问题反馈
 遇到问题，请先在文档中搜索，如果没有找到结果，请使用[issue反馈](https://github.com/imouou/BUI-Guide/issues)，问题反馈尽量配合截图或者使用场景说明，百分百回（拒绝Q群及QQ私聊等渠道的信息）。
 
-### 2. 版本更新
+#### 2. 版本更新
 > cdn beta版地址: 用于修复问题后快速发布,可以下载使用，不建议直接引入地址用于生产环境.
 
 - https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css
@@ -94,14 +96,14 @@
 > 如果要指定版本 https://cdn.jsdelivr.net/npm/buijs@1.5.40/lib/latest/bui.js
 
 
-## 文档下载 <!-- {docsify-ignore} -->
+### 文档下载 <!-- {docsify-ignore} -->
 
 [BUI文档](https://github.com/imouou/BUI-Guide/)
 
-## 在线阅读 <!-- {docsify-ignore} -->
+### 在线阅读 <!-- {docsify-ignore} -->
 
 [BUI在线阅读](https://imouou.github.io/BUI-Guide/)
 
-## 链接 <!-- {docsify-ignore} -->
+### 链接 <!-- {docsify-ignore} -->
 
 [BUI官网](http://www.easybui.com)

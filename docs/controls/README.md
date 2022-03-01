@@ -1,12 +1,12 @@
 
-# 组件使用必读说明
+# 控件使用必读说明
 
 
 [Demo](http://easybui.com/demo/)
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-## 组件示例说明
+## 控件示例说明
 
 - 滑动交互类控件, 需要用chrome开启模拟设备, 或者 扫码在手机端操作, 比如 `bui.slide`焦点图, `bui.tab` 选项卡, `bui.sidebar`侧滑菜单, `bui.listview`侧滑列表, `bui.pullrefresh`下拉刷新等;
 
@@ -17,7 +17,7 @@
 - 部分示例在源码里无法展示,不代表控件有问题,请以官方[demo](http://www.easybui.com/demo/)示例为准;
 
 
-## 组件使用说明
+## 控件使用说明
 
 - `bui.ready`, 控件初始化必须在里面;
  多页开发每页都需要有 `bui.ready`;

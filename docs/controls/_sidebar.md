@@ -1,4 +1,4 @@
-* [组件使用必读](controls/README.md)
+* [使用必读](controls/README.md)
 * 框架
   * [顶部导航动态加载](controls/main/tab-head-dynamic.md)
   * [底部导航动态加载](controls/main/tab-foot-dynamic.md)

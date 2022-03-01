@@ -1,10 +1,11 @@
 # 历史记录
 
-?> 单页路由里面有一个 `router.history` 而多页没有, 为了方便管理组件, 1.6.0以后都使用 `bui.history` 来获取历史记录. 多页的历史记录只会有一个.
+> 多页单页统一使用 `bui.history` 来获取历史记录，多页的历史记录只会有一个。
 
-## 获取所有历史记录
 
-** bui.history.get **
+### 获取所有历史记录
+
+*bui.history.get*
 ```js
 // 获取所有, 返回数组
 var allHistory = bui.history.get();
@@ -13,9 +14,9 @@ var allHistory = bui.history.get();
 var main = bui.history.get("main");
 ```
 
-## 获取最后的记录
+### 获取当前页的记录
 
-** bui.history.getLast **
+*bui.history.getLast*
 ```js
 // 获取所有, 返回对象
 var lastHistory = bui.history.getLast();
@@ -24,11 +25,9 @@ var lastHistory = bui.history.getLast();
 var currentDistance = bui.history.getLast("exports");
 ```
 
-## 获取上一个页面的记录
+### 获取上一个页面的记录
 
-?> 如果还没有这个,需要更新 bui.js 
-
-** bui.history.getPrev **
+*bui.history.getPrev*
 ```js
 // 获取上一个页面
 var prevHistory = bui.history.getPrev();
@@ -37,34 +36,14 @@ var prevDistance = bui.history.getPrev("exports");
 ```
 
 
-## 获取组件的实例
+### 获取传参
 
-** bui.history.getComponent **
-
-```js
-// 可以拿到list实例抛出的方法
-var listDistance =  bui.history.getComponent("list");;
-```
-
-```html
-<component id="list" name="pages/components/list/index"></component>
-```
-**pages/components/list/index.js**
-```js
-loader.define(function(){
-  var uiList = bui.list({
-    id:"",
-    url:""
-  })
-  return uiList;
-})
-```
-
-## 获取传参
-
-** bui.history.getParams **
+*bui.history.getParams*
 
 ```js
+  // 1.7.x 以后可以使用 module.props 获取
+  var params = module.props;
+
 // 方法1: 如果不确定该模块会被哪种方式使用, 则可以使用这种方式获取. module.id 在loader.define(function(req,ext,module){ }) 的第三个参数
   var params = bui.history.getParams(module.id);
 
@@ -79,14 +58,14 @@ loader.define(function(){
 ```
 
 
-## 获取弹窗组件的实例
+### 获取弹窗组件的实例
 
-** bui.history.getPage **
+*bui.history.getPage*
 
 通过 bui.page 加载的模块,使用这个方式获取
 例如: 
 ```js
-bui.page({
+var loginPage = bui.page({
   url:"pages/login/login.html"
 })
 ```
@@ -110,7 +89,7 @@ loader.define(function(require,export,module){
 })
 ```
 
-## 内部获取弹窗的实例
+### 内部获取弹窗的实例
 
 **pages/login/login.js**
 ```js
@@ -131,17 +110,17 @@ loader.define(function(require,export,module){
 })
 ```
 
-## 检测页面是否已经加载
+### 检测页面是否已经加载
 
-** bui.history.check **
+*bui.history.check*
 ```js
 var isLogin = bui.history.check("pages/login/login.html");
 
 ```
 
-## 检测component是否已经加载
+### 检测component是否已经加载
 
-** bui.history.checkComponent **
+*bui.history.checkComponent*
 ```js
 <component id="tab1" name="pages/components/list/index"></component>
 // tab1 为 component 标签的id
@@ -149,24 +128,11 @@ var isLoaded = bui.history.check("tab1");
 
 ```
 
-## 检测component是否已经加载
+### 检测page是否已经加载
 
-** bui.history.checkPage **
+*bui.history.checkPage*
 ```js
 // tab1 为 id
 var isLoaded = bui.history.checkPage("tab1");
 
-```
-
-## 页面刷新
-
-?> `bui.refresh` 或 `bui.history.refresh` 都可以.
-
-- 1.6.x 以下不建议使用页面刷新, 不熟悉事件操作会造成事件重复绑定. 可以结合 loader.require 调用模块抛出的方法, 实现局部刷新功能. 
-
-** bui.history.refresh **
-```js
-bui.history.refresh();
-
-bui.refresh();
 ```

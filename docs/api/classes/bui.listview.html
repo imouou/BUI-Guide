@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>bui.listview - BUI</title>
     <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -18,1147 +20,1225 @@
     <script src="../assets/js/combo/autocomplete.js"></script>
     <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
-<body class="yui3-skin-sam">
-<div id="sidemenu" class="sidebar-menu">菜单</div>
-<div id="doc">
-    <div id="hd" class="yui3-g header">
-        <div class="yui3-u-3-4">
-                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="BUI" width="30px"></a>
-                <a href="../index.html">BUI</a>
-                </h1>
-            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
-            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.x </p>
-            
-        </div>
-    </div>
-    <div id="bd" class="yui3-g">
 
-        <div id="sidebar" class="yui3-u-1-4">
-            <div id="docs-sidebar" class="sidebar apidocs">
-                <div id="api-list">
-                    <div id="api-tabview" class="tabview">
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.7.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
                 
-                        <ul class="tabs">
-                            <li><a href="#api-classes">Classes</a></li>
-                            <li><a href="#api-modules">Modules</a></li>
-                        </ul>
-                
-                        <div id="api-tabview-filter">
-                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
-                        </div>
-                
-                        <div id="api-tabview-panel">
-                            <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
-                                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
-                                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
-                                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
-                                <li><a href="../classes/bui.all.html">bui.all</a></li>
-                                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
-                                <li><a href="../classes/bui.array.html">bui.array</a></li>
-                                <li><a href="../classes/bui.back.html">bui.back</a></li>
-                                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
-                                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
-                                <li><a href="../classes/bui.config.html">bui.config</a></li>
-                                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
-                                <li><a href="../classes/bui.date.html">bui.date</a></li>
-                                <li><a href="../classes/bui.delete.html">bui.delete</a></li>
-                                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
-                                <li><a href="../classes/bui.download.html">bui.download</a></li>
-                                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
-                                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
-                                <li><a href="../classes/bui.file.html">bui.file</a></li>
-                                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
-                                <li><a href="../classes/bui.floor.html">bui.floor</a></li>
-                                <li><a href="../classes/bui.get.html">bui.get</a></li>
-                                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
-                                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
-                                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
-                                <li><a href="../classes/bui.history.html">bui.history</a></li>
-                                <li><a href="../classes/bui.init.html">bui.init</a></li>
-                                <li><a href="../classes/bui.input.html">bui.input</a></li>
-                                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
-                                <li><a href="../classes/bui.list.html">bui.list</a></li>
-                                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
-                                <li><a href="../classes/bui.load.html">bui.load</a></li>
-                                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
-                                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
-                                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
-                                <li><a href="../classes/bui.number.html">bui.number</a></li>
-                                <li><a href="../classes/bui.page.html">bui.page</a></li>
-                                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
-                                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
-                                <li><a href="../classes/bui.post.html">bui.post</a></li>
-                                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
-                                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
-                                <li><a href="../classes/bui.put.html">bui.put</a></li>
-                                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
-                                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
-                                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
-                                <li><a href="../classes/bui.router.html">bui.router</a></li>
-                                <li><a href="../classes/bui.run.html">bui.run</a></li>
-                                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
-                                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
-                                <li><a href="../classes/bui.select.html">bui.select</a></li>
-                                <li><a href="../classes/bui.setting.html">bui.setting</a></li>
-                                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
-                                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
-                                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
-                                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
-                                <li><a href="../classes/bui.store.html">bui.store</a></li>
-                                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
-                                <li><a href="../classes/bui.tab.html">bui.tab</a></li>
-                                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
-                                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
-                                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
-                                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
-                                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                            <a href="../index.html" style="display: block;padding:10px;font-size:16px;background:#fff;">🔙返回首页</a>
+                            <ul class="tabs">
+                                <li><a href="#api-classes">控件</a></li>
+                                <li><a href="#api-modules">模块</a></li>
                             </ul>
-                
-                            <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/Animate.html">Animate</a></li>
-                                <li><a href="../modules/Core.html">Core</a></li>
-                                <li><a href="../modules/Event.html">Event</a></li>
-                                <li><a href="../modules/Method.html">Method</a></li>
-                                <li><a href="../modules/Native.html">Native</a></li>
-                                <li><a href="../modules/UI.html">UI</a></li>
-                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="yui3-u-3-4">
-                <div id="api-options">
-                    Show:
-                    <label for="api-show-inherited">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </div>
-            
-            <div class="apidocs">
-                <div id="docs-main">
-                    <div class="content">
-                        <h1>bui.listview Class</h1>
-                        <div class="box meta">
-                        
-                        
-                                <div class="foundat">
-                                    Defined in: <a href="../files/src_scripts_ui_bui.listview.js.html#l7"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:7</code></a>
-                                </div>
-                        
-                                    Module: <a href="../modules/UI.html">UI</a>
-                        
-                        </div>
-                        
-                        
-                        <div class="box intro">
-                            <div class="oui-fluid">
-                           <div class="span8">
-                             <h2>侧滑列表</h2>
-                             <p>支持动态渲染以及静态渲染, 两种的区别就在于,动态渲染初始化简单, 静态渲染灵活,支持自定义按钮样式,并且支持左右侧滑.</p>
-                             <p>可以同时有左边跟右边菜单,菜单的个数也可以不一样多,留意示例的几种不同效果</p>
-                             <h3>预览地址: <a href="../../index.html#pages/ui_controls/bui.listview.html" target="_blank">demo</a></h3>
-                             <h3>方法说明:</h3>
-                         <a href="../classes/bui.listview.html#method_active" class="crosslink">active</a>: 返回当前激活的对象 <br>
-                         bui.listview/open: 打开某一个 <br>
-                         <a href="../classes/bui.listview.html#method_close" class="crosslink">close</a>: 关闭所有 <br>
-                         <a href="../classes/bui.listview.html#method_lock" class="crosslink">lock</a>: 不允许滑动 <br>
-                         <a href="../classes/bui.listview.html#method_unlock" class="crosslink">unlock</a>: 允许滑动 <br>
-                         <a href="../classes/bui.listview.html#method_option" class="crosslink">option</a>: 获取设置参数 <br>
-                         <a href="../classes/bui.listview.html#method_widget" class="crosslink">widget</a>: 获取依赖控件 <br>
-                           </div>
-                           <div class="span4"><a href="../../index.html#pages/ui_controls/bui.listview.html" target="_blank"><img src="http://www.easybui.com/static/images/controls/bui-listview_low.gif" alt="控件预览"/></a></div>
-                         </div>
-                        </div>
-                        
-                            <div class="constructor">
-                                <h2>Constructor</h2>
-                                <div id="method_bui.listview" class="method item">
-                                    <h3 class="name"><code>bui.listview</code></h3>
-                                
-                                        <div class="args">
-                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                <li class="arg">
-                                                        <code>option</code>
-                                                </li>
-                                            </ul><span class="paren">)</span>
-                                        </div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                    <div class="meta">
-                                                <p>
-                                                Defined in
-                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l7"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:7</code></a>
-                                        </p>
-                                
-                                
-                                
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1>bui.listview Class</h1>
+                            <div class="box meta">
+                            
+                            
+                                    <div class="foundat">
+                                        Defined in: <a href="../files/src_scripts_ui_bui.listview.js.html#l7"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:7</code></a>
                                     </div>
-                                
-                                    <div class="description">
-                                        
-                                    </div>
-                                
-                                        <div class="params">
-                                            <h4>Parameters:</h4>
-                                
-                                            <ul class="params-list">
-                                                <li class="param">
-                                                        <code class="param-name">option</code>
-                                                        <span class="type">Object</span>
-                                
-                                
-                                                    <div class="param-description">
-                                                         
-                                                    </div>
-                                
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name">id</code>
-                                                                    <span class="type">String</span>
-                                
-                                                                <div class="param-description">
-                                                                    <p>[控件id]</p>
-                                
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[data] [点击触发侧滑的按钮 例如:[{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;}]]</code>
-                                                                    <span class="type">Array</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[data.text] [菜单的文本]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[data.classname] [菜单的样式]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[template] [ 1.5.2新增, 默认null, 模板不满意,可以通过此方法返回新的模板,第一个参数为data的数据]</code>
-                                                                    <span class="type">Function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[handle] [触发的区域,默认是.bui-btn]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[width] [ listview的宽度,默认:0, 0 为自适应屏幕宽度]</code>
-                                                                    <span class="type">Number</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[height] [ listview的高度,默认:0, 0 为自适应内容高度]</code>
-                                                                    <span class="type">Number</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[menuWidth] [菜单总宽度,默认:100]</code>
-                                                                    <span class="type">Number</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[menuHeight] [ 菜单的高度 默认:0 自适应内容高度]</code>
-                                                                    <span class="type">Number</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[position] [ 菜单侧滑的方向 right | left]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[zoom] [ since 1.3.0 是否采用缩放宽高的方式 默认 false | true]</code>
-                                                                    <span class="type">Boolean</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[mask] [ 遮罩 true]</code>
-                                                                    <span class="type">Boolean</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[distance] [ 默认80, 拖拽大于distance才会生效,配合delay可以防止listview又有上下其它事件]</code>
-                                                                    <span class="type">Number</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[onBeforeInit] [ 1.5.1新增 初始化前触发]</code>
-                                                                    <span class="type">Function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[onInited] [ 1.5.1新增 初始化以后触发]</code>
-                                                                    <span class="type">Function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[callback] [ 点击的回调]</code>
-                                                                    <span class="type">Function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                                                <div class="param-description">
-                                                                    
-                                                                </div>
-                                
-                                                            </li>
-                                                        </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                
-                                
-                                        <div class="example">
-                                            <h4>Example:</h4>
-                                
-                                            <div class="example-content">
-                                                <p>html:</p>
-                                <pre class="code prettyprint"><code>   // 示例结构1: 动态渲染
-                                   
-                                        &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
-                                              &lt;li&gt;
-                                                  &lt;div class=&quot;bui-btn&quot;&gt;
-                                                      菜单
-                                                  &lt;/div&gt;
-                                              &lt;/li&gt;
-                                          &lt;/ul&gt;
-                                   // 示例结构2: 禁止渲染
-                                    
-                                        &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
-                                          &lt;!-- 设置status属性可以避免渲染菜单 --&gt;
-                                          &lt;li status=&quot;1&quot;&gt;
-                                            &lt;div class=&quot;bui-btn bui-box&quot;&gt;
-                                              &lt;div class=&quot;span1&quot;&gt;不渲染&lt;/div&gt;
-                                              &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;
-                                            &lt;/div&gt;
-                                          &lt;/li&gt;
-                                        &lt;/ul&gt;
-                                   // 示例结构3: 静态渲染,可以允许左右都有按钮, 并且在动态加载的列表的时候, 应该只需要初始化一次
-                                       &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
-                                          &lt;li status=&quot;1&quot;&gt;
-                                            &lt;div class=&quot;bui-btn bui-box&quot; href=&quot;pages/ui_controls/bui.listview.html&quot; param='{&quot;id&quot;:&quot;123&quot;}'&gt;
-                                              &lt;div class=&quot;span1&quot;&gt;静态渲染-左右菜单&lt;/div&gt;
-                                              &lt;span class=&quot;bui-badges&quot;&gt;荐&lt;/span&gt;
-                                              &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;
-                                            &lt;/div&gt;
-                                            &lt;div class=&quot;bui-listview-menu swipeleft&quot; data-moving=&quot;240&quot;&gt;
-                                                &lt;div class=&quot;bui-btn primary&quot;&gt;置顶&lt;/div&gt;
-                                                &lt;div class=&quot;bui-btn primary&quot;&gt;修改&lt;/div&gt;
-                                                &lt;div class=&quot;bui-btn danger&quot;&gt;删除&lt;/div&gt;
-                                            &lt;/div&gt;
-                                            &lt;div class=&quot;bui-listview-menu swiperight&quot;&gt;
-                                                &lt;div class=&quot;bui-btn primary&quot;&gt;修改&lt;/div&gt;
-                                                &lt;div class=&quot;bui-btn danger&quot;&gt;删除&lt;/div&gt;
-                                            &lt;/div&gt;
-                                          &lt;/li&gt;
-                                        &lt;/ul&gt;
-                                </code></pre>
-                                <p>js:</p>
-                                <pre class="code prettyprint"><code>      // 初始化
-                                      var uiListview = bui.listview({
-                                              id: &quot;#listview&quot;,
-                                              data: [{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;},
-                                                      { &quot;text&quot;: &quot;删除&quot;, &quot;classname&quot;:&quot;btn-red&quot;}],
-                                              callback: function (e) {
-                                                var index = $(e.target).text();
-                                                    if( index == &quot;修改&quot; ){
-                                                        //do something
-                                                    }
-                                                    this.close();
-                                              }
-                                          });
-                                     
-                                      // 自定义模板初始化
-                                      var uiListview = bui.listview({
-                                              id: &quot;#listview&quot;,
-                                              data: [{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;},
-                                                      { &quot;text&quot;: &quot;删除&quot;, &quot;classname&quot;:&quot;btn-red&quot;}],
-                                              callback: function (e) {
-                                                var index = $(e.target).text();
-                                                    if( index == &quot;修改&quot; ){
-                                                        //do something
-                                                    }
-                                                    this.close();
-                                              },
-                                              template: function(data) {
-                                                  var html = '';
-                                                  html += '&lt;div class=&quot;bui-listview-menu swipeleft&quot;&gt;';
-                                                  data &amp;&amp; data.forEach(function(el, i) {
-                                                      html += '&lt;div class=&quot;bui-btn danger&quot;&gt;' + el.text + '&lt;/div&gt;';
-                                                  })
-                                                  html += '&lt;/div&gt;';
-                                                  return html;
-                                              }
-                                          });
-                                </code></pre>
-                                
-                                            </div>
-                                        </div>
-                                </div>
+                            
+                                        Module: <a href="../modules/UI.html">UI</a>
+                            
                             </div>
-                        
-                        <div id="classdocs" class="tabview">
-                            <ul class="api-class-tabs">
-                                <li class="api-class-tab index"><a href="#index">Index</a></li>
-                        
-                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
-                                    <li class="api-class-tab events"><a href="#events">Events</a></li>
-                            </ul>
-                        
-                            <div>
-                                <div id="index" class="api-class-tabpanel index">
-                                    <h2 class="off-left">Item Index</h2>
-                        
-                                        <div class="index-section methods">
-                                            <h3>Methods</h3>
-                        
-                                            <ul class="index-list methods">
-                                                    <li class="index-item method">
-                                                        <a href="#method_active">active</a>
-                        
+                            
+                            
+                            <div class="box intro">
+                                <div class="oui-fluid">
+                               <div class="span8">
+                                 <h2>侧滑列表</h2>
+                                 <p>支持动态渲染以及静态渲染, 两种的区别就在于,动态渲染初始化简单, 静态渲染灵活,支持自定义按钮样式,并且支持左右侧滑.</p>
+                                 <p>可以同时有左边跟右边菜单,菜单的个数也可以不一样多,留意示例的几种不同效果</p>
+                                 <h3>预览地址: <a href="http://www.easybui.com/demo/index.html#pages/ui_controls/bui.listview.html" target="_blank">demo</a></h3>
+                                 <h3>方法说明:</h3>
+                             <a href="../classes/bui.listview.html#method_active" class="crosslink">active</a>: 返回当前激活的对象 <br>
+                             bui.listview/open: 打开某一个 <br>
+                             <a href="../classes/bui.listview.html#method_close" class="crosslink">close</a>: 关闭所有 <br>
+                             <a href="../classes/bui.listview.html#method_lock" class="crosslink">lock</a>: 不允许滑动 <br>
+                             <a href="../classes/bui.listview.html#method_unlock" class="crosslink">unlock</a>: 允许滑动 <br>
+                             <a href="../classes/bui.listview.html#method_option" class="crosslink">option</a>: 获取设置参数 <br>
+                             <a href="../classes/bui.listview.html#method_widget" class="crosslink">widget</a>: 获取依赖控件 <br>
+                               </div>
+                               <div class="span4"><a href="http://www.easybui.com/demo/index.html#pages/ui_controls/bui.listview.html" target="_blank"><img src="http://www.easybui.com/static/images/controls/bui-listview_low.gif" alt="控件预览"/></a></div>
+                             </div>
+                            </div>
+                            
+                                <div class="constructor">
+                                    <h2>Constructor</h2>
+                                    <div id="method_bui.listview" class="method item">
+                                        <h3 class="name"><code>bui.listview</code></h3>
+                                    
+                                            <div class="args">
+                                                <span class="paren">(</span><ul class="args-list inline commas">
+                                                    <li class="arg">
+                                                            <code>option</code>
                                                     </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_close">close</a>
-                        
-                                                    </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_destroy">destroy</a>
-                        
-                                                    </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_init">init</a>
-                        
-                                                    </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_lock">lock</a>
-                        
-                                                    </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_option">option</a>
-                        
-                                                    </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_unlock">unlock</a>
-                        
-                                                    </li>
-                                                    <li class="index-item method">
-                                                        <a href="#method_widget">widget</a>
-                        
-                                                    </li>
-                                            </ul>
+                                                </ul><span class="paren">)</span>
+                                            </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="meta">
+                                                    <p>
+                                                    Defined in
+                                            <a href="../files/src_scripts_ui_bui.listview.js.html#l7"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:7</code></a>
+                                            </p>
+                                    
+                                    
+                                    
                                         </div>
-                        
-                        
-                        
-                                        <div class="index-section events">
-                                            <h3>Events</h3>
-                        
-                                            <ul class="index-list events">
-                                                    <li class="index-item event">
-                                                        <a href="#event_off">off</a>
-                        
+                                    
+                                        <div class="description">
+                                            
+                                        </div>
+                                    
+                                            <div class="params">
+                                                <h4>Parameters:</h4>
+                                    
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">option</code>
+                                                            <span class="type">Object</span>
+                                    
+                                    
+                                                        <div class="param-description">
+                                                             
+                                                        </div>
+                                    
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name">id</code>
+                                                                        <span class="type">String</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>[控件id]</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[uid]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.6.6新增，实例的自定义唯一名字，用于命令式调用</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name">data</code>
+                                                                        <span class="type">Array</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>点击触发侧滑的按钮 例如:[{&quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;}]</p>
+                                    
+                                                                    </div>
+                                    
+                                                                        <ul class="params-list">
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[text]</code>
+                                                                                    <span class="type">String</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                                <div class="param-description">
+                                                                                    菜单的文本
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[classname]</code>
+                                                                                    <span class="type">String</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                                <div class="param-description">
+                                                                                    菜单的样式
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[swipe]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.6.6新增 默认 true(允许滑动) | false</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[template]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5.2新增, 默认null, 模板不满意,可以通过此方法返回新的模板,第一个参数为data的数据</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[handle]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>触发的区域,默认是.bui-btn</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[width]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>listview的宽度,默认:0, 0 为自适应屏幕宽度</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[autoClose]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.6.6 默认 true (滑动时超出屏幕会自动关闭，用于修复手机端bug) | false</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[height]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>listview的高度,默认:0, 0 为自适应内容高度</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[relative]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.6.6新增 默认 false 使用屏幕的宽度 | true 相对父级的宽度</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[menuWidth]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>菜单总宽度,默认:100</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[menuHeight]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>菜单的高度 默认:0 自适应内容高度</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[position]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>菜单侧滑的方向 right | left</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[zoom]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>since 1.3.0 是否采用缩放宽高的方式 默认 false | true</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[mask]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>遮罩 true</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[distance]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>默认80, 拖拽大于distance才会生效,配合delay可以防止listview又有上下其它事件</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[onBeforeInit]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5.1新增 初始化前触发</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[onInited]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5.1新增 初始化以后触发</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>点击的回调</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                            </ul>
                                                     </li>
-                                                    <li class="index-item event">
-                                                        <a href="#event_on">on</a>
-                        
-                                                    </li>
-                                            </ul>
+                                                </ul>
+                                            </div>
+                                    
+                                    
+                                            <div class="example">
+                                                <h4>Example:</h4>
+                                    
+                                                <div class="example-content">
+                                                    <p>html:</p>
+                                    <pre class="code prettyprint"><code>   // 示例结构1: 动态渲染
+                                       
+                                            &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
+                                                  &lt;li&gt;
+                                                      &lt;div class=&quot;bui-btn&quot;&gt;
+                                                          菜单
+                                                      &lt;/div&gt;
+                                                  &lt;/li&gt;
+                                              &lt;/ul&gt;
+                                       // 示例结构2: 禁止渲染
+                                        
+                                            &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
+                                              &lt;!-- 设置status属性可以避免渲染菜单 --&gt;
+                                              &lt;li status=&quot;1&quot;&gt;
+                                                &lt;div class=&quot;bui-btn bui-box&quot;&gt;
+                                                  &lt;div class=&quot;span1&quot;&gt;不渲染&lt;/div&gt;
+                                                  &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;
+                                                &lt;/div&gt;
+                                              &lt;/li&gt;
+                                            &lt;/ul&gt;
+                                       // 示例结构3: 静态渲染,可以允许左右都有按钮, 并且在动态加载的列表的时候, 应该只需要初始化一次
+                                           &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
+                                              &lt;li status=&quot;1&quot;&gt;
+                                                &lt;div class=&quot;bui-btn bui-box&quot; href=&quot;pages/ui_controls/bui.listview.html&quot; param='{&quot;id&quot;:&quot;123&quot;}'&gt;
+                                                  &lt;div class=&quot;span1&quot;&gt;静态渲染-左右菜单&lt;/div&gt;
+                                                  &lt;span class=&quot;bui-badges&quot;&gt;荐&lt;/span&gt;
+                                                  &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;bui-listview-menu swipeleft&quot; data-moving=&quot;240&quot;&gt;
+                                                    &lt;div class=&quot;bui-btn primary&quot;&gt;置顶&lt;/div&gt;
+                                                    &lt;div class=&quot;bui-btn primary&quot;&gt;修改&lt;/div&gt;
+                                                    &lt;div class=&quot;bui-btn danger&quot;&gt;删除&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;bui-listview-menu swiperight&quot;&gt;
+                                                    &lt;div class=&quot;bui-btn primary&quot;&gt;修改&lt;/div&gt;
+                                                    &lt;div class=&quot;bui-btn danger&quot;&gt;删除&lt;/div&gt;
+                                                &lt;/div&gt;
+                                              &lt;/li&gt;
+                                            &lt;/ul&gt;
+                                    </code></pre>
+                                    <p>js:</p>
+                                    <pre class="code prettyprint"><code>      // 初始化
+                                          var uiListview = bui.listview({
+                                                  id: &quot;#listview&quot;,
+                                                  data: [{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;},
+                                                          { &quot;text&quot;: &quot;删除&quot;, &quot;classname&quot;:&quot;btn-red&quot;}],
+                                                  callback: function (e) {
+                                                    var index = $(e.target).text();
+                                                        if( index == &quot;修改&quot; ){
+                                                            //do something
+                                                        }
+                                                        this.close();
+                                                  }
+                                              });
+                                         
+                                          // 自定义模板初始化
+                                          var uiListview = bui.listview({
+                                                  id: &quot;#listview&quot;,
+                                                  data: [{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;},
+                                                          { &quot;text&quot;: &quot;删除&quot;, &quot;classname&quot;:&quot;btn-red&quot;}],
+                                                  callback: function (e) {
+                                                    var index = $(e.target).text();
+                                                        if( index == &quot;修改&quot; ){
+                                                            //do something
+                                                        }
+                                                        this.close();
+                                                  },
+                                                  template: function(data) {
+                                                      var html = '';
+                                                      html += '&lt;div class=&quot;bui-listview-menu swipeleft&quot;&gt;';
+                                                      data &amp;&amp; data.forEach(function(el, i) {
+                                                          html += '&lt;div class=&quot;bui-btn danger&quot;&gt;' + el.text + '&lt;/div&gt;';
+                                                      })
+                                                      html += '&lt;/div&gt;';
+                                                      return html;
+                                                  }
+                                              });
+                                    </code></pre>
+                                    
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                            <div id="classdocs" class="tabview">
+                                <ul class="api-class-tabs">
+                                    <li class="api-class-tab index"><a href="#index">Index</a></li>
+                            
+                                        <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                                        <li class="api-class-tab events"><a href="#events">Events</a></li>
+                                </ul>
+                            
+                                <div>
+                                    <div id="index" class="api-class-tabpanel index">
+                                        <h2 class="off-left">Item Index</h2>
+                            
+                                            <div class="index-section methods">
+                                                <h3>Methods</h3>
+                            
+                                                <ul class="index-list methods">
+                                                        <li class="index-item method">
+                                                            <a href="#method_active">active</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_close">close</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_destroy">destroy</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_init">init</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_lock">lock</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_option">option</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_unlock">unlock</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_widget">widget</a>
+                            
+                                                        </li>
+                                                </ul>
+                                            </div>
+                            
+                            
+                            
+                                            <div class="index-section events">
+                                                <h3>Events</h3>
+                            
+                                                <ul class="index-list events">
+                                                        <li class="index-item event">
+                                                            <a href="#event_off">off</a>
+                            
+                                                        </li>
+                                                        <li class="index-item event">
+                                                            <a href="#event_on">on</a>
+                            
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                            
+                                        <div id="methods" class="api-class-tabpanel">
+                                            <h2 class="off-left">Methods</h2>
+                            
+                                                <div id="method_active" class="method item">
+                                                    <h3 class="name"><code>active</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                        <span class="returns-inline">
+                                                            <span class="type">Object</span>
+                                                        </span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l363"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:363</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.3.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>获取激活对象</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                        <div class="returns">
+                                                            <h4>Returns:</h4>
+                                                
+                                                            <div class="returns-description">
+                                                                        <span class="type">Object</span>:
+                                                                    <p>[ swipe对象 ]</p>
+                                                
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //是否打开
+                                                      var activeUI = uiListview.active();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_close" class="method item">
+                                                    <h3 class="name"><code>close</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l404"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:404</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.3.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>关闭菜单</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       //关闭菜单
+                                                       uiListview.close();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_destroy" class="method item">
+                                                    <h3 class="name"><code>destroy</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[bool]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l462"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:462</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.4.2</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>[销毁控件]</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[bool]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>默认: false 销毁部分 | true 销毁全部</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //销毁
+                                                      uiListview.destroy();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_init" class="method item">
+                                                    <h3 class="name"><code>init</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[option]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l202"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:202</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>初始化方法,用于重新初始化结构,事件只初始化一次</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[option]</code>
+                                                                        <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>参数控件本身</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                </div>
+                                                <div id="method_lock" class="method item">
+                                                    <h3 class="name"><code>lock</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l422"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:422</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.3.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>不允许滑动</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       //关闭菜单
+                                                       uiListview.lock();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_option" class="method item">
+                                                    <h3 class="name"><code>option</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[key]</code>
+                                                                </li>
+                                                                <li class="arg">
+                                                                        <code class="optional">[value]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l511"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:511</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>获取设置参数</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[key]</code>
+                                                                        <span class="type">String | object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[value]</code>
+                                                                        <span class="type">String | number | boolean | function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       //获取所有参数
+                                                        //获取所有参数
+                                                       var option = uiListview.option();
+                                                
+                                                       //获取某个参数
+                                                       var id = uiListview.option( &quot;id&quot; );
+                                                
+                                                       //修改一个参数
+                                                       uiListview.option( &quot;width&quot;,120 );
+                                                
+                                                       //修改多个参数
+                                                       uiListview.option( {&quot;width&quot;:120} );
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_unlock" class="method item">
+                                                    <h3 class="name"><code>unlock</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l442"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:442</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.3.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>允许滑动</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //关闭菜单
+                                                      uiListview.unlock();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_widget" class="method item">
+                                                    <h3 class="name"><code>widget</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[name]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l494"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:494</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>获取依赖的控件</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[name]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>依赖控件名</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       //获取依赖控件
+                                                       var uiListviewWidget = uiListview.widget();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                            
+                            
+                            
+                                        <div id="events" class="api-class-tabpanel">
+                                            <h2 class="off-left">Events</h2>
+                            
+                                                <div id="event_off" class="events item">
+                                                    <h3 class="name"><code>off</code></h3>
+                                                    <span class="type"></span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l559"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:559</code></a>
+                                                        </p>
+                                                
+                                                
+                                                            <p>Available since 1.3.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>为控件取消绑定事件</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Event Payload:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[type]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>事件类型:  &quot;open&quot; | &quot;close&quot;</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>绑定的事件, this 为当前点击的菜单</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       uiListview.off(&quot;lock&quot;);
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="event_on" class="events item">
+                                                    <h3 class="name"><code>on</code></h3>
+                                                    <span class="type"></span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l539"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:539</code></a>
+                                                        </p>
+                                                
+                                                
+                                                            <p>Available since 1.3.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>为控件绑定事件</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Event Payload:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[type]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>事件类型:  &quot;open&quot; | &quot;close&quot;</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>绑定的事件, this 为当前点击的菜单</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>         uiListview.on(&quot;lock&quot;,function () {
+                                                             // 点击的菜单
+                                                             console.log(this);
+                                                         });
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
-                        
-                                    <div id="methods" class="api-class-tabpanel">
-                                        <h2 class="off-left">Methods</h2>
-                        
-                                            <div id="method_active" class="method item">
-                                                <h3 class="name"><code>active</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type">Object</span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l325"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:325</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                        <p>Available since 1.3.0</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>获取激活对象</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                                    <span class="type">Object</span>:
-                                                                <p>[ swipe对象 ]</p>
-                                            
-                                                        </div>
-                                                    </div>
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>      //是否打开
-                                                  var activeUI = uiListview.active();
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="method_close" class="method item">
-                                                <h3 class="name"><code>close</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                    <span class="flag chainable">chainable</span>
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l366"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:366</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                        <p>Available since 1.3.0</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>关闭菜单</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>       //关闭菜单
-                                                   uiListview.close();
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="method_destroy" class="method item">
-                                                <h3 class="name"><code>destroy</code></h3>
-                                            
-                                                    <div class="args">
-                                                        <span class="paren">(</span><ul class="args-list inline commas">
-                                                            <li class="arg">
-                                                                    <code class="optional">[bool] [ 默认: false 销毁部分 | true 销毁全部]</code>
-                                                            </li>
-                                                        </ul><span class="paren">)</span>
-                                                    </div>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l424"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:424</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                        <p>Available since 1.4.2</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>[销毁控件]</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Parameters:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[bool] [ 默认: false 销毁部分 | true 销毁全部]</code>
-                                                                    <span class="type">Boolean</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>      //销毁
-                                                  uiListview.destroy();
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="method_init" class="method item">
-                                                <h3 class="name"><code>init</code></h3>
-                                            
-                                                    <div class="args">
-                                                        <span class="paren">(</span><ul class="args-list inline commas">
-                                                            <li class="arg">
-                                                                    <code class="optional">[option] [参数控件本身]</code>
-                                                            </li>
-                                                        </ul><span class="paren">)</span>
-                                                    </div>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                    <span class="flag chainable">chainable</span>
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l191"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:191</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>初始化方法,用于重新初始化结构,事件只初始化一次</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Parameters:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[option] [参数控件本身]</code>
-                                                                    <span class="type">Object</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                            
-                                            </div>
-                                            <div id="method_lock" class="method item">
-                                                <h3 class="name"><code>lock</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                    <span class="flag chainable">chainable</span>
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l384"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:384</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                        <p>Available since 1.3.0</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>不允许滑动</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>       //关闭菜单
-                                                   uiListview.lock();
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="method_option" class="method item">
-                                                <h3 class="name"><code>option</code></h3>
-                                            
-                                                    <div class="args">
-                                                        <span class="paren">(</span><ul class="args-list inline commas">
-                                                            <li class="arg">
-                                                                    <code class="optional">[key] [ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数]</code>
-                                                            </li>
-                                                            <li class="arg">
-                                                                    <code class="optional">[value] [ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传]</code>
-                                                            </li>
-                                                        </ul><span class="paren">)</span>
-                                                    </div>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                    <span class="flag chainable">chainable</span>
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l471"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:471</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>获取设置参数</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Parameters:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[key] [ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数]</code>
-                                                                    <span class="type">String | object</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[value] [ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传]</code>
-                                                                    <span class="type">String | number | boolean | function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>       //获取所有参数
-                                                    //获取所有参数
-                                                   var option = uiListview.option();
-                                            
-                                                   //获取某个参数
-                                                   var id = uiListview.option( &quot;id&quot; );
-                                            
-                                                   //修改一个参数
-                                                   uiListview.option( &quot;width&quot;,120 );
-                                            
-                                                   //修改多个参数
-                                                   uiListview.option( {&quot;width&quot;:120} );
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="method_unlock" class="method item">
-                                                <h3 class="name"><code>unlock</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                    <span class="flag chainable">chainable</span>
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l404"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:404</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                        <p>Available since 1.3.0</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>允许滑动</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>      //关闭菜单
-                                                  uiListview.unlock();
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="method_widget" class="method item">
-                                                <h3 class="name"><code>widget</code></h3>
-                                            
-                                                    <div class="args">
-                                                        <span class="paren">(</span><ul class="args-list inline commas">
-                                                            <li class="arg">
-                                                                    <code class="optional">[name] [ 依赖控件名]</code>
-                                                            </li>
-                                                        </ul><span class="paren">)</span>
-                                                    </div>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l456"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:456</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>获取依赖的控件</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Parameters:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[name] [ 依赖控件名]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>       //获取依赖控件
-                                                   var uiListviewWidget = uiListview.widget();
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                    </div>
-                        
-                        
-                        
-                                    <div id="events" class="api-class-tabpanel">
-                                        <h2 class="off-left">Events</h2>
-                        
-                                            <div id="event_off" class="events item">
-                                                <h3 class="name"><code>off</code></h3>
-                                                <span class="type"></span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l519"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:519</code></a>
-                                                    </p>
-                                            
-                                            
-                                                        <p>Available since 1.3.0</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>为控件取消绑定事件</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Event Payload:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[type] [ 事件类型:  &quot;open&quot; | &quot;close&quot;]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[callback] [ 绑定的事件, this 为当前点击的菜单]</code>
-                                                                    <span class="type">Function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>       uiListview.off(&quot;lock&quot;);
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div id="event_on" class="events item">
-                                                <h3 class="name"><code>on</code></h3>
-                                                <span class="type"></span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/src_scripts_ui_bui.listview.js.html#l499"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:499</code></a>
-                                                    </p>
-                                            
-                                            
-                                                        <p>Available since 1.3.0</p>
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>为控件绑定事件</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Event Payload:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[type] [ 事件类型:  &quot;open&quot; | &quot;close&quot;]</code>
-                                                                    <span class="type">String</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                            <li class="param">
-                                                                    <code class="param-name optional">[callback] [ 绑定的事件, this 为当前点击的菜单]</code>
-                                                                    <span class="type">Function</span>
-                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                            
-                                                    <div class="example">
-                                                        <h4>Example:</h4>
-                                            
-                                                        <div class="example-content">
-                                                            <pre class="code prettyprint"><code>         uiListview.on(&quot;lock&quot;,function () {
-                                                         // 点击的菜单
-                                                         console.log(this);
-                                                     });
-                                            </code></pre>
-                                            
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                    </div>
                             </div>
                         </div>
                     </div>
@@ -1166,26 +1246,26 @@
             </div>
         </div>
     </div>
-</div>
-<script src="../assets/vendor/prettify/prettify-min.js"></script>
-<script>prettyPrint();</script>
-<script src="../assets/js/yui-prettify.js"></script>
-<script src="../assets/../api.js"></script>
-<script src="../assets/js/api-filter.js"></script>
-<script src="../assets/js/api-list.js"></script>
-<script src="../assets/js/api-search.js"></script>
-<script src="../assets/js/apidocs.js"></script>
-<!-- 百度统计 -->
-<script>
-var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?1e19beda5d47048a31939f0f67d9b1f9";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt=_hmt||[];
+        (function () {
+            var hm=document.createElement("script");
+            var analytics_bd='6781b936303667306495d5d92ad58add';
+            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s=document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
 
 </body>
+
 </html>
