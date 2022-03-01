@@ -2,18 +2,13 @@
 # 表单绑定
 
 
-## 1. 双向绑定
-
-?> `b-model` 仅支持 `input`,`textarea`,`select`3种html标签. 这个行为属性做两件事情. 
-
-- 把字段的值设置在当前input的value; 
-- input输入修改会把value的值赋值给字段. 
+### 1. 双向绑定
 
 !> 注意: input 的type类型必须声明是哪种类型(text,radio,checkbox)等.
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/input" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-### 示例: 
+#### 示例: 
 
 ?> `page.message` 有3个地方用到, `b-model`, `b-text`, `b-click`点击的时候,也会拿到`message`去做处理.
 
@@ -47,7 +42,7 @@ var bs = bui.store({
 </div>
 ```
 
-### 效果预览
+#### 效果预览
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/input" target="_blank">查看效果</a>
 
@@ -58,7 +53,7 @@ var bs = bui.store({
 - 布尔值: 用于多选
 - 数组: 用于多选
 
-## 2. 单选双向
+### 2. 单选双向
 
 ?> `page.sex` 的值是`string`, 会先设置回对应的`value="女"`的input, name的值的sex1 不是必须的, 这个是h5用来对选择进行分组的.  `b-text` 用来输出当前的选中值.
 
@@ -78,7 +73,7 @@ var bs = bui.store({
 性别: <span b-text="page.sex"></span>
 ```
 
-## 3. 多选双向
+### 3. 多选双向
 
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/checkbox" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -103,7 +98,7 @@ var bs = bui.store({
 <div class="section-title">多选: 城市: <span b-text="page.citys"></span></div>
 ```
 
-## 4. 状态联动
+### 4. 状态联动
 
 ?> 当`b-model`的值是布尔值时, 加上`b-show` 可以根据数据的状态来控制当前元素的显示或者隐藏. 
 
@@ -127,11 +122,11 @@ var bs = bui.store({
 
 ```
 
-### 效果预览
+#### 效果预览
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/checkbox" target="_blank">查看效果</a>
 
-## 5. 选择列表
+### 5. 选择列表
 
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/select" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -140,7 +135,7 @@ var bs = bui.store({
 
 
 
-### 单选
+#### 单选
 
 ```js
 var bs = bui.store({
@@ -172,7 +167,7 @@ var bs = bui.store({
 <span>Selected: <b b-text="page.selected"></b></span>
 ```
 
-### 多选
+#### 多选
 
 ?> 只是把选择项变成了数组, 把`select`加多了个属性 `multiple`. 
 
@@ -214,7 +209,7 @@ var bs = bui.store({
 - append   在后面增加数据
 - prepend  在前面增加数据
 
-### 单选联动
+#### 单选联动
 
 ?> 联动的示例,增加了事件绑定, `$index`是内置对象,代表点击当前dom的索引, 有意思的是, 这里为什么是 `$index` 而不是 `i` ? `i` 是每次都从0开始的, 当数据有增删改以后, 索引值是不确定的, 而 `$index` 是根据你当前的dom所在的索引, 这个跟数组的索引是一一对应的. 更多内置对象,请查看[事件绑定章节](store/event.md). 
 
@@ -273,17 +268,21 @@ var bs = bui.store({
 ```
 
 
-### 效果预览
+#### 效果预览
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/select" target="_blank">查看效果</a>
 
-### 多选联动
+#### 多选联动
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 这个例子是一个自定义的模拟select, 我们放在[综合案例](store/case.md)里面讲. 
 
-### 弹窗选择交互
+#### 弹窗选择交互
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/choose" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+### 5.动态表单
+
+<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/form_dynamic" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

@@ -1,0 +1,1 @@
+"use strict";loader.define(function(e,a,i,t){var n=i.props;return n.id="#".concat(i.id," .bui-slide"),n.height=n.height||200,n.autopage=!0,n.data=n.data||[{image:"http://easybui.com/demo/images/banner01.png"},{image:"http://easybui.com/demo/images/banner02.png"}],bui.slide(n)});

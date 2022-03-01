@@ -1,0 +1,1 @@
+"use strict";loader.global(function(t){return{baseurl:"",apiurl:"",storage:bui.storage(),ajax:function(t){return t=$.extend(!0,{headers:{token:"buixxxx"}},t),bui.ajax(t)},hint:function(t){return t=$.extend(!0,{position:"bottom",effect:"fadeInUp"},{content:t}),bui.hint(t)}}});

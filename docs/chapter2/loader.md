@@ -1,10 +1,8 @@
-# 模块化
-
-## 前言
+# 模块
 
 ?> 随着应用的功能逐渐丰富,逻辑的复杂度不断的增加,多人协作等问题, BUI有了自己的模块化方案, 类似`requirejs`的AMD. 熟悉`requirejs`,`seajs`都可以很好的适应过来. 
 
-## 模块化解决什么问题?
+## 模块优点
 
 - 命名冲突
 - 文件依赖
@@ -12,35 +10,29 @@
 - 可维护性
 - 跨页面共享
 
+!> `window.loader` 默认注册给了 `bui.loader`. 关于loader的用法,可以查看 <a href="http://www.easybui.com/demo/api/classes/bui.loader.html" target="_blank">bui.loader API</a>. 
+
 
 ## 定义模块
 
-!> `window.loader` 默认注册给了 `bui.loader`. 关于loader的用法,可以查看 <a href="http://www.easybui.com/demo/api/classes/bui.loader.html" target="_blank">bui.loader API</a>. 
-
 ### loader.define
 
-*loader.define 定义一个匿名模块. *
+*loader.define 定义一个匿名模块.* 
 
 ```js
-loader.define(function(require,exports,module){
+loader.define(function(requires,exports,module,global){
     
     // 以下几个参数非必须,如果前面加载了依赖,则这三个参数后移;
-    // require : 相当于 loader.require, 获取依赖的模块
-    // exports : 如果没有return 可以采用这种方式输出模块
+    // requires : 相当于 loader.require, 获取依赖的模块
     // module : 拿到当前模块信息
+    // global : 定义的全局方法 1.7.x支持
 
-    // 第一次加载会执行一次
-    
+    // 第1次加载会执行一次，第2次加载只获取引用的方法。
+
     // 模块如果需要给其它模块加载,通过 return 的方式抛出来
     return {};
 })
 ```
-*定义模块需要遵循什么?*
-1. 一个js 文件里面只能有一个 `loader.define` 的匿名模块;
-2. 业务逻辑需要在 `loader.define` 里面,防止加载其它模块的时候冲突;
-3. 避免循环依赖 A ->依赖 B 模块, 而 B模块 -> A模块, 这就造成循环依赖,一般需要避免这种设计,如果一定要用, 不使用依赖前置的方式;
-4. 避免循环嵌套自身, 在loader.define 里面 又 require 加载当前模块, 这个时候还没实例化,就会造成死循环;
-5. 作为依赖的模块, 里面不要执行, 应该返回对象给外层调用的方式;
 
 ## 加载模块
 ### loader.require 
@@ -401,5 +393,53 @@ loader.define("page2",function(require,exports,module){
 
 
 
+
+## 组件全局方法
+
+?> `npm run build` 在新的工程执行这个命令以后，js 文件全部变成了闭包，原本你的var 声明的全局变量，变成了局部变量，控制面板会抛出一堆错误. 如果有这个情况，建议及早处理. 在1.6.2版本. 使用 `loader.global()` 来定义全局方法.
+
+例子: 
+
+**js/common.js**
+
+```js
+// 定义全局方法
+loader.global(function(global){
+
+    return {
+      config: {},
+      getDate: function(){
+        console.log("获取日期")
+      }
+    }
+})
+```
+
+?> 全局使用
+
+```js
+bui.ready(function(global){
+
+  // 1.6.x 全局调用
+  loader.global().getDate();
+  
+  // 1.7.x
+  global.getDate();
+})
+```
+
+?> 模块里面调用，新增第4个参数.
+
+```js
+loader.define(function(require,exports,module,global){
+
+  // 全局调用
+  global.getDate();
+})
+```
+
+
+
 模块的定义及加载更多用法，请大家自行查阅  <a href="http://www.easybui.com/docs/index.html?id=api" target="_blank">bui.loader API</a> 
+
 

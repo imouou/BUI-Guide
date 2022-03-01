@@ -1,7 +1,7 @@
 
 # 混入
 
-## 实例分发
+### 实例分发
 ?> 混入`minxins参数` 提供了一种灵活的方式, 把`bui.store`的实例进行划分. 它是一个数组, 数组里面每个对象包含`bui.store`的选项, 实例自身的属性会覆盖`mixins`的相同属性. 
 
 **pages/main/main.js**
@@ -96,7 +96,7 @@ loader.define(function(require,export,module){
 
 !> 通过分发出去的view组件, 最终是合并在一个实例上, 模块之间会按先后顺序覆盖, 没有独立的作用域. 
 
-## 独立作用域
+### 独立作用域
 
 需要独立作用域时, 应该使用的是 `component标签`. 模块里面需要返回一个实例, 而不是普通对象. 
 
@@ -127,7 +127,7 @@ loader.define(function(require,export,module){
 })
 ```
 
-## 案例
+### 案例
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/view" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bui.storage - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+<div id="sidemenu" class="sidebar-menu">菜单</div>
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="BUI" width="30px"></a>
+                <a href="../index.html">BUI</a>
+                </h1>
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="../api/index.html" selected>1.6.x</option><option value="../api-1.5.x/index.html">1.5.x</option><option value="../api-1.4.8/index.html">1.4.x</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.6.x </p>
+            
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div id="sidebar" class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <div id="api-tabview" class="tabview">
+                
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                            </ul>
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/Animate.html">Animate</a></li>
+                                <li><a href="../modules/Core.html">Core</a></li>
+                                <li><a href="../modules/Event.html">Event</a></li>
+                                <li><a href="../modules/Method.html">Method</a></li>
+                                <li><a href="../modules/Native.html">Native</a></li>
+                                <li><a href="../modules/UI.html">UI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>bui.storage Class</h1>
+                        <div class="box meta">
+                        
+                        
+                                <div class="foundat">
+                                    Defined in: <a href="../files/src_scripts_method_bui.storage.js.html#l10"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:10</code></a>
+                                </div>
+                        
+                                    Module: <a href="../modules/Method.html">Method</a>
+                        
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>本地数据存储,支持字符串跟对象存储,注意:取的时候是返回一个数组
+                        <h3>预览地址: <a href="../../index.html#pages/ui_method/bui.storage.html" target="_blank">存字符demo</a> | <a href="../../index.html#pages/ui_method/bui.storage_json.html" target="_blank">存对象demo</a></h3></p>
+                        
+                        </div>
+                        
+                            <div class="constructor">
+                                <h2>Constructor</h2>
+                                <div id="method_bui.storage" class="method item">
+                                    <h3 class="name"><code>bui.storage</code></h3>
+                                
+                                        <div class="args">
+                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                <li class="arg">
+                                                        <code class="optional">[size] [可以是对象,也可以是数字,数字代表存储的数据大小,默认是1]</code>
+                                                </li>
+                                                <li class="arg">
+                                                        <code class="optional">[object.size] [ 存储多少条数据,默认为1 | 0 为不限制]</code>
+                                                </li>
+                                                <li class="arg">
+                                                        <code class="optional">[object.reverse] [ 1.4新增 默认true(最新的数据在后面),false(最新的数据在前面,常用于最近历史记录)]</code>
+                                                </li>
+                                                <li class="arg">
+                                                        <code class="optional">[object.deep] [ 1.5.4新增 默认false || true; 是否采用逐层取值，部分数据在存数据的时候，存的是一个多维数组，那就需要开启为true;]</code>
+                                                </li>
+                                                <li class="arg">
+                                                        <code class="optional">[object.local] [ 默认true 永久存储 | false 临时存储,切换页面则消失]</code>
+                                                </li>
+                                                <li class="arg">
+                                                        <code class="optional">[object.prefix] [ 1.5.5新增, 默认 &quot;&quot; , 用于区分不同数据段,clear才能指定清除]</code>
+                                                </li>
+                                            </ul><span class="paren">)</span>
+                                        </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                    <div class="meta">
+                                                <p>
+                                                Defined in
+                                        <a href="../files/src_scripts_method_bui.storage.js.html#l10"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:10</code></a>
+                                        </p>
+                                
+                                
+                                
+                                    </div>
+                                
+                                    <div class="description">
+                                        
+                                    </div>
+                                
+                                        <div class="params">
+                                            <h4>Parameters:</h4>
+                                
+                                            <ul class="params-list">
+                                                <li class="param">
+                                                        <code class="param-name optional">[size] [可以是对象,也可以是数字,数字代表存储的数据大小,默认是1]</code>
+                                                        <span class="type">Number | Object | Number</span>
+                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                                    <div class="param-description">
+                                                         
+                                                    </div>
+                                
+                                                </li>
+                                                <li class="param">
+                                                        <code class="param-name optional">[object.size] [ 存储多少条数据,默认为1 | 0 为不限制]</code>
+                                                        <span class="type">Number</span>
+                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                                    <div class="param-description">
+                                                         
+                                                    </div>
+                                
+                                                </li>
+                                                <li class="param">
+                                                        <code class="param-name optional">[object.reverse] [ 1.4新增 默认true(最新的数据在后面),false(最新的数据在前面,常用于最近历史记录)]</code>
+                                                        <span class="type">Boolean</span>
+                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                                    <div class="param-description">
+                                                         
+                                                    </div>
+                                
+                                                </li>
+                                                <li class="param">
+                                                        <code class="param-name optional">[object.deep] [ 1.5.4新增 默认false || true; 是否采用逐层取值，部分数据在存数据的时候，存的是一个多维数组，那就需要开启为true;]</code>
+                                                        <span class="type">Boolean</span>
+                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                                    <div class="param-description">
+                                                         
+                                                    </div>
+                                
+                                                </li>
+                                                <li class="param">
+                                                        <code class="param-name optional">[object.local] [ 默认true 永久存储 | false 临时存储,切换页面则消失]</code>
+                                                        <span class="type">Boolean</span>
+                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                                    <div class="param-description">
+                                                         
+                                                    </div>
+                                
+                                                </li>
+                                                <li class="param">
+                                                        <code class="param-name optional">[object.prefix] [ 1.5.5新增, 默认 &quot;&quot; , 用于区分不同数据段,clear才能指定清除]</code>
+                                                        <span class="type">Boolean</span>
+                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                                    <div class="param-description">
+                                                         
+                                                    </div>
+                                
+                                                </li>
+                                            </ul>
+                                        </div>
+                                
+                                
+                                        <div class="example">
+                                            <h4>Example:</h4>
+                                
+                                            <div class="example-content">
+                                                <pre class="code prettyprint"><code>   存储使用示例:
+                                
+                                   // 存储1条数据
+                                   var storage = bui.storage();
+                                       storage.set(&quot;username&quot;,&quot;hello&quot;);
+                                       storage.set(&quot;username&quot;,&quot;bui&quot;);
+                                       // 第2个会覆盖第1个
+                                
+                                  // 获取所有数据
+                                  var data = storage.get(&quot;username&quot;);
+                                  //console.log( data ) [&quot;bui&quot;]
+                                
+                                  // 拿到第一条数据的值
+                                  var val = storage.get(&quot;username&quot;,0);
+                                  //console.log( val ) &quot;bui&quot;
+                                </code></pre>
+                                <p>多条数据存储示例:</p>
+                                <pre class="code prettyprint"><code>   // 保存数据
+                                   var storage = bui.storage(2);
+                                   //存储第1条数据
+                                   storage.set(&quot;userinfo&quot;,{&quot;id&quot;:&quot;n1&quot;,&quot;name&quot;:&quot;hello&quot;},&quot;id&quot;);
+                                   //存储第2条数据
+                                   storage.set(&quot;userinfo&quot;,{&quot;id&quot;:&quot;n2&quot;,&quot;name&quot;:&quot;bui&quot;},&quot;id&quot;);
+                                   //删除1条数据,通过name值比对
+                                   storage.remove(&quot;userinfo&quot;,&quot;hello&quot;,&quot;name&quot;);
+                                   // 获取数据,返回一个数组
+                                   var data = storage.get(&quot;userinfo&quot;);
+                                
+                                    //console.log( data ) [{&quot;id&quot;:&quot;n2&quot;,&quot;name&quot;:&quot;bui&quot;}]
+                                </code></pre>
+                                
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods">
+                                                    <li class="index-item method">
+                                                        <a href="#method_clear">clear</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_get">get</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getAll">getAll</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_remove">remove</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_set">set</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                                            <div id="method_clear" class="method item">
+                                                <h3 class="name"><code>clear</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                    <span class="flag chainable">chainable</span>
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_method_bui.storage.js.html#l313"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:313</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>清空本地存储</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       var storage = bui.storage();
+                                                       storage.clear();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_get" class="method item">
+                                                <h3 class="name"><code>get</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>key</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[value] [获取某一条数据,为数字时是在第几条数据,0为第一条数据]</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>keyname</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">Array</span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_method_bui.storage.js.html#l185"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:185</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取存储的数组,或者某条数据</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">key</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[存储的变量名]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[value] [获取某一条数据,为数字时是在第几条数据,0为第一条数据]</code>
+                                                                    <span class="type">String | Number</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">keyname</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[在某个字段里面]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <span class="type">Array</span>:
+                                                                <p>返回数组或者某条数据或者undefined</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       var storage = bui.storage();
+                                            
+                                                   // 获取数组
+                                                   var data = storage.get(&quot;username&quot;);
+                                                   //console.log( data ) // [&quot;BUI&quot;]
+                                            
+                                                   // 获取数组里的第1条数据,才是自己存进去的内容
+                                                   var data = storage.get(&quot;username&quot;,0);
+                                                   //console.log( data ) // BUI
+                                            
+                                                   // 获取数组里的某条数据在某个字段 本地存储的内容为: [{id:&quot;wangws&quot;,&quot;name&quot;:&quot;Fast&quot;},{id:&quot;oubr&quot;,&quot;name&quot;:&quot;BUI&quot;}]
+                                                   var data = storage.get(&quot;username&quot;,&quot;oubr&quot;,&quot;id&quot;);
+                                                   //console.log( data ) // {id:&quot;oubr&quot;,&quot;name&quot;:&quot;BUI&quot;}
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_getAll" class="method item">
+                                                <h3 class="name"><code>getAll</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>index</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                    <span class="flag chainable">chainable</span>
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_method_bui.storage.js.html#l337"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:337</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                        <p>Available since 1.5.5</p>
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>获取所有本地缓存数据</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">index</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[number] [有prefix参数的时候,支持传索引,返回存进去之前的值, 不传则每个keyname返回一个数组]]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       var storage = bui.storage();
+                                                   var localObj = storage.getAll();
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_remove" class="method item">
+                                                <h3 class="name"><code>remove</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>key</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[value] [ 要删的内容 | 索引(在第几个)]</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[keyname] [ 字段名 | 长度(1.4新增,配合value是数字时使用)]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                    <span class="flag chainable">chainable</span>
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_method_bui.storage.js.html#l244"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:244</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>删除字段的某条信息</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">key</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[存储的变量名]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[value] [ 要删的内容 | 索引(在第几个)]</code>
+                                                                    <span class="type">String | Number</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[keyname] [ 字段名 | 长度(1.4新增,配合value是数字时使用)]</code>
+                                                                    <span class="type">String | Number</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       var storage = bui.storage();
+                                            
+                                                       // 删除第几条数据
+                                                       storage.remove(&quot;username&quot;,0);
+                                            
+                                                       // 删除第1条包含之后的2条数据
+                                                       storage.remove(&quot;username&quot;,1,2);
+                                                       // 删除某条数据
+                                                       storage.remove(&quot;username&quot;,&quot;Fast&quot;);
+                                            
+                                                       // 删除某条数据,通过id比对, 如果存储的对象是JSON
+                                                       storage.remove(&quot;userinfo&quot;,&quot;n1&quot;,&quot;id&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_set" class="method item">
+                                                <h3 class="name"><code>set</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>key</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>value</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code class="optional">[keyname] [存储的数据的比对唯一键值,不传会导致数据重复,size为1 则都会替换]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                    <span class="flag chainable">chainable</span>
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_scripts_method_bui.storage.js.html#l92"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.storage.js:92</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>以数组保存数据,如果数据是一个对象,需要传keyname,防止数据重复增加.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">key</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[存储的变量名]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">value</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>[存储的数据,可以是string,也可以是一个对象]</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[keyname] [存储的数据的比对唯一键值,不传会导致数据重复,size为1 则都会替换]</code>
+                                                                    <span class="type">String</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <pre class="code prettyprint"><code>       var storage = bui.storage();
+                                                       //普通数组无需传字段,不传最后的值默认只存储1条数据
+                                                       storage.set(&quot;username&quot;,&quot;Fast&quot;);
+                                                       //存储对象示例
+                                                       storage.set(&quot;userinfo&quot;,{&quot;id&quot;:&quot;n1&quot;,&quot;name&quot;:&quot;Fast&quot;},&quot;id&quot;);
+                                            </code></pre>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div>
+                        
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1e19beda5d47048a31939f0f67d9b1f9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</body>
+</html>

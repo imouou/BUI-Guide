@@ -3,7 +3,7 @@
 
 ?> 数据改变的时候应该做什么事情, 这是通过行为属性去绑定的.
 
-## 行为属性语法
+### 行为属性语法
 
 | **属性名**             | **语法示例**    | **语法描述**    |
 |:--------------------|:----------------|:-----------------|
@@ -22,8 +22,7 @@
 | b-target  | `<div class="parentDom"><b b-click="page.openDialog" b-target=".parentDom"></b></div>`   | 1.5.2新增 可以控制当前this的指向,这样会影响到 $index $this 等内置值,会在当前往上查找 b-target. 一般用于嵌套的层级过深,找不到父级index使用  |
 | b-src  | `<img b-src="page.imgurl" />`   | 1.5.2新增 动态图片地址 |
 | b-href  | `<a b-href="page.linkurl"></a>`   | 1.5.2新增 动态跳转地址 |
-
-
-!> 注意, `b-`语法属性不能在dom动态修改的时候解析.
-
-?> 行为属性可以让你减少手动操作dom的机会, 但却不是任何时候都应该使用这种属性, 理解什么是需要改变的数据很重要. 比方购物车,购物车的商品的数量改变的时候,需要去重新计算金额,总数量,总金额就可以采用这种绑定, 而像商店名称这些, 应该在整个模板上去处理.
+| b-placeholder  | `<input b-placeholder="page.placeholder"></input>`   | 1.7.0新增 占位文本 |
+| b-title  | `<a b-title="page.title"></a>`   | 1.7.0新增 标题属性 |
+| b-model-lazy  | `<input b-model-lazy="page.size"/>`   | 1.7.0新增 blur失去焦点的时候才会设置值 |
+| b-trigger  | `<input b-model="page.size" b-trigger="page.getSize"/>`   | 1.7.0新增 实时修改的时候触发某个方法 |

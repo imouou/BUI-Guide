@@ -11,6 +11,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "bui.back",
         "bui.btn",
         "bui.checkVersion",
+        "bui.cmd",
         "bui.config",
         "bui.confirm",
         "bui.date",
@@ -62,6 +63,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "bui.tab",
         "bui.timer",
         "bui.toggle",
+        "bui.touch",
         "bui.typeof",
         "bui.unit",
         "bui.upload",
@@ -93,8 +95,7 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Method",
-            "name": "Method",
-            "description": "方法库"
+            "name": "Method"
         },
         {
             "displayName": "Native",

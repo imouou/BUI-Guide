@@ -4,7 +4,7 @@
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/style" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-## 1. Class 绑定 
+### 1. Class 绑定 
 
 ?> `b-class` 绑定支持4种数据格式. 
 
@@ -45,7 +45,7 @@ html:
 <p b-class="page.activeClass" class="tab">activeClass 是一个字符串</p>
 
 ```
-## 2. Style 绑定 
+### 2. Style 绑定 
 
 ?> `b-style` 绑定支持2种数据格式.当绑定的是一个对象时, 可以绑定多个, key值为css的键值, 比方`color`,`display`,`background`,等. 以下例子, `page.styles.color="green"` 或 `page.color = "red"` 都会触发该元素的颜色变更.
 
@@ -76,12 +76,12 @@ html:
 ```
 
 
-### 效果预览:
+#### 效果预览:
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/style" target="_blank">查看效果</a>
 
 
-## 3. 显示与隐藏
+### 3. 显示与隐藏
 
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/checkbox" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -108,6 +108,6 @@ var bs = bui.store({
 
 ```
 
-### 效果预览:
+#### 效果预览:
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/checkbox" target="_blank">查看效果</a>

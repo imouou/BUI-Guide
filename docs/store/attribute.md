@@ -5,7 +5,7 @@
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/attribute" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
-## 1. 属性动态绑定
+### 1. 属性动态绑定
 
 ?> `b-bind` 绑定支持2种数据格式. 并且通过 `bs.title="XXX"` 或者 `bs.attrs.title="xxx"` 可以触发属性的修改. 绑定的字段在 `data` 里面
 
@@ -36,12 +36,12 @@ html:
 
 ```
 
-### 效果预览
+#### 效果预览
 
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/attribute" target="_blank">查看效果</a>
 
-## 2. 值的动态绑定
+### 2. 值的动态绑定
 
 ?> 有三种值的设置, 推荐 `b` 标签作为默认的双向绑定标签. 如果内容元素是块状, 可使用 `div` 标签.
 
@@ -75,7 +75,7 @@ var bs = bui.store({
 
 ```
 
-### 效果预览
+#### 效果预览
 
 
 <iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/set" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -84,7 +84,7 @@ var bs = bui.store({
 
 
 
-## 3. 静态解析
+### 3. 静态解析
 
 ?> 静态解析{{}}里面的值. 默认没有开启, 如果需要, 初始化时设置 `needStatic: true` 才会解析. `templates`定义的模板方法里面不要使用`{{}}` 或者 `b-`开头的模板命令.
 

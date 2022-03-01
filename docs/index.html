@@ -3,14 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BUI 文档</title>
+    <title>BUI 官方文档</title>
     <link rel="icon" href="_media/favicon.ico">
     <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
     <meta name="description" content="A magical documentation generator.">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="static/css/bui.css">
     <link rel="stylesheet" href="static/css/vue.css" title="vue">
+    <link rel="stylesheet" href="static/css/prism-tomorrow.css">
+    <script src="static/js/zepto.js"></script>
+    <script src="static/js/bui.js"></script>
     <style>
         .search {
             background: #f1f1f1;
@@ -48,23 +52,168 @@
                 padding: 20px 20px 10px 10px;
             }
         }
+
+        .markdown-section {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .sidebar-toggle {
+            bottom: auto;
+            top: 64px;
+            background: none;
+        }
+        .sidebar {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -ms-flex-orient: vertical;
+            box-orient: vertical;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        .sidebar-nav{
+            -webkit-box-flex: 1;
+            -ms-flex-flex: 1;
+            box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            overflow-y: auto;
+        }
+        .app-nav.no-badge{
+            position: fixed;
+            background-color: #fff;
+            margin-top: 0;
+            margin-right: 0;
+            padding-right: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 40px;
+        }
+        pre:after {
+            color: #999;
+            left: 0;
+            right: auto;
+        }
+
+        
+        /* 重置bui,影响文档的字体大小 */
+
+        ol, ul, li {
+            list-style: inherit;
+        }
+        html {
+            font-size: inherit;
+            overflow: inherit;
+        }
+        body {
+            overflow: inherit;
+            font-size: inherit;
+            -webkit-user-select: inherit;
+            -khtml-user-select: inherit;
+            -moz-user-select: inherit;
+            -ms-user-select: inherit;
+            user-select: inherit;
+        }
+        .phone {
+            font-size: .3rem;
+            position: relative;
+            overflow: hidden;
+            width: 320px;
+            height: 564px;
+        }
+        .round {
+            -webkit-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+        }
+        ul[class*="bui-"]{
+            padding:0;
+            line-height: inherit;
+        }
+        .bui-fluid-space, .bui-fluid.space {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .bui-list .bui-btn {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .bui-label {
+            width: 150px;
+        }
+        input.bui-input {
+            height: 20px;
+            font-size: 16px;;
+        }
+        .bui-input input ,
+        .bui-input textarea {
+            font-size: 16px;
+        }
+        .bui-input i {
+            font-size: 20px;
+        }
+        .bui-input input[type="text"], .bui-input input[type="password"], .bui-input input[type="number"], .bui-input input[type="search"], .bui-input input[type="tel"], .bui-input input[type="email"] {
+            height: 20px;
+        }
+        .bui-fav,
+        .bui-like,
+        .bui-checkbox,
+        .bui-radio {
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            vertical-align: middle;
+        }
+        .bui-list li input[type=checkbox]{
+            margin: 0;
+        }
+        .bui-list li label {
+            display: inline-block;
+        }
+        input.bui-check {
+            min-height: 30px;
+            line-height: 30px;
+        }
+        .bui-switch-text, .bui-switch {
+            width: 40px;
+            height: 20px;
+            border-radius: 20px;
+        }
+        .bui-switch-text:after, .bui-switch:after {
+            width: 20px;
+            height: 20px;
+        }
+        .bui-switch-text:checked:before, .bui-switch:checked:before {
+            left: -5px;
+        }
+        .bui-switch-text:checked:after, .bui-switch:checked:after {
+            left: 13px;
+            top: 0;
+        }
+        .bui-switch-text {
+            width: 60px;
+        }
+
     </style>
 </head>
 
 <body>
+    
     <div id="app">Loading ...</div>
-    <!-- <script src="//unpkg.com/docsify-plugin-codefund/index.js"></script> -->
-
-    <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
-   -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+    
     <script src="static/js/docsify.min.js"></script>
     <script>
+                    
         window.$docsify = {
             alias: {
                 // 编写插件
@@ -84,7 +233,7 @@
             maxLevel: 4,
             subMaxLevel: 2,
             ga: 'UA-106147152-1',
-            name: 'BUI 文档 1.6.x',
+            name: 'BUI 官方文档 1.7.x',
             search: {
                 noData: {
                     '/': '没有结果!',
@@ -97,8 +246,8 @@
                 }
             },
             pagination: {
-                previousText: '上一节',
-                nextText: '下一节',
+                previousText: '上一章',
+                nextText: '下一章',
             },
             formatUpdated: '{MM}/{DD} {HH}:{mm}',
             plugins: [
@@ -110,7 +259,7 @@
                         return editHtml +
                             html +
                             '\n\n----\n\n' +
-                            '<a href="http://www.easybui.com" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">&copy; 2017-2020 easybui.com Powered by docsify</a>'
+                            '<a href="http://www.easybui.com" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">&copy; 2017-2022 easybui.com Powered by docsify</a>'
                     })
                 }
             ]

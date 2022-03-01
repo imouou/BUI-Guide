@@ -1,15 +1,15 @@
 # 常用方法
 
-## 生成唯一ID
-### bui.guid() 
+### 生成唯一ID
+#### bui.guid() 
 
 *例子:*
 ```js
 var gid = bui.guid();
 ```
 
-## 类型检测
-### bui.typeof(str) 
+### 类型检测
+#### bui.typeof(str) 
 - 返回字符串,全部是小写.
 
 ?> 弥补typeof 无法检测是否是索引对象的问题, null 本身也会返回 object. 
@@ -30,8 +30,8 @@ var undefinedStr = bui.typeof(undefined);
 
 ```
 
-## 平台检测
-### bui.platform 
+### 平台检测
+#### bui.platform 
 
 ?> 通过 `navigator.userAgent` 判断当前的平台类型. 方法名采用驼峰氏命名.
 
@@ -49,8 +49,8 @@ var undefinedStr = bui.typeof(undefined);
     bui.platform.isWindow();
 ```
 
-## 版本检查
-### bui.checkVersion(option) 
+### 版本检查
+#### bui.checkVersion(option) 
 
 ?> 这个方法会绑定ID按钮的点击,并且第一次会请求到如果有新版本的时候,会在按钮旁边增加个红点, 如果按钮里面还有图标`icon`,则红点会增加在图标上. 
 
@@ -80,12 +80,12 @@ bui.checkVersion({
 ```
 
 
-## 数组操作
+### 数组操作
 ?> 常见的数组比对,去重,复制,过滤,移除 等.
 
 !> <del>1.5.2 以下, 第1个参数为要比对的值,第2个参数为数组. </del> 1.5.2 以上,第1个参数统一为数组, 第2个参数为比对的值, 1.5.2有向下兼容, 但建议全部统一数组在前.
 
-### bui.array.index(arr,name,key)
+#### bui.array.index(arr,name,key)
 
 ?> 返回存在的第1个索引,支持普通数组及JSON数组
 
@@ -103,7 +103,7 @@ var index = bui.array.index( arr, "bui", "value" );
 // console.log(index) //结果: 1 
 ```
 
-### bui.array.indexs(arr,name,key)
+#### bui.array.indexs(arr,name,key)
 
 ?> 返回存在的所有索引,支持普通数组及JSON数组
 
@@ -121,7 +121,7 @@ var index = bui.array.indexs( arr,"bui", "value" );
 // console.log(index) //结果: [1]
 ```
 
-### bui.array.compare(arr,name,key)
+#### bui.array.compare(arr,name,key)
 
 ?> 检测是否存在
 
@@ -139,7 +139,7 @@ var index = bui.array.compare( arr, "bui", "value" );
 // console.log(index) //结果: 1 
 ```
 
-### bui.array.remove(arr,name,key)
+#### bui.array.remove(arr,name,key)
 
 ?> 删除数组里的某个值,返回一个新数组
 
@@ -158,7 +158,7 @@ var newArr = bui.array.remove( arr, "bui", "value" );
 ```
 
 
-### bui.array.uniq(arr,name,key)
+#### bui.array.uniq(arr,name,key)
 
 ?> 去除重复的值
 
@@ -176,7 +176,7 @@ var newArr = bui.array.excess( arr, "bui", "value" );
 // console.log(newArr) //结果: [{ "id":1,value:"hello"},{ "id":2,value:"bui"}] 
 ```
 
-### bui.array.filter(arr,name,key)
+#### bui.array.filter(arr,name,key)
 
 ?> 筛选数组,可以用于搜索关键字的检测
 
@@ -195,7 +195,7 @@ var newArr = bui.array.filter( arr,"bui", "value" );
 ```
 
 
-### bui.array.copy(arr,from,length)
+#### bui.array.copy(arr,from,length)
 
 ?> 复制数组或某一部分, from 从第几个开始复制, 默认:0; length 不传则到数组的最后,否则以自身开始算起
 
@@ -212,22 +212,22 @@ var newArr2 = bui.array.copy( arr, 1,2 );
 ```
 
 
-## 打电话
-### bui.unit.tel
+### 打电话
+#### bui.unit.tel
 *例子:*
 ```js
 bui.unit.tel("10086");
 ```
 
-## 发短信
-### bui.unit.sms
+### 发短信
+#### bui.unit.sms
 *例子:*
 ```js
 bui.unit.sms("10086","CZMM");
 ```
 
-## 发邮件
-### bui.unit.mailto
+### 发邮件
+#### bui.unit.mailto
 *例子:*
 ```js
 bui.unit.mailto({
@@ -238,25 +238,25 @@ bui.unit.mailto({
 });
 ```
 
-## rem转换成px
-### bui.unit.remToPx
+### rem转换成px
+#### bui.unit.remToPx
 *例子: 按当前手机的比例转换的rem值 *
 ```js
 bui.unit.remToPx("2");
 
 ```
 
-## px转换成rem
-### bui.unit.pxToRem
+### px转换成rem
+#### bui.unit.pxToRem
 *例子: 按当前手机的比例转换的px值 *
 ```js
 bui.unit.pxToRem("200");
 
 ```
 
-## 日期处理
+### 日期处理
 bui版本 1.6.0 以上
-### bui.date.format
+#### bui.date.format
 日期格式化, 兼容IOS的日期格式转换
 
 例子:
@@ -269,7 +269,7 @@ bui版本 1.6.0 以上
        // 03/20
 ```
 
-### bui.date.convert
+#### bui.date.convert
 转日期对象
 
 例子:
@@ -279,7 +279,7 @@ bui版本 1.6.0 以上
  // 2020
 ```
 
-### bui.date.toWeek
+#### bui.date.toWeek
 某个日期为星期几, 或者周几
 
 例子:
@@ -291,7 +291,7 @@ var week = bui.date.toWeek("2020-3-20",1);
 ```
 
 
-### bui.date.after
+#### bui.date.after
 某个日期后多少天
 
 例子:
@@ -300,7 +300,7 @@ var date = bui.date.after("2020-3-20",5);
     // 2020-3-25
 ```
 
-### bui.date.afterTime
+#### bui.date.afterTime
 某个日期后多少天
 
 例子:
