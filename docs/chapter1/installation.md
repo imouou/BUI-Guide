@@ -58,12 +58,12 @@ npm run dev
 
 第3种, 如果使用es5开发, 无需工程化, 把src 目录放在 IIS 或者 phpstudy 之类的服务器, 运行就能直接观看效果, 单页工程打开空白需要解决浏览器跨域问题, [Chrome跨域调试](chapter1/debug.md).
 
-## 编译sass或less
-需要先安装 [buijs](https://github.com/imouou/buijs-cli), 1.6.x工程, 默认已经去掉对sass的支持, 需要自己选择创建. 
+## 编译less
+需要先安装 [buijs](https://github.com/imouou/buijs-cli)
 
 ```bash
-# 新增sass, 需要重新安装依赖
-buijs create -p sass
 # 新增less, 无需重新安装依赖
 buijs create -p less
 ```
+
+也可以手动创建 less目录，里面有一个 style.less 文件，工程默认会自动编译为 css/style.css 文件.

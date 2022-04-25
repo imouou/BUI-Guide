@@ -62,4 +62,4 @@ loader.define(function(require, exports, module, global) {
 
 修改浏览器的地址 `index.html#main` 为 `index.html#pages/article/article` 就可以直接预览效果
 
-<img src="../static/images/template/article.jpg" width="320px">
+![预览图](../static/images/template/article.jpg)

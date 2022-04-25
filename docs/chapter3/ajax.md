@@ -113,4 +113,4 @@ loader.define(function(require, exports, module, global) {
 
 ## 效果预览
 
-<img src="../static/images/template/list.png" width="320">
+![预览图](../static/images/template/list.png)

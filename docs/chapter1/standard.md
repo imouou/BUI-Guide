@@ -117,7 +117,7 @@ loader.define(function(requires,exports,module,global){
 
 ### 6. 事件绑定
 
-?> 单页开发里面很容易造成事件重复绑定, 模块、组件里面`$` 选择器要改成 `router.$` 或 `module.$` 选择器.
+?> 单页开发里面很容易造成事件重复绑定, 模块、组件里面`$`（全局选择器） 选择器要改成 `router.$`（单页选择器） 或 `bui.$`(兼容单页多页) 选择器.
 
 ```js
 
@@ -128,6 +128,11 @@ $(".bui-page").click(function(e){
 
 // 应该使用
 router.$(".bui-page").click(function(e){
+  console.log("点击了页面")
+})
+
+// 如果使用组件，不确定在单页多页使用，可以使用 bui.$
+bui.$(".bui-page").click(function(e){
   console.log("点击了页面")
 })
 

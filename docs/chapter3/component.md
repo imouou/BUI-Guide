@@ -136,6 +136,6 @@ loader.define(async function(require, exports, module, global){
 
 修改浏览器的地址 `index.html#main` 为 `index.html#pages/components/slide/slide` 就可以直接预览效果
 
-<img src="../static/images/template/main.jpg" width="320"/>
+![预览图](../static/images/template/main.jpg)
 
 图片为整个页面的预览效果

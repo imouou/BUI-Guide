@@ -1129,7 +1129,7 @@ kbd .cmd {
 }
 
 #sidebar {
-    background: #f3f5f7;
+    background: none;
 }
 
 .sidebar {
@@ -1149,9 +1149,14 @@ kbd .cmd {
 
 #api-tabview-filter,
 #api-tabview-panel {
-    background: #f3f5f7;
     border: 0;
     padding: 0;
+}
+
+#api-tabview-filter{
+    -webkit-border-radius: 40px;
+    -ms-border-radius: 40px;
+    border-radius: 40px;
 }
 
 #api-tabview-panel ul li {
@@ -1236,12 +1241,14 @@ kbd .cmd {
 
 #api-tabview-filter input[type=search] {
     -webkit-appearance: none;
-    border-radius: 0;
     width: 100%;
     padding: 10px;
     font-size: 14px;
     outline: none;
-    border: 1px solid #e8ebef;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 40px;
+    -ms-border-radius: 40px;
+    border-radius: 40px;
 }
 
 #api-tabview-panel ul li.message {
@@ -1297,9 +1304,11 @@ h6 {
 }
 
 #api-tabview {
-    border: 1px solid #e8ebef;
+    border-right: 1px solid #e8ebef;
     border-top: 0;
+    padding-top: 20px;
 }
+
 
 .apidocs .item .name {
     font-size: 18px;
@@ -1804,6 +1813,48 @@ h6 {
     display: none;
 }
 
+#api-tabview-panel ul li a {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+}
+#bd > .yui3-u-1-4 {
+    width: 300px;
+}
+#bd>.yui3-u-3-4 {
+    margin-left: 300px;
+}
+
+#api-tabview-panel ul li a {
+    color: #505d6b;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 0;
+    border-right: 2px solid #fff;
+    margin: 0;
+}
+
+#api-tabview-panel ul li a:focus, #api-tabview-panel ul li a:hover {
+    border: 0;
+    margin: 0;
+    color: #42b983;
+    background: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    border-right: 2px solid #42b983;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 0;
+
+}
+
+
+
 @media screen and (max-width: 1000px) {
     #doc {
         min-width: 100%;
@@ -1887,7 +1938,10 @@ h6 {
     }
     #api-filter {
         font-size: 16px;
-        border: 1px solid #e8ebef;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 40px;
+        -ms-border-radius: 40px;
+        border-radius: 40px;
         padding: 10px;
         width: 100%;
     }
@@ -1997,4 +2051,21 @@ h6 {
     #docs-main {
         padding: 0 10px;
     }
+
+    #bd > .yui3-u-1-4 {
+        width: 100%;
+    }
+
+    #bd > .yui3-u-3-4 {
+        width: 100%;
+        margin-left: 0;
+    }
 }
+
+/* tabview */
+
+/* YUI 3.9.1 (build 5852) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+.yui3-widget-hidden{display:none}.yui3-widget-content{overflow:hidden}.yui3-widget-content-expanded{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;height:100%}.yui3-widget-tmp-forcesize{overflow:hidden!important}#yui3-css-stamp.skin-sam-widget-base{display:none}
+/* YUI 3.9.1 (build 5852) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+.yui3-tab-panel{display:none}.yui3-tab-panel-selected{display:block}.yui3-tabview-list,.yui3-tab{margin:0;padding:0;list-style:none}.yui3-tabview{position:relative}.yui3-tabview,.yui3-tabview-list,.yui3-tabview-panel,.yui3-tab,.yui3-tab-panel{zoom:1}.yui3-tab{display:inline-block;*display:inline;vertical-align:bottom;cursor:pointer}.yui3-tab-label{display:block;display:inline-block;padding:6px 10px;position:relative;text-decoration:none;vertical-align:bottom}.yui3-skin-sam .yui3-tabview-list{border:solid #2647a0;border-width:0 0 5px;zoom:1}.yui3-skin-sam .yui3-tab{margin:0 .2em 0 0;padding:1px 0 0;zoom:1}.yui3-skin-sam .yui3-tab-selected{margin-bottom:-1px}.yui3-skin-sam .yui3-tab-label{background:#d8d8d8 url(http://yui.yahooapis.com/3.9.1/build/assets/skins/sam/sprite.png) repeat-x;border:solid #a3a3a3;border-width:1px 1px 0 1px;color:#000;cursor:pointer;font-size:85%;padding:.3em .75em;text-decoration:none}.yui3-skin-sam .yui3-tab-label:hover,.yui3-skin-sam .yui3-tab-label:focus{background:#bfdaff url(http://yui.yahooapis.com/3.9.1/build/assets/skins/sam/sprite.png) repeat-x left -1300px;outline:0}.yui3-skin-sam .yui3-tab-selected .yui3-tab-label,.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:focus,.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:hover{background:#2647a0 url(http://yui.yahooapis.com/3.9.1/build/assets/skins/sam/sprite.png) repeat-x left -1400px;color:#fff}.yui3-skin-sam .yui3-tab-selected .yui3-tab-label{padding:.4em .75em}.yui3-skin-sam .yui3-tab-selected .yui3-tab-label{border-color:#243356}.yui3-skin-sam .yui3-tabview-panel{background:#edf5ff}.yui3-skin-sam .yui3-tabview-panel{border:1px solid #808080;border-top-color:#243356;padding:.25em .5em}#yui3-css-stamp.skin-sam-tabview{display:none}
+    
