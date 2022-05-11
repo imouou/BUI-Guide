@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bui.slide</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+<div id="sidemenu" class="sidebar-menu">菜单</div>
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="" width="30px"></a>
+                <a href="../index.html">BUI</a>
+                
+                </h1>
+            
+            <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value"><option value="/demo/api/index.html">1.5.0</option><option value="/demo/api-1.4.8/index.html" selected>1.4.8</option></select></p>
+            <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI 1.4.8 </p>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div id="sidebar" class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <div id="api-tabview" class="tabview">
+
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+            
+                <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+            
+                <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+            
+                <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+            
+                <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+            
+                <li><a href="../classes/bui.array.html">bui.array</a></li>
+            
+                <li><a href="../classes/bui.back.html">bui.back</a></li>
+            
+                <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+            
+                <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+            
+                <li><a href="../classes/bui.config.html">bui.config</a></li>
+            
+                <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+            
+                <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+            
+                <li><a href="../classes/bui.download.html">bui.download</a></li>
+            
+                <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+            
+                <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+            
+                <li><a href="../classes/bui.file.html">bui.file</a></li>
+            
+                <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+            
+                <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+            
+                <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+            
+                <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+            
+                <li><a href="../classes/bui.init.html">bui.init</a></li>
+            
+                <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+            
+                <li><a href="../classes/bui.list.html">bui.list</a></li>
+            
+                <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+            
+                <li><a href="../classes/bui.load.html">bui.load</a></li>
+            
+                <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+            
+                <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+            
+                <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+            
+                <li><a href="../classes/bui.number.html">bui.number</a></li>
+            
+                <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+            
+                <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+            
+                <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+            
+                <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+            
+                <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+            
+                <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+            
+                <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+            
+                <li><a href="../classes/bui.router.html">bui.router</a></li>
+            
+                <li><a href="../classes/bui.run.html">bui.run</a></li>
+            
+                <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+            
+                <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+            
+                <li><a href="../classes/bui.select.html">bui.select</a></li>
+            
+                <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+            
+                <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+            
+                <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+            
+                <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+            
+                <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+            
+                <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+            
+                <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+            
+                <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+            
+                <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+            
+                <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+            
+                <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Animate.html">Animate</a></li>
+            
+                <li><a href="../modules/Core.html">Core</a></li>
+            
+                <li><a href="../modules/Event.html">Event</a></li>
+            
+                <li><a href="../modules/Method.html">Method</a></li>
+            
+                <li><a href="../modules/Native.html">Native</a></li>
+            
+                <li><a href="../modules/UI.html">UI</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+ 
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>bui.slide Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l7"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:7</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/UI.html">UI</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <div class="oui-fluid">
+  <div class="span8">
+    <h2>滑动控件</h2>
+    <p>滑动控件比较灵活,对参数要了解得更多一点,可以用来制作: <a href="../../index.html#pages/ui_controls/bui.slide.html" target="_blank">焦点图</a>,<a href="../../index.html#pages/ui_controls/bui.slide_tab.html" target="_blank">TAB选项卡</a>,全屏相册,上下滑屏,过滤筛选,层级选择器,滚动公告,等等</p>
+    <p><strong>1.4,新增自动加载远程地址参数,配合href使用</strong></p>
+    <h3>预览地址: <a href="../../index.html#pages/ui_controls/bui.slide.html" target="_blank">demo</a></h3>
+    <h3>方法说明:</h3>
+<a href="../classes/bui.slide.html#method_start" class="crosslink">start</a>: 自动播放<br>
+<a href="../classes/bui.slide.html#method_stop" class="crosslink">stop</a>: 停止自动播放 <br>
+<a href="../classes/bui.slide.html#method_lock" class="crosslink">lock</a>: 不允许滑动 <br>
+<a href="../classes/bui.slide.html#method_unlock" class="crosslink">unlock</a>: 允许滑动 <br>
+<a href="../classes/bui.slide.html#method_prev" class="crosslink">prev</a>: 是否存在,返回index <br>
+<a href="../classes/bui.slide.html#method_next" class="crosslink">next</a>: 是否存在,返回boolean <br>
+<a href="../classes/bui.slide.html#method_to" class="crosslink">to</a>: 跳转到指定的 某一个slide <br>
+<a href="../classes/bui.slide.html#method_load" class="crosslink">load</a>: 加载远程地址模板 <br>
+<a href="../classes/bui.slide.html#method_option" class="crosslink">option</a>: 获取设置参数 <br>
+<a href="../classes/bui.slide.html#method_widget" class="crosslink">widget</a>: 获取依赖控件 <br>
+  </div>
+  <div class="span4"><a href="../../index.html#pages/ui_controls/bui.slide.html" target="_blank"><img src="http://www.easybui.com/static/images/controls/bui-slide_low.gif" alt="控件预览"/></a></div>
+</div>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_bui.slide" class="method item">
+    <h3 class="name"><code>bui.slide</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>option</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l7"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:7</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">option</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">id</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[控件id]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[menu]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认&quot;.bui-slide-head ul&quot; (循环元素的父级), 如果控制菜单要独立,可以使用id选择器]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[children]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认&quot;.bui-slide-main ul&quot; (循环元素的父级), 如果控制内容要独立,可以使用id选择器, slide嵌套必须使用id ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[stopHandle]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于slide里面的某个样式,不触发滑动,一般用于事件冲突,比方 input[type=range] 无法滑动的时候 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[width]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[0 为默认屏幕宽度]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[height]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[0 为默认屏幕高度,会计算剩余的高度]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[index]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认:0 ,第一次加载第几个 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[direction]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 水平滑动还是纵向滑动 默认: x | y ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[alignClassName]</code>
+                                    <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ since 1.3.4 默认是&quot;&quot;,全屏默认是:&quot;bui-box-center&quot;, 每个li的盒子对齐样式名,主要用于全屏时的内容对齐,自带几种对齐方式 左:bui-box-align-left 水平中:bui-box-align-right 右:bui-box-align-center 上:bui-box-align-top 垂直中:bui-box-align-middle 下:bui-box-align-bottom  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[swipe]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否允许侧滑,默认允许 true | false ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[animate]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 点击菜单跳转到某个位置是否采用动画 默认: true | false ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[scroll]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否允许垂直滚动 false | true , 如果单独需要滚动 可以给滑动的li的属性加上 data-scroll=true ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[fullscreen]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否全屏 默认:false | true ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[autopage]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否自动分页 默认:false | true; true时自动生成 bui-slide-head结构 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[autoplay]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 是否自动播放 默认:false | true ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[autoheight]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4.3新增, 自动高度,由内容撑开 默认:false | true ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[zoom]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 保持比例缩放 默认 true | false]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[transition]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ transform效果持续时间 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[interval]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 自动运行间隔 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[visibleNum]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4.5新增, 可视个数,默认为1 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[scrollNum]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4.5新增, 一次滚动个数,默认为1 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[bufferEffect]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.3.0 新增的参数, 在第1页跟最后1页是否还可以继续拖动, 默认不允许: false | true  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[distance]</code>
+                                    <span class="type">Number</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 默认80, 拖拽大于distance才会生效,配合delay可以防止slide又有上下其它事件 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[callback]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 点击的回调 1.3.0 以后不再推荐,自行绑定就可 ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[autoload]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 1.4新增 默认: false | true 远程加载菜单按钮上的 href 地址, 如果点击的按钮有disabled属性或者样式,则不跳转]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>  html:</p>
+<pre class="code prettyprint"><code>     &lt;div id=&quot;slide&quot; class=&quot;bui-slide&quot;&gt;
+       &lt;div id=&quot;slidemain&quot; class=&quot;bui-slide-main&quot;&gt;
+         &lt;ul&gt;
+           &lt;li&gt;
+             &lt;img src=&quot;../images/slideshow.png&quot; alt=&quot;&quot;&gt;
+             &lt;div class=&quot;bui-slide-title&quot;&gt;我是图片标题1&lt;/div&gt;
+           &lt;/li&gt;
+         &lt;/ul&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;bui-slide-head&quot;&gt;
+         &lt;ul &gt;
+           &lt;li&gt;1&lt;/li&gt;
+         &lt;/ul&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;</code></pre>
+<p>  js: </p>
+<pre class="code prettyprint"><code>     // 初始化
+     var uiSlide = new bui.slide({
+                 id:&quot;#slide&quot;,
+                 height:160
+               })</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_index">index</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_init">init</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_load">load</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_lock">lock</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_next">next</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_option">option</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_prev">prev</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_start">start</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_stop">stop</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_to">to</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_unlock">unlock</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_widget">widget</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events">
+                        
+                            <li class="index-item event">
+                                <a href="#event_off">off</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_on">on</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_destroy" class="method item">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[bool]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1308"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1308</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.2</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[销毁控件]</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[bool]</code>
+                        <span class="type">Boolean</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 默认: false 销毁部分 | true 销毁全部   ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //销毁
+       uiSlide.destroy();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_index" class="method item">
+    <h3 class="name"><code>index</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l986"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:986</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当前索引</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       var index = uiSlide.index();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_init" class="method item">
+    <h3 class="name"><code>init</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[option]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l219"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:219</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>初始化方法,用于重新初始化结构,事件只初始化一次</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[option]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[参数控件本身]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_load" class="method item">
+    <h3 class="name"><code>load</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[option]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1180"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1180</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <div class="oui-fluid">
+  <div class="span12">
+    <h2>动态加载页面,模拟路由</h2>
+    <p>由于多页开发,后退不能刷新页面,所以便有这个slide来模拟简单的路由加载, 用于跟多页配合</p>
+    <h3>预览地址: <a href="../../index.html#pages/ui_controls/bui.slide_tab_router.html" target="_blank">demo</a></h3>
+  </div>
+</div>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[option]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 页面跳转的地址  ]</p>
+
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name">url</code>
+                                    <span class="type">String</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 页面跳转的地址  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[id]</code>
+                                    <span class="type">Object</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 页面结果加载到的地方,可选,默认是下一个  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[preload]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 预加载,默认: false 自动跳转到加载的页面 | true, 则不跳转  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[success]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 成功回调  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[fail]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>[ 失败回调  ]</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiTab.load({
+         url: &quot;bui.slide_tab_router_page1.html&quot;
+       })</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_lock" class="method item">
+    <h3 class="name"><code>lock</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1052"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1052</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不允许拖拽</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiSlide.lock();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_next" class="method item">
+    <h3 class="name"><code>next</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1020"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1020</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>下一个</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiSlide.next();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_option" class="method item">
+    <h3 class="name"><code>option</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[key]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[value]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1355"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1355</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取设置参数</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[key]</code>
+                        <span class="type">String | object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[value]</code>
+                        <span class="type">String | number | boolean | function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取所有参数
+        //获取所有参数
+       var option = uiSlide.option();
+
+       //获取某个参数
+       var id = uiSlide.option( &quot;id&quot; );
+
+       //修改一个参数
+       uiSlide.option( &quot;autoplay&quot;,false );
+
+       //修改多个参数
+       uiSlide.option( {&quot;autoplay&quot;:false} );</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_prev" class="method item">
+    <h3 class="name"><code>prev</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1000"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1000</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>上一个</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiSlide.prev();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_start" class="method item">
+    <h3 class="name"><code>start</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>time</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l971"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:971</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>自动播放</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">time</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[重新设置循环时间]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //自动播放
+       uiSlide.start();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_stop" class="method item">
+    <h3 class="name"><code>stop</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l943"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:943</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>停止自动播放</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //自动播放
+       uiSlide.stop();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_to" class="method item">
+    <h3 class="name"><code>to</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[transition]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l845"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:845</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>跳到第几个</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[索引,从0开始]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[transition]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[  &quot;all 300ms&quot;(不传则默认) | &quot;none&quot;(不要动画) | &quot;all 300ms ease-out&quot; (可以加上缓冲效果)]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //跳到第2个
+       uiSlide.to(1);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_unlock" class="method item">
+    <h3 class="name"><code>unlock</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag chainable">chainable</span>
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1077"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1077</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>允许拖拽</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiSlide.unlock();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_widget" class="method item">
+    <h3 class="name"><code>widget</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[name]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1340"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1340</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>获取依赖的控件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[name]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 依赖控件名 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       //获取依赖控件
+       var uiSlideWidget = uiSlide.widget();</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_off" class="events item">
+    <h3 class="name"><code>off</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1403"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1403</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为控件取消绑定事件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[type]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 事件类型: &quot;play&quot;(播放的时候触发) |&quot;stop&quot;(停止的时候触发) |&quot;first&quot;(在第一个往左边操作的时候触发) | &quot;last&quot;(在最后一个往右边操作的时候触发) | &quot;to&quot;(每次跳转后触发,除了第1次不触发) | &quot;load&quot;(自动加载远程页面 1.4)  ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 绑定的事件, this 为当前点击的菜单 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiSlide.off(&quot;lock&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="event_on" class="events item">
+    <h3 class="name"><code>on</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_wilson_personal_htdocs_opensource_BUI 1.4.7_src_lib_ui_bui.slide.js.html#l1383"><code>&#x2F;Users&#x2F;wilson&#x2F;personal&#x2F;htdocs&#x2F;opensource&#x2F;BUI 1.4.7&#x2F;src&#x2F;lib&#x2F;ui&#x2F;bui.slide.js:1383</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为控件绑定事件</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[type]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 事件类型: &quot;play&quot;(播放的时候触发) |&quot;stop&quot;(停止的时候触发) |&quot;first&quot;(在第一个往左边操作的时候触发) | &quot;last&quot;(在最后一个往右边操作的时候触发) | &quot;to&quot;(每次跳转后触发,除了第1次不触发) | &quot;load&quot;(自动加载远程页面  1.4) ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[callback]</code>
+                        <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[ 绑定的事件, this 为当前点击的菜单 ]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>       uiSlide.on(&quot;lock&quot;,function () {
+           // 点击的菜单
+           console.log(this);
+       });</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?50f5631d37bf0ccb2034e80da6eb2972";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>

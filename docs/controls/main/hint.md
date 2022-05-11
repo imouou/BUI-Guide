@@ -1,6 +1,6 @@
 # 自动消失提醒框
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.hint.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.hint.html)
 
 ?> 可以控制不同位置,并且可以不自动消失
 

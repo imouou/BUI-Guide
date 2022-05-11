@@ -1,6 +1,6 @@
 # 抽屉菜单
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.swipe.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.swipe.html)
 
 ?> 滑动效果请扫码在手机观看.
 

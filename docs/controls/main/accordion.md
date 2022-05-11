@@ -1,6 +1,6 @@
 # 折叠菜单
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.accordion.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.accordion.html)
 
 ## 示例
 
