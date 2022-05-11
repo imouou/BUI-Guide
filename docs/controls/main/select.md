@@ -1,6 +1,6 @@
 # 选择列表
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.select.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.select.html)
 
 ?> 支持单选,多选,图标选择,以及自定义结构
 

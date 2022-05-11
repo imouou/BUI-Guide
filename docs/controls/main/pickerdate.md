@@ -1,11 +1,10 @@
 # 日期选择
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.pickerdate.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.pickerdate.html)
 
 ?> 滑动效果请扫码在手机观看.
 
 <iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.pickerdate&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
 
 ## 显示日期
 

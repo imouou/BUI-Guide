@@ -31,8 +31,10 @@
 // 定义一个模块
 loader.define(function(requires,exports,module,global){
     
-    // 通过 module.$ 绑定可以防止组件被重复加载导致重复绑定问题
-    let $btn = module.$(".bui-btn");
+    // 通过 module.id 绑定可以防止组件被重复加载导致重复绑定问题
+    let mid = module.id;
+    let $module = bui.$(`#${mid}`);
+    let $btn = $module.find(".bui-btn");
     
     // 通过对象来描述组件的信息，便于维护
     const pageview = {
@@ -127,8 +129,10 @@ loader.define(function(requires,exports,module,global){
   // 1.7.x
   let params = module.props;
 
-  // 通过 module.$ 绑定可以防止组件被重复加载导致重复绑定问题
-  let $btn = module.$(".bui-btn");
+  // 通过 module.id 绑定可以防止组件被重复加载导致重复绑定问题
+  let mid = module.id;
+  let $module = bui.$(`#${mid}`);
+  let $btn = $module.find(".bui-btn");
     
   // 通过对象来描述组件的信息，便于维护
   const pageview = {

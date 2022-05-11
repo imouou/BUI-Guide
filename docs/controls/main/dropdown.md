@@ -1,6 +1,6 @@
 # 下拉菜单
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.dropdown.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.dropdown.html)
 
 ## 普通下拉菜单
 

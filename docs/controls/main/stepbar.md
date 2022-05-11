@@ -1,6 +1,6 @@
 # 步骤条
 
-[查看API](http://www.easybui.com/demo/api/classes/bui.stepbar.html)
+[查看 API](http://www.easybui.com/guide/api/classes/bui.stepbar.html)
 
 ## 纵向步骤条
 

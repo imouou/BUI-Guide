@@ -64,7 +64,7 @@ uiStorage.remove("userinfo");
 
 **效果预览**
 
-<img src="../static/images/template/login.png" width="320">
+![预览图](../static/images/template/login.png)
 
 新增一个登录页，增加登录缓存功能。
 
