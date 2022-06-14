@@ -6,7 +6,7 @@
 
 异步通讯在业务比较复杂的情况下，会增加使用难度，1.7.x 以后推荐使用同步加载组件的方式，需要工程化的支持。
 
-![组件通讯图](../static/images/link/page-link.png)
+![组件通讯图](/static/images/link/page-link.png)
 
 假设 component1,component2,component3 在 *pages/components*目录下
 
@@ -23,29 +23,46 @@ _pages/main/main.html_
 _pages/main/main.js_
 
 ```js
-loader.define(async function (requires, exports, module, global) {
-  // 组件1
-  var component1 = await loader.syncLoad({
-    id: "#comp1",
-    url: "pages/components/component1/index.html",
-    param: {},
-  });
+loader.define(function (requires, exports, module, global) {
 
-  // 组件2
-  var component2 = await loader.syncLoad({
-    id: "#comp2",
-    url: "pages/components/component2/index.html",
-    param: {},
-  });
-  // 组件3
-  var component3 = await loader.syncLoad({
-    id: "#comp3",
-    url: "pages/components/component3/index.html",
-    param: {},
-  });
 
-  // 组件1可以拿到子组件的方法进行操作
-  // component1.childs1
+  var component1 = null,
+      component2 = null,
+      component3 = null;
+
+  var pageview = {
+    init: async function(){
+
+      // 组件1
+      component1 = await loader.syncLoad({
+        id: "#comp1",
+        url: "pages/components/component1/index.html",
+        param: {},
+      });
+
+      // 组件2
+      component2 = await loader.syncLoad({
+        id: "#comp2",
+        url: "pages/components/component2/index.html",
+        param: {},
+      });
+      // 组件3
+      component3 = await loader.syncLoad({
+        id: "#comp3",
+        url: "pages/components/component3/index.html",
+        param: {},
+      });
+
+    // 组件1可以拿到子组件的方法进行操作
+    // component1.childs1
+
+    }
+  }
+
+  // 初始化
+  pageview.init();
+
+  return pageview;
 });
 ```
 
@@ -64,27 +81,40 @@ _pages/components/component1/index.html_
 _pages/components/component1/index.js_
 
 ```js
-loader.define(async function (requires, exports, module, global) {
-  // 组件1-1
-  var childs1 = await loader.syncLoad({
-    id: "#child1",
-    url: "pages/components/component1/child-1.html",
-    param: {},
-  });
-  // 组件1-2
-  var childs2 = await loader.syncLoad({
-    id: "#child2",
-    url: "pages/components/component1/child-2.html",
-    param: {},
-  });
-  // 组件1-3
-  var childs3 = await loader.syncLoad({
-    id: "#child3",
-    url: "pages/components/component1/child-3.html",
-    param: {},
-  });
+loader.define(function (requires, exports, module, global) {
 
-  // 子组件内部兄弟组件的交互
+  var childs1 = null,
+      childs2 = null,
+      childs3 = null;
+
+  var pageview = {
+    init: async function(){
+      // 子组件内部兄弟组件的交互
+
+      // 组件1-1
+      childs1 = await loader.syncLoad({
+        id: "#child1",
+        url: "pages/components/component1/child-1.html",
+        param: {},
+      });
+      // 组件1-2
+      childs2 = await loader.syncLoad({
+        id: "#child2",
+        url: "pages/components/component1/child-2.html",
+        param: {},
+      });
+      // 组件1-3
+      childs3 = await loader.syncLoad({
+        id: "#child3",
+        url: "pages/components/component1/child-3.html",
+        param: {},
+      });
+
+    }
+  }
+
+  // 初始化
+  pageview.init();
 
   return {
     childs1,
@@ -144,15 +174,18 @@ loader.define(function (requires, exports, module, global) {
 });
 ```
 
-## 组件异步通讯
+## <del>组件异步通讯</del>
+
+<span style="color:red">组件异步通讯的开发方式太过零散，已经不推荐了</span>
 
 > BUI 1.6.2 以上版本.
 
-![组件通讯图](../static/images/link/component-link.png)
+![组件通讯图](/static/images/link/component-link.png)
 
 路由初始化以后就会去找 `main` 入口页, 假设`main`由 3 个组件组成, 会依次,从上到下加载组件, 加载以后再递归查找子组件, 如此反复.
 
 ### 父组件获取子组件
+
 
 _pages/main/main.html_
 
@@ -206,7 +239,7 @@ loader.define(function(require,export,module){
 
 ### 兄弟组件
 
-?> 比方页面由 `搜索组件`, `列表组件` 组成, 点击搜索, 要操作列表的方法重新带上关键字请求;
+> 比方页面由 `搜索组件`, `列表组件` 组成, 点击搜索, 要操作列表的方法重新带上关键字请求;
 
 页面组件 _pages/main/main.html_
 
@@ -273,4 +306,4 @@ loader.define(function(require,export,module){
 
 ```
 
-!> 注意, 搜索组件在初始化直接获取 list 组件, 会获取不到, 因为 list 比 search 晚加载.
+> 注意, 搜索组件在初始化直接获取 list 组件, 会获取不到, 因为 list 比 search 晚加载.
