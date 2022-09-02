@@ -6,7 +6,7 @@
 ?> 模板不支持表达式, 模板尽量精简, 把表达式定义到 `computed` 里面, 可以处理跟`data`相关的计算.
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/computed" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/computed" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 #### 例子1:
@@ -205,7 +205,7 @@ if( this.firstName && this.lastName ){
 ?> `watch` 可以用来监听 `data` 里面的键值的变化以后处理其它事情. `watch`函数返回当前监听变量的新值跟旧值`newVal,oldVal`.  比方下面的例子.
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/watch" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/watch" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 #### 例子4:
 

@@ -4,7 +4,7 @@
 
 [Demo](http://easybui.com/demo/)
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 控件示例说明
 

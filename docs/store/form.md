@@ -6,7 +6,7 @@
 
 !> 注意: input 的type类型必须声明是哪种类型(text,radio,checkbox)等.
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/input" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/input" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 #### 示例: 
 
@@ -76,7 +76,7 @@ var bs = bui.store({
 ### 3. 多选双向
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/checkbox" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/checkbox" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ?> 多选是一个数组, 里面的值会跟自己本身的值进行比较,如果一致,会是选中状态. `b-text` 输出数组会加上逗号.
 
@@ -129,7 +129,7 @@ var bs = bui.store({
 ### 5. 选择列表
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/select" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/select" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ?> 下面只是展示 select 的用法, 实际上移动端我们一般使用 `bui.select`控件.
 
@@ -274,15 +274,15 @@ var bs = bui.store({
 
 #### 多选联动
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/selectm" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 这个例子是一个自定义的模拟select, 我们放在[综合案例](store/case.md)里面讲. 
 
 #### 弹窗选择交互
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/choose" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/choose" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 5.动态表单
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/form_dynamic" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/form_dynamic" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

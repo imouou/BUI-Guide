@@ -1,6 +1,6 @@
 # 组件通讯
 
-## 组件同步通讯
+## 一、组件同步通讯
 
 > 1.7.x 以上版本
 
@@ -174,7 +174,7 @@ loader.define(function (requires, exports, module, global) {
 });
 ```
 
-## <del>组件异步通讯</del>
+## <del>二、组件异步通讯</del>
 
 <span style="color:red">组件异步通讯的开发方式太过零散，已经不推荐了</span>
 

@@ -4,7 +4,7 @@
 
 ### 一、下载开发包并解压 
 
-[下载单页开发包](http://easybui.com/downloads/source/bui/bui_router_dev_latest.zip)
+[下载单页开发包](https://www.easybui.com/p/download.html)
 
 修改解压的目录名为 demo， 打开终端命令行。
 

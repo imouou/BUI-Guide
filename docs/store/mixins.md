@@ -129,6 +129,6 @@ loader.define(function(require,export,module){
 
 ### 案例
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/view" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/view" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ?> 在一个模块里面处理三个Tab不好维护, 可以把每个tab的内容进行分发. 这是一个`bui.floor`跟 `bui.store`结合的例子. 其中用到了延迟加载, 滚动到第2个的时候, 会自动加载第3个模板, 加载了模板以后, 还需要通过实例的 `bs.$mount`方法, 重新编译该组件的数据. 

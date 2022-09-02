@@ -7,4 +7,4 @@
 
 [查看示例](http://easybui.com/demo/#pages/store/index)
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/index" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/index" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

@@ -137,7 +137,7 @@ uiSlide.to(1);
 
 ?> 最终组合以后的代码, 你可以点击这里 <a href="http://www.easybui.com/preview/?url=/guide/examples/chapter1/slide.html" target="_blank">在线预览效果</a>
 
-<iframe src="http://www.easybui.com/preview/?url=/guide/examples/chapter1/slide.html" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="//www.easybui.com/preview/?url=/guide/examples/chapter1/slide.html" width="100%" height="800px" frameborder="0"></iframe>
 
 _index.html_
 

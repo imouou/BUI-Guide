@@ -6,8 +6,8 @@
 
 ## 楼层滚动
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.floor&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_controls/bui.floor&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 通讯录
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.floor_scrollto&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_controls/bui.floor_scrollto&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

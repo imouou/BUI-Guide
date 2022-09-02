@@ -6,7 +6,7 @@
 
 ?> 这里面包含 2 种渲染, 在属性 `status=1`的时候, 以静态渲染为主, 如果里面不包含自定义菜单结构,不渲染.
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.listview&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_controls/bui.listview&code=html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 自动分页+交互列表
 
@@ -15,4 +15,4 @@
 - li 标签属性 `status=1` 手动拼接侧滑菜单,这样可以避免再次 dom 操作
 - 设置固定高度可以少遍历一次
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.list_listview&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_controls/bui.list_listview&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
