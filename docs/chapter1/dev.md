@@ -2,12 +2,12 @@
 
 ### 一、单页开发
 
-[下载单页开发包](http://easybui.com/downloads/source/bui/bui_router_dev_latest.zip)
+[下载单页开发包](https://www.easybui.com/p/download.html)
 
 * 优点：体验好，媲美app，操控强，按需加载或一次性加载；
 * 缺点：不支持后端语言输出展示，不支持seo；
 
-!> 单页开发预览需要部署，或者node工程的支持，默认需要3个文件，。
+!> 单页开发预览需要IIS部署，或者node工程的支持，默认需要3个文件。
 
 *index.html*
 

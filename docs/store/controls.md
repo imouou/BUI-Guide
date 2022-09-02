@@ -16,7 +16,7 @@ bui的控件都是以DOM交互为主, 这种方式可以很好的在各种低版
 ### 效果预览
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/bui.list" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/bui.list" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/bui.list" target="_blank">下拉刷新</a>
 
@@ -86,7 +86,7 @@ var bs = bui.store({
 ### 效果预览
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/bui.dropdown" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/bui.dropdown" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/bui.dropdown" target="_blank">下拉菜单</a>
 
@@ -310,7 +310,7 @@ var bs = bui.store({
 
 ### 效果预览
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/bui.slide" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/bui.slide" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/bui.slide" target="_blank">轮播图</a>
 
@@ -369,7 +369,7 @@ var bs = bui.store({
 
 ### 效果预览
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/bui.tab" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/bui.tab" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/bui.tab" target="_blank">选项卡</a>
 

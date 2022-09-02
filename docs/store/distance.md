@@ -1,7 +1,7 @@
 
 # 实例
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/case" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/case" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 ### 1. 创建一个`store`实例.

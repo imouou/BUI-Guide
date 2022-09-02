@@ -2,7 +2,7 @@
 # 属性与值绑定
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/attribute" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/attribute" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 ### 1. 属性动态绑定
@@ -78,7 +78,7 @@ var bs = bui.store({
 #### 效果预览
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/set" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/set" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <a href="http://www.easybui.com/demo/index.html#pages/store/set" target="_blank">查看效果</a>
 

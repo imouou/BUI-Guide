@@ -4,7 +4,7 @@
 
 ?> 滑动效果请扫码在手机观看.
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.pickerdate&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_controls/bui.pickerdate&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 显示日期
 

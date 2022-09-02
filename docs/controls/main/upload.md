@@ -6,4 +6,4 @@
 
 ?> 后台按`formdata`的方式接收`file`字段就好.
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_controls/bui.upload&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_controls/bui.upload&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

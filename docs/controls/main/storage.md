@@ -6,8 +6,8 @@
 
 ## 存储字符串
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_method/bui.storage&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_method/bui.storage&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## 存储 json
 
-<iframe width="100%" height="560" src="http://www.easybui.com/demo/source.html?url=pages/ui_method/bui.storage_json&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="560" src="//www.easybui.com/demo/source.html?url=pages/ui_method/bui.storage_json&code=full,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

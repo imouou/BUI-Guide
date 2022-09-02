@@ -1,6 +1,6 @@
 # 模板渲染
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/template" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/template" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 1. ES6 模板
 

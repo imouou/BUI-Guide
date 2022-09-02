@@ -4,7 +4,7 @@
 ## 1. 待办处理
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/case" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/case" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 预览
 
@@ -14,7 +14,7 @@
 
 ?> 如果数据一开始有值,还需要把值跟模板里的数据进行比对,处理成选中状态.
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/choose.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/choose.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 预览
 
@@ -23,7 +23,7 @@
 
 ## 3. 多选联动复杂场景
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm_step1.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/selectm_step1.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### 预览
 
@@ -33,7 +33,7 @@
 ### 2.2 代码优化版
 
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/selectm.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/selectm.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 ### 预览

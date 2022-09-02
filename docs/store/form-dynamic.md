@@ -1,7 +1,7 @@
 
 # 4. 动态表单
 
-<iframe width="320" height="560" src="http://www.easybui.com/demo/#pages/store/form_dynamic" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="320" height="560" src="//www.easybui.com/demo/#pages/store/form_dynamic" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ```html
 <div class="bui-page page-store page-input">
