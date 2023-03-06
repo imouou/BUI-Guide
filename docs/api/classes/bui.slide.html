@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -309,12 +310,11 @@
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[stopHandle]  1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于slide里面的某个样式,不触发滑动,一般用于事件冲突,比方 input[type=range]</code>
+                                                                        <code class="param-name">stopHandle</code>
                                                                         <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>无法滑动的时候</p>
+                                                                        <p>1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于slide里面的某个样式,不触发滑动,一般用于事件冲突,比方 input[type=range] 无法滑动的时候</p>
                                     
                                                                     </div>
                                     
@@ -364,12 +364,11 @@
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[data]  1.5.2新增, 默认: null || [{id:&quot;&quot;,title:&quot;&quot;,url:&quot;&quot;,iframe:false,image:&quot;img.png&quot;,background:&quot;img.png&quot;,page:false,close:true,synchistory:false}] , image 或者 background 只需要一个,其它字段都不是必须, 1.6.2新增 page加载的方式,可以解决加载外部地址无法返回的问题 1.6.7新增对视频的支持 [{type:&quot;video&quot;,src:&quot;视频文件.mp4&quot;,poster:&quot;封面图&quot;,autoplay:false,loop:false}]</code>
+                                                                        <code class="param-name">data</code>
                                                                         <span class="type">Array</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>更多参数查看video公共字段</p>
+                                                                        <p>1.5.2新增, 默认: null || [{id:&quot;&quot;,title:&quot;&quot;,url:&quot;&quot;,iframe:false,image:&quot;img.png&quot;,background:&quot;img.png&quot;,page:false,close:true,synchistory:false}] , image 或者 background 只需要一个,其它字段都不是必须, 1.6.2新增 page加载的方式,可以解决加载外部地址无法返回的问题 1.6.7新增对视频的支持 [{type:&quot;video&quot;,src:&quot;视频文件.mp4&quot;,poster:&quot;封面图&quot;,autoplay:false,loop:false}] 更多参数查看video公共字段</p>
                                     
                                                                     </div>
                                     
@@ -913,7 +912,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1948"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1948</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1954"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1954</code></a>
                                                         </p>
                                                 
                                                 
@@ -1115,7 +1114,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1859"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1859</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1865"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1865</code></a>
                                                         </p>
                                                 
                                                 
@@ -1229,7 +1228,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2182"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2182</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2188"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2188</code></a>
                                                         </p>
                                                 
                                                 
@@ -1292,7 +1291,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2199"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2199</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2205"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2205</code></a>
                                                         </p>
                                                 
                                                 
@@ -1355,7 +1354,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2280"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2280</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2286"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2286</code></a>
                                                         </p>
                                                 
                                                 
@@ -1418,7 +1417,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l819"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:819</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l823"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:823</code></a>
                                                         </p>
                                                 
                                                 
@@ -1468,7 +1467,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l833"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:833</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l837"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:837</code></a>
                                                         </p>
                                                 
                                                 
@@ -1529,7 +1528,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l800"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:800</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l804"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:804</code></a>
                                                         </p>
                                                 
                                                 
@@ -1570,7 +1569,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1510"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1510</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1516"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1516</code></a>
                                                         </p>
                                                 
                                                 
@@ -1617,7 +1616,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l352"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:352</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l353"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:353</code></a>
                                                         </p>
                                                 
                                                 
@@ -1671,7 +1670,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1802"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1802</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1808"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1808</code></a>
                                                         </p>
                                                 
                                                 
@@ -1803,7 +1802,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1619"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1619</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1625"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1625</code></a>
                                                         </p>
                                                 
                                                 
@@ -1843,7 +1842,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1559"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1559</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1565"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1565</code></a>
                                                         </p>
                                                 
                                                 
@@ -1893,7 +1892,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2329"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2329</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2335"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2335</code></a>
                                                         </p>
                                                 
                                                 
@@ -1974,7 +1973,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1525"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1525</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1531"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1531</code></a>
                                                         </p>
                                                 
                                                 
@@ -2020,7 +2019,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2058"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2058</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2064"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2064</code></a>
                                                         </p>
                                                 
                                                 
@@ -2093,9 +2092,9 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       uiTab.remove({
-                                                         index: 1
-                                                       })
+                                                                <pre class="code prettyprint"><code>      uiTab.remove({
+                                                        index: 1
+                                                      })
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2122,7 +2121,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1906"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1906</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1912"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1912</code></a>
                                                         </p>
                                                 
                                                 
@@ -2245,7 +2244,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2255"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2255</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2261"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2261</code></a>
                                                         </p>
                                                 
                                                 
@@ -2335,7 +2334,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1495"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1495</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1501"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1501</code></a>
                                                         </p>
                                                 
                                                 
@@ -2393,7 +2392,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1448"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1448</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1454"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1454</code></a>
                                                         </p>
                                                 
                                                 
@@ -2443,7 +2442,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1301"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1301</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1305"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1305</code></a>
                                                         </p>
                                                 
                                                 
@@ -2513,7 +2512,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1663"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1663</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1669"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1669</code></a>
                                                         </p>
                                                 
                                                 
@@ -2558,7 +2557,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2312"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2312</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2318"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2318</code></a>
                                                         </p>
                                                 
                                                 
@@ -2619,7 +2618,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2377"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2377</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2383"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2383</code></a>
                                                         </p>
                                                 
                                                 
@@ -2684,7 +2683,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2357"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2357</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2363"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2363</code></a>
                                                         </p>
                                                 
                                                 
@@ -2759,12 +2758,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

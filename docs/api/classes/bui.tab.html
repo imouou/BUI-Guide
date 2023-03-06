@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -761,12 +762,20 @@
                                                             <a href="#method_getPages">getPages</a>
                             
                                                         </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_hideContent">hideContent</a>
+                            
+                                                        </li>
                                                         <li class="index-item method inherited">
                                                             <a href="#method_index">index</a>
                             
                                                         </li>
                                                         <li class="index-item method inherited">
                                                             <a href="#method_init">init</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_isShow">isShow</a>
                             
                                                         </li>
                                                         <li class="index-item method inherited">
@@ -787,6 +796,10 @@
                                                         </li>
                                                         <li class="index-item method inherited">
                                                             <a href="#method_prev">prev</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_refresh">refresh</a>
                             
                                                         </li>
                                                         <li class="index-item method inherited">
@@ -813,6 +826,10 @@
                                                             <a href="#method_setItemParam">setItemParam</a>
                             
                                                         </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_showContent">showContent</a>
+                            
+                                                        </li>
                                                         <li class="index-item method inherited">
                                                             <a href="#method_start">start</a>
                             
@@ -823,6 +840,10 @@
                                                         </li>
                                                         <li class="index-item method inherited">
                                                             <a href="#method_to">to</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_toggleContent">toggleContent</a>
                             
                                                         </li>
                                                         <li class="index-item method inherited">
@@ -878,7 +899,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_add">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1948"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1948</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1954"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1954</code></a>
                                                         </p>
                                                 
                                                 
@@ -1084,7 +1105,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l467"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:467</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l476"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:476</code></a>
                                                         </p>
                                                 
                                                 
@@ -1150,7 +1171,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_back">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1859"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1859</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1865"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1865</code></a>
                                                         </p>
                                                 
                                                 
@@ -1264,7 +1285,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_currentMain">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2182"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2182</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2188"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2188</code></a>
                                                         </p>
                                                 
                                                 
@@ -1327,7 +1348,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_currentMenu">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2199"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2199</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2205"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2205</code></a>
                                                         </p>
                                                 
                                                 
@@ -1390,7 +1411,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_destroy">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2280"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2280</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2286"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2286</code></a>
                                                         </p>
                                                 
                                                 
@@ -1453,7 +1474,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_getData">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l819"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:819</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l823"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:823</code></a>
                                                         </p>
                                                 
                                                 
@@ -1506,7 +1527,7 @@
                                                                 bui.slide
                                                             </a>
                                                             but overwritten in
-                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l371"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:371</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l380"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:380</code></a>
                                                         </p>
                                                 
                                                 
@@ -1573,7 +1594,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l419"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:419</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l428"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:428</code></a>
                                                         </p>
                                                 
                                                 
@@ -1634,7 +1655,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_getPages">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l800"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:800</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l804"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:804</code></a>
                                                         </p>
                                                 
                                                 
@@ -1659,6 +1680,61 @@
                                                         </div>
                                                 
                                                 </div>
+                                                <div id="method_hideContent" class="method item">
+                                                    <h3 class="name"><code>hideContent</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code>callback</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l506"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:506</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.5</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>隐藏内容</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name">callback</code>
+                                                                        <span class="type">Function</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>回调</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                </div>
                                                 <div id="method_index" class="method item inherited">
                                                     <h3 class="name"><code>index</code></h3>
                                                 
@@ -1675,7 +1751,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_index">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1510"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1510</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1516"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1516</code></a>
                                                         </p>
                                                 
                                                 
@@ -1722,7 +1798,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_init">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l352"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:352</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l353"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:353</code></a>
                                                         </p>
                                                 
                                                 
@@ -1755,6 +1831,38 @@
                                                 
                                                 
                                                 </div>
+                                                <div id="method_isShow" class="method item">
+                                                    <h3 class="name"><code>isShow</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l591"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:591</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.5</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>当前tab的显示状态</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                </div>
                                                 <div id="method_load" class="method item inherited">
                                                     <h3 class="name"><code>load</code></h3>
                                                 
@@ -1776,7 +1884,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_load">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1802"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1802</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1808"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1808</code></a>
                                                         </p>
                                                 
                                                 
@@ -1908,7 +2016,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_lock">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1619"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1619</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1625"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1625</code></a>
                                                         </p>
                                                 
                                                 
@@ -1948,7 +2056,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_next">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1559"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1559</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1565"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1565</code></a>
                                                         </p>
                                                 
                                                 
@@ -1998,7 +2106,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_option">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2329"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2329</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2335"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2335</code></a>
                                                         </p>
                                                 
                                                 
@@ -2079,7 +2187,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_prev">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1525"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1525</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1531"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1531</code></a>
                                                         </p>
                                                 
                                                 
@@ -2104,6 +2212,61 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_refresh" class="method item">
+                                                    <h3 class="name"><code>refresh</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code>index</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l631"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:631</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.6.7</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>刷新加载当前组件</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name">index</code>
+                                                                        <span class="type">String</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>在第几个索引</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                </div>
                                                 <div id="method_remove" class="method item inherited">
                                                     <h3 class="name"><code>remove</code></h3>
                                                 
@@ -2125,7 +2288,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_remove">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2058"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2058</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2064"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2064</code></a>
                                                         </p>
                                                 
                                                 
@@ -2198,9 +2361,9 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       uiTab.remove({
-                                                         index: 1
-                                                       })
+                                                                <pre class="code prettyprint"><code>      uiTab.remove({
+                                                        index: 1
+                                                      })
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2228,7 +2391,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l497"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:497</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l613"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:613</code></a>
                                                         </p>
                                                 
                                                 
@@ -2282,7 +2445,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_replace">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1906"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1906</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1912"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1912</code></a>
                                                         </p>
                                                 
                                                 
@@ -2405,7 +2568,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_resize">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2255"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2255</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2261"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2261</code></a>
                                                         </p>
                                                 
                                                 
@@ -2498,7 +2661,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l396"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:396</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l405"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:405</code></a>
                                                         </p>
                                                 
                                                 
@@ -2565,7 +2728,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l444"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:444</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l453"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:453</code></a>
                                                         </p>
                                                 
                                                 
@@ -2607,6 +2770,61 @@
                                                         </div>
                                                 
                                                 </div>
+                                                <div id="method_showContent" class="method item">
+                                                    <h3 class="name"><code>showContent</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code>callback</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l537"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:537</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.5</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>显示内容</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name">callback</code>
+                                                                        <span class="type">Function</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>回调</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                </div>
                                                 <div id="method_start" class="method item inherited">
                                                     <h3 class="name"><code>start</code></h3>
                                                 
@@ -2629,7 +2847,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_start">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1495"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1495</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1501"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1501</code></a>
                                                         </p>
                                                 
                                                 
@@ -2687,7 +2905,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_stop">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1448"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1448</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1454"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1454</code></a>
                                                         </p>
                                                 
                                                 
@@ -2737,7 +2955,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_to">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1301"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1301</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1305"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1305</code></a>
                                                         </p>
                                                 
                                                 
@@ -2791,6 +3009,75 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_toggleContent" class="method item">
+                                                    <h3 class="name"><code>toggleContent</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code>showCallback</code>
+                                                                </li>
+                                                                <li class="arg">
+                                                                        <code>hideCallback</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.tab.js.html#l564"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.tab.js:564</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.5</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>切换内容</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name">showCallback</code>
+                                                                        <span class="type">Function</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>显示的回调</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name">hideCallback</code>
+                                                                        <span class="type">Function</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>隐藏的回调</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                </div>
                                                 <div id="method_unlock" class="method item inherited">
                                                     <h3 class="name"><code>unlock</code></h3>
                                                 
@@ -2807,7 +3094,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_unlock">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1663"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1663</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l1669"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:1669</code></a>
                                                         </p>
                                                 
                                                 
@@ -2852,7 +3139,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#method_widget">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2312"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2312</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2318"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2318</code></a>
                                                         </p>
                                                 
                                                 
@@ -2913,7 +3200,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#event_off">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2377"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2377</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2383"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2383</code></a>
                                                         </p>
                                                 
                                                 
@@ -2978,7 +3265,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.slide.html#event_on">bui.slide</a>:
-                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2357"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2357</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.slide.js.html#l2363"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.slide.js:2363</code></a>
                                                         </p>
                                                 
                                                 
@@ -3053,12 +3340,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

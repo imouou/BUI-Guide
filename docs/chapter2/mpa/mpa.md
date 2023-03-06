@@ -11,11 +11,11 @@
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css"
+  href="https://unpkg.com/buijs/lib/latest/bui.css"
 />
 <!-- bui.js 依赖于Zepto或jQuery -->
-<script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+<script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+<script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
 ```
 
 ## 页面跳转

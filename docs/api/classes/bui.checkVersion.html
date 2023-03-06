@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -175,7 +176,7 @@
                             
                             
                                     <div class="foundat">
-                                        Defined in: <a href="../files/src_scripts_mix_dcloud_bui.native.js.html#l409"><code>src&#x2F;scripts&#x2F;mix&#x2F;dcloud&#x2F;bui.native.js:409</code></a>
+                                        Defined in: <a href="../files/src_scripts_mix_common_bui.checkVersion.js.html#l7"><code>src&#x2F;scripts&#x2F;mix&#x2F;common&#x2F;bui.checkVersion.js:7</code></a>
                                     </div>
                             
                                         Module: <a href="../modules/Native.html">Native</a>
@@ -184,15 +185,21 @@
                             
                             
                             <div class="box intro">
-                                <p><h3>检查版本更新</h3></p>
+                                <p><h3>检查版本更新, webapp版本没有,需要新建平台才有</h3></p>
                             <p>需要把对应的<a href="http://www.easybui.com/demo/json/versionUpdate.json" target="_blank">versionUpdate.json</a> 放到服务器,然后通过修改里面的值来进行检测更新</p>
+                            <p>默认是检测BUI的版本更新,需要替换成自己业务的更新,更新有3种情况</p>
+                            <p>第1种,当前版本已经是最新的</p>
+                            <p>第2种,forced=true的情况, 当前版本比新版旧, 但比最小版本要新, 这时候会有弹窗, 但不一定要更新, 每次打开会提醒一次. </p>
+                            <p>第3种,forced=true的情况, 当前版本比新版旧, 并且比最小版本要小, 这样就必须更新才功能正常.</p>
+                            <p>第4种,forced=false的情况, 当前版本跟新版一样, 则提醒用户已经最新版, 可以通过 needTips关闭,  当前版本比新版旧, 会提醒用户,一般使用红点无干扰提醒.</p>
                             <h5>versionUpdate.json 文件说明: </h5><br>
                             {<br>
                                        "versionName": "1.0",          //版本名称<br>
                                        "versionCode": 20160605,       //版本ID<br>
                                        "minVersionCode": 20160604,    //最小版本号<br>
-                                       "isForced": true,              //是否强制更新,如果强制更新,需要检测最小版本号<br>
-                                       "downloadUrl": "",             //下载的地址<br>
+                                       "forced": true,              //是否强制更新,如果强制更新,需要检测最小版本号<br>
+                                       "downloadUrl": "http://www.easybui.com/download/bui.apk",             //下载的地址<br>
+                                       "iosDownloadUrl": "https://itunes.apple.com/cn/app/id1362470378?mt=8",          //下载的地址<br>
                                        "remark": "版本更新的内容"        //新版本的描述,支持html<br>
                                    }<br>
                             </div>
@@ -220,7 +227,7 @@
                                         <div class="meta">
                                                     <p>
                                                     Defined in
-                                            <a href="../files/src_scripts_mix_dcloud_bui.native.js.html#l409"><code>src&#x2F;scripts&#x2F;mix&#x2F;dcloud&#x2F;bui.native.js:409</code></a>
+                                            <a href="../files/src_scripts_mix_common_bui.checkVersion.js.html#l7"><code>src&#x2F;scripts&#x2F;mix&#x2F;common&#x2F;bui.checkVersion.js:7</code></a>
                                             </p>
                                     
                                     
@@ -250,90 +257,151 @@
                                                                         <span class="type">String</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>[请求更新的地址]</p>
+                                                                        <p>请求更新的地址</p>
                                     
                                                                     </div>
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[data] [是否需要传参]</code>
+                                                                        <code class="param-name">currentVersion</code>
+                                                                        <span class="type">String</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>当前版本名称,用来提醒的版本名称</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name">currentVersionCode</code>
+                                                                        <span class="type">String</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>当前版本号,用来比对的唯一值</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[id]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>检测更新的按钮,非必须</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[target]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>按钮的圆点要放在哪个位置,默认在i标签下</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[title]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>对话框提醒的标题</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[data]</code>
                                                                         <span class="type">Object</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        
+                                                                        <p>是否需要传参</p>
+                                    
                                                                     </div>
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[id] [控件的id,有id会绑定它的点击检查更新事件]</code>
+                                                                        <code class="param-name optional">[method]</code>
                                                                         <span class="type">String</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        
+                                                                        <p>请求的方法 GET | POST</p>
+                                    
                                                                     </div>
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[target] [圆点要放在哪个位置,可以使用ID,独立一个位置,默认在i标签下]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[title] [对话框提醒的标题]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[url] [请求地址]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[data] [请求接口需要的参数]</code>
-                                                                        <span class="type">Object</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[method] [请求的方法 GET | POST]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[timeout] [超时 20000]</code>
+                                                                        <code class="param-name optional">[timeout]</code>
                                                                         <span class="type">Number</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        
+                                                                        <p>超时 20000</p>
+                                    
                                                                     </div>
                                     
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[needTips]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>是否需要提醒 1.5.0</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[needNative]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5.6 新增, ajax是否走原生请求 默认 false | true</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[needNativeRun]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5.6 新增, 下载打开默认是否走原生 默认 true | false, 如果走原生会打开浏览器下载</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[field]</code>
+                                                                        <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>是否需要提醒 1.5.3</p>
+                                    
+                                                                    </div>
+                                    
+                                                                        <ul class="params-list">
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[data]</code>
+                                                                                    <span class="type">Object</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                                <div class="param-description">
+                                                                                    返回的数据在哪个key
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
                                                                 </li>
                                                                 <li class="param">
                                                                         <code class="param-name optional">[tips]</code>
@@ -346,41 +414,64 @@
                                     
                                                                         <ul class="params-list">
                                                                             <li class="param">
-                                                                                    <code class="param-name optional">[nowVersion] [当前是最新版本的提醒,默认提醒会有版本号]</code>
+                                                                                    <code class="param-name optional">[nowVersion]</code>
                                                                                     <span class="type">String</span>
                                                                                     <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                                 <div class="param-description">
-                                                                                    
+                                                                                    当前是最新版本的提醒,默认提醒会有版本号
                                                                                 </div>
                                                                             </li>
                                                                             <li class="param">
-                                                                                    <code class="param-name optional">[minVersion] [版本太低需要强制更新的提醒]</code>
+                                                                                    <code class="param-name optional">[minVersion]</code>
                                                                                     <span class="type">String</span>
                                                                                     <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                                 <div class="param-description">
-                                                                                    
+                                                                                    版本太低需要强制更新的提醒
                                                                                 </div>
                                                                             </li>
                                                                             <li class="param">
-                                                                                    <code class="param-name optional">[fail] [网络请求失败的提醒]</code>
+                                                                                    <code class="param-name optional">[fail]</code>
                                                                                     <span class="type">String</span>
                                                                                     <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                                 <div class="param-description">
-                                                                                    
+                                                                                    网络请求失败的提醒
                                                                                 </div>
                                                                             </li>
                                                                         </ul>
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[callback] [点击按钮以后是否还有其它业务处理]</code>
+                                                                        <code class="param-name optional">[callback]</code>
                                                                         <span class="type">Function</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        
+                                                                        <p>点击按钮以后是否还有其它业务处理</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[onSuccess]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.4.2 新增请求成功的处理</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[onFail]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.4.2 新增请求失败的处理</p>
+                                    
                                                                     </div>
                                     
                                                                 </li>
@@ -396,6 +487,8 @@
                                                 <div class="example-content">
                                                     <pre class="code prettyprint"><code>bui.checkVersion({
                                         id: &quot;#checkUpdate&quot;,
+                                              currentVersion: &quot;&quot;,
+                                              currentVersionCode: &quot;&quot;,
                                         url: &quot;http://www.easybui.com/json/versionUpdate.json&quot;
                                     });
                                     </code></pre>
@@ -409,217 +502,17 @@
                                 <ul class="api-class-tabs">
                                     <li class="api-class-tab index"><a href="#index">Index</a></li>
                             
-                                        <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
                                 </ul>
                             
                                 <div>
                                     <div id="index" class="api-class-tabpanel index">
                                         <h2 class="off-left">Item Index</h2>
                             
-                                            <div class="index-section methods">
-                                                <h3>Methods</h3>
-                            
-                                                <ul class="index-list methods">
-                                                        <li class="index-item method">
-                                                            <a href="#method_open">open</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_widget">widget</a>
-                            
-                                                        </li>
-                                                </ul>
-                                            </div>
                             
                             
                             
                                     </div>
                             
-                                        <div id="methods" class="api-class-tabpanel">
-                                            <h2 class="off-left">Methods</h2>
-                            
-                                                <div id="method_open" class="method item">
-                                                    <h3 class="name"><code>open</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code class="optional">[option] []</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[option.url] [ 文件路径,一般是通过getFile得到的路径]</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[option.onSuccess] [成功的回调]</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[option.onFail] [失败的回调]</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                        <span class="flag chainable">chainable</span>
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_mix_bingotouch_bui.native.file.js.html#l472"><code>src&#x2F;scripts&#x2F;mix&#x2F;bingotouch&#x2F;bui.native.file.js:472</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>本地程序打开文件</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[option] []</code>
-                                                                        <span class="type">Object</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                         
-                                                                    </div>
-                                                
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[option.url] [ 文件路径,一般是通过getFile得到的路径]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                         
-                                                                    </div>
-                                                
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[option.onSuccess] [成功的回调]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                         
-                                                                    </div>
-                                                
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[option.onFail] [失败的回调]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                         
-                                                                    </div>
-                                                
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       uiFile.open({
-                                                           url: &quot;file://&quot;,
-                                                           onSuccess: function(url){
-                                                               // 文件的地址
-                                                               console.log(url)
-                                                           }
-                                                       })
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_widget" class="method item">
-                                                    <h3 class="name"><code>widget</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code class="optional">[name] [ 依赖控件名 fileselect]</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_mix_bingotouch_bui.native.file.js.html#l504"><code>src&#x2F;scripts&#x2F;mix&#x2F;bingotouch&#x2F;bui.native.file.js:504</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>获取依赖的控件</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[name] [ 依赖控件名 fileselect]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                         
-                                                                    </div>
-                                                
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       //获取依赖控件
-                                                       var uiFileSelect = uiFile.widget(&quot;fileselect&quot;);
-                                                
-                                                       //使用uifileselect的方法
-                                                       uiFileSelect.add({
-                                                           onSuccess: function(data){
-                                                               console.log(data);
-                                                           }
-                                                       });
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                        </div>
                             
                             
                             
@@ -640,12 +533,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

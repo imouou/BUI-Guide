@@ -4,8 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>BUI 多页开发标准页面</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
     <style>
         .example-fluid>li,
         .example-box2>div,
@@ -15,13 +16,13 @@
             border-radius: 10px;
             padding: .1rem;
         }
-        
+
         .example-box div:nth-child(odd),
         .example-box2 div:nth-child(odd),
         .example-fluid li:nth-child(odd) {
             background: #efefef;
         }
-        
+
         .example-box3 div .bui-btn,
         .example-box3 div .bui-btn-inline,
         .example-fluid div .bui-btn {
@@ -29,7 +30,7 @@
             border: 0;
             border-radius: 10px;
         }
-        
+
         .example-box3 div:nth-child(odd) .bui-btn,
         .example-box3 div:nth-child(odd) .bui-btn-inline,
         .example-fluid div:nth-child(odd) .bui-btn,
@@ -52,14 +53,16 @@
         </header>
         <main>
             <h3 class="section-title">
-                <a name="p1"></a>盒子弹性布局</h3>
+                <a name="p1"></a>盒子弹性布局
+            </h3>
             <div class="bui-box example-box">
                 <div style="width:100px;">固定100px大小</div>
                 <div class="span1">剩余宽度自适应</div>
                 <div>自适应文本大小</div>
             </div>
             <h3 class="section-title">
-                <a name="p2"></a>盒子等比布局</h3>
+                <a name="p2"></a>盒子等比布局
+            </h3>
             <div class="bui-box example-box2">
                 <div class="span1">
                     span1 = 1/3 大小
@@ -69,7 +72,8 @@
                 </div>
             </div>
             <h3 class="section-title">
-                <a name="p3"></a>盒子留白布局</h3>
+                <a name="p3"></a>盒子留白布局
+            </h3>
 
             <!-- 按钮左右布局 -->
             <div class="bui-box-space example-box3">
@@ -116,7 +120,8 @@
             </div>
 
             <h3 class="section-title">
-                <a name="p4"></a>流式布局</h3>
+                <a name="p4"></a>流式布局
+            </h3>
             <ul class="bui-fluid example-fluid">
                 <li class="span10">10</li>
                 <li class="span2">2</li>
@@ -140,7 +145,8 @@
             </ul>
 
             <h3 class="section-title">
-                <a name="p5"></a>流式留白布局</h3>
+                <a name="p5"></a>流式留白布局
+            </h3>
             <!-- 列表的多列间隙布局 -->
             <div class="bui-fluid-space example-fluid">
                 <div class="span6">
@@ -185,7 +191,8 @@
             </div>
 
             <h3 class="section-title">
-                <a name="p6"></a>流式盒子嵌套混搭布局</h3>
+                <a name="p6"></a>流式盒子嵌套混搭布局
+            </h3>
             <ul class="bui-fluid example-fluid">
                 <li class="span6">
                     span6
@@ -443,8 +450,8 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
 </body>
 
 </html>

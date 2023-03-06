@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -301,37 +302,34 @@
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[field] 1.4.5新增 默认,{ name: &quot;n&quot;, data: [&quot;c&quot;,&quot;a&quot;]</code>
+                                                                        <code class="param-name">field</code>
                                                                         <span class="type">Object</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>}</p>
+                                                                        <p>1.4.5新增 默认,{ name: &quot;n&quot;, data: [&quot;c&quot;,&quot;a&quot;] }</p>
                                     
                                                                     </div>
                                     
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[field.name]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                                        <ul class="params-list">
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[name]</code>
+                                                                                    <span class="type">String</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
-                                                                    <div class="param-description">
-                                                                        <p>数据的文本字段</p>
+                                                                                <div class="param-description">
+                                                                                    数据的文本字段
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[data]</code>
+                                                                                    <span class="type">Array</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[field.data]</code>
-                                                                        <span class="type">Array</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>下一级数组的所在字段,支持多个不同字段</p>
-                                    
-                                                                    </div>
-                                    
+                                                                                <div class="param-description">
+                                                                                    下一级数组的所在字段,支持多个不同字段
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
                                                                 </li>
                                                                 <li class="param">
                                                                         <code class="param-name optional">[title]</code>
@@ -378,12 +376,12 @@
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[value] 初始化选中的文本 例如:[&quot;广东&quot;,&quot;广州市&quot;,&quot;天河区&quot;]</code>
+                                                                        <code class="param-name">value</code>
                                                                         <span class="type">Array</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        
+                                                                        <p>初始化选中的文本 例如:[&quot;广东&quot;,&quot;广州市&quot;,&quot;天河区&quot;]</p>
+                                    
                                                                     </div>
                                     
                                                                 </li>
@@ -710,7 +708,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l844"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:844</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l905"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:905</code></a>
                                                         </p>
                                                 
                                                 
@@ -752,7 +750,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l554"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:554</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l613"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:613</code></a>
                                                         </p>
                                                 
                                                 
@@ -793,7 +791,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l514"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:514</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l572"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:572</code></a>
                                                         </p>
                                                 
                                                 
@@ -843,7 +841,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l818"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:818</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l879"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:879</code></a>
                                                         </p>
                                                 
                                                 
@@ -924,7 +922,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l500"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:500</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l558"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:558</code></a>
                                                         </p>
                                                 
                                                 
@@ -965,7 +963,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l671"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:671</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l731"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:731</code></a>
                                                         </p>
                                                 
                                                 
@@ -1016,7 +1014,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l652"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:652</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l712"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:712</code></a>
                                                         </p>
                                                 
                                                 
@@ -1086,7 +1084,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l529"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:529</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l587"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:587</code></a>
                                                         </p>
                                                 
                                                 
@@ -1127,7 +1125,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l485"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:485</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l543"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:543</code></a>
                                                         </p>
                                                 
                                                 
@@ -1168,7 +1166,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l609"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:609</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l669"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:669</code></a>
                                                         </p>
                                                 
                                                 
@@ -1221,7 +1219,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l885"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:885</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l946"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:946</code></a>
                                                         </p>
                                                 
                                                 
@@ -1283,7 +1281,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l791"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:791</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l852"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:852</code></a>
                                                         </p>
                                                 
                                                 
@@ -1348,7 +1346,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l771"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:771</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l832"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:832</code></a>
                                                         </p>
                                                 
                                                 
@@ -1423,12 +1421,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

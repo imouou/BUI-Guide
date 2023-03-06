@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -186,7 +187,7 @@
                             
                             <div class="box intro">
                                 <p><h2>数据行为存储器 Data Behavior Store</h2></p>
-                            <p>按vue接口设计的状态管理,但这不是vue,具体使用请查看<a href="/guide/#/store/about" target="_blank">教程</a>或示例</p>
+                            <p>按vue接口设计的状态管理,模板引擎使用es6的模板，视图只需进行关联，具体使用请查看<a href="/guide/#/store/about" target="_blank">教程</a>或示例</p>
                             <h3>预览地址: <a href="http://www.easybui.com/demo/index.html#pages/store/index.html" target="_blank">demo</a></h3>
                             </div>
                             
@@ -350,17 +351,6 @@
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[needView]</code>
-                                                                        <span class="type">Boolean</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>1.6.0 新增 是否解析view标签, 默认 true | false</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
                                                                         <code class="param-name optional">[needComponent]</code>
                                                                         <span class="type">Boolean</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
@@ -447,18 +437,18 @@
                                                 <h4>Example:</h4>
                                     
                                                 <div class="example-content">
-                                                    <pre class="code prettyprint"><code>    var bs = bui.store({
-                                          scope: &quot;app&quot;,
-                                          data: {
-                                            size: 1
-                                          }
-                                        });
+                                                    <pre class="code prettyprint"><code>   var bs = bui.store({
+                                         scope: &quot;app&quot;,
+                                         data: {
+                                           size: 1
+                                         }
+                                       });
                                     
-                                        // 这样就会设置内容为1
-                                        &lt;b b-text=&quot;app.size&quot;&gt;&lt;/b&gt;
+                                       // 这样就会设置内容为1
+                                       &lt;b b-text=&quot;app.size&quot;&gt;&lt;/b&gt;
                                     
-                                        // 设置以后就会触发dom 的变更
-                                        bs.size = 2;
+                                       // 设置以后就会触发dom 的变更
+                                       bs.size = 2;
                                     </code></pre>
                                     
                                                 </div>
@@ -603,7 +593,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l979"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:979</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l987"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:987</code></a>
                                                         </p>
                                                 
                                                 
@@ -638,8 +628,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 重新解析
-                                                        bs.$mount(&quot;.bui-page&quot;)</code></pre>
+                                                                <pre class="code prettyprint"><code>       // 重新解析
+                                                       bs.$mount(&quot;.bui-page&quot;)</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -660,7 +650,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5216"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5216</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5307"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5307</code></a>
                                                         </p>
                                                 
                                                 
@@ -679,7 +669,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       bs.clearKey()
+                                                                <pre class="code prettyprint"><code>      bs.clearKey()
                                                 </code></pre>
                                                 
                                                             </div>
@@ -707,7 +697,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l1135"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:1135</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l1143"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:1143</code></a>
                                                         </p>
                                                 
                                                 
@@ -742,8 +732,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 解析模板里面的{{}}
-                                                        var html = bs.compileHtml(&quot;&lt;div title=&quot;{{app.name}}&quot;&gt;{{app.name}}&lt;/div&gt;&quot;);
+                                                                <pre class="code prettyprint"><code>       // 解析模板里面的{{}}
+                                                       var html = bs.compileHtml(&quot;&lt;div title=&quot;{{app.name}}&quot;&gt;{{app.name}}&lt;/div&gt;&quot;);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -780,7 +770,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4277"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4277</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4367"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4367</code></a>
                                                         </p>
                                                 
                                                 
@@ -852,75 +842,75 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // html
-                                                        &lt;h3&gt;关联1: 关联相同字段&lt;/h3&gt;
-                                                        &lt;input b-model=&quot;page.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
-                                                        &lt;div class=&quot;scope1&quot;&gt;
-                                                            &lt;input b-model=&quot;page1.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;h3&gt;关联2: 关联到不同字段&lt;/h3&gt;
-                                                        &lt;input b-model=&quot;page.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
-                                                        &lt;div class=&quot;scope1&quot;&gt;
-                                                            &lt;input b-model=&quot;page1.props.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;h3&gt;关联3: 关联到根路径&lt;/h3&gt;
-                                                        &lt;input b-model=&quot;page.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
-                                                        &lt;div class=&quot;scope1&quot;&gt;
-                                                            &lt;input b-model=&quot;page1.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
-                                                        &lt;/div&gt;
+                                                                <pre class="code prettyprint"><code>       // html
+                                                       &lt;h3&gt;关联1: 关联相同字段&lt;/h3&gt;
+                                                       &lt;input b-model=&quot;page.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
+                                                       &lt;div class=&quot;scope1&quot;&gt;
+                                                           &lt;input b-model=&quot;page1.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
+                                                       &lt;/div&gt;
+                                                       &lt;h3&gt;关联2: 关联到不同字段&lt;/h3&gt;
+                                                       &lt;input b-model=&quot;page.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
+                                                       &lt;div class=&quot;scope1&quot;&gt;
+                                                           &lt;input b-model=&quot;page1.props.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
+                                                       &lt;/div&gt;
+                                                       &lt;h3&gt;关联3: 关联到根路径&lt;/h3&gt;
+                                                       &lt;input b-model=&quot;page.attrs.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
+                                                       &lt;div class=&quot;scope1&quot;&gt;
+                                                           &lt;input b-model=&quot;page1.test&quot; placeholder=&quot;&quot; type=&quot;text&quot;&gt;
+                                                       &lt;/div&gt;
                                                 
-                                                       // 可以在路由init以后,作为整个应用的联动数据处理
-                                                        var bs = bui.store({
-                                                            scope: &quot;page&quot;, // 用于区分公共数据及当前数据的唯一值
-                                                            data: {
-                                                                attrs: {
-                                                                    &quot;test&quot;: &quot;123&quot;,
-                                                                }
-                                                            },
-                                                            methods: {},
-                                                            watch: {},
-                                                            computed: {},
-                                                            templates: {},
-                                                            mounted: function() {
+                                                      // 可以在路由init以后,作为整个应用的联动数据处理
+                                                       var bs = bui.store({
+                                                           scope: &quot;page&quot;, // 用于区分公共数据及当前数据的唯一值
+                                                           data: {
+                                                               attrs: {
+                                                                   &quot;test&quot;: &quot;123&quot;,
+                                                               }
+                                                           },
+                                                           methods: {},
+                                                           watch: {},
+                                                           computed: {},
+                                                           templates: {},
+                                                           mounted: function() {
                                                 
-                                                            }
-                                                        })
-                                                
-                                                
-                                                        var bs2 = bui.store({
-                                                            el: &quot;.scope1&quot;,
-                                                            scope: &quot;page1&quot;, // 用于区分公共数据及当前数据的唯一值
-                                                            data: {
-                                                                attrs: {
-                                                                    test: &quot;111&quot;
-                                                                },
-                                                                props: {
-                                                                    test: &quot;111&quot;
-                                                                },
-                                                                test: &quot;111&quot;
-                                                            },
-                                                            methods: {},
-                                                            watch: {},
-                                                            computed: {},
-                                                            templates: {},
-                                                            mounted: function() {
-                                                
-                                                            }
-                                                        })
+                                                           }
+                                                       })
                                                 
                                                 
-                                                        // 关联1: 关联多个相同字段
-                                                        bs.connect(bs2);
+                                                       var bs2 = bui.store({
+                                                           el: &quot;.scope1&quot;,
+                                                           scope: &quot;page1&quot;, // 用于区分公共数据及当前数据的唯一值
+                                                           data: {
+                                                               attrs: {
+                                                                   test: &quot;111&quot;
+                                                               },
+                                                               props: {
+                                                                   test: &quot;111&quot;
+                                                               },
+                                                               test: &quot;111&quot;
+                                                           },
+                                                           methods: {},
+                                                           watch: {},
+                                                           computed: {},
+                                                           templates: {},
+                                                           mounted: function() {
                                                 
-                                                        // 关联2: 关联到不同字段
-                                                        // bs.connect(bs2, &quot;attrs&quot;, &quot;props&quot;);
+                                                           }
+                                                       })
                                                 
-                                                        // 关联3: 关联到根路径
-                                                        // bs.connect(bs2, &quot;attrs&quot;, &quot;&quot;);
                                                 
-                                                        
-                                                        // 关联4: 关联指定字段
-                                                        // bs.connect(bs2, &quot;attrs.test&quot;);
+                                                       // 关联1: 关联多个相同字段
+                                                       bs.connect(bs2);
+                                                
+                                                       // 关联2: 关联到不同字段
+                                                       // bs.connect(bs2, &quot;attrs&quot;, &quot;props&quot;);
+                                                
+                                                       // 关联3: 关联到根路径
+                                                       // bs.connect(bs2, &quot;attrs&quot;, &quot;&quot;);
+                                                
+                                                       
+                                                       // 关联4: 关联指定字段
+                                                       // bs.connect(bs2, &quot;attrs.test&quot;);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -948,7 +938,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5022"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5022</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5113"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5113</code></a>
                                                         </p>
                                                 
                                                 
@@ -984,12 +974,12 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       方法1:
-                                                       var page = bs.delete(&quot;size&quot;);
-                                                       // { size: 1}
+                                                                <pre class="code prettyprint"><code>      方法1:
+                                                      var page = bs.delete(&quot;size&quot;);
+                                                      // { size: 1}
                                                 
-                                                       方法2: 指定字段层级
-                                                       var page = bs.delete(&quot;size.num&quot;);
+                                                      方法2: 指定字段层级
+                                                      var page = bs.delete(&quot;size.num&quot;);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1011,7 +1001,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5239"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5239</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5330"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5330</code></a>
                                                         </p>
                                                 
                                                 
@@ -1030,7 +1020,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       bs.destroy()
+                                                                <pre class="code prettyprint"><code>      bs.destroy()
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1058,7 +1048,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4522"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4522</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4612"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4612</code></a>
                                                         </p>
                                                 
                                                 
@@ -1095,15 +1085,15 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       var bs = bui.store({
-                                                           el:&quot;&quot;,
-                                                           scope:&quot;&quot;,
-                                                           data: {
-                                                               test: &quot;2222&quot;
-                                                           }
-                                                       })
-                                                       // 取消关联test字段, 不传则是取消所有关联的相同字段. 下次改变就不会触发bs2.test变更.
-                                                       bs.disconect(&quot;test&quot;);
+                                                                <pre class="code prettyprint"><code>      var bs = bui.store({
+                                                          el:&quot;&quot;,
+                                                          scope:&quot;&quot;,
+                                                          data: {
+                                                              test: &quot;2222&quot;
+                                                          }
+                                                      })
+                                                      // 取消关联test字段, 不传则是取消所有关联的相同字段. 下次改变就不会触发bs2.test变更.
+                                                      bs.disconect(&quot;test&quot;);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1131,7 +1121,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4254"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4254</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4344"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4344</code></a>
                                                         </p>
                                                 
                                                 
@@ -1167,7 +1157,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       var page = bs.get(&quot;size&quot;);
+                                                                <pre class="code prettyprint"><code>      var page = bs.get(&quot;size&quot;);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1195,7 +1185,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l748"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:748</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l756"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:756</code></a>
                                                         </p>
                                                 
                                                 
@@ -1230,10 +1220,10 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 监听a变量变更的时候,触发回调
-                                                        bs.nextTick(function () {
-                                                            // 执行控件的初始化
-                                                        })</code></pre>
+                                                                <pre class="code prettyprint"><code>       // 监听a变量变更的时候,触发回调
+                                                       bs.nextTick(function () {
+                                                           // 执行控件的初始化
+                                                       })</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -1263,7 +1253,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5147"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5147</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5238"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5238</code></a>
                                                         </p>
                                                 
                                                 
@@ -1311,17 +1301,17 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       var log = function(val){
-                                                          console.log(val)  // 2
-                                                        }
-                                                        // 监听 page 改变的时候触发
-                                                        bs.on(&quot;size&quot;,log)
+                                                                <pre class="code prettyprint"><code>      var log = function(val){
+                                                         console.log(val)  // 2
+                                                       }
+                                                       // 监听 page 改变的时候触发
+                                                       bs.on(&quot;size&quot;,log)
                                                 
-                                                        // 取消
-                                                        bs.off(&quot;page&quot;,log)
+                                                       // 取消
+                                                       bs.off(&quot;page&quot;,log)
                                                 
-                                                        // 修改 page 数据
-                                                        bs.set(&quot;page&quot;,2);
+                                                       // 修改 page 数据
+                                                       bs.set(&quot;page&quot;,2);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1352,7 +1342,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5071"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5071</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5162"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5162</code></a>
                                                         </p>
                                                 
                                                 
@@ -1400,21 +1390,21 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       // 监听 size 改变的时候触发
-                                                        bs.on(&quot;size&quot;,function(val){
-                                                          console.log(val)  // 2
-                                                        })
+                                                                <pre class="code prettyprint"><code>      // 监听 size 改变的时候触发
+                                                       bs.on(&quot;size&quot;,function(val){
+                                                         console.log(val)  // 2
+                                                       })
                                                 
-                                                        // 监听 size 下 name 改变的时候触发
-                                                        bs.on(&quot;size.num&quot;,function(val){
-                                                          console.log(val)  // 3
-                                                        })
+                                                       // 监听 size 下 name 改变的时候触发
+                                                       bs.on(&quot;size.num&quot;,function(val){
+                                                         console.log(val)  // 3
+                                                       })
                                                 
-                                                        // 修改 size 数据
-                                                        bs.set(&quot;size&quot;,2);
+                                                       // 修改 size 数据
+                                                       bs.set(&quot;size&quot;,2);
                                                 
-                                                        // 修改 size.num 数据
-                                                        bs.set(&quot;size.num&quot;,3);
+                                                       // 修改 size.num 数据
+                                                       bs.set(&quot;size.num&quot;,3);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1445,7 +1435,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5109"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5109</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5200"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5200</code></a>
                                                         </p>
                                                 
                                                 
@@ -1493,21 +1483,21 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       // 监听 page 改变的时候触发
-                                                        bs.one(&quot;page&quot;,function(val){
-                                                          console.log(val)  // 2
-                                                        })
+                                                                <pre class="code prettyprint"><code>      // 监听 page 改变的时候触发
+                                                       bs.one(&quot;page&quot;,function(val){
+                                                         console.log(val)  // 2
+                                                       })
                                                 
-                                                        // 监听 page 下 name 改变的时候触发
-                                                        bs.one(&quot;page.name&quot;,function(val){
-                                                          console.log(val)  // 3
-                                                        })
+                                                       // 监听 page 下 name 改变的时候触发
+                                                       bs.one(&quot;page.name&quot;,function(val){
+                                                         console.log(val)  // 3
+                                                       })
                                                 
-                                                        // 修改 page 数据
-                                                        bs.set(&quot;page&quot;,2);
+                                                       // 修改 page 数据
+                                                       bs.set(&quot;page&quot;,2);
                                                 
-                                                        // 修改 page.name 数据
-                                                        bs.set(&quot;page.name&quot;,3);
+                                                       // 修改 page.name 数据
+                                                       bs.set(&quot;page.name&quot;,3);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1538,7 +1528,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l772"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:772</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l780"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:780</code></a>
                                                         </p>
                                                 
                                                 
@@ -1584,15 +1574,15 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 监听a变量变更的时候,触发回调, 当模板上有多个size数据的时候, 会触发多次.
-                                                        bs.oneTick(&quot;size&quot;,function () {
-                                                            // 执行控件的初始化
-                                                        })
+                                                                <pre class="code prettyprint"><code>       // 监听a变量变更的时候,触发回调, 当模板上有多个size数据的时候, 会触发多次.
+                                                       bs.oneTick(&quot;size&quot;,function () {
+                                                           // 执行控件的初始化
+                                                       })
                                                 
-                                                        // 相同键值 size ,以第一个为主, 以下函数不会执行.
-                                                        bs.oneTick(&quot;size&quot;,function () {
-                                                            // 执行控件的初始化
-                                                        })</code></pre>
+                                                       // 相同键值 size ,以第一个为主, 以下函数不会执行.
+                                                       bs.oneTick(&quot;size&quot;,function () {
+                                                           // 执行控件的初始化
+                                                       })</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -1622,7 +1612,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4558"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4558</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4648"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4648</code></a>
                                                         </p>
                                                 
                                                 
@@ -1670,19 +1660,19 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       方法1:
-                                                       var page = bs.setState(&quot;size&quot;,1);
-                                                       // { size: 1}
+                                                                <pre class="code prettyprint"><code>      方法1:
+                                                      var page = bs.setState(&quot;size&quot;,1);
+                                                      // { size: 1}
                                                 
-                                                       会触发以下dom的变更
-                                                       &lt;b b-text=&quot;page.size&quot;&gt;&lt;/b&gt;
+                                                      会触发以下dom的变更
+                                                      &lt;b b-text=&quot;page.size&quot;&gt;&lt;/b&gt;
                                                 
-                                                       方法2: 指定字段层级
-                                                       var page = bs.setState(&quot;size.num&quot;,1);
-                                                       // { size: { num: 1 }}
+                                                      方法2: 指定字段层级
+                                                      var page = bs.setState(&quot;size.num&quot;,1);
+                                                      // { size: { num: 1 }}
                                                 
-                                                       会触发以下dom的变更
-                                                       &lt;b b-text=&quot;page.size.num&quot;&gt;&lt;/b&gt;
+                                                      会触发以下dom的变更
+                                                      &lt;b b-text=&quot;page.size.num&quot;&gt;&lt;/b&gt;
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1713,7 +1703,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4705"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4705</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l4795"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:4795</code></a>
                                                         </p>
                                                 
                                                 
@@ -1761,25 +1751,25 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       方法1:
-                                                       var page = bs.setState(&quot;size&quot;,1);
-                                                       // { size: 1}
+                                                                <pre class="code prettyprint"><code>      方法1:
+                                                      var page = bs.setState(&quot;size&quot;,1);
+                                                      // { size: 1}
                                                 
-                                                       会触发以下dom的变更
-                                                       &lt;b b-text=&quot;page.size&quot;&gt;&lt;/b&gt;
+                                                      会触发以下dom的变更
+                                                      &lt;b b-text=&quot;page.size&quot;&gt;&lt;/b&gt;
                                                 
-                                                       方法2: 指定字段层级
-                                                       var page = bs.setState(&quot;size.num&quot;,1);
-                                                       // { size: { name: 1 }}
+                                                      方法2: 指定字段层级
+                                                      var page = bs.setState(&quot;size.num&quot;,1);
+                                                      // { size: { name: 1 }}
                                                 
-                                                       会触发以下dom的变更
-                                                       &lt;b b-text=&quot;page.size.num&quot;&gt;&lt;/b&gt;
+                                                      会触发以下dom的变更
+                                                      &lt;b b-text=&quot;page.size.num&quot;&gt;&lt;/b&gt;
                                                 
-                                                       方法3: 1.6.7 修改根data数据
+                                                      方法3: 1.6.7 修改根data数据
                                                 
-                                                       var page = bs.setState(&quot;$data&quot;,{ size: 111});
+                                                      var page = bs.setState(&quot;$data&quot;,{ size: 111});
                                                 
-                                                       &lt;b b-text=&quot;page.size&quot;&gt;&lt;/b&gt;
+                                                      &lt;b b-text=&quot;page.size&quot;&gt;&lt;/b&gt;
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1807,7 +1797,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5182"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5182</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l5273"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:5273</code></a>
                                                         </p>
                                                 
                                                 
@@ -1843,8 +1833,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       // 触发 2 为传过去的参数
-                                                       bs.trigger(&quot;page&quot;,&quot;2&quot;)
+                                                                <pre class="code prettyprint"><code>      // 触发 2 为传过去的参数
+                                                      bs.trigger(&quot;page&quot;,&quot;2&quot;)
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1875,7 +1865,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l816"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:816</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l824"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:824</code></a>
                                                         </p>
                                                 
                                                 
@@ -1921,14 +1911,14 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 监听a变量变更的时候,触发回调
-                                                        var unwatcha = bs.watch(&quot;a&quot;,function (newVal,oldVal) {
-                                                            console.log(newVal);
-                                                            console.log(oldVal);
-                                                        })
+                                                                <pre class="code prettyprint"><code>       // 监听a变量变更的时候,触发回调
+                                                       var unwatcha = bs.watch(&quot;a&quot;,function (newVal,oldVal) {
+                                                           console.log(newVal);
+                                                           console.log(oldVal);
+                                                       })
                                                 
-                                                        1.6.2 新增 取消指定监听
-                                                        unwatcha();
+                                                       1.6.2 新增 取消指定监听
+                                                       unwatcha();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1955,7 +1945,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l705"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:705</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l713"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:713</code></a>
                                                         </p>
                                                 
                                                 
@@ -1973,8 +1963,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        //
-                                                        console.log( bs.$children )</code></pre>
+                                                                <pre class="code prettyprint"><code>       //
+                                                       console.log( bs.$children )</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -1994,7 +1984,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l685"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:685</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l693"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:693</code></a>
                                                         </p>
                                                 
                                                 
@@ -2012,8 +2002,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        //
-                                                        console.log( bs.$el )</code></pre>
+                                                                <pre class="code prettyprint"><code>       //
+                                                       console.log( bs.$el )</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -2033,7 +2023,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l715"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:715</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l723"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:723</code></a>
                                                         </p>
                                                 
                                                 
@@ -2051,8 +2041,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        //
-                                                        console.log( bs.$options )</code></pre>
+                                                                <pre class="code prettyprint"><code>       //
+                                                       console.log( bs.$options )</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -2072,7 +2062,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l695"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:695</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l703"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:703</code></a>
                                                         </p>
                                                 
                                                 
@@ -2090,8 +2080,8 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        //
-                                                        console.log( bs.$parent )</code></pre>
+                                                                <pre class="code prettyprint"><code>       //
+                                                       console.log( bs.$parent )</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -2111,7 +2101,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.store.js.html#l725"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:725</code></a>
+                                                        <a href="../files/src_scripts_core_bui.store.js.html#l733"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.store.js:733</code></a>
                                                         </p>
                                                 
                                                 
@@ -2129,19 +2119,19 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 页面的dom
-                                                        &lt;div class=&quot;bui-page&quot;&gt;
-                                                            &lt;main&gt;
-                                                                &lt;div ref=&quot;test&quot;&gt;通过$refs获取&lt;/div&gt;
-                                                            &lt;/main&gt;
-                                                        &lt;/div&gt;
-                                                        var bs = bui.store({
-                                                            methods:{
-                                                                init: functioin(){
-                                                                    console.log(this.$refs.test.innerText)
-                                                                }
-                                                            }
-                                                        })
+                                                                <pre class="code prettyprint"><code>       // 页面的dom
+                                                       &lt;div class=&quot;bui-page&quot;&gt;
+                                                           &lt;main&gt;
+                                                               &lt;div ref=&quot;test&quot;&gt;通过$refs获取&lt;/div&gt;
+                                                           &lt;/main&gt;
+                                                       &lt;/div&gt;
+                                                       var bs = bui.store({
+                                                           methods:{
+                                                               init: functioin(){
+                                                                   console.log(this.$refs.test.innerText)
+                                                               }
+                                                           }
+                                                       })
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2166,12 +2156,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

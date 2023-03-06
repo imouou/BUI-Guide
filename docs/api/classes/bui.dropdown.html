@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -262,12 +263,33 @@
                                     
                                                                 </li>
                                                                 <li class="param">
+                                                                        <code class="param-name">data</code>
+                                                                        <span class="type">Array</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5新增, [{name:&quot;&quot;,value:&quot;&quot;}]</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
                                                                         <code class="param-name optional">[uid]</code>
                                                                         <span class="type">String</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
                                                                         <p>1.6.6新增，实例的自定义唯一名字，用于命令式调用</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[event]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.7.4 默认 &quot;click&quot; | &quot;hover&quot;</p>
                                     
                                                                     </div>
                                     
@@ -291,16 +313,6 @@
                                                                     <div class="param-description">
                                                                         <p>文本值的位置</p>
                                     
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[data] 1.5新增, [{name:&quot;&quot;,value:&quot;&quot;}]</code>
-                                                                        <span class="type">Array</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        
                                                                     </div>
                                     
                                                                 </li>
@@ -627,7 +639,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l473"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:473</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l487"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:487</code></a>
                                                         </p>
                                                 
                                                 
@@ -692,7 +704,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l635"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:635</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l649"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:649</code></a>
                                                         </p>
                                                 
                                                 
@@ -752,7 +764,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l601"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:601</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l615"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:615</code></a>
                                                         </p>
                                                 
                                                 
@@ -793,7 +805,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l618"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:618</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l632"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:632</code></a>
                                                         </p>
                                                 
                                                 
@@ -833,7 +845,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l540"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:540</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l554"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:554</code></a>
                                                         </p>
                                                 
                                                 
@@ -873,7 +885,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l573"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:573</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l587"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:587</code></a>
                                                         </p>
                                                 
                                                 
@@ -920,7 +932,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l148"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:148</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l151"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:151</code></a>
                                                         </p>
                                                 
                                                 
@@ -978,7 +990,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l679"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:679</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l693"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:693</code></a>
                                                         </p>
                                                 
                                                 
@@ -1057,7 +1069,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l457"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:457</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l471"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:471</code></a>
                                                         </p>
                                                 
                                                 
@@ -1097,7 +1109,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l557"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:557</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l571"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:571</code></a>
                                                         </p>
                                                 
                                                 
@@ -1143,7 +1155,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l500"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:500</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l514"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:514</code></a>
                                                         </p>
                                                 
                                                 
@@ -1210,7 +1222,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l353"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:353</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l365"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:365</code></a>
                                                         </p>
                                                 
                                                 
@@ -1274,7 +1286,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l439"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:439</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l453"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:453</code></a>
                                                         </p>
                                                 
                                                 
@@ -1331,7 +1343,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l664"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:664</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l678"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:678</code></a>
                                                         </p>
                                                 
                                                 
@@ -1392,7 +1404,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l727"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:727</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l741"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:741</code></a>
                                                         </p>
                                                 
                                                 
@@ -1456,7 +1468,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l706"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:706</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dropdown.js.html#l720"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dropdown.js:720</code></a>
                                                         </p>
                                                 
                                                 
@@ -1530,12 +1542,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

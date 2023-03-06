@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -498,6 +499,56 @@
                                                       &lt;/div&gt;
                                                   &lt;/li&gt;
                                               &lt;/ul&gt;
+                                    </code></pre>
+                                    <p>js:</p>
+                                    <pre class="code prettyprint"><code>      // 第1种初始化
+                                          var uiListview = bui.listview({
+                                                id: &quot;#listview&quot;,
+                                                data: [{ &quot;text&quot;: &quot;置顶&quot;, &quot;classname&quot;: &quot;primary&quot; }, { &quot;text&quot;: &quot;删除&quot;, &quot;classname&quot;: &quot;danger&quot; }],
+                                                position: &quot;right&quot;, //默认就是右边,所以可以不用传
+                                                callback: function (e) {
+                                                    // this 为滑动出来的操作按钮
+                                                    var $this = $(e.target);
+                                                   var text = $this.text();
+                                                   // bui 1.7.3 的新增做法
+                                                    switch (text) {
+                                                        case &quot;删除&quot;:
+                                                            bui.confirm(&quot;确定要删除吗&quot;, (e) =&gt; {
+                                                                //this 是指点击的按钮
+                                                                var text2 = $(e.target).text();
+                                                                if (text2 == &quot;确定&quot;) {
+                                                                    // 执行删除整行操作
+                                                                    this.remove();
+                                                                }
+                                                            })
+                                                            break;
+                                                        case &quot;置顶&quot;:
+                                                           $this.text(&quot;取消置顶&quot;);
+                                                            this.pin();
+                                                            break;
+                                                        case &quot;取消置顶&quot;:
+                                                            $this.text(&quot;置顶&quot;);
+                                                           this.unpin();
+                                                            break;
+                                                    }
+                                                   // 1.7.3 以下
+                                                    // if (text == '删除') {
+                                                    //     this.remove()
+                                                    //     bui.confirm(&quot;确定要删除吗&quot;, function (e) {
+                                                    //         //this 是指点击的按钮
+                                                    //         var text2 = $(e.target).text();
+                                                    //         if (text2 == &quot;确定&quot;) {
+                                                    //             // 执行删除整行操作
+                                                    //             $this.parents(&quot;li&quot;).fadeOut(300, function () {
+                                                    //                 $(this).remove();
+                                                    //             });
+                                                    //         }
+                                                    //     })
+                                                    // }
+                                                   // 不管做什么操作,先关闭按钮,不然会导致第一次点击无效.
+                                                    this.close();
+                                                }
+                                            });
                                        // 示例结构2: 禁止渲染
                                         
                                             &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
@@ -509,7 +560,7 @@
                                                 &lt;/div&gt;
                                               &lt;/li&gt;
                                             &lt;/ul&gt;
-                                       // 示例结构3: 静态渲染,可以允许左右都有按钮, 并且在动态加载的列表的时候, 应该只需要初始化一次
+                                       // 示例结构3: 静态渲染,可以允许左右都有按钮, 并且在动态加载的列表的时候, 只需要初始化一次
                                            &lt;ul id=&quot;listview&quot; class=&quot;bui-listview&quot;&gt;
                                               &lt;li status=&quot;1&quot;&gt;
                                                 &lt;div class=&quot;bui-btn bui-box&quot; href=&quot;pages/ui_controls/bui.listview.html&quot; param='{&quot;id&quot;:&quot;123&quot;}'&gt;
@@ -528,23 +579,9 @@
                                                 &lt;/div&gt;
                                               &lt;/li&gt;
                                             &lt;/ul&gt;
-                                    </code></pre>
-                                    <p>js:</p>
-                                    <pre class="code prettyprint"><code>      // 初始化
-                                          var uiListview = bui.listview({
-                                                  id: &quot;#listview&quot;,
-                                                  data: [{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;},
-                                                          { &quot;text&quot;: &quot;删除&quot;, &quot;classname&quot;:&quot;btn-red&quot;}],
-                                                  callback: function (e) {
-                                                    var index = $(e.target).text();
-                                                        if( index == &quot;修改&quot; ){
-                                                            //do something
-                                                        }
-                                                        this.close();
-                                                  }
-                                              });
-                                         
-                                          // 自定义模板初始化
+                                    
+                                          
+                                          // 第2种自定义模板初始化
                                           var uiListview = bui.listview({
                                                   id: &quot;#listview&quot;,
                                                   data: [{ &quot;text&quot;: &quot;修改&quot;, &quot;classname&quot;:&quot;btn-blue&quot;},
@@ -602,7 +639,15 @@
                             
                                                         </li>
                                                         <li class="index-item method">
+                                                            <a href="#method_index">index</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
                                                             <a href="#method_init">init</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_ispin">ispin</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -614,7 +659,19 @@
                             
                                                         </li>
                                                         <li class="index-item method">
+                                                            <a href="#method_pin">pin</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_remove">remove</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
                                                             <a href="#method_unlock">unlock</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_unpin">unpin</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -663,7 +720,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l363"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:363</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l409"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:409</code></a>
                                                         </p>
                                                 
                                                 
@@ -714,7 +771,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l404"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:404</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l572"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:572</code></a>
                                                         </p>
                                                 
                                                 
@@ -761,7 +818,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l462"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:462</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l630"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:630</code></a>
                                                         </p>
                                                 
                                                 
@@ -805,6 +862,59 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_index" class="method item">
+                                                    <h3 class="name"><code>index</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                        <span class="returns-inline">
+                                                            <span class="type">Number</span>
+                                                        </span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l425"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:425</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.3</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>返回当前行索引</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                        <div class="returns">
+                                                            <h4>Returns:</h4>
+                                                
+                                                            <div class="returns-description">
+                                                                        <span class="type">Number</span>:
+                                                                    <p>[ 没有激活状态下是 -1 ]</p>
+                                                
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //返回当前行索引
+                                                      var index = uiListview.index();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_init" class="method item">
                                                     <h3 class="name"><code>init</code></h3>
                                                 
@@ -827,7 +937,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l202"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:202</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l248"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:248</code></a>
                                                         </p>
                                                 
                                                 
@@ -860,6 +970,47 @@
                                                 
                                                 
                                                 </div>
+                                                <div id="method_ispin" class="method item">
+                                                    <h3 class="name"><code>ispin</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l470"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:470</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.3</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>是否置顶</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //置顶
+                                                      var ispin = uiListview.ispin();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_lock" class="method item">
                                                     <h3 class="name"><code>lock</code></h3>
                                                 
@@ -876,7 +1027,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l422"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:422</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l590"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:590</code></a>
                                                         </p>
                                                 
                                                 
@@ -927,7 +1078,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l511"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:511</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l679"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:679</code></a>
                                                         </p>
                                                 
                                                 
@@ -992,6 +1143,88 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_pin" class="method item">
+                                                    <h3 class="name"><code>pin</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l448"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:448</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.3</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>置顶当前行，置顶会给当前行增加 bui-pin 样式，可以自行定义展示效果</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //置顶
+                                                      uiListview.pin();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_remove" class="method item">
+                                                    <h3 class="name"><code>remove</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l526"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:526</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.3</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>移除当前行</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //移除当前行
+                                                      uiListview.remove();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_unlock" class="method item">
                                                     <h3 class="name"><code>unlock</code></h3>
                                                 
@@ -1008,7 +1241,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l442"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:442</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l610"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:610</code></a>
                                                         </p>
                                                 
                                                 
@@ -1029,6 +1262,74 @@
                                                             <div class="example-content">
                                                                 <pre class="code prettyprint"><code>      //关闭菜单
                                                       uiListview.unlock();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_unpin" class="method item">
+                                                    <h3 class="name"><code>unpin</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[bool]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l489"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:489</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.3</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>取消固定</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[bool]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>默认 false (取消置顶后放到置顶后) | true (取消置顶后放到最后)</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //取消置顶后放到置顶后
+                                                      uiListview.unpin();
+                                                
+                                                      //取消置顶后放到最后
+                                                      uiListview.unpin(true);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1055,7 +1356,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l494"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:494</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l662"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:662</code></a>
                                                         </p>
                                                 
                                                 
@@ -1116,7 +1417,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l559"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:559</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l727"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:727</code></a>
                                                         </p>
                                                 
                                                 
@@ -1181,7 +1482,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l539"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:539</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.listview.js.html#l707"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.listview.js:707</code></a>
                                                         </p>
                                                 
                                                 
@@ -1256,12 +1557,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

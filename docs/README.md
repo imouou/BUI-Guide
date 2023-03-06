@@ -85,8 +85,8 @@
 
 > cdn beta 版地址: 用于修复问题后快速发布,可以下载使用，不建议直接引入地址用于生产环境.
 
-- https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css
-- https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js
+- https://unpkg.com/buijs/lib/latest/bui.css
+- https://unpkg.com/buijs/lib/latest/bui.js
 
 > 如果要指定版本 https://cdn.jsdelivr.net/npm/buijs@1.5.40/lib/latest/bui.js
 

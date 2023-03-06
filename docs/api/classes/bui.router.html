@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -294,12 +295,34 @@
                                     
                                                                 </li>
                                                                 <li class="param">
+                                                                        <code class="param-name optional">[backEffect]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.7.4 新增，用于单独处理后退动画，比方iphone手势后退会看上去两次效果，设置为&quot;none&quot; 以后，关闭掉所有后退动画 默认: &quot;&quot; | none</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
                                                                         <code class="param-name optional">[indexModule]</code>
                                                                         <span class="type">Object</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
                                                                         <p>1.4.3新增, 首页地址配置, 默认: { moduleName: &quot;main&quot;,template: &quot;pages/main/main.html&quot;, script: &quot;pages/main/main.js&quot; }</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[errorPage]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>自定义404页面 默认为&quot;&quot; | &quot;pages/404.html&quot;</p>
                                     
                                                                     </div>
                                     
@@ -321,7 +344,7 @@
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>1.6.3新增 默认: false | true 开启滑动swipeleft,swiperight事件</p>
+                                                                        <p>1.6.3新增 默认: false | true 开启滑动swipeleft,swiperight事件 ，可以用来处理ios的手势滑动有2次的效果</p>
                                     
                                                                     </div>
                                     
@@ -333,6 +356,17 @@
                                     
                                                                     <div class="param-description">
                                                                         <p>1.6.3新增 默认: false | true 开启滑动返回, 必须在swipe为true才会生效</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[backEffect]</code>
+                                                                        <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.7.3新增 全局后退效果 默认: &quot;&quot; 默认为空，按前进的方式后退，&quot;none&quot; || &quot;push&quot; || &quot;slide&quot; || &quot;cover&quot; || &quot;fadein&quot;</p>
                                     
                                                                     </div>
                                     
@@ -574,21 +608,24 @@
                                      js: 路由权限拦截, 
                                       // 判断示例,正常用户信息应该使用 bui.storage 来操作. 
                                       var userinfo = null;
+                                      
+                                      // 配置页面组件白名单
+                                      var whitelist = [&quot;pages/login/login&quot;];
                                       bui.ready(function(){
-                                        router.init({
-                                            id: &quot;#bui-router&quot;,
-                                            beforeLoad: function(e) {
-                                                // 如果没有登录,并且当前页面不是登录页面,则执行跳转, 并且要return false; 这样没有历史记录,不能使用后退.
-                                                // 1.6.x 统一使用 e.target.name , 1.4.x-1.5.x 使用 e.target.pid ;
-                                                if( !userinfo &amp;&amp; e.target.name !== &quot;pages/login/login&quot;){
-                                                    router.load({
-                                                        url:&quot;pages/login/login.html&quot;
-                                                    })
-                                                    return false;
+                                            router.init({
+                                                id: &quot;#bui-router&quot;,
+                                                beforeLoad: function(e) {
+                                                    // 如果没有登录,并且当前页面不是登录页面,则执行跳转, 并且要return false; 这样没有历史记录,不能使用后退.
+                                                    // 1.6.x 统一使用 e.target.name , 1.4.x-1.5.x 使用 e.target.pid ;
+                                                    if( !userinfo &amp;&amp; !whitelist.includes(e.target.name) ){
+                                                        router.load({
+                                                            url:&quot;pages/login/login.html&quot;
+                                                        })
+                                                        return false;
+                                                    }
                                                 }
-                                            }
+                                            })
                                         })
-                                      })
                                     </code></pre>
                                     
                                                 </div>
@@ -633,11 +670,19 @@
                             
                                                         </li>
                                                         <li class="index-item method">
+                                                            <a href="#method_get">get</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
                                                             <a href="#method_getPageParams">getPageParams</a>
                             
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_getPartParams">getPartParams</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_go">go</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -675,6 +720,10 @@
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_refresh">refresh</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_remove">remove</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -727,7 +776,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2982"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2982</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3020"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3020</code></a>
                                                         </p>
                                                 
                                                 
@@ -791,7 +840,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2281"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2281</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2317"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2317</code></a>
                                                         </p>
                                                 
                                                 
@@ -927,7 +976,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2938"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2938</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2976"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2976</code></a>
                                                         </p>
                                                 
                                                 
@@ -979,7 +1028,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2953"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2953</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2991"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2991</code></a>
                                                         </p>
                                                 
                                                 
@@ -1047,7 +1096,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2512"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2512</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2547"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2547</code></a>
                                                         </p>
                                                 
                                                 
@@ -1090,6 +1139,116 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_get" class="method item">
+                                                    <h3 class="name"><code>get</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[page]</code>
+                                                                </li>
+                                                                <li class="arg">
+                                                                        <code class="optional">[callback]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                        <span class="returns-inline">
+                                                            <span class="type">Object</span>
+                                                        </span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3087"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3087</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.4</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>路由页面单独拦截，在路由初始化前执行才会有效</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[page]</code>
+                                                                        <span class="type">String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>路由模块名</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function | Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>路由进入后拦截 callback ，如果是对象 {beforeLoad:null,loaded:null}</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                        <div class="returns">
+                                                            <h4>Returns:</h4>
+                                                
+                                                            <div class="returns-description">
+                                                                        <span class="type">Object</span>:
+                                                                    <p>[路由本身]</p>
+                                                
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       window.router = bui.router();
+                                                
+                                                       // 简单的拦截
+                                                       router.get(&quot;main&quot;,function(res){
+                                                           console.log(res)
+                                                
+                                                           // false 不加载
+                                                           return false;
+                                                
+                                                       })
+                                                
+                                                       // 对象的方式
+                                                       router.get(&quot;main&quot;,{
+                                                           beforeLoad:function(res){
+                                                               console.log(res)
+                                                           },
+                                                           loaded:function(res){
+                                                               console.log(res)
+                                                           }
+                                                       })
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_getPageParams" class="method item">
                                                     <h3 class="name"><code>getPageParams</code></h3>
                                                 
@@ -1108,7 +1267,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2677"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2677</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2712"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2712</code></a>
                                                         </p>
                                                 
                                                 
@@ -1166,7 +1325,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2698"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2698</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2733"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2733</code></a>
                                                         </p>
                                                 
                                                 
@@ -1222,6 +1381,79 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_go" class="method item">
+                                                    <h3 class="name"><code>go</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[page]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3130"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3130</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.4</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>跳转到指定页面，如果已经存在，以缓存的形式，并且默认不触发历史记录修改</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[page]</code>
+                                                                        <span class="type">String | Object | Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>路由模块名,如果是对象 {url: &quot;&quot;,refresh: false,param: {}, syncHistory:false }</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       // 跳转回首页
+                                                       router.go(&quot;main&quot;)
+                                                
+                                                       // 页面如果已经加载过，可以使用数字 -1 代表当前历史记录的上一层， 0,1 代表历史记录的索引.
+                                                       router.go(1);
+                                                
+                                                       router.go(-1);
+                                                
+                                                       // 支持复杂参数
+                                                       router.go({url: &quot;&quot;,refresh: false,param: {} })
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_history" class="method item">
                                                     <h3 class="name"><code>history</code></h3>
                                                 
@@ -1241,7 +1473,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l276"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:276</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l302"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:302</code></a>
                                                         </p>
                                                 
                                                 
@@ -1300,7 +1532,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l531"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:531</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l557"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:557</code></a>
                                                         </p>
                                                 
                                                 
@@ -1362,7 +1594,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3012"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3012</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3050"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3050</code></a>
                                                         </p>
                                                 
                                                 
@@ -1431,7 +1663,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2724"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2724</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2759"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2759</code></a>
                                                         </p>
                                                 
                                                 
@@ -1502,7 +1734,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1191"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1191</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1175"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1175</code></a>
                                                         </p>
                                                 
                                                 
@@ -1545,6 +1777,16 @@
                                                 
                                                                                 <div class="param-description">
                                                                                     <p>[传过去新页面的参数]</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name">firstAnimate</code>
+                                                                                    <span class="type">Boolean</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>[是否动画优先，跳转的页面如果有很多接口及渲染，可以开启，优先跳转再请求 默认 false | true]</p>
                                                 
                                                                                 </div>
                                                 
@@ -1643,7 +1885,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2173"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2173</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2209"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2209</code></a>
                                                         </p>
                                                 
                                                 
@@ -1752,7 +1994,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2864"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2864</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2902"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2902</code></a>
                                                         </p>
                                                 
                                                 
@@ -1840,7 +2082,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1075"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1075</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1059"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1059</code></a>
                                                         </p>
                                                 
                                                 
@@ -1950,7 +2192,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2623"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2623</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2658"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2658</code></a>
                                                         </p>
                                                 
                                                 
@@ -1970,6 +2212,85 @@
                                                             <div class="example-content">
                                                                 <pre class="code prettyprint"><code>       // 方法:
                                                        router.refresh();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_remove" class="method item">
+                                                    <h3 class="name"><code>remove</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[page]</code>
+                                                                </li>
+                                                                <li class="arg">
+                                                                        <code class="optional">[callback]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3240"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3240</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.4</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>删除指定模块，跳转上一个模块，main不能删除</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[page]</code>
+                                                                        <span class="type">Number | String</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>路由模块名或者索引</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                         
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       // 跳转指定模块
+                                                       router.remove(&quot;main&quot;)
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1999,7 +2320,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2648"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2648</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2683"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2683</code></a>
                                                         </p>
                                                 
                                                 
@@ -2087,7 +2408,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l645"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:645</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l671"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:671</code></a>
                                                         </p>
                                                 
                                                 
@@ -2131,7 +2452,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2912"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2912</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2950"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2950</code></a>
                                                         </p>
                                                 
                                                 
@@ -2196,7 +2517,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2890"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2890</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2928"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2928</code></a>
                                                         </p>
                                                 
                                                 
@@ -2272,12 +2593,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

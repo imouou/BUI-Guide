@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,9 +43,10 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-                
-                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-                
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -80,6 +81,7 @@
                                     <li><a href="../classes/bui.download.html">bui.download</a></li>
                                     <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
                                     <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
                                     <li><a href="../classes/bui.file.html">bui.file</a></li>
                                     <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
                                     <li><a href="../classes/bui.floor.html">bui.floor</a></li>
@@ -123,7 +125,6 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
-                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -258,41 +259,45 @@
                                     
                                                             <ul class="params-list">
                                                                 <li class="param">
-                                                                        <code class="param-name">cache</code>
+                                                                        <code class="param-name optional">[cache]</code>
                                                                         <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>[默认: true, 浏览器缓存脚本 | false, 不缓存 ]</p>
+                                                                        <p>默认: true, 浏览器缓存脚本 | false, 不缓存</p>
                                     
                                                                     </div>
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name">scriptSuffix</code>
+                                                                        <code class="param-name optional">[scriptSuffix]</code>
                                                                         <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>[默认: &quot;.js&quot;, 一般无需更改 ]</p>
+                                                                        <p>默认: &quot;.js&quot;, 一般无需更改</p>
                                     
                                                                     </div>
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name">needNative</code>
+                                                                        <code class="param-name optional">[needNative]</code>
                                                                         <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>[ 1.6.0新增, 请求是否使用设备原生方法, 默认: false | true  ]</p>
+                                                                        <p>1.6.0新增, 请求是否使用设备原生方法, 默认: false | true</p>
                                     
                                                                     </div>
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name">deepComponent</code>
+                                                                        <code class="param-name optional">[deepComponent]</code>
                                                                         <span class="type">Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>[1.6.0新增, 编译 component 标签时, 是否继续编译内部的component标签, 默认: true | false ]</p>
+                                                                        <p>1.6.0新增, 编译 component 标签时, 是否继续编译内部的component标签, 默认: true | false</p>
                                     
                                                                     </div>
                                     
@@ -307,8 +312,8 @@
                                                 <h4>Example:</h4>
                                     
                                                 <div class="example-content">
-                                                    <pre class="code prettyprint"><code>    // 默认已经初始化,无需再次初始化, 如果要修改,应该在 window.router 前面.
-                                        window.loader = bui.loader();
+                                                    <pre class="code prettyprint"><code>   // 默认已经初始化,无需再次初始化, 如果要修改,应该在 window.router 前面.
+                                       window.loader = bui.loader();
                                     </code></pre>
                                     
                                                 </div>
@@ -472,7 +477,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1139"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1139</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1146"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1146</code></a>
                                                         </p>
                                                 
                                                 
@@ -528,10 +533,10 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 检测所有模块是否都加载完毕
+                                                                <pre class="code prettyprint"><code>       例子1: 检测所有模块是否都加载完毕
                                                 
-                                                        var bool = loader.checkLoad([&quot;main&quot;]);
-                                                        console.log(bool)
+                                                       var bool = loader.checkLoad([&quot;main&quot;]);
+                                                       console.log(bool)
                                                 </code></pre>
                                                 
                                                             </div>
@@ -543,13 +548,7 @@
                                                         <div class="args">
                                                             <span class="paren">(</span><ul class="args-list inline commas">
                                                                 <li class="arg">
-                                                                        <code>id</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[loaded]</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[compiled]</code>
+                                                                        <code>option</code>
                                                                 </li>
                                                             </ul><span class="paren">)</span>
                                                         </div>
@@ -564,7 +563,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1423"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1423</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1432"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1432</code></a>
                                                         </p>
                                                 
                                                 
@@ -581,39 +580,70 @@
                                                 
                                                             <ul class="params-list">
                                                                 <li class="param">
-                                                                        <code class="param-name">id</code>
-                                                                        <span class="type">String | Object</span>
+                                                                        <code class="param-name">option</code>
+                                                                        <span class="type">Object</span>
                                                 
                                                 
                                                                     <div class="param-description">
-                                                                        <p>[ component 本身id ]</p>
-                                                
+                                                                         
                                                                     </div>
                                                 
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[loaded]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                                        <ul class="params-list">
+                                                                            <li class="param">
+                                                                                    <code class="param-name">id</code>
+                                                                                    <span class="type">String | Object</span>
                                                 
+                                                                                <div class="param-description">
+                                                                                    <p>component 本身id</p>
                                                 
-                                                                    <div class="param-description">
-                                                                        <p>每次编译完一个commponent执行</p>
+                                                                                </div>
                                                 
-                                                                    </div>
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[loaded]</code>
+                                                                                    <span class="type">Function</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[compiled]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                                                <div class="param-description">
+                                                                                    <p>每次编译完一个commponent执行</p>
                                                 
+                                                                                </div>
                                                 
-                                                                    <div class="param-description">
-                                                                        <p>编译完同级1个或多个commponent后执行,存在嵌套则会多次执行</p>
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[command]</code>
+                                                                                    <span class="type">Object</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
-                                                                    </div>
+                                                                                <div class="param-description">
+                                                                                    <p>1.7.3 新增 默认 html | append | prepend 可以通过 component 标签上的command属性指定</p>
                                                 
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[loaded]</code>
+                                                                                    <span class="type">Function</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>每次编译完一个commponent执行</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[compiled]</code>
+                                                                                    <span class="type">Function</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>编译完同级1个或多个commponent后执行,存在嵌套则会多次执行</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                        </ul>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -623,15 +653,15 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
+                                                                <pre class="code prettyprint"><code>       例子1: 
                                                 
-                                                        html: 
-                                                        &lt;component id=&quot;slide&quot; name=&quot;pages/components/slide/index&quot;&gt;&lt;/component&gt;
+                                                       html: 
+                                                       &lt;component id=&quot;slide&quot; name=&quot;pages/components/slide/index&quot;&gt;&lt;/component&gt;
                                                 
-                                                        js: 
-                                                        loader.component({
-                                                            id:&quot;#slide&quot;
-                                                        });
+                                                       js: 
+                                                       loader.component({
+                                                           id:&quot;#slide&quot;
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -646,7 +676,7 @@
                                                                         <code>id</code>
                                                                 </li>
                                                                 <li class="arg">
-                                                                        <code>param</code>
+                                                                        <code class="optional">[param]</code>
                                                                 </li>
                                                                 <li class="arg">
                                                                         <code class="optional">[beforeLoad]</code>
@@ -670,7 +700,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1668"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1668</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1688"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1688</code></a>
                                                         </p>
                                                 
                                                 
@@ -692,18 +722,19 @@
                                                 
                                                 
                                                                     <div class="param-description">
-                                                                        <p>[ 哪个容器下的 ]</p>
+                                                                        <p>哪个容器下的</p>
                                                 
                                                                     </div>
                                                 
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name">param</code>
+                                                                        <code class="param-name optional">[param]</code>
                                                                         <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
                                                 
                                                                     <div class="param-description">
-                                                                        <p>[ 动态传参 1.6.2新增, 同名会覆盖属性上的参数 ]</p>
+                                                                        <p>动态传参 1.6.2新增, 同名会覆盖属性上的参数</p>
                                                 
                                                                     </div>
                                                 
@@ -752,18 +783,18 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
+                                                                <pre class="code prettyprint"><code>       例子1: 
                                                 
-                                                        html: 
-                                                        &lt;div id=&quot;coms&quot;&gt;
-                                                            &lt;component name=&quot;pages/components/slide/index&quot;&gt;&lt;/component&gt;
-                                                            &lt;component name=&quot;pages/components/list/index&quot;&gt;&lt;/component&gt;
-                                                        &lt;/div&gt;
+                                                       html: 
+                                                       &lt;div id=&quot;coms&quot;&gt;
+                                                           &lt;component name=&quot;pages/components/slide/index&quot;&gt;&lt;/component&gt;
+                                                           &lt;component name=&quot;pages/components/list/index&quot;&gt;&lt;/component&gt;
+                                                       &lt;/div&gt;
                                                 
-                                                        js: 
-                                                        loader.components({
-                                                            id:&quot;#coms&quot;
-                                                        });
+                                                       js: 
+                                                       loader.components({
+                                                           id:&quot;#coms&quot;
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -799,7 +830,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l404"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:404</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l410"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:410</code></a>
                                                         </p>
                                                 
                                                 
@@ -868,92 +899,92 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>    例子1: 注册首页的回调 pages/main/main.js
-                                                    提示: pages/main/main.js 文件, 定义了一个匿名模块,匿名模块的模块名取.js前面的路径名,确保唯一
+                                                                <pre class="code prettyprint"><code>   例子1: 注册首页的回调 pages/main/main.js
+                                                   提示: pages/main/main.js 文件, 定义了一个匿名模块,匿名模块的模块名取.js前面的路径名,确保唯一
                                                 
-                                                    // 最简单的匿名定义 loader.define
-                                                    loader.define(function(require,exports,module){
+                                                   // 最简单的匿名定义 loader.define
+                                                   loader.define(function(require,exports,module){
                                                 
-                                                        // require : 相当于 loader.require, 获取依赖的模块
-                                                        // module : 拿到当前模块信息
+                                                       // require : 相当于 loader.require, 获取依赖的模块
+                                                       // module : 拿到当前模块信息
                                                 
-                                                        // 可以通过 return 把希望给其它页面调用的方法抛出来
-                                                        return {
+                                                       // 可以通过 return 把希望给其它页面调用的方法抛出来
+                                                       return {
                                                 
-                                                        }
-                                                    })
+                                                       }
+                                                   })
                                                 
-                                                    例子2: 直接定义返回的对象, 模块名同样是路径名
-                                                    loader.define({
-                                                      test: &quot;console&quot;
-                                                    })
+                                                   例子2: 直接定义返回的对象, 模块名同样是路径名
+                                                   loader.define({
+                                                     test: &quot;console&quot;
+                                                   })
                                                 
-                                                    例子3: 定义模块的依赖,如果模块未定义固定名称,则路径.html前面是默认的模块名称
-                                                    // require,exports,module 在依赖后面顺序下来,不是必须
-                                                    // 当前模块依赖于page2
-                                                    loader.define([&quot;pages/page2/page2&quot;],function(page2,require,exports,module){
-                                                        // 拿到依赖的模块,取名为page2
-                                                        console.log(page2)
-                                                        // 可以通过 return 把希望给其它页面调用的方法抛出来
-                                                        return {
+                                                   例子3: 定义模块的依赖,如果模块未定义固定名称,则路径.html前面是默认的模块名称
+                                                   // require,exports,module 在依赖后面顺序下来,不是必须
+                                                   // 当前模块依赖于page2
+                                                   loader.define([&quot;pages/page2/page2&quot;],function(page2,require,exports,module){
+                                                       // 拿到依赖的模块,取名为page2
+                                                       console.log(page2)
+                                                       // 可以通过 return 把希望给其它页面调用的方法抛出来
+                                                       return {
                                                 
-                                                        }
-                                                    })
+                                                       }
+                                                   })
                                                 
-                                                    例子4: 定义一个自定义名称的模块
-                                                    // 当前模块名为 page2 , 则别的模块要依赖page2的时候,使用自定义的名称
-                                                    loader.define(&quot;page2&quot;,function(){
-                                                        // 可以通过 return 把希望给其它页面调用的方法抛出来
-                                                        return {
+                                                   例子4: 定义一个自定义名称的模块
+                                                   // 当前模块名为 page2 , 则别的模块要依赖page2的时候,使用自定义的名称
+                                                   loader.define(&quot;page2&quot;,function(){
+                                                       // 可以通过 return 把希望给其它页面调用的方法抛出来
+                                                       return {
                                                 
-                                                        }
-                                                    })
+                                                       }
+                                                   })
                                                 
-                                                    // 需要在index.html 路由初始化前,先声明该模块的脚本,或者回调
-                                                    loader.map({
-                                                        moduleName: &quot;page2&quot;,
-                                                        template: &quot;pages/page2/page2.html&quot;,
-                                                        script: &quot;pages/page2/page2.js&quot;
-                                                    })
+                                                   // 需要在index.html 路由初始化前,先声明该模块的脚本,或者回调
+                                                   loader.map({
+                                                       moduleName: &quot;page2&quot;,
+                                                       template: &quot;pages/page2/page2.html&quot;,
+                                                       script: &quot;pages/page2/page2.js&quot;
+                                                   })
                                                 
-                                                    例子5: 1.5.3新增 定义页面的生命周期
-                                                    loader.define({
-                                                        moduleName: &quot;&quot;,     // 是否是自定义的模块名, 没有则不要这个参数
-                                                        depend: [],         // 是否有依赖的模块, 没有则不要这个参数
-                                                        beforeCreate: function(){
-                                                            // 只在第一次创建的时候执行
-                                                            console.log(&quot;beforeCreate&quot;)
-                                                        },
-                                                        created: function(){
-                                                            // 只在第一次创建的时候执行
-                                                            console.log(&quot;beforeCreate&quot;)
-                                                        },
-                                                        beforeLoad: function(){
-                                                            // 每次跳转前执行, 注意:这里return false 并不能阻止页面跳转及执行, 如果要阻止应该在 bui.load({beforeLoad:function(){ return false; }})
-                                                            console.log(&quot;beforeCreate&quot;)
-                                                        },
-                                                        loaded: function(require,export,module){
-                                                            // 每次跳转时执行, loader.require 要加载当前模块,需要在这里抛出方法.
-                                                            console.log(&quot;loaded&quot;)
-                                                        },
-                                                        show: function(e){
-                                                            
-                                                            // 每次跳转,后退后执行
-                                                            console.log(e.type ,&quot;show&quot;)
-                                                        },
-                                                        hide: function(){
-                                                            // 每次跳转,后退后执行上一个页面的hide
-                                                            console.log(&quot;hide&quot;)
-                                                        },
-                                                        beforeDestroy: function(){
-                                                            // 每次后退前执行
-                                                            console.log(&quot;beforeDestroy&quot;)
-                                                        },
-                                                        destroyed: function(){
-                                                            // 每次后退后执行
-                                                            console.log(&quot;destroyed&quot;)
-                                                        }
-                                                    })
+                                                   例子5: 1.5.3新增 定义页面的生命周期
+                                                   loader.define({
+                                                       moduleName: &quot;&quot;,     // 是否是自定义的模块名, 没有则不要这个参数
+                                                       depend: [],         // 是否有依赖的模块, 没有则不要这个参数
+                                                       beforeCreate: function(){
+                                                           // 只在第一次创建的时候执行
+                                                           console.log(&quot;beforeCreate&quot;)
+                                                       },
+                                                       created: function(){
+                                                           // 只在第一次创建的时候执行
+                                                           console.log(&quot;beforeCreate&quot;)
+                                                       },
+                                                       beforeLoad: function(){
+                                                           // 每次跳转前执行, 注意:这里return false 并不能阻止页面跳转及执行, 如果要阻止应该在 bui.load({beforeLoad:function(){ return false; }})
+                                                           console.log(&quot;beforeCreate&quot;)
+                                                       },
+                                                       loaded: function(require,export,module){
+                                                           // 每次跳转时执行, loader.require 要加载当前模块,需要在这里抛出方法.
+                                                           console.log(&quot;loaded&quot;)
+                                                       },
+                                                       show: function(e){
+                                                           
+                                                           // 每次跳转,后退后执行
+                                                           console.log(e.type ,&quot;show&quot;)
+                                                       },
+                                                       hide: function(){
+                                                           // 每次跳转,后退后执行上一个页面的hide
+                                                           console.log(&quot;hide&quot;)
+                                                       },
+                                                       beforeDestroy: function(){
+                                                           // 每次后退前执行
+                                                           console.log(&quot;beforeDestroy&quot;)
+                                                       },
+                                                       destroyed: function(){
+                                                           // 每次后退后执行
+                                                           console.log(&quot;destroyed&quot;)
+                                                       }
+                                                   })
                                                 </code></pre>
                                                 
                                                             </div>
@@ -992,7 +1023,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1759"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1759</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1779"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1779</code></a>
                                                         </p>
                                                 
                                                 
@@ -1014,7 +1045,7 @@
                                                 
                                                 
                                                                     <div class="param-description">
-                                                                        <p>[ 哪个容器下的 ]</p>
+                                                                        <p>哪个容器下的</p>
                                                 
                                                                     </div>
                                                 
@@ -1075,15 +1106,15 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
+                                                                <pre class="code prettyprint"><code>       例子1: 
                                                 
-                                                        html: 
-                                                        &lt;component id=&quot;delayCom&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
-                                                        
-                                                        js: 
-                                                        loader.delay({
-                                                            id:&quot;#delayCom&quot;,
-                                                        });
+                                                       html: 
+                                                       &lt;component id=&quot;delayCom&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
+                                                       
+                                                       js: 
+                                                       loader.delay({
+                                                           id:&quot;#delayCom&quot;,
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1113,7 +1144,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l369"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:369</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l375"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:375</code></a>
                                                         </p>
                                                 
                                                 
@@ -1218,7 +1249,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l234"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:234</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l240"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:240</code></a>
                                                         </p>
                                                 
                                                 
@@ -1261,7 +1292,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        var main = loader.get(&quot;main&quot;)</code></pre>
+                                                                <pre class="code prettyprint"><code>       var main = loader.get(&quot;main&quot;)</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -1335,29 +1366,29 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        1. 定义 // common.js 使用这个方法构建全局方法, 最简单也可以直接返回一个对象<code>loader.global({test:function(){}})</code>
-                                                        loader.global(function(global){
+                                                                <pre class="code prettyprint"><code>       1. 定义 // common.js 使用这个方法构建全局方法, 最简单也可以直接返回一个对象<code>loader.global({test:function(){}})</code>
+                                                       loader.global(function(global){
                                                 
-                                                            // global: 为上次执行的依赖
-                                                            // 返回一个对象
-                                                            return {
-                                                                test: function(){
-                                                                    console.log(&quot;test&quot;);
-                                                                },
-                                                                test2: function(){
-                                                                    console.log(&quot;test2&quot;);
-                                                                }
-                                                            }
-                                                        })
+                                                           // global: 为上次执行的依赖
+                                                           // 返回一个对象
+                                                           return {
+                                                               test: function(){
+                                                                   console.log(&quot;test&quot;);
+                                                               },
+                                                               test2: function(){
+                                                                   console.log(&quot;test2&quot;);
+                                                               }
+                                                           }
+                                                       })
                                                 
-                                                        // 2. 推荐: 局部调用
-                                                        loader.define(function(require,export,module,global){
-                                                            global.test();
+                                                       // 2. 推荐: 局部调用
+                                                       loader.define(function(require,export,module,global){
+                                                           global.test();
                                                 
-                                                        })
+                                                       })
                                                 
-                                                        1.6.3 全局调用: 
-                                                        loader.global().test();
+                                                       1.6.3 全局调用: 
+                                                       loader.global().test();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1387,7 +1418,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2180"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2180</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2209"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2209</code></a>
                                                         </p>
                                                 
                                                 
@@ -1454,30 +1485,30 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 动态加载单个样式
+                                                                <pre class="code prettyprint"><code>       例子1: 动态加载单个样式
                                                 
-                                                        loader.import(&quot;main.css&quot;,function(src){
-                                                          // 创建成功以后执行回调
-                                                        });
+                                                       loader.import(&quot;main.css&quot;,function(src){
+                                                         // 创建成功以后执行回调
+                                                       });
                                                 
-                                                        例子2: 动态加载单个脚本
+                                                       例子2: 动态加载单个脚本
                                                 
-                                                        loader.import(&quot;main.js&quot;,function(src){
-                                                          // 创建成功以后执行回调
-                                                        });
+                                                       loader.import(&quot;main.js&quot;,function(src){
+                                                         // 创建成功以后执行回调
+                                                       });
                                                 
-                                                        例子3: 动态加载多个脚本
+                                                       例子3: 动态加载多个脚本
                                                 
-                                                        loader.import([&quot;js/plugins/baiduTemplate.js&quot;,&quot;js/plugins/map.js&quot;],function(src){
-                                                          // 创建成功以后执行回调
-                                                        });
+                                                       loader.import([&quot;js/plugins/baiduTemplate.js&quot;,&quot;js/plugins/map.js&quot;],function(src){
+                                                         // 创建成功以后执行回调
+                                                       });
                                                 
-                                                        例子4: 1.5.2新增, 动态加载模板,回调每次都执行, 如果放在 loader.require 里面执行,则默认只初始化一次;
+                                                       例子4: 1.5.2新增, 动态加载模板,回调每次都执行, 如果放在 loader.require 里面执行,则默认只初始化一次;
                                                 
-                                                        loader.import(&quot;pages/ui/list.html&quot;,function(res){
-                                                          // 拿到模板信息
-                                                          $(&quot;#id&quot;).html(res);
-                                                        });
+                                                       loader.import(&quot;pages/ui/list.html&quot;,function(res){
+                                                         // 拿到模板信息
+                                                         $(&quot;#id&quot;).html(res);
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1513,7 +1544,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2542"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2542</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2575"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2575</code></a>
                                                         </p>
                                                 
                                                 
@@ -1582,11 +1613,11 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
-                                                        // 引入新皮肤
-                                                        loader.importCss(&quot;css/bui-skin.css&quot;,&quot;deepskin&quot;);
-                                                        // 删除新皮肤
-                                                        $(&quot;#deepskin&quot;).remove();
+                                                                <pre class="code prettyprint"><code>       例子1: 
+                                                       // 引入新皮肤
+                                                       loader.importCss(&quot;css/bui-skin.css&quot;,&quot;deepskin&quot;);
+                                                       // 删除新皮肤
+                                                       $(&quot;#deepskin&quot;).remove();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1616,7 +1647,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2349"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2349</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2382"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2382</code></a>
                                                         </p>
                                                 
                                                 
@@ -1695,12 +1726,12 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
+                                                                <pre class="code prettyprint"><code>       例子1: 
                                                 
-                                                        loader.importHtml(&quot;pages/ui/list.html&quot;,function(res){
-                                                          // 拿到模板信息
-                                                          $(&quot;#id&quot;).html(res);
-                                                        });
+                                                       loader.importHtml(&quot;pages/ui/list.html&quot;,function(res){
+                                                         // 拿到模板信息
+                                                         $(&quot;#id&quot;).html(res);
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1730,7 +1761,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2282"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2282</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2311"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2311</code></a>
                                                         </p>
                                                 
                                                 
@@ -1809,13 +1840,14 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
+                                                                <pre class="code prettyprint"><code>       例子1: 
                                                 
-                                                        loader.importHtml([&quot;pages/ui/list.html&quot;,&quot;pages/ui/list1.html&quot;],function(res){
-                                                          // 拿到模板信息
-                                                          $(&quot;#id&quot;).html(res[0]);
-                                                          $(&quot;#id2&quot;).html(res[1]);
-                                                        });
+                                                       async function init(){
+                                                           let html = await loader.importSync(&quot;pages/ui/list.html&quot;);
+                                                           let html2 = await loader.importSync(&quot;pages/ui/list2.html&quot;);
+                                                
+                                                           // do something
+                                                       }
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1842,7 +1874,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1196"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1196</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1203"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1203</code></a>
                                                         </p>
                                                 
                                                 
@@ -1874,7 +1906,7 @@
                                                                                     <span class="type">String | Object</span>
                                                 
                                                                                 <div class="param-description">
-                                                                                    <p>[ 模板需要加载到哪个容器下 ]</p>
+                                                                                    <p>模板需要加载到哪个容器下</p>
                                                 
                                                                                 </div>
                                                 
@@ -1884,7 +1916,7 @@
                                                                                     <span class="type">String</span>
                                                 
                                                                                 <div class="param-description">
-                                                                                    <p>[ 一般是页面的路径,或者模块名 ]</p>
+                                                                                    <p>一般是页面的路径,或者模块名</p>
                                                 
                                                                                 </div>
                                                 
@@ -1894,7 +1926,18 @@
                                                                                     <span class="type">Object</span>
                                                 
                                                                                 <div class="param-description">
-                                                                                    <p>[ 传参给组件, 可以这样传 { id:&quot;111&quot;} ]</p>
+                                                                                    <p>传参给组件, 可以这样传 { id:&quot;111&quot;}</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[command]</code>
+                                                                                    <span class="type">Object</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>1.7.3 新增 默认 html | append | prepend</p>
                                                 
                                                                                 </div>
                                                 
@@ -1942,15 +1985,15 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
-                                                        html:
-                                                        &lt;div id=&quot;tab1&quot;&gt;&lt;/div&gt;
+                                                                <pre class="code prettyprint"><code>       例子1: 
+                                                       html:
+                                                       &lt;div id=&quot;tab1&quot;&gt;&lt;/div&gt;
                                                 
-                                                        js: 把模板加载进来并执行模块脚本
-                                                        loader.load({
-                                                            id:&quot;#tab1&quot;,
-                                                            url:&quot;pages/main/home.html&quot;
-                                                        });
+                                                       js: 把模板加载进来并执行模块脚本
+                                                       loader.load({
+                                                           id:&quot;#tab1&quot;,
+                                                           url:&quot;pages/main/home.html&quot;
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2040,7 +2083,7 @@
                                                                                                 <span class="type">String</span>
                                                 
                                                                                             <div class="param-description">
-                                                                                                [默认:"main" 当前模块的名称等于父级名 ]
+                                                                                                默认:"main" 当前模块的名称等于父级名
                                                                                             </div>
                                                                                         </li>
                                                                                         <li class="param">
@@ -2048,7 +2091,7 @@
                                                                                                 <span class="type">String</span>
                                                 
                                                                                             <div class="param-description">
-                                                                                                [默认:"" 模板名称,用于路由的模板加载 ]
+                                                                                                默认:"" 模板名称,用于路由的模板加载
                                                                                             </div>
                                                                                         </li>
                                                                                         <li class="param">
@@ -2056,25 +2099,25 @@
                                                                                                 <span class="type">String</span>
                                                 
                                                                                             <div class="param-description">
-                                                                                                [默认:"" 当前模块的加载脚本 ]
+                                                                                                默认:"" 当前模块的加载脚本
                                                                                             </div>
                                                                                         </li>
                                                                                         <li class="param">
-                                                                                                <code class="param-name optional">[main.style] 默认:[]</code>
+                                                                                                <code class="param-name optional">[main.style]</code>
                                                                                                 <span class="type">Array</span>
                                                                                                 <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
                                                                                             <div class="param-description">
-                                                                                                加载模块的样式资源,也可以使用load方法单独加载
+                                                                                                默认: 加载模块的样式资源,也可以使用load方法单独加载
                                                                                             </div>
                                                                                         </li>
                                                                                         <li class="param">
-                                                                                                <code class="param-name optional">[main.depend] 默认:[]</code>
+                                                                                                <code class="param-name optional">[main.depend]</code>
                                                                                                 <span class="type">Array</span>
                                                                                                 <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
                                                                                             <div class="param-description">
-                                                                                                模块的依赖名,如果define时没有声明名称,则依赖名为该脚本的路径去掉.js
+                                                                                                默认: 模块的依赖名,如果define时没有声明名称,则依赖名为该脚本的路径去掉.js
                                                                                             </div>
                                                                                         </li>
                                                                                     </ul>
@@ -2089,29 +2132,29 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       例子1: 获取所有模块的配置信息
-                                                       var map = loader.map();
+                                                                <pre class="code prettyprint"><code>      例子1: 获取所有模块的配置信息
+                                                      var map = loader.map();
                                                 
-                                                       例子2: 声明单个模块;
+                                                      例子2: 声明单个模块;
                                                 
-                                                       loader.map({
-                                                           moduleName: &quot;main&quot;,
-                                                           template: &quot;pages/main/main.html&quot;,
-                                                           script: &quot;pages/main/main.js&quot;
-                                                       })
+                                                      loader.map({
+                                                          moduleName: &quot;main&quot;,
+                                                          template: &quot;pages/main/main.html&quot;,
+                                                          script: &quot;pages/main/main.js&quot;
+                                                      })
                                                 
-                                                       例子3: 定义多个模块,并修改路径
-                                                       loader.map({
-                                                         baseUrl: &quot;&quot;,
-                                                         modules: {
-                                                           // 自定义模块名
-                                                           &quot;main&quot;: {
-                                                             moduleName: &quot;main&quot;,
-                                                             template: &quot;pages/main/main.html&quot;,
-                                                             script: &quot;pages/main/main.js&quot;
-                                                           }
-                                                         }
-                                                       })
+                                                      例子3: 定义多个模块,并修改路径
+                                                      loader.map({
+                                                        baseUrl: &quot;&quot;,
+                                                        modules: {
+                                                          // 自定义模块名
+                                                          &quot;main&quot;: {
+                                                            moduleName: &quot;main&quot;,
+                                                            template: &quot;pages/main/main.html&quot;,
+                                                            script: &quot;pages/main/main.js&quot;
+                                                          }
+                                                        }
+                                                      })
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2141,7 +2184,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l764"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:764</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l770"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:770</code></a>
                                                         </p>
                                                 
                                                 
@@ -2206,17 +2249,17 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 加载单个模块
+                                                                <pre class="code prettyprint"><code>       例子1: 加载单个模块
                                                 
-                                                        loader.require(&quot;main&quot;,function (main) {
-                                                          console.log(main)
-                                                        })
+                                                       loader.require(&quot;main&quot;,function (main) {
+                                                         console.log(main)
+                                                       })
                                                 
-                                                        例子2: 加载多个模块
-                                                        loader.require([&quot;main&quot;,&quot;page2&quot;],function (main,page2) {
-                                                          console.log(main)
-                                                          console.log(page2)
-                                                        })
+                                                       例子2: 加载多个模块
+                                                       loader.require([&quot;main&quot;,&quot;page2&quot;],function (main,page2) {
+                                                         console.log(main)
+                                                         console.log(page2)
+                                                       })
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2246,7 +2289,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l249"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:249</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l255"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:255</code></a>
                                                         </p>
                                                 
                                                 
@@ -2291,11 +2334,11 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        // 修改首页为登录页, 需要在window.router 后面
-                                                        loader.set(&quot;main&quot;,{
-                                                            template: &quot;pages/login/login.html&quot;,
-                                                            script: &quot;pages/login/login.html&quot;
-                                                        })</code></pre>
+                                                                <pre class="code prettyprint"><code>       // 修改首页为登录页, 需要在window.router 后面
+                                                       loader.set(&quot;main&quot;,{
+                                                           template: &quot;pages/login/login.html&quot;,
+                                                           script: &quot;pages/login/login.html&quot;
+                                                       })</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -2306,19 +2349,7 @@
                                                         <div class="args">
                                                             <span class="paren">(</span><ul class="args-list inline commas">
                                                                 <li class="arg">
-                                                                        <code>id</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[url]</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[param]</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[beforeLoad]</code>
-                                                                </li>
-                                                                <li class="arg">
-                                                                        <code class="optional">[loaded]</code>
+                                                                        <code>option</code>
                                                                 </li>
                                                             </ul><span class="paren">)</span>
                                                         </div>
@@ -2333,7 +2364,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1841"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1841</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1861"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1861</code></a>
                                                         </p>
                                                 
                                                 
@@ -2350,63 +2381,81 @@
                                                 
                                                             <ul class="params-list">
                                                                 <li class="param">
-                                                                        <code class="param-name">id</code>
-                                                                        <span class="type">String | Object</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>[ 哪个容器下的,通过id，返回一个对象，通过样式名，返回一个数组，看例子 ]</p>
-                                                
-                                                                    </div>
-                                                
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[url]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>可选，如果component标签属性有name值，可以不传</p>
-                                                
-                                                                    </div>
-                                                
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[param]</code>
+                                                                        <code class="param-name">option</code>
                                                                         <span class="type">Object</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
                                                 
                                                                     <div class="param-description">
-                                                                        <p>传参给组件</p>
-                                                
+                                                                         
                                                                     </div>
                                                 
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[beforeLoad]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                                        <ul class="params-list">
+                                                                            <li class="param">
+                                                                                    <code class="param-name">id</code>
+                                                                                    <span class="type">String | Object</span>
                                                 
+                                                                                <div class="param-description">
+                                                                                    <p>哪个容器下的,通过id，返回一个对象，通过样式名，返回一个数组，看例子</p>
                                                 
-                                                                    <div class="param-description">
-                                                                        <p>每次编译commponent前执行， return false 则不执行</p>
+                                                                                </div>
                                                 
-                                                                    </div>
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[url]</code>
+                                                                                    <span class="type">String</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[loaded]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                                                <div class="param-description">
+                                                                                    <p>可选，如果component标签属性有name值，可以不传</p>
                                                 
+                                                                                </div>
                                                 
-                                                                    <div class="param-description">
-                                                                        <p>每次编译commponent后执行</p>
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[param]</code>
+                                                                                    <span class="type">Object</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                                 
-                                                                    </div>
+                                                                                <div class="param-description">
+                                                                                    <p>传参给组件</p>
                                                 
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[command]</code>
+                                                                                    <span class="type">Object</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>1.7.3 新增 默认 html | append | prepend</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[beforeLoad]</code>
+                                                                                    <span class="type">Function</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>每次编译commponent前执行， return false 则不执行</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[loaded]</code>
+                                                                                    <span class="type">Function</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>每次编译commponent后执行</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                        </ul>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -2416,37 +2465,37 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子1: 
+                                                                <pre class="code prettyprint"><code>       例子1: 
                                                 
-                                                        html: 
-                                                        &lt;component id=&quot;delayCom&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
+                                                       html: 
+                                                       &lt;component id=&quot;delayCom&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
                                                 
-                                                        &lt;component id=&quot;delayCom1&quot; class=&quot;delay&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
-                                                        &lt;component id=&quot;delayCom2&quot; class=&quot;delay&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
-                                                        
-                                                        js: 
-                                                        // 同步编译组件，这样在传
-                                                        const loadall = async function(){
-                                                            
-                                                            // 通过id编译1个，comp为返回的实例
-                                                            const comp = await loader.syncLoad({
-                                                                id:&quot;#delayCom&quot;,
-                                                                param: {
-                                                                    data: []
-                                                                }   // 传参给组件
-                                                            })
-                                                            console.log(comp) // delayCom 的实例
+                                                       &lt;component id=&quot;delayCom1&quot; class=&quot;delay&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
+                                                       &lt;component id=&quot;delayCom2&quot; class=&quot;delay&quot; name=&quot;pages/components/slide/index&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
+                                                       
+                                                       js: 
+                                                       // 同步编译组件，这样在传
+                                                       const loadall = async function(){
+                                                           
+                                                           // 通过id编译1个，comp为返回的实例
+                                                           const comp = await loader.syncLoad({
+                                                               id:&quot;#delayCom&quot;,
+                                                               param: {
+                                                                   data: []
+                                                               }   // 传参给组件
+                                                           })
+                                                           console.log(comp) // delayCom 的实例
                                                 
-                                                            // 通过样式名编译多个
-                                                            const [comp1,comp2] = await loader.syncLoad({
-                                                                id:&quot;.delay&quot;,
-                                                            })
+                                                           // 通过样式名编译多个
+                                                           const [comp1,comp2] = await loader.syncLoad({
+                                                               id:&quot;.delay&quot;,
+                                                           })
                                                 
-                                                            console.log(comp1)// delayCom1 的实例
-                                                            console.log(comp2)// delayCom2 的实例
-                                                        }
+                                                           console.log(comp1)// delayCom1 的实例
+                                                           console.log(comp2)// delayCom2 的实例
+                                                       }
                                                 
-                                                        loadall();
+                                                       loadall();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2479,7 +2528,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2022"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2022</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2045"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2045</code></a>
                                                         </p>
                                                 
                                                 
@@ -2538,14 +2587,14 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子: 
-                                                        html: 
-                                                        &lt;view id=&quot;views&quot; name=&quot;pages/views/slide/index&quot;&gt;&lt;/view&gt;
+                                                                <pre class="code prettyprint"><code>       例子: 
+                                                       html: 
+                                                       &lt;view id=&quot;views&quot; name=&quot;pages/views/slide/index&quot;&gt;&lt;/view&gt;
                                                 
-                                                        js: 
-                                                        loader.view({
-                                                            id:&quot;#views&quot;
-                                                        });
+                                                       js: 
+                                                       loader.view({
+                                                           id:&quot;#views&quot;
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2578,7 +2627,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l1984"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:1984</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2007"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2007</code></a>
                                                         </p>
                                                 
                                                 
@@ -2637,17 +2686,17 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        例子: 
-                                                        html: 
-                                                        &lt;div id=&quot;views&quot;&gt; 
-                                                            &lt;view name=&quot;pages/views/slide/index&quot;&gt;&lt;/view&gt;
-                                                            &lt;view name=&quot;pages/views/list/index&quot;&gt;&lt;/view&gt;
-                                                        &lt;/div&gt;
+                                                                <pre class="code prettyprint"><code>       例子: 
+                                                       html: 
+                                                       &lt;div id=&quot;views&quot;&gt; 
+                                                           &lt;view name=&quot;pages/views/slide/index&quot;&gt;&lt;/view&gt;
+                                                           &lt;view name=&quot;pages/views/list/index&quot;&gt;&lt;/view&gt;
+                                                       &lt;/div&gt;
                                                 
-                                                        js: 
-                                                        loader.views({
-                                                            id:&quot;#views&quot;
-                                                        });
+                                                       js: 
+                                                       loader.views({
+                                                           id:&quot;#views&quot;
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2671,7 +2720,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2762"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2762</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2796"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2796</code></a>
                                                         </p>
                                                 
                                                 
@@ -2719,7 +2768,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        loader.off(&quot;success&quot;);
+                                                                <pre class="code prettyprint"><code>       loader.off(&quot;success&quot;);
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2736,7 +2785,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2641"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2641</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2675"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2675</code></a>
                                                         </p>
                                                 
                                                 
@@ -2784,10 +2833,10 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>          loader.on(&quot;success&quot;,function () {
-                                                              // 点击的菜单
-                                                              console.log(this);
-                                                          });
+                                                                <pre class="code prettyprint"><code>         loader.on(&quot;success&quot;,function () {
+                                                             // 点击的菜单
+                                                             console.log(this);
+                                                         });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2804,7 +2853,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2672"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2672</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2706"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2706</code></a>
                                                         </p>
                                                 
                                                 
@@ -2852,10 +2901,10 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>          loader.one(&quot;success&quot;,function () {
-                                                              // 点击的菜单
-                                                              console.log(this);
-                                                          });
+                                                                <pre class="code prettyprint"><code>         loader.one(&quot;success&quot;,function () {
+                                                             // 点击的菜单
+                                                             console.log(this);
+                                                         });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2872,7 +2921,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2788"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2788</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2822"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2822</code></a>
                                                         </p>
                                                 
                                                 
@@ -2920,7 +2969,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        loader.trigger(&quot;success&quot;)
+                                                                <pre class="code prettyprint"><code>       loader.trigger(&quot;success&quot;)
                                                 </code></pre>
                                                 
                                                             </div>
@@ -2937,7 +2986,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2694"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2694</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2728"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2728</code></a>
                                                         </p>
                                                 
                                                 
@@ -2985,13 +3034,13 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>          &lt;component id=&quot;list&quot; name=&quot;pages/components/list&quot;&gt;&lt;/component&gt;
+                                                                <pre class="code prettyprint"><code>         &lt;component id=&quot;list&quot; name=&quot;pages/components/list&quot;&gt;&lt;/component&gt;
                                                 
-                                                          // 等等list编译完成触发
-                                                          loader.wait([&quot;list&quot;],function (list) {
-                                                              // list 组件的实例
-                                                              console.log(list.exports);
-                                                          });
+                                                         // 等等list编译完成触发
+                                                         loader.wait([&quot;list&quot;],function (list) {
+                                                             // list 组件的实例
+                                                             console.log(list.exports);
+                                                         });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -3008,7 +3057,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2719"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2719</code></a>
+                                                        <a href="../files/src_scripts_core_bui.loader.js.html#l2753"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.loader.js:2753</code></a>
                                                         </p>
                                                 
                                                 
@@ -3056,13 +3105,13 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>          &lt;component id=&quot;list&quot; name=&quot;pages/components/list&quot;&gt;&lt;/component&gt;
+                                                                <pre class="code prettyprint"><code>         &lt;component id=&quot;list&quot; name=&quot;pages/components/list&quot;&gt;&lt;/component&gt;
                                                 
-                                                          // 等等list编译完成触发
-                                                          loader.waited([&quot;list&quot;],function (list) {
-                                                              // list 组件的实例
-                                                              console.log(list);
-                                                          });
+                                                         // 等等list编译完成触发
+                                                         loader.waited([&quot;list&quot;],function (list) {
+                                                             // list 组件的实例
+                                                             console.log(list);
+                                                         });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -3086,12 +3135,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt=_hmt||[];
+        var _hmt = _hmt || [];
         (function () {
-            var hm=document.createElement("script");
-            var analytics_bd='6781b936303667306495d5d92ad58add';
-            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s=document.getElementsByTagName("script")[0];
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

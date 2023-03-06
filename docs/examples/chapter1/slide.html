@@ -4,8 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>BUI 多页开发标准页面</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
 </head>
 
 <body>
@@ -42,24 +43,24 @@
             <!-- 固定底部区 -->
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
     <script>
-        bui.ready(function() {
+        bui.ready(function () {
             // 焦点图控件初始化
             var uiSlide = bui.slide({
-                    id: "#uiSlide",
-                    height: 380,
-                    autopage: true
-                })
-                // 监听跳转以后触发
-            uiSlide.on("to", function() {
-                    // 获取跳转的索引
-                    var index = this.index();
-                    console.log(index)
-                })
-                // 跳转到第2个,索引值从0开始
-                // uiSlide.to(1);
+                id: "#uiSlide",
+                height: 380,
+                autopage: true
+            })
+            // 监听跳转以后触发
+            uiSlide.on("to", function () {
+                // 获取跳转的索引
+                var index = this.index();
+                console.log(index)
+            })
+            // 跳转到第2个,索引值从0开始
+            // uiSlide.to(1);
         })
     </script>
 </body>

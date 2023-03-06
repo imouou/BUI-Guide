@@ -11,11 +11,11 @@
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css"
+  href="https://unpkg.com/buijs/lib/latest/bui.css"
 />
 <!-- bui.js 依赖于Zepto或jQuery -->
-<script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+<script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+<script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
 ```
 
 _index.html_
@@ -32,12 +32,12 @@ _index.html_
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css"
+      href="https://unpkg.com/buijs/lib/latest/bui.css"
     />
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
     <script>
       bui.ready(function () {
         // 所有控件及方法需要在这里执行
@@ -153,7 +153,7 @@ _index.html_
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css"
+      href="https://unpkg.com/buijs/lib/latest/bui.css"
     />
   </head>
   <body>
@@ -177,8 +177,8 @@ _index.html_
         <!-- 固定底部区 -->
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
     <script>
       bui.ready(function () {
         // 焦点图控件初始化
