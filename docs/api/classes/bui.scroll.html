@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -325,7 +330,18 @@
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>下拉的距离大于这个数才会触发</p>
+                                                                        <p>默认100，下拉的距离大于这个数才会触发</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[backDistance]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>默认50，下拉回去的距离 1.8.0新增</p>
                                     
                                                                     </div>
                                     
@@ -457,6 +473,17 @@
                                     
                                                                     <div class="param-description">
                                                                         <p>1.5.6新增 刷新的时候是否把分页page重置为1;</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[loading]</code>
+                                                                        <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 loading的配置</p>
                                     
                                                                     </div>
                                     
@@ -821,6 +848,10 @@
                             
                                                         </li>
                                                         <li class="index-item method">
+                                                            <a href="#method_reload">reload</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
                                                             <a href="#method_resize">resize</a>
                             
                                                         </li>
@@ -834,6 +865,10 @@
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_setHeight">setHeight</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_status">status</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -905,7 +940,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1058"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1058</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1123"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1123</code></a>
                                                         </p>
                                                 
                                                 
@@ -974,7 +1009,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l687"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:687</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l709"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:709</code></a>
                                                         </p>
                                                 
                                                 
@@ -1056,7 +1091,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l721"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:721</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l744"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:744</code></a>
                                                         </p>
                                                 
                                                 
@@ -1137,7 +1172,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l530"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:530</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l549"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:549</code></a>
                                                         </p>
                                                 
                                                 
@@ -1193,7 +1228,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l291"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:291</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l298"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:298</code></a>
                                                         </p>
                                                 
                                                 
@@ -1242,7 +1277,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l972"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:972</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1037"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1037</code></a>
                                                         </p>
                                                 
                                                 
@@ -1283,7 +1318,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l878"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:878</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l923"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:923</code></a>
                                                         </p>
                                                 
                                                 
@@ -1324,7 +1359,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l897"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:897</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l942"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:942</code></a>
                                                         </p>
                                                 
                                                 
@@ -1366,7 +1401,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l990"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:990</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1055"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1055</code></a>
                                                         </p>
                                                 
                                                 
@@ -1416,7 +1451,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1105"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1105</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1170"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1170</code></a>
                                                         </p>
                                                 
                                                 
@@ -1497,7 +1532,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1004"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1004</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1069"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1069</code></a>
                                                         </p>
                                                 
                                                 
@@ -1538,7 +1573,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l953"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:953</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l998"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:998</code></a>
                                                         </p>
                                                 
                                                 
@@ -1558,6 +1593,48 @@
                                                             <div class="example-content">
                                                                 <pre class="code prettyprint"><code>       //uiScroll基于顶部例子
                                                        uiScroll.refresh();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_reload" class="method item">
+                                                    <h3 class="name"><code>reload</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1017"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1017</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.6</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>刷新数据无动画</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       //uiScroll基于顶部例子
+                                                       uiScroll.reload();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1585,7 +1662,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1023"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1023</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1088"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1088</code></a>
                                                         </p>
                                                 
                                                 
@@ -1675,7 +1752,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l651"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:651</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l673"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:673</code></a>
                                                         </p>
                                                 
                                                 
@@ -1740,7 +1817,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l816"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:816</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l839"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:839</code></a>
                                                         </p>
                                                 
                                                 
@@ -1805,7 +1882,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l843"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:843</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l866"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:866</code></a>
                                                         </p>
                                                 
                                                 
@@ -1848,6 +1925,47 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_status" class="method item">
+                                                    <h3 class="name"><code>status</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l901"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:901</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.8.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>修改status属性</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       uiScroll.status(&quot;start&quot;);
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_to" class="method item">
                                                     <h3 class="name"><code>to</code></h3>
                                                 
@@ -1873,7 +1991,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l756"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:756</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l779"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:779</code></a>
                                                         </p>
                                                 
                                                 
@@ -1947,7 +2065,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l793"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:793</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l816"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:816</code></a>
                                                         </p>
                                                 
                                                 
@@ -2004,7 +2122,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l933"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:933</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l978"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:978</code></a>
                                                         </p>
                                                 
                                                 
@@ -2045,7 +2163,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l915"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:915</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l960"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:960</code></a>
                                                         </p>
                                                 
                                                 
@@ -2096,7 +2214,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l546"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:546</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l565"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:565</code></a>
                                                         </p>
                                                 
                                                 
@@ -2170,7 +2288,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1087"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1087</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1152"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1152</code></a>
                                                         </p>
                                                 
                                                 
@@ -2231,7 +2349,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1152"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1152</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1217"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1217</code></a>
                                                         </p>
                                                 
                                                 
@@ -2296,7 +2414,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1132"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1132</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.scroll.js.html#l1197"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.scroll.js:1197</code></a>
                                                         </p>
                                                 
                                                 
@@ -2362,6 +2480,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

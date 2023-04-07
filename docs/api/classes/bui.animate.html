@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -591,7 +596,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l990"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:990</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l991"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:991</code></a>
                                                         </p>
                                                 
                                                 
@@ -990,7 +995,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1385"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1385</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1394"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1394</code></a>
                                                         </p>
                                                 
                                                 
@@ -1068,7 +1073,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1477"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1477</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1486"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1486</code></a>
                                                         </p>
                                                 
                                                 
@@ -1223,7 +1228,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1413"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1413</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1422"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1422</code></a>
                                                         </p>
                                                 
                                                 
@@ -1294,7 +1299,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1022"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1022</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1023"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1023</code></a>
                                                         </p>
                                                 
                                                 
@@ -1354,7 +1359,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1265"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1265</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1274"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1274</code></a>
                                                         </p>
                                                 
                                                 
@@ -1431,7 +1436,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1235"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1235</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1244"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1244</code></a>
                                                         </p>
                                                 
                                                 
@@ -2228,6 +2233,12 @@
                                                         <div class="args">
                                                             <span class="paren">(</span><ul class="args-list inline commas">
                                                                 <li class="arg">
+                                                                        <code class="optional">[beforeAnimate]</code>
+                                                                </li>
+                                                                <li class="arg">
+                                                                        <code class="optional">[onAnimate]</code>
+                                                                </li>
+                                                                <li class="arg">
                                                                         <code class="optional">[callback]</code>
                                                                 </li>
                                                             </ul><span class="paren">)</span>
@@ -2246,7 +2257,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1059"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1059</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1060"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1060</code></a>
                                                         </p>
                                                 
                                                 
@@ -2262,6 +2273,30 @@
                                                             <h4>Parameters:</h4>
                                                 
                                                             <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[beforeAnimate]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>动画执行前触发 1.8.0</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[onAnimate]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>动画执行后触发  1.8.0</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
                                                                 <li class="param">
                                                                         <code class="param-name optional">[callback]</code>
                                                                         <span class="type">Function</span>
@@ -2405,7 +2440,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1339"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1339</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1348"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1348</code></a>
                                                         </p>
                                                 
                                                 
@@ -2650,7 +2685,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1462"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1462</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1471"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1471</code></a>
                                                         </p>
                                                 
                                                 
@@ -2705,6 +2740,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

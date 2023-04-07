@@ -103,8 +103,6 @@ function testMobile(argument) {
 function sidebarInit() {
     var sidebarHeight = $(window).height() - 153;
 
-    console.log(sidebarHeight, 123)
-
     if (!testMobile()) {
         $("#api-tabview-panel").height(sidebarHeight);
     }
@@ -122,7 +120,7 @@ function sidebarInit() {
         scrollProgress();
         // 文档滚动到顶部
         scrollTop();
-        // 左栏固定
+        // 左栏固定，iframe里不执行
         sidebarInit();
     })
 })(jQuery)

@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -478,6 +483,10 @@
                             
                                                         </li>
                                                         <li class="index-item method">
+                                                            <a href="#method_values">values</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
                                                             <a href="#method_widget">widget</a>
                             
                                                         </li>
@@ -526,7 +535,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l432"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:432</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l491"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:491</code></a>
                                                         </p>
                                                 
                                                 
@@ -586,7 +595,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l385"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:385</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l444"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:444</code></a>
                                                         </p>
                                                 
                                                 
@@ -627,7 +636,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l411"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:411</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l470"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:470</code></a>
                                                         </p>
                                                 
                                                 
@@ -675,7 +684,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l112"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:112</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l114"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:114</code></a>
                                                         </p>
                                                 
                                                 
@@ -733,7 +742,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l468"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:468</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l527"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:527</code></a>
                                                         </p>
                                                 
                                                 
@@ -813,7 +822,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l345"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:345</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l404"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:404</code></a>
                                                         </p>
                                                 
                                                 
@@ -861,7 +870,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l366"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:366</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l425"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:425</code></a>
                                                         </p>
                                                 
                                                 
@@ -925,7 +934,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l311"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:311</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l334"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:334</code></a>
                                                         </p>
                                                 
                                                 
@@ -933,7 +942,7 @@
                                                     </div>
                                                 
                                                     <div class="description">
-                                                        <p>设置星星的值</p>
+                                                        <p>设置｜获取星星的值</p>
                                                 
                                                     </div>
                                                 
@@ -971,6 +980,47 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_values" class="method item">
+                                                    <h3 class="name"><code>values</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l376"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:376</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.8.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>获取星星的值</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>      //获取值
+                                                      var val = uiRating.values();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_widget" class="method item">
                                                     <h3 class="name"><code>widget</code></h3>
                                                 
@@ -992,7 +1042,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l453"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:453</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l512"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:512</code></a>
                                                         </p>
                                                 
                                                 
@@ -1053,7 +1103,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l515"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:515</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l574"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:574</code></a>
                                                         </p>
                                                 
                                                 
@@ -1118,7 +1168,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l495"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:495</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.rating.js.html#l554"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.rating.js:554</code></a>
                                                         </p>
                                                 
                                                 
@@ -1184,6 +1234,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

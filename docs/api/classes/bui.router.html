@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -300,7 +305,7 @@
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>1.7.4 新增，用于单独处理后退动画，比方iphone手势后退会看上去两次效果，设置为&quot;none&quot; 以后，关闭掉所有后退动画 默认: &quot;&quot; | none</p>
+                                                                        <p>1.7.4 新增，用于单独处理后退动画，比方iphone手势后退会看上去两次效果，设置为&quot;none&quot; 以后，关闭掉所有后退动画 默认: &quot;&quot; | none ||  &quot;push&quot; || &quot;slide&quot; || &quot;cover&quot; || &quot;fadein&quot;</p>
                                     
                                                                     </div>
                                     
@@ -356,17 +361,6 @@
                                     
                                                                     <div class="param-description">
                                                                         <p>1.6.3新增 默认: false | true 开启滑动返回, 必须在swipe为true才会生效</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[backEffect]</code>
-                                                                        <span class="type">Boolean</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>1.7.3新增 全局后退效果 默认: &quot;&quot; 默认为空，按前进的方式后退，&quot;none&quot; || &quot;push&quot; || &quot;slide&quot; || &quot;cover&quot; || &quot;fadein&quot;</p>
                                     
                                                                     </div>
                                     
@@ -537,23 +531,56 @@
                                     
                                                                 </li>
                                                                 <li class="param">
-                                                                        <code class="param-name optional">[beforeBack]</code>
-                                                                        <span class="type">Function |  | Boolean</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>1.5.1默认: null 每次后退前触发, 如果返回 false 则不后退, 不返回或者返回true 都会后退.</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
                                                                         <code class="param-name optional">[beforeLoad]</code>
                                                                         <span class="type">Function |  | Boolean</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>1.5.1默认: null 每次跳转前触发, 如果返回 false 则不跳转, 不返回或者返回true 都会跳转.</p>
+                                                                        <p>1.5.1默认: null 每次跳转前触发, 如果返回 false 则不跳转, 不返回或者返回true 都会跳转. 这时页面结构还不会有，到beforeShow才渲染结构. 第一次页面展示 beforeLoad-&gt;beforeShow-&gt;showed-&gt;loaded, 跳转 beforeHide（当前页隐藏前）-&gt;beforeLoad（下一页加载前）-&gt;showed（下一页html加载后）-&gt;loaded（下一页js加载后）-hided(当前页隐藏后)，后退 beforeHide（当前页隐藏前） -&gt; beforeShow（上一页展示前，动画未执行）- &gt; showed（上一页展示后，动画已执行） -&gt; hided （当前页隐藏后，动画已执行）</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[beforeShow]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 在页面显示结构后，动画前执行 , 只跟前进后退有关</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[showed]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 在页面显示结构后，动画后执行 , 只跟前进后退有关</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[beforeHide]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 在第1次跳转前执行，判断当前页面是否可以隐藏, 只跟前进后退有关</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[hided]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 在第1次跳转动画后执行, 只跟前进后退有关</p>
                                     
                                                                     </div>
                                     
@@ -570,12 +597,40 @@
                                     
                                                                 </li>
                                                                 <li class="param">
+                                                                        <code class="param-name optional">[beforeBack]</code>
+                                                                        <span class="type">Function |  | Boolean</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.5.1默认: null 每次后退前触发, 如果返回 false 则不后退, 不返回或者返回true 都会后退.</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
                                                                         <code class="param-name optional">[backed]</code>
                                                                         <span class="type">Function</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
                                                                         <p>1.5.5 新增默认: null 每次跳转后触发, 相当于 router.on(&quot;complete&quot;,callback) .</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[loading]</code>
+                                                                        <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 loading 的配置，默认： {
+                                    display: &quot;block&quot;,
+                                    className: &quot;bui-router-loading&quot;,
+                                    width: 30,
+                                    height: 30,
+                                    opacity: 0
+                                    }</p>
                                     
                                                                     </div>
                                     
@@ -776,7 +831,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3020"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3020</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3192"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3192</code></a>
                                                         </p>
                                                 
                                                 
@@ -840,7 +895,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2317"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2317</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2415"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2415</code></a>
                                                         </p>
                                                 
                                                 
@@ -896,6 +951,50 @@
                                                 
                                                                                 <div class="param-description">
                                                                                     <p>1.5.1默认: null 每次后退前触发, 如果返回 false 则不后退, 不返回或者返回true 都会后退.</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[beforeHide]</code>
+                                                                                    <span class="type">Function |  | Boolean</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>1.8.0 当前页隐藏前执行</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[beforeShow]</code>
+                                                                                    <span class="type">Function |  | Boolean</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>1.8.0 上一页展示前，动画前</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[showed]</code>
+                                                                                    <span class="type">Function |  | Boolean</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>1.8.0 上一页展示后，动画后</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[hided]</code>
+                                                                                    <span class="type">Function |  | Boolean</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>1.8.0 隐藏后执行，当前页信息</p>
                                                 
                                                                                 </div>
                                                 
@@ -976,7 +1075,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2976"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2976</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3148"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3148</code></a>
                                                         </p>
                                                 
                                                 
@@ -1028,7 +1127,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2991"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2991</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3163"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3163</code></a>
                                                         </p>
                                                 
                                                 
@@ -1096,7 +1195,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2547"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2547</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2717"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2717</code></a>
                                                         </p>
                                                 
                                                 
@@ -1166,7 +1265,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3087"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3087</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3260"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3260</code></a>
                                                         </p>
                                                 
                                                 
@@ -1267,7 +1366,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2712"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2712</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2882"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2882</code></a>
                                                         </p>
                                                 
                                                 
@@ -1325,7 +1424,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2733"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2733</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2903"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2903</code></a>
                                                         </p>
                                                 
                                                 
@@ -1402,7 +1501,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3130"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3130</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3303"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3303</code></a>
                                                         </p>
                                                 
                                                 
@@ -1473,7 +1572,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l302"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:302</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l325"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:325</code></a>
                                                         </p>
                                                 
                                                 
@@ -1532,7 +1631,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l557"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:557</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l580"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:580</code></a>
                                                         </p>
                                                 
                                                 
@@ -1594,7 +1693,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3050"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3050</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3223"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3223</code></a>
                                                         </p>
                                                 
                                                 
@@ -1663,7 +1762,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2759"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2759</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2929"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2929</code></a>
                                                         </p>
                                                 
                                                 
@@ -1734,7 +1833,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1175"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1175</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1210"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1210</code></a>
                                                         </p>
                                                 
                                                 
@@ -1885,7 +1984,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2209"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2209</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2307"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2307</code></a>
                                                         </p>
                                                 
                                                 
@@ -1994,7 +2093,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2902"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2902</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3074"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3074</code></a>
                                                         </p>
                                                 
                                                 
@@ -2082,7 +2181,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1059"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1059</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l1094"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:1094</code></a>
                                                         </p>
                                                 
                                                 
@@ -2192,7 +2291,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2658"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2658</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2828"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2828</code></a>
                                                         </p>
                                                 
                                                 
@@ -2241,7 +2340,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3240"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3240</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3413"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3413</code></a>
                                                         </p>
                                                 
                                                 
@@ -2320,7 +2419,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2683"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2683</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2853"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2853</code></a>
                                                         </p>
                                                 
                                                 
@@ -2408,7 +2507,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l671"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:671</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l702"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:702</code></a>
                                                         </p>
                                                 
                                                 
@@ -2452,7 +2551,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2950"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2950</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3122"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3122</code></a>
                                                         </p>
                                                 
                                                 
@@ -2517,7 +2616,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.router.js.html#l2928"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:2928</code></a>
+                                                        <a href="../files/src_scripts_core_bui.router.js.html#l3100"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.router.js:3100</code></a>
                                                         </p>
                                                 
                                                 
@@ -2584,6 +2683,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

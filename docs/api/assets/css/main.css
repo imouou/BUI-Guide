@@ -363,7 +363,7 @@ th {
     /* firefox */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(50%, #efefef), color-stop(51%, #e5e5e5), color-stop(100%, #dfdfdf));
     /* webkit */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#dfdfdf', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#dfdfdf', GradientType=0);
     /* ie */
 }
 
@@ -380,7 +380,7 @@ th {
     /* firefox */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6396D8), color-stop(50%, #5A83BC), color-stop(51%, #547AB7), color-stop(100%, #466899));
     /* webkit */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6396D8', endColorstr='#466899', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6396D8', endColorstr='#466899', GradientType=0);
     /* ie */
 }
 
@@ -402,7 +402,7 @@ th {
 #classdocs .item .params p,
 #classdocs .item .returns p,
 {
-    display: inline;
+display: inline;
 }
 
 #classdocs .item em code,
@@ -1153,7 +1153,7 @@ kbd .cmd {
     padding: 0;
 }
 
-#api-tabview-filter{
+#api-tabview-filter {
     -webkit-border-radius: 40px;
     -ms-border-radius: 40px;
     border-radius: 40px;
@@ -1818,9 +1818,11 @@ h6 {
     height: 40px;
     line-height: 40px;
 }
-#bd > .yui3-u-1-4 {
+
+#bd>.yui3-u-1-4 {
     width: 300px;
 }
+
 #bd>.yui3-u-3-4 {
     margin-left: 300px;
 }
@@ -1838,7 +1840,8 @@ h6 {
     margin: 0;
 }
 
-#api-tabview-panel ul li a:focus, #api-tabview-panel ul li a:hover {
+#api-tabview-panel ul li a:focus,
+#api-tabview-panel ul li a:hover {
     border: 0;
     margin: 0;
     color: #42b983;
@@ -1859,34 +1862,43 @@ h6 {
     #doc {
         min-width: 100%;
     }
+
     #hd {
         position: static;
     }
+
     #bd {
         padding-top: 0;
     }
+
     #bd>.yui3-u-3-4 {
         margin-left: 0;
     }
+
     #sidebar {
         position: static;
     }
+
     #hd h1 {
         font-size: 28px;
         float: none;
     }
+
     #hd img {
         width: 40px;
     }
+
     #hd .off-left {
         font-size: 14px !important;
         margin: 10px 0;
         float: none;
         color: #666;
     }
+
     .yui3-u-3-4 {
         width: 100%;
     }
+
     #bd .yui3-u-1-4 {
         width: 100%;
         /*position:absolute;
@@ -1901,30 +1913,36 @@ h6 {
         transform: translateX(-100%);*/
         background: #fff;
     }
+
     #bd .sidebar-menu-active {
         -moz-transform: translateX(0);
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
+
     .yui3-skin-sam .api-class-tabs {
         display: -moz-box;
         display: -webkit-box;
         display: box;
     }
+
     .yui3-skin-sam .yui3-tab {
         -webkit-box-flex: 1;
         -moz-box-flex: 1;
         box-flex: 1;
         margin: 0 !important;
     }
+
     .yui3-skin-sam .yui3-tab-selected .yui3-tab-label {
         border: 0;
     }
+
     .yui3-skin-sam .yui3-tab-selected a {
         background: #2444a2 !important;
         padding: 0 15px !important;
         border: 1px solid #2444a2;
     }
+
     .yui3-skin-sam .yui3-tab a {
         width: 100%;
         font-size: 14px;
@@ -1936,6 +1954,7 @@ h6 {
         padding-left: 15px;
         padding-right: 15px;
     }
+
     #api-filter {
         font-size: 16px;
         border: 1px solid #ccc;
@@ -1945,41 +1964,52 @@ h6 {
         padding: 10px;
         width: 100%;
     }
+
     .apis a {
         display: block;
         font-size: 16px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
     #api-options {
         display: none;
     }
+
     .example-content {
         padding-left: 0;
     }
+
     .apidocs .params-list {
         margin-left: 0;
     }
+
     .apidocs .index-item {
         font-size: 16px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
     .sidebar-menu {
         display: block;
     }
+
     #docs-main {
         padding: 0;
     }
+
     #docs-main>div {
         margin: 0 !important;
     }
+
     #docs-main>div div {
         float: none !important;
     }
+
     #docs-main iframe {
         display: none;
     }
+
     .sidebar-menu {
         display: none;
         position: absolute;
@@ -1992,6 +2022,7 @@ h6 {
         z-index: 10;
         padding: 10px 15px;
     }
+
     #api-classes {
         max-height: 180px;
         -webkit-overflow-scrolling: touch;
@@ -1999,64 +2030,78 @@ h6 {
         position: relative;
         overflow-y: auto;
     }
+
     .yui3-skin-sam .yui3-tab-label {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+
     .content {
         padding: 0;
     }
+
     .constructor {
         padding: 0 10px;
     }
+
     .apidocs .intro {
         font-size: 14px;
         padding: 0 10px;
     }
+
     .example-content pre.code {
         overflow: auto;
     }
+
     #classdocs .item {
         padding: 20px 10px;
     }
+
     #classdocs .yui3-tabview-panel {
         border: none !important;
     }
+
     .yui3-skin-sam .yui3-tabview-list {
         border-left: none !important;
         border-right: none !important;
     }
+
     #api-tabview {
         border-left: none;
         border-right: none;
     }
+
     .content>h1,
     .content>.meta {
         padding: 0 10px;
     }
+
     .content>.intro {
         margin: 0 10px;
     }
+
     .oui-fluid .span4,
     .oui-fluid .span8 {
         width: 100%;
         float: none;
         text-align: left;
     }
+
     .oui-fluid img {
         margin-top: 20px;
     }
+
     #docs-main {
         padding: 0 10px;
     }
 
-    #bd > .yui3-u-1-4 {
+    #bd>.yui3-u-1-4 {
         width: 100%;
     }
 
-    #bd > .yui3-u-3-4 {
+    #bd>.yui3-u-3-4 {
         width: 100%;
         margin-left: 0;
     }
@@ -2065,7 +2110,132 @@ h6 {
 /* tabview */
 
 /* YUI 3.9.1 (build 5852) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
-.yui3-widget-hidden{display:none}.yui3-widget-content{overflow:hidden}.yui3-widget-content-expanded{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;height:100%}.yui3-widget-tmp-forcesize{overflow:hidden!important}#yui3-css-stamp.skin-sam-widget-base{display:none}
+.yui3-widget-hidden {
+    display: none
+}
+
+.yui3-widget-content {
+    overflow: hidden
+}
+
+.yui3-widget-content-expanded {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%
+}
+
+.yui3-widget-tmp-forcesize {
+    overflow: hidden !important
+}
+
+#yui3-css-stamp.skin-sam-widget-base {
+    display: none
+}
+
 /* YUI 3.9.1 (build 5852) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
-.yui3-tab-panel{display:none}.yui3-tab-panel-selected{display:block}.yui3-tabview-list,.yui3-tab{margin:0;padding:0;list-style:none}.yui3-tabview{position:relative}.yui3-tabview,.yui3-tabview-list,.yui3-tabview-panel,.yui3-tab,.yui3-tab-panel{zoom:1}.yui3-tab{display:inline-block;*display:inline;vertical-align:bottom;cursor:pointer}.yui3-tab-label{display:block;display:inline-block;padding:6px 10px;position:relative;text-decoration:none;vertical-align:bottom}.yui3-skin-sam .yui3-tabview-list{border:solid #2647a0;border-width:0 0 5px;zoom:1}.yui3-skin-sam .yui3-tab{margin:0 .2em 0 0;padding:1px 0 0;zoom:1}.yui3-skin-sam .yui3-tab-selected{margin-bottom:-1px}.yui3-skin-sam .yui3-tab-label{background:#d8d8d8 url(http://yui.yahooapis.com/3.9.1/build/assets/skins/sam/sprite.png) repeat-x;border:solid #a3a3a3;border-width:1px 1px 0 1px;color:#000;cursor:pointer;font-size:85%;padding:.3em .75em;text-decoration:none}.yui3-skin-sam .yui3-tab-label:hover,.yui3-skin-sam .yui3-tab-label:focus{background:#bfdaff url(http://yui.yahooapis.com/3.9.1/build/assets/skins/sam/sprite.png) repeat-x left -1300px;outline:0}.yui3-skin-sam .yui3-tab-selected .yui3-tab-label,.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:focus,.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:hover{background:#2647a0 url(http://yui.yahooapis.com/3.9.1/build/assets/skins/sam/sprite.png) repeat-x left -1400px;color:#fff}.yui3-skin-sam .yui3-tab-selected .yui3-tab-label{padding:.4em .75em}.yui3-skin-sam .yui3-tab-selected .yui3-tab-label{border-color:#243356}.yui3-skin-sam .yui3-tabview-panel{background:#edf5ff}.yui3-skin-sam .yui3-tabview-panel{border:1px solid #808080;border-top-color:#243356;padding:.25em .5em}#yui3-css-stamp.skin-sam-tabview{display:none}
-    
+.yui3-tab-panel {
+    display: none
+}
+
+.yui3-tab-panel-selected {
+    display: block
+}
+
+.yui3-tabview-list,
+.yui3-tab {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.yui3-tabview {
+    position: relative
+}
+
+.yui3-tabview,
+.yui3-tabview-list,
+.yui3-tabview-panel,
+.yui3-tab,
+.yui3-tab-panel {
+    zoom: 1
+}
+
+.yui3-tab {
+    display: inline-block;
+    *display: inline;
+    vertical-align: bottom;
+    cursor: pointer
+}
+
+.yui3-tab-label {
+    display: block;
+    display: inline-block;
+    padding: 6px 10px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: bottom
+}
+
+.yui3-skin-sam .yui3-tabview-list {
+    border: solid #2647a0;
+    border-width: 0 0 5px;
+    zoom: 1
+}
+
+.yui3-skin-sam .yui3-tab {
+    margin: 0 .2em 0 0;
+    padding: 1px 0 0;
+    zoom: 1
+}
+
+.yui3-skin-sam .yui3-tab-selected {
+    margin-bottom: -1px
+}
+
+.yui3-skin-sam .yui3-tab-label {
+    background: #d8d8d8;
+    border: solid #a3a3a3;
+    border-width: 1px 1px 0 1px;
+    color: #000;
+    cursor: pointer;
+    font-size: 85%;
+    padding: .3em .75em;
+    text-decoration: none
+}
+
+.yui3-skin-sam .yui3-tab-label:hover,
+.yui3-skin-sam .yui3-tab-label:focus {
+    background: #bfdaff;
+    outline: 0
+}
+
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label,
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:focus,
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:hover {
+    background: #2647a0;
+    color: #fff
+}
+
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label {
+    padding: .4em .75em
+}
+
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label {
+    border-color: #243356
+}
+
+.yui3-skin-sam .yui3-tabview-panel {
+    background: #edf5ff
+}
+
+.yui3-skin-sam .yui3-tabview-panel {
+    border: 1px solid #808080;
+    border-top-color: #243356;
+    padding: .25em .5em
+}
+
+#yui3-css-stamp.skin-sam-tabview {
+    display: none
+}

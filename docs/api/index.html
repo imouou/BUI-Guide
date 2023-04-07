@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="./assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="./assets/js/jquery-1.9.1.min.js"></script>
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/yui-min.js"></script>
-    <script src="./assets/js/combo/oop-min.js"></script>
-    <script src="./assets/js/combo/array-extras-min.js"></script>
-    <script src="./assets/js/combo/autocomplete.js"></script>
-    <script src="./assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="./index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="./classes/bui.page.html">bui.page</a></li>
                                     <li><a href="./classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="./classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="./classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="./classes/bui.post.html">bui.post</a></li>
                                     <li><a href="./classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="./classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="./classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="./classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="./classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="./classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="./classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="./classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="./classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -172,41 +177,50 @@
                     <div id="docs-main">
                         <div class="content">
                             <div class="apidocs">
-                                <div id="docs-main" class="content">
-                                  <div style="margin-right:400px;">  
-                                        
-                                        <h2 style="font-size: 30px;">BUI API</h2>
-                                        <p class="off-left" style="font-size:16px;margin-right: 10px;">
-                                              当前版本：
-                                              <select name="" id="" onchange="window.location.href=this.value">
-                                              <option value="http://easybui.com/guide/api/index.html" selected>1.7.x </option>
-                                              <option value="http://easybui.com/guide/api-1.6.x/index.html">1.6.x</option>
-                                              <option value="http://easybui.com/guide/api-1.5.x/index.html">1.5.x</option>
-                                              <option value="http://easybui.com/guide/api-1.4.8/index.html">1.4.x</option>
-                                              </select></p>
+                                  <div id="docs-main" class="content">
+                                        <div style="margin-right:400px;">
                             
-                                        <div>
-                                               <h2>帮助</h2>
-                                               <p></p>
-                                               <p><a href="https://github.com/imouou/BUI-Guide/issues" target="_blank">我要留言</a></p>
-                                               <p><a href="https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed" target="_blank">查看留言</a></p>
-                                               <p><a href="/guide/#/help" target="_blank">常见问题</a></p>
-                                         </div>
-                                         <div>
-                                              <a href="http://easybui.com/demo/index.html" target="_blank" title="新开窗口预览,并开启谷歌终端模拟工具操作更佳"><img src="./assets/img/ecode.png" title="扫一扫,手机浏览器预览"/></a>
-                                              <p>微信扫码预览</p>
-                                         </div>
+                                              <h2 style="font-size: 30px;">BUI API</h2>
+                                              <p class="off-left" style="font-size:16px;margin-right: 10px;">
+                                                    当前版本：
+                                                    <select name="" id="" onchange="window.location.href=this.value">
+                                                          <option value="http://easybui.com/guide/api/index.html" selected>1.8.x
+                                                          </option>
+                                                          <option value="http://easybui.com/guide/api-1.7.x/index.html">1.7.x</option>
+                                                          <option value="http://easybui.com/guide/api-1.6.x/index.html">1.6.x</option>
+                                                          <option value="http://easybui.com/guide/api-1.5.x/index.html">1.5.x</option>
+                                                          <option value="http://easybui.com/guide/api-1.4.8/index.html">1.4.x</option>
+                                                    </select>
+                                              </p>
+                            
+                                              <div>
+                                                    <h2>帮助</h2>
+                                                    <p></p>
+                                                    <p><a href="https://github.com/imouou/BUI-Guide/issues" target="_blank">我要留言</a></p>
+                                                    <p><a href="https://github.com/imouou/BUI-Guide/issues?q=is:issue+is:closed"
+                                                                target="_blank">查看留言</a></p>
+                                                    <p><a href="/guide/#/help" target="_blank">常见问题</a></p>
+                                              </div>
+                                              <div>
+                                                    <a href="http://easybui.com/demo/index.html" target="_blank" title="新开窗口预览,并开启谷歌终端模拟工具操作更佳"><img
+                                                                src="./assets/img/ecode.png" title="扫一扫,手机浏览器预览" /></a>
+                                                    <p>微信扫码预览</p>
+                                              </div>
+                                        </div>
                                   </div>
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
+                            </div>                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./assets/js/jquery-1.9.1.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/yui-min.js"></script>
+    <script src="./assets/js/combo/oop-min.js"></script>
+    <script src="./assets/js/combo/array-extras-min.js"></script>
+    <script src="./assets/js/combo/autocomplete.js"></script>
+    <script src="./assets/js/combo/history-base-min.js"></script>
     <script src="./assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="./assets/js/yui-prettify.js"></script>

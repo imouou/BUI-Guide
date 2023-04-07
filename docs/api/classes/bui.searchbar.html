@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -324,6 +329,17 @@
                                     
                                                                 </li>
                                                                 <li class="param">
+                                                                        <code class="param-name optional">[onKeydown]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.7.5新增, 监听键盘触发，onKeydown(e){ console.log(e.keyCode) }  keyCode=13 为回车键</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
                                                                         <code class="param-name optional">[onRemove]</code>
                                                                         <span class="type">Function</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
@@ -497,7 +513,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l354"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:354</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l364"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:364</code></a>
                                                         </p>
                                                 
                                                 
@@ -563,7 +579,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l113"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:113</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l115"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:115</code></a>
                                                         </p>
                                                 
                                                 
@@ -621,7 +637,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l394"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:394</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l404"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:404</code></a>
                                                         </p>
                                                 
                                                 
@@ -706,7 +722,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l279"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:279</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l289"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:289</code></a>
                                                         </p>
                                                 
                                                 
@@ -770,7 +786,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l296"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:296</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l306"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:306</code></a>
                                                         </p>
                                                 
                                                 
@@ -837,7 +853,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l338"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:338</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l348"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:348</code></a>
                                                         </p>
                                                 
                                                 
@@ -901,7 +917,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l256"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:256</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l266"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:266</code></a>
                                                         </p>
                                                 
                                                 
@@ -968,7 +984,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l317"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:317</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l327"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:327</code></a>
                                                         </p>
                                                 
                                                 
@@ -1032,7 +1048,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l379"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:379</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l389"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:389</code></a>
                                                         </p>
                                                 
                                                 
@@ -1093,7 +1109,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l442"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:442</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l452"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:452</code></a>
                                                         </p>
                                                 
                                                 
@@ -1158,7 +1174,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l422"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:422</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.searchbar.js.html#l432"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.searchbar.js:432</code></a>
                                                         </p>
                                                 
                                                 
@@ -1224,6 +1240,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

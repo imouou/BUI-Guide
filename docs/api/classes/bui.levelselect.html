@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -485,6 +490,17 @@
                                     
                                                                 </li>
                                                                 <li class="param">
+                                                                        <code class="param-name optional">[onLastchange]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.7.5新增 最后改变的时候触发</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
                                                                         <code class="param-name optional">[onBeforeInit]</code>
                                                                         <span class="type">Function</span>
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
@@ -528,23 +544,27 @@
                                     
                                                 <div class="example-content">
                                                     <pre class="code prettyprint"><code>   html:
-                                       &lt;div id=&quot;levelSelectBtn&quot;&gt;&lt;/div&gt;
+                                       &lt;div id=&quot;levelSelect&quot;&gt;请选择&lt;/div&gt;
                                     </code></pre>
                                     <p>js:
-                                    // <a href="http://www.easybui.com/demo/json/citys.js">http://www.easybui.com/demo/json/citys.js</a></p>
-                                    <pre class="code prettyprint"><code>   // 普通初始化
-                                       var citySelect = bui.levelselect({
-                                           data: citys,
-                                           title: &quot;所在地区&quot;,
-                                           // 1.6.6 新增id的处理方式，自动生成子元素，1.6.5 需要自己生成子元素
-                                           trigger: &quot;#levelSelectBtn&quot;,
-                                           level: 3,
-                                           field:{
-                                               name: &quot;n&quot;,
-                                               data: [&quot;c&quot;,&quot;a&quot;],
-                                           }
-                                       })
-                                    
+                                    // 1.6.5 简化
+                                    var uiLevelSelect = bui.levelselect({
+                                    data: [{
+                                    &quot;name&quot;:&quot;北京&quot;,
+                                    &quot;data&quot;:[{&quot;data&quot;:[&quot;城区&quot;,&quot;城区以外&quot;],&quot;name&quot;:&quot;密云区&quot;}]
+                                    }],
+                                    title: &quot;所在地区&quot;,
+                                    trigger: &quot;#levelSelect&quot;,
+                                    level: 3,
+                                    onLastchange:function(eval, nextVal) {
+                                    console.log(e.target)
+                                    })
+                                    })</p>
+                                    <pre class="code prettyprint"><code>   var citys = [{
+                                           &quot;n&quot;:&quot;北京&quot;,
+                                           &quot;c&quot;:[{&quot;a&quot;:[&quot;城区&quot;,&quot;城区以外&quot;],&quot;n&quot;:&quot;密云区&quot;}]
+                                           }];
+                                           
                                        // 设置值
                                        var citySelect2 = bui.levelselect({
                                            data: citys,
@@ -708,7 +728,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l905"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:905</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l932"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:932</code></a>
                                                         </p>
                                                 
                                                 
@@ -750,7 +770,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l613"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:613</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l640"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:640</code></a>
                                                         </p>
                                                 
                                                 
@@ -791,7 +811,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l572"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:572</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l599"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:599</code></a>
                                                         </p>
                                                 
                                                 
@@ -841,7 +861,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l879"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:879</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l906"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:906</code></a>
                                                         </p>
                                                 
                                                 
@@ -922,7 +942,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l558"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:558</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l585"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:585</code></a>
                                                         </p>
                                                 
                                                 
@@ -963,7 +983,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l731"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:731</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l758"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:758</code></a>
                                                         </p>
                                                 
                                                 
@@ -1014,7 +1034,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l712"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:712</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l739"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:739</code></a>
                                                         </p>
                                                 
                                                 
@@ -1084,7 +1104,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l587"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:587</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l614"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:614</code></a>
                                                         </p>
                                                 
                                                 
@@ -1125,7 +1145,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l543"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:543</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l570"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:570</code></a>
                                                         </p>
                                                 
                                                 
@@ -1166,7 +1186,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l669"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:669</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l696"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:696</code></a>
                                                         </p>
                                                 
                                                 
@@ -1219,7 +1239,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l946"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:946</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l973"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:973</code></a>
                                                         </p>
                                                 
                                                 
@@ -1281,7 +1301,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l852"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:852</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l879"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:879</code></a>
                                                         </p>
                                                 
                                                 
@@ -1346,7 +1366,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l832"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:832</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.levelselect.js.html#l859"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.levelselect.js:859</code></a>
                                                         </p>
                                                 
                                                 
@@ -1412,6 +1432,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

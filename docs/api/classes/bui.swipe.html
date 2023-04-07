@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -634,7 +639,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1221"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1221</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1242"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1242</code></a>
                                                         </p>
                                                 
                                                 
@@ -676,7 +681,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1110"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1110</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1131"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1131</code></a>
                                                         </p>
                                                 
                                                 
@@ -722,7 +727,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1410"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1410</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1431"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1431</code></a>
                                                         </p>
                                                 
                                                 
@@ -837,7 +842,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1237"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1237</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1258"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1258</code></a>
                                                         </p>
                                                 
                                                 
@@ -878,7 +883,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1340"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1340</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1361"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1361</code></a>
                                                         </p>
                                                 
                                                 
@@ -925,7 +930,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1128"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1128</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1149"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1149</code></a>
                                                         </p>
                                                 
                                                 
@@ -1022,7 +1027,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1370"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1370</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1391"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1391</code></a>
                                                         </p>
                                                 
                                                 
@@ -1065,7 +1070,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1455"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1455</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1476"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1476</code></a>
                                                         </p>
                                                 
                                                 
@@ -1130,7 +1135,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1435"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1435</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.swipe.js.html#l1456"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.swipe.js:1456</code></a>
                                                         </p>
                                                 
                                                 
@@ -1196,6 +1201,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

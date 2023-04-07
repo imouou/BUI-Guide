@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -304,7 +309,18 @@
                                                                         <span class="flag optional" title="This parameter is optional.">optional</span>
                                     
                                                                     <div class="param-description">
-                                                                        <p>默认90,下拉的距离超过才会触发事件</p>
+                                                                        <p>默认100,下拉的距离超过才会触发事件</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[backDistance]</code>
+                                                                        <span class="type">Number</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>默认50,下拉后回去的停留距离 1.8.0新增</p>
                                     
                                                                     </div>
                                     
@@ -359,6 +375,17 @@
                                     
                                                                     <div class="param-description">
                                                                         <p>1.6.2新增, 默认 true | false 使用缓存的高度计算,false 则动态获取页面高度计算</p>
+                                    
+                                                                    </div>
+                                    
+                                                                </li>
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[loading]</code>
+                                                                        <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    
+                                                                    <div class="param-description">
+                                                                        <p>1.8.0 loading的配置</p>
                                     
                                                                     </div>
                                     
@@ -558,6 +585,10 @@
                             
                                                         </li>
                                                         <li class="index-item method">
+                                                            <a href="#method_reload">reload</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
                                                             <a href="#method_resize">resize</a>
                             
                                                         </li>
@@ -567,6 +598,10 @@
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_setHeight">setHeight</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method">
+                                                            <a href="#method_status">status</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -622,7 +657,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l962"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:962</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1059"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1059</code></a>
                                                         </p>
                                                 
                                                 
@@ -688,7 +723,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l843"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:843</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l918"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:918</code></a>
                                                         </p>
                                                 
                                                 
@@ -752,7 +787,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l209"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:209</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l215"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:215</code></a>
                                                         </p>
                                                 
                                                 
@@ -807,7 +842,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l657"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:657</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l727"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:727</code></a>
                                                         </p>
                                                 
                                                 
@@ -875,7 +910,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1005"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1005</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1102"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1102</code></a>
                                                         </p>
                                                 
                                                 
@@ -956,7 +991,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l864"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:864</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l942"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:942</code></a>
                                                         </p>
                                                 
                                                 
@@ -964,7 +999,7 @@
                                                     </div>
                                                 
                                                     <div class="description">
-                                                        <p>手动刷新数据</p>
+                                                        <p>手动刷新数据，带动画</p>
                                                 
                                                     </div>
                                                 
@@ -976,6 +1011,47 @@
                                                             <div class="example-content">
                                                                 <pre class="code prettyprint"><code>       //uiPullRefresh基于顶部例子
                                                        uiPullRefresh.refresh();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_reload" class="method item">
+                                                    <h3 class="name"><code>reload</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l967"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:967</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>手动刷新数据无动画</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       //uiPullRefresh基于顶部例子
+                                                       uiPullRefresh.reload();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1003,7 +1079,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l929"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:929</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1026"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1026</code></a>
                                                         </p>
                                                 
                                                 
@@ -1099,7 +1175,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l731"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:731</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l801"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:801</code></a>
                                                         </p>
                                                 
                                                 
@@ -1188,7 +1264,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l886"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:886</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l983"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:983</code></a>
                                                         </p>
                                                 
                                                 
@@ -1231,6 +1307,47 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_status" class="method item">
+                                                    <h3 class="name"><code>status</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>
+                                                                Defined in
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l311"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:311</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.8.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>修改status属性</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       uiPullrefresh.status(&quot;start&quot;);
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_unlock" class="method item">
                                                     <h3 class="name"><code>unlock</code></h3>
                                                 
@@ -1253,7 +1370,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l691"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:691</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l761"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:761</code></a>
                                                         </p>
                                                 
                                                 
@@ -1317,7 +1434,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l988"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:988</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1085"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1085</code></a>
                                                         </p>
                                                 
                                                 
@@ -1378,7 +1495,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1053"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1053</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1150"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1150</code></a>
                                                         </p>
                                                 
                                                 
@@ -1443,7 +1560,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1033"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1033</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pullrefresh.js.html#l1130"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pullrefresh.js:1130</code></a>
                                                         </p>
                                                 
                                                 
@@ -1509,6 +1626,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

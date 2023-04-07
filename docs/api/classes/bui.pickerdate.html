@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -743,7 +748,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l605"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:605</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l612"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:612</code></a>
                                                         </p>
                                                 
                                                 
@@ -826,7 +831,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1232"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1232</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1240"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1240</code></a>
                                                         </p>
                                                 
                                                 
@@ -872,7 +877,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l345"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:345</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l352"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:352</code></a>
                                                         </p>
                                                 
                                                 
@@ -1117,7 +1122,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1303"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1303</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1311"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1311</code></a>
                                                         </p>
                                                 
                                                 
@@ -1177,7 +1182,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1181"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1181</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1189"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1189</code></a>
                                                         </p>
                                                 
                                                 
@@ -1217,7 +1222,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l478"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:478</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l485"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:485</code></a>
                                                         </p>
                                                 
                                                 
@@ -1259,7 +1264,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1286"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1286</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1294"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1294</code></a>
                                                         </p>
                                                 
                                                 
@@ -1308,7 +1313,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l770"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:770</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l777"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:777</code></a>
                                                         </p>
                                                 
                                                 
@@ -1384,7 +1389,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l708"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:708</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l715"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:715</code></a>
                                                         </p>
                                                 
                                                 
@@ -1443,7 +1448,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1216"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1216</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1224"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1224</code></a>
                                                         </p>
                                                 
                                                 
@@ -1489,7 +1494,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l513"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:513</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l520"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:520</code></a>
                                                         </p>
                                                 
                                                 
@@ -1553,7 +1558,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l496"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:496</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l503"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:503</code></a>
                                                         </p>
                                                 
                                                 
@@ -1618,7 +1623,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1267"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1267</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1275"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1275</code></a>
                                                         </p>
                                                 
                                                 
@@ -1681,7 +1686,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l808"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:808</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l815"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:815</code></a>
                                                         </p>
                                                 
                                                 
@@ -1742,7 +1747,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1199"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1199</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1207"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1207</code></a>
                                                         </p>
                                                 
                                                 
@@ -1782,7 +1787,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l459"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:459</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l466"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:466</code></a>
                                                         </p>
                                                 
                                                 
@@ -1829,7 +1834,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1250"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1250</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1258"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1258</code></a>
                                                         </p>
                                                 
                                                 
@@ -1892,7 +1897,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l532"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:532</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l539"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:539</code></a>
                                                         </p>
                                                 
                                                 
@@ -1956,7 +1961,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l560"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:560</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l567"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:567</code></a>
                                                         </p>
                                                 
                                                 
@@ -2024,7 +2029,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1325"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1325</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1333"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1333</code></a>
                                                         </p>
                                                 
                                                 
@@ -2085,7 +2090,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1363"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1363</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1371"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1371</code></a>
                                                         </p>
                                                 
                                                 
@@ -2150,7 +2155,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1343"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1343</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.pickerdate.js.html#l1351"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.pickerdate.js:1351</code></a>
                                                         </p>
                                                 
                                                 
@@ -2216,6 +2221,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>

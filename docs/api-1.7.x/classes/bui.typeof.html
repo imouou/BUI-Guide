@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>bui.typeof - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.7.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1>bui.typeof Class</h1>
+                            <div class="box meta">
+                            
+                            
+                                    <div class="foundat">
+                                        Defined in: <a href="../files/src_scripts_method_bui.method.js.html#l123"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.method.js:123</code></a>
+                                    </div>
+                            
+                                        Module: <a href="../modules/Method.html">Method</a>
+                            
+                            </div>
+                            
+                            
+                            <div class="box intro">
+                                <p>判断类型, 不能用来判断jq对象,会返回一个数组</p>
+                            
+                            </div>
+                            
+                                <div class="constructor">
+                                    <h2>Constructor</h2>
+                                    <div id="method_bui.typeof" class="method item">
+                                        <h3 class="name"><code>bui.typeof</code></h3>
+                                    
+                                            <div class="args">
+                                                <span class="paren">(</span><ul class="args-list inline commas">
+                                                    <li class="arg">
+                                                            <code>value</code>
+                                                    </li>
+                                                </ul><span class="paren">)</span>
+                                            </div>
+                                    
+                                            <span class="returns-inline">
+                                                <span class="type">String</span>
+                                            </span>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="meta">
+                                                    <p>
+                                                    Defined in
+                                            <a href="../files/src_scripts_method_bui.method.js.html#l123"><code>src&#x2F;scripts&#x2F;method&#x2F;bui.method.js:123</code></a>
+                                            </p>
+                                    
+                                    
+                                    
+                                        </div>
+                                    
+                                        <div class="description">
+                                            
+                                        </div>
+                                    
+                                            <div class="params">
+                                                <h4>Parameters:</h4>
+                                    
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">value</code>
+                                                            <span class="type">String</span>
+                                    
+                                    
+                                                        <div class="param-description">
+                                                            <p>[要判断的对象]</p>
+                                    
+                                                        </div>
+                                    
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                    
+                                            <div class="returns">
+                                                <h4>Returns:</h4>
+                                    
+                                                <div class="returns-description">
+                                                            <span class="type">String</span>:
+                                                        <p>[返回 json | regexp | array | object | function | string | number | boolean | null | undefined ]</p>
+                                    
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="example">
+                                                <h4>Example:</h4>
+                                    
+                                                <div class="example-content">
+                                                    <pre class="code prettyprint"><code>  var type = bui.typeof({&quot;id&quot;:&quot;123&quot;});
+                                       console.log(type) // &quot;object&quot;
+                                    </code></pre>
+                                    
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                            <div id="classdocs" class="tabview">
+                                <ul class="api-class-tabs">
+                                    <li class="api-class-tab index"><a href="#index">Index</a></li>
+                            
+                                </ul>
+                            
+                                <div>
+                                    <div id="index" class="api-class-tabpanel index">
+                                        <h2 class="off-left">Item Index</h2>
+                            
+                            
+                            
+                            
+                                    </div>
+                            
+                            
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

@@ -12,13 +12,6 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <!-- <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/yui-min.js"></script>
-    <script src="../assets/js/combo/oop-min.js"></script>
-    <script src="../assets/js/combo/array-extras-min.js"></script>
-    <script src="../assets/js/combo/autocomplete.js"></script>
-    <script src="../assets/js/combo/history-base-min.js"></script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -31,13 +24,14 @@
                     <a href="../index.html">BUI</a>
                 </h1>
                 <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
-                        <option value="../api/index.html" selected>1.7.x</option>
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
                         <option value="../api-1.4.8/index.html">1.4.x</option>
                     </select></p>
                 <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
-                    1.7.x </p>
+                    1.8.x </p>
 
             </div>
         </div>
@@ -103,6 +97,7 @@
                                     <li><a href="../classes/bui.page.html">bui.page</a></li>
                                     <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
                                     <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
                                     <li><a href="../classes/bui.post.html">bui.post</a></li>
                                     <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
                                     <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
@@ -125,6 +120,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -142,7 +138,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
             </div>
             <div class="yui3-u-3-4">
                     <div id="api-options">
@@ -489,7 +494,15 @@
                             
                                                         </li>
                                                         <li class="index-item method inherited">
+                                                            <a href="#method_hide">hide</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method inherited">
                                                             <a href="#method_init">init</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method inherited">
+                                                            <a href="#method_isFullscreen">isFullscreen</a>
                             
                                                         </li>
                                                         <li class="index-item method inherited">
@@ -521,6 +534,10 @@
                             
                                                         </li>
                                                         <li class="index-item method inherited">
+                                                            <a href="#method_render">render</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method inherited">
                                                             <a href="#method_resize">resize</a>
                             
                                                         </li>
@@ -530,6 +547,10 @@
                                                         </li>
                                                         <li class="index-item method inherited">
                                                             <a href="#method_scroll">scroll</a>
+                            
+                                                        </li>
+                                                        <li class="index-item method inherited">
+                                                            <a href="#method_show">show</a>
                             
                                                         </li>
                                                         <li class="index-item method inherited">
@@ -594,7 +615,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_close">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1000"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1000</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1191"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1191</code></a>
                                                         </p>
                                                 
                                                 
@@ -658,7 +679,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_create">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1200"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1200</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1428"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1428</code></a>
                                                         </p>
                                                 
                                                 
@@ -719,7 +740,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_destroy">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1298"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1298</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1526"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1526</code></a>
                                                         </p>
                                                 
                                                 
@@ -760,7 +781,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_disableClose">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l971"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:971</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1162"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1162</code></a>
                                                         </p>
                                                 
                                                 
@@ -800,7 +821,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_disableOpen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l941"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:941</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1132"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1132</code></a>
                                                         </p>
                                                 
                                                 
@@ -840,7 +861,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_enableClose">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l986"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:986</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1177"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1177</code></a>
                                                         </p>
                                                 
                                                 
@@ -880,7 +901,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_enableOpen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l956"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:956</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1147"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1147</code></a>
                                                         </p>
                                                 
                                                 
@@ -920,7 +941,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.prompt.js.html#l169"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.prompt.js:169</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.prompt.js.html#l170"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.prompt.js:170</code></a>
                                                         </p>
                                                 
                                                 
@@ -973,7 +994,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_fullscreen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l895"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:895</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1066"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1066</code></a>
                                                         </p>
                                                 
                                                 
@@ -1031,6 +1052,71 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_hide" class="method item inherited">
+                                                    <h3 class="name"><code>hide</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[callback]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>Inherited from
+                                                                <a href="../classes/bui.dialog.html#method_hide">bui.dialog</a>:
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l541"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:541</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.6</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>无动画关闭对话框</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>回调</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       uiDialog.hide();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_init" class="method item inherited">
                                                     <h3 class="name"><code>init</code></h3>
                                                 
@@ -1053,7 +1139,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_init">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l196"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:196</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l226"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:226</code></a>
                                                         </p>
                                                 
                                                 
@@ -1086,6 +1172,59 @@
                                                 
                                                 
                                                 </div>
+                                                <div id="method_isFullscreen" class="method item inherited">
+                                                    <h3 class="name"><code>isFullscreen</code></h3>
+                                                
+                                                        <span class="paren">()</span>
+                                                
+                                                        <span class="returns-inline">
+                                                            <span class="type">Boolean</span>
+                                                        </span>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>Inherited from
+                                                                <a href="../classes/bui.dialog.html#method_isFullscreen">bui.dialog</a>:
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1100"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1100</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.5</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>是否全屏</p>
+                                                
+                                                    </div>
+                                                
+                                                
+                                                        <div class="returns">
+                                                            <h4>Returns:</h4>
+                                                
+                                                            <div class="returns-description">
+                                                                        <span class="type">Boolean</span>:
+                                                                    <p>是否全屏</p>
+                                                
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       // 状态
+                                                       let status = uiDialog.isFullscreen();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_isOpen" class="method item inherited">
                                                     <h3 class="name"><code>isOpen</code></h3>
                                                 
@@ -1101,7 +1240,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_isOpen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l928"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:928</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1118"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1118</code></a>
                                                         </p>
                                                 
                                                 
@@ -1140,7 +1279,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_maxmize">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l777"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:777</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l944"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:944</code></a>
                                                         </p>
                                                 
                                                 
@@ -1186,7 +1325,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_minimize">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l671"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:671</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l837"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:837</code></a>
                                                         </p>
                                                 
                                                 
@@ -1278,7 +1417,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_open">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l401"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:401</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l558"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:558</code></a>
                                                         </p>
                                                 
                                                 
@@ -1345,7 +1484,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_option">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1370"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1370</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1598"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1598</code></a>
                                                         </p>
                                                 
                                                 
@@ -1426,7 +1565,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_remove">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1080"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1080</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1272"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1272</code></a>
                                                         </p>
                                                 
                                                 
@@ -1465,7 +1604,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_removebar">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l835"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:835</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1006"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1006</code></a>
                                                         </p>
                                                 
                                                 
@@ -1485,6 +1624,95 @@
                                                 
                                                             <div class="example-content">
                                                                 <pre class="code prettyprint"><code>       uiDialog.removebar();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div id="method_render" class="method item inherited">
+                                                    <h3 class="name"><code>render</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[option]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>Inherited from
+                                                                <a href="../classes/bui.dialog.html#method_render">bui.dialog</a>:
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1323"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1323</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.8.0</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>渲染模板内容</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[option]</code>
+                                                                        <span class="type">Object</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                         
+                                                                    </div>
+                                                
+                                                                        <ul class="params-list">
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[id]</code>
+                                                                                    <span class="type">String</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>填充到哪个id下，默认是当前id，可以不用传</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                            <li class="param">
+                                                                                    <code class="param-name optional">[content]</code>
+                                                                                    <span class="type">String</span>
+                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                                                <div class="param-description">
+                                                                                    <p>填充的内容，可以是html</p>
+                                                
+                                                                                </div>
+                                                
+                                                                            </li>
+                                                                        </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       uiDialog.render({
+                                                           content:&quot;自定义标题&quot;
+                                                       });
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1511,7 +1739,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_resize">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l570"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:570</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l736"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:736</code></a>
                                                         </p>
                                                 
                                                 
@@ -1590,7 +1818,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_revert">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l806"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:806</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l975"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:975</code></a>
                                                         </p>
                                                 
                                                 
@@ -1639,7 +1867,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_scroll">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l859"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:859</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1030"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1030</code></a>
                                                         </p>
                                                 
                                                 
@@ -1697,6 +1925,71 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                <div id="method_show" class="method item inherited">
+                                                    <h3 class="name"><code>show</code></h3>
+                                                
+                                                        <div class="args">
+                                                            <span class="paren">(</span><ul class="args-list inline commas">
+                                                                <li class="arg">
+                                                                        <code class="optional">[callback]</code>
+                                                                </li>
+                                                            </ul><span class="paren">)</span>
+                                                        </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                        <span class="flag chainable">chainable</span>
+                                                
+                                                
+                                                    <div class="meta">
+                                                                <p>Inherited from
+                                                                <a href="../classes/bui.dialog.html#method_show">bui.dialog</a>:
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l523"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:523</code></a>
+                                                        </p>
+                                                
+                                                
+                                                
+                                                            <p>Available since 1.7.6</p>
+                                                    </div>
+                                                
+                                                    <div class="description">
+                                                        <p>无动画打开对话框</p>
+                                                
+                                                    </div>
+                                                
+                                                        <div class="params">
+                                                            <h4>Parameters:</h4>
+                                                
+                                                            <ul class="params-list">
+                                                                <li class="param">
+                                                                        <code class="param-name optional">[callback]</code>
+                                                                        <span class="type">Function</span>
+                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                                                
+                                                
+                                                                    <div class="param-description">
+                                                                        <p>回调</p>
+                                                
+                                                                    </div>
+                                                
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                
+                                                
+                                                        <div class="example">
+                                                            <h4>Example:</h4>
+                                                
+                                                            <div class="example-content">
+                                                                <pre class="code prettyprint"><code>       uiDialog.show();
+                                                </code></pre>
+                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
                                                 <div id="method_toggle" class="method item inherited">
                                                     <h3 class="name"><code>toggle</code></h3>
                                                 
@@ -1722,7 +2015,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_toggle">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1234"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1234</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1462"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1462</code></a>
                                                         </p>
                                                 
                                                 
@@ -1808,7 +2101,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_top">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1267"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1267</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1495"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1495</code></a>
                                                         </p>
                                                 
                                                 
@@ -1870,7 +2163,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_ui_bui.prompt.js.html#l145"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.prompt.js:145</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.prompt.js.html#l146"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.prompt.js:146</code></a>
                                                         </p>
                                                 
                                                 
@@ -1921,7 +2214,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_widget">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1328"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1328</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1556"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1556</code></a>
                                                         </p>
                                                 
                                                 
@@ -1982,7 +2275,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#event_off">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1426"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1426</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1654"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1654</code></a>
                                                         </p>
                                                 
                                                 
@@ -2047,7 +2340,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#event_on">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1405"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1405</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1633"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1633</code></a>
                                                         </p>
                                                 
                                                 
@@ -2113,6 +2406,13 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
     <script src="../assets/vendor/prettify/prettify-min.js"></script>
     <script>prettyPrint();</script>
     <script src="../assets/js/yui-prettify.js"></script>
