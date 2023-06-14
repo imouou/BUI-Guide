@@ -1,0 +1,107 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="bui-1-7-x">BUI 官方文档 1.7.x</h1>
+<p>
+<a href="https://github.com/imouou/BUI-Guide/releases"><img src="https://img.shields.io/github/tag/imouou/BUI-Guide.svg"></a>
+<a href="https://github.com/imouou/BUI-Guide"><img src="https://img.shields.io/github/stars/imouou/BUI-Guide.svg?style=social&label=Star"></a>
+</p>
+
+<h3 id="-">简介</h3>
+<blockquote>
+<p>BUI 是一个专注移动快速开发的跨平台 UI 框架，基于文件路径式的路由和组件加载，开箱零配置，简单上手，完美嵌入各平台或打包 APP，适合独立开发各种 Webapp，App，轻应用，小程序，公众号，聆客，钉钉……</p>
+</blockquote>
+<h4 id="-">特点优势</h4>
+<ul>
+<li>开箱即用</li>
+<li>零配置路由</li>
+<li>完美还原界面</li>
+<li>跨平台适配</li>
+<li>轻量化</li>
+<li>高性能</li>
+<li>按需加载</li>
+<li>一次性加载</li>
+<li>单页开发（SPA）媲美原生的交互效果</li>
+<li>多页开发（MPA）</li>
+<li>模块化开发</li>
+<li>组件化开发</li>
+<li>数据驱动开发</li>
+<li>DOM 开发</li>
+<li>jQuery 开发</li>
+<li>ES6 开发</li>
+<li>NPM 模块</li>
+<li>less or sass</li>
+<li>...</li>
+</ul>
+<blockquote>
+<p>BUI 还提供<a href="https://github.com/imouou/BUI-Fast-Snippets/">编辑器插件 BUI-Fast</a>，<a href="chapter1/installation">buijs-cli 工程构建工具</a>，开发速度嗖嗖嗖。</p>
+</blockquote>
+<h4 id="-docsify-ignore-">适用场景 <!-- {docsify-ignore} --></h4>
+<ul>
+<li>中小型应用 webapp 开发;</li>
+<li>微信公众号开发;</li>
+<li>微信小程序内嵌 webview 开发;</li>
+<li>支付宝，钉钉，淘宝内嵌 webview 开发;</li>
+<li>demo 交互原型投标;</li>
+</ul>
+<h4 id="-docsify-ignore-">第三方打包独立应用 <!-- {docsify-ignore} --></h4>
+<ul>
+<li>Cordova</li>
+<li>DCloud</li>
+<li>APICloud</li>
+<li>AppCan</li>
+<li>...</li>
+</ul>
+<p>?&gt; 可以下载 BUI 安卓体验包，用不同平台打包以后的效果. <a href="http://www.easybui.com/downloads/" target="_target">进入下载中心</a></p>
+<h4 id="-docsify-ignore-">谁在使用 <!-- {docsify-ignore} --></h4>
+<p>移动、电信、地铁、政府、银行等行业。</p>
+<h3 id="-">案例效果</h3>
+<p>?&gt; 基于 BUI 制作的<code>高保真还原</code>App 交互效果</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="static/images/case/163_low.gif" alt="" width="240px"></th>
+<th style="text-align:center"><img src="static/images/case/qq_low.gif" alt="" width="240px"></th>
+<th style="text-align:center"><img src="static/images/case/weixin_low.gif" alt="" width="240px"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">网易新闻: 耗时<code>半天</code></td>
+<td style="text-align:center">QQ: 耗时<code>1天</code></td>
+<td style="text-align:center">微信: 耗时<code>2小时</code></td>
+</tr>
+</tbody>
+</table>
+<p>!&gt; 默认的案例及模板都是单页开发，对于理解模块有一定的帮助. 以上案例都可以在<a href="http://www.easybui.com/resource/">官网的资源</a>找到</p>
+<p><strong>扫码体验 Demo</strong></p>
+<p><img src="http://www.easybui.com/static/images/qrcode.png" alt="BUI Demo"></p>
+<p><strong>下载安卓体验版</strong></p>
+<p><img src="http://www.easybui.com/static/images/qrcode/bui_dcloud_qrcode.png" alt="BUI Demo"></p>
+<p>基于 Dcloud 打包</p>
+<h3 id="-">开发者约定</h3>
+<h4 id="1-">1. 问题反馈</h4>
+<p>遇到问题，请先在文档中搜索，如果没有找到结果，请使用<a href="https://github.com/imouou/BUI-Guide/issues">issue 反馈</a>，问题反馈尽量配合截图或者使用场景说明，百分百回（拒绝 Q 群及 QQ 私聊等渠道的信息）。</p>
+<h4 id="2-">2. 版本更新</h4>
+<blockquote>
+<p>cdn beta 版地址: 用于修复问题后快速发布,可以下载使用，不建议直接引入地址用于生产环境.</p>
+</blockquote>
+<ul>
+<li><a href="https://unpkg.com/buijs/lib/latest/bui.css">https://unpkg.com/buijs/lib/latest/bui.css</a></li>
+<li><a href="https://unpkg.com/buijs/lib/latest/bui.js">https://unpkg.com/buijs/lib/latest/bui.js</a></li>
+</ul>
+<blockquote>
+<p>如果要指定版本 <a href="https://cdn.jsdelivr.net/npm/buijs@1.5.40/lib/latest/bui.js">https://cdn.jsdelivr.net/npm/buijs@1.5.40/lib/latest/bui.js</a></p>
+</blockquote>
+<h3 id="-docsify-ignore-">文档下载 <!-- {docsify-ignore} --></h3>
+<p><a href="https://github.com/imouou/BUI-Guide/">BUI 文档</a></p>
+<h3 id="-docsify-ignore-">在线阅读 <!-- {docsify-ignore} --></h3>
+<p><a href="https://imouou.github.io/BUI-Guide/">BUI 在线阅读</a></p>
+<h3 id="-docsify-ignore-">链接 <!-- {docsify-ignore} --></h3>
+<p><a href="http://www.easybui.com">BUI 官网</a></p>
+
+      </body>
+    </html>

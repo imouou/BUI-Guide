@@ -6,7 +6,7 @@
  * Register service worker.
  * ========================================================== */
 
-const RUNTIME = 'bui-guide1.6.0'
+const RUNTIME = 'bui-guide1.9.0'
 const HOSTNAME_WHITELIST = [
     self.location.hostname,
     'fonts.gstatic.com',
@@ -49,6 +49,16 @@ self.addEventListener('activate', event => {
     event.waitUntil(self.clients.claim())
 })
 
+// self.addEventListener('install', function (e) {
+//     console.log('[Service Worker] Install');
+//     e.waitUntil(
+//         caches.open(RUNTIME).then(function (cache) {
+//             console.log('[Service Worker] Caching all: app shell and content');
+//             // return cache.addAll(contentToCache);
+//         })
+//     );
+// });
+
 /**
  *  @Functional Fetch
  *  All network requests are being intercepted here.
@@ -56,11 +66,11 @@ self.addEventListener('activate', event => {
  *  void respondWith(Promise<Response> r)
  */
 self.addEventListener('fetch', event => {
-
+    console.log("fetch")
     // console.log("fetch",event)
     // Skip some of cross-origin requests, like those for Google Analytics.
-    if (HOSTNAME_WHITELIST.indexOf(new URL(event.request.url).hostname)>-1) {
-        
+    if (HOSTNAME_WHITELIST.indexOf(new URL(event.request.url).hostname) > -1) {
+
         // Stale-while-revalidate
         // similar to HTTP's stale-while-revalidate: https://www.mnot.net/blog/2007/12/12/stale
         // Upgrade from Jake's to Surma's: https://gist.github.com/surma/eb441223daaedf880801ad80006389f1
@@ -69,7 +79,7 @@ self.addEventListener('fetch', event => {
         const fetched = fetch(fixedUrl, { cache: 'no-store' })
         const fetchedCopy = fetched.then(resp => resp.clone())
 
-        console.log(cached,fixedUrl)
+        // console.log(cached, fixedUrl)
 
         // Call respondWith() with whatever we get first.
         // If the fetch fails (e.g disconnected), wait for the cache.
@@ -77,15 +87,15 @@ self.addEventListener('fetch', event => {
         // If neither yields a response, return offline pages.
         event.respondWith(
             Promise.race([fetched.catch(_ => cached), cached])
-            .then(resp => resp || fetched)
-            .catch(_ => { /* eat any errors */ })
+                .then(resp => resp || fetched)
+                .catch(_ => { /* eat any errors */ })
         )
 
         // Update the cache with the version we fetched (only for ok status)
         event.waitUntil(
             Promise.all([fetchedCopy, caches.open(RUNTIME)])
-            .then(([response, cache]) => response.ok && cache.put(event.request, response))
-            .catch(_ => { /* eat any errors */ })
+                .then(([response, cache]) => response.ok && cache.put(event.request, response))
+                .catch(_ => { /* eat any errors */ })
         )
     }
 })

@@ -1,8 +1,16 @@
 # 快速入门
 
-> 有Node基础，使用第一种方式即可，无Node基础，可以按第二种方式操作一次。
+## 一、安装方式
 
-### 一、下载开发包并解压 
+### 1. npm 创建开发工程
+
+推荐node环境16.x，复制命令自动安装构建
+
+```bash
+npx buijs@latest create bui-app
+```
+
+### 2. 下载工程方式
 
 [下载单页开发包](https://www.easybui.com/p/download.html)
 
@@ -18,18 +26,19 @@ npm install --registry=https://registry.npm.taobao.org
 npm run dev
 ```
 
-
 **效果预览**
 
 <img src="static/images/template/preview.png">
 
-### 二、 使用CDN版本
+### 3. 使用CDN版本
 
-- **cdn.jsdelivr.net** [buijs](https://www.jsdelivr.com/package/npm/buijs)
+引入cdn依赖即可，CDN可能会不稳定，仅供示例说明。
+
+- **unpkg.com** [buijs](https://www.npmjs.com/package/buijs)
     ```html
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.css" />
-    <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/zepto.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
+    <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+    <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
     ```
 
 #### 1. 新建 *index.html* 页面
@@ -41,13 +50,13 @@ npm run dev
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <title>BUI</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.css" />
+        <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
     </head>
     <body>
         <!-- 结构内容位置 -->
 
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/zepto.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.js"></script>
+        <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+        <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
         <script>
             // 多页开发: 一个页面必须要有一个 bui.ready, 且只能有一个
             bui.ready(function(global){
@@ -60,7 +69,11 @@ npm run dev
 
 ```
 
-#### 2. 新增*BUI标准结构*
+## 二、开发示例
+
+接着以CDN的开发方式，多页开发，简单说明结构与控件，组件的基本使用，与传统开发保持一致。
+
+#### 新增BUI页面
 
 放在body结构里面。
 
@@ -87,7 +100,7 @@ npm run dev
 
 ```
 
-#### 3. 使用BUI控件
+#### 使用BUI控件
 
 一个控件包含结构与初始化脚本，分别增加到main内容里面，以及bui.ready的初始化里面。
 
@@ -119,7 +132,7 @@ var uiSlide = bui.slide({
 <html>
     <head>
         <title>BUI</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.css" />
+        <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
     </head>
     <body>
         <!-- BUI标准结构 -->
@@ -143,8 +156,8 @@ var uiSlide = bui.slide({
                 <!-- 底部固定内容 -->
             </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/zepto.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.js"></script>
+        <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+        <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
         <script>
             // 多页开发: 一个页面必须要有一个 bui.ready, 且只能有一个
             bui.ready(function(global){
@@ -169,7 +182,7 @@ var uiSlide = bui.slide({
 
 > 以上是BUI最基础的用法，简单好理解，但随着需求的变更，慢慢就越写越乱，不好维护。需要组件化把可以复用的代码抽离，比方轮播图是可以公共使用的。
 
-#### 4. 新增自定义组件
+#### 新增自定义组件
 
 还是以轮播图组件为例子，抽离原本的代码，做参数合并操作。单页多页都是一样的用法。
 
@@ -228,7 +241,7 @@ loader.define(function(requires, exports, module, global){
 <html>
     <head>
         <title>BUI</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.css" />
+        <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
     </head>
     <body>
         <!-- BUI标准结构 -->
@@ -252,8 +265,8 @@ loader.define(function(requires, exports, module, global){
                 <!-- 底部固定内容 -->
             </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/zepto.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.js"></script>
+        <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+        <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
         <script>
             // 多页开发: 一个页面必须要有一个 bui.ready, 且只能有一个
             bui.ready(function(global){
@@ -266,7 +279,7 @@ loader.define(function(requires, exports, module, global){
 
 ```
 
-#### 5. 组件动态传参
+#### 组件动态传参
 
 部分参数我们通过属性的方式传过去，对象类型的参数则需要动态传过去。
 
@@ -294,7 +307,7 @@ loader.delay({
 <html>
     <head>
         <title>BUI</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.css" />
+        <link rel="stylesheet" href="https://unpkg.com/buijs/lib/latest/bui.css" />
     </head>
     <body>
         <!-- BUI标准结构 -->
@@ -318,8 +331,8 @@ loader.delay({
                 <!-- 底部固定内容 -->
             </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/zepto.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/buijs@latest/lib/latest/bui.js"></script>
+        <script src="https://unpkg.com/buijs/lib/zepto.js"></script>
+        <script src="https://unpkg.com/buijs/lib/latest/bui.js"></script>
         <script>
             // 多页开发: 一个页面必须要有一个 bui.ready, 且只能有一个
             bui.ready(function(global){
