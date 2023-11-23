@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.accordion.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.accordion.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                &quot;use strict&quot;;
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;折叠菜单&lt;/h2&gt;
+                                 *     &lt;p&gt;折叠菜单初始化时尽量使用ID单独初始化,它不止可以用于dl,dt 这样的结构,还可以用在panel以及自定义的结构中,更多例子参考modules/accordion_panel.html&lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.accordion.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 *     {{#crossLink &quot;bui.accordion/show&quot;}}{{/crossLink}}: 展开第几个 &lt;br&gt;
+                                 *     {{#crossLink &quot;bui.accordion/hide&quot;}}{{/crossLink}}: 隐藏第几个 &lt;br&gt;
+                                 *     {{#crossLink &quot;bui.accordion/showFirst&quot;}}{{/crossLink}}: 所有折叠菜单显示第一个&lt;br&gt;
+                                 *     {{#crossLink &quot;bui.accordion/showAll&quot;}}{{/crossLink}}: 所有折叠菜单全部展开 &lt;br&gt;
+                                 *     {{#crossLink &quot;bui.accordion/hideAll&quot;}}{{/crossLink}}: 所有折叠菜单全部隐藏 &lt;br&gt;
+                                 *     {{#crossLink &quot;bui.accordion/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 *     {{#crossLink &quot;bui.accordion/widget&quot;}}{{/crossLink}}: 获取依赖的控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.accordion.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-accordion_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class accordion
+                                 *  @constructor
+                                 *  @param {object} option
+                                 *  @param {string} option.id 控件id
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {string} [option.handle] 点击的区域
+                                 *  @param {number} [option.height] 父层高度,0则自适应
+                                 *  @param {string} [option.target] 要显示隐藏的目标
+                                 *  @param {number} [option.targetHeight] 目标自适应高度还是限制高度
+                                 *  @param {boolean} [option.single]  false(显示多个) || true(一次只折叠一个) 
+                                 *  @param {boolean} [option.stopPropagation] 1.5.6新增 默认:false不阻止冒泡, true 阻止冒泡,比方有链接的时候
+                                 *  @param {boolean} [option.lock] 1.5.6新增,锁定点击 默认:false可以点击 | true 不能点击
+                                 *  @param {function} [option.onBeforeInit] 1.5.1新增 初始化前触发
+                                 *  @param {function} [option.onInited] 1.5.1新增 初始化以后触发
+                                 *  @param {function} [option.callback] 点击按钮的回调
+                                 *  @example
+                                 *
+                                 *   html:
+                                 
+                                    &lt;dl id=&quot;accordion&quot;&gt;
+                                        &lt;dt class=&quot;bui-btn&quot;&gt;折叠菜单&lt;/dt&gt;
+                                        &lt;dd&gt;
+                                            折叠菜单的内容
+                                        &lt;/dd&gt;
+                                    &lt;/dl&gt;
+                                 *
+                                 *   js:
+                                 *
+                                        // 初始化
+                                        var uiAccordion = bui.accordion({
+                                            id: &quot;#accordion&quot;
+                                          });
+                            
+                                        // 展开第一个
+                                        uiAccordion.showFirst();
+                                 *
+                                 */
+                                ui.accordion = function (option) {
+                            
+                                    var config = {
+                                        id: &quot;&quot;,
+                                        uid: &quot;&quot;,
+                                        handle: &quot;dt&quot;,
+                                        target: &quot;dd&quot;,
+                                        height: 0,
+                                        targetHeight: 0,
+                                        // keeptop: true,
+                                        single: false,
+                                        stopPropagation: false,
+                                        lock: false,
+                                        data: null,
+                                        autoinit: true,
+                                        onBeforeInit: null,
+                                        onInited: null,
+                                        callback: null
+                                    }
+                                    //方法
+                                    var module = {
+                                        name: &quot;accordion&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        showFirst: showFirst,
+                                        showAll: showAll,
+                                        hideAll: hideAll,
+                                        disabled: disabled,
+                                        enabled: enabled,
+                                        destroy: destroy,
+                                        show: show,
+                                        hide: hide,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.accordion, option);
+                            
+                                    var $id = null,
+                                        id,
+                                        el,
+                                        hasEventInit = false,
+                                        winWidth,
+                                        winHeight,
+                                        handlers = {},
+                                        $handle,
+                                        $target;
+                            
+                                    //执行初始化
+                                    param.autoinit &amp;&amp; init(param);
+                            
+                                    //初始化
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(true, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                            
+                                        // 屏幕的宽度
+                                        winWidth = document.documentElement.clientWidth;
+                                        winHeight = document.documentElement.clientHeight;
+                            
+                                        //支持样式选择器
+                                        $id = ui.obj(option.id) || ui.obj(&#x27;.&#x27; + ui.prefix(&#x27;accordion&#x27;));
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                            
+                                        //dt
+                                        $handle = getHandle();;
+                                        //dd 通过 children 查找可以解决嵌套问题
+                                        $target = option.target.indexOf(&quot;#&quot;) &gt; -1 ? ui.obj(option.target) : $id.find(option.target);
+                            
+                                        //初始化显示
+                                        display(option);
+                            
+                                        if (!hasEventInit) {
+                                            //绑定事件
+                                            bind(option);
+                                        }
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        return this;
+                                    }
+                            
+                                    //初始化显示,例如高度,例如是否一次显示一个,还是多个
+                                    function display(option) {
+                            
+                                        // 清除掉之前的点击状态
+                                        $handle.removeClass(&quot;active&quot;);
+                                        $target.css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        //初始化固定高度
+                                        if (parseFloat(option.targetHeight) &gt; 0) {
+                                            $target.height(option.targetHeight);
+                                        }
+                                        //初始化父层高度
+                                        if (parseFloat(option.height) &gt; 0) {
+                                            $id.height(option.height);
+                                        }
+                            
+                                    }
+                                    //绑定事件
+                                    function bind(option) {
+                            
+                                        var controlTarget = function (e) {
+                                            // 如果有disabled样式,则不执行callback
+                                            if ($(this).hasClass(&quot;disabled&quot;) || $(this).attr(&quot;href&quot;)) {
+                                                return;
+                                            }
+                            
+                                            var bool = option.callback &amp;&amp; option.callback.call(module, e);
+                            
+                                            if (bool === false) {
+                                                return false;
+                                            }
+                            
+                                            toggle.call(this, e, option);
+                            
+                                            // 加上属性判断,不然会导致外层的链接被阻止跳转
+                                            (option.stopPropagation || !($(this).attr(&quot;href&quot;))) &amp;&amp; e.stopPropagation();
+                                        }
+                                        if (option.handle.indexOf(&quot;#&quot;) &gt; -1) {
+                            
+                                            !option.lock &amp;&amp; $handle.off(&quot;click.bui&quot;).on(&quot;click.bui&quot;, controlTarget)
+                                        } else {
+                                            !option.lock &amp;&amp; $id.off(&quot;click.bui&quot;, option.handle).on(&quot;click.bui&quot;, option.handle, controlTarget)
+                                        }
+                            
+                                        // if( option.keeptop ){
+                                        //     $(&quot;main&quot;).on(&quot;scroll&quot;,ui.unit.debounce(keepTop,100))
+                                        // }
+                            
+                                        // // 保持在顶部
+                                        // function keepTop(e) {
+                                        //     var scrollObj = this;
+                            
+                                        //     if( $handle.hasClass(&quot;active&quot;) ){
+                                        //         var $handleActive = $handle.filter(&quot;.active&quot;);
+                                        //         var scrollTopFirst = $handleActive.scrollTop();
+                                        //         $handleActive.each(function (i,item) {
+                                        //             scrollTop = this.offsetTop || 0;
+                                        //             var itemHeight = this.height;
+                            
+                                        //             if( scrollObj.scrollTop &gt; scrollTopFirst ){
+                                        //                 $(this).addClass(&quot;bui-fixed&quot;);
+                                        //             }else {
+                                        //                 console.log(scrollTop)
+                                        //                 $(this).removeClass(&quot;bui-fixed&quot;);
+                                        //             }
+                            
+                                        //         })
+                                        //     }
+                            
+                                        // }
+                            
+                                        hasEventInit = true;
+                                    }
+                            
+                                    /**
+                                     * 阻止触发
+                                     *  @method disabled
+                                     *  @chainable
+                                     *  @since 1.4
+                                     *  @param {number} [index] 阻止第几个,从0开始算起
+                                     *  @example
+                            
+                                        uiAccordion.disabled(1);
+                            
+                                     */
+                                    function disabled(index) {
+                                        var $handleItem;
+                                        if (typeof index === &quot;number&quot;) {
+                                            $handleItem = $handle.eq(index);
+                                        } else {
+                                            $handleItem = $handle;
+                                        }
+                            
+                                        $handleItem &amp;&amp; $handleItem.addClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 允许触发
+                                     *  @method enabled
+                                     *  @chainable
+                                     *  @since 1.4
+                                     *  @param {number} [index] 阻止第几个,从0开始算起
+                                     *  @example
+                            
+                                        uiAccordion.enabled(1);
+                            
+                                     */
+                                    function enabled(index) {
+                                        var $handleItem;
+                                        if (typeof index === &quot;number&quot;) {
+                                            $handleItem = $handle.eq(index);
+                                        } else {
+                                            $handleItem = $handle;
+                                        }
+                            
+                                        $handleItem &amp;&amp; $handleItem.removeClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    //切换器
+                                    function toggle(e, option) {
+                                        var $this = $(this),
+                                            isActive = $this.hasClass(&#x27;active&#x27;),
+                                            index = $handle.index(this),
+                                            target = option.target.indexOf(&quot;#&quot;) &gt; -1 ? ui.obj(option.target) : $this.next(option.target);
+                            
+                                        //默认展开多个
+                                        if (!option.single) {
+                                            if (isActive) {
+                                                // hide(index);
+                                                $this.removeClass(&#x27;active&#x27;);
+                                                target.css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                                trigger.call(module, &quot;hide&quot;, e)
+                                            } else {
+                                                $this.addClass(&#x27;active&#x27;);
+                                                target.css(&quot;display&quot;, &quot;block&quot;);
+                                                trigger.call(module, &quot;show&quot;, e)
+                                            }
+                                        } else {
+                            
+                                            //一次只展开一个
+                                            if (isActive) {
+                            
+                                                // hide(index);
+                                                $this.removeClass(&#x27;active&#x27;);
+                                                target.css(&quot;display&quot;, &quot;none&quot;);
+                                                trigger.call(module, &quot;hide&quot;, e)
+                                            } else {
+                                                hideAll();
+                                                // show(index);
+                                                $this.addClass(&#x27;active&#x27;);
+                                                target.css(&quot;display&quot;, &quot;block&quot;);
+                                                trigger.call(module, &quot;show&quot;, e)
+                                            }
+                                        }
+                                    }
+                            
+                                    /**
+                                     * 显示第几个面板 这个需要绑定ID单独显示
+                                     *  @method show
+                                     *  @chainable
+                                     *  @param {number} [index] 显示第几个,从0开始算起
+                                     *  @example
+                            
+                                        //显示第几个
+                                        uiAccordion.show(1);
+                            
+                                     */
+                                    function show(index) {
+                                        let hasIndex = /\d/.test(index);
+                                        var $handleCurrent = hasIndex ? $handle.eq(index) : $handle;
+                                        var $targetCurrent = $handleCurrent.next(param.target);
+                            
+                                        $handleCurrent.addClass(&#x27;active&#x27;);
+                                        $targetCurrent.css(&quot;display&quot;, &quot;block&quot;);
+                            
+                                        trigger.call(this, &quot;show&quot;, {
+                                            target: hasIndex ? $handle[index] : $handle
+                                        });
+                                        return this;
+                                    }
+                            
+                            
+                                    /**
+                                     * 关闭第几个面板 这个需要绑定ID单独显示
+                                     *  @method hide
+                                     *  @chainable
+                                     *  @param {number} [index] 关闭第几个,从0开始算起
+                                     *  @example
+                            
+                                        //显示第几个
+                                        uiAccordion.hide(1);
+                            
+                                     */
+                                    function hide(index) {
+                                        let hasIndex = /\d/.test(index);
+                                        var $handleCurrent = hasIndex ? $handle.eq(index) : $handle;
+                                        var $targetCurrent = $handleCurrent.next(param.target);
+                            
+                                        $handleCurrent.removeClass(&#x27;active&#x27;);
+                                        $targetCurrent.css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        trigger.call(this, &quot;hide&quot;, {
+                                            target: hasIndex ? $handle[index] : $handle
+                                        });
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 所有折叠菜单显示第一个
+                                     *  @method showFirst
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //显示第几个
+                                        uiAccordion.showFirst();
+                            
+                                     */
+                                    function showFirst() {
+                                        if ($id.length &gt; 1) {
+                                            $id.each(function (index, el) {
+                                                showIndex(0, el);
+                                            });
+                                        } else {
+                                            showIndex(0);
+                                        }
+                            
+                                        trigger.call(this, &quot;show&quot;, {
+                                            target: $handle[0]
+                                        });
+                                        return this;
+                                    }
+                            
+                                    function showIndex(index, parentItem) {
+                                        var index = index || 0,
+                                            $parent = parentItem ? $(parentItem) : $id;
+                                        let $han = $parent.children().eq(index);
+                                        let $hand = $han.closest(param.handle).length ? $han.closest(param.handle) : $han.find(param.handle);
+                                        $hand.addClass(&#x27;active&#x27;)
+                                            .next(param.target).css(&quot;display&quot;, &quot;block&quot;);
+                                    }
+                            
+                                    /**
+                                     * 显示所有隐藏的菜单
+                                     *  @method showAll
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //显示第几个
+                                        uiAccordion.showAll();
+                            
+                                     */
+                                    function showAll() {
+                            
+                                        $handle = getHandle();
+                                        $handle.each(function (i, item) {
+                            
+                                            $(item).addClass(&#x27;active&#x27;)
+                                                .next(param.target).css(&quot;display&quot;, &quot;block&quot;);
+                                        })
+                            
+                                        trigger.call(this, &quot;showall&quot;, {
+                                            target: $handle
+                                        });
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 隐藏所有展开的菜单
+                                     *  @method hideAll
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //隐藏第几个
+                                        uiAccordion.hideAll();
+                            
+                                     */
+                                    function hideAll() {
+                                        // 重新获取选择器, 动态渲染会不能
+                                        $handle = getHandle();
+                            
+                                        $handle.each(function (i, item) {
+                            
+                                            $(item).removeClass(&#x27;active&#x27;)
+                                                .next(param.target).css(&quot;display&quot;, &quot;none&quot;);
+                                        })
+                            
+                                        trigger.call(this, &quot;hideall&quot;, {
+                                            target: $handle
+                                        });
+                                        return this;
+                            
+                                    }
+                            
+                                    function getHandle() {
+                                        var handle = param.handle.indexOf(&quot;#&quot;) &gt; -1 ? ui.obj(param.handle) : $id.find(param.handle);
+                                        return handle;
+                                    }
+                            
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool] 默认: false 销毁部分 | true 销毁全部 
+                                     *  @example
+                            
+                                        //销毁
+                                        uiAccordion.destroy();
+                            
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                                        if ($id) {
+                                            $id.off(&quot;click.bui&quot;)
+                                            $id.remove();
+                                            $id = null;
+                                        }
+                            
+                                        off(&quot;hide&quot;);
+                                        off(&quot;show&quot;);
+                            
+                                        // 清除dom及对象
+                                        $handle = null;
+                                        $target = null;
+                            
+                                    }
+                            
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name] 依赖控件名
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiAccordionWidget = uiAccordion.widget();
+                            
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {};
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key] 不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value] 设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                        var option = uiAccordion.option();
+                            
+                                        //获取某个参数
+                                        var id = uiAccordion.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiAccordion.option( &quot;height&quot;,200 );
+                            
+                                        //修改多个参数
+                                        uiAccordion.option( {&quot;height&quot;:200} );
+                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                            
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type] 事件类型: &quot;show&quot;(显示目标时) | &quot;hide&quot;(隐藏目标时)  
+                                     *  @param {function} [callback] 绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiAccordion.on(&quot;show&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type] 事件类型: &quot;show&quot;(显示目标时) | &quot;hide&quot;(隐藏目标时)  
+                                     *  @param {function} [callback] 绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiAccordion.off(&quot;show&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                            
+                            
+                                    return module;
+                                };
+                            
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

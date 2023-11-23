@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.number.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.number.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;数字增减条&lt;/h2&gt;
+                                 *     &lt;p&gt;支持静态初始化,常用于购物车&lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.number.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.number/prev&quot;}}{{/crossLink}}: 执行减少操作 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.number/next&quot;}}{{/crossLink}}: 执行增加操作 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.number/value&quot;}}{{/crossLink}}: 不传参则获取,传参则设置 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.number/disabled&quot;}}{{/crossLink}}: 禁止输入修改 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.number/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.number/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.number.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-number_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class number
+                                 *  @constructor
+                                 *  @param {object} option
+                                 *  @param {string} [option.parentId]  1.5.3新增, 默认&quot;.bui-page&quot;, 这样可以一次性初始化页面的所有number,只需初始化一次.
+                                 *  @param {string} [option.id] 控件id, 不传则全部初始化,可以通过查找input的值设置.
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {number} [option.min] 最小值, 属性的 data-min 会优先
+                                 *  @param {number} [option.max] 最大值, 属性的 data-max 会优先, 默认:100 
+                                 *  @param {number} [option.step] 一次增加多少
+                                 *  @param {number} [option.decimal] 1.6.6新增，小数点后几位，默认1，step:0.001 的时候，decimal改成3
+                                 *  @param {string} [option.value] 初始值
+                                 *  @param {string} [option.name] 某一组的名称
+                                 *  @param {string} [option.type] 输入框的类型 text | number 
+                                 *  @param {boolean} [option.disabled]  是否可以输入修改 false | true 
+                                 *  @param {boolean} [option.render]  是否动态填充, true | false  
+                                 *  @param {function} [option.onInput]  1.4.3新增 输入数值的时候的实时校验处理 
+                                 *  @param {function} [option.onChange]  1.5新增 改变的时候触发,初始值的时候不触发 
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                 *  @param {function} [option.callback]  点击按钮的回调 
+                                 *  @example
+                                 *
+                                 *   // 例子1: 动态渲染
+                                 *   html:
+                                 *
+                                        &lt;div id=&quot;number&quot; class=&quot;bui-number&quot;&gt;&lt;/div&gt;
+                                 *
+                                 *   js:
+                                 *
+                                        // 初始化
+                                        var uiNumber = bui.number({
+                                                        id:&#x27;#number&#x27;
+                                            });
+                                            //获取值
+                                            uiNumber.value();
+                                 *
+                                 *   js:
+                                 *
+                                        // 初始化小数点  1.6.4新增
+                                        var uiNumber = bui.number({
+                                                id: &quot;#number&quot;,
+                                                type: &quot;number&quot;,
+                                                step: 0.1,
+                                                min: 0.0,
+                                                value: 0.1,
+                                            })
+                                 *
+                                 *   // 例子2: 静态渲染, 把结构写在模板里一起渲染, 用于一组number的渲染. 这种情况在跟列表模板配合使用的时候,尤其有用, 只需初始化一次.
+                                 *   html:
+                                 *
+                                        &lt;div id=&quot;number1&quot; class=&quot;bui-number&quot;&gt;
+                                            &lt;div class=&quot;bui-number-prev&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;1&quot; max=&quot;&quot; min=&quot;&quot;&gt;
+                                            &lt;div class=&quot;bui-number-next&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                 *
+                                 *   js:
+                                 *
+                                        // 初始化, 如果有多个页面有这个控件, id选择器可以通过当前页查找: id:&quot;.page-cart .bui-number&quot;
+                                        var uiNumber = bui.number({
+                                                render: false
+                                            });
+                            
+                                        // 取值 uiNumber.values();
+                                 *
+                                 *
+                                 */
+                                ui.number = function (option) {
+                            
+                                    //默认配置
+                                    var config = {
+                                        parentId: &quot;.bui-page&quot;,
+                                        id: &quot;.bui-number&quot;,
+                                        uid: &quot;&quot;,
+                                        type: &quot;text&quot;,
+                                        min: 0,
+                                        max: 100,
+                                        step: 1,
+                                        value: 1,
+                                        disabled: false,
+                                        render: true,
+                                        tips: false,
+                                        autocheck: true,
+                                        decimal: 1,
+                                        name: &quot;&quot;,
+                                        prev: &quot;.bui-number-prev&quot;,
+                                        input: &quot;input&quot;,
+                                        next: &quot;.bui-number-next&quot;,
+                                        onInput: null,
+                                        autoinit: true,
+                                        inited: null,
+                                        onBeforeInit: null,
+                                        onInited: null,
+                                        onChange: null,
+                                        callback: null
+                                    }
+                            
+                                    //方法
+                                    var module = {
+                                        name: &quot;number&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        $el: selector,
+                                        disabled: disabled,
+                                        enable: enable,
+                                        disablePrev: disablePrev,
+                                        disableNext: disableNext,
+                                        enablePrev: enablePrev,
+                                        enableNext: enableNext,
+                                        reset: reset,
+                                        value: setValue,
+                                        values: setValues,
+                                        prev: prev,
+                                        next: next,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.number, option);
+                            
+                                    var id,
+                                        max,
+                                        min,
+                                        step,
+                                        //控件自定义模板可以自由绑定想增加或者减少的按钮名称
+                                        $prev,
+                                        $next,
+                                        $input,
+                                        hasEventInit = false,
+                                        hasId = false,
+                                        isDestroy = false,
+                                        $pid = null,
+                                        $id;
+                            
+                                    // 初始化
+                                    param.autoinit &amp;&amp; init(param);
+                            
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(true, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                            
+                                        isDestroy = false;
+                            
+                                        max = option.max;
+                                        min = option.min;
+                                        step = option.step;
+                            
+                                        // 如果parentId ==历史记录的id，ui.obj 会找不到,需要使用 $ 选择器
+                                        $pid = opt.parentId &amp;&amp; ui.obj(option.parentId).length ? ui.obj(option.parentId) : $(option.parentId);
+                            
+                                        if (typeof option.id === &quot;object&quot;) {
+                                            $id = ui.obj(option.id);
+                                            hasId = false;
+                                        } else if (typeof option.id === &quot;string&quot; &amp;&amp; option.id.indexOf(&quot;#&quot;) === 0 || (opt.id &amp;&amp; !opt.parentId)) {
+                                            $id = ui.obj(option.id);
+                                            hasId = true;
+                                        } else {
+                                            $id = $pid.find(option.id);
+                                            hasId = false;
+                                        }
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                            
+                                        //render = true,就会动态创建模板
+                                        if (option.render) {
+                                            render(option);
+                                        }
+                            
+                                        $prev = $id.children(option.prev);
+                                        $next = $id.children(option.next);
+                                        $input = $id.children(option.input);
+                            
+                                        if (!hasEventInit) {
+                                            //绑定按钮事件
+                                            bind(option);
+                                        }
+                            
+                                        let vals = [];
+                                        if ($id.length) {
+                                            $id.each((i, item) =&gt; {
+                                                let val = item.getAttribute(&quot;value&quot;) || option.value;
+                                                if (!item.id) {
+                                                    item.id = ui.guid();
+                                                }
+                            
+                                                vals.push({
+                                                    id: item.id,
+                                                    value: val
+                                                })
+                                            })
+                                        }
+                            
+                            
+                                        //禁止修改
+                                        if (option.disabled) {
+                                            $input.attr(&#x27;disabled&#x27;, &#x27;disabled&#x27;);
+                                        }
+                            
+                            
+                                        if (typeof option.value == &quot;object&quot;) {
+                                            setValues(option.value)
+                                        } else if (vals.length) {
+                                            setValues(vals)
+                                        } else {
+                                            //设置初始值
+                                            set(option.value);
+                                        }
+                            
+                                        option.target = $input;
+                                        option.value = option.value;
+                            
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        // 废弃,
+                                        option.inited &amp;&amp; option.inited.call(module, option);
+                            
+                                        return this;
+                                    }
+                            
+                                    // 检测是否在区间
+                                    function checkBetween(val, min, max) {
+                                        min = min || param.min;
+                                        max = max || param.max;
+                                        if (val &lt; min) {
+                                            val = min;
+                                        } else if (val &gt; max) {
+                                            val = max
+                                        }
+                            
+                                        return val;
+                                    }
+                            
+                                    //模板
+                                    function template(option) {
+                            
+                                        var html = &#x27;&#x27;;
+                                        html += &#x27;    &lt;div class=&quot;bui-number-prev&quot;&gt;&lt;i class=&quot;&#x27; + ui.config.icon.minus + &#x27;&quot;&gt;&lt;/i&gt;&lt;/div&gt;&#x27;;
+                                        html += &#x27;    &lt;input class=&quot;bui-number-input&quot; type=&quot;&#x27; + option.type + &#x27;&quot; name=&quot;&#x27; + (option.name || ui.guid()) + &#x27;&quot; value=&quot;&#x27; + option.value + &#x27;&quot; min=&quot;&#x27; + option.min + &#x27;&quot; max=&quot;&#x27; + option.max + &#x27;&quot; step=&quot;&#x27; + option.step + &#x27;&quot;/&gt;&#x27;;
+                                        html += &#x27;    &lt;div class=&quot;bui-number-next&quot;&gt;&lt;i class=&quot;&#x27; + ui.config.icon.plus + &#x27;&quot;&gt;&lt;/i&gt;&lt;/div&gt;&#x27;;
+                            
+                                        return html;
+                                    };
+                            
+                                    //渲染
+                                    function render(option) {
+                            
+                                        var tpl = template(option);
+                            
+                                        $id.html(tpl);
+                            
+                                        return this;
+                                    };
+                            
+                                    // 返回控件自身的选择器
+                                    function selector(id) {
+                                        return ui.selector.call($id, id);
+                                    }
+                            
+                            
+                            
+                                    //绑定事件
+                                    function bind(option) {
+                                        var target = &quot;.bui-number&quot; + &quot; &quot; + option.input;
+                                        var targetPrev = &quot;.bui-number&quot; + &quot; &quot; + option.prev;
+                                        var targetNext = &quot;.bui-number&quot; + &quot; &quot; + option.next;
+                            
+                                        var onInput = function (e) {
+                                            var val = $(this).val();
+                            
+                                            // if( /^[0-9]*$/i.test(val) ){
+                                            //     set.call(this, val );
+                                            // }
+                                            e.value = checkBetween(val);
+                                            option.onInput &amp;&amp; option.onInput.call(module, e);
+                                            e.stopPropagation();
+                            
+                                        };
+                            
+                                        var onChange = function (e) {
+                            
+                                            var val = option.autocheck &amp;&amp; isNaN(parseFloat($(this).val(), 10)) ? 0 : parseFloat($(this).val(), 10);
+                            
+                                            if (/^[-\\+]?([1-9]\d*\.?\d*)|(0\.\d*[1-9])$/i.test(val)) {
+                                                set.call(this, checkBetween(val));
+                                            }
+                                            e.value = checkBetween(val);
+                            
+                                            // option.onChange &amp;&amp; option.onChange.call(module, e);
+                                            e.stopPropagation();
+                            
+                                        }
+                            
+                                        var onPrev = function (e) {
+                                            var input = $(this).next(param.input);
+                            
+                                            e.value = input.val();
+                                            var canPrev = option.callback &amp;&amp; option.callback.call(module, e);
+                            
+                                            if (canPrev === false || $(this).hasClass(&quot;disabled&quot;)) {
+                                                return;
+                                            }
+                                            prev.call(input, e);
+                            
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                        }
+                            
+                                        var onNext = function (e) {
+                                            var input = $(this).prev(param.input);
+                            
+                                            e.value = input.val();
+                            
+                                            var canNext = option.callback &amp;&amp; option.callback.call(module, e);
+                            
+                                            if (canNext === false || $(this).hasClass(&quot;disabled&quot;)) {
+                                                return;
+                                            }
+                                            next.call(input, e);
+                            
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                        }
+                            
+                                        // 如果通过id初始化, 事件绑定在id上
+                                        if (hasId) {
+                                            //检测输入的值是否有效
+                                            option.onInput &amp;&amp; $id.off(&#x27;input&#x27;, option.input).on(&#x27;input&#x27;, option.input, ui.unit.debounce(onInput, 400))
+                            
+                                            //检测输入的值是否有效
+                                            $id.off(&#x27;change&#x27;, option.input).on(&#x27;change&#x27;, option.input, onChange);
+                            
+                                            //点击减少
+                                            $id.off(&#x27;click.bui&#x27;, option.prev).on(&#x27;click.bui&#x27;, option.prev, onPrev);
+                            
+                                            //点击增加
+                                            $id.off(&#x27;click.bui&#x27;, option.next).on(&#x27;click.bui&#x27;, option.next, onNext);
+                            
+                                        } else {
+                                            //检测输入的值是否有效
+                                            option.onInput &amp;&amp; $pid.off(&#x27;input&#x27;, target).on(&#x27;input&#x27;, target, ui.unit.debounce(onInput, 400))
+                            
+                                            //检测输入的值是否有效
+                                            $pid.off(&#x27;change&#x27;, target).on(&#x27;change&#x27;, target, onChange)
+                            
+                                            //点击减少
+                                            $pid.off(&#x27;click.bui&#x27;, targetPrev).on(&#x27;click.bui&#x27;, targetPrev, onPrev)
+                            
+                                            //点击增加
+                                            $pid.off(&#x27;click.bui&#x27;, targetNext).on(&#x27;click.bui&#x27;, targetNext, onNext)
+                            
+                                        }
+                            
+                                        hasEventInit = true;
+                            
+                                        return this;
+                                    }
+                            
+                                    //获取值
+                                    function get() {
+                            
+                                        getSelectors();
+                            
+                                        var $inputs = this &amp;&amp; ui.typeof(this) === &quot;htmldivelement&quot; ? $(this) : $input;
+                            
+                                        var value = parseFloat($inputs.val(), 10);
+                            
+                                        return value;
+                                    };
+                            
+                                    //设置值
+                                    function set(num) {
+                            
+                                        getSelectors();
+                            
+                                        var $inputs = (this &amp;&amp; ui.typeof(this) === &quot;object&quot;) ? $input : $(this);
+                            
+                                        Array.prototype.slice.call($inputs).forEach(function (item, i) {
+                            
+                                            var max = item.getAttribute(&quot;max&quot;) || item.parentElement.getAttribute(&quot;data-max&quot;) || param.max;
+                                            var min = item.getAttribute(&quot;min&quot;) || item.parentElement.getAttribute(&quot;data-min&quot;) || param.min;
+                            
+                                            var value = param.autocheck ? checkValue(parseFloat(num), parseFloat(min), parseFloat(max)) : parseFloat(num);
+                            
+                                            item.value = value;
+                            
+                                            var target = this &amp;&amp; ui.typeof(this) === &quot;htmldivelement&quot; ? $input : item;
+                            
+                                            // 触发b-model 的绑定
+                                            $inputs.trigger(&quot;input&quot;);
+                                            // 输入的时候才触发
+                                            trigger.call(module, &quot;change&quot;, {
+                                                target: item,
+                                                value: num
+                                            });
+                                            param.onChange &amp;&amp; param.onChange.call(module, {
+                                                target: item,
+                                                value: num
+                                            });
+                            
+                                        })
+                            
+                                        return this;
+                                    };
+                            
+                                    function checkValue(num, mins, maxs) {
+                                        var value = num || 0;
+                            
+                                        if (value &gt; maxs) {
+                                            value = maxs;
+                                        }
+                            
+                                        if (value &lt; mins) {
+                                            value = mins;
+                                        }
+                            
+                                        if (value &amp;&amp; value &gt;= mins &amp;&amp; value &lt;= maxs) {
+                                            value = value;
+                                        }
+                            
+                                        return value;
+                                    }
+                            
+                                    /**
+                                     * 设置或者获取值
+                                     *  @method value
+                                     *  @chainable
+                                     *  @param {string} [num] 设置值
+                                     *  @example
+                            
+                                        //设置值
+                                        uiNumber.value(&quot;110&quot;);
+                            
+                                        //获取值
+                                        uiNumber.value();
+                            
+                                     */
+                                    function setValue(num) {
+                                        var val = 0;
+                            
+                                        if (typeof num !== &quot;undefined&quot;) {
+                                            set.call(this, num);
+                            
+                                            val = num;
+                            
+                                        } else {
+                                            val = get.call(this);
+                            
+                                        }
+                                        return val;
+                                    }
+                            
+                                    /**
+                                     * 重置数据
+                                     *  @method reset
+                                     *  @since 1.6.2
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //重置
+                                        uiNumber.reset();
+                                     */
+                                    function reset() {
+                            
+                                        var num = param.value || param.min;
+                                        set.call(this, num);
+                            
+                            
+                                        return num;
+                                    }
+                            
+                                    /**
+                                     * 获取设置多个值
+                                     *  @method values
+                                     *  @chainable
+                                     *  @param {string} [num] 设置值 [{id:&quot;&quot;,value:&quot;&quot;}]
+                                     *  @return {array} [ 返回 [{id:&quot;&quot;,value:&quot;&quot;}] ]
+                                     *  @example
+                            
+                                        uiNumber.values();
+                            
+                                     */
+                                    function setValues(val) {
+                                        if ($id.length &lt; 1) {
+                                            $id = $pid.find(param.id);
+                                        }
+                            
+                                        if (val &amp;&amp; ui.typeof(val) === &quot;array&quot;) {
+                                            Array.prototype.slice.call($id).forEach(function (item, i) {
+                                                var name = item.id || item.getAttribute(&quot;name&quot;) || &quot;&quot;;
+                                                var $numInput = item.querySelector(&quot;input&quot;);
+                            
+                                                if (name == val[i][&quot;id&quot;]) {
+                            
+                                                    // 用于渲染的时候赋值
+                                                    $numInput.value = val[i][&quot;value&quot;];
+                                                    $numInput.min = val[i][&quot;min&quot;] || param.min;
+                                                    $numInput.max = val[i][&quot;max&quot;] || param.max;
+                                                    $numInput.step = val[i][&quot;step&quot;] || param.step;
+                            
+                                                }
+                            
+                                            })
+                                            return this;
+                                        } else {
+                                            var vals = [];
+                                            Array.prototype.slice.call($id).forEach(function (item, i) {
+                                                var name = item.getAttribute(&quot;name&quot;) || item.id || &quot;&quot;;
+                                                var $numInput = item.querySelector(&quot;input&quot;);
+                                                var val = $numInput.value;
+                                                var min = $numInput.getAttribute(&quot;min&quot;);
+                                                var max = $numInput.getAttribute(&quot;max&quot;);
+                            
+                                                vals.push({
+                                                    id: name,
+                                                    value: val,
+                                                    name: name,
+                                                    min: min,
+                                                    max: max
+                                                })
+                                            })
+                                        }
+                            
+                                        return vals;
+                                    }
+                            
+                                    /**
+                                     * 禁止输入
+                                     *  @method disabled
+                                     *  @chainable
+                                     *  @param {boolean} [默认： true禁止｜false]
+                                     *  @example
+                            
+                                        //获取值
+                                        uiNumber.disabled();
+                            
+                                     */
+                                    function disabled(bool) {
+                            
+                                        getSelectors();
+                            
+                                        var $inputs = this &amp;&amp; ui.typeof(this) === &quot;htmldivelement&quot; ? $(this) : $input;
+                            
+                                        var bool = bool == false ? false : true;
+                            
+                                        if (bool) {
+                            
+                                            $inputs.attr(&#x27;disabled&#x27;, &#x27;disabled&#x27;);
+                                        } else {
+                                            $inputs.removeAttr(&#x27;disabled&#x27;);
+                                        }
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 1.7.0 允许输入
+                                     *  @method enable
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiNumber.enable();
+                            
+                                     */
+                                    function enable(bool) {
+                            
+                                        getSelectors();
+                            
+                                        var $inputs = this &amp;&amp; ui.typeof(this) === &quot;htmldivelement&quot; ? $(this) : $input;
+                            
+                                        $inputs.removeAttr(&#x27;disabled&#x27;);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 1.7.0 禁止递减
+                                     *  @method disablePrev
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiNumber.disablePrev();
+                            
+                                     */
+                                    function disablePrev() {
+                                        $prev.addClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 1.7.0 禁止递增
+                                     *  @method disableNext
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiNumber.disableNext();
+                            
+                                     */
+                                    function disableNext() {
+                                        $next.addClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                                    /**
+                                     * 1.7.0 允许点击递减
+                                     *  @method enablePrev
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiNumber.enablePrev();
+                            
+                                     */
+                                    function enablePrev() {
+                                        $prev.removeClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                                    /**
+                                     * 1.7.0 允许点击递增
+                                     *  @method enableNext
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiNumber.enableNext();
+                            
+                                     */
+                                    function enableNext() {
+                                        $next.removeClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    function getSelectors() {
+                                        // if ($input.length &lt; 1) {
+                            
+                                        if (typeof param.id === &quot;object&quot;) {
+                                            $id = ui.obj(param.id);
+                                            hasId = false;
+                                        } else if (typeof param.id === &quot;string&quot; &amp;&amp; param.id.indexOf(&quot;#&quot;) === 0) {
+                                            $id = ui.obj(param.id);
+                                            hasId = true;
+                                        } else {
+                                            $id = $pid.find(param.id);
+                                            hasId = false;
+                                        }
+                            
+                                        $prev = $id.children(param.prev);
+                                        $next = $id.children(param.next);
+                                        $input = $id.children(param.input);
+                                        // }
+                                    }
+                            
+                                    /**
+                                     * 减少值
+                                     *  @method prev
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //减少
+                                        uiNumber.prev();
+                            
+                                     */
+                                    function prev() {
+                                        getSelectors();
+                            
+                                        var $inputs = this &amp;&amp; ui.typeof(this) === &quot;htmldivelement&quot; ? $(this) : (event ? $(event.target).parent().next() : $input);
+                            
+                                        var data = $inputs.val();
+                                        var num = +data;
+                                        num = num - step;
+                            
+                                        var total = /^-?\d*\.\d+$/.test(step) ? parseFloat(num).toFixed(param.decimal) : num;
+                                        set.call($inputs, total);
+                            
+                                        trigger.call(module, &quot;prev&quot;, total);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     * 增加值
+                                     *  @method next
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //增加
+                                        uiNumber.next();
+                            
+                                     */
+                                    function next() {
+                                        getSelectors();
+                            
+                                        var $inputs = this &amp;&amp; ui.typeof(this) === &quot;htmldivelement&quot; ? $(this) : (event ? $(event.target).parent().prev() : $input);
+                            
+                                        var data = $inputs.val();
+                            
+                                        var num = +data + (+step);
+                            
+                                        var total = /^-?\d*\.\d+$/.test(step) ? parseFloat(num).toFixed(param.decimal) : parseFloat(num);
+                            
+                                        set.call($inputs[0], total);
+                                        trigger.call(module, &quot;next&quot;, total);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                     *  @example
+                            
+                                        //销毁
+                                        uiNumber.destroy();
+                            
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                                        // param.beforeDestroy &amp;&amp; param.beforeDestroy.call(module);
+                                        $id = $pid.find(param.id);
+                                        if ($id) {
+                                            $id.off(&quot;click.bui&quot;);
+                                            $id.off(&quot;input&quot;);
+                                            bool &amp;&amp; $id.remove();
+                                        }
+                            
+                                        off(&quot;prev&quot;);
+                                        off(&quot;next&quot;);
+                                        off(&quot;change&quot;);
+                            
+                                        isDestroy = true;
+                            
+                                        // param.destroyed &amp;&amp; param.destroyed.call(module);
+                                    }
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiNumberWidget = uiNumber.widget();
+                            
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {};
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiNumber.option();
+                            
+                                        //获取某个参数
+                                        var id = uiNumber.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiNumber.option( &quot;min&quot;,10 );
+                            
+                                        //修改多个参数
+                                        uiNumber.option( {&quot;min&quot;:10} );
+                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;prev&quot; | &quot;next&quot; | &quot;change&quot; 符合条件时触发改变  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiNumber.on(&quot;change&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;prev&quot; | &quot;next&quot; | &quot;change&quot; 符合条件时触发改变   
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiNumber.off(&quot;change&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this &amp;&amp; this.hasOwnProperty(&quot;widget&quot;)) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                            
+                                    return module;
+                                };
+                            
+                                return ui;
+                            
+                            })(bui || {}, libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

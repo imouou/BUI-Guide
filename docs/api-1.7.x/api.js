@@ -64,6 +64,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "bui.tab",
         "bui.timer",
         "bui.toggle",
+        "bui.touch",
         "bui.typeof",
         "bui.unit",
         "bui.upload",

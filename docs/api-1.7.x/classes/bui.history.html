@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,10 +43,9 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-
-                <a href="../index.html"
-                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-
+                
+                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+                
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -125,6 +124,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -219,7 +219,7 @@
                             
                                                         </li>
                                                         <li class="index-item method">
-                                                            <a href="#method_empty">empty</a>
+                                                            <a href="#method_epmty">epmty</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -232,22 +232,6 @@
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_getComponents">getComponents</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_getCurrent">getCurrent</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_getCurrentPrev">getCurrentPrev</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_getHash">getHash</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_getIndex">getIndex</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -284,10 +268,6 @@
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_refresh">refresh</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_remove">remove</a>
                             
                                                         </li>
                                                 </ul>
@@ -489,8 +469,8 @@
                                                             </div>
                                                         </div>
                                                 </div>
-                                                <div id="method_empty" class="method item">
-                                                    <h3 class="name"><code>empty</code></h3>
+                                                <div id="method_epmty" class="method item">
+                                                    <h3 class="name"><code>epmty</code></h3>
                                                 
                                                         <span class="paren">()</span>
                                                 
@@ -504,12 +484,11 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_core_bui.history.js.html#l1001"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:1001</code></a>
+                                                        <a href="../files/src_scripts_core_bui.history.js.html#l852"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:852</code></a>
                                                         </p>
                                                 
                                                 
                                                 
-                                                            <p>Available since 1.7.4</p>
                                                     </div>
                                                 
                                                     <div class="description">
@@ -523,7 +502,7 @@
                                                             <h4>Example:</h4>
                                                 
                                                             <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       //  var hasLoadLogin = bui.history.empty();
+                                                                <pre class="code prettyprint"><code>       //  var hasLoadLogin = bui.history.epmty();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -803,178 +782,6 @@
                                                 <component id="list1" name="pages/list/index"></component></p>
                                                 <pre class="code prettyprint"><code>       // 返回数组
                                                        var instances = bui.history.getComponent(&quot;pages/list/index&quot;);
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_getCurrent" class="method item">
-                                                    <h3 class="name"><code>getCurrent</code></h3>
-                                                
-                                                        <span class="paren">()</span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_core_bui.history.js.html#l920"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:920</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>获取当前的历史记录信息，当前不一定是最后的历史记录</p>
-                                                
-                                                    </div>
-                                                
-                                                
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       var currentHistory = bui.history.getCurrent();
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_getCurrentPrev" class="method item">
-                                                    <h3 class="name"><code>getCurrentPrev</code></h3>
-                                                
-                                                        <span class="paren">()</span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_core_bui.history.js.html#l955"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:955</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>获取当前的的上一个历史记录信息</p>
-                                                
-                                                    </div>
-                                                
-                                                
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       var currentPrevHistory = bui.history.getCurrentPrev();
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_getHash" class="method item">
-                                                    <h3 class="name"><code>getHash</code></h3>
-                                                
-                                                        <span class="paren">()</span>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_core_bui.history.js.html#l852"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:852</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>获取当前hash的值</p>
-                                                
-                                                    </div>
-                                                
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>{pid:&quot;&quot;,url:&quot;&quot;,param:{}}</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       //  var hash = bui.history.getHash();
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_getIndex" class="method item">
-                                                    <h3 class="name"><code>getIndex</code></h3>
-                                                
-                                                        <span class="paren">()</span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_core_bui.history.js.html#l937"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:937</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>获取当前的历史记录在第几条</p>
-                                                
-                                                    </div>
-                                                
-                                                
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>       var index = bui.history.getIndex();
                                                 </code></pre>
                                                 
                                                             </div>
@@ -1537,72 +1344,6 @@
                                                             </div>
                                                         </div>
                                                 </div>
-                                                <div id="method_remove" class="method item">
-                                                    <h3 class="name"><code>remove</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code class="optional">[index]</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_core_bui.history.js.html#l977"><code>src&#x2F;scripts&#x2F;core&#x2F;bui.history.js:977</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>删除指定的历史记录</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[index]</code>
-                                                                        <span class="type">Number | String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>删掉第几个历史记录，或者删掉哪个页面的历史记录</p>
-                                                
-                                                                    </div>
-                                                
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>        var removeHistory = bui.history.remove(1);
-                                                
-                                                        var removeHistory = bui.history.remove(&quot;pages/xxx&quot;);
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
                                         </div>
                             
                             
@@ -1624,12 +1365,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt = _hmt || [];
+        var _hmt=_hmt||[];
         (function () {
-            var hm = document.createElement("script");
-            var analytics_bd = '6781b936303667306495d5d92ad58add';
-            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s = document.getElementsByTagName("script")[0];
+            var hm=document.createElement("script");
+            var analytics_bd='6781b936303667306495d5d92ad58add';
+            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s=document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,10 +43,9 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-
-                <a href="../index.html"
-                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-
+                
+                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+                
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -125,6 +124,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -457,7 +457,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_close">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1000"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1000</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l909"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:909</code></a>
                                                         </p>
                                                 
                                                 
@@ -519,7 +519,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_create">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1200"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1200</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1105"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1105</code></a>
                                                         </p>
                                                 
                                                 
@@ -578,7 +578,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_destroy">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1298"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1298</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1203"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1203</code></a>
                                                         </p>
                                                 
                                                 
@@ -618,7 +618,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_disableClose">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l971"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:971</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l880"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:880</code></a>
                                                         </p>
                                                 
                                                 
@@ -657,7 +657,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_disableOpen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l941"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:941</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l850"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:850</code></a>
                                                         </p>
                                                 
                                                 
@@ -696,7 +696,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_enableClose">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l986"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:986</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l895"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:895</code></a>
                                                         </p>
                                                 
                                                 
@@ -735,7 +735,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_enableOpen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l956"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:956</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l865"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:865</code></a>
                                                         </p>
                                                 
                                                 
@@ -783,7 +783,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_fullscreen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l895"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:895</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l804"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:804</code></a>
                                                         </p>
                                                 
                                                 
@@ -860,7 +860,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_init">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l196"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:196</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l193"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:193</code></a>
                                                         </p>
                                                 
                                                 
@@ -906,7 +906,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_isOpen">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l928"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:928</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l837"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:837</code></a>
                                                         </p>
                                                 
                                                 
@@ -944,7 +944,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_maxmize">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l777"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:777</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l686"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:686</code></a>
                                                         </p>
                                                 
                                                 
@@ -989,7 +989,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_minimize">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l671"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:671</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l580"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:580</code></a>
                                                         </p>
                                                 
                                                 
@@ -1080,7 +1080,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_open">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l401"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:401</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l398"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:398</code></a>
                                                         </p>
                                                 
                                                 
@@ -1145,7 +1145,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_option">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1370"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1370</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1275"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1275</code></a>
                                                         </p>
                                                 
                                                 
@@ -1223,7 +1223,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_remove">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1080"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1080</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l989"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:989</code></a>
                                                         </p>
                                                 
                                                 
@@ -1261,7 +1261,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_removebar">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l835"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:835</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l744"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:744</code></a>
                                                         </p>
                                                 
                                                 
@@ -1306,7 +1306,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_resize">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l570"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:570</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l496"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:496</code></a>
                                                         </p>
                                                 
                                                 
@@ -1384,7 +1384,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_revert">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l806"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:806</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l715"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:715</code></a>
                                                         </p>
                                                 
                                                 
@@ -1432,7 +1432,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_scroll">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l859"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:859</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l768"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:768</code></a>
                                                         </p>
                                                 
                                                 
@@ -1512,7 +1512,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_toggle">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1234"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1234</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1139"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1139</code></a>
                                                         </p>
                                                 
                                                 
@@ -1595,7 +1595,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_top">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1267"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1267</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1172"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1172</code></a>
                                                         </p>
                                                 
                                                 
@@ -1661,7 +1661,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#method_widget">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1328"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1328</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1233"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1233</code></a>
                                                         </p>
                                                 
                                                 
@@ -1720,7 +1720,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#event_off">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1426"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1426</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1331"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1331</code></a>
                                                         </p>
                                                 
                                                 
@@ -1782,7 +1782,7 @@
                                                     <div class="meta">
                                                                 <p>Inherited from
                                                                 <a href="../classes/bui.dialog.html#event_on">bui.dialog</a>:
-                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1405"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1405</code></a>
+                                                        <a href="../files/src_scripts_ui_bui.dialog.js.html#l1310"><code>src&#x2F;scripts&#x2F;ui&#x2F;bui.dialog.js:1310</code></a>
                                                         </p>
                                                 
                                                 
@@ -1854,12 +1854,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt = _hmt || [];
+        var _hmt=_hmt||[];
         (function () {
-            var hm = document.createElement("script");
-            var analytics_bd = '6781b936303667306495d5d92ad58add';
-            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s = document.getElementsByTagName("script")[0];
+            var hm=document.createElement("script");
+            var analytics_bd='6781b936303667306495d5d92ad58add';
+            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s=document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.tab.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.tab.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                /**
+                                   * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                   *   &lt;div class=&quot;span8&quot;&gt;
+                                   *     &lt;h2&gt;Tab控件&lt;/h2&gt;
+                                   *     &lt;p&gt;Tab控件基于bui.slide制作,tab的方法及事件请参考 bui.slide &lt;/p&gt;
+                                   *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.tab.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                   *   &lt;/div&gt;
+                                   *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.tab.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-tab_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                   * &lt;/div&gt;
+                                   *  @namespace bui
+                                   *  @class tab
+                                   *  @since 1.5.0
+                                   *  @extends bui.slide
+                                   *  @constructor
+                                   *  @param {object} option
+                                   *  @param {string} option.id 控件id
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                   *  @param {string} [option.menu]  默认&quot;.bui-tab-head ul&quot; (循环元素的父级), 如果控制菜单要独立,可以使用id选择器
+                                   *  @param {string} [option.showNav]  2.0新增，展示菜单 默认 true ｜ false. 
+                                   *  @param {string} [option.children]  默认&quot;.bui-tab-main ul&quot; (循环元素的父级), 如果控制内容要独立,可以使用id选择器, tab嵌套必须使用id 
+                                   *  @param {string} [option.position]  1.6.2 新增 菜单的位置, 只有data有值才会有效 position: &quot;top&quot;, top bottom left right
+                                   *  @param {string} [option.iconPosition]  1.6.2 新增 菜单图标的位置, 只有data有值才会有效 图标的位置, 默认 &quot;left&quot; | &quot;top&quot; | &quot;right&quot; | &quot;bottom&quot; 
+                                   *  @param {boolean} [option.iconBadge]  1.6.2 新增 菜单图标红点的位置, 只有data有值才会有效 , 默认 true | false , addBadge方法添加的红点的位置,默认在图标,false则在按钮容器 
+                                   *  @param {number} [option.sideWidth]  1.6.2 新增 控制菜单的宽度, 只有data有值且position:&quot;left&quot;的时候才会有效 默认 0, 以样式的宽度为主
+                                   *  @param {boolean} [option.navscroll]  1.6.2 新增 导航是否滚动, 只有data有值才会有效, 默认 false (平分宽度) | true (固定宽度,超出滚动) 
+                                   *  @param {boolean} [option.loadall]  1.6.2 新增 是否一次性加载所有选项卡里的组件, 只有data有值才会有效, 默认 false (按需加载) | true (一次性加载) 
+                                   *  @param {function} [option.loaded]  1.6.2 新增 组件编译以后执行, 只有data有值才会有效, 默认 null 
+                                   *  @param {array} option.data 1.6.2 新增, 动态数据配置tab选项 [{
+                                   *                              id: &quot;tab0&quot;,  // 每个tab选项卡里面的 component id, 默认建议以某个值+数字拼接, 数字按索引值来
+                                                  *               icon: &quot;icon-home&quot;,  // 图标的样式名
+                                                  *               className: &quot;btn-menu1&quot;,  // 按钮的样式名, 自定义对齐方式等
+                                                  *              image: &quot;&quot;,       // 图片路径
+                                                  *              title: &quot;新闻&quot;,   // 菜单名称
+                                                  *              everytime: false,   // 是否点击的时候重新编译, 默认false
+                                                  *              name: &quot;pages/components/list/index&quot;, // 菜单对应加载的模块名
+                                                  *              param: { type: &quot;news&quot; }  // 传参数给该模块
+                                                  *            }]
+                                                  * ]
+                                   *  @param {boolean} [option.relative]  1.5.6新增, 默认false (相对屏幕宽度) | true (相对id父级的宽度) 
+                                   *  @param {string} [option.stopHandle]  1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于tab里面的某个样式,不触发滑动,一般用于事件冲突,比方 input type=range 无法滑动的时候 
+                                   *  @param {number} [option.width] 0 为默认屏幕宽度
+                                   *  @param {number} [option.height] 0 为默认屏幕高度,会计算剩余的高度
+                                   *  @param {number} [option.index]  默认:0 ,第一次加载第几个 
+                                   *  @param {function} [option.templateMenuItem]  1.6.7新增，定制菜单模板
+                                   *  @param {string} [option.direction]  水平滑动还是纵向滑动 默认: x | y 
+                                   *  @param {string} [option.alignClassName]  since 1.3.4 默认是&quot;&quot;,全屏默认是:&quot;bui-box-center&quot;, 每个li的盒子对齐样式名,主要用于全屏时的内容对齐,自带几种对齐方式 左:bui-box-align-left 水平中:bui-box-align-right 右:bui-box-align-center 上:bui-box-align-top 垂直中:bui-box-align-middle 下:bui-box-align-bottom  
+                                   *  @param {boolean} [option.swipe]  是否允许侧滑,默认允许 true | false 
+                                   *  @param {boolean} [option.animate]  点击菜单跳转到某个位置是否采用动画 默认: true | false 
+                                   *  @param {boolean} [option.scroll]  是否允许垂直滚动 false | true , 如果单独需要滚动 可以给滑动的li的属性加上 data-scroll=true 
+                                   *  @param {boolean} [option.autoheight]  1.4.3新增, 自动高度,由内容撑开 默认:false | true 
+                                   *  @param {number} [option.visibleNum]  1.4.5新增, 可视个数,默认为1 
+                                   *  @param {number} [option.scrollNum]  1.4.5新增, 一次滚动个数,默认为1 
+                                   *  @param {number} [option.distance]  默认40, 拖拽大于distance才会生效,配合delay可以防止tab又有上下其它事件 
+                                   *  @param {function} [option.callback]  点击的回调 1.3.0 以后不再推荐,自行绑定就可 
+                                   *  @param {boolean} [option.autoload]  1.4新增 默认: false | true 远程加载菜单按钮上的 href 地址, 如果点击的按钮有disabled属性或者样式,则不跳转
+                                   *  @param {function} [option.onBeforeTo]  1.5.4新增 跳转前触发, return fasle 则不能跳转过去; 可以拿到 跳转的目标索引 e.currentIndex, 以及当前索引 e.prevIndex  
+                                   *  @param {function} [option.onTo]  1.8.3新增 跳转后触发
+                                   *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                   *  @param {function} [option.onBeforeRemove]  1.7.6新增 初始化前触发 
+                                   *  @param {function} [option.onRemove]  1.7.6新增 初始化前触发 
+                                   *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                   *  @example
+                                   *
+                            
+                                    
+                                      示例1: 1.6.2新增更简单的方式, 动态渲染
+                            
+                                      &lt;div id=&quot;uiTab&quot; class=&quot;bui-tab bui-box-vertical&quot;&gt;&lt;/div&gt;
+                            
+                                      var uiTab = bui.tab({
+                                          id: &quot;#uiTab&quot;,
+                                          // position: &quot;left&quot;, // 修改菜单位置
+                                          // iconPosition: &quot;right&quot;, // 修改图标位置
+                                          // sideWidth: 80, // 修改左边菜单的宽度
+                                          data: [{
+                                                  id: &quot;tab0&quot;,
+                                                  // icon: &quot;icon-home&quot;,
+                                                  title: &quot;新闻&quot;,
+                                                  name: &quot;pages/components/list/index&quot;,
+                                                  param: { type: &quot;news&quot; }
+                                              }, {
+                                                  id: &quot;tab1&quot;,
+                                                  icon: &quot;icon-home&quot;,
+                                                  // image: &quot;images/applogo.png&quot;,
+                                                  title: &quot;图片&quot;,
+                                                  name: &quot;pages/components/list/index&quot;,
+                                                  param: { type: &quot;photo&quot; },
+                                                  everytime: true
+                                              },
+                                              {
+                                                  id: &quot;tab2&quot;,
+                                                  icon: &quot;icon-home&quot;,
+                                                  title: &quot;视频&quot;,
+                                                  name: &quot;pages/components/list/index&quot;,
+                                                  param: { type: &quot;video&quot; }
+                                              }, {
+                                                  id: &quot;tab3&quot;,
+                                                  icon: &quot;icon-home&quot;,
+                                                  title: &quot;课程&quot;,
+                                                  name: &quot;pages/components/list/index&quot;,
+                                                  param: { type: &quot;class&quot; }
+                                              }
+                                          ]
+                                      })
+                                    
+                                    *   // 示例2: 静态结构初始化, 固定结构, li里面的内容自定义
+                                    *   html:
+                                    *
+                                           &lt;div id=&quot;uiTab&quot; class=&quot;bui-tab&quot;&gt;
+                                             &lt;!-- 菜单结构 --&gt;
+                                             &lt;div class=&quot;bui-tab-head&quot;&gt;
+                                               &lt;ul class=&quot;bui-nav&quot;&gt;
+                                                 &lt;li class=&quot;bui-btn&quot;&gt;Tab1&lt;/li&gt;
+                                                 &lt;li class=&quot;bui-btn&quot;&gt;Tab2&lt;/li&gt;
+                                               &lt;/ul&gt;
+                                             &lt;/div&gt;
+                                             &lt;!-- 内容结构 --&gt;
+                                             &lt;div class=&quot;bui-tab-main&quot;&gt;
+                                               &lt;ul&gt;
+                                                 &lt;li&gt;
+                                                   &lt;!-- 从这里开始,可以自定义 start --&gt;
+                                                   &lt;img src=&quot;../images/slideshow.png&quot; alt=&quot;&quot;&gt;
+                                                   &lt;!-- 从这里开始,可以自定义 end --&gt;
+                                                 &lt;/li&gt;
+                                                 &lt;li&gt;
+                                                   &lt;img src=&quot;../images/slideshow2.png&quot; alt=&quot;&quot;&gt;
+                                                 &lt;/li&gt;
+                                               &lt;/ul&gt;
+                                             &lt;/div&gt;
+                                           &lt;/div&gt;
+                                    *
+                                    *   js:
+                                    *
+                                           // 初始化
+                                           var uitab = bui.tab({
+                                                     id:&quot;#uiTab&quot;
+                                                   })
+                               
+                            
+                                   *
+                                   *
+                                   */
+                                ui.tab = function (option) {
+                                    var config = {
+                                        id: &quot;&quot;,
+                                        uid: &quot;&quot;,
+                                        menu: &quot;.bui-tab-head &gt; ul&quot;,
+                                        children: &quot;.bui-tab-main &gt; ul&quot;,
+                                        header: &quot;header&quot;,
+                                        footer: &quot;footer&quot;,
+                                        main: &quot;.bui-tab-main&quot;,
+                                        item: &quot;li&quot;,
+                                        prev: &quot;.bui-tab-prev&quot;,
+                                        next: &quot;.bui-tab-next&quot;,
+                                        data: null,
+                                        showNav: true,
+                                        navscroll: false,
+                                        loadall: false,
+                                        position: &quot;top&quot;, // top bottom left right
+                                        iconBadge: true,
+                                        iconPosition: &quot;left&quot;,
+                                        loaded: null,
+                                        compiled: null,
+                                        sideWidth: 0,
+                                        align: &quot;center&quot;,
+                                        alignClassName: &quot;&quot;,
+                                        stopHandle: &quot;&quot;,
+                                        width: 0,
+                                        height: 0,
+                                        relative: false,
+                                        zoom: false,
+                                        swipe: true,
+                                        animate: true,
+                                        bufferEffect: false,
+                                        visibleNum: 1,
+                                        scrollNum: 1,
+                                        distance: 40,
+                                        direction: &quot;x&quot;,
+                                        autoplay: false,
+                                        autoheight: false,
+                                        scroll: true,
+                                        index: 0,
+                                        fullscreen: false,
+                                        autopage: false,
+                                        autoload: false,
+                                        autoinit: true,
+                                        template: null,
+                                        templateMenuItem: null,
+                                        async: true, // 如果改为同步, 会导致&quot;load&quot;事件监听第一次不触发
+                                        callback: null,
+                                        onRemove: null,
+                                        onBeforeInit: null,
+                                        onClickNav: null,
+                                        onInited: null,
+                                        onStart: null,
+                                        onMove: null,
+                                        onEnd: null
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.tab, option);
+                                    var uiTab = null;
+                                    var datas = null;
+                                    var templates = null;
+                                    var menuGuid = ui.guid();
+                            
+                                    var cacheItem = null;
+                            
+                                    // 初始化
+                                    uiTab = init(param);
+                            
+                                    function init(opt) {
+                            
+                                        datas = $.extend(true, [], opt.data);
+                            
+                                        if (opt.data) {
+                            
+                                            opt.menu = opt.menu.indexOf(&quot;#&quot;) &gt; -1 ? opt.menu : &#x60;.${menuGuid}-menu&#x60;;
+                                            opt.children = &#x60;.${menuGuid}-main&#x60;;
+                                            render(datas);
+                                            opt.data = null;
+                                        }
+                            
+                                        var $side = ui.$(&quot;.bui-tab-sidenav&quot;);
+                            
+                                        // 左边需要单独处理
+                                        if (datas &amp;&amp; opt.position == &quot;left&quot;) {
+                            
+                            
+                                            opt.sideWidth &amp;&amp; $side.width(opt.sideWidth);
+                            
+                                            var sideNavWidth = opt.sideWidth || $side.width();
+                                            opt.width = opt.width || $(window).width() - sideNavWidth;
+                            
+                                            // 增加样式
+                                            ui.$(opt.id).addClass(&quot;bui-tab-left&quot;);
+                                            ui.$(opt.id).css({
+                                                &quot;margin-left&quot;: sideNavWidth
+                                            });
+                                            $side.css(&quot;left&quot;, -sideNavWidth);
+                            
+                                        } else if (datas &amp;&amp; opt.position == &quot;right&quot;) {
+                                            opt.sideWidth &amp;&amp; $side.width(opt.sideWidth);
+                            
+                                            var sideNavWidth = opt.sideWidth || $side.width();
+                                            opt.width = opt.width || $(window).width() - sideNavWidth;
+                            
+                                            // 增加样式
+                                            ui.$(opt.id).addClass(&quot;bui-tab-right&quot;);
+                            
+                                            $side.css({
+                                                &quot;left&quot;: &quot;100%&quot;
+                                            });
+                                        }
+                            
+                                        // 初始化
+                                        var onTo = opt.onTo || null;
+                                        opt.onTo = null;
+                                        var tab = ui.slide(opt);
+                            
+                            
+                                        // 实例化以后才能修改overflow属性
+                                        if (opt.position == &quot;left&quot; || opt.position == &quot;right&quot;) {
+                            
+                                            ui.$(opt.id).css({
+                                                &quot;overflow&quot;: &quot;visible&quot;
+                                            });
+                                        }
+                            
+                                        // 有动态数据才需要编译
+                                        if (datas) {
+                                            // tab有多种操作跳转,滑动,点击,都会触发to事件, 在这里拿到对应的索引, 执行加载.
+                                            tab.on(&quot;to&quot;, function (i, opt) {
+                            
+                                                var index = this.index();
+                                                var data = datas &amp;&amp; datas[index] || {};
+                                                var id = param.loadall ? &quot;.delay-item&quot; : &#x60;#${data[&quot;id&quot;]}&#x60;;
+                            
+                                                // 加载delay属性的组件
+                                                data.name &amp;&amp; loader.delay({
+                                                    id: id,
+                                                    param: $.extend({}, data[&quot;param&quot;], opt),
+                                                    everytime: data.everytime,
+                                                    loaded: param.loaded,
+                                                    compiled: param.compiled
+                                                })
+                            
+                                                // uiTab.showContent();
+                            
+                                                onTo &amp;&amp; onTo.call(tab, index);
+                                            });
+                                            let needAnimate = param.animate ? &quot;&quot; : &quot;none&quot;;
+                                            tab.to(opt.index, needAnimate);
+                                        }
+                            
+                                        // 存储实例
+                                        opt.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: opt.uid,
+                                            ui: tab
+                                        })
+                            
+                                        return tab;
+                                    }
+                            
+                            
+                                    uiTab.name = &quot;tab&quot;;
+                                    uiTab.templateNav = templateNav;
+                                    uiTab.renderNav = renderNav;
+                                    uiTab.addBadge = addBadge;
+                                    uiTab.removeBadge = removeBadge;
+                            
+                                    var oldAdd = uiTab.add;
+                                    var oldRemove = uiTab.remove;
+                                    var hasRemoveEvent = false;
+                            
+                                    uiTab.add = function (opt) {
+                            
+                                        var _opt = $.extend(true, {
+                                            title: &quot;&quot;,
+                                            needRemove: false,
+                                            templateMenuItem: null
+                                        }, opt);
+                                        // 不为空都要做默认的菜单渲染
+                            
+                                        _opt.menuTemplate = opt.templateMenuItem || param.templateMenuItem &amp;&amp; param.templateMenuItem(_opt, datas.length) || _opt.title &amp;&amp; templateMenuItem(_opt, datas.length) || &quot;&quot;;
+                            
+                                        let onBeforeRemove = _opt.onBeforeRemove || param.onBeforeRemove || null;
+                                        let onRemove = _opt.onRemove || param.onRemove || null;
+                            
+                                        datas.push(_opt);
+                            
+                                        // 后续再看是否需要把新增数据跟datas对应起来。
+                                        if (_opt.needRemove &amp;&amp; !hasRemoveEvent) {
+                            
+                                            var $id = ui.obj(this.config.id);
+                                            var _slideption = this.config;
+                                            var $menu = _slideption.menu.indexOf(&quot;#&quot;) &gt; -1 ? ui.obj(_slideption.menu) : $id.find(_slideption.menu).eq(0);
+                                            $menu.off(&quot;click.bui&quot;, &quot;.icon-close&quot;).on(&quot;click.bui&quot;, &quot;.icon-close&quot;, function (e) {
+                                                var index = $(this).parents(&quot;.bui-btn&quot;).index();
+                                                // 1.7.6
+                                                e.index = index;
+                                                let canRemove = onBeforeRemove &amp;&amp; onBeforeRemove.call(uiTab, { index: index }, e)
+                                                if (canRemove === false) {
+                                                    return;
+                                                }
+                            
+                                                uiTab.remove({ index: index }, e);
+                            
+                                                onRemove &amp;&amp; onRemove.call(uiTab, { index: index }, e);
+                                            })
+                            
+                                            hasRemoveEvent = true;
+                                        }
+                            
+                                        return oldAdd(_opt);
+                                    }
+                            
+                                    // 移除，支持模块名，重写remove
+                                    uiTab.remove = function (opt) {
+                            
+                                        var _opt = $.extend(true, {
+                                            index: -1,
+                                            keyname: &quot;id&quot;,
+                                            target: &quot;&quot;,
+                                            callback: null
+                                        }, opt);
+                            
+                                        let index = _opt.index;
+                                        let keyname = _opt.keyname;
+                                        let target = _opt.target.indexOf(&quot;#&quot;) &gt; -1 ? _opt.target.substr(1) : _opt.target || &quot;&quot;;
+                            
+                                        // 静态
+                                        if (ui.typeof(datas) === &quot;array&quot; &amp;&amp; target) {
+                                            // 检测模块名的索引
+                                            index = ui.array.index(datas, target, keyname);
+                            
+                                            index &gt; -1 &amp;&amp; ui.array.deleteIndex(datas, index);
+                            
+                                        } else if (ui.typeof(datas) === &quot;array&quot; &amp;&amp; _opt.index &gt; -1) {
+                                            ui.array.deleteIndex(datas, index);
+                                        }
+                            
+                                        _opt.index = index;
+                            
+                                        return oldRemove(_opt);
+                                    }
+                            
+                                    // 重写获取数据
+                                    uiTab.getData = function (opt) {
+                            
+                                        return datas;
+                                    }
+                            
+                                    // 重写获取数据
+                                    /**
+                                     * 获取data整个item数据， data 参数的时候才会有效
+                                     *  @method getItem
+                                     *  @since 1.6.7
+                                     *  @param {number|string} [index] [ 获取第几个的数据，默认为当前tab的索引,字符串则获取id比对的数据 ]
+                                     *  @return {object} [返回数组]
+                                     *  @chainable
+                                     * 
+                                     * // 默认是当前索引
+                                     * let data = uiTab.getItem();
+                                     * // 通过索引
+                                     * let data = uiTab.getItem(1);
+                                     * // 通过id获取
+                                     * let data = uiTab.getItem(&quot;id&quot;);
+                                     */
+                                    uiTab.getItem = function (currentIndex) {
+                                        if (typeof currentIndex === &quot;string&quot;) {
+                                            return ui.array.get(datas, currentIndex, &quot;id&quot;);
+                                        }
+                                        let cindex = typeof currentIndex === &#x27;number&#x27; ? currentIndex : uiTab.index();
+                                        let item = datas[cindex];
+                                        return item;
+                                    }
+                            
+                            
+                                    // 设置当前页的参数
+                                    /**
+                                     * 设置修改data每个item的数据，有传 data 参数的时候才会有效
+                                     *  @method setItem
+                                     *  @since 1.6.7
+                                     *  @param {number|string} [index] [ 获取第几个的数据，默认为当前tab的索引,传字符串会比对id ]
+                                     *  @return {object} [返回数组]
+                                     *  @chainable
+                                     * 
+                                     * uiTab.setItem(1,{param:{}});
+                                     */
+                                    uiTab.setItem = function (index, opt) {
+                                        if (typeof index === &quot;string&quot; &amp;&amp; datas) {
+                                            let item = ui.array.get(datas, index, &quot;id&quot;);
+                                            item = $.extend(item, opt);
+                                            return item;
+                                        }
+                                        var index = typeof index === &quot;number&quot; ? index : nowIndex;
+                            
+                                        datas[index] &amp;&amp; (datas[index] = $.extend(datas[index], opt));
+                                        return datas[index];
+                                    }
+                            
+                            
+                                    /**
+                                     * 获取data的每个item的param数据， data 参数的时候才会有效
+                                     *  @method getItemParam
+                                     *  @since 1.6.7
+                                     *  @param {number|string} [index] [ 获取第几个的数据，默认为当前tab的索引,字符串则获取id比对的数据 ]
+                                     *  @return {object} [返回数组]
+                                     *  @chainable
+                                     * 
+                                     * // 默认是当前索引
+                                     * let data = uiTab.getItemParam();
+                                     * // 通过索引
+                                     * let data = uiTab.getItemParam(1);
+                                     * // 通过id获取
+                                     * let data = uiTab.getItemParam(&quot;id&quot;);
+                                     */
+                                    uiTab.getItemParam = function (index) {
+                            
+                                        if (typeof index === &quot;string&quot;) {
+                                            return ui.array.get(datas, index, &quot;id&quot;)[&quot;param&quot;];
+                                        }
+                                        var index = typeof index === &quot;number&quot; ? index : nowIndex;
+                            
+                                        return datas[index][&quot;param&quot;] || {};
+                                    }
+                            
+                                    /**
+                                     * 设置data指定item的param参数，有传 data 参数的时候才会有效
+                                     *  @method setItemParam
+                                     *  @since 1.6.7
+                                     *  @param {number|string} [index] [ 获取第几个的数据，默认为当前tab的索引,传字符串会比对id ]
+                                     *  @return {object} [返回数组]
+                                     *  @chainable
+                                     * 
+                                     * uiTab.setItemParam(1,{type:&quot;xxx&quot;});
+                                     */
+                                    uiTab.setItemParam = function (index, opt) {
+                                        if (typeof index === &quot;string&quot; &amp;&amp; datas) {
+                                            let item = ui.array.get(datas, index, &quot;id&quot;);
+                                            item.param = $.extend(item[&quot;param&quot;], opt);
+                                            return item.param;
+                                        }
+                                        var index = typeof index === &quot;number&quot; ? index : nowIndex;
+                                        let item = datas[index];
+                                        item &amp;&amp; (item = $.extend(item, opt));
+                                        return item[&quot;param&quot;];
+                                    }
+                            
+                            
+                            
+                                    /**
+                                     * 新增修改红点
+                                     *  @method addBadge
+                                     *  @since 1.6.7
+                                     *  @param {string} index 在第几个索引增加红点
+                                     *  @param {string} [num] 有多少条未读
+                                     *  @chainable
+                                     * 
+                                     * uiTab.addBadge(1,5);
+                                     */
+                                    function addBadge(index, num) {
+                            
+                                        if (index &amp;&amp; !(/[0-9]/.test(index))) {
+                                            return this;
+                                        }
+                                        var $item = ui.$(param.id).find(param.menu).children().eq(index);
+                                        var hasNum = typeof num !== &quot;undefined&quot; ? num : &quot;&quot;;
+                                        var $badges = $item.find(&quot;.bui-badges&quot;);
+                                        var $icon = $item.find(&quot;i&quot;);
+                                        if ($badges.size()) {
+                                            $badges.text(num);
+                                        } else if ($icon.size() &amp;&amp; param.iconBadge) {
+                                            $icon.append(&#x60;&lt;span class=&quot;bui-badges&quot;&gt;${hasNum}&lt;/span&gt;&#x60;);
+                                        } else {
+                                            $item.append(&#x60;&lt;span class=&quot;bui-badges&quot;&gt;${hasNum}&lt;/span&gt;&#x60;);
+                                        }
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 隐藏内容
+                                     *  @method hideContent
+                                     *  @since 1.7.5
+                                     *  @param {function} callback 回调
+                                     *  @chainable
+                                     * 
+                                     * uiTab.hideContent();
+                                     */
+                                    uiTab.hideContent = function (callback) {
+                            
+                                        let $tab = ui.$(param.id);
+                                        let index = uiTab.index();
+                                        cacheItem = {
+                                            index: index,
+                                            parentWidth: $tab.css(&quot;width&quot;),
+                                            parentHeight: $tab.css(&quot;height&quot;)
+                                        };
+                            
+                                        $tab.find(param.menu).children().removeClass(&quot;active&quot;);
+                            
+                                        $tab.children(&quot;.bui-tab-main&quot;).css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        $tab.css(&quot;height&quot;, &quot;auto&quot;);
+                            
+                                        callback &amp;&amp; callback.call(this, cacheItem);
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 显示内容
+                                     *  @method showContent
+                                     *  @since 1.7.5
+                                     *  @param {function} callback 回调
+                                     *  @chainable
+                                     * 
+                                     * uiTab.showContent();
+                                     */
+                                    uiTab.showContent = function (callback) {
+                            
+                                        let $tab = ui.$(param.id);
+                            
+                                        $tab.children(&quot;.bui-tab-main&quot;).css(&quot;display&quot;, &quot;&quot;);
+                            
+                                        let hasActive = $tab.find(param.menu + &quot; .active&quot;);
+                                        cacheItem &amp;&amp; !hasActive.length &amp;&amp; $tab.find(param.menu).children().eq(cacheItem.index).addClass(&quot;active&quot;);
+                            
+                                        cacheItem &amp;&amp; $tab.css(&quot;height&quot;, cacheItem.parentHeight);
+                            
+                                        callback &amp;&amp; callback.call(this, cacheItem);
+                            
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 切换内容
+                                     *  @method toggleContent
+                                     *  @since 1.7.5
+                                     *  @param {function} showCallback 显示的回调
+                                     *  @param {function} hideCallback 隐藏的回调
+                                     *  @chainable
+                                     * 
+                                     * uiTab.toggleContent();
+                                     */
+                                    uiTab.toggleContent = function (showCallback, hideCallback) {
+                                        let $tab = ui.$(param.id);
+                            
+                                        let displays = $tab.children(&quot;.bui-tab-main&quot;).css(&quot;display&quot;);
+                                        let isShowContent = true;
+                            
+                                        if (displays == &quot;none&quot;) {
+                                            this.showContent(showCallback);
+                                            isShowContent = true;
+                                        } else {
+                                            this.hideContent(hideCallback);
+                                            isShowContent = false;
+                                        }
+                            
+                                        return isShowContent;
+                            
+                                    }
+                                    /**
+                                     * 当前tab的显示状态
+                                     *  @method isShow
+                                     *  @since 1.7.5
+                                     *  @chainable
+                                     * 
+                                     * uiTab.isShow();
+                                     */
+                                    uiTab.isShow = function () {
+                                        let $tab = ui.$(param.id);
+                            
+                                        let displays = $tab.children(&quot;.bui-tab-main&quot;).css(&quot;display&quot;);
+                            
+                                        let showstatus = true;
+                                        if (displays == &quot;none&quot;) {
+                                            showstatus = false;
+                                        }
+                            
+                                        return showstatus;
+                            
+                                    }
+                            
+                                    /**
+                                     * 移除红点
+                                     *  @method removeBadge
+                                     *  @since 1.6.7
+                                     *  @param {string} index 在第几个索引
+                                     *  @chainable
+                                     * 
+                                     * uiTab.removeBadge(1);
+                                     */
+                                    function removeBadge(index) {
+                                        var $menu = ui.$(param.id).find(param.menu).children();
+                                        if (typeof index !== &quot;undefined&quot;) {
+                                            $menu.eq(index).find(&quot;.bui-badges&quot;).remove();
+                                        } else {
+                                            $menu.find(&quot;.bui-badges&quot;).remove();
+                                        }
+                                        return this;
+                                    }
+                                    /**
+                                     * 刷新加载当前组件
+                                     *  @method refresh
+                                     *  @since 1.6.7
+                                     *  @param {object} option 
+                                     *  @param {string} index 在第几个索引
+                                     *  @param {object} param 修改第几个并传参
+                                     *  @param {object} beforeLoad 刷新前执行
+                                     *  @param {object} loaded 刷新后执行
+                                     *  @chainable
+                                     * 
+                                     * uiTab.refresh(1);
+                                     */
+                                    uiTab.refresh = function (opt) {
+                            
+                                        let index = typeof opt === &quot;object&quot; ? opt.index : opt;
+                                        let nowindex = typeof index === &quot;number&quot; ? index : uiTab.index();
+                            
+                                        if (ui.typeof(datas) === &quot;array&quot;) {
+                            
+                                            let item = datas[nowindex];
+                            
+                                            item.url = item.name + &quot;.html&quot;;
+                                            item.param = $.extend(false, {}, item.param, opt &amp;&amp; opt.param || {});
+                            
+                                            loader.load(item);
+                            
+                                        } else {
+                                            console.warn(&quot;刷新方法仅在data是数组的方式使用&quot;)
+                                        }
+                                        return this;
+                                    }
+                            
+                                    function render(data) {
+                            
+                                        templates = param.template || template;
+                            
+                                        var html = templates(data);
+                            
+                                        ui.$(param.id).html(html);
+                                    }
+                            
+                                    function renderNav(id, data) {
+                                        var html = templatesNav(data || datas);
+                            
+                                        ui.$(id).html(html);
+                                    }
+                            
+                                    // 头部结构
+                                    function templateHead(data) {
+                                        var classHead = param.position == &quot;bottom&quot; ? &quot;bui-tab-foot&quot; : &quot;&quot;;
+                            
+                                        var headHtml = &#x60;&lt;div class=&quot;bui-tab-head ${classHead}&quot;&gt;&#x60;;
+                                        headHtml += templateNav(data);
+                                        headHtml += &#x60;&lt;/div&gt;&#x60;;
+                            
+                                        return headHtml;
+                                    }
+                            
+                                    function templateNav(data) {
+                                        var sideClass = param.position == &quot;left&quot; || param.position == &quot;right&quot; ? &quot; bui-tab-sidenav&quot; : &quot;&quot;;
+                                        var navbarHtml = param.navscroll ? &#x60;&lt;div class=&quot;bui-navbar&quot;&gt;&#x60; : &quot;&quot;;
+                                        var headHtml = &#x60;${navbarHtml}&lt;ul class=&quot;bui-nav ${menuGuid}-menu ${sideClass}&quot;&gt;&#x60;;
+                                        var tplItem = param.templateMenuItem ? param.templateMenuItem : templateMenuItem;
+                                        data &amp;&amp; data.forEach(function (item, index) {
+                            
+                                            headHtml += tplItem(item, index);
+                                        })
+                                        headHtml += &#x60;&lt;/ul&gt;
+                                            ${param.navscroll ? &quot;&lt;/div&gt;&quot; : &quot;&quot;}&#x60;;
+                                        return headHtml;
+                                    }
+                                    // 菜单结构
+                                    function templateMenuItem(item, index) {
+                            
+                                        var html = &quot;&quot;;
+                                        var hasIcon = templateIcon(item, index) || templateImage(item, index);
+                                        var hasRemoveIcon = item.needRemove ? templateIconRemove(item, index) : &quot;&quot;;
+                                        var className = item.className ? &#x60;${item.className}&#x60; : &quot;&quot;;
+                                        switch (param.iconPosition) {
+                                            case &quot;left&quot;:
+                                                html += &#x60;&lt;li class=&quot;bui-btn bui-align-${param.align} ${className}&quot;&gt;&lt;span class=&quot;bui-text-wrap&quot;&gt;${hasIcon}${item.title || &quot;&quot;}${hasRemoveIcon}&lt;/span&gt;&lt;/li&gt;&#x60;;
+                                                break;
+                                            case &quot;right&quot;:
+                                                html += &#x60;&lt;li class=&quot;bui-btn bui-align-${param.align} bui-box ${className}&quot;&gt;&lt;div class=&quot;span1&quot;&gt;${item.title || &quot;&quot;}&lt;/div&gt;${hasIcon}${hasRemoveIcon}&lt;/li&gt;&#x60;;
+                                                break;
+                                            case &quot;bottom&quot;:
+                                                html += &#x60;&lt;li class=&quot;bui-btn bui-align-${param.align} ${hasIcon ? &#x60;bui-box-vertical&#x60; : &quot;bui-box&quot;} ${className}&quot;&gt;&lt;div class=&quot;span1&quot;&gt;${item.title || &quot;&quot;}&lt;/div&gt;${hasIcon}${hasRemoveIcon}&lt;/li&gt;&#x60;;
+                                                break;
+                                            default:
+                                                html += &#x60;&lt;li class=&quot;bui-btn bui-align-${param.align} ${hasIcon ? &#x60;bui-box-vertical&#x60; : &quot;bui-box&quot;} ${className}&quot;&gt;${hasIcon}&lt;div class=&quot;span1&quot;&gt;${item.title || &quot;&quot;}${hasRemoveIcon}&lt;/div&gt;&lt;/li&gt;&#x60;;
+                                                break;
+                                        }
+                            
+                                        return html
+                                    }
+                            
+                                    function templateIcon(item, index) {
+                            
+                                        var html = item.icon ? (item.icon.indexOf(&quot;&amp;#&quot;) &gt; -1 || item.icon.indexOf(&quot;svg&quot;) &gt; -1 ? &#x60;&lt;i class=&quot;icon&quot;&gt;${item.icon}&lt;/i&gt;&#x60; : &#x60;&lt;i class=&quot;${item.icon}&quot;&gt;&lt;/i&gt;&#x60;) : &quot;&quot;;
+                                        return html;
+                                    }
+                            
+                                    // 移除的图标
+                                    function templateIconRemove(item, index) {
+                            
+                                        var html = &#x60;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&#x60;;
+                                        return html;
+                                    }
+                            
+                                    function templateImage(item, index) {
+                            
+                                        var html = item.image ? &#x60;&lt;i class=&quot;icon&quot;&gt;&lt;img src=&quot;${item.image}&quot; /&gt;&lt;/i&gt;&#x60; : &quot;&quot;;
+                                        return html;
+                                    }
+                            
+                                    // 主要结构
+                                    function templateMain(data) {
+                                        var leftHtml = param.position == &quot;left&quot; || param.position == &quot;right&quot; ? &#x60;&lt;div class=&quot;span1&quot;&gt;&#x60; : &quot;&quot;;
+                                        var mainHtml = &#x60;${leftHtml}&lt;div class=&quot;bui-tab-main&quot;&gt;&lt;ul class=&quot;${menuGuid}-main&quot;&gt;&#x60;;
+                            
+                                        data &amp;&amp; data.forEach(function (item, index) {
+                                            mainHtml += item.content ? &#x60;&lt;li class=&quot;bui-tab-main-item&quot;&gt;${item.content}&lt;/li&gt;&#x60; : &#x60;&lt;li class=&quot;bui-tab-main-item&quot;&gt;
+                                                        &lt;component id=&quot;${item.id}&quot; class=&quot;bui-tab-item-component delay-item&quot; name=&quot;${item.name &amp;&amp; item.name.indexOf(&quot;/&quot;) === 0 ? item.name.substr(1) : item.name}&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;
+                                                    &lt;/li&gt;&#x60;;
+                                        })
+                                        mainHtml += &#x60;&lt;/ul&gt;&lt;/div&gt;&#x60;;
+                                        mainHtml += param.position == &quot;left&quot; || param.position == &quot;right&quot; ? &quot;&lt;/div&gt;&quot; : &quot;&quot;;
+                                        return mainHtml
+                                    }
+                            
+                                    function template(data) {
+                                        var html = &quot;&quot;;
+                                        // 菜单用id代表分离结构
+                                        var headHtml = param.showNav ? templateHead(data) : &quot;&quot;;
+                                        var mainHtml = templateMain(data);
+                            
+                                        switch (param.position) {
+                                            case &quot;top&quot;:
+                                                html = headHtml + mainHtml;
+                                                break;
+                                            case &quot;bottom&quot;:
+                                                html = mainHtml + headHtml;
+                                                break;
+                                            default:
+                                                html = headHtml + mainHtml;
+                                                break;
+                                        }
+                            
+                                        return html;
+                                    }
+                            
+                                    return uiTab;
+                                }
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

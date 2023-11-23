@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/animate/bui.animate.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/animate/bui.animate.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * &lt;h3&gt;动画库&lt;/h3&gt; 
+                             * &lt;h5&gt;动画控制器&lt;/h5&gt;
+                             * {{#crossLink &quot;bui.animate&quot;}}{{/crossLink}}: 常用的transform动画及属性动画 &lt;br&gt;
+                             * &lt;h5&gt;动画切换器&lt;/h5&gt;
+                             * {{#crossLink &quot;bui.toggle&quot;}}{{/crossLink}}: animate.css的常用动画,切换显示 &lt;br&gt;
+                             * 
+                             * @module Animate
+                             */
+                            ;
+                            (function (ui, $) {
+                                /**
+                                 * 常用的动画,有transform动画,链式动画,属性动画, 1.7.3 开始支持属性动画，支持同步操控动画
+                                 *  &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_method/bui.animate.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 * 
+                                 * &lt;h5&gt;动画配置修改&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/option&quot;}}{{/crossLink}}: 设置修改参数 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/widget&quot;}}{{/crossLink}}: 获取依赖的控件 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/origin&quot;}}{{/crossLink}}: 修改动画原点 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/transition&quot;}}{{/crossLink}}: 修改动画时间 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/open3D&quot;}}{{/crossLink}}: 开启3D加速对rotate有效果 &lt;br&gt;
+                                 * &lt;h5&gt;综合动画&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/transform&quot;}}{{/crossLink}}: 综合动画,需要熟悉transform属性 &lt;br&gt;
+                                 * &lt;h5&gt;位移动画&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/left&quot;}}{{/crossLink}}: 左移动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/right&quot;}}{{/crossLink}}: 右移动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/up&quot;}}{{/crossLink}}: 上移动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/down&quot;}}{{/crossLink}}: 下移动画 &lt;br&gt;
+                                 * &lt;h5&gt;缩放动画&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/scale&quot;}}{{/crossLink}}: 缩放动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/scaleX&quot;}}{{/crossLink}}: 水平缩放动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/scaleY&quot;}}{{/crossLink}}: 垂直缩放动画 &lt;br&gt;
+                                 * &lt;h5&gt;旋转动画&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/rotate&quot;}}{{/crossLink}}: 左移动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/rotateX&quot;}}{{/crossLink}}: 右移动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/rotateY&quot;}}{{/crossLink}}: 左移动画 &lt;br&gt;
+                                 * &lt;h5&gt;扭曲动画&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/skew&quot;}}{{/crossLink}}: 扭曲动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/skewX&quot;}}{{/crossLink}}: 水平扭曲动画 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.animate/skewY&quot;}}{{/crossLink}}: 垂直扭曲动画 &lt;br&gt;
+                                 * &lt;h5&gt;属性动画&lt;/h5&gt;
+                                 * {{#crossLink &quot;bui.animate/property&quot;}}{{/crossLink}}: 属性动画 性能差,尽量少用&lt;br&gt;
+                                 * 
+                                 * @namespace  bui
+                                 * @class  animate  
+                                   *  @since 1.7.4
+                                   *  @constructor
+                                   *  @param {object} option
+                                   *  @param {string|object} option.id 动画的id或者样式
+                                   *  @param {string} [option.transition] 默认 &quot;all 300ms ease-out&quot;
+                                   *  @param {number} [option.times] 默认 循环次数 99999
+                                   *  @param {boolean} [option.clear] 默认 false （不清除为累积动画） | true
+                                   *  @param {boolean} [option.zoom] 是否等比缩放，默认 true （rem为单位） | false (px)
+                                 * @constructor 
+                                 * @example
+                                 * 
+                                 * 
+                                    1.7.3 以上
+                                    html:
+                                    &lt;div class=&quot;moving&quot; anim-left=&quot;200&quot;&gt;
+                                        移动的元素A
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;moving&quot; anim-transition=&quot;1500ms&quot; anim-right=&quot;200&quot;&gt;
+                                        移动的元素B
+                                    &lt;/div&gt;
+                            
+                                    // 支持循环动画属性，anim-left,anim-right,anim-up,anim-down,anim-scale,anim-scale-x,anim-scale-y,anim-skew,anim-skew-x,anim-skew-y
+                                    anim-rotate,anim-width,anim-height,anim-border
+                                    
+                                    // 不支持循环动画属性，anim-padding,anim-margin,anim-color,anim-background,anim-box-shadow
+                            
+                            
+                                    js: 
+                                    var uiAnimate = bui.animate({
+                                            id: &quot;.moving&quot;,
+                                            clear: true,
+                                        });
+                                    
+                                    // 开始属性动画 promise 
+                                    uiAnimate.start();
+                            
+                            
+                            
+                                    1.7.3 以下
+                                     //初始化page对象
+                                     var uiAnimate = bui.animate(&quot;#page&quot;);
+                                 
+                                     //链式动画
+                                     uiAnimate.left(100).down(100).start();
+                                   
+                                     //累计动画,左移动画以后下移各自100px,
+                                     uiAnimate.left(100).start(function({
+                                     
+                                       this.down(100).start();
+                                     }));
+                                 
+                                     //综合动画, 只执行一次,下次执行会从头开始
+                                     uiAnimate.transform(&quot;translateX(-100px)&quot;) ==  uiAnimate.left(100).stop();
+                                 * 
+                                 */
+                                ui.animate = function (option) {
+                            
+                                    //默认配置
+                                    var config = {
+                                        id: &quot;&quot;,
+                                        uid: &quot;&quot;,
+                                        zoom: true,
+                                        open3D: false,
+                                        times: 99999,
+                                        transition: &quot;all 300ms ease-out&quot;,
+                                        clear: false,   // 执行完一次动画，就清除原来记录，不累计
+                                        animates: []
+                                    };
+                            
+                                    // zepto库 跟 jquery 对 Object.prototype.toString.call(option) === &quot;[object Array]&quot; 解析不一样，所以不能使用 bui.typeof
+                                    if (typeof option === &quot;object&quot; &amp;&amp; option.id) {
+                            
+                                        option = option || {};
+                                    } else {
+                                        var opt = option || &quot;&quot;;
+                            
+                                        option = {};
+                                        option.id = opt;
+                                    }
+                            
+                                    //方法
+                                    var module = {
+                                        origin: origin, //修改动画远点
+                                        transition: transition, //修改动画的执行时间
+                                        property: property, //属性动画
+                                        open3D: open3D, //3D动画,还会开启GPU加速, 对rotateXrotateY有效
+                                        transform: transform, //综合动画,需要熟悉 transform 动画
+                                        start: start, //动画串接器,会累积之前的动画位置
+                                        restart: restart, //动画串接器,会累积之前的动画位置
+                                        stop: stop, //停止动画
+                                        looping: loop, //循环动画
+                                        loop: loop, //循环动画
+                                        delay: delay, //循环动画
+                                        // play: play,              //暂停动画
+                                        // pause: pause,              //暂停动画
+                                        none: none,              //不要动画
+                                        clear: clear, //清除动画记录
+                                        left: left, //左移动画
+                                        right: right, //右移动画
+                                        up: up, //上移动画
+                                        down: down, //下移动画
+                                        scale: scale, //缩放动画
+                                        scaleX: scaleX, //水平缩放
+                                        scaleY: scaleY, //纵向缩放
+                                        rotate: rotate, //旋转动画
+                                        rotateX: rotateX, //开启3D加速才会有效果
+                                        rotateY: rotateY, //开启3D加速才会有效果
+                                        skew: skew, //扭曲动画
+                                        skewX: skewX, //水平扭曲
+                                        skewY: skewY, //纵向扭曲
+                                        reversestart: reversestart, //按原来动画轨迹返回原位,
+                                        reverse: reverse, //按原来动画轨迹返回原位,
+                                        revert: revert, //按原来动画轨迹返回原位,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, ui.config.animate, config, option);
+                            
+                                    var $id,
+                                        turnOn3D, //开启3D硬件加速
+                                        rem,
+                                        animates,
+                                        animategroup = {},
+                                        animateIn = { transition: &quot;&quot;, animates: [] },
+                                        animateOut = { transition: &quot;&quot;, animates: [] },
+                                        animatesCache = [],
+                                        actionHistorys = [],
+                                        pauseActionHistorys = [];// 暂停时的记录
+                                    var gid = ui.guid();
+                                    var trans = param.transition;
+                                    // 默认的盒子属性
+                                    var defaultTransform = {
+                                        &quot;-webkit-transform&quot;: &quot;&quot;,
+                                        &quot;transform&quot;: &quot;&quot;,
+                                    };
+                            
+                                    var watchStartEvent = true;
+                                    var watchReverseEvent = true;
+                                    var hasAnimate = true;
+                                    var defaultBox = [];    // 默认多个的初始属性
+                                    var maxIndex = 0;// 一组动画里时长最长的索引
+                            
+                                    //初始化动画对象
+                                    init(param);
+                            
+                                    function init(opt) {
+                            
+                                        //用于option方法的设置参数
+                                        var option = $.extend(true, param, opt);
+                            
+                                        if (option.id) {
+                                            $id = ui.obj(option.id);
+                                        } else {
+                            
+                                            ui.showLog(&quot;animate id不能为空&quot;, &quot;bui.animate&quot;);
+                                            return;
+                                        }
+                            
+                                        transition();
+                            
+                                        // 缓存默认的盒子模型
+                                        $id.each(function (i, item) {
+                                            let $item = $(item);
+                                            defaultBox[i] = {}//$.extend(true, defaultTransform);
+                            
+                                            defaultBox[i][&quot;width&quot;] = $item.css(&#x27;width&#x27;);
+                                            defaultBox[i][&quot;height&quot;] = $item.css(&#x27;height&#x27;);
+                                            defaultBox[i][&quot;padding&quot;] = $item.css(&#x27;padding&#x27;);
+                                            defaultBox[i][&quot;margin&quot;] = $item.css(&#x27;margin&#x27;);
+                                            defaultBox[i][&quot;border&quot;] = $item.css(&#x27;border&#x27;);
+                                            defaultBox[i][&quot;opacity&quot;] = $item.css(&#x27;opacity&#x27;);
+                                            defaultBox[i][&quot;color&quot;] = $item.css(&#x27;color&#x27;);
+                                            defaultBox[i][&quot;background&quot;] = $item.css(&#x27;background&#x27;);
+                                            defaultBox[i][&quot;box-shadow&quot;] = $item.css(&#x27;box-shadow&#x27;);
+                                            // transform 写在样式里会获取不到值，需要写在style标签上
+                                            defaultBox[i][&quot;transform&quot;] = $item.css(&#x27;transform&#x27;);
+                            
+                                            // document.defaultView.getComputedStyle(document.querySelector(&#x27;.box1&#x27;),null).transform;
+                                            // console.log(item.className, $item.css(&#x27;transform&#x27;), 123)
+                            
+                                        })
+                            
+                                        turnOn3D = option.open3D; //开启3D硬件加速
+                                        rem = option.zoom;
+                            
+                                        animates = option.animates || [];
+                                        param = module.config = option;
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     *  左移动画
+                                     *  @method left
+                                     *  @param {number} num 正数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.left(100).start();
+                                     */
+                                    function left(num) {
+                            
+                                        var num = num;;
+                                        var value = Math.abs(parseFloat(num));
+                            
+                                        if (typeof num === &quot;string&quot; &amp;&amp; num.indexOf(&quot;%&quot;) &gt; -1) {
+                                            num = &quot;-&quot; + num;
+                                        } else {
+                                            num = rem ? -(value / 100) + &#x27;rem&#x27; : -(value) + &quot;px&quot;;
+                                        }
+                                        var action = &quot;translateX(&quot; + num + &quot;)&quot;;
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     *  右移动画
+                                     *  @method right
+                                     *  @param {number} num 正数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.right(100).start();
+                                     */
+                                    function right(num) {
+                            
+                                        var num = num;;
+                                        var value = Math.abs(parseFloat(num));
+                            
+                                        if (typeof num === &quot;string&quot; &amp;&amp; num.indexOf(&quot;%&quot;) &gt; -1) {
+                                            num = num;
+                                        } else {
+                                            num = rem ? (value / 100) + &#x27;rem&#x27; : (value) + &quot;px&quot;;
+                            
+                                        }
+                                        var action = &quot;translateX(&quot; + num + &quot;)&quot;;
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     *  上移动画
+                                     *  @method up
+                                     *  @param {number} num 正数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.up(100).start();
+                                     */
+                                    function up(num) {
+                            
+                                        var num = num;
+                                        var value = Math.abs(parseFloat(num));
+                            
+                            
+                                        if (typeof num === &quot;string&quot; &amp;&amp; num.indexOf(&quot;%&quot;) &gt; -1) {
+                                            num = &quot;-&quot; + num;
+                                        } else {
+                                            num = rem ? -(value / 100) + &#x27;rem&#x27; : -(value) + &quot;px&quot;;
+                            
+                                        }
+                                        var action = &quot;translateY(&quot; + num + &quot;)&quot;;
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     *  下移动画
+                                     *  @method down
+                                     *  @param {number} num 正数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.down(100).start();
+                                     */
+                                    function down(num) {
+                            
+                                        var num = num;
+                                        var value = Math.abs(parseFloat(num));
+                            
+                            
+                                        if (typeof num === &quot;string&quot; &amp;&amp; num.indexOf(&quot;%&quot;) &gt; -1) {
+                                            num = num;
+                                        } else {
+                                            num = rem ? (value / 100) + &#x27;rem&#x27; : (value) + &quot;px&quot;;
+                                        }
+                                        var action = &quot;translateY(&quot; + num + &quot;)&quot;;
+                            
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     *  缩放动画
+                                     *  @method scale
+                                     *  @param {string} num  示例: &quot;2&quot; | &quot;2,2&quot;
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.scale(&quot;2,2&quot;).start();
+                                     */
+                                    function scale(num) {
+                                        var str = String(num);
+                                        var num = str.indexOf(&quot;,&quot;) &gt; -1 ? str : num + &quot;,1&quot;;
+                                        var action = &quot;scale(&quot; + num + &quot;)&quot;;
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                                        return this;
+                                    }
+                                    /**
+                                     *  水平缩放动画
+                                     *  @method scaleX
+                                     *  @param {number} num  示例: 2
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.scaleX(2).start();
+                                     */
+                                    function scaleX(num) {
+                            
+                                        var num = String(num);
+                                        var action = &quot;scaleX(&quot; + num + &quot;)&quot;;
+                            
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     *  垂直缩放动画
+                                     *  @method scaleY
+                                     *  @param {number} num  示例: 2
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.scaleY(2).start();
+                                     */
+                                    function scaleY(num) {
+                            
+                                        var num = String(num);
+                                        var action = &quot;scaleY(&quot; + num + &quot;)&quot;;
+                            
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     *  旋转动画
+                                     *  @method rotate
+                                     *  @param {number} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //链式动画
+                                         uiAnimate.rotate(45).start();
+                                     */
+                                    function rotate(num) {
+                                        var str = String(num);
+                                        var num = str.indexOf(&quot;deg&quot;) &gt; -1 ? str : str + &quot;deg&quot;;
+                            
+                                        var action = &quot;rotate(&quot; + num + &quot;)&quot;;
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     *  水平旋转动画
+                                     *  @method rotateX
+                                     *  @param {number} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //需要开启3d动画才会有效
+                                         uiAnimate.open3D().rotateX(45).start();
+                                     */
+                                    function rotateX(num) {
+                                        var str = String(num);
+                                        var num = str.indexOf(&quot;deg&quot;) &gt; -1 ? str : str + &quot;deg&quot;;
+                                        var action = &quot;rotateX(&quot; + num + &quot;)&quot;;
+                            
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     *  垂直伸展动画
+                                     *  @method rotateY
+                                     *  @param {number} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //需要开启3d动画才会有效
+                                         uiAnimate.open3D().rotateY(45).start();
+                                     */
+                                    function rotateY(num) {
+                                        var str = String(num);
+                                        var num = str.indexOf(&quot;deg&quot;) &gt; -1 ? str : str + &quot;deg&quot;;
+                                        var action = &quot;rotateY(&quot; + num + &quot;)&quot;;
+                            
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     *  扭曲动画
+                                     *  @method skew
+                                     *  @param {string} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.skew(&quot;10,10&quot;).start();
+                                     */
+                                    function skew(num) {
+                                        var str = String(num);
+                                        var num;
+                                        var values = [];
+                                        //分别判断是否带deg
+                                        if (str.indexOf(&quot;,&quot;) &gt; -1) {
+                                            values = str.split(&quot;,&quot;);
+                                            num = &quot;&quot;;
+                                            $.each(values, function (i, item) {
+                            
+                                                if (i &lt; 2) {
+                                                    num += item.indexOf(&#x27;deg&#x27;) &gt; -1 ? &quot;,&quot; + item : &quot;,&quot; + item + &quot;deg&quot;;
+                                                }
+                                            })
+                            
+                                            num = num.substr(1);
+                            
+                                        } else {
+                                            num = str.indexOf(&quot;deg&quot;) &gt; -1 ? str : str + &quot;deg,0&quot;;
+                                        }
+                            
+                                        var action = &quot;skew(&quot; + num + &quot;)&quot;;
+                            
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     *  横向扭曲
+                                     *  @method skewX
+                                     *  @param {number} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.skewX(20).start();
+                                     */
+                                    function skewX(num) {
+                                        var str = String(num);
+                                        var num = str.indexOf(&quot;deg&quot;) &gt; -1 ? str : str + &quot;deg&quot;;
+                                        var action = &quot;skewX(&quot; + num + &quot;)&quot;;
+                            
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     *  纵向扭曲
+                                     *  @method skewY
+                                     *  @param {number} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.skewY(20).start();
+                                     */
+                                    function skewY(num) {
+                                        var str = String(num);
+                                        var num = str.indexOf(&quot;deg&quot;) &gt; -1 ? str : str + &quot;deg&quot;;
+                                        var action = &quot;skewY(&quot; + num + &quot;)&quot;;
+                            
+                                        //保存动画
+                                        animates.push(action);
+                                        animatesCache.push(action);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     *  在做动画前更改原点,几种写法 left,top || 25%,75% || right 对旋转放大扭曲有效
+                                     *  @method origin
+                                     *  @param {string} num  度数
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.origin(&quot;25%,75%&quot;).rotate(45).start();
+                                     */
+                                    function origin(num) {
+                            
+                                        var str = String(num);
+                            
+                                        $id.each(function (i, item) {
+                                            let $item = $(item);
+                                            let originstr = typeof (num) === &quot;undefined&quot; ? $item.attr(&quot;anim-origin&quot;) : str;
+                            
+                                            $item.css({
+                                                &#x27;-webkit-transform-origin&#x27;: originstr,
+                                                &#x27;transform-origin&#x27;: originstr
+                                            });
+                                        })
+                            
+                                        return this;
+                            
+                                    }
+                            
+                            
+                                    /**
+                                     *  动画的执行时间
+                                     *  @method transition
+                                     *  @param {number} time  动画的执行时间 单位:ms
+                                     *  @param {string} [easing]  默认 ease 动画的效果 ease-in | ease-out | ease | linear | ease-in-out
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.transition(500)
+                                         uiAnimate.left(200).start();
+                                     */
+                                    function transition(time, easing) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            var ease = easing || &quot;ease&quot;;
+                                            // 缓冲时间
+                                            if (typeof time === &quot;number&quot;) {
+                                                trans = &quot;all &quot; + time + &quot;ms &quot; + ease;
+                                            } else {
+                                                if (time == false || time == &quot;none&quot;) {
+                                                    trans = &quot;none&quot;;
+                                                } else if (time == true) {
+                                                    trans = param.transition;
+                                                } else {
+                                                    trans = time || param.transition;
+                                                }
+                                            }
+                            
+                                            hasAnimate = true;
+                            
+                                            var times = [];
+                                            $id.length &amp;&amp; $id.each(function (i, item) {
+                                                let $item = $(item);
+                                                // 延迟时间
+                                                let delayattr = item.getAttribute(&quot;anim-delay&quot;) || &quot;0ms&quot;;
+                                                let delaytime = delayattr &amp;&amp; /\d+$/.test(delayattr) ? delayattr + &quot;ms&quot; : delayattr;
+                            
+                                                // 动画时间
+                                                let duration = item.getAttribute(&quot;anim-transition&quot;) || 0;
+                                                let durationtime = duration &amp;&amp; /\d+$/.test(duration) ? duration + &quot;ms&quot; : duration;
+                            
+                                                let timetrans = (typeof (time) === &#x27;undefined&#x27;) ? durationtime || trans : trans;
+                                                let timenum = timetrans.match(/\d+/g)[0] || 300;
+                            
+                                                times.push({ index: i, time: parseInt(timenum) });
+                            
+                                                let transions = timetrans.split(&quot; &quot;).length &gt; 3 ? timetrans : timetrans + &quot; &quot; + delaytime;
+                            
+                                                $item.css({
+                                                    &#x27;-webkit-transition&#x27;: transions,
+                                                    &#x27;transition&#x27;: transions
+                                                });
+                            
+                                            })
+                            
+                                            // 取动画时长最久的
+                                            maxIndex = times.reduce(function (x, y) {
+                                                return x.time &gt; y.time ? x.index : y.index;
+                                            })
+                            
+                                            maxIndex = typeof maxIndex === &quot;object&quot; ? maxIndex.index : maxIndex;
+                            
+                                            resolve.call(module, $id);
+                            
+                                        })
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     *  不要动画
+                                     *  @method none
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                            
+                                         uiAnimate.none()
+                                        
+                                     */
+                                    function none() {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            $id.each(function (i, item) {
+                                                let $item = $(item);
+                            
+                                                $item.css({
+                                                    &#x27;-webkit-transition&#x27;: &quot;none&quot;,
+                                                    &#x27;transition&#x27;: &quot;none&quot;
+                                                });
+                            
+                                                if (i == maxIndex) {
+                            
+                                                    resolve.call(module, $id);
+                                                }
+                                            })
+                            
+                                            hasAnimate = false;
+                            
+                                        })
+                            
+                                        return this;
+                                    }
+                            
+                            
+                            
+                                    /**
+                                     *  清除动画
+                                     *  @method clear
+                                     *  @chainable
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.clear().left(200).start();
+                                     */
+                                    function clear() {
+                            
+                                        //清除每一步的动画
+                                        animates = [];
+                                        //清除动画的所有缓存
+                                        animatesCache = [];
+                                        //历史动画的所有缓存
+                                        actionHistorys = [];
+                                        // 还原start的索引
+                                        index = 0;
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     *  清除动画并返回原来位置
+                                     *  @method stop
+                                     *  @param {function} [callback]  动画执行完触发
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.stop();
+                                     */
+                                    function stop(callback) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            $id.each((i, item) =&gt; {
+                                                let $item = $(item);
+                            
+                                                $item.css({
+                                                    &#x27;-webkit-transform&#x27;: &quot;&quot;,
+                                                    &#x27;transform&#x27;: &quot;&quot;
+                                                });
+                            
+                                                //动画结束以后回调
+                                                if (trans != &quot;none&quot;) {
+                            
+                                                    $item.one(&#x27;webkitTransitionEnd&#x27;, function () {
+                            
+                                                        if (i == maxIndex) {
+                                                            trans = &quot;&quot;;
+                                                            callback &amp;&amp; callback.call(module, $id);
+                                                            resolve.call(module, $id);
+                                                        }
+                                                    });
+                                                } else {
+                            
+                                                    // if (i == $id.length - 1) {
+                                                    if (i == maxIndex) {
+                                                        callback &amp;&amp; callback.call(module, $id);
+                                                        resolve.call(module, $id);
+                                                    }
+                                                }
+                            
+                                            })
+                            
+                                            //清除动画
+                                            clear();
+                            
+                                        })
+                            
+                                    }
+                                    /**
+                                     *  返回原来位置，无动画
+                                     *  @method revert
+                                     *  @since 1.7.4
+                                     *  @param {function} [callback]  动画执行完触发
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //返回原来的样子
+                                         uiAnimate.revert();
+                                     */
+                                    function revert(callback) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            //清除动画
+                                            clear();
+                            
+                                            $id.each((i, item) =&gt; {
+                                                let $item = $(item);
+                            
+                                                $item.css({
+                                                    &#x27;-webkit-transform&#x27;: &quot;&quot;,
+                                                    &#x27;transform&#x27;: &quot;&quot;
+                                                });
+                            
+                            
+                                                if (i == maxIndex) {
+                                                    callback &amp;&amp; callback.call(module, $id);
+                                                    resolve.call(module, $id);
+                                                }
+                                            })
+                            
+                                        })
+                            
+                                    }
+                            
+                            
+                                    /**
+                                     *  循环动画
+                                     *  @method loop
+                                     *  @since 1.7.4
+                                     *  @param {object} [opt]  在第几次动画的时候执行回调
+                                     *  @param {number} [opt.times]  循环的次数，默认99999
+                                     *  @param {string} [opt.type]  动画的类型 默认 normal (轮转动画) | restart (每次0到1的动画) | reverse （反向轮转）  | reversestart (每次1到0的动画)
+                                     *  @param {string} [opt.delay]  每次动画后等待多少秒 默认 0 
+                                     *  @param {array} [opt.frames]  在第几次动画的时候执行回调 格式看示例
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行循环2次动画
+                                         uiAnimate.loop(2);
+                                         uiAnimate.loop({
+                                            times: 5,
+                                            type: &quot;restart&quot;,
+                                            frames: [{ loop: 1, after: null, before:null, delay:0 }]
+                                         });
+                                     */
+                                    function loop(opt, frames) {
+                                        // delay &gt; 10 循环才会继续
+                                        let _config = { times: param.times || 99999, type: &quot;normal&quot;, delay: 10, frames: [] };
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            let _opt = typeof opt === &quot;number&quot; ? $.extend(true, _config, { times: opt }) : $.extend(true, _config, opt);
+                            
+                                            var nums = _opt.times, type = _opt.type, opts = typeof frames === &quot;object&quot; ? frames || _opt.frames : _opt.frames;
+                            
+                                            // 动画
+                                            async function loopAnim(x) {
+                                                // 开始
+                                                await start();
+                                                // 还原
+                                                await reverse();
+                                            }
+                            
+                                            // 反向动画
+                                            async function loopAnimReverse(x) {
+                            
+                                                // 还原
+                                                await reverse();
+                                                await start();
+                            
+                                            }
+                            
+                                            // 重复
+                                            async function loopRestart(x) {
+                            
+                                                // 开始
+                                                await restart();
+                                            }
+                            
+                                            // 反向重复
+                                            async function loopReverserestart(x) {
+                            
+                                                // 开始
+                                                await reversestart();
+                                            }
+                            
+                                            async function asyncForEach(times, callback) {
+                                                for (let index = 0; index &lt; times; index++) {
+                            
+                                                    await callback(index);
+                                                }
+                                            }
+                            
+                                            // 循环处理
+                                            asyncForEach(nums, async x =&gt; {
+                                                // 不要开始事件
+                                                // watchStartEvent = false;
+                            
+                                                for (let i = 0; i &lt; opts.length; i++) {
+                                                    let item = opts[i];
+                            
+                                                    if (x == (item.loop - 1)) {
+                                                        item.before &amp;&amp; item.before.call(module, $id, x);
+                                                    }
+                                                }
+                            
+                                                switch (type) {
+                                                    case &quot;reverse&quot;:
+                                                        await loopAnimReverse(x);
+                                                        break;
+                                                    case &quot;restart&quot;:
+                                                        await loopRestart(x);
+                                                        break;
+                                                    case &quot;reversestart&quot;:
+                                                        await loopReverserestart(x);
+                                                        break;
+                                                    case &quot;normal&quot;:
+                                                    default:
+                                                        await loopAnim(x);
+                                                        break;
+                                                }
+                            
+                                                for (let i = 0; i &lt; opts.length; i++) {
+                                                    let item = opts[i];
+                            
+                                                    if (x == (item.loop - 1)) {
+                                                        item.after &amp;&amp; item.after.call(module, $id, x);
+                                                    }
+                                                }
+                            
+                                                // 允许开始事件
+                                                // watchStartEvent = true;
+                            
+                                                // 最后一个触发
+                                                if (x == nums - 1) {
+                                                    resolve.call(module, $id);
+                                                }
+                            
+                                                // delay 大于0 动画才能继续
+                                                if (_opt.delay) {
+                                                    await delay(_opt.delay);
+                                                }
+                            
+                                            });
+                            
+                                        })
+                                    }
+                            
+                            
+                                    /**
+                                     *  延迟动画
+                                     *  @method delay
+                                     *  @param {number} [time]  默认 500 。 500ms=1秒*  
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                            
+                                         async function anim(){
+                                            await uiAnimate.delay(500);
+                                            await uiAnimate.start();
+                                         }
+                            
+                                         // 执行
+                                         anim()
+                                     */
+                                    function delay(time) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                                            time = time || 500;
+                                            let t = typeof time === &#x27;number&#x27; ? time : parseInt(time);
+                            
+                                            let timeout = setTimeout(function () {
+                                                resolve.call(module, $id);
+                                                timeout = null;
+                                            }, t)
+                                        })
+                            
+                                    }
+                            
+                            
+                                    /**
+                                     *  重新开始动画
+                                     *  @method restart
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                            
+                                         uiAnimate.restart();
+                            
+                                     */
+                                    function restart(time) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            none();
+                            
+                                            revert();
+                            
+                                            // 异步才能动画
+                                            let timeout = setTimeout(async function () {
+                            
+                                                await transition();
+                            
+                                                await start();
+                            
+                                                resolve.call(module, $id);
+                            
+                                                timeout = null
+                            
+                                            }, 100)
+                            
+                                        })
+                            
+                                    }
+                            
+                            
+                                    /**
+                                     *  动画链式的触发
+                                     *  @method start
+                                     *  @param {function} [beforeAnimate]  动画执行前触发 1.8.0
+                                     *  @param {function} [onAnimate]  动画执行后触发  1.8.0
+                                     *  @param {function} [callback]  动画执行完触发 
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.left(200).down(200).start();
+                                     */
+                            
+                                    var index = 0;
+                            
+                                    function animItem() {
+                                        // transform
+                                        var attrs = [&quot;left&quot;, &quot;right&quot;, &quot;up&quot;, &quot;down&quot;, &quot;scale&quot;, &quot;scale-x&quot;, &quot;scale-y&quot;, &quot;rotate&quot;, &quot;rotate-x&quot;, &quot;rotate-y&quot;, &quot;skew&quot;, &quot;skew-x&quot;, &quot;skew-y&quot;, &quot;origin&quot;];
+                                        // 属性
+                                        var attrs2 = [&quot;width&quot;, &quot;height&quot;, &quot;border&quot;, &quot;padding&quot;, &quot;margin&quot;, &quot;opacity&quot;, &quot;color&quot;, &quot;background&quot;, &#x27;box-shadow&#x27;];
+                            
+                                        var prop = {};
+                            
+                                        // $id.each(function (i, item) {
+                                        let item = this;
+                                        let $item = $(item);
+                                        attrs.forEach(function (attr, index) {
+                                            let val = item.getAttribute(&#x60;anim-${attr}&#x60;);
+                                            let method = attr.replace(&quot;-x&quot;, &quot;X&quot;).replace(&quot;-y&quot;, &quot;Y&quot;);
+                            
+                                            // 设置
+                                            val &amp;&amp; module[method] &amp;&amp; module[method](val);
+                            
+                                        })
+                            
+                                        attrs2.forEach(function (attr, index) {
+                                            let val = item.getAttribute(&#x60;anim-${attr}&#x60;);
+                            
+                                            if (val) {
+                                                switch (attr) {
+                                                    case &quot;width&quot;:
+                                                    case &quot;height&quot;:
+                                                    case &quot;padding&quot;:
+                                                    case &quot;margin&quot;:
+                                                        // 必须有单位，默认px
+                                                        val = /(.+(?=[rem,px,em,%]$))/.test(val) ? val : (rem ? (val / 100) + &#x27;rem&#x27; : val + &#x27;px&#x27;);
+                                                        break;
+                                                    case &quot;border&quot;:
+                                                    case &quot;color&quot;:
+                                                    case &quot;background&quot;:
+                                                    case &quot;opacity&quot;:
+                                                    case &quot;box-shadow&quot;:
+                                                    default:
+                                                        // 必须有单位，默认px
+                                                        val = val
+                                                        break;
+                                                }
+                            
+                                                // 设置
+                                                prop[attr] = val;
+                                            }
+                                        })
+                            
+                                        var action = turnOn3D ? animates.join(&quot;&quot;) + &quot;translateZ(0)&quot; : animates.join(&quot;&quot;);
+                                        var transformAction = {
+                                            &#x27;-webkit-transform&#x27;: action,
+                                            &#x27;transform&#x27;: action
+                                        }
+                            
+                                        var animAction = $.extend(true, {}, transformAction, prop);
+                            
+                                        // 执行动画
+                                        $item.css(animAction);
+                            
+                                    }
+                            
+                                    function start(opt) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            var callback = null;
+                                            var beforeAnimate = null;
+                                            var onAnimate = null;
+                                            if (typeof opt === &quot;object&quot;) {
+                                                beforeAnimate = opt.beforeAnimate || null;
+                                                onAnimate = opt.onAnimate || null;
+                                                callback = opt.callback || null;
+                                            } else if (typeof opt === &quot;function&quot;) {
+                                                callback = opt;
+                                            }
+                            
+                                            beforeAnimate &amp;&amp; beforeAnimate.call(module, $id);
+                                            // 多个的时候，分开设置
+                                            $id.each(function (i, item) {
+                                                let $item = $(item);
+                            
+                                                // let delayattr = this.getAttribute(&quot;anim-delay&quot;);
+                                                // let delaytime = delayattr &amp;&amp; /\d+/.test(delayattr) ? delayattr + &quot;ms&quot; : delayattr;
+                                                // // 延迟
+                                                // if (delayattr) {
+                                                //     await delay(delaytime);
+                                                // }
+                            
+                                                let hasTransition = $(item).css(&quot;transition&quot;);
+                            
+                                                // 执行每个动画
+                                                animItem.call(item);
+                            
+                                                try {
+                                                    // 每执行一次start,记录每一步动画
+                                                    actionHistorys[index] = [];
+                                                    actionHistorys[index].push(animates.join(&quot;&quot;));
+                            
+                                                    // 清空对应的动画
+                                                    if (param.clear) {
+                            
+                                                        animates = [];
+                                                    }
+                            
+                                                    index++;
+                            
+                                                } catch (e) { };
+                            
+                                                //动画结束以后回调
+                                                if (hasTransition.indexOf(&quot;none&quot;) &lt; 0) {
+                                                    onAnimate &amp;&amp; onAnimate.call(module, $id);
+                                                    $item.one(&#x27;webkitTransitionEnd&#x27;, function () {
+                            
+                            
+                                                        if (i == maxIndex) {
+                            
+                                                            callback &amp;&amp; callback.call(module, $id);
+                                                            resolve.call(module, $id);
+                                                        }
+                                                    });
+                                                } else {
+                                                    // if (i == $id.length - 1) {
+                            
+                                                    if (i == maxIndex) {
+                            
+                                                        onAnimate &amp;&amp; onAnimate.call(module, $id);
+                                                        callback &amp;&amp; callback.call(module, $id);
+                                                        resolve.call(module, $id);
+                                                    }
+                                                }
+                            
+                                            })
+                            
+                                        })
+                                    }
+                            
+                                    var pauseStaus = false;
+                            
+                                    function pause() {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            none();
+                            
+                                            pauseStaus = true;
+                            
+                                            resolve.call(module, $id);
+                                        })
+                            
+                                    }
+                            
+                                    function play(time) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            transition(time);
+                            
+                                            start();
+                            
+                                            pauseStaus = false;
+                            
+                                            resolve.call(module, $id);
+                            
+                                        })
+                            
+                                    }
+                            
+                                    /**
+                                     *  反向动画
+                                     *  @method reversestart
+                                     *  @param {number} num  度数
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         uiAnimate.reversestart();
+                                     */
+                                    function reversestart() {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            none();
+                                            start();
+                            
+                                            let timeout = setTimeout(async function () {
+                                                await transition();
+                                                await reverse();
+                            
+                                                timeout = null;
+                            
+                                                resolve.call(module, $id);
+                                            }, 100);
+                            
+                                        })
+                                        return this;
+                                    }
+                                    /**
+                                     *  返回原来位置,只对transform有效
+                                     *  @method reverse
+                                     *  @param {number} num  度数
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //清除动画的位置
+                                         uiAnimate.reverse();
+                                     */
+                                    function reverse(callback) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            var i = 0;
+                                            var historyReverse = actionHistorys.reverse(),
+                                                action;
+                            
+                            
+                                            function extend(data) {
+                                                var datas = data[i] || [],
+                                                    nextDatas = data[i + 1] || [];
+                            
+                                                // action = turnOn3D ? datas.join(&quot;&quot;) + &quot;translateZ(0)&quot; : datas.join(&quot;&quot;)
+                                                // action = animatesCache.join(&quot;&quot;) + action.replace(/\(.*?\)/g, &#x27;(0)&#x27;);
+                            
+                            
+                                                $id.each(function (index, item) {
+                                                    let $item = $(item);
+                            
+                                                    $item.css(defaultBox[index]);
+                            
+                                                    // $item.css({
+                                                    //     &#x27;-webkit-transform&#x27;: &quot;&quot;,
+                                                    //     &#x27;transform&#x27;: &quot;&quot;
+                                                    // });
+                            
+                            
+                            
+                                                    $item.one(&#x27;webkitTransitionEnd&#x27;, function () {
+                            
+                                                        if (nextDatas &amp;&amp; nextDatas.length) {
+                            
+                                                            extend(historyReverse);
+                            
+                                                        } else {
+                                                            // 最后一个才处理新的数据
+                                                            // if (index == $id.length - 1) {
+                                                            // 一组里面时间最长的结束以后触发下一个
+                                                            if (index == maxIndex) {
+                            
+                                                                resolve.call(module, $id);
+                            
+                                                                i = 0;
+                                                                actionHistorys = [];
+                                                            }
+                                                        }
+                                                    });
+                                                })
+                            
+                                                i++;
+                            
+                                            }
+                            
+                                            transition();
+                                            // 调转历史记录
+                                            extend(historyReverse);
+                            
+                                        })
+                            
+                                    }
+                            
+                                    /**
+                                     *  transform独立动画,无需start,但要配合transition使用
+                                     *  @method transform
+                                     *  @param {string} action  要执行的动画
+                                     *  @param {function} [callback]  动画执行完触发
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //执行动画
+                                         uiAnimate.transition(500).transform(&quot;translateX(-200px)&quot;;
+                                     */
+                                    function transform(action, callback) {
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            if (typeof (action) === &quot;string&quot;) {
+                            
+                                                $id.each((i, item) =&gt; {
+                                                    let $item = $(item);
+                            
+                                                    $item.css({
+                                                        &#x27;-webkit-transform&#x27;: action,
+                                                        &#x27;transform&#x27;: action
+                                                    });
+                            
+                            
+                                                    //动画结束以后回调
+                                                    if (trans != &quot;none&quot;) {
+                                                        $item.one(&#x27;webkitTransitionEnd&#x27;, function () {
+                                                            // if (i == $id.length - 1) {
+                                                            if (i == maxIndex) {
+                                                                callback &amp;&amp; callback.call(module, $id);
+                                                                resolve.call(module, $id);
+                                                            }
+                                                        });
+                                                    }
+                                                })
+                                            } else {
+                                                reject.call(module, $id);
+                                            }
+                            
+                                        })
+                            
+                                    }
+                            
+                                    /**
+                                     *  开启3D透视,景深,对旋转动画有效,同时会开启GPU硬件加速
+                                     *  @method open3D
+                                     *  @param {number} num  度数
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //需要开启3d动画才会有效
+                                         uiAnimate.open3D().rotateY(45).start();
+                                     */
+                                    function open3D(num) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            num = parseFloat(num) || 100;
+                            
+                                            //开启3D硬件加速
+                                            turnOn3D = true;
+                                            $id.parent().css({
+                                                &quot;perspective&quot;: num + &#x27;px&#x27;
+                                            })
+                                        })
+                            
+                                    }
+                            
+                            
+                                    /**
+                                     *  属性动画,无需start 相对transform会比较耗性能, 配合 transition使用
+                                     *  @method property
+                                     *  @param {number} num  度数
+                                     *  @return {object} Promise
+                                     *  @example 
+                                        //初始化page对象
+                                         var uiAnimate = bui.animate(&quot;#page&quot;);
+                                     
+                                         //清除动画的位置
+                                         uiAnimate.transition(500).property(&quot;width&quot;,&quot;500px&quot;);
+                                     */
+                                    function property(key, value) {
+                            
+                                        return new Promise((resolve, reject) =&gt; {
+                            
+                                            var obj = {};
+                            
+                                            if (typeof key === &quot;object&quot;) {
+                                                obj = key;
+                                                value = &quot;&quot;;
+                                            } else if (typeof key === &quot;string&quot;) {
+                                                obj[key] = value || &quot;&quot;;
+                                            }
+                            
+                                            $id.each((i, item) =&gt; {
+                                                let $item = $(item);
+                            
+                                                $item.css(obj);
+                            
+                                                //动画结束以后回调
+                                                if (trans != &quot;none&quot;) {
+                                                    $item.one(&#x27;webkitTransitionEnd&#x27;, function () {
+                            
+                                                        // if (i == $id.length - 1) {
+                                                        if (i == maxIndex) {
+                                                            resolve.call(module, $id);
+                                                        }
+                                                    });
+                                                }
+                                            })
+                                        })
+                                        // 也可以通过这种动画去做;
+                                        //window.requestAnimationFrame()
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 
+                                     *  @example 
+                                        
+                                        //获取依赖控件 
+                                        var uiAnimateWidget = uiAnimate.widget();
+                                        
+                                            
+                                     */
+                                    function widget(name) {
+                                        var control = {};
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example 
+                                        
+                                        
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiAnimate.option();
+                                
+                                        //获取某个参数
+                                        var id = uiAnimate.option( &quot;id&quot; );
+                                
+                                        //修改一个参数
+                                        uiAnimate.option( &quot;open3D&quot;,false );
+                                
+                                        //修改多个参数
+                                        uiAnimate.option( {&quot;open3D&quot;:false} );
+                                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                                    return module;
+                            
+                                };
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/core/bui.history.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/core/bui.history.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * 核心
+                             * @module Core
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                            
+                                /**
+                                 * [单页跟多页的公共历史记录,反映模块的加载关系, router.history 将废弃使用 ]
+                                 * @namespace bui
+                                 * @class history
+                                 * @since 1.5.6
+                                 * @static
+                                 * @example
+                                 *
+                                    // 获取历史记录
+                                    var history = bui.history.get()
+                                 *
+                                 */
+                            
+                                ui.history = (function () {
+                            
+                                    // 把单页多页的路由历史抽出来
+                                    var historys = [];
+                            
+                                    var module = {};
+                            
+                                    /**
+                                     * 获取所有历史记录
+                                     *  @method get
+                                     *  @param {string} [value] 通过模块名获取某个历史记录,或者历史记录
+                                     *  @param {string} [key] 默认:&quot;name&quot;, 也可以传页面id
+                                     *  @return {array} option [返回数组]
+                                     *  @example
+                             
+                                    *  方法:
+                                    *
+                                        var allHistory = bui.history.get();
+                                        
+                                       方法2:
+                                        // 通过模块名获取某个历史记录
+                                        bui.history.get(&quot;pages/login/login&quot;)
+                             
+                                       方法3:
+                                        // 通过页面id获取某个历史记录
+                                        bui.history.get(&quot;buife172-aafb-0295-180b-6bc17fbd1cfb&quot;,&quot;id&quot;)
+                                    *
+                                    *
+                                    */
+                                    module.get = function (val, key) {
+                                        if (typeof val === &quot;undefined&quot;) {
+                                            return historys;
+                                        } else {
+                                            let keyname = key || &quot;name&quot; || &quot;pid&quot;;
+                                            return ui.array.get(historys, val, keyname);
+                                        }
+                                    }
+                            
+                                    /**
+                                     * 获取最后的历史记录
+                                     *  @method getLast
+                                     *  @param {string} [field] 返回最后一条记录的某个key值
+                                     *  @return {object} option 返回对象
+                                     *  @example
+                             
+                                    *  方法:
+                                    *
+                                        var lastHistory = bui.history.getLast();
+                             
+                                        方法2: 1.6.x
+                                        var currentHistory = bui.history.getLast(&quot;exports&quot;);
+                                        
+                                    *
+                                    *
+                                    */
+                                    module.getLast = function (field) {
+                                        var last = historys.length - 1;
+                                        var lastHistory = historys[last] || {};
+                            
+                                        if (field) {
+                                            return lastHistory[field];
+                                        } else {
+                                            return lastHistory;
+                                        }
+                                    }
+                            
+                                    /**
+                                     * 获取上一页历史记录
+                                     *  @method getPrev
+                                     *  @since 1.6.0
+                                     *  @param {string} [field] 返回最后一条记录的某个key值
+                                     *  @return {object} option 返回对象
+                                     *  @example
+                             
+                                    *  方法:
+                                    *
+                                        var lastHistory = bui.history.getPrev();
+                             
+                                        方法2: 1.6.x
+                                        var currentHistory = bui.history.getPrev(&quot;exports&quot;);
+                                        
+                                    *
+                                    *
+                                    */
+                                    module.getPrev = function (field) {
+                            
+                                        var last = historys.length - 2;
+                                        var lastHistory = historys[last] || {};
+                            
+                                        if (field) {
+                                            return lastHistory[field];
+                                        } else {
+                                            return lastHistory;
+                                        }
+                                    }
+                            
+                            
+                            
+                                    /**
+                                    *  综合的获取参数方法, 如果模块会被多种方式加载, 则应该这个方法 bui.history.getParams
+                                    *  @method getParams
+                                    *  @param {string} [type]  参数的类型, 如果不传则获取多种方式,依次获取, component, page, url, 也可以指定某种类型 page(弹窗加载) | component(局部加载的参数) | url(路由跳转的参数) 
+                                    *  @example
+                             
+                                    * 方法1: 如果不确定该模块会被哪种方式使用, 则可以使用这种方式获取. module.id 在loader.define(function(req,ext,module){ }) 的第三个参数
+                                    
+                                    var params = bui.history.getParams(module.id);
+                                    
+                                    *  方法2: 获取单页路由或者多页路由的跳转传参 bui.load({url:&quot;&quot;,param:{}})
+                                    
+                                    var params = bui.history.getParams(&quot;url&quot;);
+                             
+                                    *  方法3: 获取以bui.page({url:&quot;&quot;,param:{}}) 加载的的参数, 通过以下方式获取
+                                    
+                                    var pageParams = bui.history.getParams(&quot;page&quot;);
+                             
+                                    *  方法4: 获取以router.loadPart, loader.load , component标签 加载的的参数, 通过以下方式获取
+                             
+                                    var partParams = bui.history.getParams(&quot;component&quot;);
+                             
+                                    *
+                                    *
+                                    */
+                                    module.getParams = function (type) {
+                                        var lastHistory = this.getLast();
+                                        var param = {};
+                            
+                                        switch (type) {
+                                            case &quot;page&quot;:
+                                                param = this.getPageParam() || param;
+                                                break;
+                                            case &quot;part&quot;:
+                                            case &quot;component&quot;:
+                                                param = this.getComponentParam() || param;
+                                                break;
+                                            case &quot;url&quot;:
+                                                param = lastHistory.param || bui.getUrlParams();
+                                                break;
+                                            default:
+                                                param = this.getComponentParam(type) || this.getPageParam(type) || lastHistory.param || bui.getUrlParams();
+                                                break;
+                                        }
+                                        return param;
+                                    }
+                            
+                                    /*
+                                    * 设置组件的参数,挂载到历史记录的最后一页 components
+                                    *  @method setComponent
+                                    *  @param {object} option 参数是一个对象
+                                    *  @param {string} id  id不含#
+                                    *  @param {string} name 模块名 
+                                    *  @param {string} url 模块指向的模板地址 
+                                    *  @param {object} param 上一个模块传的参数 
+                                    *  @example
+                             
+                                    *  方法1: 获取单页路由或者多页路由的跳转传参
+                                    
+                                        bui.history.setComponent({
+                                            id: &quot;id&quot;,
+                                            name: &quot;模块名&quot;,
+                                            url: &quot;模板的地址&quot;,
+                                            param: {}
+                                        });
+                             
+                                    
+                                    *
+                                    *
+                                    */
+                            
+                                    module.setComponent = function (value) {
+                                        let lastHistory = this.getLast();
+                                        let keyname = value.param ? Object.keys(value.param) : [];
+                                        // 转布尔值
+                                        if (keyname.length) {
+                                            value.param = ui.unit.changeParamBoolean(value.param);
+                                        }
+                                        lastHistory[&quot;component&quot;][value.id] = value;
+                                        return value;
+                                    }
+                            
+                                    /*
+                                    * 无需自行设定, 这是每个页面的实例，扁平化的，根据id查找
+                                    *  @method setUI
+                                    *  @param {object} option 参数是一个对象
+                                    *  @param {string} uid 要调用的唯一名称 
+                                    *  @param {string} ui 实例
+                                    *  @example
+                             
+                                    *  示例：
+                                    
+                                        // 第1种，
+                                        var uiNumber = bui.number({id:&quot;#id&quot;,uid:&quot;num&quot;});
+                             
+                                        // 第2种，内部已经初始化一次
+                                        bui.history.setUI({
+                                            uid: &quot;num&quot;,
+                                            ui: uiNumber,
+                                        });
+                             
+                                    
+                                    *
+                                    *
+                                    */
+                            
+                                    module.setUI = function (opt) {
+                                        // 控件存在相互嵌套的情况，会造成id指向问题，这里采用控件名分类，再从id查找
+                                        var lastHistory = this.getLast();
+                                        var uid = opt.uid;
+                            
+                                        var uiTarget = lastHistory[&quot;ui&quot;];
+                            
+                                        uiTarget[uid] = opt.ui;
+                            
+                                        return module;
+                                    }
+                            
+                                    /**
+                                    * 需要在控件初始化的时候，传uid参数，才能获取得到。
+                                    *  @method getUI
+                                    *  @since 1.6.6
+                                    *  @param {string} uid uid,组件传了uid，才可以通过这个方法获取 
+                                    *  @example
+                             
+                                    *  示例：
+                            
+                                        var uiNumber = bui.history.getUI(&quot;num&quot;);
+                             
+                                    *
+                                    *
+                                    */
+                            
+                                    module.getUI = function (uid) {
+                                        if (!uid) {
+                                            return ui.showLog(&quot;uid不能为空，指ui自定义唯一的名字&quot;);
+                                        }
+                                        var lastHistory = this.getLast();
+                                        var uiTarget = lastHistory[&quot;ui&quot;];
+                                        return uiTarget[uid] || null;
+                                    }
+                            
+                                    /*
+                                    * 设置组件的参数,挂载到历史记录的最后一页 components
+                                    *  @method getComponentParam
+                                    *  @param {string} [id] 获取某个id下的参数,一般不需要传
+                                    *  @example
+                             
+                                    *  方法1: 获取单页路由或者多页路由的跳转传参
+                                    
+                                        var param = bui.history.getComponentParam();
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getComponentParam = function (id) {
+                                        var lastHistory = this.getLast();
+                                        var hasCurrentPage = id || lastHistory[&quot;currentComponent&quot;];
+                                        var param = hasCurrentPage &amp;&amp; lastHistory[&quot;component&quot;][hasCurrentPage] &amp;&amp; lastHistory[&quot;component&quot;][hasCurrentPage][&quot;param&quot;] || null;
+                                        return param;
+                                    }
+                            
+                                    /**
+                                    * 获取编译后的组件实例
+                                    *  @method getComponent
+                                    *  @param {string} id 获取编译后的组件实例,如果有return, 就能拿到该对象
+                                    *  @param {string} [field] 默认: exports 字段, 可以不传 
+                                    *  @return {object}
+                                    *  @example
+                             
+                                    *  方法1: 获取编译后的实例
+                                        &lt;component id=&quot;list&quot; name=&quot;pages/list/index&quot;&gt;&lt;/component&gt;
+                             
+                                        var instance = bui.history.getComponent(&quot;list&quot;);
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getComponent = function (id, field) {
+                                        if (typeof id === &quot;undefined&quot;) {
+                                            ui.showLog(&quot;必须传component id 才能获取实例&quot;);
+                                            return;
+                                        }
+                                        field = field || &quot;exports&quot;;
+                                        var lastHistory = this.getLast();
+                            
+                                        var instance = lastHistory[&quot;component&quot;][id] &amp;&amp; lastHistory[&quot;component&quot;][id][field] || null;
+                                        return instance;
+                                    }
+                            
+                                    /**
+                                    * 获取编译后的多个组件实例
+                                    *  @method getComponents
+                                    *  @param {string} name 获取编译后的组件实例,如果有return, 就能拿到该对象
+                                    *  @param {string} [field] 默认: exports 字段, 可以不传 
+                                    *  @return {array}
+                                    *  @example
+                             
+                                    *  方法1: 获取编译后的实例
+                                        &lt;component id=&quot;list&quot; name=&quot;pages/list/index&quot;&gt;&lt;/component&gt;
+                                        &lt;component id=&quot;list1&quot; name=&quot;pages/list/index&quot;&gt;&lt;/component&gt;
+                            
+                                        // 返回数组
+                                        var instances = bui.history.getComponent(&quot;pages/list/index&quot;);
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getComponents = function (id, field) {
+                                        if (typeof id === &quot;undefined&quot;) {
+                                            ui.showLog(&quot;必须传component name 才能获取实例&quot;);
+                                            return;
+                                        }
+                                        field = field || &quot;exports&quot;;
+                                        var lastHistory = this.getLast();
+                                        let comp = lastHistory[&quot;component&quot;];
+                                        let keys = Object.keys(comp);
+                                        let comps = [];
+                                        for (let i = 0; i &lt; keys.length; i++) {
+                                            let item = comp[keys[i]];
+                                            if (item.name === id) {
+                                                comps.push(item)
+                                            }
+                                        }
+                            
+                                        return comps;
+                                    }
+                            
+                                    /**
+                                    * 获取父组件实例, 在第一层component获取到的是页面组件
+                                    *  @method getParentComponent
+                                    *  @since 1.6.2
+                                    *  @example
+                             
+                                    *  方法1: 
+                                        var instance = bui.history.getParentComponent();
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getParentComponent = function () {
+                            
+                                        var comParam = this.getComponentParam();
+                            
+                                        return comParam &amp;&amp; comParam.parentId &amp;&amp; this.getComponent(comParam.parentId) || this.getLast(&quot;exports&quot;);
+                                    }
+                            
+                                    /**
+                                    * 获取父组件实例, 在第一层component获取到的是页面组件
+                                    *  @method getParentParams
+                                    *  @since 1.6.2
+                                    *  @example
+                             
+                                    *  方法1: 
+                                        var instance = bui.history.getParentParams();
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getParentParams = function () {
+                            
+                                        var comParam = this.getComponentParam();
+                            
+                                        return this.getParams(comParam.parentId) || this.getLast(&quot;param&quot;) || null;
+                                    }
+                            
+                            
+                                    /**
+                                    * 获取插入页面的实例
+                                    *  @method getPage
+                                    *  @param {string} id id 或者模块名, 不传则是最后一次打开的实例 
+                                    *  @param {string} [field] 默认: exports 字段, 可以不传 
+                                    *  @example
+                             
+                                    *  方法: 
+                             
+                                        var instance = bui.history.getPage(&quot;pages/list&quot;);
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getPage = function (id, field) {
+                                        if (typeof id === &quot;undefined&quot;) {
+                                            ui.showLog(&quot;必须传page id 或者 模块名才能获取实例&quot;);
+                                            return;
+                                        }
+                                        field = field || &quot;exports&quot;;
+                                        var lastHistory = this.getLast();
+                                        var instance = null;
+                                        var pages = lastHistory[&quot;page&quot;];
+                                        if (pages.hasOwnProperty(id)) {
+                                            instance = pages[id] &amp;&amp; pages[id][field] || {};
+                                        } else if (id) {
+                                            var keynames = Object.keys(pages);
+                            
+                                            for (let i = 0; i &lt; keynames.length; i++) {
+                                                let page = pages[keynames[i]] || {};
+                                                if (page.name === id) {
+                                                    return page[field];
+                                                }
+                                            }
+                                        } else {
+                            
+                                            var currentPage = lastHistory.currentPage;
+                                            instance = pages[currentPage] &amp;&amp; pages[currentPage][field] || {};
+                                        }
+                                        return instance;
+                                    }
+                            
+                            
+                                    /**
+                                    * 在模块内部获取对话框的实例
+                                    *  @method getPageDialog
+                                    *  @param {string} id 获取编译后的组件实例,如果有return, 就能拿到该对象
+                                    *  @example
+                             
+                                    *  方法1: 获取编译后的实例
+                             
+                                        var instance = bui.history.getPageDialog(module.id);
+                                        instance.close();
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getPageDialog = function (id) {
+                            
+                                        if (typeof id === &quot;undefined&quot;) {
+                                            ui.showLog(&quot;必须传page id才能获取对话框信息&quot;);
+                                            return;
+                                        }
+                            
+                                        var lastHistory = this.getLast();
+                                        var instance = null;
+                            
+                                        // if (id) {
+                                        instance = lastHistory[&quot;page&quot;][id] &amp;&amp; lastHistory[&quot;page&quot;][id][&quot;dialog&quot;] || null;
+                                        return instance;
+                                    }
+                            
+                                    /*
+                                    * 设置bui.page传的一些信息,挂载到历史记录的最后一页 page
+                                    *  @method setPage
+                                    *  @param {object} option 参数是一个对象
+                                    *  @param {string} id id不含#
+                                    *  @param {string} name  模块名 
+                                    *  @param {string} url 模块指向的模板地址 
+                                    *  @param {object} param 上一个模块传的参数 
+                                    *  @param {object} dialog dialog弹窗的实例 
+                                    *  @example
+                             
+                                    *  方法1: 获取单页路由或者多页路由的跳转传参
+                                    
+                                        bui.history.setPage({
+                                            id: &quot;id&quot;,
+                                            name: &quot;模块名&quot;,
+                                            url: &quot;模板的地址&quot;,
+                                            dialog: {},
+                                            param: {}
+                                        });
+                             
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.setPage = function (value) {
+                                        var lastHistory = this.getLast();
+                                        // 合并参数
+                                        if (typeof value !== &quot;object&quot;) {
+                                            return value;
+                                        }
+                            
+                                        if (!lastHistory[&quot;page&quot;]) {
+                                            lastHistory[&quot;page&quot;] = {}
+                                        }
+                                        if (value &amp;&amp; value.hasOwnProperty(&quot;id&quot;)) {
+                            
+                                            var opts = $.extend({}, lastHistory[&quot;page&quot;][value.id], value);
+                                            var keyname;
+                                            // 针对数组被合并问题,这里对数组单独处理
+                                            for (keyname in opts.param) {
+                                                if (opts.param[keyname] &amp;&amp; ui.typeof(opts.param[keyname]) == &quot;array&quot;) {
+                                                    opts.param[keyname] = value.param[keyname] || []
+                                                }
+                                            }
+                            
+                                            opts.param = ui.unit.changeParamBoolean(opts.param);
+                            
+                                            // 参数如果是数组
+                                            // opts.param = value.param || {};
+                                            lastHistory[&quot;page&quot;][value.id] = opts;
+                            
+                                            // lastHistory[&quot;page&quot;][value.id][&quot;exports&quot;] = value.exports;
+                                            return value;
+                                        }
+                            
+                                    }
+                            
+                                    /*
+                                    * 获取 bui.page 加载的参数
+                                    *  @method getPageParam
+                                    *  @param {string} [id] 获取某个id下的参数,一般不需要传
+                                    *  @example
+                             
+                                    *  方法1: 
+                                        bui.page({url:&quot;pages/list.html&quot;,param:{id:123}})
+                             
+                             
+                                        // pages/list.js
+                                        var param = bui.history.getPageParam();
+                                        console.log(param)  // {id:123}
+                                    
+                                    *
+                                    *
+                                    */
+                                    module.getPageParam = function (id) {
+                                        var lastHistory = this.getLast();
+                                        var hasCurrentPage = id || lastHistory[&quot;currentPage&quot;];
+                                        var param = hasCurrentPage &amp;&amp; lastHistory[&quot;page&quot;][hasCurrentPage] &amp;&amp; lastHistory[&quot;page&quot;][hasCurrentPage][&quot;param&quot;] || null;
+                                        return param;
+                                    }
+                            
+                                    /*
+                                    * 增加历史记录, 一般无需使用, 主要用于bui.page控件同步路由以后的处理
+                                    *  @method add
+                                    *  @param {object} option [对象]
+                                    *  @param {string} option.id [页面的唯一id, router.$ 会去取这个id作为父级的选择器 ]
+                                    *  @param {string} option.name [模块名, 一般为路径名 ]
+                                    *  @param {string} option.url [页面跳转的模板地址 ]
+                                    *  @param {boolean} option.replace [是否使用的替换历史记录 ]
+                                    *  @param {object} option.param [从上一个页面传过来的参数 ]
+                                    *  @param {object} option.part [当前页面里面有哪些局部加载的模块 ]
+                                    *  @param {object} option.ui [当前页面里面有哪些加载的控件实例 ]
+                                    *  @param {object} option.page [当前页面里面有哪些使用bui.page加载的模块 ]
+                                    *  @param {object} option.toggle [当前页面使用的用来切换的对象, 必须有 hide show 方法,比方要在历史记录插入一个弹窗,那后退的时候,如果有这个对象,就会调用该对象的hide方法]
+                                    *  @param {string} option.effect [跟路由一致,默认为&quot;push&quot;]
+                                    *  @param {string} option.syncHistory [同步浏览器的路由, 默认 true ]
+                                    *  @return {object} option [返回对象]
+                                    *  @example
+                             
+                                    *  方法:
+                                    *
+                                    bui.history.add({
+                                            id: &quot;gid&quot;,
+                                            name: &quot;pageid&quot;,
+                                            url: &quot;url&quot;,
+                                            replace: false,
+                                            param: {},
+                                            part: {},
+                                            page: {},
+                                            toggle: null,
+                                            effect: &quot;push&quot;
+                                    });
+                                    *
+                                    *
+                                    */
+                                    module.add = function (opts) {
+                                        // 合并历史记录的相同对象
+                                        var opt = $.extend(true, {
+                                            id: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            url: &quot;&quot;,
+                                            replace: false,
+                                            syncHistory: true,
+                                            component: {},
+                                            param: {},
+                                            ui: {},
+                                            part: {},
+                                            page: {},
+                                            toggle: null,
+                                            effect: &quot;push&quot;
+                                        }, opts);
+                            
+                                        var _history = historys;
+                                        // 外部操控对象
+                                        if (opts.toggle) {
+                                            var newopt = $.extend(true, {}, opt, opts);
+                                            // 浏览器的历史记录参数不能内嵌对象,这个对象是给单页路由操控的, 必须有 hide show 方法
+                                            opt.toggle = null;
+                                            _history.push(newopt);
+                                        } else {
+                                            _history.push(opt);
+                                        }
+                            
+                                        var url = window.location.origin + window.location.pathname + &quot;#&quot; + opt.name;
+                            
+                            
+                                        var newurl = ui.setUrlParams(url, opt.param);
+                            
+                                        opt.syncHistory &amp;&amp; &quot;pushState&quot; in window.history &amp;&amp; window.history.pushState(opt, null, newurl);
+                                        return _history;
+                                    }
+                            
+                            
+                                    // 在当前历史前面增加
+                                    // ui.history.prepend = function(opt) {
+                            
+                                    //     opt = opt || {};
+                                    //     var _history = this.get();
+                            
+                                    //     var url = window.location.origin + window.location.pathname + &quot;#&quot; + opt.name;
+                                    //     var newurl = ui.setUrlParams(url, opt.param);
+                            
+                                    //     _history.unshift(opt);
+                            
+                                    //     return _history;
+                                    // }
+                            
+                                    /* 
+                                     * 替换历史记录
+                                     *  @method replace
+                                     *  @param {object} [option]  [替换当前历史记录]
+                                    *  @param {string} option.id [页面的唯一id, router.$ 会去取这个id作为父级的选择器 ]
+                                    *  @param {string} option.name [模块名, 一般为路径名 ]
+                                    *  @param {string} option.url [页面跳转的模板地址 ]
+                                    *  @param {boolean} option.replace [是否使用的替换历史记录 ]
+                                    *  @param {object} option.param [从上一个页面传过来的参数 ]
+                                    *  @param {object} option.part [当前页面里面有哪些局部加载的模块 ]
+                                    *  @param {object} option.ui [当前页面里面有哪些控件实例 ]
+                                    *  @param {object} option.page [当前页面里面有哪些使用bui.page加载的模块 ]
+                                    *  @param {object} option.toggle [当前页面使用的用来切换的对象, 必须有 hide show 方法,比方要在历史记录插入一个弹窗,那后退的时候,如果有这个对象,就会调用该对象的hide方法]
+                                    *  @param {string} option.effect [跟路由一致,默认为&quot;push&quot;]
+                                    *  @param {string} option.syncHistory [同步浏览器的路由, 默认 true ]
+                                    *  @example
+                             
+                                        bui.history.replace({
+                                            id: &quot;gid&quot;,
+                                            name: &quot;pageid&quot;,
+                                            url: &quot;url&quot;,
+                                            replace: false,
+                                            param: {},
+                                            part: {},
+                                            ui: {},
+                                            page: {},
+                                            toggle: null,
+                                            effect: &quot;push&quot;
+                                    });
+                             
+                                    *
+                                    */
+                                    module.replace = function (opt) {
+                                        // 合并历史记录的相同对象
+                                        var opt = $.extend(true, {
+                                            id: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            url: &quot;&quot;,
+                                            replace: false,
+                                            syncHistory: true,
+                                            param: {},
+                                            part: {},
+                                            ui: {},
+                                            page: {},
+                                            toggle: null,
+                                            effect: &quot;push&quot;
+                                        }, opts);
+                            
+                                        var _history = historys;
+                            
+                                        // 有替换时,最后一个历史记录的index
+                                        var index = _history.length - 1;
+                                        var url = window.location.origin + window.location.pathname + &quot;#&quot; + opt.name;
+                                        var newurl = ui.setUrlParams(url, opt.param);
+                            
+                            
+                                        // 如果存在则替换索引,否则添加记录
+                                        if (index &gt; -1) {
+                                            // 外部操控对象
+                                            if (opts.toggle) {
+                                                var newopt = $.extend(true, {}, opt, opts);
+                                                // 浏览器的历史记录参数不能内嵌对象,这个对象是给单页路由操控的, 必须有 hide show 方法
+                                                opt.toggle = null;
+                                                _history.splice(index, 1, newopt);
+                                            } else {
+                                                _history.splice(index, 1, opt);
+                                            }
+                                            opt.syncHistory &amp;&amp; &quot;replaceState&quot; in window.history &amp;&amp; window.history.replaceState(opt, null, newurl);
+                                        }
+                            
+                                        return _history;
+                                    }
+                            
+                                    /** 
+                                     * 刷新页面
+                                     *  @method refresh
+                                     *  @example
+                             
+                                        bui.history.refresh();
+                             
+                                    *
+                                    */
+                                    module.refresh = function () {
+                            
+                                        if (ui.hasRouter) {
+                            
+                                            var _history = module.getLast();
+                            
+                                            var _module = loader.get(_history.name)
+                                            loader.import(_history.url, function (res) {
+                            
+                                                res = ui.unit.handleContent(res);
+                                                res = res.replace(/#module\.id/g, &quot;#&quot; + _history.id);
+                                                res = res.replace(/#module\.path\//g, _module.path);
+                            
+                                                $(&quot;#&quot; + _history.id).html(res);
+                                                //计算main高度
+                                                ui.config.init.auto &amp;&amp; ui.init();
+                                                // 编译view 
+                                                router.config.needView &amp;&amp; loader.views();
+                                                // 重新执行模块方法
+                                                _module.loaded();
+                                                // 编译component
+                                                router.config.needComponent &amp;&amp; loader.components();
+                                            })
+                                        } else {
+                                            window.location.reload(true);
+                                        }
+                            
+                                    }
+                            
+                            
+                                    /*
+                                    * 删除指定的index包含之后的历史记录
+                                    *  @method removeNext
+                                    *  @param {object} option 
+                                    *  @param {number} option.index [删除第几个索引之后的历史] 
+                                    *  @param {boolean} option.syncHistory [是否把浏览器历史记录也删掉] 
+                                    *  @example
+                             
+                                        // 删除第3条
+                                        bui.history.removeNext({index:2});
+                             
+                                    *
+                                    */
+                                    module.removeNext = function (opt) {
+                                        var _history = historys;
+                                        var index = opt.index;
+                                        if (parseInt(index) &lt; 0) {
+                                            ui.showLog(&quot;index 必须大于或者等于0&quot;);
+                                            return _history;
+                                        }
+                                        var len = _history.length - index;
+                                        _history.splice(index, len);
+                                        var lastHistory = this.getLast();
+                                        var url = window.location.origin + window.location.pathname + &quot;#&quot; + lastHistory.name;
+                                        var newurl = ui.setUrlParams(url, lastHistory.param);
+                            
+                                        opt.syncHistory &amp;&amp; &quot;replaceState&quot; in window.history &amp;&amp; window.history.replaceState(lastHistory[&quot;param&quot;], null, newurl);
+                                        return _history;
+                                    }
+                            
+                                    /*
+                                     * 删除最后一条历史记录,危险操作,请不要随意删除.
+                                     *  @method removeLast
+                                     *  @param {boolean} [bool] 是否删除浏览器的历史记录, 默认true | false 
+                                     *  @example
+                             
+                                        // 删除最后一条历史记录,危险操作,请不要随意删除
+                                        bui.history.removeLast();
+                             
+                                    *
+                                    */
+                                    module.removeLast = function (bool) {
+                                        var _history = historys;
+                                        var len = _history.length - 1;
+                                        return this.removeNext({
+                                            index: len,
+                                            syncHistory: bool === false ? false : true
+                                        });
+                                    }
+                            
+                                    /** 
+                                     * 检测有没有当前页面历史记录
+                                     *  @method check
+                                     *  @param {string} name 页面id,或者url,或者模块id
+                                     *  @example
+                             
+                                        //  var hasLoadLogin = bui.history.check(&quot;pages/login/login.html&quot;);
+                             
+                                    *
+                                    */
+                                    module.check = function (pageid) {
+                                        var _history = historys;
+                                        var hasLoad = ui.array.compare(_history, pageid, &quot;name&quot;) || ui.array.compare(_history, pageid, &quot;url&quot;) || ui.array.compare(_history, pageid, &quot;id&quot;);
+                            
+                                        return hasLoad;
+                                    }
+                            
+                                    /** 
+                                     * 检测component标签是否已经加载
+                                     *  @method checkComponent
+                                     *  @param {string} [id] 组件的id
+                                     *  @example
+                             
+                                        //  var hasLoad = bui.history.checkComponent(&quot;tab1&quot;);
+                             
+                                    *
+                                    */
+                                    module.checkComponent = function (id) {
+                                        var _history = this.getLast();
+                                        var keys = Object.keys(_history[&quot;component&quot;]);
+                                        var hasLoad = ui.array.compare(keys, id);
+                            
+                                        return hasLoad;
+                                    }
+                            
+                                    /** 
+                                     * 检测模块有没有以 page 方式加载
+                                     *  @method checkPage
+                                     *  @since 1.6.0 20200415
+                                     *  @param {string} [id] 组件的模块名,或者id
+                                     *  @example
+                             
+                                        //  var hasLoad = bui.history.checkPage(&quot;pages/login/login&quot;);
+                             
+                                    *
+                                    */
+                                    module.checkPage = function (id, field) {
+                                        field = field || &quot;id&quot;;
+                                        var _history = this.getLast();
+                                        var keys = Object.keys(_history[&quot;page&quot;]);
+                                        // if (field === &quot;id&quot;) {
+                                        //     var hasLoad = ui.array.compare(keys, id);
+                                        //     return hasLoad;
+                                        // }
+                                        // if (field === &quot;name&quot;) {
+                                        for (let i = 0; i &lt; keys.length; i++) {
+                                            let kid = keys[i];
+                                            let page = _history[&quot;page&quot;][kid];
+                                            if (page[&quot;name&quot;] === id || page[&quot;id&quot;] === id) {
+                                                return true;
+                                            }
+                                        }
+                                        return false;
+                                        // }
+                            
+                                    }
+                            
+                                    /** 
+                                     * 获取当前hash的值
+                                     *  @method getHash
+                                     *  @since 1.7.4
+                                     *  @return {object} {pid:&quot;&quot;,url:&quot;&quot;,param:{}}
+                                     *  @example
+                             
+                                        //  var hash = bui.history.getHash();
+                             
+                                    *
+                                    */
+                                    module.getHash = function (boolDecode) {
+                                        var url = window.location.hash || window.location.search,
+                                            // 问号在hash 前面, 可以通过search拿
+                                            searchs = window.location.search,
+                                            searchsIndex = searchs &amp;&amp; searchs.indexOf(&quot;?&quot;),
+                                            bool = boolDecode == false ? false : true,
+                                            hashIndex = url &amp;&amp; url.indexOf(&quot;?&quot;),
+                                            pathName = hashIndex &gt; -1 ? url &amp;&amp; url.substr(1, (hashIndex - 1)) : window.location.hash.substr(1),
+                                            pointIndex = pathName &amp;&amp; pathName.indexOf(&quot;.html&quot;),
+                                            // pid = pointIndex &gt; -1 ? pathName.substr(0, pointIndex) : pathName,
+                                            pid = pathName.replace(/\.js|\.html/gi, &#x27;&#x27;),
+                                            // purl = pointIndex &gt; -1 ? pathName : pathName + &quot;.html&quot;,
+                                            mod = loader.get(pid) || {},
+                                            purl = mod.template ? mod.template : pid + &#x27;.html&#x27;,
+                                            theRequest = {};
+                            
+                            
+                                        // 如果有传参
+                                        if (hashIndex &gt; -1) {
+                                            // 获取search后面的参数
+                                            getHashParam(searchs, searchsIndex);
+                                            // 获取hash后面的参数
+                                            getHashParam(url, hashIndex);
+                            
+                                        }
+                            
+                                        function getHashParam(urlstr, index) {
+                                            var str = urlstr &amp;&amp; urlstr.substr((index + 1));
+                                            var strIndex = str.indexOf(&quot;?&quot;);
+                                            // 有2个问号的情况
+                                            if (strIndex &gt; -1) {
+                                                var newstrs = str.split(&quot;?&quot;);
+                                                strSplit(newstrs[0]);
+                                                strSplit(newstrs[1]);
+                                            } else {
+                                                strSplit(str);
+                                            }
+                            
+                                            function strSplit(str) {
+                                                var strs = str &amp;&amp; str.split(&quot;&amp;&quot;);
+                                                for (let i = 0; i &lt; strs.length; i++) {
+                                                    let strItem = strs[i];
+                                                    let val = bool ? decodeURIComponent(strItem.split(&quot;=&quot;)[1]) : strItem.split(&quot;=&quot;)[1];
+                                                    if (val === &#x27;false&#x27;) {
+                                                        val = false;
+                                                    } else if (val === &#x27;true&#x27;) {
+                                                        val = true;
+                                                    }
+                                                    // 把false,true值统一转成布尔值
+                                                    theRequest[strItem.split(&quot;=&quot;)[0]] = val;
+                                                }
+                                            }
+                                        }
+                            
+                                        return {
+                                            pid: pid,
+                                            url: purl,
+                                            param: theRequest
+                                        }
+                                    }
+                                    /** 
+                                     * 获取当前的历史记录信息，当前不一定是最后的历史记录
+                                     *  @method getCurrent
+                                     *  @since 1.7.4
+                                     *  @example
+                             
+                                        var currentHistory = bui.history.getCurrent();
+                             
+                                    *
+                                    */
+                                    module.getCurrent = function () {
+                                        let hash = this.getHash();
+                            
+                                        let current = this.get(hash.pid);
+                            
+                                        return current;
+                                    }
+                                    /** 
+                                     * 获取当前的历史记录在第几条
+                                     *  @method getIndex
+                                     *  @since 1.7.4
+                                     *  @example
+                             
+                                        var index = bui.history.getIndex();
+                             
+                                    *
+                                    */
+                                    module.getIndex = function () {
+                                        let hash = this.getHash();
+                            
+                                        let index = ui.array.index(historys, hash.pid, &quot;pid&quot;);
+                            
+                                        return index;
+                                    }
+                            
+                                    /** 
+                                     * 获取当前的的上一个历史记录信息
+                                     *  @method getCurrentPrev
+                                     *  @since 1.7.4
+                                     *  @example
+                             
+                                        var currentPrevHistory = bui.history.getCurrentPrev();
+                             
+                                    *
+                                    */
+                                    module.getCurrentPrev = function (id, field) {
+                                        let hash = this.getHash();
+                            
+                                        let index = ui.array.index(historys, hash.pid, &quot;pid&quot;);
+                            
+                                        if (index &gt; 0) {
+                                            return historys[index - 1];
+                                        } else {
+                                            return historys[0]
+                                        }
+                                    }
+                            
+                                    /** 
+                                     * 删除指定的历史记录
+                                     *  @method remove
+                                     *  @since 1.7.4
+                                     *  @param {number|string} [index] 删掉第几个历史记录，或者删掉哪个页面的历史记录
+                                     *  @example
+                             
+                                         var removeHistory = bui.history.remove(1);
+                            
+                                         var removeHistory = bui.history.remove(&quot;pages/xxx&quot;);
+                             
+                                    *
+                                    */
+                                    module.remove = function (index) {
+                                        let strIndex = String(index);
+                                        let newIndex = /\d+/.test(strIndex) ? parseInt(index) : ui.array.index(historys, index, &quot;pid&quot;);
+                                        let currentHis = null;
+                            
+                                        if (newIndex &gt; -1) {
+                                            currentHis = historys.splice(newIndex, 1)[0] || null;
+                                        }
+                                        return currentHis;
+                                    }
+                            
+                                    /** 
+                                     * 清空历史记录
+                                     *  @method empty
+                                     *  @since 1.7.4
+                                     *  @example
+                             
+                                        //  var hasLoadLogin = bui.history.empty();
+                             
+                                    *
+                                    */
+                                    module.empty = module.epmty = function (pageid) {
+                                        historys = [];
+                                        return historys;
+                                    }
+                            
+                            
+                                    /*
+                                     * 解析路径
+                                     *  @method resolveUrl
+                                     *  @return {string} url [路径名]
+                                     *  @example
+                             
+                                    *  方法:
+                                    *
+                                        var allHistory = bui.history.resolveUrl(url);
+                                    *
+                                    *
+                                    */
+                                    var resolveUrl = function (path) {
+                            
+                                        path = path &amp;&amp; path.replace(window.location.origin, &quot;&quot;) || window.location.pathname;
+                                        var hasHtml = path.indexOf(&quot;.html&quot;);
+                                        var hasParam = path.indexOf(&quot;?&quot;);
+                                        var pid = &quot;&quot;,
+                                            url = &quot;&quot;,
+                                            src = &quot;&quot;,
+                                            param = null;
+                                        var modules = loader.map()[&quot;modules&quot;];
+                                        // 解析页面传的参数
+                                        if (hasParam &gt; -1) {
+                                            var paramstr = path.substr(hasParam + 1);
+                                            param = ui.unit.keyStringToObject(paramstr, true);
+                                        }
+                                        if (hasHtml &gt; -1) {
+                                            pid = path.indexOf(&quot;/&quot;) == 0 ? path.substr(1, (hasHtml - 1)) : path.substr(0, (hasHtml - 1));
+                                            url = pid + &quot;.html&quot;;
+                                            src = pid + &quot;.js&quot;;
+                                        } else {
+                                            pid = path;
+                                            url = modules[pid] &amp;&amp; modules[pid][&quot;template&quot;] || &quot;&quot;;
+                                            src = modules[pid] &amp;&amp; modules[pid][&quot;script&quot;] || &quot;&quot;;
+                                        }
+                                        return {
+                                            pid: pid,
+                                            name: pid,
+                                            url: url,
+                                            src: src,
+                                            param: param
+                                        }
+                                    }
+                                    // 初始化
+                                    function init() {
+                                        // 解析多页的第一个页面
+                                        var path = resolveUrl(window.location.href);
+                                        var gid = ui.guid();
+                                        // 修改多页的id
+                            
+                                        $(document).ready(function () {
+                                            document.body.setAttribute(&quot;id&quot;, gid)
+                                        })
+                                        // 多页使用的第一个历史记录, 单页会重置这个历史;
+                                        historys.push({
+                                            id: ui.guid(),
+                                            pid: path.pid,
+                                            name: path.pid,
+                                            url: path.url,
+                                            src: path.src,
+                                            param: path.param,
+                                            page: {},// 弹窗页面实例
+                                            ui: {},// ui实例
+                                            component: {}   // 组件实例
+                                        })
+                                    }
+                            
+                                    init();
+                            
+                                    return module;
+                            
+                                })();
+                            
+                                // ui.history = {};
+                            
+                            
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

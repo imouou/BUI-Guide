@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.dropdown.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.dropdown.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            ;
+                            (function (ui, $) {
+                                &quot;use strict&quot;;
+                                /**
+                                 *
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;下拉菜单&lt;/h2&gt;
+                                 *     &lt;p&gt;下拉的菜单默认是相对于页面宽度的,当你需要相对按钮宽度时,relative改为false;下拉菜单可以选中不修改值,一般在点击的时候触发,也可以控制小三角的显示,具体可以查看demo.&lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.dropdown.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.dropdown/active&quot;}}{{/crossLink}}: 初始化显示第几个二级菜单的值 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/value&quot;}}{{/crossLink}}: 不传参则获取,传参则设置 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/text&quot;}}{{/crossLink}}: 不传参则获取文本,传参则设置文本 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/hide&quot;}}{{/crossLink}}: 隐藏二级菜单 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/show&quot;}}{{/crossLink}}: 显示二级菜单 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/hideAll&quot;}}{{/crossLink}}: 隐藏所有二级菜单 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dropdown/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.dropdown.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-dropdown-scenes_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class dropdown
+                                 *  @constructor
+                                 *  @param {object} option
+                                 *  @param {string} option.id [控件id]
+                                 *  @param {array} option.data 1.5新增, [{name:&quot;&quot;,value:&quot;&quot;}]  
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {string} [option.event] 1.7.4 默认 &quot;click&quot; | &quot;hover&quot;
+                                 *  @param {string} [option.handle] 一级菜单的按钮
+                                 *  @param {string} [option.handleChildren] 文本值的位置
+                                 *  @param {string} [option.placeholder] 1.6.6新增, 占位文本，默认为空，以静态结构为主
+                                 *  @param {string} [option.value] 1.5新增, 初始化第一个值  
+                                 *  @param {string} [option.target] 二级菜单,默认是按钮的下一个
+                                 *  @param {string} [option.targetHandle] 二级菜单的按钮,点击触发callback
+                                 *  @param {number} [option.width]  二级菜单的宽度,一级自适应宽度 
+                                 *  @param {boolean} [option.showArrow]  是否显示箭头 
+                                 *  @param {boolean} [option.showActive]  是否显示选中的高亮效果 
+                                 *  @param {boolean} [option.relative]  true相对于屏幕两边 false相对于父层 
+                                 *  @param {boolean} [option.change]  true修改文本, false只是做选择操作,可以通过change属性定义 
+                                 *  @param {boolean} [option.autoClose]  1.4.5新增,点击二级菜单的时候自动关闭, 默认:true | false 
+                                 *  @param {boolean} [option.stopPropagation]  1.4.5新增,点击二级菜单的时候自动关闭, 默认:true | false 
+                                 *  @param {string} [option.position]  显示的位置 bottom | top | left | right 也可以通过position属性设置,权限会更高 
+                                 *  @param {function} [option.onBeforeHide]  1.7.5新增 隐藏前触发 
+                                 *  @param {function} [option.onBeforeShow]  1.7.5新增 展示前触发 
+                                 *  @param {function} [option.onHide]  1.7.5新增 隐藏后触发 
+                                 *  @param {function} [option.onShow]  1.7.5新增 展示后触发 
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                 *  @param {function} [option.onChange]  1.5.4新增 只有数据改变才会触发 
+                                 *  @param {function} [option.callback]  点击按钮的回调,第一个参数是自己的引用 
+                                 *  @example
+                                 *
+                                 *   html:
+                                 
+                                    &lt;div id=&quot;dropdown&quot; class=&quot;bui-dropdown&quot;&gt;
+                                        &lt;div class=&quot;bui-btn&quot;&gt;
+                                            下拉菜单
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                 
+                                 *   js:
+                                 
+                                    // 初始化
+                                    var uiDropdown = bui.dropdown({
+                                        id: &quot;#dropdown&quot;,
+                                        data: [{name:&quot;分享&quot;,value:&quot;share&quot;}],
+                                    })
+                            
+                                 *
+                                 *
+                                 */
+                                ui.dropdown = function (option) {
+                            
+                                    //默认配置
+                                    var config = {
+                                        id: &quot;.bui-dropdown&quot;,
+                                        handle: &quot;.bui-btn&quot;,
+                                        handleChildren: &quot;.span1&quot;,
+                                        target: &quot;.bui-list&quot;,
+                                        targetHandle: &quot;.bui-btn&quot;,
+                                        data: null,
+                                        position: &quot;bottom&quot;,
+                                        showArrow: false,
+                                        showActive: true,
+                                        autoClose: true,
+                                        stopPropagation: false,
+                                        width: 0,
+                                        placeholder: &quot;&quot;,
+                                        field: null,//{ name:&quot;name&quot;, value:&quot;value&quot; }
+                                        value: &quot;&quot;,
+                                        relative: true,
+                                        // event: &quot;click.bui&quot;,
+                                        event: &quot;click.bui&quot;,
+                                        change: true,
+                                        autoinit: true,
+                                        template: null,
+                                        onBeforeInit: null,
+                                        onInited: null,
+                                        callback: null,
+                                        onChange: null,
+                                    }
+                            
+                                    //方法
+                                    var module = {
+                                        name: &quot;dropdown&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        active: active,
+                                        disabled: disabled,
+                                        enabled: enabled,
+                                        value: value,
+                                        values: values,
+                                        change: change,
+                                        getItem: values,
+                                        reset: reset,
+                                        text: text,
+                                        hide: hide,
+                                        show: show,
+                                        isShow: isShow,
+                                        hideAll: hideAll,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.dropdown, option);
+                            
+                                    var id,
+                                        $id,
+                                        $menu,
+                                        //是否使用相对定位,相对定位没有定义宽度的话是继承父层的宽度,如果
+                                        winWidth = document.documentElement.clientWidth,
+                                        handlers = {},
+                                        direction,
+                                        relative,
+                                        submenuWidth,
+                                        hasEventInit = false,
+                                        $submenu,
+                                        placeholder = &quot;&quot;,
+                                        selectVal = &quot;&quot;,
+                                        selectText = &quot;&quot;;
+                            
+                            
+                                    //执行初始化
+                                    param.autoinit &amp;&amp; init(param);
+                            
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(true, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                                        if (option.id) {
+                                            $id = ui.obj(option.id);
+                                        } else {
+                                            ui.showLog(&quot;dropdown id不能为空&quot;, &quot;bui.dropdown.init&quot;);
+                                            return;
+                                        }
+                            
+                            
+                                        module.$el = $id;
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                                        $menu = $id.children(option.handle);
+                                        $submenu = option.target ? $id.find(option.target) : $menu.next();
+                            
+                                        option.placeholder &amp;&amp; text(option.placeholder);
+                                        // 占位的文本
+                                        placeholder = option.placeholder || $menu.text() || $menu.val();
+                            
+                                        // 动态渲染
+                                        if (option.data &amp;&amp; option.data.length) {
+                            
+                                            option.data = option.field ? ui.unit.filterField(option.data, option.field) : option.data;
+                            
+                                            var html = typeof option.template === &quot;function&quot; ? option.template.call(module, option.data) : template(option.data);
+                                            $submenu.length ? $submenu.remove() &amp;&amp; $menu.after(html) : $id.append(html);
+                            
+                                            $submenu = $id.find(option.target);
+                                        }
+                            
+                                        relative = option.relative;
+                            
+                                        //下拉菜单的方向
+                                        direction = $id.attr(&quot;position&quot;) || option.position;
+                            
+                                        var offsetLeft = $id[0] &amp;&amp; $id[0].offsetLeft &gt;= document.documentElement.clientWidth ? 0 : $id[0] &amp;&amp; $id[0].offsetLeft,
+                                            left = option.width ? -option.width + ($id.parent().width()) + &#x27;px&#x27; : -offsetLeft + &quot;px&quot;,
+                            
+                                            position = {
+                                                &quot;bottom&quot;: {
+                                                    menuPosition: &quot;bui-menu-bottom&quot;,
+                                                    arrowPosition: &quot;bui-arrow-up&quot;,
+                                                    left: left
+                                                },
+                                                &quot;top&quot;: {
+                                                    menuPosition: &quot;bui-menu-top&quot;,
+                                                    arrowPosition: &quot;bui-arrow-down&quot;,
+                                                    left: left
+                                                },
+                                                &quot;left&quot;: {
+                                                    menuPosition: &quot;bui-menu-left&quot;,
+                                                    arrowPosition: &quot;bui-arrow-right&quot;,
+                                                    left: &quot;auto&quot;
+                                                },
+                                                &quot;right&quot;: {
+                                                    menuPosition: &quot;bui-menu-right&quot;,
+                                                    arrowPosition: &quot;bui-arrow-left&quot;,
+                                                    left: &quot;100%&quot;
+                                                }
+                                            };
+                            
+                                        //二级菜单需要定宽,如果是上下,显示屏幕宽度,左右继承父层的宽度
+                                        submenuWidth = option.width &gt; 0 ? option.width : (relative ? winWidth : option.width || $id.parent().width());
+                            
+                                        //初始化二级菜单的宽度及隐藏状态
+                                        if (parseFloat(submenuWidth) &gt; 0) {
+                                            $submenu.width(submenuWidth);
+                                        };
+                            
+                                        var className = option.showArrow ? position[direction][&quot;arrowPosition&quot;] + &#x27; &#x27; + position[direction][&quot;menuPosition&quot;] : position[direction][&quot;menuPosition&quot;];
+                                        // 修正菜单左边位置
+                                        fixmenu(className, position[direction][&quot;left&quot;]);
+                            
+                                        let val = option.value || $menu.attr(&#x27;value&#x27;) || $menu.children(option.handleChildren).val();
+                            
+                                        // 如果有传值,直接设置
+                                        if (val) {
+                                            value(val);
+                            
+                                            // 第一次也要触发onChange
+                                            option.onChange &amp;&amp; option.onChange.call(module, { target: null, currentTarget: null, value: selectVal });
+                                        } else {
+                                            //设置已经选择的二级菜单
+                                            var $active = $submenu.find(option.targetHandle + &quot;.active&quot;).eq(0);
+                            
+                                            var index = $active.index();
+                            
+                                            if (index &gt; -1) {
+                                                active(index);
+                                            }
+                                        }
+                            
+                                        if (!hasEventInit) {
+                                            bind(option);
+                                        }
+                            
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        return this;
+                            
+                                    }
+                            
+                                    function bind(option) {
+                                        var prevValue = &quot;&quot;;
+                                        // 一级菜单
+                                        var controlMenu = function (e) {
+                            
+                                            if ($(this).hasClass(&#x27;disabled&#x27;)) {
+                                                return;
+                                            }
+                            
+                                            var isActive = $(this).hasClass(&#x27;active&#x27;);
+                                            var $target = option.target ? $(this).parent().find(option.target) : $(this).next();
+                            
+                                            //隐藏所有二级菜单;
+                                            hideAll();
+                                            if (isActive) {
+                                                var canhide = option.onBeforeHide &amp;&amp; option.onBeforeHide.call(module, e);
+                            
+                                                if (canhide === false) {
+                                                    return;
+                                                }
+                                                $(this).removeClass(&quot;active&quot;)
+                                                $target.css(&quot;display&quot;, &quot;none&quot;)
+                                                trigger.call(module, &quot;hide&quot;);
+                            
+                                                option.onHide &amp;&amp; option.onHide.call(module, e);
+                                                // hide();
+                                            } else {
+                                                // show();
+                            
+                                                var canshow = option.onBeforeShow &amp;&amp; option.onBeforeShow.call(module, e);
+                            
+                                                if (canshow === false) {
+                                                    return;
+                                                }
+                                                $(this).addClass(&quot;active&quot;);
+                                                $target.css(&quot;display&quot;, &quot;block&quot;);
+                                                trigger.call(module, &quot;show&quot;);
+                            
+                            
+                                                option.onShow &amp;&amp; option.onShow.call(module, e);
+                                            }
+                            
+                                            prevValue = $(this).attr(&quot;value&quot;) || &quot;&quot;;
+                            
+                                            // 阻止冒泡才不会导致 body 触发关闭事件,这样也会导致外部绑定事件不能从父层绑定
+                                            e.stopPropagation();
+                                        };
+                            
+                                        // 二级菜单
+                                        var controlSubmenu = function (e) {
+                                            var $this = $(this);
+                                            var $parent = $this.parent();
+                                            var val = $this.attr(&quot;value&quot;) || &quot;&quot;,
+                                                title = $.trim($this.text());
+                            
+                                            //是否修改选中以后的文本值
+                                            var change = $parent.attr(&quot;change&quot;) != undefined ? $parent.attr(&quot;change&quot;) : option.change;
+                            
+                                            //显示选中的状态
+                                            if (option.showActive) {
+                                                $this.addClass(&quot;active&quot;)
+                                                    .siblings().removeClass(&#x27;active&#x27;);
+                                            }
+                            
+                                            value.call(this, val);
+                            
+                                            // 是否有改变事件
+                                            prevValue !== val &amp;&amp; option.onChange &amp;&amp; option.onChange.call(module, e);
+                                            //隐藏菜单
+                                            param.autoClose &amp;&amp; hide();
+                                            e.target = this;
+                            
+                                            option.callback &amp;&amp; option.callback.call(module, e);
+                            
+                                            // 导致btn控件无法跳转页面
+                                            param.stopPropagation &amp;&amp; e.stopPropagation();
+                                        }
+                            
+                                        //一级菜单
+                                        if (option.event.indexOf(&quot;hover&quot;) &gt; -1) {
+                                            $menu.off(&#x27;mouseenter mouseleave&#x27;)
+                                            $menu.on(&#x27;mouseenter&#x27;, controlMenu)
+                                            $menu.on(&#x27;mouseleave&#x27;, function (e) {
+                                                $(&quot;.bui-dropdown &gt; .bui-btn&quot;).removeClass(&quot;active&quot;);
+                                                $(&quot;.bui-dropdown &gt; .bui-list&quot;).css(&quot;display&quot;, &quot;none&quot;);
+                                            });
+                                        } else if (option.event.indexOf(&quot;click&quot;) &gt; -1) {
+                                            $menu.off(option.event).on(option.event, controlMenu)
+                                        }
+                            
+                                        // 二级菜单
+                                        $submenu.off(&#x27;click.bui&#x27;, option.targetHandle).on(&#x27;click.bui&#x27;, option.targetHandle, controlSubmenu);
+                            
+                                        var hidedropdown = function (e) {
+                                            hideAll();
+                                            e.stopPropagation();
+                                        };
+                                        param.autoClose &amp;&amp; $(&quot;body&quot;).off(&quot;click.bui&quot;).on(&quot;click.bui&quot;, &quot;:not(.bui-dropdown)&quot;, hidedropdown)
+                            
+                                        hasEventInit = true;
+                                    }
+                            
+                                    //修正菜单
+                                    function fixmenu(classname, value) {
+                            
+                                        $submenu.addClass(classname);
+                                        if (relative) {
+                                            $submenu.css({
+                                                left: value
+                                            })
+                                        }
+                                    }
+                            
+                            
+                                    /**
+                                     * 1.5.1 支持 设置值或者文本, 或者获取值
+                                     *  @method value
+                                     *  @param {string} [text] 设置的值, name 或者 value 的值
+                                     *  @example
+                            
+                                        //设置值
+                                        uiDropdown.value(&quot;10&quot;);
+                            
+                                        //获取值
+                                        var val = uiDropdown.value();
+                            
+                                     */
+                                    function value(val) {
+                            
+                                        if (typeof val === &quot;undefined&quot;) {
+                                            // callback 点击的获取
+                                            var value = event &amp;&amp; event.target ? $(event.target).attr(&quot;value&quot;) || selectVal : $menu.attr(&quot;value&quot;) || selectVal;
+                            
+                                            return value;
+                            
+                                        } else {
+                            
+                                            var isHtml = ui.typeof(this) === &quot;htmllielement&quot;;
+                            
+                                            var $targetMenuList = isHtml &amp;&amp; $(this).parent();
+                                            var $targetMenu = isHtml ? $(this).parents(&quot;.bui-dropdown&quot;).children(param.handle) : $menu;
+                                            var $menuItems = isHtml ? $targetMenuList.find(param.targetHandle) : $submenu.find(param.targetHandle);
+                                            $menuItems.removeClass(&quot;active&quot;);
+                            
+                                            if (param.data &amp;&amp; param.data.length) {
+                            
+                                                if (val == &quot;&quot;) {
+                                                    selectVal = &quot;&quot;;
+                                                    $targetMenu.attr(&quot;value&quot;, val);
+                                                    return;
+                                                }
+                                                var vals = typeof param.data[0].value === &quot;number&quot; ? Number(val) : String(val);
+                                                var names = typeof param.data[0].name === &quot;number&quot; ? Number(val) : String(val);
+                                                var valIndex = ui.array.index(param.data, vals, &quot;value&quot;),
+                                                    textIndex = ui.array.index(param.data, names, &quot;name&quot;);
+                            
+                                                if (valIndex &gt; -1) {
+                                                    $menuItems.eq(valIndex).addClass(&quot;active&quot;);
+                                                    // 设置值
+                                                    $targetMenu.attr(&quot;value&quot;, val);
+                            
+                                                    // 设置文本
+                                                    param.change &amp;&amp; text.call(this, param.data[valIndex][&quot;name&quot;]);
+                            
+                                                    selectVal = val;
+                            
+                                                } else if (textIndex &gt; -1) {
+                            
+                                                    $menuItems.eq(textIndex).addClass(&quot;active&quot;);
+                                                    // 设置值
+                                                    $targetMenu.attr(&quot;value&quot;, param.data[textIndex][&quot;value&quot;]);
+                                                    // 设置文本
+                                                    param.change &amp;&amp; text.call(this, val);
+                            
+                                                    selectVal = param.data[textIndex][&quot;value&quot;];
+                            
+                                                }
+                                            } else {
+                            
+                                                $menuItems.each(function (index, item) {
+                                                    var innerText = item.innerText,
+                                                        innerValue = item.getAttribute(&quot;value&quot;);
+                                                    if (innerText == val || innerValue == val) {
+                                                        $(this).addClass(&quot;active&quot;)
+                                                        // 设置值
+                                                        $targetMenu.attr(&quot;value&quot;, innerValue);
+                                                        param.change &amp;&amp; text.call(this, innerText);
+                            
+                                                        selectVal = innerValue;
+                            
+                                                    }
+                                                })
+                                            }
+                                        }
+                            
+                                        // 如果文本值不修改,那修改value也会触发change事件
+                                        if (!param.change) {
+                                            trigger.call(module, &quot;change&quot;);
+                                        }
+                            
+                                        return selectVal;
+                                    }
+                            
+                                    // 改变并触发事件
+                                    // 1.7.6
+                                    function change(val) {
+                            
+                                        value(val);
+                            
+                                        text(val);
+                                        param.onChange &amp;&amp; param.onChange.call(module, { target: null, currentTarget: null, value: val });
+                                    }
+                                    /**
+                                     * 返回一个选中的对象
+                                     *  @method values
+                                     *  @since 1.5.1
+                                     *  @return {object} {name:&quot;&quot;,value:&quot;&quot;}
+                                     *  @example
+                            
+                                        //设置值
+                                        var vals = uiDropdown.values();
+                                        // {name:&quot;&quot;,value:&quot;&quot;}
+                            
+                                     */
+                                    function values() {
+                                        return {
+                                            name: selectText,
+                                            value: selectVal
+                                        }
+                                    }
+                                    /**
+                                     * 重置下拉的选择
+                                     *  @method reset
+                                     *  @since 1.5.1
+                                     *  @example
+                            
+                                        uiDropdown.reset();
+                            
+                                     */
+                                    function reset() {
+                                        selectVal = &quot;&quot;;
+                                        value(&quot;&quot;);
+                                        text(placeholder);
+                                        hide();
+                                        return this;
+                                    }
+                                    /**
+                                     * 设置某一个二级菜单的值
+                                     *  @method active
+                                     *  @since 1.3.0
+                                     *  @param {number} [index] 第几个二级菜单
+                                     *  @example
+                            
+                                        //设置值
+                                        uiDropdown.active(1);
+                            
+                                     */
+                                    function active(index) {
+                                        index = parseInt(index);
+                                        //设置已经选择的二级菜单
+                                        var $active = $submenu.find(param.targetHandle).eq(index);
+                            
+                                        if ($active.length &gt;= 0) {
+                                            var val = $active.attr(&quot;value&quot;) || $.trim($active.text()) || &quot;&quot;;
+                                            //设置并且隐藏菜单
+                                            value(val);
+                            
+                                            param.showActive &amp;&amp; $active.addClass(&quot;active&quot;).siblings().removeClass(&quot;active&quot;);
+                                        }
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 设置或者获取文本
+                                     *  @method text
+                                     *  @param {string} [text] 设置文本
+                                     *  @example
+                            
+                                        //设置文本
+                                        uiDropdown.text(&quot;广东省&quot;);
+                            
+                                        //获取文本
+                                        var val = uiDropdown.text();
+                            
+                                     */
+                                    function text(text) {
+                                        var val = val || &quot;&quot;;
+                            
+                                        if (typeof text === &quot;undefined&quot;) {
+                            
+                                            var value = selectText || $.trim($menu.text());
+                                            return value;
+                                        } else {
+                                            var isHtml = ui.typeof(this) === &quot;htmllielement&quot;;
+                            
+                                            var $targetMenu = isHtml ? $(this).parents(&quot;.bui-dropdown&quot;).children(param.handle) : $menu;
+                            
+                                            var $span1 = $targetMenu.children(param.handleChildren);
+                            
+                                            if ($span1.length) {
+                            
+                                                if ($span1[0].tagName === &quot;INPUT&quot;) {
+                                                    $span1.val(text);
+                                                    // 触发store改变
+                                                    $span1.trigger(&quot;change&quot;);
+                                                } else {
+                                                    $span1.text(text);
+                                                }
+                                            } else {
+                                                if ($targetMenu[0].tagName === &quot;INPUT&quot;) {
+                                                    $targetMenu.val(text);
+                                                    // 触发store改变
+                                                    $targetMenu.trigger(&quot;change&quot;);
+                                                } else {
+                                                    $targetMenu.text(text);
+                                                }
+                                                // $targetMenu.text(text);
+                                            }
+                            
+                                            selectText = text;
+                            
+                                            trigger.call(module, &quot;change&quot;);
+                                        }
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 隐藏二级菜单
+                                     *  @method hide
+                                     *  @example
+                            
+                                        //隐藏二级菜单
+                                        uiDropdown.hide();
+                            
+                                     */
+                                    function hide() {
+                                        $menu.removeClass(&quot;active&quot;);
+                                        $submenu.css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        trigger.call(this, &quot;hide&quot;);
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     * 显示二级菜单
+                                     *  @method show
+                                     *  @example
+                            
+                                        //显示二级菜单
+                                        uiDropdown.show();
+                            
+                                     */
+                                    function show() {
+                                        $menu.addClass(&quot;active&quot;);
+                                        $submenu.css(&quot;display&quot;, &quot;block&quot;);
+                                        trigger.call(this, &quot;show&quot;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 菜单显示状态
+                                     *  @method isShow
+                                     *  @example
+                            
+                                        //显示二级菜单
+                                        uiDropdown.isShow();
+                            
+                                     */
+                                    function isShow() {
+                            
+                                        return $menu.hasClass(&quot;active&quot;);;
+                                    }
+                            
+                                    /**
+                                    * 隐藏所有二级菜单
+                                    *  @method hideAll
+                                    *  @example
+                            
+                                       //显示二级菜单
+                                       uiDropdown.hideAll();
+                            
+                                    */
+                                    function hideAll() {
+                                        $(&quot;.bui-dropdown &gt; .bui-btn&quot;).removeClass(&quot;active&quot;);
+                                        $(&quot;.bui-dropdown &gt; .bui-list&quot;).css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        trigger.call(this, &quot;hide&quot;);
+                                        return this;
+                                    }
+                            
+                                    function template(data) {
+                                        var html = &#x27;&#x27;;
+                                        html += &#x27;&lt;ul class=&quot;bui-list&quot;&gt;&#x27;
+                                        data.map(function (el, index) {
+                                            html += &#x27;&lt;li class=&quot;bui-btn&quot; value=&quot;&#x27; + el.value + &#x27;&quot;&gt;&#x27; + el.name + &#x27;&lt;/li&gt;&#x27;;
+                                        })
+                                        html += &#x27;&lt;/ul&gt;&#x27;
+                            
+                                        return html;
+                                    }
+                            
+                                    /**
+                                     * 阻止触发
+                                     *  @method disabled
+                                     *  @chainable
+                                     *  @since 1.4
+                                     *  @example
+                            
+                                        uiDropdown.disabled();
+                            
+                                     */
+                                    function disabled() {
+                                        var $handleItem = $menu;
+                            
+                                        $handleItem &amp;&amp; $handleItem.addClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 允许触发
+                                     *  @method enabled
+                                     *  @chainable
+                                     *  @since 1.4
+                                     *  @example
+                            
+                                        uiDropdown.enabled();
+                            
+                                     */
+                                    function enabled() {
+                                        var $handleItem = $menu;
+                            
+                                        $handleItem &amp;&amp; $handleItem.removeClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                     *  @example
+                            
+                                        //销毁
+                                        uiDropdown.destroy();
+                            
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                            
+                                        if ($id) {
+                                            $id.off(&quot;click.bui&quot;);
+                                            bool &amp;&amp; $id.remove();
+                                        }
+                                        if ($menu) {
+                                            $menu.off(&quot;click.bui&quot;);
+                                            bool &amp;&amp; $menu.remove();
+                                        }
+                            
+                                        $(&quot;body&quot;).off(&quot;click.bui&quot;);
+                            
+                                        off(&quot;show&quot;);
+                                        off(&quot;hide&quot;);
+                            
+                                    }
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiDropdownWidget = uiDropdown.widget();
+                            
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {};
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                        var option = uiDropdown.option();
+                            
+                                        //获取某个参数
+                                        var id = uiDropdown.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiDropdown.option( &quot;width&quot;,200 );
+                            
+                                        //修改多个参数
+                                        uiDropdown.option( {&quot;width&quot;:200} );
+                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                            
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;show&quot; | &quot;hide&quot; | &quot;change&quot; [文本值改变的时候] 
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiDropdown.on(&quot;show&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                            
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;show&quot; | &quot;hide&quot; | &quot;change&quot; [文本值改变的时候] 
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiDropdown.off(&quot;show&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                                    return module;
+                            
+                                };
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.dialog.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.dialog.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                &quot;use strict&quot;;
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;对话框&lt;/h2&gt;
+                                 *     &lt;p&gt;对话框同样是一个只关注交互的一个控件,可以从不同方向弹出,并且支持全屏,交互里面的内容是什么,完全由你定义, 可以是文本,也可以是控件, 完全可以由你定义, 像 提醒框 | 确认框 | 上拉菜单 | 选择列表菜单 | 日期等,都是基于dialog.&lt;/p&gt;
+                                 *     &lt;p&gt;注意: 当页面有{{#crossLink &quot;bui.listview&quot;}}{{/crossLink}} 控件时,侧滑出来的按钮如果要触发弹窗,会导致点击弹窗按钮第一次无效,需要设置弹窗的buttons的样式名为 bui-click &lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.dialog.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.dialog/isOpen&quot;}}{{/crossLink}}: 是否打开状态 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dialog/open&quot;}}{{/crossLink}}: 打开弹出窗 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dialog/close&quot;}}{{/crossLink}}: 关闭弹出窗 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dialog/remove&quot;}}{{/crossLink}}: 移除弹出窗 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dialog/create&quot;}}{{/crossLink}}: 动态创建弹出窗&lt;br&gt;
+                                 * {{#crossLink &quot;bui.dialog/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.dialog/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.dialog.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-dialog_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class dialog
+                                 *  @constructor
+                                 *  @param {object} option
+                                 *  @param {string} [option.id]  render:true 不需要传对话框的id | render:false 为静态绑定, 不传id只是引用,不初始化
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {string} [option.className]  增加自定义的对话框样式,防止修改 
+                                 *  @param {string} [option.effect] 对话框的打开效果,修改position会有默认的效果, 要修改具体可以查看 {{#crossLink &quot;bui.toggle&quot;}}{{/crossLink}} 有哪些效果
+                                 *  @param {string} [option.position]  对话框的位置 默认 center | left | right | top | bottom | custom (1.5.6新增,定位通过样式去定义)
+                                 *  @param {string} [option.width]  对话框的宽度, 只在 position:center | left | right 有效 
+                                 *  @param {string} [option.height]  对话框的高度, 只在 position:center | top | bottom 有效 
+                                 *  @param {boolean} [option.fullscreen]  全屏显示对话框 
+                                 *  @param {object} [option.style]  1.5.6新增 全屏以后的上下左右距离, 默认: null 不做处理 || { left: &quot;10%&quot;, top: &quot;20%&quot;},   
+                                 *  @param {boolean} [option.useBox] 1.5.6新增, 是否使用弹性布局，默认 false | true
+                                 *  @param {boolean} [option.scroll]  true | false 是否计算最大高度,配合height参数,超出可以滚动 
+                                 *  @param {boolean} [option.mask] 是否显示遮罩，默认 true | false
+                                 *  @param {number} [option.opacity]  遮罩的透明度, 默认 0.6 
+                                 *  @param {boolean} [option.zoom]  保持比例缩放 默认 false | true 
+                                 *  @param {boolean} [option.zIndex]  1.5.0新增 默认:100 以上,如果是嵌套的dialog,则需要分好层级, mask层级会自动减1  
+                                 *  @param {function} [option.callback]  点击按钮的回调, this 指点击的按钮 
+                                 *  @param {function} [option.onBeforeOpen]  1.5.2新增 打开前触发,return false 则不允许打开 
+                                 *  @param {function} [option.onBeforeClose]  1.5.2新增 关闭前触发,return false 则不允许打开 
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                 *  @param {function} [option.onMask]  点击遮罩的回调 
+                                 *  @param {function} [option.onClose]  对话框关闭的回调 
+                                 * 
+                                 *  @param {boolean} [option.navbarPosition]  1.7.3 导航的定位，默认 bottomright 底部右边 | bottomleft  底部左边｜ topleft  顶部左边｜  topright  顶部右边
+                                 *  @param {boolean} [option.navbarDirection] 1.7.3  导航的排列顺序，默认 y 纵向 ｜x 横向
+                                 *  @param {boolean} [option.showToolbar] 1.7.3  显示操作栏 true | false
+                                 *
+                                 *  @param {boolean} [option.render]  是否动态填充,动态填充以下参数才会有效 
+                                 *  @param {string} [option.dialogid]  1.6.2新增 render:true 可以传指定对话框的id 
+                                 *  @param {string} [option.title]  render:true 对话框的标题才会显示 
+                                 *  @param {string} [option.content]  render:true 对话框的内容
+                                 *  @param {boolean} [option.close]  render:true 显示关闭文本 
+                                 *  @param {string|html} [option.closeText]  render:true 才能把图标改为文本并且可以更改图标 
+                                 *  @param {boolean} [option.autoClose]  true点击按钮会自动关闭,如果false需要手动关闭 调用自身的close()方法
+                                 *  @param {array} option.buttons    render:true 底部的按钮 格式为:[&quot;确定&quot;,&quot;取消&quot;] || [{name:&quot;确定&quot;,className:&quot;primary-reverse&quot;}]
+                                 *  @param {string|object} [option.appendTo]  render:true 才有效 1.4.3新增 默认:&quot;body&quot;,添加到哪里去,主要配合单页使用 
+                                 *  @example
+                                 *
+                                 *  html:
+                                 *
+                                        //对话框的标准结构
+                                        &lt;div id=&quot;dialog&quot; class=&quot;bui-dialog&quot; style=&quot;display:none;&quot;&gt;
+                                            &lt;div class=&quot;bui-dialog-head&quot;&gt;对话框标题&lt;/div&gt;
+                                            &lt;div class=&quot;bui-dialog-main&quot;&gt;对话框的内容&lt;/div&gt;
+                                        &lt;/div&gt;
+                                 *  js:
+                            
+                                    var uiDialog = bui.dialog({
+                                          id: &quot;#dialog&quot;
+                                        });
+                                 *
+                                 */
+                                ui.dialog = function (option) {
+                                    var config = {
+                                        id: &quot;&quot;,
+                                        dialogid: &quot;&quot;,
+                                        title: &quot;&quot;,
+                                        effect: &quot;zoomIn&quot;,
+                                        content: &quot;&quot;,
+                                        className: &quot;&quot;,
+                                        appendTo: &quot;&quot;,
+                                        position: &quot;center&quot;,
+                                        style: null,
+                                        fullscreen: false,
+                                        useBox: false,
+                                        width: 0,
+                                        height: 0,
+                                        mask: true,
+                                        opacity: 0.3,
+                                        render: false,
+                                        needRemove: &quot;&quot;,
+                                        navbarPosition: &quot;bottomright&quot;, // 位置右边 bottomright bottomleft topleft topright
+                                        navbarDirection: &quot;y&quot;, // 纵向
+                                        showToolbar: true,
+                                        autoClose: true,
+                                        close: true,
+                                        mini: false,
+                                        max: false,
+                                        scroll: true,
+                                        closeText: &quot;&quot;,
+                                        zoom: false,
+                                        zIndex: 101,
+                                        buttons: [],
+                                        onBeforeClose: null,
+                                        onBeforeOpen: null,
+                                        onOpen: null,       // 1.8.0
+                                        onBeforeInit: null,
+                                        autoinit: true,
+                                        onInited: null,
+                                        onMask: null,
+                                        onClose: null,
+                                        callback: null,
+                                        dragable: false,
+                                        dragback: false,
+                                        touch: {
+                                            dragup: true,   // 允许拖拉拽某个方向
+                                            swipeDistance: 60,
+                                            dragdown: true,
+                                            dragleft: true,
+                                            dragright: true,
+                                            moveType: &quot;transform&quot;,
+                                            direction: &quot;xy&quot;,
+                                            onSwipeleft: function (e, touch) {
+                                                let that = this;
+                                                param.dragback &amp;&amp; close(function () {
+                                                    that.reset();
+                                                });
+                                                e.stopPropagation();
+                                            },
+                                            onSwiperight: function (e, touch) {
+                                                let that = this;
+                                                param.dragback &amp;&amp; close(function () {
+                                                    that.reset();
+                                                });
+                                                e.stopPropagation();
+                                            }
+                                        }
+                                    };
+                            
+                                    var cacheDialog = {
+                                        width: 0,
+                                        height: 0,
+                                    };
+                                    //方法
+                                    var module = {
+                                        name: &quot;dialog&quot;,
+                                        selector: selector,
+                                        $el: selector,
+                                        $: selector,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        show: show,
+                                        hide: hide,
+                                        open: open,
+                                        scroll: scroll,
+                                        resize: resize,
+                                        revert: revert,
+                                        modify: modify,
+                                        minimize: minimize,
+                                        maxmize: maxmize,
+                                        removebar: removebar,
+                                        fullscreen: fullscreen,
+                                        isFullscreen: isFullscreen,
+                                        close: close,
+                                        isOpen: isOpen,
+                                        disableOpen: disableOpen,
+                                        enableOpen: enableOpen,
+                                        disableClose: disableClose,
+                                        enableClose: enableClose,
+                                        top: top,
+                                        template: template,
+                                        render: renderContent,
+                                        toggle: toggle,
+                                        create: create,
+                                        remove: remove,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, config, ui.config.dialog, option);
+                            
+                                    var $id,
+                                        $idmini,
+                                        uiToggle,
+                                        cssName = &quot;&quot;,
+                                        dialogWidth = &quot;&quot;,
+                                        dialogHeight = &quot;&quot;,
+                                        defaultEffect = &quot;fadeInDown&quot;,
+                                        disableOpenStatus = false,  // 1.6.5新增，能否打开,默认可以
+                                        disableCloseStatus = false,  // 1.6.5新增，能否关闭,默认可以
+                                        effect,
+                                        status = 0, //中间高度自适应
+                                        isOpened = false,
+                                        hasEventInit = false,
+                                        // 动态渲染的一般需要自动移除, 比方confirm,alert 等窗口, 这个默认取决于render状态,或者自己设定不允许删除.
+                                        needRemove = param.needRemove !== &quot;&quot; ? param.needRemove : (param.render ? true : false),
+                                        handlers = {},
+                                        winWidth = document.documentElement.clientWidth,
+                                        winHeight = document.documentElement.clientHeight,
+                                        uiMask,
+                                        isDestroy = false,
+                                        fullstatus = false, // 全屏状态
+                                        count = 0;
+                            
+                                    var uiTouch = null;
+                            
+                                    if (param.id) {
+                                        //初始化
+                                        param.autoinit &amp;&amp; init(param);
+                                    }
+                            
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = param = $.extend(true, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                            
+                                        option.appendTo = option.appendTo || (ui.hasRouter ? router.currentPage() || &quot;body&quot; : &quot;body&quot;);
+                                        isDestroy = false;
+                            
+                                        effect = option.effect;
+                            
+                                        // 是否关闭的时候需要移除对话框
+                                        needRemove = option.needRemove !== &quot;&quot; ? option.needRemove : (option.render ? true : false);
+                            
+                                        winWidth = document.documentElement.clientWidth;
+                                        winHeight = document.documentElement.clientHeight;
+                            
+                                        //自定义效果跟位置有关
+                                        switch (option.position) {
+                                            case &quot;top&quot;:
+                                                cssName = &quot;bui-dialog-top&quot;;
+                                                effect = option.effect || &quot;fadeInDown&quot;;
+                                                break;
+                                            case &quot;bottom&quot;:
+                                                cssName = &quot;bui-dialog-bottom&quot;;
+                                                effect = option.effect || &quot;fadeInUp&quot;;
+                            
+                                                break;
+                                            case &quot;left&quot;:
+                                                cssName = &quot;bui-dialog-left&quot;;
+                                                effect = option.effect || &quot;fadeInLeft&quot;;
+                            
+                                                break;
+                                            case &quot;right&quot;:
+                                                cssName = &quot;bui-dialog-right&quot;;
+                                                effect = option.effect || &quot;fadeInRight&quot;;
+                            
+                                                break;
+                                            case &quot;center&quot;:
+                                                cssName = &quot;bui-dialog-center&quot;;
+                                                effect = option.effect || defaultEffect;
+                                                break;
+                                            case &quot;custom&quot;:
+                                                cssName = &quot;bui-dialog-custom&quot;;
+                                                effect = option.effect || defaultEffect;
+                                                break;
+                                        }
+                            
+                                        //是否全屏
+                                        if (option.fullscreen) {
+                                            cssName = &quot;bui-dialog-fullscreen&quot;;
+                                            effect = option.effect || defaultEffect;
+                                            // opt.mask = false;
+                                            fullstatus = true;
+                                        }
+                            
+                                        //动态渲染,无需传id,会生成guid
+                                        if (option.render) {
+                            
+                                            option.id = option.dialogid || ui.guid();
+                            
+                                            // 处理成局部样式, bui.page 加载才会处理
+                                            // option.content = ui.unit.handleContent(option.content);
+                                            // option.content = option.content.replace(/#module\.id/g, &quot;#&quot; + option.id);
+                            
+                                            render(option);
+                                            // 这个选择器不支持标签选择，需要以id 或者 自定义id 
+                                            let optid = /\#|\./.test(option.id) ? option.id : &quot;#&quot; + option.id;
+                            
+                                            $id = $(optid);
+                            
+                                        } else {
+                            
+                                            $id = ui.obj(option.id, option.appendTo);
+                            
+                                            $id.addClass(cssName).css(&quot;z-index&quot;, option.zIndex);
+                            
+                                            option.useBox &amp;&amp; $id.addClass(&quot;bui-box-vertical&quot;);
+                                        }
+                            
+                            
+                                        if (option.style) {
+                                            $id.css(option.style);
+                                        }
+                            
+                                        // 最大高度最大宽度问题
+                                        //
+                                        dialogWidth = $id.width() &gt; winWidth ? winWidth : $id.width();
+                                        dialogHeight = $id.height() &gt; winHeight ? winHeight : $id.height();
+                            
+                                        //默认先隐藏dialog
+                                        $id.css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        if (!uiToggle) {
+                                            //初始化dialog切换器,显示隐藏基于这个控件
+                                            uiToggle = ui.toggle({
+                                                id: option.id,
+                                                effect: effect,
+                                                useBox: option.useBox
+                                            });
+                                        }
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                            
+                                        try {
+                            
+                                            var maskId = typeof option.id === &quot;object&quot; ? $(option.id).attr(&quot;id&quot;) + &quot;-mask&quot; : option.id + &quot;-mask&quot;;
+                                            if (opt.mask &amp;&amp; !uiMask) {
+                            
+                                                //显示遮罩, appendTo 为了解决单页的遮罩问题.
+                                                uiMask = ui.mask({
+                                                    id: maskId,
+                                                    opacity: opt.opacity,
+                                                    appendTo: $id.parent(),
+                                                    autoTrigger: false,
+                                                    onlyOne: true,
+                                                    autoClose: false,
+                                                    zIndex: (parseInt(opt.zIndex, 10) - 1),
+                                                    callback: function (e) {
+                                                        var canClose = opt.onMask &amp;&amp; opt.onMask.call(module, e);
+                                                        if (canClose === false) {
+                                                            return false;
+                                                        }
+                                                        if (param.autoClose) {
+                                                            if (needRemove) {
+                                                                close(remove);
+                                                            } else {
+                                                                close();
+                                                            }
+                                                        }
+                                                    }
+                                                });
+                                            }
+                            
+                                        } catch (e) {
+                                            ui.showLog(e)
+                                        }
+                            
+                                        //绑定事件
+                                        if (!hasEventInit || param.render) {
+                                            bind(option);
+                                            // 绑定拖拉拽
+                                            if (option.dragable) {
+                            
+                                                let touchopt = $.extend(true, {}, option.touch);
+                                                touchopt.id = $id;
+                                                // touchopt.handle = &quot;.bui-dialog-head&quot;;
+                                                touchopt.dragable = option.dragable;
+                                                touchopt.zIndex = option.zIndex;
+                            
+                                                // 允许滑动关闭的时候，会根据不同方向做不同的关闭动作
+                                                if (option.dragback) {
+                            
+                                                    switch (option.position) {
+                                                        case &quot;right&quot;:
+                                                            touchopt.direction = &quot;x&quot;;
+                                                            // touchopt.handle = &quot;&quot;;
+                                                            touchopt.dragleft = false;
+                                                            touchopt.onDragend = function (e, touch) {
+                                                                var that = this;
+                                                                if (touch.direction !== &quot;swiperight&quot;) {
+                                                                    return;
+                                                                }
+                                                                // 移动后还原位置
+                                                                close(function () {
+                                                                    // 重置避免打开还是拖拽后的值
+                                                                    that.reset();
+                                                                });
+                                                            }
+                                                            break;
+                                                        case &quot;left&quot;:
+                                                            touchopt.direction = &quot;x&quot;;
+                                                            // touchopt.handle = &quot;&quot;;
+                                                            touchopt.dragright = false;
+                                                            touchopt.onDragend = function (e, touch) {
+                                                                var that = this;
+                                                                if (touch.direction !== &quot;swipeleft&quot;) {
+                                                                    return;
+                                                                }
+                                                                // 移动后还原位置
+                                                                close(function () {
+                                                                    // 重置避免打开还是拖拽后的值
+                                                                    that.reset();
+                                                                });
+                                                            }
+                                                            break;
+                            
+                                                        case &quot;top&quot;:
+                                                            touchopt.direction = &quot;y&quot;;
+                                                            touchopt.dragdown = false;
+                                                            touchopt.onDragend = function (e, touch) {
+                                                                var that = this;
+                                                                if (touch.direction !== &quot;swipeup&quot;) {
+                                                                    return;
+                                                                }
+                                                                // 移动后还原位置
+                                                                close(function () {
+                                                                    // 重置避免打开还是拖拽后的值
+                                                                    that.reset();
+                                                                });
+                                                            }
+                                                            break;
+                            
+                                                        case &quot;bottom&quot;:
+                                                            touchopt.direction = &quot;y&quot;;
+                                                            touchopt.dragup = false;
+                                                            touchopt.onDragend = function (e, touch) {
+                                                                var that = this;
+                                                                if (touch.direction !== &quot;swipedown&quot;) {
+                                                                    return;
+                                                                }
+                                                                // 移动后还原位置
+                                                                close(function () {
+                                                                    // 重置避免打开还是拖拽后的值
+                                                                    that.reset();
+                                                                });
+                                                            }
+                                                            break;
+                            
+                                                    }
+                                                }
+                            
+                                                uiTouch = ui.touch(touchopt)
+                                            }
+                                        }
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                            
+                                        return module;
+                                    }
+                            
+                                    function templateToolbar(option) {
+                                        var html = &quot;&quot;;
+                            
+                                        html += &#x60;&lt;div class=&quot;bui-dialog-toolbar&quot;&gt;&#x60;
+                            
+                                        let miniicon = ui.config.icon.mini ? &#x60;&lt;i class=&quot;${ui.config.icon.mini}&quot;&gt;&lt;/i&gt;&#x60; : &#x60;&lt;i class=&quot;icon-mini&quot;&gt;&amp;#xe620;&lt;/i&gt;&#x60;;
+                                        let maxicon = ui.config.icon.max ? &#x60;&lt;i class=&quot;${ui.config.icon.max}&quot;&gt;&lt;/i&gt;&#x60; : &#x60;&lt;i class=&quot;icon-max&quot;&gt;&amp;#xe617;&lt;/i&gt;&#x60;;
+                            
+                                        //是否显示关闭按钮
+                                        option.mini &amp;&amp; (
+                                            html += &#x60;&lt;span class=&quot;bui-dialog-miniicon&quot;&gt;${miniicon}&lt;/span&gt;&#x60;
+                                        );
+                                        //是否显示关闭按钮
+                                        option.max &amp;&amp; (
+                                            html += &#x60;&lt;span class=&quot;bui-dialog-maxicon&quot;&gt;${maxicon}&lt;/span&gt;&#x60;
+                                        );
+                                        //是否显示关闭按钮
+                                        option.close &amp;&amp; (
+                                            html += &#x27;&lt;span class=&quot;bui-dialog-close&quot;&gt;&#x27; + (option.closeText ? option.closeText : &#x27;&lt;i class=&quot;&#x27; + ui.config.icon.close + &#x27;&quot;&gt;&lt;/i&gt;&#x27;) + &#x27;&lt;/span&gt;&#x27;
+                                        );
+                                        html += &#x60;&lt;/div&gt;&#x60;
+                            
+                                        return html;
+                                    }
+                            
+                                    //动态渲染模板
+                                    function template(option) {
+                            
+                                        var html = &#x27;&#x27;;
+                                        var useboxClass = option.useBox ? &quot;bui-box-vertical &quot; : &quot;&quot;;
+                                        // 这里的 option.id 是动态生成的guid,在callback中可以拿到
+                                        html += &#x27;&lt;div id=&quot;&#x27; + option.id + &#x27;&quot; class=&quot;bui-dialog &#x27; + useboxClass + cssName + &#x27; &#x27; + option.className + &#x27;&quot; style=&quot;display:block;z-index:&#x27; + option.zIndex + &#x27;&quot;&gt;&#x27;;
+                                        option.title &amp;&amp; (html += &#x27;	&lt;div class=&quot;bui-dialog-head&quot;&gt;&#x27; + option.title + &#x27;&lt;/div&gt;&#x27;);
+                                        html += &#x27;	&lt;div class=&quot;bui-dialog-main&quot;&gt;&#x27;;
+                                        option.content &amp;&amp; (html += option.content);
+                                        html += &#x27;	&lt;/div&gt;&#x27;;
+                                        option.buttons &amp;&amp; option.buttons.length &amp;&amp; (
+                                            html += &#x27;	&lt;div class=&quot;bui-dialog-foot&quot;&gt;&lt;div class=&quot;bui-box&quot;&gt;&#x27;,
+                                            option.buttons.forEach(function (item, i) {
+                                                html += &#x27;		&lt;div class=&quot;bui-btn span1 &#x27; + (item.className || &#x27;&#x27;) + &#x27;&quot; value=&quot;&#x27; + (item.value || &#x27;&#x27;) + &#x27;&quot;&gt;&#x27; + (item.name || item) + &#x27;&lt;/div&gt;&#x27;;
+                                            }),
+                                            html += &#x27;	&lt;/div&gt;&lt;/div&gt;&#x27;
+                                        );
+                                        html += option.showToolbar ? templateToolbar(option) : &quot;&quot;;
+                            
+                                        html += &#x27;&lt;/div&gt;&#x27;;
+                            
+                                        return html;
+                                    }
+                            
+                            
+                            
+                                    /**
+                                     * 无动画打开对话框
+                                     *  @method show
+                                     *  @chainable
+                                     *  @since 1.7.6
+                                     *  @param {function} [callback] 回调
+                                     *  @example
+                            
+                                        uiDialog.show();
+                            
+                                     */
+                                    function show(callback) {
+                                        var display = param.useBox ? &quot;-webkit-box&quot; : &quot;block&quot;;
+                                        $id &amp;&amp; $id.css(&quot;display&quot;, display);
+                            
+                                        callback &amp;&amp; callback.call(this);
+                                    }
+                            
+                                    /**
+                                     * 无动画关闭对话框
+                                     *  @method hide
+                                     *  @chainable
+                                     *  @since 1.7.6
+                                     *  @param {function} [callback] 回调
+                                     *  @example
+                            
+                                        uiDialog.hide();
+                            
+                                     */
+                                    function hide(callback) {
+                                        $id.css(&quot;display&quot;, &quot;none&quot;);
+                            
+                                        callback &amp;&amp; callback.call(this);
+                                    }
+                            
+                                    /**
+                                     * 打开对话框
+                                     *  @method open
+                                     *  @chainable
+                                     *  @param {function} [callback] 回调
+                                     *  @example
+                            
+                                        uiDialog.open();
+                            
+                                     */
+                                    function open(callback) {
+                            
+                                        if (isOpened || isDestroy || disableOpenStatus) {
+                                            isOpened = true;
+                                            return this;
+                                        }
+                                        var _config = {
+                                            width: param.width,
+                                            height: param.height,
+                                            zoom: param.zoom,
+                                            fullscreen: param.fullscreen,
+                                            position: param.position,
+                                            scroll: param.scroll,
+                                            onBeforeOpen: param.onBeforeOpen,
+                                            useBox: param.useBox,
+                                            effect: &quot;&quot;,
+                                            callback: null
+                                        }
+                                        var _opt = _config;
+                                        if (typeof callback === &quot;function&quot;) {
+                                            _opt.callback = callback;
+                                        } else if (typeof callback === &quot;string&quot;) {
+                                            _opt.effect = callback;
+                                        } else if (callback &amp;&amp; ui.typeof(callback) === &quot;object&quot;) {
+                                            _opt = $.extend(true, {}, _config, callback);
+                                        }
+                            
+                                        if (!$id) {
+                                            console.error(&quot;找不到 Dialog ID&quot;)
+                            
+                                            return this;
+                                        }
+                                        // 是否允许打开
+                                        var canOpen = _opt.onBeforeOpen &amp;&amp; _opt.onBeforeOpen.call(module, {
+                                            toggle: uiToggle
+                                        });
+                            
+                                        trigger.call(module, &quot;beforeopen&quot;, {
+                                            toggle: uiToggle
+                                        });
+                                        if (canOpen === false) {
+                                            return this;
+                                        }
+                            
+                                        var display = param.useBox ? &quot;-webkit-box&quot; : &quot;block&quot;;
+                                        $id &amp;&amp; $id.css(&quot;display&quot;, display);
+                            
+                                        var status = ($id &amp;&amp; $id.attr(&quot;status&quot;) || 0);
+                            
+                                        //通过状态判断,不用每次都重新计算高度
+                                        if (status == 0) {
+                            
+                                            // 有一些宽度高度如果没设置,需要获取本身的宽度高度,例如 pickerdate
+                                            resize(_opt)
+                            
+                                            $id &amp;&amp; $id.attr(&quot;status&quot;, &quot;1&quot;);
+                                        }
+                            
+                                        uiMask &amp;&amp; uiMask.show();
+                            
+                                        //引用动画控制器
+                                        uiToggle.show(function (argument) {
+                            
+                                            isOpened = true;
+                            
+                                            param.width = $id.width();
+                                            param.height = $id.height();
+                            
+                                            _opt.callback &amp;&amp; _opt.callback.call(module, {
+                                                toggle: uiToggle,
+                                                target: $id[0]
+                                            });
+                            
+                                            // 公共的打开处理
+                                            param.onOpen &amp;&amp; param.onOpen.call(module, {
+                                                toggle: uiToggle,
+                                                target: $id[0]
+                                            })
+                            
+                                            trigger.call(module, &quot;openafter&quot;, {
+                                                toggle: uiToggle
+                                            });
+                                            trigger.call(module, &quot;afteropen&quot;, {
+                                                toggle: uiToggle
+                                            });
+                                        }, _opt.effect);
+                            
+                                        //绑定事件
+                                        if (!hasEventInit) {
+                                            bind();
+                                        }
+                            
+                                        // 触发监听事件
+                                        trigger.call(module, &quot;open&quot;, {
+                                            toggle: uiToggle
+                                        });
+                            
+                                        return this;
+                                    }
+                            
+                                    // 处理width的单位
+                                    function handleWidth(opt) {
+                                        let widthstr = opt.width ? String(opt.width) : String($id.width() || winWidth);
+                                        let widthPx = &#x27;&#x27;;
+                                        let width = 0;
+                                        let widthRem = &#x27;&#x27;;
+                                        if (widthstr.indexOf(&quot;%&quot;) &gt; -1) {
+                            
+                                            width = (winWidth * parseFloat(widthstr)) / 100;
+                                            widthRem = ui.unit.pxToRemZoom(width) + &#x27;rem&#x27;;
+                                            widthPx = width + &#x27;px&#x27;;
+                            
+                                        } else if (widthstr.indexOf(&quot;px&quot;) &gt; -1) {
+                                            width = parseFloat(widthstr);
+                                            widthRem = ui.unit.pxToRemZoom(width) + &#x27;rem&#x27;;
+                                            widthPx = widthstr;
+                                        } else if (widthstr.indexOf(&quot;rem&quot;) &gt; -1) {
+                                            width = ui.unit.remToPx(parseFloat(widthstr));
+                                            widthRem = widthstr;
+                                            widthPx = width + &#x27;px&#x27;;
+                                        } else {
+                                            // number
+                                            width = parseFloat(widthstr);
+                                            widthRem = ui.unit.pxToRemZoom(width) + &#x27;rem&#x27;;
+                                            widthPx = width + &#x27;px&#x27;;
+                            
+                                        }
+                            
+                                        return {
+                                            width: parseFloat(width),
+                                            widthPx: widthPx,
+                                            widthRem: widthRem
+                                        }
+                                    }
+                            
+                                    // 处理Height的单位
+                                    function handleHeight(opt) {
+                                        let heightstr = opt.height ? String(opt.height) : String($id.height() || winHeight);
+                                        let heightPx = &#x27;&#x27;;
+                                        let height = 0;
+                                        let heightRem = &#x27;&#x27;;
+                                        if (heightstr.indexOf(&quot;%&quot;) &gt; -1) {
+                            
+                                            height = (winHeight * parseFloat(heightstr)) / 100;
+                                            heightRem = ui.unit.pxToRemZoom(height) + &#x27;rem&#x27;;
+                                            heightPx = height + &#x27;px&#x27;;
+                                        } else if (heightstr.indexOf(&quot;px&quot;) &gt; -1) {
+                                            height = parseFloat(heightstr);
+                                            heightRem = ui.unit.pxToRemZoom(height) + &#x27;rem&#x27;;
+                                            heightPx = heightstr;
+                                        } else if (heightstr.indexOf(&quot;rem&quot;) &gt; -1) {
+                                            height = ui.unit.remToPx(parseFloat(heightstr));
+                                            heightRem = heightstr;
+                                            heightPx = height + &#x27;px&#x27;;
+                                        } else {
+                                            // number
+                                            height = parseFloat(heightstr);
+                                            heightRem = ui.unit.pxToRemZoom(height) + &#x27;rem&#x27;;
+                                            heightPx = height + &#x27;px&#x27;;
+                                        }
+                            
+                                        return {
+                                            height: parseFloat(height),
+                                            heightPx: heightPx,
+                                            heightRem: heightRem
+                                        }
+                                    }
+                            
+                                    /**
+                                     * 重新设置高度
+                                     *  @method resize
+                                     *  @since 1.7.3
+                                     *  @param {object} [option] 
+                                     *  @param {number} [option.width] 宽度
+                                     *  @param {number} [option.height] 高度
+                                     *  @example
+                            
+                                        
+                            
+                                    */
+                                    function resize(opt) {
+                            
+                                        var _opt = $.extend(true, {}, param, opt);
+                            
+                                        // if (opt?.width || opt?.height) {
+                                        var _width = String(_opt.width);
+                                        var _height = String(_opt.height);
+                            
+                                        var widthobj = handleWidth(_opt);
+                                        var heightobj = handleHeight(_opt);
+                            
+                                        // 有一些宽度高度如果没设置,需要获取本身的宽度高度,例如 pickerdate
+                                        dialogWidth = widthobj.width;
+                                        dialogHeight = widthobj.height;// 隐藏时获取不到高度
+                            
+                                        // 只有数字采取缩放，有单位以单位为主
+                                        var widthZoom = /\d+$/.test(_width) &amp;&amp; _opt.zoom;
+                                        var heightZoom = /\d+$/.test(_height) &amp;&amp; _opt.zoom;
+                            
+                                        var dialogWidthValue = widthZoom ? widthobj.widthRem : widthobj.widthPx,
+                                            dialogHeightValue = heightZoom ? heightobj.heightRem : heightobj.heightPx,
+                                            dialogLeftValue = widthZoom ? &#x27;-&#x27; + parseFloat(widthobj.widthRem) / 2 + &#x27;rem&#x27; : &#x27;-&#x27; + parseFloat(widthobj.widthPx) / 2 + &#x27;px&#x27;,
+                                            dialogTopValue = heightZoom ? &#x27;-&#x27; + parseFloat(heightobj.heightRem) / 2 + &#x27;rem&#x27; : &#x27;-&#x27; + parseFloat(heightobj.heightPx) / 2 + &#x27;px&#x27;;
+                            
+                                        //左右的时候有宽度就设置宽度
+                                        // if (!_opt.fullscreen || _opt.position == &quot;custom&quot;) {}
+                            
+                                        $id.css({
+                                            &quot;width&quot;: _width.indexOf(&quot;%&quot;) &gt; -1 ? _width : dialogWidthValue,
+                                            &quot;height&quot;: _height.indexOf(&quot;%&quot;) &gt; -1 ? _height : dialogHeightValue,
+                                            &quot;transition&quot;: &quot;all 0.3s&quot;
+                                        })
+                            
+                                        // }
+                            
+                                        //不是全屏 center 才有效
+                                        if (_opt.position == &quot;center&quot; &amp;&amp; !_opt.fullscreen) {
+                            
+                                            $id.css({
+                                                &quot;top&quot;: &quot;50%&quot;,
+                                                &quot;margin-top&quot;: dialogTopValue,
+                                                &quot;left&quot;: &quot;50%&quot;,
+                                                &quot;margin-left&quot;: dialogLeftValue,
+                                                &quot;right&quot;: &quot;auto&quot;,
+                                            })
+                                        }
+                            
+                            
+                            
+                                        var $dialogHead = $id.children(&#x27;.bui-dialog-head&#x27;),
+                                            $dialogFoot = $id.children(&#x27;.bui-dialog-foot&#x27;),
+                                            $dialogMain = $id.children(&#x27;.bui-dialog-main&#x27;);
+                            
+                                        if (_opt.fullscreen) {
+                            
+                                            $id.addClass(&quot;bui-dialog-fullscreen&quot;);
+                                        }
+                                        // 如果需要超出滚动条,则设置scroll还有高度, useBox如果相互嵌套，高度100%在手机无法撑开
+                            
+                                        if (!_opt.useBox) {
+                            
+                                            // 全屏或者缩放的高度的处理
+                                            var dialogHeight = _opt.fullscreen &amp;&amp; !_opt.height ? $id.parent().height() || document.documentElement.clientHeight : (_opt.zoom ? ($id.height() || bui.unit.remToPx(hanleHeight(_opt.height) / 100)) : hanleHeight(_opt.height) || $id.height());
+                                            // jquery 跟 zepto获取高度不同
+                                            var headHeight = $dialogHead.length ? $dialogHead[0].clientHeight : 0,
+                                                footHeight = $dialogFoot.length ? $dialogFoot[0].clientHeight : 0,
+                                                mainHeight = dialogHeight - headHeight - footHeight - (_opt.fullscreen ? parseFloat($id.css(&quot;top&quot;)) : 0);
+                            
+                                            // 获取缩放以后的值进行加减
+                                            $dialogMain.css({
+                                                &quot;height&quot;: mainHeight
+                                            });
+                                        }
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    // 处理传进来的高度
+                                    function hanleHeight(num) {
+                                        if (typeof num == &quot;string&quot; &amp;&amp; num.indexOf(&quot;%&quot;) &gt; -1) {
+                                            return document.documentElement.clientHeight * parseFloat(num) / 100;
+                                        } else if (typeof num == &quot;string&quot;) {
+                                            return parseFloat(num);
+                                        } else if (typeof num == &quot;number&quot;) {
+                                            return num;
+                                        }
+                                    }
+                            
+                                    /**
+                                     * 最小化
+                                     *  @method minimize
+                                     *  @since 1.7.3
+                                     *  @param {object} [option] 
+                                     *  @param {number} [option.title] 自定义缩小后的标题，非必需
+                                     *  @param {boolean} [option.needRemove] 是否允许移除图标
+                                     *  @example
+                            
+                                        uiDialog.minimize();
+                            
+                                        uiDialog.minimize({
+                                            title:&quot;自定义标题&quot;
+                                        });
+                            
+                                    */
+                            
+                                    var minitoggle = null;
+                            
+                                    function templateNavbar(opt) {
+                                        var needRemoveIcon = opt.needRemove ? &#x60;&lt;i class=&quot;icon-remove&quot;&gt;&lt;/i&gt;&#x60; : &quot;&quot;;
+                                        var html = &#x60;&lt;div id=&quot;${opt.id}&quot; class=&quot;bui-dialog-mini span1&quot;&gt;&lt;span&gt;${opt.title}&lt;/span&gt;${needRemoveIcon}&lt;/div&gt;&#x60;;
+                                        return html
+                                    }
+                            
+                                    function minimize(opt) {
+                            
+                                        close();
+                            
+                                        // 缩小的导航栏
+                            
+                                        var miniid = &#x60;${$id.attr(&quot;id&quot;)}-mini&#x60;;
+                            
+                                        let $navbar = ui.$(&quot;.bui-dialog-navbar&quot;);
+                                        $idmini = ui.$(&#x60;#${miniid}&#x60;);
+                            
+                                        let dtitle = opt?.title || param.title || $id.children(&quot;.bui-dialog-head&quot;).text() || &quot;&quot;;
+                                        // 导航条渲染
+                                        let html = templateNavbar({
+                                            id: miniid,
+                                            title: dtitle,
+                                            needRemove: opt?.needRemove == false ? false : true
+                                        })
+                            
+                                        if ($navbar.length &amp;&amp; !$idmini.length) {
+                                            $navbar.append(html)
+                                        } else if (!$navbar.length) {
+                                            // 只有一个任务栏，多个隐藏小窗口都在第一次创建的任务栏里
+                                            // 定位
+                                            var position = &quot;&quot;;
+                            
+                                            switch (param.navbarPosition) {
+                                                case &quot;topleft&quot;:
+                                                    position = &quot;topleft&quot;;
+                                                    break;
+                                                case &quot;topright&quot;:
+                                                    position = &quot;topright&quot;;
+                                                    break;
+                                                case &quot;bottomleft&quot;:
+                                                    position = &quot;bottomleft&quot;;
+                                                    break;
+                                                case &quot;bottomright&quot;:
+                                                default:
+                                                    position = &quot;bottomright&quot;;
+                                                    break;
+                                            }
+                                            // 排列方向
+                                            var dir = param.navbarDirection == &quot;y&quot; ? &#x60;bui-box-vertical&#x60; : &quot;bui-box&quot;;
+                            
+                                            $(router.currentPage()).append(&#x60;&lt;div class=&quot;bui-dialog-navbar ${position} ${dir}&quot;&gt;${html}&lt;/div&gt;&#x60;);
+                                        }
+                            
+                                        $idmini = ui.$(&#x60;#${miniid}&#x60;);
+                            
+                                        // 有自定义标题则修改
+                                        opt?.title &amp;&amp; $idmini.find(&quot;span&quot;).html(&#x60;${dtitle}&#x60;);
+                            
+                                        if (minitoggle) {
+                                            minitoggle.show();
+                                            return this;
+                                        }
+                            
+                                        minitoggle = ui.toggle({
+                                            id: &#x60;#${miniid}&#x60;,
+                                            effect: &quot;fadeInUp&quot;
+                                        })
+                            
+                                        minitoggle.show();
+                            
+                                        // 绑定点击事件
+                                        $idmini.click(function (e) {
+                            
+                                            // 如果点击的是移除，则删掉，如果不是，则打开
+                                            if (e.target.tagName === &quot;I&quot;) {
+                                                removebar();
+                                                return;
+                                            }
+                                            open();
+                            
+                                            minitoggle &amp;&amp; minitoggle.hide()
+                                        })
+                            
+                                        trigger.call(module, &quot;minimize&quot;);
+                            
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 最大化
+                                     *  @method maxmize
+                                     *  @since 1.7.3
+                                     *  @example
+                            
+                                        uiDialog.maxmize();
+                            
+                                    */
+                                    function maxmize(opt) {
+                            
+                                        cacheDialog.width = $id.width() || param.width;
+                                        cacheDialog.height = $id.height() || param.height;
+                            
+                                        open();
+                                        minitoggle &amp;&amp; minitoggle.hide();
+                            
+                                        $id.removeClass(&quot;bui-dialog-minimize&quot;).addClass(&quot;bui-dialog-maxmize&quot;);
+                            
+                                        // 重新关闭
+                                        resize({ height: $id.parent().height(), fullscreen: true });
+                            
+                                        trigger.call(module, &quot;maxmize&quot;);
+                            
+                                        // 全屏状态
+                                        fullstatus = true;
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 还原大小
+                                     *  @method revert
+                                     *  @since 1.7.3
+                                     *  @example
+                            
+                                        uiDialog.revert();
+                            
+                                    */
+                                    function revert(opt) {
+                            
+                                        open();
+                            
+                                        minitoggle &amp;&amp; minitoggle.hide();
+                            
+                                        // 如果是最大化的还原，会把窗口重新改变大小
+                                        if ($id.hasClass(&#x27;bui-dialog-maxmize&#x27;)) {
+                            
+                                            resize({ width: cacheDialog.width, height: cacheDialog.height, zoom: false });
+                            
+                                            $id.removeClass(&#x27;bui-dialog-maxmize bui-dialog-fullscreen&#x27;);
+                                        }
+                            
+                                        trigger.call(module, &quot;revert&quot;);
+                            
+                                        // 全屏状态
+                                        fullstatus = false;
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     * 移除最小化窗口
+                                     *  @method removebar
+                                     *  @since 1.7.3
+                                     *  @example
+                            
+                                        uiDialog.removebar();
+                            
+                                    */
+                                    function removebar(opt) {
+                            
+                                        // 有些是静态窗口，不能移除，所以这里采用关闭隐藏即可。
+                                        param.render ? remove() : close();
+                            
+                                        minitoggle &amp;&amp; minitoggle.hide(function () {
+                                            $idmini.remove();
+                            
+                                            minitoggle = null;
+                                        });
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 开启滚动条
+                                     *  @method scroll
+                                     *  @since 1.7.3
+                                     *  @param {boolean} [bool] 是否开启滚动条
+                                     *  @param {function} [callback] 回调
+                                     *  @example
+                            
+                                        // 开启
+                                        uiDialog.scroll();
+                                        // 关闭
+                                        uiDialog.scroll(false);
+                            
+                                    */
+                                    function scroll(bool, callback) {
+                            
+                                        var needScroll = bool == false ? false : true;
+                            
+                                        var $dialogScroll = $id.children(&quot;.bui-dialog-main&quot;);
+                                        if (!needScroll) {
+                            
+                                            // 获取缩放以后的值进行加减
+                                            $dialogScroll.css({
+                                                &quot;overflow&quot;: &quot;hidden&quot;
+                                            });
+                                        } else {
+                                            // 获取缩放以后的值进行加减
+                                            $dialogScroll.css({
+                                                &quot;overflow&quot;: &quot;auto&quot;
+                                            });
+                                        }
+                                        callback &amp;&amp; callback.call(this);
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 全屏
+                                     *  @method fullscreen
+                                     *  @since 1.7.3
+                                     *  @param {boolean} [bool] 是否全屏
+                                     *  @param {function} [callback] 回调
+                                     *  @example
+                            
+                                        // 开启
+                                        uiDialog.fullscreen();
+                                        // 关闭
+                                        uiDialog.fullscreen(false);
+                            
+                                    */
+                            
+                                    function fullscreen(bool, callback) {
+                            
+                                        var needScroll = bool == false ? false : true;
+                            
+                                        if (!needScroll) {
+                                            // 还原
+                                            revert();
+                            
+                                        } else {
+                                            // 最大化
+                                            maxmize();
+                            
+                                        }
+                            
+                                        callback &amp;&amp; callback.call(this);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 是否全屏
+                                     *  @method isFullscreen
+                                     *  @since 1.7.5
+                                     *  @return {boolean} 是否全屏
+                                     *  @example
+                            
+                                        // 状态
+                                        let status = uiDialog.isFullscreen();
+                            
+                                    */
+                            
+                                    function isFullscreen() {
+                            
+                                        return fullstatus;
+                                    }
+                            
+                            
+                                    /**
+                                     * 检测窗口是否打开
+                                     *  @method isOpen
+                                     *  @example
+                            
+                                        var status = uiDialog.isOpen();
+                            
+                                    */
+                            
+                                    function isOpen(argument) {
+                            
+                                        return isOpened
+                                    }
+                            
+                                    /**
+                                     * 禁止打开
+                                     *  @method disableOpen
+                                     *  @since 1.6.5
+                                     *  @example
+                            
+                                        var status = uiDialog.disableOpen();
+                            
+                                    */
+                            
+                                    function disableOpen() {
+                                        disableOpenStatus = true;
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 允许打开
+                                     *  @method enableOpen
+                                     *  @since 1.6.5
+                                     *  @example
+                            
+                                        var status = uiDialog.enableOpen();
+                            
+                                    */
+                            
+                                    function enableOpen() {
+                                        disableOpenStatus = false;
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 禁止关闭
+                                     *  @method disableClose
+                                     *  @since 1.6.5
+                                     *  @example
+                            
+                                        var status = uiDialog.disableClose();
+                            
+                                    */
+                            
+                                    function disableClose() {
+                                        disableCloseStatus = true;
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 允许关闭
+                                     *  @method enableClose
+                                     *  @since 1.6.5
+                                     *  @example
+                            
+                                        var status = uiDialog.enableClose();
+                            
+                                    */
+                            
+                                    function enableClose() {
+                                        disableCloseStatus = false;
+                                        return this;
+                                    }
+                                    /**
+                                     * 关闭对话框
+                                     *  @method close
+                                     *  @chainable
+                                     *  @param {function} [callback] 回调
+                                     *  @example
+                            
+                                        uiDialog.close();
+                            
+                                     */
+                                    function close(callback) {
+                                        if (!isOpened || isDestroy || disableCloseStatus) {
+                                            return;
+                                        }
+                                        var _opt = {};
+                                        if (typeof callback === &quot;function&quot;) {
+                                            _opt.callback = callback;
+                                        } else if (typeof callback === &quot;string&quot;) {
+                                            _opt.effect = callback;
+                                            _opt.callback = param.onClose;
+                                        } else if (callback &amp;&amp; ui.typeof(callback) === &quot;object&quot;) {
+                                            _opt = callback;
+                                        }
+                                        _opt.onBeforeClose = param.onBeforeClose;
+                            
+                                        // 是否允许打开
+                                        var canClose = _opt.onBeforeClose &amp;&amp; _opt.onBeforeClose.call(module, {
+                                            toggle: uiToggle
+                                        });
+                                        trigger.call(module, &quot;beforeclose&quot;, {
+                                            toggle: uiToggle
+                                        });
+                                        if (canClose === false) {
+                                            return this;
+                                        }
+                                        try {
+                            
+                                            uiToggle.hide(function (argument) {
+                                                isOpened = false;
+                                                _opt.callback &amp;&amp; _opt.callback.call(module, {
+                                                    toggle: uiToggle
+                                                });
+                            
+                                            }, _opt.effect);
+                            
+                                            //隐藏遮罩
+                                            uiMask &amp;&amp; uiMask.hide();
+                            
+                                            // 触发监听事件
+                                            trigger.call(this, &quot;close&quot;, {
+                                                toggle: uiToggle
+                                            });
+                            
+                                        } catch (e) {
+                                            ui.showLog(e, &quot;bui.dialog.close&quot;);
+                            
+                                        };
+                            
+                                        return this;
+                                    }
+                            
+                            
+                                    // 绑定监听
+                                    function on(type, handle) {
+                                        if (typeof handlers[type] == &quot;undefined&quot;) {
+                                            handlers[type] = [];
+                                        }
+                                        handlers[type].push(handle);
+                                    }
+                            
+                                    // 触发监听事件
+                                    function trigger(type, data) {
+                                        var handles = handlers[type];
+                                        if (ui.typeof(handles) === &quot;array&quot;) {
+                            
+                                            for (var i = 0, len = handles.length; i &lt; len; i++) {
+                                                handles[i](data);
+                                            }
+                                        }
+                                    }
+                            
+                                    /**
+                                     * 移除对话框
+                                     *  @method remove
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiDialog.remove();
+                            
+                                     */
+                                    function remove() {
+                                        try {
+                            
+                                            $id.remove();
+                            
+                                            if (uiMask) {
+                            
+                                                //移除遮罩
+                                                uiMask.remove();
+                            
+                                                //解决ios8 遮罩可以滚动问题
+                                                // $(&quot;main&quot;).css({
+                                                //     &quot;overflow-y&quot;:&quot;auto&quot;
+                                                // });
+                                            }
+                                            trigger.call(this, &quot;remove&quot;);
+                            
+                                        } catch (e) {
+                                            ui.showLog(e, &quot;bui.dialog.remove&quot;);
+                                        };
+                            
+                                        return this;
+                                    }
+                            
+                                    //渲染模板
+                                    function render(option) {
+                                        //生成模板
+                                        var html = template(option);
+                            
+                                        var $domId = ui.$(&quot;#&quot; + option.id);
+                            
+                                        if ($domId.length) {
+                                            $domId.remove();
+                                        }
+                            
+                                        $(option.appendTo).append(html);
+                            
+                                        return this;
+                                    }
+                            
+                                    //渲染模板
+                                    // 1.8.0 新增，用来处理先初始化id，再填充内容，比方bui.page
+                                    /**
+                                     * 渲染模板内容
+                                     *  @method render
+                                     *  @since 1.8.0
+                                     *  @param {object} [option] 
+                                     *  @param {string} [option.id] 填充到哪个id下，默认是当前id，可以不用传
+                                     *  @param {string} [option.content] 填充的内容，可以是html
+                                     *  @example
+                            
+                                        uiDialog.render({
+                                            content:&quot;自定义标题&quot;
+                                        });
+                            
+                                    */
+                            
+                                    function renderContent(opt) {
+                                        let id = opt.id || option.id;
+                                        let domid = id.indexOf(&quot;#&quot;) &gt; -1 || id.indexOf(&quot;.&quot;) &gt; -1 ? id : &quot;#&quot; + id;
+                                        let $domId = ui.$(domid);
+                            
+                                        $domId = param.appendTo === &quot;body&quot; ? $(domid) : $domId;
+                            
+                                        $id = $domId;
+                            
+                                        if ($domId.length) {
+                            
+                                            typeof opt.content !== &quot;undefined&quot; &amp;&amp; $domId.html(opt.content);
+                                        } else {
+                                            console.log(&quot;找不到ID&quot;, id)
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    //绑定关闭及底部按钮事件
+                                    function bind() {
+                                        //绑定关闭事件
+                                        $id.off(&#x27;click.bui&#x27;, &quot;.bui-dialog-close&quot;).on(&#x27;click.bui&#x27;, &quot;.bui-dialog-close&quot;, function (event) {
+                            
+                                            //如果autoClose=true 并且是动态渲染,则关闭移除
+                                            // if (param.autoClose) {
+                                            if (needRemove) {
+                                                close(remove);
+                                            } else {
+                                                close(param.onClose);
+                                            }
+                                            // }
+                                            //执行回调
+                                            // param.onClose &amp;&amp; param.onClose.call(module, event, module);
+                                            event.stopPropagation();
+                                        });
+                            
+                                        $id.off(&#x27;click.bui&#x27;, &quot;.bui-dialog-miniicon&quot;).on(&#x27;click.bui&#x27;, &quot;.bui-dialog-miniicon&quot;, function (event) {
+                                            minimize();
+                                        })
+                            
+                                        $id.off(&#x27;click.bui&#x27;, &quot;.bui-dialog-maxicon&quot;).on(&#x27;click.bui&#x27;, &quot;.bui-dialog-maxicon&quot;, function (event) {
+                                            if ($id.hasClass(&quot;bui-dialog-maxmize&quot;)) {
+                                                fullscreen(false);
+                                                return;
+                                            }
+                            
+                                            fullscreen();
+                                        })
+                            
+                            
+                                        //点击底部的按钮, 如果导致 b-click 不能点击，请给底部按钮改个名字 比如 bui-btn-submit 
+                                        // 针对有callback才会绑定底部按钮
+                                        param.callback &amp;&amp; $id.on(&#x27;click.bui&#x27;, &quot;.bui-dialog-foot .bui-btn&quot;, function (event) {
+                            
+                                            event.target = this;
+                            
+                                            if (!isOpened) {
+                                                return false;
+                                            }
+                                            //执行回调
+                                            var canClose = param.callback &amp;&amp; param.callback.call(module, event, module);
+                            
+                                            if (canClose === false) {
+                                                return false;
+                                            }
+                                            //如果autoClose=true 并且是动态渲染,则关闭移除
+                                            if (param.autoClose) {
+                                                if (needRemove) {
+                                                    close(remove);
+                                                } else {
+                                                    close();
+                                                }
+                                            }
+                            
+                                            event.stopPropagation();
+                            
+                                        });
+                            
+                            
+                                        hasEventInit = true;
+                            
+                            
+                                        return this;
+                                    }
+                            
+                                    // 返回控件自身的选择器
+                                    function selector(id) {
+                                        return ui.selector.call($id, id);
+                                    }
+                            
+                                    /**
+                                     * 动态增加对话框
+                                     *  @method create
+                                     *  @param {object} option [参考{{#crossLink &quot;bui.dialog&quot;}}{{/crossLink}} 的参数]
+                                     *  @chainable
+                                     *  @example
+                            
+                                        // 1.5.0 支持公共参数, 1.4.8 参数需要在create 里面
+                                        var dialog = bui.dialog();
+                                        // 先创建再打开
+                                        var dialogobj = dialog.create({ title:&quot;标题&quot;, content:&quot;提醒内容&quot;})
+                            
+                                            dialogobj.open();
+                            
+                                     */
+                                    function create(opt) {
+                                        var option = opt || {};
+                                        config.title = param.title || &quot;提示&quot;;
+                                        config.content = param.content || &quot;&quot;;
+                                        config.close = false;
+                                        config.render = true;
+                                        config.autoClose = param.autoClose;
+                                        config.mask = param.mask;
+                                        config.buttons = param.buttons &amp;&amp; param.buttons.length ? param.buttons : [&quot;确定&quot;];
+                                        config.callback = param.callback || null;
+                            
+                                        var opts = $.extend(true, config, option);
+                            
+                                        // 触发监听事件
+                                        trigger.call(module, &quot;create&quot;);
+                            
+                                        return init(opts);
+                                    }
+                            
+                                    /**
+                                     * 切换显示, 默认点一次打开,点2次关闭
+                                     *  @method toggle
+                                     *  @param {function} [onOpen]  打开的回调, 非必需
+                                     *  @param {function} [onClose]  关闭的回调, 非必需
+                                     *  @chainable
+                                     *  @example
+                            
+                                        $(&quot;#id&quot;).click(function(){
+                                            // 1. 只做切换
+                                            uiDialog.toggle();
+                            
+                                            // 2. 切换带回调
+                                            uiDialog.toggle(function(){
+                                                // 打开的回调
+                                            },function(){
+                                                // 关闭的回调
+                                            });
+                                        })
+                            
+                                     */
+                                    function toggle(onOpen, onClose) {
+                            
+                                        if (module.isOpen()) {
+                                            module.close(onClose);
+                                        } else {
+                                            module.open(onOpen);
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                            
+                                    /**
+                                     * 置顶
+                                     *  @method top
+                                     *  @since 1.6.2
+                                     *  @param {number} [index]  设置指定层级 
+                                     *  @chainable
+                                     *  @example
+                            
+                                        $(&quot;#id&quot;).click(function(){
+                                            // 1. 只做切换
+                                            uiDialog.top();
+                            
+                                        })
+                            
+                                     */
+                                    function top(index) {
+                                        index = index || (param.zIndex + ui.$(&quot;.bui-dialog&quot;).length);
+                            
+                                        ui.$(&quot;.bui-dialog&quot;).css(&quot;z-index&quot;, param.zIndex);
+                                        ui.$(&quot;.bui-mask&quot;).css(&quot;z-index&quot;, param.zIndex - 1);
+                                        $id.css(&quot;z-index&quot;, index);
+                            
+                                        uiMask &amp;&amp; ui.$(&quot;#&quot; + uiMask.config.id).css(&quot;z-index&quot;, index - 1);
+                            
+                                        // 赋值新的参数
+                                        module.config.zIndex = index;
+                                        param.zIndex = index;
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @example
+                            
+                                        //销毁
+                                        uiDialog.destroy();
+                            
+                                     */
+                                    function destroy() {
+                                        var bool = bool == true ? true : false;
+                            
+                                        if ($id) {
+                                            $id.off(&quot;click.bui&quot;)
+                                            $id.remove();
+                                            $id = null;
+                            
+                                            disableOpenStatus = false;
+                                        }
+                            
+                                        off(&quot;open&quot;);
+                                        off(&quot;close&quot;);
+                            
+                                        uiMask &amp;&amp; uiMask.destroy(bool);
+                                        uiToggle &amp;&amp; uiToggle.destroy(bool);
+                            
+                                        isDestroy = true;
+                                    }
+                            
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖 toggle 控件
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiDialogWidget = uiDialog.widget(&quot;toggle&quot;);
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {
+                                            toggle: uiToggle,
+                                            mask: uiMask
+                                        };
+                                        return ui.widget.call(control, name);
+                                    };
+                            
+                            
+                                    /**
+                                     * 修改一些不需要重新渲染的参数
+                                     *  @method modify
+                                     *  @since 1.8.2
+                                     *  @param {object} option] 
+                                     *  @param {string} [option.width] 宽度
+                                     *  @param {string} [option.height] 高度
+                                     *  @param {string} [option.title] 头部内容
+                                     *  @param {string} [option.conent] 中间滚动内容
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiDialogWidget = uiDialog.widget(&quot;toggle&quot;);
+                            
+                                     */
+                                    // 修改宽高
+                                    function modify(opt) {
+                                        opt = opt || {};
+                            
+                                        if (opt.width || opt.height) {
+                            
+                                            opt.width &amp;&amp; $id.css({
+                                                width: opt.width
+                                            })
+                                            opt.height &amp;&amp; $id.css({
+                                                height: opt.height
+                                            })
+                                            // 计算滚动条的高度
+                                            let mainHeight = parseFloat(opt.height) - $dialogHead.height() - $dialogFoot.height();
+                                            $dialogMain.css({
+                                                height: mainHeight
+                                            })
+                            
+                                            if (param.position == &quot;center&quot;) {
+                                                opt.height &amp;&amp; $id.css({
+                                                    &quot;margin-top&quot;: - (opt.height / 2)
+                                                })
+                                                opt.width &amp;&amp; $id.css({
+                                                    &quot;margin-left&quot;: - (opt.width / 2)
+                                                })
+                                            }
+                                        } else if (opt.title) {
+                                            $dialogHead.html(opt.title);
+                                        } else if (opt.content) {
+                                            $dialogMain.html(opt.content);
+                                        }
+                                    }
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiDialog.option();
+                            
+                                        //获取某个参数
+                                        var id = uiDialog.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiDialog.option( &quot;fullscreen&quot;,true );
+                            
+                                        //修改多个参数
+                                        uiDialog.option( {&quot;fullscreen&quot;:true} );
+                            
+                                     */
+                                    function options(key, value) {
+                                        // 修改宽高
+                                        if (typeof key === &quot;object&quot; &amp;&amp; (key.width || key.height)) {
+                                            modify(key)
+                                        } else if (key == &quot;width&quot;) {
+                                            modify({ width: value })
+                                        } else if (key == &quot;height&quot;) {
+                                            modify({ height: value })
+                                        }
+                                        return ui.option.call(module, key, value);
+                                    }
+                            
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;open&quot;(打开的窗口时候触发) | &quot;&lt;del&gt;openafter&lt;/del&gt;&quot; &quot;afteropen&quot;(打开的动画结束之后触发) | &quot;close&quot;(关闭窗口的时候触发)  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiDialog.on(&quot;open&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;open&quot;(打开的窗口时候触发) | &quot;close&quot;(关闭窗口的时候触发)  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiDialog.off(&quot;open&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                            
+                                    return module;
+                                };
+                            
+                                return ui;
+                            
+                            })(bui || {}, libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.swipe.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.swipe.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;swipe滑动控件&lt;/h2&gt;
+                                 *     &lt;p&gt;滑动控件,支持4个方向的滑动, sidebar 跟 listview 都基于swipe控件制作&lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.swipe.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.swipe/active&quot;}}{{/crossLink}}: 获取当前打开的对象 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.swipe/isActive&quot;}}{{/crossLink}}: 是否打开状态 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.swipe/open&quot;}}{{/crossLink}}: 打开哪个方向的 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.swipe/close&quot;}}{{/crossLink}}: 关闭 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.swipe/lock&quot;}}{{/crossLink}}: 不允许滑动 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.swipe/unlock&quot;}}{{/crossLink}}: 允许滑动 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.swipe.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-swipe_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *
+                                 *  @namespace bui
+                                 *  @class swipe
+                                 *  @constructor
+                                 *  @since 1.3.0
+                                 *  @param {object} option
+                                 *  @param {string} option.id 控件id
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {string} [option.handle] 触发的区域,配合swipe可以滑动触发 
+                                 *  @param {boolean} [option.swipe] 1.6.6新增 默认 true(允许滑动) | false
+                                 *  @param {string} [option.swiperight] 触发右滑的目标 
+                                 *  @param {string} [option.swipeleft] 触发左滑的目标 
+                                 *  @param {string} [option.swipeup] 触发上滑的目标 
+                                 *  @param {string} [option.swipedown] 触发下滑的目标 
+                                 *  @param {string} [option.direction]  x | y | xy 
+                                 *  @param {number} [option.width]  id的宽度, 默认0 即 屏幕宽度 
+                                 *  @param {number} [option.height] id的高度, 默认0 即 屏幕高度 
+                                 *  @param {boolean} [option.autoClose]  1.6.6 默认 true (滑动时超出屏幕会自动关闭，用于修复手机端bug) | false 
+                                 *  @param {number} [option.movingDistance]  handle 移动的距离,默认位移280
+                                 *  @param {number} [option.initDistance]  handle 初始化的距离,默认0
+                                 *  @param {boolean} [option.relative]  1.6.6新增 默认 false 使用屏幕的宽度 | true 相对父级的宽度
+                                 *  @param {boolean} [option.alwaysTrigger]  1.3.4增加 默认false; 不管滑动的距离有没有达标,总是触发open或者close事件 
+                                 *  @param {boolean} [option.hasChild]  swipe下面有多个swipe的时候为true 
+                                 *  @param {boolean} [option.handleMove]  handle是否需要移动 默认 true | false
+                                 *  @param {boolean} [option.targetMove]  target是否需要移动 默认 true | false
+                                 *  @param {boolean} [option.zoom]  是否缩放 默认 false | true
+                                 *  @param {number} [option.distance]  默认40, 拖拽大于distance才会生效,配合delay可以防止slide又有上下其它事件 
+                                 *  @param {number} [option.transition]  默认300, 滑动动画的过渡时长 
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                 *  @example
+                                 *
+                            
+                            
+                                    html:
+                            
+                                     &lt;div id=&quot;sidebarWrap&quot; class=&quot;wrap&quot;&gt;
+                                       &lt;div class=&quot;swipeleft&quot;&gt;往左滑动出现的内容&lt;/div&gt;
+                                       &lt;div class=&quot;bui-page&quot;&gt;滑动区域&lt;/div&gt;
+                                     &lt;/div&gt;
+                            
+                                    js:
+                                    var uiSwipe = bui.swipe({
+                                              id: &quot;#sidebarWrap&quot;,
+                                              handle: &quot;.bui-page&quot;,
+                                              movingDistance: 200,
+                                              direction: &quot;xy&quot;,
+                                          });
+                            
+                                 *
+                                 */
+                            
+                            
+                                ui.swipe = (function () {
+                                    // 缓存注册的方向控件
+                                    var touches = [],
+                                        // 当前激活的对象,只有hasChild为true才会在这里增加
+                                        activeUI = null,
+                                        $target = null;
+                            
+                                    return function (option) {
+                                        var config = {
+                                            id: &quot;&quot;,
+                                            uid: &quot;&quot;,
+                                            handle: &quot;.handle&quot;,
+                                            swiperight: &quot;.swiperight&quot;,
+                                            swipeleft: &quot;.swipeleft&quot;,
+                                            swipeup: &quot;.swipeup&quot;,
+                                            swipedown: &quot;.swipedown&quot;,
+                                            direction: &quot;x&quot;,
+                                            stopHandle: &quot;&quot;,
+                                            relative: true,
+                                            swipe: true,
+                                            hasChild: false,
+                                            handleMove: true,
+                                            targetMove: true,
+                                            alwaysTrigger: false,
+                                            stopPropagation: false,
+                                            width: 0,
+                                            height: 0,
+                                            movingDistance: 280,
+                                            initDistance: 0,
+                                            zoom: false,
+                                            autoClose: true,
+                                            distance: 40,
+                                            autoinit: true,
+                                            onBeforeTouchstart: null,
+                                            onBeforeTouchmove: null,
+                                            onBeforeTouchend: null,
+                                            onBeforeInit: null,
+                                            onInited: null,
+                                            transition: 300
+                                        };
+                            
+                                        //方法
+                                        var module = {
+                                            name: &quot;swipe&quot;,
+                                            handle: {},
+                                            targetEl: null,
+                                            active: active,
+                                            isActive: isOpen,
+                                            on: on,
+                                            off: off,
+                                            close: close,
+                                            open: open,
+                                            destroy: destroy,
+                                            lock: lock,
+                                            unlock: unlock,
+                                            init: init
+                                        };
+                            
+                                        //用于option方法的设置参数
+                                        var param = module.config = $.extend(true, {}, config, ui.config.swipe, option);
+                                        var $id,
+                                            el,
+                                            $menu,
+                                            $handle,
+                                            $parent,
+                                            touch = {}, //保存拖拽的坐标
+                                            menuWidth,
+                                            menuRemWidth,
+                                            // 注册的方向
+                                            direction = param.direction,
+                                            winWidth,
+                                            winHeight,
+                                            handlers = {},
+                                            $hasHandle,
+                                            $swipeLeft,
+                                            $swipeRight,
+                                            $swipeUp,
+                                            $swipeDown,
+                                            //自定义位移
+                                            hasLeftWidth,
+                                            hasRightWidth,
+                                            hasUpWidth,
+                                            hasDownWidth,
+                            
+                                            hasChild = param.hasChild,
+                                            movingDistance,
+                                            // 初始化状态
+                                            displayStatus = false,
+                                            canSwipeRight = false,
+                                            canSwipeLeft = false,
+                                            canSwipeUp = false,
+                                            canSwipeDown = false,
+                                            swipeLeftActive = false,
+                                            swipeRightActive = false,
+                                            swipeDownActive = false,
+                                            swipeUpActive = false,
+                                            handleMove = param.handleMove,
+                                            targetMove = param.targetMove,
+                                            hasEventInit = false,
+                                            openTarget = null,
+                                            openHandle = null,
+                                            isDestroy = false,
+                                            isActive = false;
+                                        //滑动兼容处理
+                                        var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion),
+                                            hasTouch = &#x27;ontouchstart&#x27; in window &amp;&amp; !isTouchPad,
+                                            lastY = 0,
+                                            lastX = 0,
+                                            isTouchstart = false, //解决PC一直触发mousemove事件
+                                            isTouchmove = false,
+                                            isTouchend = false,
+                                            touch = {
+                                                x1: 0,
+                                                x2: 0,
+                                                y1: 0,
+                                                y2: 0,
+                                                direction: &quot;&quot;,
+                                                deltax: 0,
+                                                movingleft: 0,
+                                                movingright: 0,
+                                                movingup: 0,
+                                                movingdown: 0,
+                                                scrollObj: null
+                                            },
+                                            firstDir = &#x27;&#x27;,
+                                            defaultDir = &#x27;&#x27;, // 默认打开的方向,关闭也要返回对应的
+                                            initDistance = param.initDistance,
+                                            doc = document,
+                                            docElement = doc.documentElement;
+                            
+                                        //初始化
+                                        //
+                                        param.autoinit &amp;&amp; init(param);
+                            
+                                        // 控件注册
+                                        function register(id, name) {
+                                            var index = ui.array.index(touches, id, &quot;id&quot;);
+                                            if (index &gt; -1) {
+                                                ui.showLog(id + &quot;被&quot; + touches[index][&quot;name&quot;] + &quot;重复注册&quot;, &quot;bui.swipe.register&quot;);
+                                                return false;
+                                            } else {
+                                                var obj = {};
+                                                obj.id = id;
+                                                obj.name = name;
+                                                touches.push(obj);
+                                                return true;
+                                            }
+                                        }
+                            
+                                        /**
+                                         * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                         *  @method init
+                                         *  @param {object} [option] 参数控件本身
+                                         *  @chainable
+                                         */
+                                        function init(opt) {
+                                            var option = $.extend(true, param, opt);
+                            
+                                            option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                                            isDestroy = false;
+                            
+                                            if (option.id) {
+                                                $id = ui.obj(option.id);
+                                            } else {
+                                                ui.showLog(&quot;swipe id不能为空&quot;, &quot;bui.swipe.init&quot;);
+                                                return;
+                                            }
+                            
+                                            // var canGoOn = register(option.id,&quot;swipe&quot;);
+                            
+                                            // if( !canGoOn ){
+                                            //   return;
+                                            // }
+                                            // 屏幕的宽度
+                                            winWidth = option.width &gt; 0 ? option.width : (option.relative ? $id.parent().width() : docElement.clientWidth);
+                                            winHeight = option.height &gt; 0 ? option.height : (option.relative ? $id.parent().height() : docElement.clientHeight);
+                            
+                                            // 没有子集的操作
+                                            $handle = $id.children(option.handle);
+                                            $parent = hasChild ? $id.children() : $id;
+                            
+                                            // 定位滑动的目标,要求是在操作的元素的腹肌
+                                            $swipeLeft = $parent.children(option.swipeleft);
+                                            $swipeRight = $parent.children(option.swiperight);
+                                            $swipeUp = $parent.children(option.swipeup);
+                                            $swipeDown = $parent.children(option.swipedown);
+                            
+                                            movingDistance = handleMovingDistance(option.movingDistance);
+                                            menuWidth = movingDistance;
+                            
+                                            // 检测滑动的方向
+                                            checkSwipeDirection();
+                            
+                                            if (!displayStatus) {
+                                                // 初始化位置
+                                                display(option);
+                            
+                                                displayStatus = true;
+                                            }
+                            
+                                            // 如果有激活,重新加载的时候,需要先关闭掉
+                                            activeUI &amp;&amp; activeUI.close();
+                            
+                                            if (!hasEventInit) {
+                                                lock();
+                                                //绑定拖拽事件
+                                                bind(option)
+                                            }
+                            
+                                            // 存储实例
+                                            option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                                uid: option.uid,
+                                                ui: module
+                                            })
+                            
+                                            option.onInited &amp;&amp; option.onInited.call(module, option);
+                                            return this;
+                                        }
+                            
+                                        function handleMovingDistance(val) {
+                                            let type = typeof (val);
+                                            let newval = 0;
+                            
+                                            switch (type) {
+                                                case &quot;number&quot;:
+                                                    newval = val;
+                                                    break;
+                                                case &quot;string&quot;:
+                                                default:
+                                                    if (val.indexOf(&quot;%&quot;) &gt; -1) {
+                                                        newval = winHeight * parseFloat(val) / 100;
+                                                    } else {
+                                                        newval = parseFloat(val);
+                                                    }
+                                                    break;
+                                            }
+                                            return newval;
+                                        }
+                            
+                                        //初始化显示的状态
+                                        function display(option) {
+                                            // 修复部分手机的宽度100%会导致横向滚动条
+                                            $parent.css({
+                                                &quot;width&quot;: winWidth,
+                                                // &quot;height&quot;: winHeight,
+                                                &quot;position&quot;: &quot;relative&quot;,
+                                                &quot;overflow&quot;: &quot;hidden&quot;
+                                            });
+                            
+                                            // 如果不是有多个的时候,默认父级高度等于屏幕高度
+                                            !hasChild &amp;&amp; $parent.css({
+                                                &quot;height&quot;: winHeight
+                                            });
+                            
+                                            $handle.css({
+                                                &quot;position&quot;: &quot;relative&quot;,
+                                                &quot;z-index&quot;: 12,
+                                                //&quot;height&quot;: winHeight
+                                            });
+                            
+                                            // 获取自定义movingDistance
+                            
+                                            try {
+                            
+                                                var hasLeftWidth = $swipeLeft.attr(&quot;data-moving&quot;) || movingDistance,
+                                                    hasRightWidth = $swipeRight.attr(&quot;data-moving&quot;) || movingDistance,
+                                                    hasUpWidth = $swipeUp.attr(&quot;data-moving&quot;) || movingDistance,
+                                                    hasDownWidth = $swipeDown.attr(&quot;data-moving&quot;) || movingDistance,
+                            
+                                                    hasLeftRemWidth = getRemWidth(hasLeftWidth),
+                                                    hasRightRemWidth = getRemWidth(hasRightWidth),
+                                                    hasUpRemWidth = getRemWidth(hasUpWidth),
+                                                    hasDownRemWidth = getRemWidth(hasDownWidth);
+                            
+                                                canSwipeLeft &amp;&amp; $swipeLeft.css({
+                                                    &quot;width&quot;: hasLeftRemWidth
+                                                });
+                                                canSwipeRight &amp;&amp; $swipeRight.css({
+                                                    &quot;width&quot;: hasRightRemWidth
+                                                });
+                                                canSwipeDown &amp;&amp; $swipeDown.css({
+                                                    &quot;height&quot;: hasDownRemWidth
+                                                });
+                                                canSwipeUp &amp;&amp; $swipeUp.css({
+                                                    &quot;height&quot;: hasUpRemWidth
+                                                });
+                            
+                                            } catch (e) { }
+                            
+                                        }
+                            
+                                        // 获取缩放后的值
+                                        function getRemWidth(num) {
+                                            var val = param.zoom ? num / 100 + &#x27;rem&#x27; : num + &#x27;px&#x27;;
+                            
+                                            return val;
+                                        }
+                            
+                                        // 检测是否能够滑动
+                                        function checkSwipeDirection() {
+                            
+                                            // 能否右滑
+                                            if (direction == &quot;x&quot;) {
+                                                canSwipeRight = !!$swipeRight.length;
+                                                // 能否左滑
+                                                canSwipeLeft = !!$swipeLeft.length;
+                                            } else if (direction == &quot;y&quot;) {
+                                                // 能否下滑
+                                                canSwipeDown = !!$swipeDown.length;
+                                                // 能否上滑
+                                                canSwipeUp = !!$swipeUp.length;
+                                            } else if (direction == &quot;xy&quot;) {
+                            
+                                                // 全部方向
+                                                canSwipeDown = !!$swipeDown.length;
+                                                canSwipeUp = !!$swipeUp.length;
+                                                canSwipeLeft = !!$swipeLeft.length;
+                                                canSwipeRight = !!$swipeRight.length;
+                            
+                                            }
+                            
+                                        }
+                                        var displayIndexs = [];
+                                        var targetScrollTop = 0;
+                                        var scrollTopNum = 0;
+                                        var scrollHeight = 0;
+                            
+                                        function onstart(e) {
+                                            isTouchstart = true;
+                                            var targetTouches = e.touches ? e.touches[0] : e;
+                            
+                                            //当屏幕有多个touch或者页面被缩放过，就不执行move操作
+                                            if (e.touches &amp;&amp; e.touches.length &gt; 1 || e.scale &amp;&amp; e.scale !== 1) {
+                                                isTouchstart = false;
+                                                return;
+                                            }
+                                            // 排除掉某个样式
+                            
+                                            if (param.stopHandle &amp;&amp; ui.unit.checkTargetInclude(e.target, param.stopHandle)) {
+                                                isTouchstart = false;
+                                                return;
+                                            }
+                                            touch.id = param.id;
+                                            touch.x1 = targetTouches.clientX;
+                                            touch.y1 = targetTouches.clientY;
+                                            touch.direction = &quot;&quot;,
+                                                $hasHandle = $(e.target).closest(param.handle);
+                                            var canTouchNext = param.onBeforeTouchstart &amp;&amp; param.onBeforeTouchstart.call(module, e, touch);
+                                            if (canTouchNext === false) {
+                                                return false;
+                                            }
+                                            // 触发touchstart
+                                            trigger.call(module, &quot;touchstart&quot;, e, touch);
+                            
+                                            // bui-scroll
+                                            var $scrollObj = $(e.target).closest(&quot;.bui-scroll&quot;);
+                                            // bui-main-tab ul li
+                                            var $tabScrollObj = $(e.target).closest(&quot;.bui-tab-main li.active&quot;);
+                                            // .bui-page main
+                                            var $mainScrollObj = $(e.target).closest(&quot;main&quot;);
+                                            var $swipedownScrollObj = $(e.target).closest(&quot;.swipedown&quot;);
+                                            var $swipeupScrollObj = $(e.target).closest(&quot;.swipeup&quot;);
+                            
+                                            // 三个并列区域
+                                            var $area = $swipedownScrollObj.length ? $swipedownScrollObj :
+                                                $swipeupScrollObj.length ? $swipeupScrollObj : $hasHandle;
+                            
+                                            // 拖拽的区域是否有滚动条
+                                            touch.scrollObj = $scrollObj.length ? $scrollObj :
+                                                $tabScrollObj.length ? $tabScrollObj :
+                                                    $mainScrollObj.length ? $mainScrollObj :
+                                                        $swipedownScrollObj.length ? $swipedownScrollObj : $area;
+                            
+                                            scrollTopNum = touch.scrollObj.scrollTop() || 0;
+                            
+                                            // 针对有多个handle的情况 listview
+                                            if (hasChild &amp;&amp; !isActive) {
+                                                $handle = $hasHandle;
+                                                $parent = $handle.parent();
+                            
+                                                // 定位滑动的目标,要求是在操作的元素的腹肌
+                                                $swipeLeft = $parent.children(param.swipeleft);
+                                                $swipeRight = $parent.children(param.swiperight);
+                                                $swipeUp = $parent.children(param.swipeup);
+                                                $swipeDown = $parent.children(param.swipedown);
+                            
+                                                // 检测是否能够滑动
+                                                checkSwipeDirection();
+                            
+                                                // 重新初始化位置一次
+                                                var index = $parent.index();
+                                                // 如果缓存,会导致下次初始化可能反而出现问题,所以这里每次都重新操作
+                                                // if( !displayIndexs[index] ){
+                                                // 重新初始化位置
+                                                display(param);
+                            
+                                                // 在没有给li或者传height的时候,动态设置每行的高度,动态设置高度会导致按下去的时候有轻微跳动
+                                                (param.height == 0 || $parent[0].style.height == &quot;&quot;) &amp;&amp; $parent.height($hasHandle[0] &amp;&amp; $hasHandle[0].offsetHeight);
+                            
+                                                // displayIndexs[index] = true;
+                                                // }
+                            
+                                            }
+                            
+                                            // 缓存自定义的位移记录传给move;
+                                            touch.movingleft = parseInt($swipeLeft.attr(&quot;data-moving&quot;) || movingDistance);
+                                            touch.movingright = parseInt($swipeRight.attr(&quot;data-moving&quot;) || movingDistance);
+                                            touch.movingup = parseInt($swipeUp.attr(&quot;data-moving&quot;) || movingDistance);
+                                            touch.movingdown = parseInt($swipeDown.attr(&quot;data-moving&quot;) || movingDistance);
+                            
+                                            // 能否下一步
+                                            if ($hasHandle.length) {
+                                                var next = false;
+                                                switch (direction) {
+                                                    case &quot;x&quot;:
+                                                        next = canSwipeLeft || canSwipeRight ? true : false;
+                                                        break;
+                                                    case &quot;y&quot;:
+                                                        next = canSwipeUp || canSwipeDown ? true : false;
+                                                        break;
+                                                    case &quot;xy&quot;:
+                                                        next = canSwipeLeft || canSwipeRight || canSwipeUp || canSwipeDown ? true : false;
+                                                        break;
+                                                }
+                                            }
+                            
+                            
+                                            //每个回调可以控制返回是否继续下一步操作, 返回false则无法继续下一步
+                                            isTouchstart = (next == undefined || next == true) ? true : false;
+                            
+                                        }
+                            
+                                        function onmove(e) {
+                                            if (!isTouchstart) {
+                                                return;
+                                            }
+                                            isTouchmove = true;
+                            
+                                            var targetTouches = e.touches ? e.touches[0] : e;
+                            
+                                            //当屏幕有多个touch或者页面被缩放过，就不执行move操作
+                                            if (e.touches &amp;&amp; e.touches.length &gt; 1 || e.scale &amp;&amp; e.scale !== 1) {
+                            
+                                                swipeActiveClose();
+                            
+                                                return;
+                                            }
+                                            touch.x2 = targetTouches.clientX;
+                                            touch.y2 = targetTouches.clientY;
+                                            var canTouchNext = param.onBeforeTouchmove &amp;&amp; param.onBeforeTouchmove.call(module, e, touch);
+                                            if (canTouchNext === false) {
+                                                return false;
+                                            }
+                                            trigger.call(module, &quot;touchmove&quot;, e, touch);
+                            
+                                            // 如果swipe 的 child 激活,不要触发父层的其它swipe
+                                            activeUI &amp;&amp; e.stopPropagation();
+                            
+                                            var isTop = touch.scrollObj.scrollTop() &lt;= 0,
+                                                isBottom = (touch.scrollObj[0] &amp;&amp; touch.scrollObj[0].scrollHeight) - (touch.scrollObj[0] &amp;&amp; touch.scrollObj[0].offsetHeight) - touch.scrollObj.scrollTop() &lt;= 2,
+                                                pulldown = (touch.y2 - touch.y1) &gt; 0,
+                                                pullup = (touch.y2 - touch.y1) &lt; 0;
+                            
+                                            // 如果顶部底部处于激活状态
+                                            // 顶部打开
+                                            if (swipeDownActive) {
+                                                // 在顶部的时候,不允许查看内核
+                                                if (pulldown &amp;&amp; isTop) {
+                                                    isTouchmove = false;
+                                                    // 阻止微信下拉看内核
+                                                    e.preventDefault();
+                                                    return;
+                                                }
+                                                // 到底部的时候可以触发关闭
+                                                if (pullup &amp;&amp; isBottom) {
+                                                    // 阻止滚动条
+                                                    e.preventDefault();
+                                                }
+                                                // 正在滚动
+                                                if (pullup &amp;&amp; !isBottom) {
+                                                    isTouchmove = false;
+                                                    return;
+                                                }
+                                                if (pulldown &amp;&amp; !isTop) {
+                                                    isTouchmove = false;
+                                                    return;
+                                                }
+                                            }
+                            
+                                            // 顶部有并且关闭状态,操作的是handle
+                                            if (canSwipeDown &amp;&amp; !swipeDownActive) {
+                                                // 打开顶部并阻止滚动条
+                                                if (pulldown &amp;&amp; isTop) {
+                                                    e.preventDefault();
+                                                }
+                                                // 打开底部并阻止滚动条
+                                                if (pullup &amp;&amp; isBottom) {
+                                                    e.preventDefault();
+                                                }
+                                            }
+                                            // 没有顶部的时候,下拉并且在顶部的时候,不能看
+                                            if (!canSwipeDown &amp;&amp; pulldown &amp;&amp; isTop) {
+                                                // 阻止微信下拉看内核
+                                                e.preventDefault();
+                                            }
+                            
+                                            // 底部激活的时候
+                                            if (swipeUpActive) {
+                                                // 阻止滚动,触发关闭底部
+                                                if (pulldown &amp;&amp; isTop) {
+                                                    e.preventDefault();
+                                                }
+                                                // 滚动到底部的时候,什么都不处理
+                                                if (pullup &amp;&amp; isBottom) {
+                                                    // 阻止滚动条
+                                                    e.preventDefault();
+                                                    isTouchmove = false;
+                                                    return;
+                                                }
+                                                // 底部在滚动
+                                                if (pullup &amp;&amp; !isBottom) {
+                                                    isTouchmove = false;
+                                                    // 阻止滚动条
+                                                    return;
+                                                }
+                                                if (pulldown &amp;&amp; !isTop) {
+                                                    isTouchmove = false;
+                                                    // 阻止滚动条
+                                                    return;
+                                                }
+                                            }
+                            
+                                            //第一次下拉的方向
+                                            if (!touch.direction) {
+                                                //方向
+                                                touch.direction = ui.swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2);
+                                            }
+                            
+                            
+                                            //阻止默认事件,除了滚动条,解决红米不触发end问题,也可以解决低端手机滑动过程感觉卡顿问题
+                                            if (touch.direction === &quot;swipeleft&quot; || touch.direction === &quot;swiperight&quot;) {
+                            
+                                                // ui.platform.isPC() &amp;&amp; e.stopPropagation();
+                                                e.preventDefault();
+                                            }
+                            
+                                            try {
+                                                if (touch.direction === &quot;swipeup&quot; || touch.direction === &quot;swipedown&quot;) {
+                                                    var idScrollTop = $id[0].scrollTop || 0,
+                                                        idScrollHeight = $id[0].scrollHeight || 0,
+                                                        handleScrollTop = $hasHandle[0].scrollTop || 0,
+                                                        handleScrollHeight = $hasHandle[0].scrollHeight || 0,
+                                                        targetScrollTop = touch.scrollObj[0] &amp;&amp; touch.scrollObj[0].scrollTop || 0,
+                                                        targetHeight = touch.scrollObj[0] &amp;&amp; touch.scrollObj[0].offsetHeight || 0,
+                                                        targetScrollHeight = touch.scrollObj[0] &amp;&amp; touch.scrollObj[0].scrollHeight || 0,
+                            
+                                                        canSwipeDownWithScroll = false,
+                                                        canSwipeUpWithScroll = false;
+                            
+                                                    if (idScrollTop &lt;= 0 &amp;&amp; targetScrollTop &lt;= 0) {
+                                                        canSwipeDownWithScroll = true;
+                                                    }
+                            
+                                                    // 2 为误差值
+                                                    if ((targetScrollHeight - targetScrollTop - targetHeight) &lt;= 2) {
+                                                        canSwipeUpWithScroll = true;
+                                                    }
+                            
+                                                }
+                                            } catch (e) { }
+                            
+                                            var deltaX = (touch.direction == &quot;swiperight&quot; || touch.direction == &quot;swipeleft&quot;) ? touch.x2 - touch.x1 : touch.y2 - touch.y1;
+                                            var targetDeltax = 0;
+                                            touch.deltax = isActive ? Math.abs(deltaX) : Math.abs(deltaX) + initDistance;
+                            
+                                            // 打开 swiperight &amp;&amp; swipedown 一样的计算方式 swipeleft &amp;&amp; swipeup 一样的计算方式
+                                            if (canSwipeRight &amp;&amp; touch.direction == &quot;swiperight&quot; &amp;&amp; !swipeRightActive &amp;&amp; !isActive &amp;&amp; !$target) {
+                                                // -&gt; swiperight 打开
+                                                menuWidth = touch.movingright;
+                                                // 负数 -&gt; 0 的转变
+                                                targetDeltax = movingNegativeToZero(touch, touch.movingright);
+                                                // 负数 -&gt; 0
+                                                targetMove &amp;&amp; move(targetDeltax, 0, &quot;none&quot;, $swipeRight);
+                                                // 0 -&gt; 正数
+                                                handleMove &amp;&amp; move(touch.deltax, 0, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingright&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                                                e.stopPropagation();
+                                            } else if (canSwipeDownWithScroll &amp;&amp; canSwipeDown &amp;&amp; touch.direction == &quot;swipedown&quot; &amp;&amp; !swipeDownActive &amp;&amp; !isActive &amp;&amp; !$target) {
+                                                // -&gt; swipedown 打开
+                                                menuWidth = touch.movingdown;
+                                                //
+                                                // 负数 -&gt; 0 的转变
+                                                targetDeltax = movingNegativeToZero(touch, touch.movingdown);
+                                                // 负数 -&gt; 0
+                                                targetMove &amp;&amp; move(0, targetDeltax, &quot;none&quot;, $swipeDown);
+                                                // 0 -&gt; 正数
+                                                handleMove &amp;&amp; move(0, touch.deltax, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingdown&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                            
+                                                e.preventDefault();
+                            
+                                                e.stopPropagation();
+                                            } else if (canSwipeLeft &amp;&amp; touch.direction == &quot;swipeleft&quot; &amp;&amp; !swipeLeftActive &amp;&amp; !isActive &amp;&amp; !$target) {
+                                                // -&gt; swipeleft 打开
+                                                menuWidth = touch.movingleft;
+                            
+                                                // 正数 -&gt; 0 的转变
+                                                targetDeltax = movingPlusToZero(touch, touch.movingleft);
+                                                // 正数 -&gt; 0
+                                                targetMove &amp;&amp; move(targetDeltax, 0, &quot;none&quot;, $swipeLeft);
+                                                // 0 -&gt; 负数
+                                                handleMove &amp;&amp; move(-touch.deltax, 0, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingleft&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                                                e.stopPropagation();
+                                            } else if (canSwipeUpWithScroll &amp;&amp; canSwipeUp &amp;&amp; touch.direction == &quot;swipeup&quot; &amp;&amp; !swipeUpActive &amp;&amp; !isActive &amp;&amp; !$target) {
+                                                // -&gt; swipeup 打开
+                                                menuWidth = touch.movingup;
+                            
+                                                // 正数 -&gt; 0 的转变
+                                                targetDeltax = movingPlusToZero(touch, touch.movingup);
+                                                // 正数 -&gt; 0
+                                                targetMove &amp;&amp; move(0, targetDeltax, &quot;none&quot;, $swipeUp);
+                                                // 0 -&gt; 负数
+                                                handleMove &amp;&amp; move(0, -touch.deltax, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingup&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                            
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                            } else if (touch.direction == &quot;swipeleft&quot; &amp;&amp; swipeRightActive) {
+                                                // swipeleft &lt;- 关闭
+                                                menuWidth = touch.movingright;
+                                                // 负数 -&gt; 0 的转变
+                                                targetDeltax = movingNegativeToZero(touch, touch.movingright);
+                                                // 0 -&gt; 负数 的转变
+                                                targetMove &amp;&amp; move(-touch.deltax, 0, &quot;none&quot;, $target || $swipeRight);
+                                                // 正数 -&gt; 0 的转变
+                                                handleMove &amp;&amp; move(-targetDeltax, 0, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingleft&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                                                e.stopPropagation();
+                                            } else if (touch.direction == &quot;swipeup&quot; &amp;&amp; swipeDownActive) {
+                                                // swipeup &lt;- 关闭
+                                                menuWidth = touch.movingdown;
+                                                // 负数 -&gt; 0 的转变
+                                                targetDeltax = movingNegativeToZero(touch, touch.movingdown);
+                                                // 0 -&gt; 负数 的转变
+                                                targetMove &amp;&amp; move(0, -touch.deltax, &quot;none&quot;, $target || $swipeDown);
+                                                // 正数 -&gt; 0 的转变
+                                                handleMove &amp;&amp; move(0, -targetDeltax, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingup&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                                                e.preventDefault();
+                            
+                                                e.stopPropagation();
+                                            } else if (touch.direction == &quot;swiperight&quot; &amp;&amp; swipeLeftActive) {
+                                                // swiperight &lt;- 关闭
+                            
+                                                menuWidth = touch.movingleft;
+                                                // 负数 -&gt; 0 的转变
+                                                targetDeltax = movingNegativeToZero(touch, touch.movingleft);
+                            
+                                                targetMove &amp;&amp; move(touch.deltax, 0, &quot;none&quot;, $target || $swipeLeft);
+                                                handleMove &amp;&amp; move(targetDeltax, 0, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingright&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                                                e.stopPropagation();
+                                            } else if (touch.direction == &quot;swipedown&quot; &amp;&amp; swipeUpActive) {
+                                                // swipedown &lt;- 关闭
+                                                menuWidth = touch.movingup;
+                                                // 负数 -&gt; 0 的转变
+                                                targetDeltax = movingNegativeToZero(touch, touch.movingup);
+                            
+                                                targetMove &amp;&amp; move(0, touch.deltax, &quot;none&quot;, $target || $swipeUp);
+                                                handleMove &amp;&amp; move(0, targetDeltax, &quot;none&quot;, $handle);
+                            
+                                                trigger.call(module, &quot;movingdown&quot;, e, touch);
+                            
+                                                isTouchmove = true;
+                            
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                            }
+                            
+                                        }
+                            
+                                        function onend(e) {
+                                            isTouchstart = false;
+                                            isTouchend = true;
+                                            trigger.call(module, &quot;touchend&quot;, e, touch);
+                                            var canTouchNext = param.onBeforeTouchend &amp;&amp; param.onBeforeTouchend.call(module, e, touch);
+                                            if (canTouchNext === false) {
+                                                return false;
+                                            }
+                                            if (!isTouchmove) {
+                                                return;
+                                            }
+                                            var closeDir = &quot;&quot;;
+                                            var isSwipeleft = false;
+                                            var isSwiperight = false;
+                                            var isSwipeup = false;
+                                            var isSwipedown = false;
+                                            switch (touch.direction) {
+                                                case &quot;swiperight&quot;:
+                                                    closeDir = &quot;swipeleft&quot;;
+                                                    isSwiperight = true;
+                                                    break;
+                                                case &quot;swipeleft&quot;:
+                                                    closeDir = &quot;swiperight&quot;;
+                                                    isSwipeleft = true;
+                                                    break;
+                                                case &quot;swipeup&quot;:
+                                                    closeDir = &quot;swipedown&quot;;
+                                                    isSwipeup = true;
+                                                    break;
+                                                case &quot;swipedown&quot;:
+                                                    closeDir = &quot;swipeup&quot;;
+                                                    isSwipedown = true;
+                                                    break;
+                                            }
+                                            // var moveX = (direction == &quot;x&quot; ) ? Math.abs(touch.x2-touch.x1) : Math.abs(touch.y2-touch.y1);
+                                            var moveX = (isSwiperight || isSwipeleft) ? Math.abs(touch.x2 - touch.x1) : Math.abs(touch.y2 - touch.y1);
+                            
+                            
+                                            if (canSwipeRight &amp;&amp; isSwiperight &amp;&amp; moveX &gt; param.distance &amp;&amp; !swipeRightActive &amp;&amp; !isActive) {
+                                                // console.log(&quot;swiperight&quot;)
+                                                swipeRightOpen();
+                                                trigger.call(module, touch.direction, e, touch);
+                                                trigger.call(module, &quot;open&quot;, touch.direction);
+                            
+                                            } else if (canSwipeLeft &amp;&amp; isSwipeleft &amp;&amp; moveX &gt; param.distance &amp;&amp; !swipeLeftActive &amp;&amp; !isActive) {
+                                                // console.log(&quot;swipeleft&quot;)
+                                                swipeLeftOpen();
+                                                trigger.call(module, touch.direction, e, touch);
+                                                trigger.call(module, &quot;open&quot;, touch.direction);
+                            
+                                            } else if (canSwipeUp &amp;&amp; isSwipeup &amp;&amp; moveX &gt; param.distance &amp;&amp; !swipeUpActive &amp;&amp; !isActive) {
+                                                // console.log(&quot;swipeup&quot;)
+                                                swipeUpOpen();
+                                                trigger.call(module, touch.direction, e, touch);
+                                                trigger.call(module, &quot;open&quot;, touch.direction);
+                            
+                                            } else if (canSwipeDown &amp;&amp; isSwipedown &amp;&amp; moveX &gt; param.distance &amp;&amp; !swipeDownActive &amp;&amp; !isActive) {
+                                                // console.log(&quot;swipedown&quot;)
+                                                swipeDownOpen();
+                                                trigger.call(module, touch.direction, e, touch);
+                                                trigger.call(module, &quot;open&quot;, touch.direction);
+                            
+                                            } else if (isActive &amp;&amp; moveX &lt; param.distance) {
+                                                canSwipeLeft &amp;&amp; swipeLeftActive &amp;&amp; swipeLeftOpen();
+                                                canSwipeRight &amp;&amp; swipeRightActive &amp;&amp; swipeRightOpen();
+                                                canSwipeUp &amp;&amp; swipeUpActive &amp;&amp; swipeUpOpen();
+                                                canSwipeDown &amp;&amp; swipeDownActive &amp;&amp; swipeDownOpen();
+                            
+                                                trigger.call(module, touch.direction, e, touch);
+                                                param.alwaysTrigger &amp;&amp; trigger.call(module, &quot;open&quot;, touch.direction);
+                            
+                                            } else if (isActive &amp;&amp; moveX &gt; param.distance) {
+                                                // 这里侧滑栏的滚动条操作会导致关闭,需要加stopHandle.
+                                                var canCloseLeft = canSwipeLeft &amp;&amp; swipeLeftActive &amp;&amp; isSwiperight;
+                                                var canCloseRight = canSwipeRight &amp;&amp; swipeRightActive &amp;&amp; isSwipeleft;
+                                                var canCloseUp = canSwipeUp &amp;&amp; swipeUpActive &amp;&amp; isSwipedown;
+                                                var canCloseDown = canSwipeDown &amp;&amp; swipeDownActive &amp;&amp; isSwipeup;
+                                                canCloseLeft &amp;&amp; swipeLeftClose();
+                                                canCloseRight &amp;&amp; swipeRightClose();
+                                                canCloseUp &amp;&amp; swipeUpClose();
+                                                canCloseDown &amp;&amp; swipeDownClose();
+                            
+                                                trigger.call(module, touch.direction, e, touch);
+                                                // 只要能关闭,就触发close事件
+                                                (canCloseLeft || canCloseRight || canCloseUp || canCloseDown) &amp;&amp; trigger.call(module, &quot;close&quot;, closeDir);
+                            
+                                            } else if (!isActive &amp;&amp; moveX &lt; param.distance) {
+                            
+                                                isSwipeleft &amp;&amp; canSwipeLeft &amp;&amp; !swipeLeftActive &amp;&amp; swipeLeftClose();
+                                                isSwiperight &amp;&amp; canSwipeRight &amp;&amp; !swipeRightActive &amp;&amp; swipeRightClose();
+                                                isSwipeup &amp;&amp; canSwipeUp &amp;&amp; !swipeUpActive &amp;&amp; swipeUpClose();
+                                                isSwipedown &amp;&amp; canSwipeDown &amp;&amp; !swipeDownActive &amp;&amp; swipeDownClose();
+                            
+                            
+                                                param.alwaysTrigger &amp;&amp; trigger.call(module, &quot;close&quot;, closeDir);
+                                                trigger.call(module, touch.direction, e, touch);
+                                            }
+                            
+                                            // 默认打开的方向
+                                            defaultDir = touch.direction;
+                            
+                                            isTouchstart = false;
+                                            // 解决PC的事件冒泡问题,导致listview滑动出来后会被关闭
+                                            !ui.platform.isPC() &amp;&amp; (isTouchmove = false);
+                                            // 阻止冒泡会导致移动端的list_listview例子无法正常下拉刷新
+                                            // ui.platform.isPC() &amp;&amp; (touch.direction === &quot;swipeleft&quot; || touch.direction === &quot;swiperight&quot; || touch.direction === &quot;swipeup&quot;) &amp;&amp; e.stopPropagation();
+                                            // 解决pc滑动事件触发点击事件, 这个参数开启,会导致下拉刷新跟listview的结合后,无法下拉
+                                            param.stopPropagation &amp;&amp; e.stopPropagation();
+                                        }
+                            
+                                        // 负数 -&gt; 0 的转变
+                                        function movingNegativeToZero(touch, distance) {
+                                            var targetDeltax = -distance + touch.deltax;
+                                            targetDeltax = targetDeltax &gt; 0 ? 0 : targetDeltax;
+                            
+                                            return targetDeltax;
+                                        }
+                                        // 正数 -&gt; 0 的转变
+                                        function movingPlusToZero(touch, distance) {
+                                            var targetDeltax = distance - touch.deltax;
+                                            targetDeltax = targetDeltax &gt; distance ? distance : targetDeltax;
+                            
+                                            return targetDeltax;
+                                        }
+                            
+                                        // 右边菜单,左滑出来
+                                        function swipeLeftOpen(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            opt.target = opt.target || $swipeLeft;
+                                            opt.handle = opt.handle || $handle;
+                            
+                                            // 先关闭
+                                            activeUI &amp;&amp; activeUI.close();
+                            
+                                            // 再设置当前激活状态
+                                            isActive = true;
+                                            swipeLeftActive = true;
+                            
+                                            // pc 会导致listview 滑动无法触发
+                                            if (hasChild) {
+                                                module.targetEl = $swipeLeft[0];
+                                                activeUI = module;
+                                                $target = $swipeLeft;
+                            
+                                                // 绑定页面点击执行关闭,会导致pc触发
+                                                docElement.addEventListener(&quot;click&quot;, handleClose, true);
+                                            }
+                            
+                                            targetMove &amp;&amp; move(0, 0, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(-menuWidth, 0, opt.transition, opt.handle);
+                            
+                                        }
+                                        // 左边菜单,右滑出来
+                                        function swipeRightOpen(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            opt.target = opt.target || $swipeRight;
+                                            opt.handle = opt.handle || $handle;
+                            
+                                            activeUI &amp;&amp; activeUI.close();
+                                            isActive = true;
+                                            swipeRightActive = true;
+                            
+                                            if (hasChild) {
+                                                module.targetEl = $swipeRight[0];
+                            
+                                                activeUI = module;
+                                                $target = $swipeRight;
+                            
+                                                // 所有事件先关闭一次
+                                                docElement.addEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                            
+                                            targetMove &amp;&amp; move(0, 0, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(menuWidth, 0, opt.transition, opt.handle);
+                            
+                                        }
+                            
+                                        function swipeUpOpen(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            opt.target = opt.target || $swipeUp;
+                                            opt.handle = opt.handle || $handle;
+                                            activeUI &amp;&amp; activeUI.close();
+                                            isActive = true;
+                                            swipeUpActive = true;
+                            
+                                            if (hasChild) {
+                                                module.targetEl = $swipeUp[0];
+                                                activeUI = module;
+                                                $target = $swipeUp;
+                            
+                                                // 所有事件先关闭一次
+                                                docElement.addEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                            
+                                            targetMove &amp;&amp; move(0, 0, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(0, -menuWidth, opt.transition, opt.handle);
+                            
+                                        }
+                                        // 左边菜单,右滑出来
+                                        function swipeDownOpen(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            opt.target = opt.target || $swipeDown;
+                                            opt.handle = opt.handle || $handle;
+                                            activeUI &amp;&amp; activeUI.close();
+                                            isActive = true;
+                                            swipeDownActive = true;
+                            
+                                            if (hasChild) {
+                                                module.targetEl = $swipeDown[0];
+                            
+                                                activeUI = module;
+                                                $target = $swipeDown;
+                            
+                                                // 所有事件先关闭一次
+                                                docElement.addEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                            
+                                            targetMove &amp;&amp; move(0, 0, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(0, menuWidth, opt.transition, opt.handle);
+                            
+                                        }
+                                        // 右边边菜单,右滑关闭
+                                        function swipeRightClose(opt) {
+                            
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            // opt.target = openTarget || $swipeRight;
+                                            opt.target = $swipeRight;
+                                            opt.handle = openHandle || $handle;
+                            
+                                            isActive = false;
+                                            swipeRightActive = false;
+                            
+                            
+                                            if (hasChild) {
+                                                activeUI = null;
+                                                $target = null;
+                                                openTarget = null;
+                                                openHandle = null;
+                                                // 所有事件先关闭一次
+                                                docElement.removeEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                                            // 加了1个像素修正
+                                            targetMove &amp;&amp; move(-(menuWidth + 1), 0, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(initDistance, 0, opt.transition, opt.handle);
+                            
+                            
+                                        }
+                                        // 左边菜单,左滑关闭
+                                        function swipeLeftClose(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            // 通过open 方法打开的对象或者通过滑动打开
+                                            // opt.target = openTarget || $swipeLeft;
+                                            opt.target = $swipeLeft;
+                                            opt.handle = openHandle || $handle;
+                            
+                                            isActive = false;
+                                            swipeLeftActive = false;
+                                            if (hasChild) {
+                                                activeUI = null;
+                                                $target = null;
+                            
+                                                openTarget = null;
+                                                openHandle = null;
+                                                // 所有事件先关闭一次
+                                                docElement.removeEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                            
+                                            // 菜单在右边如果是以rem单位,100%会导致能看到小小误差
+                                            targetMove &amp;&amp; move(&quot;101%&quot;, 0, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(-initDistance, 0, opt.transition, opt.handle);
+                                        }
+                                        // 右边边菜单,右滑关闭
+                                        function swipeUpClose(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            // opt.target = openTarget || $swipeUp;
+                                            opt.target = $swipeUp;
+                                            opt.handle = openHandle || $handle;
+                            
+                                            isActive = false;
+                                            swipeUpActive = false;
+                                            if (hasChild) {
+                                                activeUI = null;
+                                                $target = null;
+                                                openTarget = null;
+                                                openHandle = null;
+                                                // 所有事件先关闭一次
+                                                docElement.removeEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                            
+                                            targetMove &amp;&amp; move(0, &quot;100%&quot;, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(0, -initDistance, opt.transition, opt.handle);
+                                        }
+                                        // 左边菜单,左滑关闭
+                                        function swipeDownClose(opt) {
+                                            opt = opt || {};
+                                            opt.transition = opt.transition || param.transition;
+                                            // opt.target = openTarget || $swipeDown;
+                                            opt.target = $swipeDown;
+                                            opt.handle = openHandle || $handle;
+                            
+                                            isActive = false;
+                                            swipeDownActive = false;
+                                            if (hasChild) {
+                                                activeUI = null;
+                                                $target = null;
+                                                openTarget = null;
+                                                openHandle = null;
+                                                // 所有事件先关闭一次
+                                                docElement.removeEventListener(&quot;click&quot;, handleClose, true);
+                            
+                                            }
+                                            targetMove &amp;&amp; move(0, -menuWidth, opt.transition, opt.target);
+                                            handleMove &amp;&amp; move(0, initDistance, opt.transition, opt.handle);
+                                        }
+                            
+                                        // 不符合条件时全部还原
+                                        function swipeClose() {
+                            
+                                            swipeRightClose();
+                                            swipeLeftClose();
+                                            swipeDownClose();
+                                            swipeUpClose();
+                            
+                                            module.targetEl = null;
+                            
+                                            trigger.call(module, &quot;close&quot;, defaultDir);
+                            
+                                        }
+                            
+                                        // 激活时才还原
+                                        function swipeActiveClose() {
+                                            swipeRightActive &amp;&amp; swipeRightClose();
+                                            swipeLeftActive &amp;&amp; swipeLeftClose();
+                                            swipeDownActive &amp;&amp; swipeDownClose();
+                                            swipeUpActive &amp;&amp; swipeUpClose();
+                            
+                                            trigger.call(module, &quot;close&quot;, defaultDir);
+                                        }
+                                        /**
+                                          * 关闭侧滑栏
+                                          *  @method close
+                                          *  @chainable
+                                          *  @example
+                            
+                                             //关闭所有侧滑
+                                             uiSwipe.close();
+                            
+                                          */
+                                        function close() {
+                                            if (isDestroy) {
+                                                return;
+                                            }
+                                            swipeActiveClose();
+                            
+                                            return this;
+                                        }
+                                        /**
+                                          * 打开侧滑
+                                          *  @method open
+                                          *  @param {object} option
+                                          *  @param {string} [option.target] 打开侧滑的方向, 默认: &quot;swiperight&quot;(在左边的菜单) | &quot;swipeleft&quot;(在右边的菜单) | &quot;swipeup&quot;(在下边的菜单) | &quot;swipedown&quot;(在上边的菜单)
+                                          *  @param {string} [option.index] 打开第几个侧滑 
+                                          *  @param {string} [option.transition] 打开是否需要动画, 默认 300 毫秒, 不需要动画则设置为 &quot;none&quot; 
+                                          *  @chainable
+                                          *  @example
+                            
+                                             //显示菜单
+                                             uiSwipe.open();
+                            
+                                             uiSwipe.open({
+                                               &quot;target&quot;:&quot;swipedown&quot;,
+                                               &quot;transition&quot;: &quot;none&quot;
+                                             });
+                            
+                            
+                                          */
+                                        function open(opt) {
+                                            if (isDestroy) {
+                                                return;
+                                            }
+                                            var option = opt || {};
+                                            option.transition = option.transition || param.transition;
+                                            // target 的index
+                                            option.index = option.index || 0;
+                                            var dir = option.target,
+                                                // handle 的index 根据是否存在target 而来
+                                                index;
+                            
+                                            defaultDir = dir;
+                            
+                                            switch (dir) {
+                                                case &quot;swiperight&quot;:
+                                                    option.target = $swipeRight.eq(option.index);
+                                                    index = option.target.parent().index();
+                                                    option.handle = (hasChild ? $id.children().eq(index).children(param.handle) : $handle);
+                            
+                                                    // 通过调用打开方法的对象,关闭的时候需要用
+                                                    openHandle = option.handle;
+                                                    openTarget = option.target;
+                            
+                                                    menuWidth = $swipeRight.attr(&quot;data-moving&quot;) || movingDistance;
+                                                    canSwipeRight &amp;&amp; swipeRightOpen(option);
+                            
+                                                    break;
+                                                case &quot;swipeleft&quot;:
+                                                    option.target = $swipeLeft.eq(option.index);
+                                                    index = option.target.parent().index();
+                                                    option.handle = (hasChild ? $id.children().eq(index).children(param.handle) : $handle);
+                                                    openHandle = option.handle;
+                            
+                                                    openTarget = option.target;
+                                                    menuWidth = $swipeLeft.attr(&quot;data-moving&quot;) || movingDistance;
+                                                    canSwipeLeft &amp;&amp; swipeLeftOpen(option);
+                                                    break;
+                                                case &quot;swipedown&quot;:
+                                                    option.target = $swipeDown.eq(option.index);
+                                                    index = option.target.parent().index();
+                                                    option.handle = (hasChild ? $id.children().eq(index).children(param.handle) : $handle);
+                                                    openHandle = option.handle;
+                                                    openTarget = option.target;
+                                                    menuWidth = $swipeDown.attr(&quot;data-moving&quot;) || movingDistance;
+                                                    canSwipeDown &amp;&amp; swipeDownOpen(option);
+                                                    break;
+                                                case &quot;swipeup&quot;:
+                                                    option.target = $swipeUp.eq(option.index);
+                                                    index = option.target.parent().index();
+                                                    option.handle = (hasChild ? $id.children().eq(index).children(param.handle) : $handle);
+                                                    openHandle = option.handle;
+                                                    openTarget = option.target;
+                                                    menuWidth = $swipeUp.attr(&quot;data-moving&quot;) || movingDistance;
+                                                    canSwipeUp &amp;&amp; swipeUpOpen(option);
+                                                    break;
+                                                default:
+                                                    option.target = $swipeRight.eq(option.index);
+                                                    index = option.target.parent().index();
+                                                    option.handle = (hasChild ? $id.children().eq(index).children(param.handle) : $handle);
+                                                    openHandle = option.handle;
+                                                    openTarget = option.target;
+                                                    canSwipeRight &amp;&amp; swipeRightOpen(option);
+                                                    break;
+                                            }
+                            
+                                            trigger.call(module, &quot;open&quot;, dir);
+                            
+                                            return this;
+                            
+                                        }
+                            
+                            
+                                        /**
+                                          * 获取激活的对象,只有在有多个需要激活的active才会有,正常情况下是null
+                                          *  @method active
+                                          *  @chainable
+                                          *  @example
+                            
+                            
+                                             var activeUI = uiSwipe.active();
+                            
+                                             activeUI.close();
+                            
+                                          */
+                                        function active() {
+                                            return activeUI;
+                                        }
+                            
+                                        /**
+                                          * 是否已经激活
+                                          *  @method isActive
+                                          *  @since  1.3.4
+                                          *  @chainable
+                                          *  @example
+                            
+                                             var isActive = uiSwipe.isActive();
+                            
+                                          */
+                                        function isOpen() {
+                                            return isActive;
+                                        }
+                            
+                                        // 如果是激活状态,先关闭掉默认事件
+                                        function handleClose(e) {
+                            
+                                            // 滑动且是点击
+                                            if (isTouchmove &amp;&amp; isTouchend) {
+                                                return;
+                                            }
+                                            var $target = $(e.target),
+                            
+                                                target = $target.closest($swipeLeft).length || $target.closest($swipeRight).length || $target.closest($swipeUp).length || $target.closest($swipeDown).length || e.target.className.indexOf(&quot;bui-mask&quot;) &gt; -1 || e.target.className.indexOf(&quot;bui-click&quot;) &gt; -1;
+                            
+                                            //如果是激活状态,则先关闭边栏菜单再操作;
+                                            if (activeUI) {
+                                                // 点击自动关闭
+                                                if (target) {
+                                                    // 如果事件触发的父层等于当前操作区,则可以点击
+                                                    // 如果事件触发的样式名是bui-mask,bui-click也可以点击
+                                                } else {
+                                                    activeUI.close();
+                                                    // 事件被捕获,不触发其它事件
+                                                    e.stopPropagation();
+                                                }
+                                            }
+                                        }
+                            
+                            
+                                        function bind(opt) {
+                            
+                                            opt.swipe &amp;&amp; unlock();
+                            
+                                            hasEventInit = true;
+                                        }
+                                        //对象移动
+                                        function move(x, y, transition, el) {
+                            
+                                            var transition,
+                                                $el = el || $id, //jquery 对象
+                                                x = x || 0,
+                                                y = y || 0,
+                                                xRem = param.zoom ? (parseFloat(x)) / 100 + &quot;rem&quot; : (parseFloat(x)) + &quot;px&quot;,
+                                                yRem = param.zoom ? (parseFloat(y)) / 100 + &quot;rem&quot; : (parseFloat(y)) + &quot;px&quot;,
+                                                xVal = String(x).indexOf(&quot;%&quot;) &gt; -1 ? x : xRem,
+                                                yVal = String(y).indexOf(&quot;%&quot;) &gt; -1 ? y : yRem;
+                            
+                                            if (typeof transition === &quot;number&quot;) {
+                                                transition = &quot;all &quot; + transition + &quot;ms&quot;;
+                                            } else {
+                                                transition = transition || &quot;all 300ms&quot;;
+                                            }
+                            
+                                            // translateZ(0) 会导致中兴z802t 的下拉一次,上拉滚动加载只请求一次失效
+                                            //清除动画过渡时间,下次拉动才不会有延迟现象
+                                            $el.css({
+                                                &quot;-webkit-transition&quot;: transition,
+                                                &quot;transition&quot;: transition,
+                                                &quot;-webkit-transform&quot;: &quot;translate(&quot; + xVal + &quot;,&quot; + yVal + &quot;)&quot;,
+                                                &quot;transform&quot;: &quot;translate(&quot; + xVal + &quot;,&quot; + yVal + &quot;)&quot;
+                                            }).one(&#x27;webkitTransitionEnd&#x27;, function () {
+                            
+                                                $el.css({
+                                                    &quot;-webkit-transition&quot;: &quot;none&quot;,
+                                                    &quot;transition&quot;: &quot;none&quot;
+                                                });
+                                                // 解决PC滑动跟事件点击问题
+                                                isTouchmove = false;
+                                            });
+                                            return this;
+                                        };
+                            
+                                        // 获取对应的PC事件
+                                        function getEvent() {
+                            
+                                            // 事件类型
+                                            var eventTouch = {
+                                                touchstart: &quot;touchstart&quot;,
+                                                touchmove: &quot;touchmove&quot;,
+                                                touchend: &quot;touchend&quot;,
+                                                touchcancel: &quot;touchcancel&quot;,
+                                            }
+                                            if (ui.platform.isPC()) {
+                                                eventTouch = {
+                                                    touchstart: &quot;mousedown&quot;,
+                                                    touchmove: &quot;mousemove&quot;,
+                                                    touchend: &quot;mouseup&quot;,
+                                                    touchcancel: &quot;mouseleave&quot;,
+                                                }
+                                            }
+                                            return eventTouch;
+                                        }
+                                        /**
+                                         * 不允许滑动
+                                         *  @method lock
+                                         *  @chainable
+                                         *  @example
+                            
+                                            //锁住滑动
+                                            uiSwipe.lock();
+                            
+                                         */
+                                        function lock() {
+                                            if (isDestroy) {
+                                                return;
+                                            }
+                                            // $id.off(&quot;touchstart&quot;,param.handle,onstart);
+                                            // $id.off(&quot;touchmove&quot;, onmove)
+                                            //     .off(&quot;touchend&quot;, onend)
+                                            //     .off(&quot;touchcancel&quot;, function () {
+                                            //         //swipeClose();
+                                            //     });
+                                            var eventTouch = getEvent();
+                            
+                                            $id.off(eventTouch.touchstart, onstart)
+                                                .off(eventTouch.touchmove, onmove)
+                                                .off(eventTouch.touchend, onend)
+                                                .off(eventTouch.touchcancel);
+                            
+                                            trigger.call(module, &quot;lock&quot;);
+                                            return this;
+                                        }
+                                        /**
+                                         * 允许滑动
+                                         *  @method unlock
+                                         *  @chainable
+                                         *  @example
+                            
+                                            //可以滑动
+                                            uiSwipe.unlock();
+                            
+                                         */
+                                        function unlock() {
+                            
+                                            if (isDestroy) {
+                                                return;
+                                            }
+                                            var eventTouch = getEvent();
+                            
+                                            $id.on(eventTouch.touchstart, onstart)
+                                                .on(eventTouch.touchmove, onmove)
+                                                .on(eventTouch.touchend, onend)
+                                                .on(eventTouch.touchcancel, function (e) {
+                            
+                                                    // console.log(touch)
+                                                    // 会导致oppo手机在debugtool中滑动出现问题
+                                                    // PC只要滑动后不操作,都会自动关闭
+                                                    if (param.autoClose &amp;&amp; ui.platform.isPC() &amp;&amp; (isTouchend || isTouchmove)) {
+                                                        swipeClose(e);
+                                                        e.stopPropagation();
+                                                    }
+                                                    isTouchstart = false;
+                                                    isTouchmove = false;
+                            
+                                                    isTouchend = false;
+                            
+                                                });
+                            
+                                            trigger.call(module, &quot;unlock&quot;);
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * [销毁控件]
+                                         *  @method destroy
+                                         *  @since 1.4.2
+                                         *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                         *  @example
+                            
+                                            //销毁
+                                            uiSwipe.destroy();
+                            
+                                         */
+                                        function destroy(bool) {
+                                            var bool = bool == true ? true : false;
+                            
+                                            if ($id) {
+                                                $id.off();
+                                                bool &amp;&amp; $id.remove();
+                                            }
+                            
+                                            off(&quot;open&quot;);
+                                            off(&quot;close&quot;);
+                            
+                                            isDestroy = true;
+                                        }
+                            
+                                        /**
+                                         * 为控件绑定事件
+                                         *  @event on
+                                         *  @since 1.3.0
+                                         *  @param {string} [type]  事件类型: &quot;open&quot; | &quot;close&quot; | &quot;touchstart&quot; | &quot;touchmove&quot; | &quot;touchend&quot;  
+                                         *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                         *  @example
+                            
+                                            uiSwipe.on(&quot;lock&quot;,function () {
+                                                // 点击的菜单
+                                                console.log(this);
+                                            });
+                            
+                            
+                                         */
+                                        function on(type, callback) {
+                                            ui.on.apply(module, arguments);
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 为控件取消绑定事件
+                                         *  @event off
+                                         *  @since 1.3.0
+                                         *  @param {string} [type]  事件类型: &quot;open&quot; | &quot;close&quot; | &quot;touchstart&quot; | &quot;touchmove&quot; | &quot;touchend&quot;  
+                                         *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                         *  @example
+                            
+                                            uiSwipe.off(&quot;lock&quot;);
+                            
+                            
+                                         */
+                                        function off(type, callback) {
+                                            ui.off.apply(module, arguments);
+                                            return this;
+                            
+                                        }
+                                        /*
+                                         * 触发自定义事件
+                                         */
+                                        function trigger(type) {
+                                            //点击事件本身,或者为空,避免循环引用
+                                            module.self = (this == window || this == module) ? null : this;
+                            
+                                            ui.trigger.apply(module, arguments);
+                                        }
+                                        return module;
+                                    }
+                            
+                                })();
+                            
+                            
+                            
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

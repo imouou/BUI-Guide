@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.slide.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.slide.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                /**
+                                   * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                   *   &lt;div class=&quot;span8&quot;&gt;
+                                   *     &lt;h2&gt;滑动控件&lt;/h2&gt;
+                                   *     &lt;p&gt;滑动控件比较灵活,对参数要了解得更多一点,可以用来制作: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.slide.html&quot; target=&quot;_blank&quot;&gt;焦点图&lt;/a&gt;,&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.slide_tab.html&quot; target=&quot;_blank&quot;&gt;TAB选项卡&lt;/a&gt;,全屏相册,上下滑屏,过滤筛选,层级选择器,滚动公告,等等&lt;/p&gt;
+                                   *     &lt;p&gt;&lt;strong&gt;1.4,新增自动加载远程地址参数,配合href使用&lt;/strong&gt;&lt;/p&gt;
+                                   *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.slide.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                   *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                   * {{#crossLink &quot;bui.slide/start&quot;}}{{/crossLink}}: 自动播放&lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/stop&quot;}}{{/crossLink}}: 停止自动播放 &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/lock&quot;}}{{/crossLink}}: 不允许滑动 &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/unlock&quot;}}{{/crossLink}}: 允许滑动 &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/prev&quot;}}{{/crossLink}}: 是否存在,返回index &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/next&quot;}}{{/crossLink}}: 是否存在,返回boolean &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/to&quot;}}{{/crossLink}}: 跳转到指定的 某一个slide &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/load&quot;}}{{/crossLink}}: 加载远程地址模板 &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                   * {{#crossLink &quot;bui.slide/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                   *   &lt;/div&gt;
+                                   *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.slide.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-slide_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                   * &lt;/div&gt;
+                                   *  @namespace bui
+                                   *  @class slide
+                                   *  @constructor
+                                   *  @param {object} option
+                                   *  @param {string} option.id 控件id
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                   *  @param {string} [option.menu]  默认&quot;.bui-slide-head &gt; ul&quot; (循环元素的父级), 如果控制菜单要独立,可以使用id选择器
+                                   *  @param {string} [option.children]  默认&quot;.bui-slide-main &gt; ul&quot; (循环元素的父级), 如果控制内容要独立,可以使用id选择器, slide嵌套必须使用id 
+                                   *  @param {boolean} [option.relative]  1.5.6新增, 默认false (相对屏幕宽度) | true (相对id父级的宽度) 
+                                   *  @param {string} option.stopHandle  1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于slide里面的某个样式,不触发滑动,一般用于事件冲突,比方 input[type=range] 无法滑动的时候 
+                                   *  @param {string} [option.stopPropagation]  1.6.4新增,阻止事件传播, 默认 true | false;
+                                   *  @param {number} [option.width] 0 为默认屏幕宽度
+                                   *  @param {number} [option.height] 0 为默认屏幕高度,会计算剩余的高度
+                                   *  @param {number} [option.index]  默认:0 ,第一次加载第几个 
+                                   *  @param {array} option.data  1.5.2新增, 默认: null || [{id:&quot;&quot;,title:&quot;&quot;,url:&quot;&quot;,iframe:false,image:&quot;img.png&quot;,background:&quot;img.png&quot;,page:false,close:true,synchistory:false}] , image 或者 background 只需要一个,其它字段都不是必须, 1.6.2新增 page加载的方式,可以解决加载外部地址无法返回的问题 1.6.7新增对视频的支持 [{type:&quot;video&quot;,src:&quot;视频文件.mp4&quot;,poster:&quot;封面图&quot;,autoplay:false,loop:false}] 更多参数查看video公共字段
+                                   *  @param {object} [option.video]  1.6.7 视频类型的公共参数{ preload: true, autoplay: true, fullscreen: false, muted: false, loop: true, controls: true, width: &quot;100%&quot;, height: &quot;100%&quot;, poster: &quot;&quot; }
+                                   *  @param {string} [option.direction]  水平滑动还是纵向滑动 默认: x | y 
+                                   *  @param {string} [option.alignClassName]  since 1.3.4 默认是&quot;&quot;,全屏默认是:&quot;bui-box-center&quot;, 每个li的盒子对齐样式名,主要用于全屏时的内容对齐,自带几种对齐方式 左:bui-box-align-left 水平中:bui-box-align-right 右:bui-box-align-center 上:bui-box-align-top 垂直中:bui-box-align-middle 下:bui-box-align-bottom  
+                                   *  @param {string} [option.alignPage]  since 1.6.2 默认是&quot;center&quot; | left | right 
+                                   *  @param {boolean} [option.swipe]  是否允许侧滑,默认允许 true | false 
+                                   *  @param {boolean} [option.animate]  点击菜单跳转到某个位置是否采用动画 默认: true | false 
+                                   *  @param {boolean} [option.scroll]  是否允许垂直滚动 false | true , 如果单独需要滚动 可以给滑动的li的属性加上 data-scroll=true 
+                                   *  @param {boolean} [option.fullscreen]  是否全屏 默认:false | true 
+                                   *  @param {boolean} [option.autopage]  是否自动分页 默认:false | true; true时自动生成 bui-slide-head结构 
+                                   *  @param {boolean} [option.autoplay]  是否自动播放 默认:false | true 
+                                   *  @param {boolean} [option.autoheight]  1.4.3新增, 自动高度,由内容撑开 默认:false | true 
+                                   *  @param {boolean} [option.zoom]  保持比例缩放 默认 true | false
+                                   *  @param {boolean} [option.loop]  1.5新增,循环 默认 false | true, 如果为true, index是加1的值
+                                   *  @param {number} [option.transition]  transform效果持续时间 
+                                   *  @param {number} [option.interval]  自动运行间隔 
+                                   *  @param {number} [option.visibleNum]  1.4.5新增, 可视个数,默认为1 
+                                   *  @param {number} [option.scrollNum]  1.4.5新增, 一次滚动个数,默认为1 
+                                   *  @param {boolean} [option.template]  1.5新增, 需要return 正确的结构,便于数据请求处理动态模板 
+                                   *  @param {boolean} [option.bufferEffect]  1.3.0 新增的参数, 在第1页跟最后1页是否还可以继续拖动, 默认允许: true | false   
+                                   *  @param {number} [option.distance]  默认40, 拖拽大于distance才会生效,配合delay可以防止slide又有上下其它事件 
+                                   *  @param {function} [option.callback]  点击的回调 
+                                   *  @param {function} [option.onBeforeTo]  1.5.4新增 跳转前触发, return fasle 则不能跳转过去; 可以拿到 跳转的目标索引 e.currentIndex, 以及当前索引 e.prevIndex  
+                                   *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                   *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                   *  @param {boolean} [option.autoload]  1.4新增 默认: false | true 远程加载菜单按钮上的 href 地址, 如果点击的按钮有disabled属性或者样式,则不跳转
+                                   *  @example
+                            
+                                      // 示例1: 1.5.2 新增动态渲染: 有data,无template参数时,采用默认模板渲染数据
+                                      html:
+                            
+                                      &lt;div id=&quot;slide&quot; class=&quot;bui-slide&quot;&gt;&lt;/div&gt;
+                            
+                                      js:
+                                      // 先初始化
+                                      var uiSlide = bui.slide({
+                                         id:&quot;#slide&quot;,
+                                         height:380,
+                                         autopage:true,
+                                         data: [{
+                                            image: &quot;images/banner01.png&quot;
+                                          }]
+                                       })
+                            
+                                      // 请求成功以后修改值
+                                       bui.ajax({
+                                           url: &quot;http://www.easybui.com/demo/json/shop.json&quot;,
+                                           data: {},//接口请求的参数
+                                           // 可选参数
+                                           method: &quot;GET&quot;
+                                       }).then(function(result){
+                                          var data = result.datas || [{
+                                            image: &quot;images/banner01.png&quot;
+                                          }]
+                                           // 修改动态值
+                                           uiSlide.option(&quot;data&quot;,data)
+                                       });
+                            
+                                   *   // 示例2: 静态结构初始化, 固定结构, li里面的内容自定义
+                                   *   html:
+                                   *
+                                          &lt;div id=&quot;slide&quot; class=&quot;bui-slide&quot;&gt;
+                                            &lt;div class=&quot;bui-slide-main&quot;&gt;
+                                              &lt;ul&gt;
+                                                &lt;li&gt;
+                                                  &lt;!-- 从这里开始,可以自定义 start --&gt;
+                                                  &lt;img src=&quot;../images/slideshow.png&quot; alt=&quot;&quot;&gt;
+                                                  &lt;!-- 从这里开始,可以自定义 end --&gt;
+                                                &lt;/li&gt;
+                                                &lt;li style=&quot;display:none&quot;&gt;
+                                                  &lt;!-- 第2个内容, 先设置样式不可见,避免渲染闪跳 --&gt;
+                                                  &lt;img src=&quot;../images/slideshow2.png&quot; alt=&quot;&quot;&gt;
+                                                &lt;/li&gt;
+                                              &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                          &lt;/div&gt;
+                                   *
+                                   *   js:
+                                   *
+                                          // 初始化
+                                          var uiSlide = bui.slide({
+                                                      id:&quot;#slide&quot;,
+                                                      height:160,
+                                                      autopage:true
+                                                    })
+                            
+                            
+                                       示例3: 1.5.2 有自定义模板时, template,里需要自己加好静态的结构
+                            
+                                       html:
+                            
+                                       &lt;div id=&quot;slideNote&quot; class=&quot;bui-slide bui-slide-notice&quot;&gt;&lt;/div&gt;
+                            
+                                       js:
+                                       // 通知公告, 初始化
+                                       var uiSlide = bui.slide({
+                                           id:&quot;#slideNote&quot;,
+                                           height:100,
+                                           autoplay: true,
+                                           loop: true,
+                                           direction: &quot;y&quot;,
+                                           data: [{
+                                             title: &quot;2017年11月1日 河南分省党支部第18期党课&quot;,
+                                             url: &quot;pages/ui/article.html&quot;
+                                           },{
+                                             title: &quot;2017年11月1日 河南分省党支部第19期党课&quot;,
+                                             url: &quot;pages/ui/article.html&quot;
+                                           }],
+                                           template: function (data) {
+                                             // 有数据有模板时,需要自己全部渲染结构
+                                             var html = &quot;&quot;;
+                                             html +=&#x60;&lt;div class=&quot;bui-slide-main&quot;&gt;&lt;ul&gt;&#x60;
+                                             data.forEach(function (item,i) {
+                                               html +=&#x60;&lt;li href=&quot;${item.url}&quot;&gt;
+                                                   &lt;div class=&quot;notice-item&quot;&gt;
+                                                       &lt;div class=&quot;span1&quot;&gt;${item.title||&quot;&quot;}&lt;/div&gt;
+                                                   &lt;/div&gt;
+                                               &lt;/li&gt;&#x60;
+                                             })
+                                             html +=&#x60;&lt;/ul&gt;&lt;/div&gt;&#x60;
+                            
+                                             return html;
+                                           },
+                                       })
+                            
+                            
+                                   *
+                                   *
+                                   */
+                                ui.slide = function (option) {
+                            
+                                    var config = {
+                                        id: &quot;&quot;,
+                                        uid: &quot;&quot;,
+                                        menu: &quot;.bui-slide-head &gt; ul&quot;,
+                                        children: &quot;.bui-slide-main &gt; ul&quot;,
+                                        main: &quot;.bui-slide-main&quot;,
+                                        header: &quot;header&quot;,
+                                        footer: &quot;footer&quot;,
+                                        item: &quot;li&quot;,
+                                        prev: &quot;.bui-slide-prev&quot;,
+                                        next: &quot;.bui-slide-next&quot;,
+                                        alignClassName: &quot;&quot;,
+                                        alignPage: &quot;center&quot;,
+                                        stopHandle: &quot;&quot;,
+                                        stopPropagation: true,
+                                        width: 0,
+                                        height: 0,
+                                        data: null,
+                                        zoom: true,
+                                        transition: 200,
+                                        interval: 5000,
+                                        relative: false,
+                                        swipe: true,
+                                        animate: true,
+                                        delay: false,
+                                        bufferEffect: true,
+                                        visibleNum: 1,
+                                        scrollNum: 1,
+                                        distance: 40,
+                                        direction: &quot;x&quot;,
+                                        autoplay: false,
+                                        sideWidth: 0,
+                                        loop: false,
+                                        cross: false,
+                                        autoheight: false,
+                                        autoinit: true,
+                                        scroll: false,
+                                        index: 0,
+                                        fullscreen: false,
+                                        autopage: false,
+                                        autoload: false,
+                                        needLoading: false,
+                                        async: true, // 如果改为同步, 会导致&quot;load&quot;事件监听第一次不触发
+                                        video: {
+                                            preload: true,
+                                            autoplay: false,
+                                            fullscreen: false,
+                                            muted: false,
+                                            loop: true,
+                                            controls: true,
+                                            playsinline: true,
+                                            width: &quot;100%&quot;,
+                                            height: &quot;100%&quot;,
+                                            poster: &quot;&quot;,
+                                        },
+                                        template: null,
+                                        callback: null,
+                                        onBeforeTouchstart: null,
+                                        onBeforeTouchmove: null,
+                                        onBeforeTouchend: null,
+                                        onBeforeTo: null,
+                                        onTo: null,
+                                        onClickNav: null,
+                                        onBeforeInit: null,
+                                        onInited: null,
+                                        onStart: null,
+                                        onMove: null,
+                                        onEnd: null
+                                    };
+                                    //方法
+                                    var module = {
+                                        name: &quot;slide&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        trigger: trigger,
+                                        to: to,
+                                        load: load,
+                                        back: back,
+                                        add: add,
+                                        remove: remove,
+                                        replace: replace,
+                                        resize: resize,
+                                        getPageParams: getItemParam,// 废弃
+                                        getItemParam: getItemParam,
+                                        setItemParam: setItemParam,
+                                        getPages: getPages,
+                                        getData: getData,
+                                        getItem: getItem,
+                                        $active: getActive,
+                                        currentMain: getActive,
+                                        currentMenu: getActiveMenu,
+                                        prev: prev,
+                                        next: next,
+                                        stop: stop,
+                                        start: start,
+                                        lock: lock,
+                                        index: index,
+                                        unlock: unlock,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.slide, option);
+                            
+                            
+                                    var $id,
+                                        el,
+                                        $inner,
+                                        $menu,
+                                        $menuChildren,
+                                        $children,
+                                        $childrenParent,
+                                        $item,
+                                        touch = {}, //保存拖拽的坐标
+                                        length,
+                                        nowIndex = 0,
+                                        interPlay, //
+                                        innerWidth,
+                                        innerHeight,
+                                        fullWidth,
+                                        fullHeight,
+                                        direction,
+                                        itemWidth,
+                                        deltaX,
+                                        deltaY,
+                                        itemHeight,
+                                        slideAdaptiveHeight, //父层自适应的高度
+                                        slideHeight,
+                                        slideMainHeight,
+                                        winWidth,
+                                        winHeight,
+                                        movingDistance,
+                                        isAutoPlay,
+                                        cacheLength, //  循环前的个数
+                                        hasEventInit = false,
+                                        hasLoopInit = false,
+                                        hasCrossInit = false,
+                                        flag = false,
+                                        pages,
+                                        //拖动的默认配置
+                                        positionInit,
+                                        // 页面动态加载缓存
+                                        urlCache = {},
+                                        uiLoading = null,
+                                        // 记录当前tab是否已经加载
+                                        cacheIndex = [],
+                                        cacheParams = param.data,
+                                        firstInit = false,
+                            
+                                        dragConfig = {
+                                            x: {},
+                                            y: {}
+                                        };
+                                    //滑动兼容处理
+                                    var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion),
+                                        hasTouch = &#x27;ontouchstart&#x27; in window &amp;&amp; !isTouchPad,
+                                        direction = &quot;&quot;,
+                                        lastY = 0,
+                                        lastX = 0,
+                                        isTouchstart = false, //解决PC一直触发mousemove事件
+                                        isTouchmove = false,
+                                        touch = {
+                                            x1: 0,
+                                            x2: 0,
+                                            y1: 0,
+                                            y2: 0,
+                                            direction: &quot;&quot;
+                                        };
+                            
+                                    var whichEvent = &quot;&quot;;
+                            
+                                    try {
+                                        //初始化
+                                        param.autoinit &amp;&amp; init(param);
+                            
+                                    } catch (e) {
+                                        ui.showLog(e)
+                                    }
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(false, param, opt);
+                            
+                                        var canInit = option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                            
+                                        if (canInit === false) {
+                                            return this;
+                                        }
+                                        if (option.id) {
+                                            $id = ui.obj(option.id);
+                                        } else {
+                                            ui.showLog(&quot;slide id不能为空&quot;, &quot;bui.slide.init&quot;);
+                                            return;
+                                        }
+                            
+                                        module[&quot;$el&quot;] = $id;
+                            
+                                        // 相对父级,计算好父级宽度
+                                        if (option.relative) {
+                                            var parentWidth = $id.parent().width() || winWidth;
+                                            option.width = option.sideWidth &gt; 0 ? parentWidth - option.sideWidth : parentWidth;
+                                        }
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                            
+                                        direction = option.direction;
+                            
+                            
+                                        // 有数据有模板,自己渲染
+                                        if (typeof option.template === &quot;function&quot;) {
+                                            // 模板
+                                            $id.html(option.template.call(module, option.data || []) || &quot;&quot;);
+                                        } else if (option.data &amp;&amp; !option.template) {
+                                            // 如果有数据没模板,认为是slide,采用默认item模板
+                                            var noMain = $id.find(option.main).length &lt;= 0;
+                            
+                                            // 如果没有bui-slide-main
+                                            if (noMain) {
+                                                var frameHtml = tplFrame(option);
+                                                $id.html(frameHtml);
+                                            }
+                            
+                                            var $mainUl = $id.find(option.children);
+                            
+                                            var itemHtml = tplItem.call(module, option.data);
+                                            $mainUl.html(itemHtml);
+                                        }
+                            
+                                        if (option.needLoading) {
+                                            uiLoading = bui.loading({
+                                                appendTo: $id
+                                            });
+                                        }
+                            
+                                        //菜单选择器如果传# 代表这个菜单是独立的,可以跟切换的内容分开
+                                        $menu = option.menu.indexOf(&quot;#&quot;) == 0 ? ui.obj(option.menu) : $id.find(option.menu).eq(0);
+                            
+                                        $menuChildren = $menu.children();
+                            
+                                        $children = $id.find(option.children).eq(0);
+                                        $childrenParent = $children.parent();
+                            
+                                        //单个滚动的内容
+                                        $item = $children.children();
+                            
+                                        cacheLength = $item.length;
+                            
+                                        // 循环的处理只初始化一次
+                                        if (option.loop &amp;&amp; $item.length) {
+                            
+                                            var lastItem = $item.eq($item.length - 1).clone(true);
+                                            var firstItem = $item.eq(0).clone(true);
+                            
+                                            $children.prepend(lastItem).append(firstItem);
+                                            $item = $children.children();
+                                            var lastIndex = $item.length - 1;
+                            
+                                            // 监听动画后的事件
+                                            off(&quot;afterto&quot;);
+                                            on(&quot;afterto&quot;, function (index) {
+                                                if (index == 0) {
+                                                    to(lastIndex - 1, &quot;none&quot;)
+                                                }
+                                                if (index == lastIndex) {
+                                                    to(1, &quot;none&quot;);
+                                                }
+                                            })
+                            
+                                            to(1, &quot;none&quot;)
+                                            var hasLoop = $id.hasClass(&quot;.bui-slide-loop&quot;);
+                                            !hasLoop &amp;&amp; $id.addClass(&quot;bui-slide-loop&quot;);
+                                            hasLoopInit = true;
+                                        }
+                            
+                                        // 跨屏的处理,只初始化一次
+                                        if (option.cross &amp;&amp; $item.length) {
+                                            var hasCross = $id.hasClass(&quot;.bui-slide-cross&quot;);
+                                            !hasCross &amp;&amp; $id.addClass(&quot;bui-slide-cross&quot;);
+                                            off(&quot;to&quot;, cross);
+                                            on(&quot;to&quot;, cross)
+                                            // option.loop ? to(1, &quot;none&quot;) : to(0, &quot;none&quot;);
+                                            option.loop ? to(1) : to(0);
+                            
+                                            function cross(index) {
+                                                var prevIndex = index - 1;
+                                                var nextIndex = index + 1;
+                                                var $this = $item.eq(index);
+                            
+                                                $this.removeClass(&quot;bui-cross-prev&quot;)
+                                                    .removeClass(&quot;bui-cross-next&quot;)
+                                                $this.prev().removeClass(&quot;bui-cross-next&quot;).addClass(&quot;bui-cross-prev&quot;);
+                                                $this.next().removeClass(&quot;bui-cross-prev&quot;).addClass(&quot;bui-cross-next&quot;);
+                                            }
+                                            hasCrossInit = true;
+                                        }
+                            
+                                        autoHeight(option);
+                                        //初始化结构
+                                        display(option);
+                            
+                                        isAutoPlay = option.autoplay;
+                                        if (isAutoPlay) {
+                                            // 自动播放
+                                            autoPlay();
+                                        }
+                            
+                                        if (!hasEventInit) {
+                                            bind();
+                            
+                                            param.onTo &amp;&amp; on(&quot;to&quot;, function (index) {
+                                                param.onTo &amp;&amp; param.onTo.call(module, index);
+                                            })
+                            
+                                            // 第一次加载的时候, 保持 to 事件在autoload 跟普通加载的时候保持一致, 默认第一次不加载
+                                            firstInit = true;
+                                        }
+                            
+                                        //初始化index值
+                                        nowIndex = $children.children(&quot;.active&quot;).length ? $children.children(&quot;.active&quot;).index() : (nowIndex || option.index);
+                                        // 如果有初始值,跳到对应的值
+                                        if (parseInt(option.index) &gt; 0) {
+                                            to(option.index, &quot;none&quot;);
+                                        } else {
+                                            // 如果重复使用init初始化,一般采用动画
+                                            to(nowIndex, &quot;none&quot;);
+                                        }
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        return this;
+                                    }
+                            
+                                    // 自动计算main高度
+                                    function autoHeight(option) {
+                            
+                                        // 屏幕的宽度
+                                        winWidth = document.documentElement.clientWidth;
+                                        winHeight = document.documentElement.clientHeight;
+                            
+                                        option.height = String(option.height).indexOf(&quot;%&quot;) &gt; -1 ? parseFloat(option.height) / 100 * winHeight : parseFloat(option.height);
+                                        option.width = String(option.width).indexOf(&quot;%&quot;) &gt; -1 ? parseFloat(option.width) / 100 * winWidth : parseFloat(option.width);
+                            
+                                        //单个滚动的内容
+                                        $item = $children.children();
+                            
+                                        // 单个焦点图的基本信息是否全屏 offsetTop 会把第一个子元素的margin-top 一起算上
+                                        var $parentPage = $id.parents(&quot;.bui-page&quot;),
+                                            $parentMain = $id.parents(&quot;main&quot;),
+                                            offsetTop = ($id[0] &amp;&amp; $id[0].offsetTop || 0),
+                                            $header = $parentPage.children(option.header),
+                                            $headerHeight = $header[0] &amp;&amp; $header[0].offsetHeight || 0,
+                                            $footer = $parentPage.children(option.footer),
+                                            $footerHeight = $footer[0] &amp;&amp; $footer[0].offsetHeight || 0;
+                            
+                                        slideAdaptiveHeight = winHeight - ($footerHeight || 0) - offsetTop;
+                                        slideAdaptiveHeight = $id.parent(&quot;main&quot;).length ? $id.parent(&quot;main&quot;).height() : slideAdaptiveHeight
+                                        slideHeight = option.height == 0 ? slideAdaptiveHeight : option.height;
+                            
+                                        // tab内容高度
+                                        // 是否是绝对定位
+                                        var slideHeadPosition = $menu.parent().css(&quot;position&quot;) == &quot;static&quot; ? $menu.css(&quot;position&quot;) : $menu.parent().css(&quot;position&quot;);
+                                        slideMainHeight = ($id.find(option.menu).length ? ((slideHeadPosition == &quot;absolute&quot; || slideHeadPosition == &quot;fixed&quot;) ? slideHeight : slideHeight - ($menu[0] &amp;&amp; $menu[0].offsetHeight || 0)) : slideHeight);
+                                        // 判断是否全屏 或者高度自适应, 高度自适应的话要判断菜单是在结构里面还是外面,里面需要减掉menu的高度
+                                        fullHeight = option.fullscreen ? winHeight : (option.height == 0 ? slideMainHeight : option.height);
+                                        fullWidth = option.fullscreen ? winWidth : option.width || (option.relative ? $id.parent().width() : winWidth);
+                            
+                                        length = $item.length;
+                            
+                            
+                                        itemWidth = direction == &quot;x&quot; ? fullWidth / param.visibleNum : fullWidth;
+                                        itemHeight = direction == &quot;y&quot; ? fullHeight / param.visibleNum : fullHeight;
+                            
+                                        // 移动多少
+                                        movingDistance = param.direction == &quot;y&quot; ? itemHeight * param.scrollNum : itemWidth * param.scrollNum;
+                            
+                                        //滑动的宽度
+                                        innerWidth = fullWidth * length / param.visibleNum;
+                                        innerHeight = fullHeight * length / param.visibleNum;
+                            
+                                    }
+                            
+                                    function bind() {
+                            
+                                        /* 事件绑定
+                                        ------------------------------------
+                                         */
+                            
+                                        //绑定拖拽(如果一开始不先绑定事件,在手机调试切换tab的时候,会导致swipe失效,原因不明)
+                                        unlock();
+                                        if (!param.swipe) {
+                                            lock();
+                                        }
+                            
+                                        // //绑定菜单
+                                        // $menuChildren.length &amp;&amp; $(document).off(&quot;click.bui&quot;).on(&quot;click.bui&quot;,function (e) {
+                                        var transormPage = function (e) {
+                                            var active = $(this).hasClass(&quot;active&quot;),
+                                                index = $(this).index(),
+                                                attrDisabled = $(this).attr(&quot;disabled&quot;),
+                                                disabled = $(this).hasClass(&quot;disabled&quot;) || attrDisabled == &quot;&quot; || attrDisabled == &quot;true&quot; || attrDisabled == &quot;disabled&quot;;
+                            
+                                            // 目标的索引是多少
+                                            e.currentIndex = index;
+                                            // 上一个
+                                            e.prevIndex = nowIndex;
+                                            var canTo = param.onBeforeTo &amp;&amp; param.onBeforeTo.call(module, e);
+                            
+                                            whichEvent = &quot;click&quot;;
+                            
+                            
+                                            if (canTo === false) {
+                                                return false;
+                                            }
+                                            trigger.call(module, &quot;beforeto&quot;, e);
+                            
+                                            if (!active &amp;&amp; !disabled) {
+                            
+                                                if (param.animate) {
+                                                    //跳转到对应的位置
+                                                    to(index);
+                                                } else {
+                                                    to(index, &quot;none&quot;);
+                                                }
+                            
+                                                //添加激活的状态
+                                                // addStatus(index);
+                            
+                                                if (isAutoPlay) {
+                                                    // 如果是自动播放,需要先清除原来的时间重新计算
+                                                    autoPlay();
+                                                }
+                            
+                                                param.onClickNav &amp;&amp; param.onClickNav.call(module, index);
+                                            }
+                            
+                                            param.stopPropagation &amp;&amp; e.stopPropagation();
+                                        };
+                            
+                                        // 如果传id,事件需要绑定在外层
+                                        if (param.menu.indexOf(&quot;#&quot;) == 0) {
+                                            $menu.off(&quot;click.bui&quot;, &quot;li&quot;).on(&quot;click.bui&quot;, &quot;li&quot;, transormPage)
+                                        } else {
+                            
+                                            $id.off(&quot;click.bui&quot;, param.menu + &quot; li&quot;).on(&quot;click.bui&quot;, param.menu + &quot; li&quot;, transormPage)
+                                        }
+                            
+                                        //绑定左右按钮
+                            
+                                        $id.off(&quot;click.bui&quot;, param.prev).on(&quot;click.bui&quot;, param.prev, prev)
+                            
+                                        $id.off(&quot;click.bui&quot;, param.next).on(&quot;click.bui&quot;, param.next, next)
+                            
+                                        var item = param.children + &quot;&gt;&quot; + param.item;
+                            
+                                        //点击以后的回调 jquery 不支持绑定在选择器上,所以这里多了一个参数用于绑定点击的回调
+                                        // pc 会绑定 .bui-tab-main &gt; ul li 绑定过多,所以这里把事件绑定为有动态数据的时候,这个时候一般是指焦点图
+                                        param.data &amp;&amp; $id.off(&quot;click.bui&quot;, item).on(&quot;click.bui&quot;, item, function (e) {
+                            
+                                            // 解决pc滑动的点击事件跟滑动事件冲突
+                                            if (isTouchmove) {
+                                                return false;
+                                            }
+                                            var $slideitem = $(e.currentTarget);
+                                            // 区分 href
+                                            var href = $slideitem.attr(&quot;href&quot;);
+                                            var target = $slideitem.attr(&quot;data-target&quot;) || &quot;&quot;;
+                                            var reload = $slideitem.attr(&quot;data-reload&quot;) == &quot;true&quot; ? true : false;
+                                            var iframe = $slideitem.attr(&quot;data-iframe&quot;) == &quot;true&quot; ? true : false;
+                                            var usepage = $slideitem.attr(&quot;data-page&quot;) == &quot;true&quot; ? true : false;
+                                            var close = $slideitem.attr(&quot;data-close&quot;) == &quot;true&quot; ? true : false;
+                                            var synchistory = $slideitem.attr(&quot;data-synchistory&quot;) == &quot;true&quot; ? true : false;
+                            
+                                            if (href &amp;&amp; usepage) {
+                                                ui.page({
+                                                    url: href,
+                                                    iframe: iframe,
+                                                    close: close,
+                                                    syncHistory: synchistory
+                                                });
+                                            } else if (href) {
+                                                // 跳转
+                                                ui.load({
+                                                    url: href,
+                                                    reload: reload,
+                                                    target: target,
+                                                    iframe: iframe
+                                                });
+                                            }
+                            
+                                            trigger.call(module, &quot;click&quot;, e);
+                            
+                                            // 每个数据有自己的callback
+                                            let item = param.data[index()] || {};
+                                            item.callback &amp;&amp; item.callback.call(module, e);
+                            
+                                            param.callback &amp;&amp; param.callback.call(module, e, module);
+                            
+                                            param.stopPropagation &amp;&amp; e.stopPropagation();
+                                        });
+                            
+                                        hasEventInit = true;
+                                    }
+                            
+                            
+                                    //初始化宽高布局
+                                    function display(opt) {
+                            
+                                        //单个滚动的内容
+                                        $item = $children.children();
+                                        cacheLength = opt.loop ? $item.length - 2 : $item.length;
+                            
+                            
+                                        // innerWidth = 
+                                        // 不同方向的滑动配置
+                                        dragConfig = {
+                                            x: {
+                                                swipeDir: &quot;swipeleft&quot;,
+                                                swipeDir2: &quot;swiperight&quot;,
+                                                width: movingDistance
+                                            },
+                                            y: {
+                                                swipeDir: &quot;swipeup&quot;,
+                                                swipeDir2: &quot;swipedown&quot;,
+                                                width: movingDistance
+                                            }
+                                        }
+                            
+                                        //初始化方向的位置配置
+                                        positionInit = {
+                                            x: {
+                                                parentInitKey: &quot;width&quot;,
+                                                parentInitValue: innerWidth,
+                                                boxCss: &quot;display:-webkit-box;display:box;-webkit-box-align: start;-webkit-box-pack: center;width:100%;&quot;,
+                                                boxItemCSS: &quot;-webkit-box-flex:1;box-flex:1;width:&quot; + itemWidth + &quot;px;height:&quot; + itemHeight + &quot;px;&quot;
+                                            },
+                                            y: {
+                                                parentInitKey: &quot;height&quot;,
+                                                parentInitValue: innerHeight,
+                                                box: &quot;display:-webkit-box;display:box;-webkit-box-align: start;-webkit-box-pack: center;width:100%;-webkit-box-orient: vertical;box-orient: vertical;&quot;,
+                                                boxItemCSS: &quot;-webkit-box-flex:1;box-flex:1;width:&quot; + itemWidth + &quot;px;height:&quot; + itemHeight + &quot;px;&quot;
+                                            }
+                                        }
+                            
+                                        //父级宽度
+                                        $childrenParent[positionInit[direction][&quot;parentInitKey&quot;]](positionInit[direction][&quot;parentInitValue&quot;]);
+                            
+                                        var i, l = $item.length;
+                            
+                                        for (i = 0; i &lt; l; i++) {
+                                            // 外部属性优先原则
+                                            var attrScroll = $item[i].getAttribute(&quot;data-scroll&quot;);
+                                            var needScroll = attrScroll == null ? param.scroll :
+                                                attrScroll == &quot;false&quot; ? false : true;
+                            
+                                            positionInit[direction][&quot;boxItemCSS&quot;] = positionInit[direction][&quot;boxItemCSS&quot;] + (needScroll ? &quot;overflow:auto;&quot; : &quot;overflow:hidden;&quot;)
+                                            $item[i].style.cssText = positionInit[direction][&quot;boxItemCSS&quot;];
+                                        }
+                            
+                                        try {
+                                            $children[0] &amp;&amp; ($children[0].style.cssText = positionInit[direction][&quot;boxCss&quot;])
+                                        } catch (e) {
+                                            console.log(&quot;请检查下children参数是否正确.&quot;, &quot;bui.slide id:&quot; + param.id)
+                                        }
+                            
+                                        // 可视个数大于1的时候,每个的高度要重新计算
+                                        var slideItemHeight = (direction == &quot;y&quot; &amp;&amp; param.visibleNum &gt; 1) ? slideMainHeight / param.visibleNum : slideMainHeight;
+                                        // 是否需要转换成rem
+                                        var slideHeightRem = param.zoom ? slideHeight / 100 + &quot;rem&quot; : slideHeight + &quot;px&quot;,
+                            
+                                            slideMainHeightRem = param.zoom ? slideItemHeight / 100 + &quot;rem&quot; : slideItemHeight + &quot;px&quot;,
+                                            itemWidthRem = param.zoom ? itemWidth / 100 + &quot;rem&quot; : itemWidth + &quot;px&quot;;
+                            
+                                        // 如果菜单在顶部，上移会影响菜单点击,加了这个又会影响滑动。。。所以菜单应该菜单应该分离除去更合适
+                                        // if(direction == &quot;y&quot;){
+                                        //     $childrenParent.css({&quot;position&quot;:&quot;relative&quot;,&quot;z-index&quot;:-1});
+                                        // }
+                                        //是否是全屏
+                                        if (param.fullscreen) {
+                                            ui.$(&quot;main&quot;).css({
+                                                &quot;position&quot;: &quot;static&quot;
+                                            })
+                                            $id.addClass(&#x27;bui-slide-fullscreen&#x27;).css({
+                                                &quot;position&quot;: &quot;absolute&quot;,
+                                                &quot;top&quot;: 0,
+                                                &quot;left&quot;: 0,
+                                                &quot;right&quot;: 0,
+                                                &quot;bottom&quot;: 0,
+                                                &quot;z-index&quot;: 10,
+                                                &quot;overflow&quot;: &quot;hidden&quot;,
+                                                &quot;width&quot;: fullWidth,
+                                                &quot;height&quot;: winHeight
+                                            })
+                            
+                                            $item.addClass(param.alignClassName || &quot;bui-box-center&quot;).css(&quot;height&quot;, winHeight);
+                                        } else {
+                            
+                                            //初始化宽度 宽度默认为全屏,zoom 只设置高度的缩放
+                                            $id.css({
+                                                &quot;position&quot;: &quot;relative&quot;,
+                                                &quot;overflow&quot;: &quot;hidden&quot;,
+                                                &quot;width&quot;: fullWidth,
+                                                &quot;height&quot;: slideHeightRem
+                                            });
+                            
+                                            // $childrenParent.height(slideHeight);
+                                            $item.addClass(param.alignClassName).height(slideMainHeightRem);
+                                        }
+                            
+                                        // 自动高度,内容撑开
+                                        if (param.autoheight) {
+                                            $id.addClass(&quot;bui-slide-autoheight&quot;);
+                                        }
+                            
+                                        //自动分页
+                                        if (param.autopage) {
+                                            var pages = getPages();
+                                            var initIndex = $children.find(&quot;.active&quot;).index() + 1;
+                                            var pageHtml = templatePage(pages, initIndex);
+                            
+                                            $id.children(&quot;.bui-slide-head&quot;).remove();
+                            
+                                            $id.append(pageHtml);
+                            
+                                            $menuChildren = $id.find(param.menu).eq(0).children();
+                                        }
+                                    }
+                            
+                                    // 获取分页
+                                    /**
+                                     * 获取有多少个子元素
+                                     *  @method getPages
+                                     *  @since 1.5.2
+                                     *  @return {number} [返回多少个]
+                                     *  @chainable
+                                     */
+                                    function getPages() {
+                                        var length = cacheLength;
+                                        var visibleNum = parseInt(length / param.visibleNum);
+                                        var scrollNum = parseInt(length / param.scrollNum);
+                                        var visibleItem = param.visibleNum == 1 ? visibleNum : visibleNum + 1;
+                                        var scrollItem = param.scrollNum == 1 ? scrollNum : scrollNum + 1;
+                                        // 如果滚动个数为1, 那分页数应该是个数除以可视个数+1
+                                        var pages = param.scrollNum == 1 || param.scrollNum == length ? visibleItem : scrollItem;
+                                        pages = param.loop ? pages + 2 : pages;
+                                        return pages;
+                                    }
+                            
+                                    /**
+                                     * 返回新的数据，有传 data 参数的时候才会有效
+                                     *  @method getData
+                                     *  @since 1.6.6
+                                     *  @return {array} [返回数组]
+                                     *  @chainable
+                                     * 
+                                     * let data = uiTab.getData();
+                                     */
+                                    function getData() {
+                            
+                                        return param.data;
+                                    }
+                            
+                                    /**
+                                     * 返回当前的数据，有传 data 参数的时候才会有效
+                                     *  @method getItem
+                                     *  @since 1.6.7
+                                     *  @param {number|string} [index] [ 获取第几个的数据，默认为当前tab的索引,字符串则获取id比对的数据 ]
+                                     *  @return {object} [返回数组]
+                                     *  @chainable
+                                     * 
+                                     * let data = uiSlide.getItem();
+                                     */
+                                    function getItem(currentIndex) {
+                                        if (typeof currentIndex === &quot;string&quot;) {
+                                            return ui.array.get(param.data, currentIndex, &quot;id&quot;);
+                                        }
+                                        let cindex = typeof currentIndex === &#x27;number&#x27; ? currentIndex : index();
+                                        let item = param.data[cindex];
+                                        return item;
+                                    }
+                            
+                                    var scrollLeft,
+                                        scrollHeight;
+                            
+                                    function onstart(e) {
+                            
+                                        isTouchstart = true;
+                                        var targetTouches = e.touches ? e.touches[0] : e;
+                            
+                                        touch.x1 = targetTouches.clientX;
+                                        touch.y1 = targetTouches.clientY;
+                                        touch.direction = &quot;&quot;;
+                                        var canTouchNext = param.onBeforeTouchstart &amp;&amp; param.onBeforeTouchstart.call(module, e, touch);
+                                        if (canTouchNext === false) {
+                                            return false;
+                                        }
+                                        // 排除掉某个样式
+                                        if (param.stopHandle &amp;&amp; ui.unit.checkTargetInclude(e.target, param.stopHandle)) {
+                                            isTouchstart = false;
+                                            return;
+                                        }
+                                        scrollLeft = -nowIndex * movingDistance;
+                                        scrollHeight = -nowIndex * movingDistance;
+                            
+                                        // 多手指操作不执行
+                                        if ((e.touches &amp;&amp; e.touches.length &gt; 1) || (e.scale &amp;&amp; e.scale !== 1)) {
+                                            move(direction == &quot;x&quot; ? scrollLeft : scrollHeight);
+                                            return;
+                                        }
+                            
+                                        // 如果是自动播放,需要先清除原来的时间重新计算
+                                        if (isAutoPlay) {
+                            
+                                            stop();
+                                            // 重新修改自动播放状态
+                                            isAutoPlay = true;
+                                        }
+                            
+                                        trigger.call(module, &quot;touchstart&quot;, e, touch);
+                            
+                                        //开始的时候计算
+                                        param.onStart &amp;&amp; param.onStart.call(module, e, touch, module);
+                            
+                                        // 导致slide 里面的元素的点击,需要触发2次
+                                        // e.stopPropagation();
+                                        isTouchstart = true;
+                            
+                                        // pc 的滑动事件解决跟其它控件的嵌套冲突
+                                        ui.platform.isPC() &amp;&amp; e.stopPropagation();
+                                        // pc 的图片有默认事件,会导致PC无法拖动
+                                        ui.platform.isPC() &amp;&amp; e.target.tagName === &quot;IMG&quot; &amp;&amp; e.preventDefault();
+                                    }
+                            
+                                    function onmove(e) {
+                                        // pc 不会频繁触发move
+                            
+                                        //当前坐标
+                                        if (!isTouchstart) {
+                                            return;
+                                        }
+                                        var targetTouches = e.touches ? e.touches[0] : e;
+                            
+                                        //当屏幕有多个touch或者页面被缩放过，就不执行move操作
+                                        if ((e.touches &amp;&amp; e.touches.length &gt; 1) || (e.scale &amp;&amp; e.scale !== 1)) {
+                                            move(direction == &quot;x&quot; ? scrollLeft : scrollHeight);
+                                            return;
+                                        }
+                            
+                                        isTouchmove = true;
+                            
+                                        touch.x2 = targetTouches.clientX;
+                                        touch.y2 = targetTouches.clientY;
+                            
+                                        //第一次下拉的方向
+                                        if (!touch.direction) {
+                                            //方向
+                                            touch.direction = ui.swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2);
+                            
+                                        }
+                            
+                            
+                                        var canTouchNext = param.onBeforeTouchmove &amp;&amp; param.onBeforeTouchmove.call(module, e, touch);
+                                        if (canTouchNext === false) {
+                                            return false;
+                                        }
+                                        //阻止默认事件,除了滚动条,解决红米不触发end问题
+                                        if (touch.direction === &quot;swipeleft&quot; || touch.direction === &quot;swiperight&quot;) {
+                                            e.preventDefault();
+                                            // 滑动过程中只对左右做冒泡处理, 如果上下也处理,会影响到 pullrefresh
+                                            e.stopPropagation();
+                                        }
+                            
+                                        trigger.call(module, &quot;touchmove&quot;, e, touch);
+                            
+                                        try {
+                                            // 如果是纵向,并且可以滚动的话,需要针对内容滚动触发做处理 PC无需这样处理
+                                            if (!ui.platform.isPC() &amp;&amp; direction == &quot;y&quot; &amp;&amp; param.scroll) {
+                            
+                                                var $itemScroll = $(e.target).closest(&quot;.active&quot;),
+                                                    itemScrollTop = $itemScroll[0].scrollTop || 0,
+                                                    itemScrollHeight = $itemScroll[0].scrollHeight || 0,
+                                                    itemHeight = $itemScroll[0].offsetHeight || 0,
+                            
+                                                    canSwipeDownWithScroll = false,
+                                                    canSwipeUpWithScroll = false;
+                            
+                                                if (touch.direction === &quot;swipedown&quot; &amp;&amp; itemScrollTop &gt; 1) {
+                                                    isTouchmove = false;
+                                                    return;
+                                                }
+                                                if (touch.direction === &quot;swipeup&quot; &amp;&amp; (itemScrollHeight - itemScrollTop - itemHeight) &gt;= 2) {
+                            
+                                                    isTouchmove = false;
+                                                    return;
+                                                }
+                            
+                                            }
+                                        } catch (e) { }
+                            
+                            
+                                        deltaX = touch.x2 - touch.x1,
+                                            deltaY = touch.y2 - touch.y1;
+                            
+                                        dragConfig[&quot;x&quot;][&quot;move&quot;] = scrollLeft + deltaX;
+                                        dragConfig[&quot;x&quot;][&quot;absDelta&quot;] = Math.abs(deltaX);
+                            
+                                        dragConfig[&quot;y&quot;][&quot;move&quot;] = scrollHeight + deltaY;
+                                        dragConfig[&quot;y&quot;][&quot;absDelta&quot;] = Math.abs(deltaY);
+                            
+                                        var pages = getPages();
+                                        if (touch.direction === dragConfig[direction][&quot;swipeDir&quot;] || touch.direction === dragConfig[direction][&quot;swipeDir2&quot;]) {
+                                            // 延迟显示的滑动
+                                            if (param.delay &amp;&amp; dragConfig[direction][&quot;absDelta&quot;] &gt; param.distance) {
+                                                move(dragConfig[direction][&quot;move&quot;], &quot;none&quot;);
+                                            }
+                                            //拖动效果马上可见
+                                            if (!param.delay) {
+                                                // 是否在第1页跟最后一页需要缓冲效果
+                                                if (!param.bufferEffect) {
+                                                    if (nowIndex == 0 &amp;&amp; pages &gt; 1 &amp;&amp; (touch.direction == &quot;swipeleft&quot; || touch.direction == &quot;swipeup&quot;)) {
+                                                        move(dragConfig[direction][&quot;move&quot;], &quot;none&quot;);
+                                                    } else if (nowIndex == (pages - 1) &amp;&amp; pages &gt; 1 &amp;&amp; (touch.direction == &quot;swiperight&quot; || touch.direction == &quot;swipedown&quot;)) {
+                                                        move(dragConfig[direction][&quot;move&quot;], &quot;none&quot;);
+                                                    } else if (nowIndex &gt; 0 &amp;&amp; nowIndex &lt; (pages - 1) &amp;&amp; pages &gt; 1) {
+                                                        move(dragConfig[direction][&quot;move&quot;], &quot;none&quot;);
+                                                    }
+                                                } else {
+                                                    move(dragConfig[direction][&quot;move&quot;], &quot;none&quot;);
+                                                }
+                            
+                                                e.preventDefault();
+                            
+                                            }
+                                            //移动过程中计算
+                                            param.onMove &amp;&amp; param.onMove.call(module, e, touch, module);
+                                        }
+                                    }
+                                    //松开手指以后执行
+                                    function onend(e) {
+                                        isTouchstart = false;
+                            
+                                        trigger.call(module, &quot;touchend&quot;, e, touch);
+                            
+                                        switch (touch.direction) {
+                                            case &quot;swiperight&quot;:
+                                            case &quot;swipedown&quot;:
+                                                // 目标的索引是多少
+                                                e.currentIndex = nowIndex - 1;
+                                                break;
+                                            case &quot;swipeleft&quot;:
+                                            case &quot;swipeup&quot;:
+                                                // 目标的索引是多少
+                                                e.currentIndex = nowIndex + 1;
+                                                break;
+                                        }
+                            
+                                        // 上一个
+                                        e.prevIndex = nowIndex;
+                                        var canTouchNext = param.onBeforeTouchend &amp;&amp; param.onBeforeTouchend.call(module, e, touch);
+                                        if (canTouchNext === false) {
+                                            return false;
+                                        }
+                                        if (!isTouchmove) {
+                                            return;
+                                        }
+                            
+                                        //当前坐标
+                            
+                                        deltaX = touch.x2 - touch.x1,
+                                            deltaY = touch.y2 - touch.y1;
+                            
+                                        // 解决pc不小心滑动的距离太小,没触发动画,导致点击失效问题;
+                                        if (Math.abs(deltaX) &lt; 5) {
+                                            isTouchmove = false;
+                                        }
+                            
+                                        dragConfig[&quot;x&quot;][&quot;delta&quot;] = scrollLeft;
+                                        dragConfig[&quot;x&quot;][&quot;absDelta&quot;] = Math.abs(deltaX);
+                            
+                                        dragConfig[&quot;y&quot;][&quot;delta&quot;] = scrollHeight;
+                                        dragConfig[&quot;y&quot;][&quot;absDelta&quot;] = Math.abs(deltaY);
+                            
+                            
+                                        whichEvent = &quot;touchend&quot;;
+                            
+                                        // 防止 pullrefresh 触发 tab onBeforeTo
+                                        if (param.direction == &quot;x&quot; &amp;&amp; (touch.direction == &quot;swipeleft&quot; || touch.direction == &quot;swiperight&quot;)) {
+                                            var canTo = param.onBeforeTo &amp;&amp; param.onBeforeTo.call(module, e);
+                                        } else if (param.direction == &quot;y&quot; &amp;&amp; (touch.direction == &quot;swipeup&quot; || touch.direction == &quot;swipedown&quot;)) {
+                                            var canTo = param.onBeforeTo &amp;&amp; param.onBeforeTo.call(module, e);
+                                        }
+                                        if (canTo === false) {
+                                            // 还原回去
+                                            move(dragConfig[direction][&quot;delta&quot;]);
+                            
+                                            // 防止安卓4.3触发click, 还得防止冒泡导致pullrefresh的下拉刷新不触发end事件
+                                            if (touch.direction == &quot;swipeleft&quot; || touch.direction == &quot;swiperight&quot;) {
+                                                e.stopPropagation();
+                                            }
+                                            //保存最后的位置
+                                            lastY = lastY + (touch.y2 - touch.y1);
+                                            lastX = lastX + (touch.x2 - touch.x1);
+                            
+                                            touch.lastX = lastX;
+                                            touch.lastY = lastY;
+                                            //清空滑动缓存
+                                            touch = {
+                                                x1: 0,
+                                                x2: 0,
+                                                y1: 0,
+                                                y2: 0,
+                                                direction: &quot;&quot;
+                                            };
+                            
+                                            isTouchstart = false;
+                            
+                                            // 如果是PC,这个状态在动画结束才能修改, 避免跟点击冲突
+                                            !ui.platform.isPC() &amp;&amp; (isTouchmove = false);
+                            
+                                            transitionEnd();
+                            
+                                            return false;
+                                        }
+                            
+                            
+                                        // 暂停
+                                        videoPause();
+                                        // 如果是自动播放,需要先清除原来的时间重新计算
+                            
+                                        if (dragConfig[direction][&quot;absDelta&quot;] &gt; param.distance) {
+                            
+                            
+                                            slide.call(this, e, touch, dragConfig);
+                                            //结束的时候回调
+                                            param.onEnd &amp;&amp; param.onEnd.call(module, e, touch, module);
+                            
+                                        } else if (dragConfig[direction][&quot;absDelta&quot;] &lt; param.distance) {
+                            
+                                            move(dragConfig[direction][&quot;delta&quot;]);
+                                        }
+                            
+                                        // 继续播放
+                                        videoPlay();
+                            
+                                        if (isAutoPlay) {
+                                            autoPlay();
+                                        }
+                            
+                                        // 防止安卓4.3触发click, 还得防止冒泡导致pullrefresh的下拉刷新不触发end事件
+                                        if (touch.direction == &quot;swipeleft&quot; || touch.direction == &quot;swiperight&quot;) {
+                                            e.stopPropagation();
+                                        }
+                            
+                                        //保存最后的位置
+                                        lastY = lastY + (touch.y2 - touch.y1);
+                                        lastX = lastX + (touch.x2 - touch.x1);
+                            
+                                        touch.lastX = lastX;
+                                        touch.lastY = lastY;
+                                        //清空滑动缓存
+                                        touch = {
+                                            x1: 0,
+                                            x2: 0,
+                                            y1: 0,
+                                            y2: 0,
+                                            direction: &quot;&quot;
+                                        };
+                            
+                                        isTouchstart = false;
+                                        // 如果是PC,这个状态在动画结束才能修改, 避免跟点击冲突
+                                        !ui.platform.isPC() &amp;&amp; (isTouchmove = false);
+                            
+                                        transitionEnd();
+                            
+                                    }
+                            
+                            
+                                    //水平滚动
+                                    function slide(e, touch, dragConfig) {
+                                        // 重新获取选择器
+                                        getSelector();
+                            
+                                        //当前的焦点
+                                        nowIndex = $children.children(&quot;.active&quot;).index();
+                                        var index;
+                                        if (touch.direction == dragConfig[direction].swipeDir) {
+                                            var length = $item.length;
+                                            var leftItem = length - param.visibleNum;
+                                            var pages = length % param.scrollNum != 0 ? leftItem + 1 : leftItem / param.scrollNum + 1;
+                                            //是否最后一页
+                                            if (nowIndex &gt;= (pages - 1)) {
+                                                index = nowIndex;
+                            
+                                                dragConfig[direction][&quot;delta&quot;] = -index * dragConfig[direction][&quot;width&quot;];
+                                                move(dragConfig[direction][&quot;delta&quot;]);
+                            
+                                                nowIndex = index;
+                                                //添加激活的状态
+                                                addStatus(index);
+                            
+                                                trigger.call(module, &quot;last&quot;, index);
+                                            } else {
+                                                index = nowIndex + 1;
+                            
+                                                dragConfig[direction][&quot;delta&quot;] = -index * dragConfig[direction][&quot;width&quot;];
+                                                move(dragConfig[direction][&quot;delta&quot;]);
+                            
+                                                nowIndex = index;
+                                                //添加激活的状态
+                                                addStatus(index);
+                            
+                            
+                                                if (option.autoload) {
+                                                    loadCurrent(nowIndex);
+                                                } else {
+                                                    var $currentMenu = $item.eq(nowIndex);
+                                                    if (option.loop &amp;&amp; nowIndex &gt; cacheLength) {
+                                                        return;
+                                                    }
+                                                    trigger.call(module, &quot;to&quot;, index);
+                                                }
+                                            }
+                                            trigger.call(module, &quot;next&quot;, index);
+                            
+                                        } else if (touch.direction == dragConfig[direction].swipeDir2) {
+                            
+                                            //是否是第一个
+                                            if (nowIndex &gt; 0) {
+                                                index = nowIndex - 1;
+                            
+                                                dragConfig[direction][&quot;delta&quot;] = -index * dragConfig[direction][&quot;width&quot;];
+                                                move(dragConfig[direction][&quot;delta&quot;]);
+                            
+                                                nowIndex = index;
+                                                //添加激活的状态
+                                                addStatus(index);
+                            
+                                                if (option.autoload) {
+                                                    loadCurrent(nowIndex);
+                                                } else {
+                                                    var $currentMenu = $item.eq(nowIndex);
+                                                    if (option.loop &amp;&amp; nowIndex == 0) {
+                                                        return;
+                                                    }
+                                                    trigger.call(module, &quot;to&quot;, index);
+                                                }
+                                                trigger.call(module, &quot;prev&quot;, index);
+                                            } else {
+                                                index = nowIndex;
+                            
+                                                dragConfig[direction][&quot;delta&quot;] = -index * dragConfig[direction][&quot;width&quot;];
+                                                move(dragConfig[direction][&quot;delta&quot;]);
+                            
+                                                nowIndex = index;
+                                                //添加激活的状态
+                                                addStatus(index);
+                                                //事件在后面才不会被覆盖
+                                                trigger.call(module, &quot;first&quot;, index);
+                            
+                                            }
+                            
+                                        }
+                            
+                                    }
+                            
+                                    //位移动画
+                                    function move(width, transition) {
+                                        //默认时间
+                                        var time = param.transition,
+                                            transition = transition || &quot;all &quot; + time + &quot;ms&quot;,
+                                            width = width || 0;
+                            
+                                        switch (direction) {
+                                            case &quot;x&quot;:
+                                                // translateZ(0) 会导致中兴z802t 的下拉一次,上拉滚动加载只请求一次失效
+                                                transform(width + &quot;px&quot;, 0, transition, $childrenParent);
+                                                break;
+                                            case &quot;y&quot;:
+                                                transform(0, width + &quot;px&quot;, transition, $childrenParent);
+                                                break;
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    function transform(x, y, transition, ele) {
+                            
+                                        var yRem = y || 0;
+                                        if (direction == &quot;y&quot; &amp;&amp; param.zoom &amp;&amp; String(y).indexOf(&quot;%&quot;) &lt;= -1) {
+                                            yRem = parseInt(y) / 100 + &quot;rem&quot;;
+                                        }
+                            
+                                        var transition,
+                                            ele = ele || $id, //jquery 对象
+                                            x = x || 0,
+                                            xRem = x,
+                                            xVal = String(x).indexOf(&quot;%&quot;) &gt; -1 ? String(x) : xRem,
+                                            yVal = String(y).indexOf(&quot;%&quot;) &gt; -1 ? String(y) : yRem;
+                                        if (typeof transition === &quot;number&quot;) {
+                                            transition = &quot;all &quot; + transition + &quot;ms&quot;;
+                                        } else {
+                                            transition = transition || &quot;all 300ms&quot;;
+                                        }
+                                        try {
+                                            // translateZ(0) 会导致中兴z802t 的下拉一次,上拉滚动加载只请求一次失效
+                                            ele.css({
+                                                &quot;-webkit-transition&quot;: transition,
+                                                &quot;transition&quot;: transition,
+                                                &quot;-webkit-transform&quot;: &quot;translate(&quot; + xVal + &quot;,&quot; + yVal + &quot;)&quot;,
+                                                &quot;transform&quot;: &quot;translate(&quot; + xVal + &quot;,&quot; + yVal + &quot;)&quot;
+                                            });
+                            
+                                        } catch (e) {
+                                            console.log(e.message)
+                                        }
+                                    }
+                            
+                                    function transitionEnd(callback) {
+                            
+                                        //清除动画过渡时间,下次拉动才不会有延迟现象
+                                        $childrenParent.one(&#x27;webkitTransitionEnd&#x27;, function () {
+                            
+                            
+                                            $childrenParent.css({
+                                                &quot;-webkit-transition&quot;: &quot;none&quot;,
+                                                &quot;transition&quot;: &quot;none&quot;
+                                            });
+                                            // 解决pc点击事件跟滑动事件冲突
+                                            isTouchmove = false;
+                                            callback &amp;&amp; callback.call(module, nowIndex);
+                                            trigger.call(module, &quot;afterto&quot;, nowIndex);
+                                        });
+                                    }
+                            
+                                    /**
+                                     * 跳到第几个
+                                     *  @method to
+                                     *  @param {number} index [如果slide的loop:false, 索引从0开始, loop:true , 索引从1开始, 只有通过 index()方法获取索引0代表第1个.  ]
+                                     *  @param {string} [transition]   &quot;all 300ms&quot;(不传则默认) | &quot;none&quot;(不要动画) | &quot;all 300ms ease-out&quot; (可以加上缓冲效果) 
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //跳到第2个
+                                        uiSlide.to(1);
+                            
+                                     */
+                                    function to(name, time, needEvent) {
+                            
+                                        var _config = {
+                                            index: 0,
+                                            name: &quot;&quot;,
+                                            param: null,
+                                            transition: &quot;&quot;,
+                                            callback: typeof time === &quot;function&quot; ? time : null,
+                                            needTrigger: needEvent == false ? false : true
+                                        };
+                            
+                                        var opts = _config, transition, callback;
+                                        // 兼容旧版的参数处理
+                                        if (typeof name === &quot;object&quot;) {
+                                            var opts = $.extend(true, _config, name);
+                                            name = opts.name || opts.index || 0;
+                                            transition = time || opts.transition;
+                                            needEvent = opts.needTrigger;
+                                            callback = typeof time === &quot;function&quot; ? time : opts.callback;
+                                        } else {
+                                            name = typeof name !== &quot;undefined&quot; ? name : opts.name;
+                                            transition = typeof time == &quot;string&quot; ? time : opts.transition;
+                                            needEvent = needEvent == false ? false : true;
+                                            // 传过去的参数
+                                            typeof time === &quot;object&quot; ? (opts.param = time) : (opts.transition = time || opts.transition);
+                                            opts.name = name;
+                                            opts.needTrigger = needEvent;
+                                            callback = opts.callback = typeof time === &quot;function&quot; ? time : _config.callback;
+                                        }
+                            
+                                        // 会多次执行
+                                        // whichEvent = &quot;&quot; 的时候触发，避免触发2次
+                                        // var canTo = !whichEvent &amp;&amp; param.onBeforeTo &amp;&amp; param.onBeforeTo.call(module, opts);
+                            
+                                        // if (canTo === false) {
+                                        //     return false;
+                                        // }
+                            
+                                        // 重新获取选择器
+                                        getSelector();
+                            
+                            
+                                        var index = 0;
+                                        // var callback = null;
+                                        var needEvent = needEvent == false ? false : true;
+                                        if (typeof name === &quot;string&quot; &amp;&amp; name.indexOf(&quot;.html&quot;) &gt; -1) {
+                                            var attrs = [];
+                                            $menuChildren.each(function (i, item) {
+                                                var attr = $(item).attr(&quot;href&quot;) || undefined;
+                                                attrs[i] = attr;
+                                                if (attr == name) {
+                                                    index = i;
+                                                }
+                                            })
+                            
+                                        } else {
+                                            index = parseInt(name);
+                                        }
+                            
+                                        // if (typeof transition === &quot;function&quot;) {
+                                        //     callback = transition;
+                                        //     transition = &quot;&quot;;
+                                        // }
+                            
+                                        var _self = this;
+                            
+                                        var movePosition = {
+                                            x: {
+                                                transform: -index * parseFloat(movingDistance)
+                                            },
+                                            y: {
+                                                transform: -index * parseFloat(movingDistance)
+                                            }
+                                        }
+                            
+                                        var pages = getPages();
+                            
+                                        // 暂停所有视频
+                                        videoPause();
+                                        // 显示可视个数以后,大于最大页数以后不做处理
+                                        // if (index &gt;= pages || index &lt; 0) {
+                                        if ((param.visibleNum == 1 &amp;&amp; index &gt;= pages) || index &lt; 0) {
+                                            return false;
+                                        }
+                            
+                            
+                                        move(movePosition[direction][&quot;transform&quot;], transition);
+                            
+                            
+                                        //更新状态
+                                        nowIndex = index;
+                            
+                                        addStatus(index);
+                            
+                                        // 播放当前的视频
+                                        videoPlay();
+                                        //如果是自动播放为true,跳转以后自动播放要继续
+                                        if (isAutoPlay) {
+                                            autoPlay();
+                                        }
+                            
+                                        // 加载远程地址
+                                        if (option.autoload) {
+                                            loadCurrent(nowIndex);
+                                        } else {
+                                            // 初始化的时候,第一次是不触发的
+                                            var $currentMenu = $item.eq(nowIndex);
+                            
+                                            if (!needEvent) {
+                                                return;
+                                            }
+                            
+                                            trigger.call(module, &quot;to&quot;, index, opts.param);
+                            
+                                            opts.callback &amp;&amp; opts.callback.call(module, index, opts.param);
+                                        }
+                                        
+                                        // 执行最后的动画
+                                        transitionEnd(opts.callback);
+                            
+                                        whichEvent = &quot;&quot;;
+                                        return this;
+                            
+                                    }
+                                    //自动播放
+                                    function autoPlay(time) {
+                                        var time = time || param.interval;
+                            
+                                        stop();
+                            
+                                        //修改自动播放的状态,在拖拽时时间才会重新计算
+                                        isAutoPlay = true;
+                            
+                                        var index = nowIndex;
+                                        interPlay = setInterval(function () {
+                                            var pages = getPages();
+                            
+                                            if (index &gt;= 0 &amp;&amp; index &lt; pages - 1) {
+                                                index = index + 1;
+                                            } else {
+                                                index = 0;
+                                            }
+                            
+                                            to(index);
+                            
+                                        }, time);
+                            
+                                        trigger.call(module, &quot;play&quot;);
+                            
+                                    }
+                            
+                                    /**
+                                    * 停止自动播放
+                                    *  @method stop
+                                    *  @chainable
+                                    *  @example
+                            
+                                       //自动播放
+                                       uiSlide.stop();
+                            
+                                    */
+                                    function stop(argument) {
+                            
+                                        if (interPlay) {
+                                            try {
+                            
+                                                window.clearInterval(interPlay);
+                            
+                                                //更新自动播放的状态
+                                                isAutoPlay = false;
+                            
+                                                trigger.call(module, &quot;stop&quot;);
+                            
+                                                // 有视频的时候，视频也要停止播放
+                                                videoPause();
+                            
+                                            } catch (e) { }
+                                        }
+                            
+                                        return this;
+                                    }
+                                    // 视频暂停
+                                    function videoPause() {
+                                        $id.find(&quot;.bui-slide-video video&quot;).each(function (item, i) {
+                            
+                                            this.pause();
+                                        })
+                                    }
+                                    // 视频暂停
+                                    function videoPlay() {
+                            
+                                        let i = index();
+                                        let uindex = param.loop ? i + 1 : i;
+                                        let $videoItem = $id.find(&quot;.bui-slide-video video&quot;).eq(uindex);
+                                        let autoplay = param.data &amp;&amp; param.data[i] &amp;&amp; param.data[i][&#x27;autoplay&#x27;] ? true : false;
+                            
+                                        // 只有开启静音才会自动播放
+                                        autoplay &amp;&amp; $videoItem.length &amp;&amp; $videoItem[0].play();
+                            
+                                    }
+                            
+                                    /**
+                                     * 自动播放
+                                     *  @method start
+                                     *  @param {number} time [重新设置循环时间]
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //自动播放
+                                        uiSlide.start();
+                            
+                                     */
+                                    function start(time) {
+                                        autoPlay(time);
+                                    }
+                            
+                                    /**
+                                     * 当前索引
+                                     *  @method index
+                                     *  @since 1.3.0
+                                     *  @chainable
+                                     *  @example
+                            
+                                        var index = uiSlide.index();
+                            
+                                     */
+                                    function index() {
+                            
+                                        return param.loop ? nowIndex - 1 : nowIndex;
+                                    }
+                            
+                                    /**
+                                     * 上一个
+                                     *  @method prev
+                                     *  @since 1.3.0
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiSlide.prev();
+                            
+                                     */
+                                    function prev(opt) {
+                                        var _opt = $.extend(true, {
+                                            beforeLoad: null,
+                                            loaded: null,
+                                        }, opt);
+                            
+                                        var canNext = _opt.beforeLoad &amp;&amp; _opt.beforeLoad.call(module);
+                            
+                                        if (canNext === false) {
+                                            return this;
+                                        }
+                            
+                                        var index = nowIndex - 1;
+                            
+                                        // console.log(index, cacheLength - param.visibleNum)
+                                        if (param.loop &amp;&amp; index &lt; 1) {
+                                            index = parseInt(cacheLength / param.scrollNum);
+                                        }
+                                        _opt.loaded ? to(index, _opt.loaded) : to(index);
+                                        trigger.call(module, &quot;prev&quot;, index);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 下一个
+                                     *  @method next
+                                     *  @since 1.3.0
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiSlide.next();
+                            
+                                     */
+                                    function next(opt) {
+                                        var _opt = $.extend(true, {
+                                            beforeLoad: null,
+                                            loaded: null,
+                                        }, opt);
+                            
+                                        var canNext = _opt.beforeLoad &amp;&amp; _opt.beforeLoad.call(module);
+                                        if (canNext === false) {
+                                            return this;
+                                        }
+                            
+                                        var index = nowIndex + 1;
+                            
+                                        if (param.loop &amp;&amp; index &gt; parseInt(cacheLength / param.scrollNum) + 1) {
+                                            index = 1;
+                                        }
+                                        _opt.loaded ? to(index, _opt.loaded) : to(index);
+                                        trigger.call(module, &quot;next&quot;, index);
+                            
+                                        return this;
+                                    }
+                                    // 重新获取选择器
+                                    function getSelector(option) {
+                                        option = param;
+                                        //菜单选择器如果传# 代表这个菜单是独立的,可以跟切换的内容分开
+                                        $menu = option.menu.indexOf(&quot;#&quot;) == 0 ? ui.obj(option.menu) : $id.find(option.menu).eq(0);
+                            
+                                        $menuChildren = $menu.children();
+                            
+                                        $children = $id.find(option.children).eq(0);
+                                        $childrenParent = $children.parent();
+                            
+                                        //单个滚动的内容
+                                        $item = $children.children();
+                                    }
+                            
+                                    //添加当前状态
+                                    function addStatus(index) {
+                                        index = index || 0;
+                            
+                            
+                                        $item.removeClass(&#x27;active&#x27;);
+                                        $item.eq(index).addClass(&#x27;active&#x27;);
+                            
+                            
+                                        $menuChildren.removeClass(&#x27;active&#x27;);
+                                        $menuChildren.eq(index).addClass(&#x27;active&#x27;);
+                            
+                                    }
+                            
+                                    /**
+                                    * 不允许拖拽
+                                    *  @method lock
+                                    *  @chainable
+                                    *  @example
+                            
+                                       uiSlide.lock();
+                            
+                                    */
+                                    function lock() {
+                                        var eventTouch = getEvent();
+                                        //绑定拖拽
+                                        $id.off(eventTouch.touchstart, param.children, onstart)
+                                            .off(eventTouch.touchmove, param.children, onmove)
+                                            .off(eventTouch.touchend, param.children, onend)
+                                            .off(eventTouch.touchcancel);
+                            
+                            
+                                        trigger.call(module, &quot;lock&quot;);
+                            
+                                        return this;
+                                    }
+                            
+                            
+                                    // 获取对应的PC事件
+                                    function getEvent() {
+                            
+                                        // 事件类型
+                                        var eventTouch = {
+                                            touchstart: &quot;touchstart&quot;,
+                                            touchmove: &quot;touchmove&quot;,
+                                            touchend: &quot;touchend&quot;,
+                                            touchcancel: &quot;touchcancel&quot;,
+                                        }
+                                        if (ui.platform.isPC()) {
+                                            eventTouch = {
+                                                touchstart: &quot;mousedown&quot;,
+                                                touchmove: &quot;mousemove&quot;,
+                                                touchend: &quot;mouseup&quot;,
+                                                touchcancel: &quot;mouseleave&quot;,
+                                            }
+                                        }
+                                        return eventTouch;
+                                    }
+                                    /**
+                                     * 允许拖拽
+                                     *  @method unlock
+                                     *  @chainable
+                                     *  @example
+                            
+                                        uiSlide.unlock();
+                            
+                                     */
+                                    function unlock(argument) {
+                            
+                                        var eventTouch = getEvent();
+                            
+                                        //绑定拖拽
+                                        $id.on(eventTouch.touchstart, param.children, onstart)
+                                            .on(eventTouch.touchmove, param.children, onmove)
+                                            .on(eventTouch.touchend, param.children, onend)
+                                            .on(eventTouch.touchcancel, function () {
+                                                isTouchstart = false;
+                                                isTouchmove = false;
+                                                // 循环索引+1
+                                                var toindex = param.loop ? index() + 1 : index();
+                            
+                                                to(toindex);
+                                                // !ui.platform.isPC() &amp;&amp; move(direction == &quot;x&quot; ? scrollLeft : scrollHeight);
+                                            });
+                            
+                                        trigger.call(module, &quot;unlock&quot;);
+                            
+                            
+                                        return this;
+                                    }
+                            
+                                    //自动分页
+                                    function templatePage(data, index) {
+                                        var html = &#x27;&#x27;;
+                                        var index = index || 1;
+                                        var datas = data; //param.loop ? data + 2 : data;
+                                        var i;
+                                        html += &#x60;&lt;div class=&quot;bui-slide-head bui-align-${param.alignPage}&quot;&gt;&#x60;;
+                                        html += &#x27;&lt;ul &gt;&#x27;;
+                                        for (i = 1; i &lt; Number(datas) + 1; i++) {
+                                            html += &#x27;&lt;li &#x27; + (i == index ? &#x27;class=&quot;active&quot;&#x27; : &quot;&quot;) + &#x27;&gt;&#x27; + i + &#x27;&lt;/li&gt;&#x27;;
+                                        }
+                                        html += &#x27;&lt;/ul &gt;&#x27;;
+                                        html += &#x27;&lt;/div &gt;&#x27;;
+                            
+                                        return html;
+                                    }
+                            
+                                    // 动态加载当前页面
+                                    function loadCurrent(index) {
+                                        var $currentItem = $item.eq(index);
+                                        var $currentMenu = $menuChildren.eq(index);
+                                        var href = $currentMenu.attr(&quot;href&quot;) || &quot;&quot;;
+                            
+                                        if (ui.array.compare(cacheIndex, index)) {
+                                            // 如果存在也会触发to事件,但不触发load事件
+                                            trigger.call(module, &quot;to&quot;, index, &quot;200&quot;);
+                                            return false;
+                                        }
+                            
+                                        if (param.autoload) {
+                                            if (href) {
+                                                // 解析相对路径
+                                                href = ui.unit.resolvePath(href);
+                                                if (href in urlCache) {
+                                                    var cacheHtml = urlCache[href];
+                                                    // 变局部样式
+                                                    var hid = ui.history.getLast().id;
+                                                    cacheHtml = cacheHtml.replace(/#module\.id/g, &quot;#&quot; + hid);
+                            
+                                                    $currentItem.html(cacheHtml);
+                                                    // 增加tab缓存
+                                                    cacheIndex.push(index);
+                            
+                                                    !firstInit &amp;&amp; trigger.call(module, &quot;load&quot;, index, status);
+                            
+                                                    // 第一次不触发to事件
+                                                    !firstInit &amp;&amp; trigger.call(module, &quot;to&quot;, index, status);
+                                                    firstInit = false;
+                                                } else {
+                                                    urlCache[href] = &quot;&quot;;
+                                                    uiLoading &amp;&amp; uiLoading.show();
+                            
+                                                    loader &amp;&amp; loader.import(href, function (res) {
+                                                        // 创建成功以后执行回调
+                                                        // 缓存内容
+                                                        res = ui.unit.handleContent(res);
+                                                        urlCache[href] = res;
+                            
+                                                        // 变局部样式
+                                                        var hid = ui.history.getLast().id;
+                                                        res = res.replace(/#module\.id/g, &quot;#&quot; + hid);
+                            
+                                                        $currentItem.html(res);
+                                                        // 增加tab缓存
+                                                        cacheIndex.push(index);
+                            
+                                                        trigger.call(module, &quot;load&quot;, index, status);
+                            
+                                                        // 第一次不触发to事件
+                                                        !firstInit &amp;&amp; trigger.call(module, &quot;to&quot;, index, status);
+                                                        firstInit = false;
+                            
+                                                        uiLoading &amp;&amp; uiLoading.hide();
+                                                    }, function (res, status) {
+                                                        trigger.call(module, &quot;loadfail&quot;, index, status);
+                                                        uiLoading &amp;&amp; uiLoading.hide();
+                                                    });
+                                                }
+                            
+                                            } else {
+                                                // 修复动态加载如果没有href 不触发to 事件问题
+                                                !firstInit &amp;&amp; trigger.call(module, &quot;to&quot;, index);
+                                                firstInit = false;
+                                            }
+                                        }
+                            
+                                    }
+                            
+                                    // 增加一个
+                                    function append(len) {
+                                        var id = ui.guid();
+                                        var i, len = len || 1;
+                                        var html = &#x27;&#x27;;
+                                        for (i = 0; i &lt; len; i++) {
+                                            html += &#x27;&lt;li id=&quot;&#x27; + id + &#x27;&quot; style=&quot;-webkit-box-flex:1;box-flex:1;width:&#x27; + itemWidth + &#x27;px;height:&#x27; + itemHeight + &#x27;px;&quot;&gt;&lt;/li&gt;&#x27;;
+                                        }
+                            
+                                        $children.append(html);
+                                        // 重新设置宽度
+                                        $item = $children.children();
+                            
+                                        var allWidth = itemWidth * $item.length;
+                                        length = $item.length;
+                                        $childrenParent.width(allWidth);
+                            
+                                    }
+                                    /**
+                                     * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                     *   &lt;div class=&quot;span12&quot;&gt;
+                                     *     &lt;h2&gt;动态加载页面,模拟路由, 1.6.6重写load方法，可以用于多页的多路由&lt;/h2&gt;
+                                     *     &lt;p&gt;由于多页开发,后退不能刷新页面,所以便有这个slide来模拟简单的路由加载, 用于跟多页配合&lt;/p&gt;
+                                     *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.slide_tab_router.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                     *   &lt;/div&gt;
+                                     * &lt;/div&gt;
+                                     *  @method load
+                                     *  @since 1.6.6
+                                     *  @param {object} [option]  页面跳转参数 
+                                     *  @param {string} option.url [ 页面跳转的模块名  ]
+                                     *  @param {object} option.param [ 传给模块的参数  ]
+                                     *  @param {object} [option.id]  tabid,默认自动创建
+                                     *  @param {boolean} [option.preload]  预加载,默认: false 自动跳转到加载的页面 | true, 则不跳转  
+                                     *  @param {function} [option.loaded]  加载后执行  
+                                     *  @param {function} [option.beforeLoad]  加载前执行  
+                                     *  @example
+                            
+                                        uiTab.load({
+                                          url: &quot;pages/bui.slide_tab_router_page1&quot;
+                                        })
+                            
+                                     */
+                                    function load(option) {
+                                        var _config = {
+                                            id: &quot;&quot;,
+                                            icon: &quot;&quot;,
+                                            title: &quot;&quot;,
+                                            url: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            index: nowIndex,
+                                            menuTemplate: null,
+                                            template: null,
+                                            param: {},
+                                            animate: true,
+                                            preload: false,
+                                            needRemove: false,
+                                            command: &quot;after&quot;,
+                                            width: 0,
+                                            height: 0,
+                                            loaded: null,
+                                            beforeLoad: null,
+                                        }
+                                        var opt = $.extend(true, {}, _config, option);
+                            
+                                        var canNext = opt.beforeLoad &amp;&amp; opt.beforeLoad.call(module);
+                                        if (canNext === false) {
+                                            return this;
+                                        }
+                                        opt.beforeLoad = null;
+                            
+                                        opt.menuTemplate = opt.menuTemplate || (opt.title ? &#x60;&lt;li class=&quot;bui-btn&quot;&gt;${opt.title}&lt;/li&gt;&#x60; : &quot;&quot;)
+                            
+                                        add(opt);
+                                        return this;
+                                    }
+                                    /**
+                                     * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                     *   &lt;div class=&quot;span12&quot;&gt;
+                                     *     &lt;h2&gt;后退上一个页面，跟 prev方法的区别在于，这个后退会删除掉上一页&lt;/h2&gt;
+                                     *     &lt;p&gt;由于多页开发,后退不能刷新页面,所以便有这个slide来模拟简单的路由加载, 用于跟多页配合&lt;/p&gt;
+                                     *   &lt;/div&gt;
+                                     * &lt;/div&gt;
+                                     *  @method back
+                                     *  @since 1.6.6
+                                     *  @param {object} [option]  页面后退参数 
+                                     *  @param {number} [option.index] [ 后退到第几个,默认 -1  ]
+                                     *  @param {string} [option.url] [ 后退到指定名字的选项卡  ]
+                                     *  @param {function} [option.beforeLoad]  后退前执行
+                                     *  @param {function} [option.loaded]  后退后执行
+                                     *  @example
+                            
+                                        uiTab.back({
+                                          url: &quot;pages/bui.slide_tab_router_page1&quot;
+                                        })
+                            
+                                     */
+                                    function back(option) {
+                                        var _config = {
+                                            id: &quot;&quot;,
+                                            url: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            index: nowIndex,
+                                            loaded: null,
+                                            beforeLoad: null,
+                                        }
+                                        var opt = $.extend(true, {}, _config, option);
+                            
+                                        // 兼容旧版写法
+                                        opt.name = opt.url || opt.name;
+                            
+                                        opt.loaded = function () {
+                                            opt.beforeLoad = null;
+                                            opt.loaded = null;
+                                            remove(opt);
+                                        };
+                            
+                                        prev(opt);
+                            
+                                        return this;
+                                    }
+                            
+                                    // 替换tab组件
+                                    /**
+                                     * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                     *   &lt;div class=&quot;span12&quot;&gt;
+                                     *     &lt;h2&gt;replace替换当前选项&lt;/h2&gt;
+                                     *   &lt;/div&gt;
+                                     * &lt;/div&gt;
+                                     *  @method replace
+                                     *  @since 1.6.6
+                                     *  @param {object} [option]  
+                                     *  @param {number} [option.index] [ 替换第几个选项，默认是当前  ]
+                                     *  @param {string} [option.name] [ 替换的组件名  ]
+                                     *  @param {string} [option.param] [ 传给组件的参数  ]
+                                     *  @param {function} [option.beforeLoad]  后退前执行
+                                     *  @param {function} [option.loaded]  后退后执行
+                                     *  @example
+                            
+                                        uiTab.replace({
+                                          name: &quot;pages/bui.slide_tab_router_page1&quot;
+                                        })
+                            
+                                     */
+                                    function replace(opt) {
+                                        var _config = {
+                                            id: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            index: nowIndex,
+                                            param: {},
+                                            animate: false,
+                                            preload: false,
+                                            command: &quot;html&quot;,
+                                            width: 0,
+                                            height: 0,
+                                            loaded: null,
+                                            beforeLoad: null,
+                                        }
+                                        var _opt = $.extend(true, {}, _config, opt);
+                            
+                            
+                                        return add(_opt);
+                                    }
+                            
+                                    // 动态增加一个模块
+                                    /**
+                                     * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                     *   &lt;div class=&quot;span12&quot;&gt;
+                                     *     &lt;h2&gt;动态新增一个组件&lt;/h2&gt;
+                                     *   &lt;/div&gt;
+                                     * &lt;/div&gt;
+                                     *  @method add
+                                     *  @since 1.6.6
+                                     *  @param {object} [option]  
+                                     *  @param {number} [option.index] [ 在第几个后面增加组件，默认是最后一个  ]
+                                     *  @param {string} [option.id] [ 自定义组件的id，默认自动生成  ]
+                                     *  @param {string} [option.icon] [ 菜单是否需要图标，默认为空, 例如：传&quot;icon-home&quot;  ]
+                                     *  @param {string} [option.title] [ 是否需要名称  ]
+                                     *  @param {string|function} [option.menuTemplate] [ 自定义菜单模板  ]
+                                     *  @param {string} [option.name] [ 组件名  ]
+                                     *  @param {string} [option.param] [ 传给组件的参数  ]
+                                     *  @param {string} [option.command] [ 默认在后面增加，默认 &quot;after&quot;（后面） | &quot;before&quot;（前面） | &quot;html&quot;（替换）  ]
+                                     *  @param {boolean} [option.preload] [ 预加载,不激活该选项，默认 false | true   ]
+                                     *  @param {boolean} [option.animate] [ 增加后跳转过去是否需要动画，默认 true | false  ]
+                                     *  @param {boolean} [option.needRemove] [ 是否需要删除图标，默认 false | true  ]
+                                     *  @param {function} [option.beforeLoad]  后退前执行
+                                     *  @param {function} [option.loaded]  后退后执行
+                                     *  @example
+                            
+                                        uiTab.add({
+                                          name: &quot;pages/bui.slide_tab_router_page1&quot;
+                                        })
+                            
+                                     */
+                                    function add(option) {
+                                        var _config = {
+                                            id: &quot;&quot;,
+                                            icon: &quot;&quot;,
+                                            title: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            menuTemplate: null,
+                                            template: null,
+                                            index: -1,
+                                            param: {},
+                                            animate: false,
+                                            preload: false,
+                                            needRemove: false,
+                                            command: &quot;after&quot;,
+                                            width: 0,
+                                            height: 0,
+                                            loaded: null,
+                                            beforeLoad: null,
+                                        }
+                                        var opt = $.extend(true, {}, _config, option);
+                            
+                                        //单个滚动的内容
+                                        $item = $children.children();
+                            
+                                        var url = opt.url || opt.name || &quot;&quot;,
+                                            $currentItem = null,
+                                            index = opt.index &gt; -1 ? opt.index : (opt.command == &quot;before&quot; ? 0 : $item.length - 1);
+                            
+                                        // 转成模块名
+                                        var htmlIndex = url &amp;&amp; url.indexOf(&quot;.html&quot;) || 0;
+                                        var name = htmlIndex &gt; -1 ? url.substr(0, htmlIndex) : url;
+                                        // 增加结构
+                                        opt.name = name;
+                                        opt.index = index;
+                            
+                                        var currentItem = appendBlock(opt);
+                            
+                                        // 重新计算宽高
+                                        resize();
+                            
+                            
+                                        var currentIndex = 0;
+                            
+                                        switch (opt.command) {
+                                            case &quot;html&quot;:
+                                            case &quot;append&quot;:
+                                            case &quot;prepend&quot;:
+                                                currentIndex = index;
+                                                break;
+                                            case &quot;before&quot;:
+                                                currentIndex = index - 1 &lt; 0 ? 0 : index - 1;
+                                                break;
+                                            default:
+                                                currentIndex = index + 1;
+                                        }
+                            
+                                        trigger.call(module, &quot;add&quot;, { index: currentIndex, prevIndex: nowIndex });
+                            
+                                        if (url) {
+                                            opt.id = currentItem.id || &quot;&quot;;
+                            
+                                            // 使用delay处理
+                                            loader.delay(opt);
+                            
+                                            // 预加载无需跳转；
+                                            if (opt.preload) {
+                                                return this;
+                                            }
+                            
+                                            // 跳转到指定位置
+                                            if (opt.animate) {
+                                                //预加载不可见
+                                                to(currentIndex);
+                                            } else {
+                                                to(currentIndex, &quot;none&quot;);
+                                            }
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                    * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                    *   &lt;div class=&quot;span12&quot;&gt;
+                                    *     &lt;h2&gt; 移除某个选项&lt;/h2&gt;
+                                    *   &lt;/div&gt;
+                                    * &lt;/div&gt;
+                                    *  @method remove
+                                    *  @since 1.6.6
+                                    *  @param {object} [option]  
+                                    *  @param {number} option.index [ 默认移除最后一个  ]
+                                    *  @param {function} [option.beforeLoad]  后退前执行
+                                    *  @param {function} [option.loaded]  后退后执行
+                                    *  @example
+                            
+                                       uiTab.remove({
+                                         index: 1
+                                       })
+                            
+                                    */
+                                    function remove(opt) {
+                            
+                                        var _opt = $.extend(true, {
+                                            index: -1,
+                                            beforeLoad: null,
+                                            loaded: null
+                                        }, opt);
+                            
+                            
+                                        var canNext = _opt.beforeLoad &amp;&amp; _opt.beforeLoad.call(module);
+                                        if (canNext === false) {
+                                            return this;
+                                        }
+                            
+                                        let index = parseInt(_opt.index);
+                                        let prevIndex = index - 1;
+                            
+                                        if (index &lt; 0) {
+                                            return this;
+                                        }
+                                        var $currentItem = $item.eq(index);
+                                        var $menuCurrentItem = $menuChildren.eq(index);
+                            
+                                        $currentItem.remove();
+                                        $menuCurrentItem.remove();
+                            
+                                        // 重新计算宽高
+                                        resize();
+                            
+                                        // 如果是当前的索引被删除，就自动跳回上一页
+                                        if (nowIndex === index) {
+                                            prevIndex &gt; -1 &amp;&amp; to(prevIndex, &quot;none&quot;);
+                                        } else if (nowIndex &gt; index) {
+                                            to(nowIndex - 1, &quot;none&quot;);
+                                        } else {
+                                            to(nowIndex, &quot;none&quot;);
+                                        }
+                            
+                                        _opt.loaded &amp;&amp; _opt.loaded.call(this, _opt);
+                            
+                                        trigger.call(module, &quot;remove&quot;, { index: nowIndex, prevIndex: index });
+                                        return this;
+                                    }
+                                    // 增加块
+                                    function appendBlock(opt) {
+                                        var _config = {
+                                            id: &quot;&quot;,
+                                            name: &quot;&quot;,
+                                            index: 0,
+                                            menuTemplate: null,
+                                            template: null,
+                                            command: &quot;after&quot;, // &quot;html&quot; &quot;before&quot;
+                                            width: 0,
+                                            height: 0
+                                        }
+                            
+                                        var _opt = $.extend(true, _config, opt);
+                            
+                                        var $prevItem = $item.eq(_opt.index);
+                                        var $menuPrevItem = $menuChildren.eq(_opt.index);
+                            
+                                        var id = _opt.id &amp;&amp; (_opt.id.indexOf(&quot;#&quot;) &gt; -1 || _opt.id.indexOf(&quot;.&quot;) &gt; -1) ? _opt.id.substr(1) : (_opt.id || ui.guid());
+                            
+                                        var compHtml = &#x60;&lt;component id=&quot;${id}&quot; class=&quot;delay-item&quot; name=&quot;${_opt.name}&quot; delay=&quot;true&quot;&gt;&lt;/component&gt;&#x60;
+                                        var html = &#x60;&lt;li style=&quot;-webkit-box-flex:1;box-flex:1;width:${_opt.width || itemWidth}px;height:${_opt.height || itemHeight}px;&quot;&gt;
+                                        ${_opt.name ? compHtml : (_opt.template ? _opt.template.call(module) : &quot;&quot;)}
+                                        &lt;/li&gt;&#x60;;
+                            
+                                        var command = _opt.command;
+                            
+                                        var menuHtml = typeof _opt.menuTemplate === &quot;function&quot; ? _opt.menuTemplate.call(module) : _opt.menuTemplate || &quot;&quot;;
+                            
+                                        if (command === &quot;html&quot;) {
+                                            $prevItem[&quot;after&quot;](html);
+                                            $prevItem.remove();
+                                            // 新增并删除菜单
+                                            menuHtml &amp;&amp; $menuPrevItem[&quot;after&quot;](menuHtml);
+                                            menuHtml &amp;&amp; $menuPrevItem.remove();
+                                        } else {
+                                            $prevItem[command](html);
+                                            menuHtml &amp;&amp; $menuPrevItem[command](menuHtml);
+                                        }
+                            
+                                        return {
+                                            id: id
+                                        }
+                                    }
+                            
+                                    // 返回当前页的参数
+                                    function getItemParam(index) {
+                            
+                                        var index = typeof index === &quot;number&quot; ? index : nowIndex;
+                            
+                                        return cacheParams[index][&quot;param&quot;] || {};
+                                    }
+                            
+                                    // 设置当前页的参数
+                                    function setItemParam(index, opt) {
+                            
+                                        var index = typeof index === &quot;number&quot; ? index : nowIndex;
+                            
+                                        cacheParams[index] &amp;&amp; (cacheParams[index] = $.extend(cacheParams[index], opt));
+                                        return cacheParams[index][&quot;param&quot;];
+                                    }
+                            
+                                    /**
+                                     * 获取内容的当前dom
+                                     *  @method currentMain
+                                     *  @since 1.6.3
+                                     *  @param {number} [index]  默认为当前的索引,可以不传 格式: 0 | 1   ]
+                                     *  @example
+                            
+                                        uiTab.currentMain();
+                            
+                                     */
+                                    function getActive(index) {
+                                        var indexs = typeof index == &quot;undefined&quot; ? nowIndex : index;
+                                        var $selectItem = $item.eq(indexs);
+                            
+                                        return $selectItem[0];
+                                    }
+                            
+                                    /**
+                                     * 获取菜单的当前dom
+                                     *  @method currentMenu
+                                     *  @since 1.6.3
+                                     *  @param {number} [index]  默认为当前的索引,可以不传 格式: 0 | 1   ]
+                                     *  @example
+                            
+                                        uiTab.currentMenu();
+                            
+                                     */
+                                    // 返回当前页的参数
+                                    function getActiveMenu(index) {
+                                        var indexs = typeof index == &quot;undefined&quot; ? nowIndex : index;
+                                        var $selectItem = $menuChildren.eq(indexs);
+                            
+                                        return $selectItem[0];
+                                    }
+                            
+                                    // 返回当前页的参数
+                                    function tplFrame(option) {
+                            
+                                        var html = &#x60;&lt;div class=&quot;${option.main.substr(1)}&quot;&gt;
+                                          &lt;ul class=&quot;bui-slide-main-ul&quot;&gt;
+                                          &lt;/ul&gt;
+                                        &lt;/div&gt;&#x60;
+                            
+                                        return html;
+                                    }
+                            
+                                    // 返回当前页的参数
+                                    function tplItem(data) {
+                                        var data = data || [];
+                                        var html = &#x27;&#x27;;
+                                        if (data.length) {
+                                            data.forEach(function (item, i) {
+                                                var hasTitle = item.title ? &#x60;&lt;div class=&quot;bui-slide-title&quot;&gt;${item.title}&lt;/div&gt;&#x60; : &quot;&quot;;
+                                                // 背景跟图片只能选一个, 优先处理背景, 背景避免宽度为0，需要有空白占位
+                                                var showBg = item.background || item.type == &quot;background&quot; ? &#x60;&lt;div class=&quot;bui-slide-img&quot; style=&quot;background-image:url(${item.background || item.image || item.src})&quot;&gt;&amp;nbsp;&lt;/div&gt;&#x60; : &#x60;&lt;div class=&quot;bui-slide-img&quot;&gt;&lt;img src=&quot;${item.image || item.src}&quot; alt=&quot;${item.title || &quot;&quot;}&quot;/&gt;&lt;/div&gt;&#x60;;
+                                                var showVideo = &quot;&quot;;
+                                                if (item.type == &quot;video&quot; || item.video) {
+                                                    var videoitem = $.extend(true, {}, param.video, item, item.video);
+                                                    // ios 视频不能播放，加上这2个属性 data-wf-ignore=&quot;true&quot; data-object-fit=&quot;cover&quot; 
+                                                    showVideo = &#x60;&lt;div class=&quot;bui-slide-video&quot;&gt;
+                                                    &lt;video class=&quot;bui-video&quot; src=&quot;${videoitem.src}&quot; width=&quot;${videoitem.width}&quot; height=&quot;${videoitem.height}&quot; poster=&quot;${videoitem.poster}&quot; ${videoitem.preload ? &quot;preload&quot; : &quot;&quot;} ${videoitem.muted ? &quot;muted&quot; : &quot;&quot;} ${videoitem.playsinline ? &quot;playsinline&quot; : &quot;&quot;} ${videoitem.controls ? &quot;controls&quot; : &quot;&quot;} ${videoitem.loop ? &quot;loop&quot; : &quot;&quot;} ${videoitem.fullscreen ? &quot;fullscreen&quot; : &quot;&quot;} data-wf-ignore=&quot;true&quot; data-object-fit=&quot;cover&quot; &gt;&lt;/video&gt;
+                                                    &lt;/div&gt;&#x60;
+                                                }
+                            
+                                                html += &#x60;&lt;li data-id=&quot;${item.id || &quot;&quot;}&quot; href=&quot;${item.url || &quot;&quot;}&quot; data-reload=&quot;${item.reload || false}&quot; data-iframe=&quot;${item.iframe || false}&quot; data-page=&quot;${item.page || false}&quot; data-close=&quot;${item.page || true}&quot; data-synchistory=&quot;${item.synchistory || false}&quot; data-target=&quot;${item.target}&quot; &gt;
+                                              ${showVideo || showBg}
+                                              ${hasTitle}
+                                              &lt;/li&gt;&#x60;
+                                            })
+                                        }
+                            
+                                        return html;
+                                    }
+                                    /**
+                                    * 重新计算宽高
+                                    *  @method resize
+                                    *  @since 1.5.3
+                                    *  @param { object } [option]  可以不传 
+                                    *  @param { number } [option.width]  如果不传则自动计算 
+                                    *  @param { number } [option.height]  如果不传则自动计算,一些特殊情况需要告诉它在哪个高度下自动计算 
+                                    *  @chainable
+                                    *  @example
+                            
+                            
+                                        //重新计算高度
+                                        uiSlide.resize();
+                            
+                                    */
+                                    function resize(opt) {
+                                        var opts = $.extend(true, {}, option, opt);
+                                        autoHeight(opts);
+                                        //初始化结构
+                                        display(opts);
+                            
+                                        // 重新跳转到当前的索引
+                                        to(nowIndex, &quot;none&quot;);
+                                        return this;
+                                    }
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                     *  @example
+                            
+                                        //销毁
+                                        uiSlide.destroy();
+                            
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                            
+                                        stop();
+                            
+                                        // 有视频的时候，销毁视频
+                            
+                                        var $video = $id.find(&quot;video&quot;);
+                            
+                                        if ($video.length) {
+                                            $video.each((i, item) =&gt; {
+                                                // 暂停并移除src
+                                                if (!item.paused) {
+                                                    item.pause();
+                                                }
+                                                // 销毁
+                                                item.removeAttribute(&quot;src&quot;);
+                                            })
+                                        }
+                                        if ($menu) {
+                                            $menu.off(&quot;click.bui&quot;);
+                                            bool &amp;&amp; $menu.remove();
+                                        }
+                                        if ($id) {
+                                            $id.off();
+                                            bool &amp;&amp; $id.remove();
+                                        }
+                            
+                                        off(&quot;stop&quot;);
+                                        off(&quot;play&quot;);
+                                        off(&quot;first&quot;);
+                                        off(&quot;last&quot;);
+                                        off(&quot;to&quot;);
+                            
+                                    }
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiSlideWidget = uiSlide.widget();
+                            
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {
+                                            loading: uiLoading
+                                        };
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiSlide.option();
+                            
+                                        //获取某个参数
+                                        var id = uiSlide.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiSlide.option( &quot;autoplay&quot;,false );
+                            
+                                        //修改多个参数
+                                        uiSlide.option( {&quot;autoplay&quot;:false} );
+                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                            
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;play&quot;(播放的时候触发) |&quot;stop&quot;(停止的时候触发) |&quot;first&quot;(在第一个往左边操作的时候触发) | &quot;last&quot;(在最后一个往右边操作的时候触发) | &quot;to&quot;(每次跳转时触发,除了第1次不触发) | &quot;afterto&quot;(每次跳转后触发) | &quot;load&quot;(自动加载远程页面  1.4) 
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiSlide.on(&quot;lock&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;play&quot;(播放的时候触发) |&quot;stop&quot;(停止的时候触发) |&quot;first&quot;(在第一个往左边操作的时候触发) | &quot;last&quot;(在最后一个往右边操作的时候触发) | &quot;to&quot;(每次跳转时触发,除了第1次不触发) | &quot;afterto&quot;(每次跳转后触发) | &quot;load&quot;(自动加载远程页面 1.4)  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiSlide.off(&quot;lock&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                                    return module;
+                            
+                                };
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

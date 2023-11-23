@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/core/bui.extend.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/core/bui.extend.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * 核心
+                             * @module Core
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                &quot;use strict&quot;;
+                            
+                                /**
+                                 * 插件扩展, 创建的插件会有统一的方法及事件参数, 可以在插件内部使用.
+                                 * @namespace bui
+                                 * @class  extend
+                                 * @since  1.5.3
+                                 * @constructor
+                                 * @param  {object} option 注册的参数
+                                 * @param  {string} option.name 插件名称
+                                 * @param  {object} option.config 插件参数
+                                 * @param  {function} option.callback 插件的回调
+                                 * @example
+                                 *
+                                    
+                                    bui.extend({
+                                        name:&quot;accordion&quot;,
+                                        config: {
+                                            id: &quot;&quot;,
+                                            handle: &quot;dt&quot;,
+                                            target: &quot;dd&quot;,
+                                            targetHeight: 0,
+                                            single: false,
+                                            autoinit: true,
+                                            callback: null
+                                        },
+                                        callback:function(option){
+                                            // 获取父级的对象,该对象有以下公共方法
+                                            var that = this;
+                            
+                                            that.widget
+                                            that.destroy;
+                                            that.on;
+                                            that.off;
+                                            that.trigger;
+                                            
+                                            // 控件的初始化
+                                            function inited(){
+                            
+                                                // 链式调用
+                                                return that
+                                            }
+                                            // 抛出对应的方法, 不能为以下方法或属性: 
+                                            init, option, config, widgets, widget, reinit, destroy, handle, on, off, trigger, initStatus, reInitStatus,  emitter, prefix, showLog
+                            
+                                            that.inited = inited;
+                                            
+                                            // 执行一次初始化
+                                            inited();
+                                            
+                                            // 返回才能拿到对应的方法
+                                            return that;
+                                        }
+                                    })
+                            
+                                    var uiaccordion = bui.accordion({
+                                        id: &quot;&quot;
+                                    });
+                                 *
+                                 */
+                            
+                                // 插件原型
+                                class PluginsCenter {
+                                    constructor(opt) {
+                            
+                                        this._default = {
+                                            log: false,
+                                            hasLife: true,
+                                            onBeforeInit: null,
+                                            onInited: null
+                                        };
+                            
+                                        // 存储插件的一些配置信息
+                                        this._plugin = opt || {
+                                            name: &quot;&quot;, // 插件名称
+                                            depend: null, // 复制多个插件的所有方法
+                                            config: null,
+                                            param: null, // 用户传的初始化参数
+                                            callback: null
+                                        };
+                            
+                                        // 全局配置
+                                        let globalConfig = ui.config.hasOwnProperty(this._plugin.name) ? ui.config[this._plugin.name] : null;
+                            
+                                        // 插件的配置参数, 合并默认的参数
+                                        this.config = $.extend(false, {}, this._default, this._plugin.config, globalConfig, this._plugin.param);
+                            
+                                        this.handle = {};
+                                        // 是否初始化过,可以用来判断事件重复初始化
+                                        this.initStatus = false;
+                                        // 是否是重新初始化
+                                        this.reinitStatus = false;
+                                        // 挂载内部依赖控件
+                                        this.widgets = Object.create(null);
+                            
+                                        // 初始化
+                                        this.init();
+                            
+                                    }
+                            
+                                    /**
+                                     * 实例的公共方法, 获取插件里面的实例, 
+                                     *  @method widget
+                                     *  @param {string} [name] [ 获取依赖的时候 ]
+                                     *  @example
+                                        
+                                        插件内部使用 that.widgets.loading = bui.loading(); 初始化, 实例才能通过widget方法获取得到内部依赖.
+                            
+                                        比方初始化了插件: 
+                                        var accordion = bui.accordion();
+                            
+                                        // 实例获取依赖
+                                        accordion.widget(&quot;loading&quot;);
+                            
+                                    */
+                                    widget(name) {
+                                        return name &amp;&amp; name in this.widgets ? this[&quot;widgets&quot;][name] : this[&quot;widgets&quot;];
+                                    }
+                            
+                                    /**
+                                    * [控件的初始化]
+                                    *  @method init
+                                    *  @since 1.5.3
+                                    *  @example
+                            
+                                        //初始化生命周期,默认已经初始化1次
+                                        var accordion = bui.accordion();
+                            
+                                        // 执行多一次初始化
+                                        accordion.init();
+                            
+                                    */
+                                    init(opt) {
+                            
+                                        let that = this;
+                                        let opts = opt || null;
+                                        // 合并初始化参数
+                                        that.config = $.extend(true, this.config, opts);
+                            
+                                        let config = that.config;
+                                        // 统一的声明周期
+                                        let canInit = config.hasLife &amp;&amp; config.onBeforeInit &amp;&amp; config.onBeforeInit.call(that, config);
+                                        config.log &amp;&amp; console.log(&#x60;${that._plugin.name} before init&#x60;);
+                            
+                                        if (canInit === false) {
+                                            return that;
+                                        }
+                                        // 初始化用户自定义的插件
+                                        let distance = that._plugin.callback &amp;&amp; that._plugin.callback.call(that, config);
+                                        config.log &amp;&amp; console.log(&#x60;${that._plugin.name} init&#x60;);
+                            
+                                        // 统一的声明周期
+                                        config.hasLife &amp;&amp; config.onInited &amp;&amp; config.onInited.call(that, config);
+                                        config.log &amp;&amp; console.log(&#x60;${that._plugin.name} after inited&#x60;);
+                            
+                                        // 已经初始化过
+                                        this.initStatus = true;
+                            
+                            
+                                        // 存储实例
+                                        that.config.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: that.config.uid,
+                                            ui: that
+                                        })
+                            
+                                        return that;
+                                    }
+                            
+                                    /**
+                                     * 插件的公共方法,重新初始化.
+                                     *  @method reinit
+                                     *  @example
+                                        
+                                        
+                                        实例:
+                                        var accordion = bui.accordion();
+                                        // 重新初始化
+                                        accordion.reinit();
+                            
+                                    */
+                                    reinit() {
+                            
+                                        // 小销毁
+                                        this.destroy();
+                            
+                                        this.init();
+                            
+                                        this.config.log &amp;&amp; console.log(&#x60;${this._plugin.name} reinit&#x60;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 插件的公共方法,销毁控件.
+                                     *  @method destroy
+                                     *  @param {function} [callback] [ 销毁后做什么 ]
+                                     *  @example
+                                        
+                                        插件内部使用: 
+                                        // 插件内部要销毁的东西, 比方 定时器,事件绑定, 外部是不知道的, 所以要内部处理
+                                        that.beforeDestroy = function(){
+                            
+                                        }
+                            
+                                        实例的销毁:
+                                        var accordion = bui.accordion();
+                                        // 调用这个方法前, 会先执行 beforeDestroy. 
+                                        accordion.destroy();
+                            
+                                    */
+                                    destroy(callback) {
+                                        // 先执行内部销毁,比方定时器,事件
+                                        this.beforeDestroy &amp;&amp; this.beforeDestroy();
+                                        // 释放
+                                        this.beforeDestroy = null;
+                            
+                                        // 清空依赖
+                                        this.widgets = {};
+                                        // 清空订阅事件
+                                        this.off();
+                            
+                                        // 去掉初始化状态
+                                        this.initStatus = false;
+                            
+                                        callback &amp;&amp; callback.call(this);
+                            
+                                        let uid = this.config.uid;
+                                        if (uid) {
+                                            var currentHistory = ui.history.getLast();
+                                            currentHistory[&quot;ui&quot;][uid] = null;
+                                        }
+                            
+                                        this.config.log &amp;&amp; console.log(&#x60;${this._plugin.name} destroyed&#x60;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 处理样式的前缀.
+                                     *  @method prefix
+                                     *  @param {string} [str] [ 去除前缀以后的值 ]
+                                     *  @return {string} [ 出现问题的位置 ]
+                                     *  @example
+                                        
+                                        var className = that.prefix(&quot;accordion&quot;);
+                            
+                                        // bui-accordion
+                            
+                                    */
+                                    prefix(className) {
+                                        return ui.config.classNamePrefix + className;
+                                    }
+                            
+                                    /**
+                                     * 插件内部统一的抛出日志方法.
+                                     *  @method showLog
+                                     *  @param {string|object} [str] [ 日志说明, try{}catche(e){ that.showLog(e) } ]
+                                     *  @param {string} [where] [ 出现问题的位置 ]
+                                     *  @example
+                                        
+                                        // 抛出异常, 在bui.accordion init 方法
+                                        that.showLog(&quot;初始化错误&quot;,&quot;bui.accordion init&quot;)
+                            
+                                        // 支持对象
+                                        try{}catche(e){ that.showLog(e) }
+                            
+                                    */
+                                    showLog(e, where) {
+                                        where = where || &quot;&quot;;
+                                        let message = &quot;&quot;;
+                                        if (typeof e == &quot;object&quot; &amp;&amp; &quot;message&quot; in e &amp;&amp; &quot;name&quot; in e) {
+                                            message = e.message + &#x27;:&#x27; + e.name + &#x27;&amp;&amp;stack:&#x27; + e.stack;
+                                        } else if (typeof e == &quot;string&quot;) {
+                                            message = e;
+                                        }
+                                        ui.log &amp;&amp; console.error(where + &quot; &quot; + message);
+                                        ui.trace &amp;&amp; console.trace &amp;&amp; console.trace();
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 外部统一的修改获取参数, 修改this.config 的参数, 并且重新调用 init 方法.
+                                     *  @method option
+                                     *  @param {string|object} [key] [ 获取依赖的时候 ]
+                                     *  @param {string} [value] [ 获取依赖的时候 ]
+                                     *  @example
+                                        
+                                        
+                                        比方初始化了插件: 
+                                        var accordion = bui.accordion();
+                            
+                                        // 实例获取参数
+                                        accordion.option(&quot;id&quot;);
+                            
+                                        // 修改一个参数
+                                        accordion.option(&quot;height&quot;,500);
+                            
+                                        // 修改多个参数
+                                        accordion.option({&quot;height&quot;:500,handle:&quot;.bui-btn-test&quot;});
+                            
+                                    */
+                                    option(key, value) {
+                            
+                                        if (ui.typeof(key) !== &quot;object&quot; &amp;&amp; typeof value === &quot;undefined&quot;) {
+                                            // 读取
+                                            if (typeof key === &quot;string&quot;) {
+                                                return this.config[key];
+                                            } else {
+                                                return this.config;
+                                            }
+                                        } else {
+                                            let instanceUI = this;
+                                            // 修改
+                                            if (key == &quot;id&quot;) {
+                                                ui.showLog(&quot;不允许修改控件的ID参数&quot;);
+                                                return this;
+                                            }
+                            
+                                            if (key &amp;&amp; ui.typeof(key) === &quot;object&quot;) {
+                                                let opt = $.extend(this.config, key);
+                                                // 再初始化
+                                                return instanceUI &amp;&amp; instanceUI.init(opt);
+                                            } else if (this.config.hasOwnProperty(key)) {
+                            
+                                                let obj = {};
+                                                obj[key] = value;
+                            
+                                                let opt = $.extend(this.config, obj);
+                            
+                                                // 再初始化
+                                                return instance &amp;&amp; instance.init(opt);
+                                            }
+                                        }
+                                        return this;
+                                    }
+                                    get emitter() {
+                                        return ui.emitter();
+                                    }
+                            
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @param {string} [type] [ 事件类型: &quot;show&quot;(显示目标时) | &quot;hide&quot;(隐藏目标时)  ]
+                                     *  @param {function} [callback] [ 绑定的事件, this 为当前点击的菜单 ]
+                                     *  @example
+                            
+                                        that.on(&quot;show&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                        */
+                                    get on() {
+                                        return this.emitter.on;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @param {string} [type] [ 事件类型: &quot;show&quot;(显示目标时) | &quot;hide&quot;(隐藏目标时)  ]
+                                     *  @param {function} [callback] [ 绑定的事件, this 为当前点击的菜单 ]
+                                     *  @example
+                            
+                                        that.off(&quot;show&quot;);
+                            
+                                    */
+                                    get off() {
+                                        return this.emitter.off;
+                                    }
+                            
+                                    /**
+                                     * 触发自定义事件
+                                     *  @event trigger
+                                     *  @param {string} [type] [ 自定义事件名称  ]
+                                     *  @param {string|object|number} [arguments] [ 需要传给自定义事件的参数,可以有多个 ]
+                                     *  @example
+                            
+                                        $(&quot;#id&quot;).click(function (e) {
+                                        that.trigger(&quot;show&quot;,e);
+                                        })
+                                    */
+                                    get trigger() {
+                            
+                                        return this.emitter.trigger;
+                                    }
+                                }
+                            
+                                // 插件扩展放这里
+                                ui.extend = function (option) {
+                            
+                                    // 安装插件
+                                    class Install {
+                                        constructor(opt) {
+                                            this.init(opt)
+                                        }
+                                        init(opt) {
+                            
+                                            let name = opt.name;
+                                            // 检测是否重名
+                                            let canRegister = this.checkName(name);
+                                            if (!canRegister) {
+                                                return ui[name];
+                                            }
+                            
+                                            // 放在第1层调用
+                                            ui[name] = function (opts) {
+                            
+                                                option.param = opts;
+                                                return new PluginsCenter(option);
+                                            }
+                                            return this;
+                                        }
+                                        checkName(name) {
+                                            // true则可以注册
+                                            if (!name) {
+                                                console.warn(&#x60;插件名字不能为空&#x60;);
+                                                return false;
+                                            }
+                                            if (ui.hasOwnProperty(name)) {
+                                                // console.warn(&#x60;已有相同名为${name}的插件或方法,请重新换个名称注册.&#x60;);
+                                                return false;
+                                            }
+                                            this.name = name;
+                                            return true;
+                                        }
+                                    }
+                            
+                                    // // 每一个插件就一个实例, 订阅事件上才不会冲突
+                                    var pluginsInstall = new Install(option);
+                                }
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

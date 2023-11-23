@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.pickerdate.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.pickerdate.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            ;
+                            (function (ui, $) {
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;日期选择器&lt;/h2&gt;
+                                 *     &lt;p&gt;日期必须以2015/8/10 这种格式传才能确保在IOS上正常, 支持动态渲染以及静态渲染, 两种的区别就在于,动态渲染初始化简单, 静态渲染灵活,支持自定义按钮样式,并且支持左右侧滑.&lt;/p&gt;
+                                 *     &lt;p&gt;可以同时有左边跟右边菜单,菜单的个数也可以不一样多,留意示例的几种不同效果&lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.pickerdate.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/value&quot;}}{{/crossLink}}: 设置日期 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/values&quot;}}{{/crossLink}}: 获取多个日期 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/min&quot;}}{{/crossLink}}: 设置最小日期 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/max&quot;}}{{/crossLink}}: 设置最大日期 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/reset&quot;}}{{/crossLink}}: 重新渲染 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/onChange&quot;}}{{/crossLink}}: 日期变更事件回调&lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/formatValue&quot;}}{{/crossLink}}: 数据格式化方法 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/cols&quot;}}{{/crossLink}}: 设置分栏&lt;br&gt;
+                                 * {{#crossLink &quot;bui.pickerdate/widget&quot;}}{{/crossLink}}: since1.3.0 获取依赖 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.pickerdate.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-pickerdate_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class pickerdate
+                                 *  @constructor
+                                 *  @param {object}  option
+                                 *  @param {string}  option.id [ 日期生成的容器, 同时需要设置 popup:false ]
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {boolean}  [option.handleParent]  1.6.2新增, 如果这组日期是动态创建的dom, 可以设置已知的父级容器 
+                                 *  @param {boolean}  [option.handle]  触发弹窗的选择器, 1.5.3支持样式选择器,多个日期,只需要初始化一个 
+                                 *  @param {boolean}  [option.bindValue]  1.5.3 新增, 默认:false|true, 修改的值会自动绑定到 handle, 不再需要自己去绑定 
+                                 *  @param {boolean}  [option.popup]  是否弹出窗口 默认 true || false 
+                                 *  @param {boolean}  [option.mask]  是否显示遮罩 默认 true || false 
+                                 *  @param {number}  [option.zIndex]  层级 默认 110 
+                                 *  @param {array}  option.buttons  since 1.3.0 如果buttons是一个数组,则底部会增加相应的按钮 格式为 [&quot;确定&quot;,&quot;取消&quot;] || [{name:&quot;确定&quot;,className:&quot;primary&quot;}] 
+                                 *  @param {string}  [option.value]  初始化第一个日期,日期格式 2015/8/10 9:00 
+                                 *  @param {string|Date}  [option.min]  最小日期,日期格式 2015/8/10 9:00, 不能传 new Date() 
+                                 *  @param {string|Date}  [option.max]  最大日期,日期格式 2015/8/10 9:00, 不能传 new Date() 
+                                 *  @param {function}  [option.formatValue]  since 1.3.0 显示的日期格式, 默认: yyyy-MM-dd hh:mm:ss 
+                                 *  @param {object}  [option.cols]  分栏 
+                                 *  @param {object|&quot;none&quot;}  option.cols.year    不需要某栏,设置为 &quot;none&quot; 格式: { values: [],displayValues:[] } 
+                                 *  @param {object|&quot;none&quot;}  option.cols.month   不需要某栏,设置为 &quot;none&quot; 格式: { values: [],displayValues:[] } 
+                                 *  @param {object|&quot;none&quot;}  option.cols.date    不需要某栏,设置为 &quot;none&quot; 格式: { values: [],displayValues:[] } 
+                                 *  @param {object|&quot;none&quot;}  option.cols.hour    不需要某栏,设置为 &quot;none&quot; 格式: { values: [],displayValues:[] } 
+                                 *  @param {object|&quot;none&quot;}  option.cols.minute  不需要某栏,设置为 &quot;none&quot; 格式: { values: [],displayValues:[] } 
+                                 *  @param {object|&quot;none&quot;}  option.cols.second  不需要某栏,设置为 &quot;none&quot; 格式: { values: [],displayValues:[] } 
+                                 *  @param {string|object} [option.appendTo]  1.4.3新增 默认:&quot;body&quot;,添加到哪里去,主要配合单页使用 
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                 *  @param {boolean} [option.rotateEffect]  是否开启3D效果,默认:false 
+                                 *  @param {boolean} [option.autoClose]  自动关闭,默认:true | false 
+                                 *  @param {function} [option.onBeforeOpen]  1.7.5 新增 打开前的回调 
+                                 *  @param {function} [option.onOpen]  1.7.5 新增 打开后的回调 
+                                 *  @param {function} [option.onChange]  改变回调 
+                                 *  @param {function} [option.callback]  点击按钮的回调 
+                                 *  @param {function} [option.onChanged]  1.7新增，结束后触发，这里才能获取到values的值 
+                                 *
+                                 *  @example
+                                 *
+                                        // 1. 简单初始化
+                                        //1.5.3 新增 bindValue, 设置 true, 会自动把值绑定到指定的handle.
+                            
+                                        var uiPickerdate = bui.pickerdate({
+                                            handle:&quot;#datepicker_input&quot;,
+                                            bindValue: true,
+                                            formatValue: &quot;yyyy-MM-dd hh:mm&quot;,
+                                            callback: function(e) {
+                                                if( e.taret.innerText === &quot;确定&quot;){
+                                                    console.log(this.value())
+                                                }
+                                            },
+                                        });
+                            
+                            
+                                 *
+                                 */
+                            
+                                ui.pickerdate = (function () {
+                                    function transformTime(d, formate) {
+                                        if (d &amp;&amp; d.constructor == Date) {
+                                            return d;
+                                        }
+                                        // 如果是时间戳,只能是数字
+                                        if (typeof d === &quot;number&quot; &amp;&amp; String(d).length === 13) {
+                                            return new Date(d);
+                                        }
+                            
+                                        d = String(d);
+                            
+                                        var date = new Date();
+                                        var year = date.getFullYear(),
+                                            month = date.getMonth() + 1,
+                                            today = date.getDate();
+                                        /* 方法 一 */
+                                        // 在Chrome和Safari中,存在当值为&#x27;2017-9&#x27;或&#x27;2017/09&#x27;时,new Date(value)会返回非法值,
+                                        // 故在统一使用斜杠/格式的时候,还须为时间值补充日期
+                                        d = d.replace(/[-|年|月]/img, &#x27;/&#x27;).replace(/[时|分|秒|小时|分钟]/img, &#x27;:&#x27;)
+                                            .replace(/^(\d{4}\/\d+?)($|\s)/, function ($0, $1) {
+                                                return $1 + &#x27;/1&#x27;
+                                            })
+                                            .replace(/[日|号]/img, &#x27;&#x27;)
+                                            .replace(/^(\d{1,2}\/\d{1,2}?)($|\s)/, function ($0, $1) {
+                                                return date.getFullYear() + &#x27;/&#x27; + $1
+                                            })
+                            
+                                        // 修复只有时间的时候无法格式化问题
+                                        if (d.indexOf(&quot;/&quot;) &lt; 0 &amp;&amp; d.indexOf(&quot;:&quot;) &gt; -1) {
+                                            d = year + &quot;/&quot; + month + &quot;/&quot; + today + &quot; &quot; + d;
+                                        }
+                            
+                                        // 修复只有日期的时候无法格式化问题
+                                        if (d.length === 4) {
+                                            d = d + &quot;/1/1 00:00:00&quot;;
+                                        } else if (formate === &quot;MM&quot; || formate === &quot;M&quot;) {
+                                            d = year + &quot;/&quot; + d + &quot;/1 00:00:00&quot;;
+                                        } else if (formate === &quot;dd&quot; || formate === &quot;d&quot;) {
+                                            d = year + &quot;/&quot; + month + &quot;/&quot; + d + &quot; 00:00:00&quot;;
+                                        }
+                                        // else if( formate &amp;&amp; formate.indexOf(&quot;y&quot;) &lt; 0 &amp;&amp; formate.indexOf(&quot;M&quot;) &gt; -1 ){
+                                        //     d = year + &quot;/&quot; + d;
+                                        // }
+                                        return new Date(d);
+                                    }
+                            
+                                    function getMinTime(min, max) {
+                                        var now = new Date(),
+                                            min, max;
+                                        if (now.getTime() &lt; min.getTime()) {
+                                            return min
+                                        } else if (now.getTime() &gt; max.getTime()) {
+                                            return max;
+                                        } else {
+                                            return now;
+                                        }
+                                    }
+                            
+                                    function Datepicker(option) {
+                                        var guid = ui.guid(),
+                                            //上一个日期
+                                            datePrevVal;
+                                        var config = {
+                                            id: guid,
+                                            title: &quot;&quot;,
+                                            uid: &quot;&quot;,
+                                            height: 260,
+                                            popup: true,
+                                            mask: true,
+                                            autoinit: true,
+                                            zIndex: 110,
+                                            bindValue: false,
+                                            handleParent: &quot;&quot;,
+                                            position: &quot;bottom&quot;,
+                                            effect: &quot;fadeInUp&quot;,
+                                            appendTo: &quot;&quot;,
+                                            rotateEffect: false,
+                                            modelEvent: &quot;input&quot;,
+                                            buttons: [{
+                                                name: &quot;取消&quot;,
+                                                className: &quot;&quot;
+                                            }, {
+                                                name: &quot;确定&quot;,
+                                                className: &quot;primary-reverse&quot;
+                                            }],
+                                            onBeforeInit: null,
+                                            onInited: null,
+                                            autoClose: false,
+                                            onCancel: null,
+                                            onBeforeOpen: null,
+                                            onOpen: null,
+                                            onChanged: null,//改变后
+                                            onMask: option.onMask || option.autoClose ? function () {
+                                                dp &amp;&amp; dp.close();
+                            
+                                            } : null,
+                                            callback: null
+                                        }
+                            
+                                        var $clickTarget = null;
+                            
+                                        // var _config = {
+                                        //     popup : true
+                                        // }
+                                        // var opt = $.extend(true,{},_config,option);
+                                        var dp = this,
+                                            voidFunc = function () { },
+                                            opt_handleParent,
+                                            opt_handle,
+                                            opt_minDate,
+                                            opt_maxDate,
+                                            opt_container,
+                                            opt_onChange,
+                                            opt_formatValue,
+                                            globalFormat,
+                                            columns,
+                                            dateCol,
+                                            timeCol,
+                                            curValue, prevValue,
+                                            firstInit = true,
+                                            uiDialog = null;
+                                        var opt = $.extend(true, {}, config, option);
+                                        opt.appendTo = opt.appendTo || (ui.hasRouter ? router.currentPage() || &quot;body&quot; : &quot;body&quot;);
+                            
+                                        var onBeforeOpen = opt.onBeforeOpen;
+                            
+                                        // 操作按钮取消的时候,不修改原本的值
+                                        opt.callback = function (e) {
+                                            // 点击以后的回调,如果不需要默认的操作,则return false;
+                                            var bool = option.callback &amp;&amp; option.callback.call(dp, e);
+                            
+                                            if (bool === false) {
+                                                return false;
+                                            }
+                                            // 返回false 则不操作
+                                            if (bool == true || typeof bool == &quot;undefined&quot;) {
+                                                // 取消返回上一个值
+                                                if ($(e.target).text().trim() == &quot;取消&quot; || $(e.target).text().trim() == &quot;cancel&quot; || $(e.target).text().trim() == &quot;关闭&quot;) {
+                                                    try {
+                            
+                                                        var dd = transformTime(datePrevVal);
+                            
+                                                        dp.value(dd);
+                            
+                                                        option.onCancel &amp;&amp; option.onCancel.call(dp, e);
+                            
+                                                    } catch (e) { }
+                            
+                                                } else {
+                                                    datePrevVal = dp.value();
+                            
+                                                    if ($clickTarget &amp;&amp; $clickTarget[0] &amp;&amp; $clickTarget[0].nodeName === &quot;INPUT&quot;) {
+                                                        $clickTarget.val(datePrevVal);
+                            
+                                                        // 触发点击后的b-model绑定
+                                                        $clickTarget.trigger(opt.modelEvent);
+                                                    } else {
+                                                        $clickTarget &amp;&amp; $clickTarget.text(datePrevVal);
+                                                    }
+                            
+                                                    opt.autoClose == false &amp;&amp; dp &amp;&amp; dp.close();
+                            
+                                                    opt.onChanged &amp;&amp; opt.onChanged.call(dp, e)
+                            
+                                                }
+                            
+                                                // 点击按钮可以关闭
+                                                opt.autoClose == false &amp;&amp; dp &amp;&amp; dp.close();
+                            
+                                            }
+                                            $clickTarget = null;
+                                        }
+                                        var indexOfCol = {}
+                                        var _formateDateOrder = [
+                                            &quot;FullYear&quot;,
+                                            &quot;Month&quot;,
+                                            &quot;Date&quot;
+                                        ],
+                                            _formateTimeOrder = [
+                                                &quot;Hours&quot;,
+                                                &quot;Minutes&quot;,
+                                                &quot;Seconds&quot;
+                                            ],
+                                            _formateOrderMap = {
+                                                &quot;FullYear&quot;: &quot;year&quot;,
+                                                &quot;Month&quot;: &quot;month&quot;,
+                                                &quot;Date&quot;: &quot;date&quot;,
+                                                &quot;Hours&quot;: &quot;hour&quot;,
+                                                &quot;Minutes&quot;: &quot;minute&quot;,
+                                                &quot;Seconds&quot;: &quot;second&quot;
+                                            },
+                            
+                                            formateOrder = [];
+                            
+                                        var hasReset = false;
+                            
+                                        function getPickerDate(cols) {
+                                            // var d = new Date(&#x27;1970/1/1&#x27;);
+                            
+                                            var d = new Date();
+                                            // 日期
+                                            let ds = [d.getFullYear(), d.getMonth() + 1, d.getDate()];
+                                            // 时间
+                                            let ts = [&quot;0&quot;, &quot;0&quot;, &quot;0&quot;];
+                                            // setMonth日期的做法在设置月份的时候，如果日大于当前月的最后一天，日期会被更改为加多一个月
+                                            // 比如，当前1/31， 滚动月份为2月的时候，天数大于二月份的最大天数，会被设置为3月份，同理，遇到月份为30天的，也会出现这个问题
+                                            // formateOrder.forEach(function (type, i) {
+                            
+                                            //     // type: Hours,Minutes,Seconds
+                                            //     // indexOfCol[type]: 1,3,5
+                                            //     let val = (cols[indexOfCol[type]].value) - (type == &#x27;Month&#x27; ? 1 : 0);
+                                            //     d[&quot;set&quot; + type](val);
+                                            // });
+                            
+                                            let dates = [];
+                            
+                                            cols.forEach(function (item, i) {
+                            
+                                                switch (item.type) {
+                                                    // 默认月份的处理
+                                                    case &quot;year&quot;:
+                                                        ds[0] = item.value || d.getFullYear();
+                                                        break;
+                                                    case &quot;month&quot;:
+                                                        ds[1] = item.value || d.getMonth() + 1;
+                                                        break;
+                                                    case &quot;date&quot;:
+                                                        ds[2] = item.value || d.getDate();
+                                                        break;
+                                                    // 时间的处理
+                                                    case &quot;hour&quot;:
+                                                        ts[0] = item.value || &quot;0&quot;;
+                                                        break;
+                                                    case &quot;minute&quot;:
+                                                        ts[1] = item.value || &quot;0&quot;;
+                                                        break;
+                                                    case &quot;second&quot;:
+                                                        ts[2] = item.value || &quot;0&quot;;
+                                                        break;
+                                                }
+                            
+                                            })
+                            
+                                            let formatVals = opt.formatValue || globalFormat || &quot;&quot;;
+                                            // 修复formatValue yyyy-MM 之类的格式时，日期取第1天，防止转换的时候，进1
+                                            if (formatVals &amp;&amp; typeof formatVals === &quot;string&quot; &amp;&amp; formatVals.indexOf(&quot;M-&quot;) &lt; 0) {
+                                                // 没有天时，day需要改为1号
+                                                ds[2] = 1;
+                                            }
+                            
+                                            let newdate = ds.join(&quot;/&quot;) + &quot; &quot; + ts.join(&quot;:&quot;);
+                                            let dateobj = ui.date.convert(newdate);
+                            
+                                            return dateobj;
+                                        }
+                            
+                                        function dateToArray(date) {
+                                            var d = transformTime(date);
+                                            return formateOrder.map(function (type, i) {
+                                                return d[&quot;get&quot; + type]() + (type == &#x27;Month&#x27; ? 1 : 0);
+                                            })
+                                        }
+                            
+                                        this.config = {
+                            
+                                        }
+                                        this.option = function () {
+                            
+                                        }
+                            
+                                        /**
+                                         * 设置分栏
+                                         *  @method cols
+                                         *  @param {object} cols [ {} ]
+                                         *  @param {object} cols.year [ &#x27;none&#x27; || 年份  ]
+                                         *  @param {array}  cols.year.values [ 年份的值 ]
+                                         *  @param {array}  cols.year.displayValues [ 年份的值对应的文本 ]
+                                         *  @param {object} cols.month [ &#x27;none&#x27; || 月份  ]
+                                         *  @param {array}  cols.month.values [ 月份的值 ]
+                                         *  @param {array}  cols.month.displayValues [ 月份的值对应的文本 ]
+                                         *  @param {object} cols.date [ &#x27;none&#x27; || 日  ]
+                                         *  @param {array}  cols.date.values [ 日 ]
+                                         *  @param {array}  cols.date.displayValues [ 日对应的文本 ]
+                                         *  @param {object} cols.hour [ &#x27;none&#x27; || 时  ]
+                                         *  @param {array}  cols.hour.values [ 时 ]
+                                         *  @param {array}  cols.hour.displayValues [ 时对应的文本 ]
+                                         *  @param {object} cols.minute [ &#x27;none&#x27; || 分  ]
+                                         *  @param {array}  cols.minute.values [ 分 ]
+                                         *  @param {array}  cols.minute.displayValues [ 分对应的文本 ]
+                                         *  @param {object} cols.second [ &#x27;none&#x27; || 秒  ]
+                                         *  @param {array}  cols.second.values [ 秒 ]
+                                         *  @param {array}  cols.second.displayValues [ 秒对应的文本 ]
+                                         *  @example
+                            
+                                            //设置分栏
+                                            uiPickerdate.cols({
+                                                year: {
+                                                    values: [2013, 2014, 2015],
+                                                },
+                                                hour: {
+                                                    values: [8, 9, 10, 11, 13, 14, 15, 16, 17]
+                                                },
+                                                minute: {
+                                                    values: [0, 30],
+                                                    displayValues: [&#x27;00&#x27;, &#x27;30&#x27;]
+                                                },
+                                                second: &#x27;none&#x27;
+                                            });
+                            
+                                         */
+                                        this.cols = function (cols) {
+                                            cols = cols || {};
+                                            var dateCol = [];
+                                            timeCol = [];
+                                            columns = [];
+                                            indexOfCol = {};
+                                            formateOrder = [];
+                            
+                                            _formateDateOrder.forEach(function (type, i) {
+                                                if (cols[_formateOrderMap[type]] !== &#x27;none&#x27;) {
+                                                    formateOrder.push(type);
+                                                    dateCol.push(type);
+                                                }
+                                            });
+                            
+                                            _formateTimeOrder.forEach(function (type, i) {
+                                                if (cols[_formateOrderMap[type]] !== &#x27;none&#x27;) {
+                                                    formateOrder.push(type);
+                                                    timeCol.push(type);
+                                                }
+                                            })
+                            
+                                            // format
+                                            dateCol.forEach(function (type, i) {
+                            
+                                                indexOfCol[type] = columns.length;
+                                                // return year month date
+                                                let formateOrder = _formateOrderMap[type];
+                                                // values
+                                                let col = cols[formateOrder];
+                                                let item = createColumn[type](col);
+                            
+                                                item[&quot;type&quot;] = formateOrder;
+                                                columns.push(item);
+                            
+                                            })
+                            
+                                            timeCol.forEach(function (type, i) {
+                                                if (i == 0 &amp;&amp; dateCol.length != 0) {
+                                                    columns.push(createColumn[&quot;Space&quot;]());
+                                                } else {
+                                                    columns.push(createColumn[&quot;Divider&quot;]());
+                                                }
+                                                // bug fixed first line :
+                                                if (dateCol.length == 0) {
+                                                    columns[0][&quot;content&quot;] = &quot;&quot;;
+                                                }
+                            
+                                                indexOfCol[type] = columns.length;
+                                                let formateOrder = _formateOrderMap[type];
+                                                // values
+                                                let col = cols[formateOrder];
+                                                let item = createColumn[type](col);
+                                                item[&quot;type&quot;] = formateOrder;
+                                                columns.push(item);
+                                            });
+                            
+                                            if (dp.picker) {
+                            
+                                                dp.picker.params.cols = columns;
+                                                dp.picker.initialized = false;
+                                                dp.picker.init();
+                                            }
+                            
+                                            hasReset = false;
+                            
+                                            return this;
+                                        };
+                                        this.id = function (container) {
+                                            if (container &amp;&amp; !opt_container) {
+                                                opt_container = container;
+                                            }
+                                        }
+                            
+                                        /**
+                                         * 重新渲染
+                                         *  @method reset
+                                         *  @example
+                            
+                                            //重置
+                                            uiPickedate.reset();
+                            
+                                         */
+                            
+                                        this.reset = function () {
+                                            if (dp.picker) {
+                                                dp.picker.initialized = false;
+                                                dp.picker.init();
+                                            }
+                            
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 清空值,必须在控件初始化以后再执行.
+                                         *  @method empty
+                                         *  @since 1.5.6
+                                         *  @example
+                            
+                                            //
+                                            uiPickedate.empty();
+                            
+                                         */
+                                        this.empty = function () {
+                                            if (dp.picker) {
+                                                ui.obj(option.handle).val(&#x27;&#x27;);
+                                            }
+                            
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 设置最小日期
+                                         *  @method min
+                                         *  @param {string} [min]  默认最小日期:&#x27;1960/01/01 00:00:00&#x27; 
+                                         *  @example
+                            
+                                            //设置最小日期
+                                            uiPickedate.min(&#x27;1960/01/01 00:00:00&#x27;);
+                            
+                                         */
+                                        this.min = function (min) {
+                                            var minDate = (new Date().getFullYear() - 1) + &quot;/01/01 00:00:00&quot;;
+                                            opt_minDate = transformTime(min || opt.min || minDate);
+                                            return this;
+                            
+                                        };
+                            
+                                        /**
+                                         * 设置最大日期
+                                         *  @method max
+                                         *  @param {string} [max]  默认最大日期:&#x27;2030/01/01 00:00:00&#x27; 
+                                         *  @example
+                            
+                                            //设置最大日期
+                                            uiPickedate.max(&#x27;2030/01/01 00:00:00&#x27;);
+                            
+                                         */
+                                        this.max = function (max) {
+                                            var maxDate = (new Date().getFullYear() + 1) + &quot;/12/31 00:00:00&quot;;
+                            
+                                            opt_maxDate = transformTime(max || opt.max || maxDate);
+                            
+                                            return this;
+                            
+                                        };
+                            
+                                        /**
+                                         * 设置某个日期
+                                         *  @method value
+                                         *  @param {string} [date]  日期格式:&#x27;2030/01/01 00:00:00&#x27; 
+                                         *  @example
+                            
+                                            //设置某个日期
+                                            uiPickedate.value(&#x27;2016/07/01 00:00:00&#x27;);
+                            
+                                         */
+                                        this.value = function (date) {
+                            
+                                            if (date) {
+                            
+                                                var d = transformTime(date, dp.config.formatValue),
+                                                    arr = dateToArray(d);
+                            
+                                                dp.picker.setValue(arr, 0);
+                                                // 触发input的修改,主要是store b-model 需要手动触发
+                                                ($clickTarget &amp;&amp; $clickTarget[0] &amp;&amp; $clickTarget[0].nodeName === &quot;INPUT&quot;) &amp;&amp; $clickTarget.trigger(dp.config.modelEvent);
+                                                return this;
+                            
+                                            } else {
+                                                return opt_formatValue(dp.picker, dp.value, dp.displayValue);
+                                            }
+                            
+                                        }
+                            
+                                        /**
+                                         * 设置获取多个日期
+                                         *  @method values
+                                         *  @since 1.6.4
+                                         *  @param {array} [date]  [{id:&quot;#start&quot;,value:&#x27;2016/07/01 00:00:00&#x27;}]
+                                         *  @example
+                            
+                                            //获取多个日期
+                                            var dates = uiPickedate.values();
+                                            // [{id:&quot;#start&quot;,value:&#x27;2016/07/01 00:00:00&#x27;,name:&quot;meeting&quot;}]
+                                            
+                                            //设置多个日期
+                                            uiPickedate.values([{id:&quot;#start&quot;,value:&#x27;2016/07/01 00:00:00&#x27;}]);
+                            
+                            
+                                         */
+                                        this.values = function (data) {
+                                            let that = this;
+                                            if (data &amp;&amp; ui.typeof(data) === &quot;array&quot;) {
+                            
+                                                data.forEach(function (item, index) {
+                                                    var $id = ui.$(&quot;#&quot; + item.id);
+                            
+                                                    $id.val(item.value);
+                                                    ($clickTarget &amp;&amp; $clickTarget[0] &amp;&amp; $clickTarget[0].nodeName === &quot;INPUT&quot;) &amp;&amp; $id.trigger(opt.modelEvent);
+                            
+                                                })
+                            
+                                                return this.values();
+                                            } else {
+                                                var vals = []
+                                                ui.$(opt_handle).each(function (index, item) {
+                                                    var items = {};
+                            
+                                                    items.id = item.id
+                                                    items.value = item.value || &quot;&quot; //that.value()//|| opt_formatValue(dp.picker, dp.value, dp.displayValue);
+                                                    items.name = item.name || &quot;&quot;;
+                            
+                                                    vals.push(items);
+                                                })
+                            
+                                                return vals;
+                                            }
+                                        }
+                            
+                                        /**
+                                         * 检测开始时间与结束时间，传input的id值进行检测
+                                         *  @method checkValue
+                                         *  @since 1.7.0
+                                         *  @param {string} [startId]  例如：&quot;start&quot;
+                                         *  @param {string} [endId]  例如：&quot;end&quot;
+                                         *  @return {boolean} 默认返回 true,如果开始时间比结束时间大，则返回false 
+                                         *  @example
+                                        
+                                            &lt;input id=&quot;start&quot; class=&quot;pickerdate&quot; value=&quot;&quot;/&gt;
+                                            &lt;input id=&quot;end&quot; class=&quot;pickerdate&quot; value=&quot;&quot;/&gt;
+                            
+                                            let canSetting = uiPickerdate.checkValue();
+                            
+                                         */
+                            
+                                        this.checkValue = function (startid, endid) {
+                                            // 获取两个值
+                                            let val = this.value();
+                            
+                                            let startVal = ui.$(&quot;#&quot; + startid).val();
+                                            let endVal = ui.$(&quot;#&quot; + endid).val();
+                            
+                                            if (this.el.id.includes(endid)) {
+                                                endVal = val;
+                                            } else if (this.el.id.includes(startid)) {
+                                                startVal = val;
+                                            }
+                            
+                                            // 有开始日期及结束日期到时候才会检查
+                                            if (startVal != &quot;&quot; &amp;&amp; endVal != &quot;&quot;) {
+                            
+                                                // 计算差值
+                                                let startTime = ui.date.convert(startVal).getTime();
+                                                let endTime = ui.date.convert(endVal).getTime();
+                            
+                                                if (endTime &gt; startTime) {
+                                                    return true
+                                                } else {
+                                                    return false;
+                                                }
+                                            }
+                                            return true;
+                                        }
+                            
+                            
+                                        function _handleClick(e) {
+                                            if ($(this).hasClass(&quot;disabled&quot;)) {
+                                                return;
+                                            }
+                            
+                                            // 自动绑定改变的值
+                                            if (opt.bindValue) {
+                                                $clickTarget = $(this);
+                                                dp.el = this;
+                                                var val = $clickTarget.val() || $clickTarget.text();
+                            
+                                                // 年月日，不能只有月日，默认加上本年
+                                                val = globalFormat &amp;&amp; globalFormat.indexOf(&quot;y&quot;) &lt; 0 &amp;&amp; globalFormat.indexOf(&quot;M&quot;) &gt; -1 ? new Date().getFullYear() + &quot;/&quot; + val : val || ui.date.today(globalFormat);
+                            
+                                                // 设置当前的value
+                                                dp.value(val)
+                                            }
+                            
+                                            let canopen = onBeforeOpen &amp;&amp; onBeforeOpen.call(dp, e)
+                                            if (canopen === false) {
+                                                return;
+                                            }
+                                            uiDialog &amp;&amp; !uiDialog.isOpen() &amp;&amp; uiDialog.open();
+                            
+                                            opt.onOpen &amp;&amp; opt.onOpen.call(dp, e)
+                                        }
+                                        this.handler = function (handle) {
+                                            if (handle &amp;&amp; opt_handle !== handle) {
+                            
+                                                // var hd = ui.obj(opt_handle);
+                            
+                                                // console.log(opt_handle, handle)
+                                                // if (hd) {
+                                                //     hd.off(&#x27;click&#x27;, _handleClick);
+                                                // }
+                                                // hd = ui.obj(handle)
+                            
+                                                // if (hd) {
+                                                //     hd.on(&quot;click&quot;, _handleClick);
+                                                // }
+                                                // _handleClick.hasOpen = false;
+                                                // opt_handle = handle;
+                                                // return;
+                                                opt_handle = handle;
+                                                if (option.handleParent) {
+                                                    ui.$(option.handleParent).off(&quot;click.bui&quot;, opt_handle).on(&quot;click.bui&quot;, opt_handle, _handleClick)
+                                                } else {
+                                                    ui.$(opt_handle).off(&quot;click.bui&quot;).on(&quot;click.bui&quot;, _handleClick)
+                                                }
+                            
+                                                _handleClick.hasOpen = false;
+                                                opt_handle = handle;
+                                            }
+                                            return this;
+                            
+                                        }
+                            
+                                        /**
+                                         * 格式化后回调
+                                         *  @method formatValue
+                                         *  @param {string} [str]  &quot;yyyy-MM-dd hh:00:00&quot; 
+                                         *  @example
+                            
+                                            //设置某个日期
+                                            uiPickedate.formatValue(&quot;yyyy-MM-dd hh:00:00&quot;);
+                            
+                                         */
+                                        var fM = {
+                                            y: function (d, l) {
+                                                return d.getFullYear().toString().slice(-l);
+                                            },
+                                            M: function (d, l) {
+                                                var s = l &gt; 1 ? &#x27;0&#x27; : &#x27;&#x27;;
+                                                return (s + (d.getMonth() + 1)).slice(-2);
+                                            },
+                                            d: function (d, l) {
+                                                var s = l &gt; 1 ? &#x27;0&#x27; : &#x27;&#x27;;
+                                                return (s + d.getDate()).slice(-2);
+                                            },
+                                            h: function (d, l) {
+                                                var s = l &gt; 1 ? &#x27;0&#x27; : &#x27;&#x27;;
+                                                return (s + d.getHours()).slice(-2);
+                                            },
+                                            m: function (d, l) {
+                                                var s = l &gt; 1 ? &#x27;0&#x27; : &#x27;&#x27;;
+                                                return (s + d.getMinutes()).slice(-2);
+                                            },
+                                            s: function (d, l) {
+                                                var s = l &gt; 1 ? &#x27;0&#x27; : &#x27;&#x27;;
+                                                return (s + d.getSeconds()).slice(-2);
+                                            }
+                                        }
+                                        this.formatValue = function (formatStr) {
+                            
+                                            globalFormat = formatStr;
+                                            opt_formatValue = function (picker, values, displayValues) {
+                            
+                                                var date = getPickerDate(picker.cols);
+                            
+                                                let str = formatStr.replace(/y+|M+|d+|h+|m+|s+/g, function (type) {
+                            
+                                                    return fM[type[0]](date, type.length);
+                                                })
+                                                // console.trace(date,str,123)
+                            
+                                                return str
+                            
+                                            }
+                                            if (dp.picker) {
+                                                dp.picker.updateValue();
+                                            }
+                            
+                                            hasReset = false;
+                            
+                                            return this;
+                            
+                                        }
+                            
+                                        // 新增日期格式
+                                        /**
+                                         * 格式化后回调
+                                         *  @method formatDate
+                                         *  @param {string} [date]  &quot;2019-11-01&quot; 
+                                         *  @param {string} [pattern]  &quot;yyyy-MM-dd hh:00:00&quot; 
+                                         *  @example
+                            
+                                            //设置某个日期
+                                            uiPickedate.formatDate(&quot;yyyy-MM-dd hh:00:00&quot;);
+                            
+                                         */
+                                        this.formatDate = function (str, pattern) {
+                                            if (str == null) {
+                                                return &#x27;&#x27;;
+                                            }
+                                            var date = transformTime(str);
+                                            pattern = pattern || &quot;yyyy-MM-dd&quot;;
+                            
+                                            var o = {
+                                                &quot;M+&quot;: date.getMonth() + 1, //月份
+                                                &quot;d+&quot;: date.getDate(), //日
+                                                &quot;h+&quot;: date.getHours(), //小时
+                                                &quot;m+&quot;: date.getMinutes(), //分
+                                                &quot;s+&quot;: date.getSeconds(), //秒
+                                                &quot;q+&quot;: Math.floor((date.getMonth() + 3) / 3), //季度
+                                                &quot;S&quot;: date.getMilliseconds() //毫秒
+                                            };
+                                            if (/(y+)/.test(pattern)) {
+                                                pattern = pattern.replace(RegExp.$1, (date.getFullYear() + &quot;&quot;).substr(4 - RegExp.$1.length));
+                                            }
+                                            for (var k in o) {
+                                                if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(pattern))
+                                                    pattern = pattern.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : ((&quot;00&quot; + o[k]).substr((&quot;&quot; + o[k]).length)));
+                                            }
+                            
+                                            return pattern;
+                                        }
+                            
+                                        /**
+                                         * 日期改变的回调
+                                         *  @method onChange
+                                         *  @param {function} [callback]  日期改变实时监听回调 
+                                         *  @example
+                            
+                                            //设置某个日期
+                                            uiPickedate.onChange(function(value) {
+                                                // body...
+                                            });
+                            
+                                         */
+                                        this.onChange = function (callback) {
+                                            var that = this;
+                                            if (opt.bindValue) {
+                                                opt_onChange = function (values) {
+                            
+                                                    if ($clickTarget) {
+                                                        if ($clickTarget[0] &amp;&amp; $clickTarget[0].nodeName === &quot;INPUT&quot;) {
+                                                            $clickTarget.val(values);
+                                                        } else {
+                                                            $clickTarget.text(values);
+                                                        }
+                                                    } else {
+                            
+                                                        ui.obj(opt_handle).each(function (i, item) {
+                                                            if (item.nodeName === &quot;INPUT&quot;) {
+                                                                item.value = values
+                                                            } else {
+                                                                item.innerTEXT = values;
+                                                            }
+                                                        })
+                                                    }
+                                                    callback &amp;&amp; callback.call(that, values);
+                            
+                                                    firstInit = false;
+                                                }
+                                            } else {
+                                                opt_onChange = callback || voidFunc;
+                                            }
+                            
+                                            trigger.call(this, &quot;change&quot;, curValue);
+                            
+                                            return this;
+                            
+                                        }
+                            
+                                        this.popup = function (option) {
+                            
+                                            if (option.popup &amp;&amp; !uiDialog) {
+                            
+                                                var dialogHtml = &#x27;&lt;div id=&quot;&#x27; + guid + &#x27;&quot; class=&quot;bui-dialog&quot; &gt;&#x27;;
+                                                option.title &amp;&amp; (dialogHtml += &#x27;&lt;div class=&quot;bui-dialog-head&quot;&gt;&#x27; + option.title + &#x27;&lt;/div&gt;&#x27;);
+                                                dialogHtml += &#x27;&lt;div class=&quot;bui-dialog-main&quot;&gt;&lt;div id=&quot;&#x27; + guid + &#x27;-picker&#x27; + &#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&#x27;;
+                                                if (option.buttons &amp;&amp; option.buttons.length) {
+                                                    dialogHtml += &#x27;&lt;div class=&quot;bui-dialog-foot bui-box&quot;&gt;&#x27;;
+                                                    $.each(option.buttons, function (i, el) {
+                                                        var className = (typeof el == &quot;object&quot; &amp;&amp; &quot;className&quot; in el) ? &#x27; &#x27; + el.className : &quot;&quot;;
+                                                        var name = (typeof el == &quot;object&quot; &amp;&amp; &quot;name&quot; in el) ? el.name : el;
+                                                        dialogHtml += &#x27;&lt;div class=&quot;span1&quot;&gt;&lt;div class=&quot;bui-btn&#x27; + className + &#x27;&quot;&gt;&#x27; + name + &#x27;&lt;/div&gt;&lt;/div&gt;&#x27;;
+                                                    })
+                                                    dialogHtml += &#x27;&lt;/div&gt;&#x27;;
+                                                }
+                                                dialogHtml += &#x27;&lt;/div&gt;&#x27;;
+                            
+                                                var dialog = $(option.appendTo).append(dialogHtml);
+                                                opt_container = ui.obj(guid + &#x27;-picker&#x27;);
+                            
+                                                // uiDialog = ui.dialog(opt);
+                            
+                                            } else {
+                                                opt_container = ui.obj(option.id);
+                            
+                                            }
+                            
+                                            return this;
+                                        };
+                            
+                            
+                            
+                                        /*
+                                         * picker options
+                                         */
+                                        var opt_change = function (picker, type, nextType) {
+                                            var date = getPickerDate(picker.cols),
+                                                min = opt_minDate[&#x27;get&#x27; + type](),
+                                                max = opt_maxDate[&#x27;get&#x27; + type](),
+                                                datetime = date.getTime(),
+                                                mintime = opt_minDate.getTime(),
+                                                maxtime = opt_maxDate.getTime()
+                            
+                                            if (datetime &lt; mintime &amp;&amp; date[&#x27;get&#x27; + type]() &lt; min) {
+                                                if (type == &#x27;Month&#x27;) {
+                                                    min += 1;
+                                                }
+                                                picker.cols[indexOfCol[type]].setValue(min);
+                                                return;
+                                            } else if (datetime &gt; maxtime &amp;&amp; date[&#x27;get&#x27; + type]() &gt; max) {
+                                                if (type == &#x27;Month&#x27;) {
+                                                    max += 1;
+                                                }
+                                                picker.cols[indexOfCol[type]].setValue(max);
+                                                return;
+                                            }
+                            
+                                            if (nextType &amp;&amp; (datetime &lt; mintime || datetime &gt; maxtime)) {
+                                                picker.cols[indexOfCol[nextType]].onChange(picker);
+                                            }
+                                        }
+                                        var createColumn = {};
+                                        // FullYear
+                                        createColumn[&quot;FullYear&quot;] = function (colYear) {
+                                            colYear = colYear || {
+                                                values: (function () {
+                                                    var arr = [];
+                                                    var min = opt_minDate.getFullYear(),
+                                                        max = opt_maxDate.getFullYear();
+                                                    for (var i = min; i &lt;= max; i++) {
+                                                        arr.push(i)
+                                                    };
+                                                    return arr;
+                                                })()
+                                            };
+                                            return {
+                                                type: &quot;year&quot;,
+                                                values: colYear.values,
+                                                displayValues: colYear.displayValues,
+                                                onChange: function (picker, value, displayValue) {
+                                                    opt_change(picker, &#x27;FullYear&#x27;, !!indexOfCol[&#x27;Month&#x27;] ? &#x27;Month&#x27; : &#x27;&#x27;);
+                                                }
+                                            }
+                                        };
+                                        // Month
+                                        createColumn[&quot;Month&quot;] = function (colMonth) {
+                            
+                                            colMonth = colMonth || {
+                                                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                                                displayValues: [&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;, &#x27;11&#x27;, &#x27;12&#x27;]
+                                            };
+                            
+                                            return {
+                                                type: &quot;month&quot;,
+                                                values: colMonth.values,
+                                                displayValues: colMonth.displayValues,
+                                                textAlign: &#x27;right&#x27;,
+                                                onChange: function (picker, value, displayValue) {
+                            
+                                                    var date = new Date();
+                                                    var year = picker.cols[indexOfCol[&#x27;FullYear&#x27;]] ? picker.cols[indexOfCol[&#x27;FullYear&#x27;]].value : date.getFullYear();
+                                                    var month = picker.cols[indexOfCol[&#x27;Month&#x27;]] ? picker.cols[indexOfCol[&#x27;Month&#x27;]].value : date.getMonth() + 1;
+                            
+                                                    var daysInMonth = new Date(year,
+                                                        parseInt(month),
+                                                        0).getDate(),
+                                                        arr = [];
+                            
+                                                    for (var i = 1; i &lt;= daysInMonth; i++) {
+                                                        arr.push(i);
+                                                    }
+                                                    var dateCol = picker.cols[indexOfCol[&quot;Date&quot;]]
+                                                    if (dateCol &amp;&amp; dateCol.replaceValues) {
+                                                        dateCol.replaceValues(arr, null, dateCol.value &lt; daysInMonth ? dateCol.value : daysInMonth);
+                                                    }
+                                                    opt_change(picker, &#x27;Month&#x27;, !!indexOfCol[&#x27;Date&#x27;] ? &#x27;Date&#x27; : &#x27;&#x27;);
+                                                }
+                                            }
+                                        };
+                                        // Date
+                                        createColumn[&quot;Date&quot;] = function (colDate) {
+                            
+                                            colDate = colDate || {
+                                                values: (function () {
+                                                    var lengthOfDaysInMonth = 31,
+                                                        arr = [];
+                                                    do {
+                                                        arr.unshift(lengthOfDaysInMonth);
+                                                    } while (lengthOfDaysInMonth--);
+                                                    return arr;
+                                                })(),
+                                                displayValues: (function () {
+                                                    var lengthOfDaysInMonth = 31,
+                                                        arr = [];
+                                                    do {
+                                                        arr.unshift(lengthOfDaysInMonth + &quot;天&quot;);
+                                                    } while (lengthOfDaysInMonth--);
+                                                    return arr;
+                                                })()
+                                            };
+                            
+                                            return {
+                                                type: &quot;date&quot;,
+                                                values: colDate.values,
+                                                displayValues: colDate.displayValues,
+                                                onChange: function (picker, value, displayValue) {
+                                                    opt_change(picker, &#x27;Date&#x27;);
+                                                    // opt_change(picker, &#x27;Date&#x27;, !!indexOfCol[&#x27;Hours&#x27;] ? &#x27;Hours&#x27; : &#x27;&#x27;);
+                                                }
+                                            }
+                                        };
+                                        // Space divider
+                                        createColumn[&quot;Space&quot;] = function () {
+                                            return {
+                                                type: &quot;space&quot;,
+                                                divider: true,
+                                                content: &#x27;  &#x27;
+                                            }
+                                        };
+                                        // Hours
+                                        createColumn[&quot;Hours&quot;] = function (colHours) {
+                                            colHours = colHours || (function () {
+                                                var values = [],
+                                                    displayValues = [];
+                                                for (var i = 0; i &lt; 24; i++) {
+                                                    values.push(i);
+                                                    displayValues.push((&#x27;0&#x27; + i).slice(-2));
+                                                }
+                                                return {
+                                                    type: &quot;hour&quot;,
+                                                    values: values,
+                                                    displayValues: displayValues
+                                                };
+                                            })();
+                                            return {
+                                                type: &quot;hour&quot;,
+                                                values: colHours.values,
+                                                displayValues: colHours.displayValues,
+                                                onChange: function (picker, value, displayValue) {
+                                                    opt_change(picker, &#x27;Hours&#x27;, !!indexOfCol[&#x27;Minutes&#x27;] ? &#x27;Minutes&#x27; : &#x27;&#x27;);
+                                                }
+                                            }
+                                        };
+                                        // Divider
+                                        createColumn[&quot;Divider&quot;] = function () {
+                                            return {
+                                                type: &quot;divider&quot;,
+                                                divider: true,
+                                                textAlign: &#x27;center&#x27;,
+                                                content: &#x27;:&#x27;
+                                            }
+                                        };
+                                        // Minutes
+                                        createColumn[&quot;Minutes&quot;] = function (colMin) {
+                                            colMin = colMin || (function () {
+                                                var values = [],
+                                                    displayValues = [];
+                                                for (var i = 0; i &lt; 60; i++) {
+                                                    values.push(i);
+                                                    displayValues.push((&#x27;0&#x27; + i).slice(-2));
+                                                }
+                                                return {
+                                                    type: &quot;minute&quot;,
+                                                    values: values,
+                                                    displayValues: displayValues
+                                                };
+                                            })();
+                                            return {
+                                                type: &quot;minute&quot;,
+                                                values: colMin.values,
+                                                displayValues: colMin.displayValues,
+                                                onChange: function (picker, value, displayValue) {
+                                                    opt_change(picker, &#x27;Minutes&#x27;, !!indexOfCol[&#x27;Seconds&#x27;] ? &#x27;Seconds&#x27; : &#x27;&#x27;);
+                                                }
+                                            }
+                                        };
+                                        // Seconds
+                                        createColumn[&quot;Seconds&quot;] = function (colSec) {
+                                            colSec = colSec || (function () {
+                                                var values = [],
+                                                    displayValues = [];
+                                                for (var i = 0; i &lt; 60; i++) {
+                                                    values.push(i);
+                                                    displayValues.push((&#x27;0&#x27; + i).slice(-2));
+                                                }
+                                                return {
+                                                    type: &quot;second&quot;,
+                                                    values: values,
+                                                    displayValues: displayValues
+                                                };
+                                            })();
+                                            return {
+                                                type: &quot;second&quot;,
+                                                values: colSec.values,
+                                                displayValues: colSec.displayValues,
+                                                onChange: function (picker, value, displayValue) {
+                                                    opt_change(picker, &#x27;Seconds&#x27;);
+                                                }
+                                            }
+                                        };
+                                        /*
+                                         * init
+                                         */
+                                        dp.init = function (options) {
+                            
+                                            var option = $.extend(true, opt, options)
+                                            option.onBeforeInit &amp;&amp; option.onBeforeInit.call(dp, option);
+                            
+                                            dp.config = option;
+                                            dp.min(option.min);
+                                            dp.max(option.max);
+                            
+                                            dp.cols(option.cols);
+                                            dp.id(option.id);
+                                            dp.$el = ui.obj(option.handle) || null;
+                                            dp.el = dp.$el ? dp.$el[0] : null;
+                                            dp.handler(option.handle);
+                                            // 生成弹窗模式日期结构
+                                            dp.popup(option);
+                            
+                                            // 初始值以input为主
+                                            curValue = dp.$el &amp;&amp; dp.$el.val() || &quot;&quot;;
+                                            curValue === &quot;&quot; &amp;&amp; dp.onChange(option.onChange);
+                                            dp.formatValue(option.formatValue || &#x27;yyyy-MM-dd hh:mm:ss&#x27;);
+                            
+                                            globalFormat = option.formatValue || &#x27;yyyy-MM-dd hh:mm:ss&#x27;;
+                            
+                                            //初始化对话框
+                                            dp.picker = ui.picker({
+                                                container: opt_container,
+                                                rotateEffect: option.rotateEffect,
+                                                value: dateToArray(option.value ? transformTime(option.value) : getMinTime(opt_minDate, opt_maxDate)),
+                                                onChange: function (picker, values, displayValues) {
+                            
+                                                    var value = opt_formatValue(picker, values, displayValues);
+                            
+                                                    if (curValue == value) {
+                                                        return;
+                                                    }
+                                                    curValue = value;
+                                                    opt_onChange &amp;&amp; opt_onChange.call(dp, value);
+                                                    trigger.call(this, &quot;change&quot;, value);
+                            
+                                                },
+                                                cols: columns
+                                            });
+                            
+                            
+                                            var uid = option.uid;
+                                            // 初始化弹窗模式
+                                            if (option.popup &amp;&amp; !uiDialog) {
+                            
+                                                delete option.uid;
+                                                delete option.onBeforeOpen;
+                            
+                                                uiDialog = ui.dialog.call(dp, option);
+                            
+                                                uiDialog &amp;&amp; uiDialog.on(&quot;open&quot;, function () {
+                                                    // 打开前获取设置前的值
+                                                    datePrevVal = opt_formatValue(dp.picker, dp.value, dp.displayValue);
+                                                    if (dp.picker) {
+                                                        dp.picker.initialized = false;
+                                                        dp.picker.init();
+                                                    }
+                                                    trigger.call(dp, &quot;show&quot;);
+                                                })
+                                                uiDialog &amp;&amp; uiDialog.on(&quot;close&quot;, function () {
+                            
+                                                    trigger.call(dp, &quot;hide&quot;);
+                                                })
+                                            }
+                            
+                                            // 存储实例
+                                            uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                                uid: uid,
+                                                ui: dp
+                                            })
+                            
+                                            option.onInited &amp;&amp; option.onInited.call(dp, option);
+                                        }
+                            
+                                        // 自动初始化
+                                        opt.autoinit &amp;&amp; dp.init(opt);
+                            
+                                        this.name = &quot;pickerdate&quot;;
+                            
+                                        /**
+                                         * 阻止触发
+                                         *  @method disabled
+                                         *  @chainable
+                                         *  @since 1.4
+                                         *  @example
+                            
+                                            uiPickerdate.disabled();
+                            
+                                         */
+                                        this.disabled = function () {
+                            
+                                            var $handleItem = ui.obj(opt_handle);
+                            
+                                            $handleItem &amp;&amp; $handleItem.addClass(&quot;disabled&quot;);
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 打开窗口
+                                         *  @method open
+                                         *  @chainable
+                                         *  @since 1.5.3
+                                         *  @example
+                            
+                                            uiPickerdate.open();
+                            
+                                         */
+                                        this.open = function (opt) {
+                            
+                                            uiDialog.open(opt);
+                            
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 是否打开状态
+                                         *  @method isOpen
+                                         *  @chainable
+                                         *  @since 1.5.3
+                                         *  @example
+                            
+                                            uiPickerdate.isOpen();
+                            
+                                         */
+                            
+                                        this.isOpen = function () {
+                            
+                                            return uiDialog.isOpen();
+                                        }
+                            
+                                        /**
+                                         * 关闭窗口
+                                         *  @method close
+                                         *  @chainable
+                                         *  @since 1.5.3
+                                         *  @example
+                            
+                                            uiPickerdate.close();
+                            
+                                         */
+                            
+                                        this.close = function (opt) {
+                            
+                                            uiDialog.close(opt);
+                            
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 手动触发事件变更，如果设置onMask 点击遮罩关闭的时候，可以手动触发这个change事件
+                                         *  @method triggerInput
+                                         *  @param {string} ev [ input | change ]
+                                         *  @chainable
+                                         *  @since 1.7.0
+                                         *  @example
+                            
+                                            uiPickerdate.triggerInput(&quot;input&quot;);
+                            
+                                         */
+                            
+                                        this.triggerInput = function (ev) {
+                            
+                                            $clickTarget.trigger(ev || opt.modelEvent);
+                                        }
+                            
+                                        /**
+                                         * 修改标题文本, 只有刚开始标题有内容才可以修改
+                                         *  @method modifyTitle
+                                         *  @param {string} content [文本]
+                                         *  @chainable
+                                         *  @since 1.5.6
+                                         *  @example
+                            
+                                            uiPickerdate.modifyTitle(&quot;标题名称&quot;);
+                            
+                                         */
+                            
+                                        this.modifyTitle = function (str) {
+                            
+                                            ui.obj(guid).find(&quot;.bui-dialog-head&quot;).html(str);
+                            
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 允许触发
+                                         *  @method enabled
+                                         *  @chainable
+                                         *  @since 1.4
+                                         *  @example
+                            
+                                            uiPickerdate.enabled();
+                            
+                                         */
+                                        this.enabled = function () {
+                                            var $handleItem = ui.obj(opt_handle);
+                            
+                                            $handleItem &amp;&amp; $handleItem.removeClass(&quot;disabled&quot;);
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * [销毁控件]
+                                         *  @method destroy
+                                         *  @since 1.4.2
+                                         *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                         *  @example
+                            
+                                            //销毁
+                                            uiPickerdate.destroy();
+                            
+                                         */
+                                        this.destroy = function (bool) {
+                                            var bool = bool == true ? true : false;
+                            
+                                            this.off(&quot;show&quot;);
+                                            this.off(&quot;hide&quot;);
+                                            this.off(&quot;change&quot;);
+                            
+                                            uiDialog &amp;&amp; uiDialog.destroy(bool);
+                            
+                                            dp = null;
+                                        }
+                                        /**
+                                         * 获取依赖的控件
+                                         *  @method widget
+                                         *  @param {string} [name]  依赖控件名 dialog 
+                                         *  @example
+                            
+                                            //获取依赖控件
+                                            var uiPickerdateWidget = uiPickerdate.widget();
+                            
+                            
+                                         */
+                                        this.widget = function (name) {
+                                            var control = {
+                                                dialog: uiDialog || {}
+                                            };
+                                            return ui.widget.call(control, name);
+                                        };
+                            
+                                        /**
+                                         * 为控件绑定事件
+                                         *  @event on
+                                         *  @since 1.3.0
+                                         *  @param {string} [type]  事件类型: &quot;change&quot;(日期改变的时候) | &quot;show&quot;(日期展示的时候)| &quot;hide&quot;(日期隐藏的时候) 
+                                         *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                         *  @example
+                            
+                                            uiPickerdate.on(&quot;show&quot;,function () {
+                                                // 点击的菜单
+                                                console.log(this);
+                                            });
+                            
+                            
+                                         */
+                                        this.on = function (type, callback) {
+                                            ui.on.apply(dp, arguments);
+                                            return this;
+                                        }
+                            
+                                        /**
+                                         * 为控件取消绑定事件
+                                         *  @event off
+                                         *  @since 1.3.0
+                                         *  @param {string} [type]  事件类型: &quot;change&quot;(日期改变的时候) | &quot;show&quot;(日期展示的时候)| &quot;hide&quot;(日期隐藏的时候) 
+                                         *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                         *  @example
+                            
+                                            uiPickerdate.off(&quot;show&quot;);
+                            
+                            
+                                         */
+                                        this.off = function (type, callback) {
+                                            ui.off.apply(dp, arguments);
+                                            return this;
+                            
+                                        }
+                                        /*
+                                         * 触发自定义事件
+                                         */
+                                        function trigger(type) {
+                                            //点击事件本身,或者为空,避免循环引用
+                                            dp.self = (this == window || this == dp) ? null : this;
+                            
+                                            ui.trigger.apply(dp, arguments);
+                                        }
+                            
+                                    }
+                            
+                                    return function (opt) {
+                                        return new Datepicker(opt);
+                                    }
+                                })();
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

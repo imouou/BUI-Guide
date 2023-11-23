@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.rating.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.rating.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库 
+                             * @module UI
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                                &quot;use strict&quot;;
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;星级评分&lt;/h2&gt;
+                                 *     &lt;p&gt;支持一颗星,支持半颗星, 调用show方法的时候,星星可以是按百分比显示. &lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.rating.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.rating/show&quot;}}{{/crossLink}}: 展示评分的星星值,支持百分比 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.rating/value&quot;}}{{/crossLink}}: 不传参则获取,传参则设置 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.rating/disabled&quot;}}{{/crossLink}}: 更改为展示星星 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.rating/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.rating/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.rating.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-rating_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class rating
+                                 *  @constructor 
+                                 *  @param {object} option  
+                                 *  @param {string} option.id 控件id
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {string} [option.handle] 点击的区域,属于循环的那部分
+                                 *  @param {boolean} [option.half] 是否支持半颗星
+                                 *  @param {boolean} [option.clickFull] 1.7.0新增 第一次点击是先半颗星还是1颗星，默认true（1颗星） | false(半颗星)
+                                 *  @param {number} [option.stars] 显示多少颗星星
+                                 *  @param {number} [option.value] 初始化多少颗星星
+                                 *  @param {number} [option.show] 展示多少颗星星比如 3.6 最后一颗星星会转换成60%
+                                 *  @param {boolean} [option.disabled] 是否只读
+                                 *  @param {boolean} [option.render]  true | false 默认true,这样无需填写复杂的结构
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发
+                                 *  @param {function} [option.onChange]  1.6.0 每次改变才触发
+                                 *  @param {function} [option.callback]  点击按钮的回调
+                                 *  @example
+                                 * 
+                                 *   html:
+                                 *
+                                        &lt;div id=&quot;rating&quot; class=&quot;bui-rating&quot;&gt;&lt;/div&gt;
+                                 *      
+                                 *   js: 
+                                 *   
+                                        // 初始化
+                                        var uiRating = bui.rating({
+                                                    id:&#x27;#rating&#x27;
+                                                });
+                                        //获取值
+                                        uiRating.value(); 
+                                 *
+                                 */
+                                ui.rating = function (option) {
+                            
+                                    // 新增静态渲染,支持多个
+                                    var config = {
+                                        id: &quot;&quot;,
+                                        uid: &quot;&quot;,
+                                        handle: &quot;.bui-rating-cell&quot;,
+                                        fullClassName: &quot;bui-rating-cell-full&quot;,
+                                        halfClassName: &quot;bui-rating-cell-half&quot;,
+                                        name: &quot;&quot;,
+                                        half: false,
+                                        clickFull: true,
+                                        stars: 5,
+                                        value: 0,
+                                        disabled: false,
+                                        render: true,
+                                        autoinit: true,
+                                        onBeforeInit: null,
+                                        onChange: null,
+                                        onInited: null,
+                                        callback: null
+                                    };
+                                    //方法
+                                    var module = {
+                                        name: &quot;rating&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        disabled: disabled,
+                                        enabled: enabled,
+                                        show: show,
+                                        value: value,
+                                        values: values,
+                                        reset: reset,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.rating, option);
+                            
+                                    var $id,
+                                        el,
+                                        fullClass,
+                                        halfClass,
+                                        val,
+                                        hasEventInit = false,
+                            
+                                        $handle;
+                            
+                                    //初始化
+                                    param.autoinit &amp;&amp; init(param);
+                            
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(true, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                                        if (option.id) {
+                                            $id = ui.obj(option.id);
+                                        } else {
+                                            ui.hint(&quot;rating id不能为空&quot;);
+                                            return;
+                                        }
+                            
+                                        module.$el = $id;
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                            
+                                        fullClass = option.fullClassName;
+                                        halfClass = option.halfClassName;
+                            
+                                        //初始化
+                                        display(option);
+                            
+                                        if (!hasEventInit) {
+                                            //绑定点击事件
+                                            bind(option);
+                                        }
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        return this;
+                                    }
+                            
+                                    function template(option) {
+                            
+                                        var guid = ui.guid();
+                                        var html = &quot;&quot;,
+                                            i = 0,
+                                            length = option.stars;
+                            
+                                        for (i = 0; i &lt; length; i++) {
+                                            html += &#x27;&lt;div class=&quot;bui-rating-cell&quot; &gt;&lt;/div&gt;&#x27;;
+                                        }
+                            
+                                        return html;
+                                    }
+                            
+                                    function showTemplate(num) {
+                            
+                                        var html = &quot;&quot;,
+                                            num = String(num) || String(val),
+                                            percent,
+                                            i = 0,
+                                            length = param.stars;
+                            
+                                        var groupNum = [];
+                                        groupNum = num.indexOf(&quot;.&quot;) &gt; -1 ? num.split(&quot;.&quot;) : [num, 0];
+                            
+                                        var intValue = parseInt(groupNum[0]);
+                                        percent = (groupNum[1] / 10) * 100 + &quot;%&quot;;
+                            
+                                        for (i = 0; i &lt; length; i++) {
+                            
+                                            if (i &lt; intValue) {
+                            
+                                                html += &#x27;&lt;div class=&quot;bui-rating-cell&quot; &gt;&lt;div class=&quot;bui-rating-cell-full&quot; style=&quot;width:100%;&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&#x27;;
+                                            }
+                                            if (i == intValue) {
+                            
+                                                html += &#x27;&lt;div class=&quot;bui-rating-cell&quot; &gt;&lt;div class=&quot;bui-rating-cell-full&quot; style=&quot;width:&#x27; + percent + &#x27;;&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&#x27;;
+                            
+                                            }
+                                            if (i &gt; intValue) {
+                                                html += &#x27;&lt;div class=&quot;bui-rating-cell&quot; &gt;&lt;div class=&quot;bui-rating-cell-full&quot; style=&quot;width:0;&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&#x27;;
+                            
+                                            }
+                                        }
+                            
+                                        return html;
+                                    }
+                            
+                            
+                                    //绑定事件
+                                    function bind(option) {
+                            
+                                        if (!option.disabled) {
+                            
+                                            //是整数还是浮点数
+                                            var click = String(option.value).indexOf(&quot;.&quot;) &gt; -1 ? 1 : 0;
+                            
+                                            $id.off(&quot;click.bui&quot;, option.handle).on(&quot;click.bui&quot;, option.handle, function (e) {
+                            
+                                                var index = $(this).index();
+                                                var prevValue = parseInt(value());
+                                                var num = 0;
+                                                //是否支持一半
+                                                if (option.half) {
+                                                    let isHalf = option.clickFull ? (click % 2 == 1) : (click % 2 == 0);
+                                                    var classname = isHalf ? halfClass : fullClass;
+                            
+                                                    num = isHalf ? index + 0.5 : index + 1;
+                            
+                                                } else {
+                                                    num = index + 1;
+                                                }
+                            
+                                                //添加星星
+                                                rating(num);
+                                                //设置点击以后的值
+                                                value(num);
+                            
+                                                //累计点击了多少次
+                                                click++;
+                            
+                                                if (prevValue !== num) {
+                                                    option.onChange &amp;&amp; option.onChange.call(module, e);
+                                                }
+                                                option.callback &amp;&amp; option.callback.call(module, e);
+                            
+                                                e.stopPropagation();
+                                            })
+                                        }
+                            
+                                        hasEventInit = true;
+                            
+                                    }
+                            
+                                    //初始化显示的状态
+                                    function display(option) {
+                                        var vals = [];
+                            
+                                        if ($id.length &gt; 1) {
+                            
+                                            $id.each(function (index, item) {
+                            
+                                                var val = item.getAttribute(&quot;value&quot;) || option.value || 0;
+                                                vals.push(val);
+                            
+                                            })
+                                        } else {
+                                            vals = option.value;
+                                        }
+                            
+                            
+                                        if (option.render) {
+                                            var html = template(option);
+                            
+                                            $id.html(html);
+                            
+                                            $handle = $id.children(option.handle);
+                            
+                                        } else {
+                                            $handle = $id.children(option.handle);
+                                        }
+                            
+                            
+                                        value(vals);
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    //新增星星
+                                    function rating(index, handle) {
+                            
+                                        var $handleItm = typeof handle === &quot;object&quot; ? $(handle).find(param.handle) : $handle;
+                                        //是否有小数点
+                                        var indexs = [];
+                                        index = String(index);
+                            
+                                        if (param.half &amp;&amp; index.indexOf(&quot;.&quot;) &gt; -1) {
+                                            indexs = index.split(&#x27;.&#x27;);
+                            
+                                        } else {
+                                            indexs.push(index);
+                                        }
+                            
+                                        //移除所有星星
+                                        $handleItm.removeClass(fullClass)
+                                            .removeClass(halfClass);
+                            
+                                        $handleItm.each(function (i, item) {
+                                            var firstStar = parseInt(indexs[0]);
+                                            //如果长度1未则是整数
+                                            if (indexs.length == 1 &amp;&amp; i &lt; firstStar) {
+                                                $(item).addClass(fullClass);
+                                            } else if (indexs.length == 2) {
+                            
+                                                if (i &lt; firstStar) {
+                                                    $(item).addClass(fullClass);
+                                                }
+                            
+                                                if (i == firstStar) {
+                                                    $(item).addClass(halfClass);
+                                                }
+                                            }
+                            
+                                        })
+                                    }
+                            
+                                    //新增多个星星
+                                    function ratings(index) {
+                            
+                                        $id.each((i, item) =&gt; {
+                                            rating(index[i] || index, item);
+                                        })
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                    * 设置｜获取星星的值
+                                    *  @method value
+                                    *  @param {number} [num] 设置值
+                                    *  @example 
+                                       
+                                       //设置值
+                                       uiRating.value(3);
+                            
+                                       //获取值
+                                       var val = uiRating.value();
+                                           
+                                    */
+                                    function value(num) {
+                                        var rule = /^-?\d+(\.\d+)?$/;
+                            
+                                        if (typeof num !== &quot;undefined&quot; &amp;&amp; rule.test(num) || ui.typeof(num) === &quot;array&quot;) {
+                            
+                                            if ($id.length &gt; 1) {
+                                                $id.each(function (i, item) {
+                                                    item.setAttribute(&quot;value&quot;, num[i])
+                                                })
+                            
+                                                ratings(num);
+                                            } else {
+                                                $id.attr(&quot;value&quot;, num);
+                            
+                                                rating(num);
+                                            }
+                            
+                                            val = num;
+                            
+                                            trigger.call(module, &quot;change&quot;, num);
+                            
+                                        } else {
+                                            val = parseFloat($id.attr(&quot;value&quot;));
+                                        }
+                            
+                                        return val;
+                            
+                                    }
+                            
+                                    /**
+                                    * 获取星星的值
+                                    *  @method values
+                                    *  @since 1.8.0
+                                    *  @example 
+                            
+                                       //获取值
+                                       var val = uiRating.values();
+                                           
+                                    */
+                                    function values() {
+                                        var vals = [];
+                            
+                                        $id.each(function (i, item) {
+                                            let newitem = {};
+                                            newitem[&quot;value&quot;] = item.getAttribute(&quot;value&quot;) || 0;
+                                            newitem[&quot;name&quot;] = item.getAttribute(&quot;name&quot;) || &quot;&quot;;
+                                            newitem[&quot;id&quot;] = item.id || &quot;&quot;;
+                            
+                                            vals.push(newitem);
+                                        })
+                            
+                            
+                                        return vals;
+                            
+                                    }
+                            
+                            
+                                    /**
+                                    * 重置
+                                    *  @method reset
+                                    *  @since 1.6.2
+                                    *  @example 
+                                       
+                                       //重置
+                                       uiRating.reset();
+                            
+                                           
+                                    */
+                                    function reset() {
+                            
+                                        value(param.value)
+                            
+                                        return this;
+                            
+                                    }
+                            
+                            
+                            
+                                    /**
+                                    * 展示评分的星星值,只读,支持星星的百分比展示
+                                    *  @method show
+                                    *  @chainable
+                                    *  @param {string} [num] 设置值
+                                    *  @example 
+                                       
+                                       //设置值
+                                       uiRating.show(3);
+                                           
+                                    */
+                                    function show(num) {
+                            
+                                        var html = showTemplate(num);
+                            
+                                        $id.attr(&quot;value&quot;, num).html(html);
+                            
+                                        val = num;
+                                    }
+                                    /**
+                                     * 禁止评分
+                                     *  @method disabled
+                                     *  @chainable
+                                     *  @example 
+                                        
+                                        //禁止评分
+                                        uiRating.disabled();
+                                            
+                                     */
+                                    function disabled(bool) {
+                            
+                                        var bool = bool == false ? false : true;
+                                        if (bool) {
+                            
+                                            $id.off(&quot;click.bui&quot;, param.handle);
+                            
+                                            trigger.call(module, &quot;disabled&quot;);
+                            
+                                        } else {
+                            
+                                            enabled();
+                                        }
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 允许评分
+                                     *  @method enabled
+                                     *  @since 1.6.2
+                                     *  @chainable
+                                     *  @example 
+                                        
+                                        //允许评分
+                                        uiRating.enabled();
+                                            
+                                     */
+                                    function enabled(bool) {
+                            
+                                        param.disabled = false;
+                                        bind(param);
+                            
+                                        trigger.call(module, &quot;enabled&quot;);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                     *  @example 
+                                        
+                                        //销毁
+                                        uiRating.destroy();
+                                        
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                            
+                                        if ($id) {
+                                            $id.off(&quot;click.bui&quot;);
+                                            bool &amp;&amp; $id.remove();
+                                        }
+                            
+                                        off(&quot;change&quot;);
+                                    }
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 
+                                     *  @example 
+                                        
+                                        //获取依赖控件
+                                        var uiRatingWidget = uiRating.widget();
+                                        
+                                            
+                                     */
+                                    function widget(name) {
+                                        var control = {};
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example 
+                                        
+                                        
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiRating.option();
+                            
+                                        //获取某个参数
+                                        var id = uiRating.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiRating.option( &quot;half&quot;,false );
+                            
+                                        //修改多个参数
+                                        uiRating.option( {&quot;half&quot;:false} );
+                                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                                    /**
+                                             * 为控件绑定事件
+                                             *  @event on
+                                             *  @since 1.3.0
+                                             *  @param {string} [type]  事件类型: &quot;change&quot; 
+                                             *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                             *  @example 
+                                                
+                                                uiRating.on(&quot;show&quot;,function () {
+                                                    // 点击的菜单
+                                                    console.log(this);
+                                                });
+                                                
+                                                    
+                                             */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;change&quot;  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example 
+                                        
+                                        uiRating.off(&quot;show&quot;);
+                                        
+                                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                                    return module;
+                                };
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

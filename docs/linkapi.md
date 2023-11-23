@@ -2,7 +2,8 @@
 
 ?> Link API 为原生开发平台, 供Link轻应用原生开发使用.
 
-* [Link API PC](https://docs.bingosoft.net/btapi/) 
+* [Link 开发文档](http://linkdoc.bingosoft.net:8088/) 
+* [Link API PC](https://open.bingosoft.net/btapi-demo/index.html) 
 * [Link 平台相关文件](https://github.com/bingo-oss/mobile-btjsapi/) 
 
 

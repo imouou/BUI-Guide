@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.scroll.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.scroll.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            
+                            
+                            ;
+                            (function (ui, $) {
+                            
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;滚动控件&lt;/h2&gt;
+                                 *     &lt;p&gt;上拉加载,下拉刷新&lt;/p&gt;
+                                 *     &lt;p&gt;可以自由定义上拉事件,下拉事件,如果无特殊要求,推荐使用 {{#crossLink &quot;bui.list&quot;}}{{/crossLink}} &lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.scroll.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 *  {{#crossLink &quot;bui.scroll/refresh&quot;}}{{/crossLink}}: 触发下拉的方法 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/reverse&quot;}}{{/crossLink}}: 还原位置,下拉请求完数据以后,需要还原位置 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/load&quot;}}{{/crossLink}}: 触发加载某一页数据 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/nextPage&quot;}}{{/crossLink}}: 触发加载下一页数据 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/prevPage&quot;}}{{/crossLink}}: 触发加载上一页数据 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/filter&quot;}}{{/crossLink}}: 过滤数据 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/fail&quot;}}{{/crossLink}}: 请求失败以后,可以变为点击加载 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/updatePage&quot;}}{{/crossLink}}: 更新分页及缓存 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/isRefresh&quot;}}{{/crossLink}}: 获取当前是刷新状态还是加载 &lt;br&gt;
+                                 *  &lt;h5&gt;内容交互方法&lt;/h5&gt;
+                                 *  {{#crossLink &quot;bui.scroll/lock&quot;}}{{/crossLink}}: 不允许滚动加载 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/unlock&quot;}}{{/crossLink}}: 允许滚动加载 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/setHeight&quot;}}{{/crossLink}}: 设置内容滚动高度 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/to&quot;}}{{/crossLink}}: 滚动条跳转到第几个元素 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/toBottom&quot;}}{{/crossLink}}: 跳到底部 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/scrollTop&quot;}}{{/crossLink}}: 滚动多少px &lt;br&gt;
+                                 *  &lt;h5&gt;公共方法&lt;/h5&gt;
+                                 *  {{#crossLink &quot;bui.scroll/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 *  {{#crossLink &quot;bui.scroll/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.list_news.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-list_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class scroll
+                                 *  @constructor
+                                 *  @param {object} [option]
+                                 *     @param option.id {string} 控件的ID,需要满足固定的结构 
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *     @param {string} [option.children] 列表的样式不能为空, 找到要循环遍历的元素的父层 例如 .bui-list 
+                                 *     @param {string} [option.handle] 默认li, 找到要循环遍历的元素  
+                                 *     @param {bollean} [option.lastUpdated] 下拉的文本提醒是否显示时间 
+                                 *     @param {number} [option.distance] 默认100，下拉的距离大于这个数才会触发 
+                                 *     @param {number} [option.backDistance] 默认50，下拉回去的距离 1.8.0新增
+                                 *     @param {number} [option.maxDistance] 1.4.2新增 默认0,下拉的距离超过最大值自动触发返回 
+                                 *     @param {string} option.stopHandle 1.4.2新增,样式名,默认为空,支持多个样式名,以逗号间隔. 当这个值等于下拉刷新里面的某个样式,不触发下拉刷新,一般用于事件冲突,比方 input[type=range] 无法滑动的时候 
+                                 *     @param {number} [option.height] 列表的高度,默认适应，如果高度不对，自行计算后传给列表即可。
+                                 *     @param {number} [option.page] 请求的页数,默认为1 
+                                 *     @param {number} [option.pageSize] 每页的大小,默认为10 
+                                 *     @param {boolean} [option.autoRefresh] 默认false 自动刷新 
+                                 *     @param {boolean} [option.autoNext] 默认true 当高度不足时,会继续请求下一页,直到高度出现滚动条 
+                                 *     @param {boolean} [option.cacheHeight] 1.6.2新增, 默认 true | false 使用缓存的高度计算,false 则动态获取页面高度计算 
+                                 *     @param {boolean} [option.refresh]  允许下拉刷新, 默认true | false  
+                                 *     @param {string} [option.handleMove] 1.6.3 默认 &quot;main&quot; || &quot;head&quot;, 下拉的时候一起拖动的位置, 数据量较多建议选择head 
+                                 *     @param {string} [option.direction] 1.5.6新增 滚动的方向,默认 y || x ;
+                                 *     @param {string} [option.refreshPage] 1.5.6新增 刷新的时候是否把分页page重置为1;
+                                 *     @param {object} [option.loading] 1.8.0 loading的配置
+                                 *     @param {boolean} [option.scroll] 1.5.6新增 默认true(绑定滚动事件) | false  
+                                 *     @param {boolean} [option.autoScroll] 默认true 滚动到底部触发, false 自己监听 
+                                 *     @param {function} [option.onBeforeRefresh] 1.5.2新增, 刷新前执行
+                                 *     @param {function} [option.onBeforeLoad] 1.5.2新增, 加载前执行
+                                 *     @param {function} [option.onRefresh] 下拉以后执行 
+                                 *     @param {function} [option.onLoad] 滚动加载后执行回调,在数据渲染后 
+                                 *     @param {function} [option.onScrolling] 滚动时触发 
+                                 *     @param {function} [option.onBeforeInit] 1.5.1新增 初始化前触发 
+                                 *     @param {function} [option.onInited] 1.5.1新增 初始化以后触发 
+                                 *     @param {object} [option.refreshTips]
+                                 *          @param {string} [option.refreshTips.start] 开始加载的文本提醒,&quot;刷新中..&quot; 
+                                 *          @param {string} [option.refreshTips.release] 下拉的文本提醒,&quot;松开刷新&quot; 
+                                 *          @param {string} [option.refreshTips.end] 下拉高度不足提醒,&quot;下拉刷新&quot; 
+                                 *          @param {string} [option.refreshTips.fail] 下拉加载失败提醒,&quot;点击加载&quot; 
+                                 *          @param {string} [option.refreshTips.success] 成功提醒,&quot;刷新成功&quot; 
+                                 *     @param  {object} [option.scrollTips]
+                                 *          @param {string} [option.scrollTips.start] 开始加载的文本提醒,&quot;努力加载中..&quot; 
+                                 *          @param {string} [option.scrollTips.end] 上拉加载的提醒,&quot;上拉加载更多&quot; 
+                                 *          @param {string} [option.scrollTips.fail] 上拉加载失败提醒,&quot;点击重新加载&quot; 
+                                 *          @param {string} [option.scrollTips.last] 最后一页的提醒,&quot;没有更多内容&quot; 
+                                 *          @param {string} [option.scrollTips.nodata] 没有数据的提醒,&quot;没有更多内容&quot; 
+                                 * @example
+                                 *
+                            
+                                 html:
+                                 *
+                                        &lt;div id=&quot;scroll&quot; class=&quot;bui-scroll&quot;&gt;
+                                            &lt;div class=&quot;bui-scroll-head&quot;&gt;&lt;/div&gt;
+                                            &lt;div class=&quot;bui-scroll-main&quot;&gt;
+                                                &lt;ul id=&quot;scrollList&quot; class=&quot;bui-list&quot;&gt;
+                                                    &lt;li class=&quot;bui-btn&quot;&gt;这里是循环的内容&lt;/li&gt;
+                                                &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;bui-scroll-foot&quot;&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                            
+                                 js:
+                                 *
+                                        // 初始化
+                                        var uiScroll = bui.scroll({
+                                            id: &quot;#scroll&quot;,
+                                            children: &quot;.bui-list&quot;,
+                                            page:1,
+                                            pageSize:10,
+                                            onRefresh: refresh,
+                                            onLoad: getData
+                                        })
+                            
+                                        //刷新数据
+                                        function refresh () {
+                            
+                                            page = 1;
+                                            pagesize = 10;
+                                            //请求数据
+                                            getData(page,pagesize,&quot;html&quot;);
+                                        }
+                            
+                                        //滚动加载下一页
+                                        function getData (page,pagesize,command) {
+                                            command = command || &quot;append&quot;;
+                            
+                                            bui.ajax({
+                                                url: &quot;http://localhost/mysite/yumeng/index.php/API/Usercenter/getUserList&quot;,
+                                                data: {
+                                                    pageindex:page,
+                                                    pagesize:pagesize
+                                                }
+                                            }).done(function(res) {
+                            
+                                                var data = JSON.parse(res);//有可能需要转换,视接口而定
+                            
+                                                //生成html
+                                                var html = &quot;&quot;;
+                                                //数据渲染
+                            
+                                                //渲染数据
+                                                $(&quot;#scrollList&quot;)[command](html);
+                            
+                                                //更新分页信息
+                                                uiScroll.updatePage(start,res.data);
+                                                //还原位置
+                                                uiScroll.reverse();
+                            
+                                            }).fail(function (res) {
+                            
+                                                // 可以点击重新加载
+                                                uiScroll.fail(start,pagesize,res);
+                                            })
+                                        }
+                                 *
+                                 */
+                                ui.scroll = function (opt) {
+                            
+                                    //一个滚动加载需要用到的默认结构
+                                    var item = &quot;.&quot; + ui.prefix(&quot;list&quot;),
+                                        childrenTop = &quot;.&quot; + ui.prefix(&quot;scroll-head&quot;),
+                                        childrenMain = &quot;.&quot; + ui.prefix(&quot;scroll-main&quot;),
+                                        childrenBottom = &quot;.&quot; + ui.prefix(&quot;scroll-foot&quot;);
+                            
+                                    var config = {
+                            
+                                        id: &quot;&quot;,
+                                        uid: &quot;&quot;,
+                                        childrenTop: childrenTop,
+                                        childrenMain: childrenMain,
+                                        childrenBottom: childrenBottom,
+                                        children: item,
+                                        stopHandle: &quot;&quot;,
+                                        header: &quot;.bui-page header&quot;,
+                                        footer: &quot;.bui-page footer&quot;,
+                                        handle: &quot;li&quot;,
+                                        distance: 100,
+                                        backDistance: 50,
+                                        endDistance: 5,
+                                        height: &quot;100%&quot;,
+                                        page: 1,
+                                        pageSize: 10,
+                                        stopPropagation: false,
+                                        handleMove: &quot;main&quot;,
+                                        lastUpdated: true,
+                                        autoRefresh: false,
+                                        autoNext: true,
+                                        autoScroll: true,
+                                        refresh: true,
+                                        cacheHeight: true,
+                                        refreshPage: true,
+                                        scroll: true,
+                                        delayTime: 100,
+                                        direction: &quot;y&quot;,
+                                        // 底下的文本提醒
+                                        scrollTips: {
+                                            start: &quot;努力加载中..&quot;,
+                                            end: &quot;上拉加载更多&quot;,
+                                            nodata: &quot;没有更多内容&quot;,
+                                            last: &quot;没有更多内容&quot;,
+                                            fail: &quot;点击重新加载&quot;
+                                        },
+                                        // 刷新的文本提醒
+                                        refreshTips: {
+                                            start: &quot;刷新中..&quot;,
+                                            release: &quot;松开刷新&quot;,
+                                            end: &quot;下拉刷新&quot;,
+                                            fail: &quot;点击加载&quot;,
+                                            success: &quot;刷新成功&quot;
+                                        },
+                                        loading: null,
+                                        scrollLoading: null,
+                                        autoinit: true,
+                                        onBeforeTouchstart: null,
+                                        onBeforeTouchmove: null,
+                                        onBeforeTouchend: null,
+                                        onBeforeInit: null,
+                                        onInited: null,
+                                        onScrolling: null,
+                                        // 上拉执行
+                                        onBeforeRefresh: null,
+                                        onRefresh: null,
+                                        // 请求数据, 传页码及多少条数据
+                                        onBeforeLoad: null,
+                                        // 请求数据, 传页码及多少条数据
+                                        onLoad: null
+                                    }
+                            
+                                    //方法
+                                    var module = {
+                                        name: &quot;scroll&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        reverse: reverse,
+                                        updateCache: updatePage,
+                                        updatePage: updatePage,
+                                        getPage: getPage,
+                                        getCache: getCache,
+                                        clearCache: clearCache,
+                                        resize: resize,
+                                        fail: fail,
+                                        filter: filter,
+                                        to: to,
+                                        toBottom: toBottom,
+                                        scrollTop: scrollTop,
+                                        status: status,
+                                        lock: lock,
+                                        unlock: unlock,
+                                        lockrefresh: lockrefresh,
+                                        unlockrefresh: unlockrefresh,
+                                        refresh: refresh,
+                                        reload: reload,
+                                        load: loadData,
+                                        nextPage: nextPage,
+                                        prevPage: prevPage,
+                                        setHeight: setHeight,
+                                        isRefresh: isRefresh,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var param = module.config = $.extend(true, {}, config, ui.config.scroll, opt);
+                            
+                                    var id,
+                                        $id,
+                                        el,
+                                        $win,
+                                        $children,
+                                        $childrenTop,
+                                        $childrenBottom,
+                                        $childrenMain,
+                                        defaultPage = param.page,
+                                        loadUpFn,
+                                        loadDownFn,
+                                        cacheHeight = 0,
+                                        loading = null, //滚动条
+                                        uiRefresh, //定义刷新控件
+                                        isFail = false, //请求失败
+                                        isUpLock = false, //是否刷新已经锁定
+                                        isDownLock = false, //是否加载已经锁定
+                                        isLoad = false, //是否正在加载
+                                        isFail = false, //是否失败
+                                        firstFlag = true, //是否是第一次加载
+                                        nextFlag = true, //加载下一页
+                                        lastFlag = false, //最后一页
+                                        isRefreshing = false,
+                                        page = param.page,
+                                        pageSize = param.pageSize,
+                                        hasEventInit = false,
+                                        cache = {};
+                            
+                                    //初始化
+                                    param.autoinit &amp;&amp; init(param);
+                            
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(true, {}, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                                        $win = $(window);
+                            
+                                        if (option.id) {
+                                            $id = ui.obj(option.id);
+                                        } else {
+                                            ui.hint(&quot;scroll id不能为空&quot;);
+                                            return;
+                                        }
+                            
+                                        page = option.page;
+                                        pageSize = option.pageSize;
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                                        firstFlag = true; //是否是第一次加载
+                                        nextFlag = true; //加载下一页
+                                        lastFlag = false; //最后一页
+                                        isRefreshing = false;
+                            
+                                        el = $id[0];
+                            
+                                        //一个scroll固有的结构
+                                        $childrenTop = $id.children(childrenTop);
+                                        $childrenMain = $id.children(childrenMain);
+                                        $childrenBottom = $id.children(childrenBottom);
+                            
+                                        //防止第一条数据丢失
+                                        $childrenMain.css({
+                                            &quot;position&quot;: &quot;relative&quot;
+                                        })
+                            
+                                        //创建loading
+                                        if (!loading) {
+                            
+                                            status(&quot;start&quot;);
+                            
+                                            let loadingconfig = $.extend(true, {
+                                                appendTo: $childrenBottom,
+                                                width: 20,
+                                                height: 20,
+                                                autoClose: false,
+                                                text: option.scrollTips.start,
+                                                zIndex: 10,
+                                                display: &quot;inline&quot;,
+                                                autoTrigger: false,
+                                                mask: false
+                                            }, option.scrollLoading);
+                            
+                            
+                                            loading = ui.loading(loadingconfig);
+                                        }
+                            
+                                        loadUpFn = loadUp;
+                                        loadDownFn = loadFn;
+                            
+                                        if (uiRefresh) {
+                                            uiRefresh.init({
+                                                id: option.id,
+                                                onBeforeRefresh: option.onBeforeRefresh,
+                                                onRefresh: loadUpFn,
+                                                distance: option.distance,
+                                                backDistance: option.backDistance,
+                                                maxDistance: option.maxDistance,
+                                                lastUpdated: option.lastUpdated,
+                                                height: option.height,
+                                                cacheHeight: option.cacheHeight,
+                                                stopPropagation: option.stopPropagation,
+                                                handleMove: option.handleMove,
+                                                loading: option.loading,
+                                                refreshTips: option.refreshTips,
+                                                autoLoad: option.autoRefresh
+                                            })
+                                        } else if (option.refresh &amp;&amp; option.onRefresh) {
+                                            //绑定刷新,但默认不加载数据
+                                            uiRefresh = ui.pullrefresh({
+                                                id: option.id,
+                                                onBeforeRefresh: option.onBeforeRefresh,
+                                                onRefresh: loadUpFn,
+                                                distance: option.distance,
+                                                backDistance: option.backDistance,
+                                                stopHandle: option.stopHandle,
+                                                maxDistance: option.maxDistance,
+                                                lastUpdated: option.lastUpdated,
+                                                header: option.header,
+                                                footer: option.footer,
+                                                height: option.height,
+                                                handleMove: option.handleMove,
+                                                cacheHeight: option.cacheHeight,
+                                                stopPropagation: option.stopPropagation,
+                                                onBeforeTouchstart: option.onBeforeTouchstart,
+                                                onBeforeTouchmove: option.onBeforeTouchmove,
+                                                onBeforeTouchend: option.onBeforeTouchend,
+                                                loading: option.loading,
+                                                refreshTips: option.refreshTips,
+                                                autoLoad: option.autoRefresh
+                                            });
+                            
+                                            uiRefresh.lock();
+                                            isUpLock = true;
+                                        } else {
+                            
+                                            //初始化高度
+                                            option.direction === &quot;y&quot; &amp;&amp; setHeight(option.height);
+                                        }
+                            
+                                        if (option.direction === &quot;x&quot;) {
+                                            $id.addClass(&quot;bui-box-center&quot;).attr(&quot;direction&quot;, &quot;x&quot;);
+                                        }
+                            
+                                        try {
+                                            // 先请求数据
+                                            loadDownFn &amp;&amp; loadDownFn.call(module, page, pageSize);
+                            
+                                        } catch (e) {
+                                            ui.showLog(e, &quot;bui.scroll.init&quot;);
+                                        }
+                            
+                                        if (!hasEventInit) {
+                                            //滚动加载
+                                            option.scroll &amp;&amp; bind(option);
+                                        }
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                            
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        return this;
+                                    };
+                            
+                            
+                                    //绑定事件
+                                    function bind(option) {
+                            
+                                        // 如果加载了多页以后,直接调用刷新方法会多请求几次
+                                        $id.off(&quot;scroll&quot;).on(&quot;scroll&quot;, ui.unit.debounce(loadMore, option.delayTime));
+                            
+                                        hasEventInit = true;
+                            
+                                    };
+                            
+                                    //loadMore 滚动加载更多
+                                    function loadMore(e) {
+                                        var tar = e.target;
+                                        var scrollTop = tar.scrollTop || 0;
+                                        var scrollLeft = tar.scrollLeft || 0;
+                            
+                                        // 滚到底部了
+                                        // 滚动到顶部触发
+                                        if (param.direction === &quot;y&quot;) {
+                                            if (scrollTop == 0) {
+                                                trigger.call(module, &quot;scrolltop&quot;, e);
+                                            } else if (tar.scrollTop + tar.clientHeight &gt;= (tar &amp;&amp; tar.scrollHeight - param.endDistance) &amp;&amp; param.onLoad) {
+                            
+                                                //重新修改参数
+                                                param.page = module.config.page = ++page;
+                                                //继续加载请求数据
+                                                param.autoScroll &amp;&amp; loadDownFn &amp;&amp; loadDownFn.call(module, param.page, pageSize);
+                            
+                                                trigger.call(module, &quot;scrollbottom&quot;, e);
+                                            }
+                                        } else {
+                                            if (scrollLeft == 0) {
+                                                trigger.call(module, &quot;scrolltop&quot;, e);
+                                            } else if (tar.scrollLeft + tar.clientWidth &gt;= (tar &amp;&amp; tar.scrollWidth - param.endDistance) &amp;&amp; param.onLoad) {
+                            
+                                                //重新修改参数
+                                                param.page = module.config.page = ++page;
+                                                //继续加载请求数据
+                                                param.autoScroll &amp;&amp; loadDownFn &amp;&amp; loadDownFn.call(module, param.page, pageSize);
+                            
+                                                trigger.call(module, &quot;scrollbottom&quot;, e);
+                                            }
+                                        }
+                            
+                                        // 滚动结束触发
+                                        trigger.call(module, &quot;scrollend&quot;, e);
+                            
+                                        param.onScrolling &amp;&amp; param.onScrolling.call(module, e, module);
+                            
+                                    }
+                            
+                            
+                                    //加载数据
+                                    function loadFn(start, count) {
+                            
+                                        isLoad = true;
+                                        isRefreshing = false;
+                                        if (nextFlag &amp;&amp; !lastFlag) {
+                                            //重新修改参数
+                                            param.page = module.config.page = start;
+                            
+                                            param.onBeforeLoad &amp;&amp; param.onBeforeLoad.call(module, start, count)
+                            
+                                            param.onLoad &amp;&amp; loading &amp;&amp; status(&quot;start&quot;)
+                                            //是否是最后一页了
+                                            param.onLoad &amp;&amp; loading &amp;&amp; loading.start({
+                                                text: param.scrollTips.start,
+                                                onlyText: false
+                                            })
+                            
+                                            param.onLoad &amp;&amp; param.onLoad.call(module, start, count);
+                            
+                                        }
+                            
+                                        // 解锁刷新
+                                        if (isUpLock &amp;&amp; param.refresh) {
+                            
+                                            uiRefresh &amp;&amp; uiRefresh.unlock();
+                                        }
+                            
+                                        return this;
+                                    };
+                            
+                                    //刷新
+                                    function loadUp() {
+                            
+                                        isLoad = true;
+                            
+                                        nextFlag = true;
+                                        lastFlag = false;
+                                        // 刷新以后,又是重新加载
+                                        firstFlag = true;
+                            
+                                        isRefreshing = true;
+                            
+                                        if (param.refreshPage) {
+                                            page = defaultPage;
+                                            pageSize = param.pageSize;
+                            
+                                            cache = {};
+                                            // loading &amp;&amp; loading.start({ text: param.scrollTips.end, onlyText: true })
+                                        }
+                            
+                                        //重新修改参数
+                                        param.page = module.config.page = page;
+                            
+                                        trigger.call(module, &quot;refresh&quot;, page);
+                            
+                                        param.onRefresh &amp;&amp; param.onRefresh.call(module, page, pageSize);
+                            
+                                    }
+                            
+                                    /**
+                                     * 获取当前在第几页
+                                     *  @method getPage
+                                     *  @since 1.5.3
+                                     *  @chainable
+                                     *  @return [object]  返回 page 
+                                     *  @example
+                                     *
+                                        // 获取当前在第几页
+                                        var currentPage = uiScroll.getPage();
+                            
+                                     */
+                                    function getPage() {
+                            
+                                        return param.page;
+                                    }
+                                    /**
+                                     * 更新请求的分页及缓存,并继续请求下一页, 旧接口&lt;del&gt;updateCache&lt;/del&gt;不再使用.
+                                     *  @method updatePage
+                                     *  @param {string} start [当前分页]
+                                     *  @param {object} data [当前数据]
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //回调里面触发 uiScroll基于顶部例子
+                                        uiScroll.updatePage(2,data);
+                            
+                                     */
+                            
+                                    var timeToGetHeight;
+                            
+                                    function updatePage(start, data, bool) {
+                            
+                                        //是否继续请求下一页
+                                        var bool = bool == false ? false : true;
+                            
+                                        //需要缓存的数据
+                                        if (data &amp;&amp; ui.typeof(data) == &quot;array&quot;) {
+                                            data = data;
+                                        } else {
+                                            loading &amp;&amp; loading.stop();
+                                            ui.showLog(&quot;scroll 控件的updatePage 第2个参数,必须是一个数组,如果是list控件,检测field的data映射是否准确&quot;, &quot;bui.scroll.updatePage&quot;)
+                                            data = [];
+                                            return;
+                                        }
+                            
+                                        isLoad = false;
+                            
+                                        if (timeToGetHeight) {
+                                            clearTimeout(timeToGetHeight);
+                                        }
+                                        // 延迟获取高度,用于vuejs 等第三方的模板渲染
+                                        timeToGetHeight = setTimeout(function () {
+                                            //计算内容的高度
+                                            var parentHeight = parseInt($id.height());
+                            
+                                            var scrollHeight = parseInt($id.find(param.childrenMain)[0] &amp;&amp; $id.find(param.childrenMain)[0].scrollHeight);
+                            
+                                            //是否继续请求数据,默认是
+                                            if (bool) {
+                                                // 判断是否是最后一页
+                                                if (data &amp;&amp; data.length &gt; (pageSize - 1)) {
+                            
+                                                    //可以下一页
+                                                    nextFlag = true;
+                                                    lastFlag = false;
+                                                    firstFlag = false;
+                                                    status(&quot;end&quot;)
+                                                    loading &amp;&amp; loading.start({
+                                                        text: param.scrollTips.end,
+                                                        onlyText: true
+                                                    });
+                            
+                                                    //高度不足,无法出现滚动条,需要继续请求数据
+                                                    if (scrollHeight &gt;= 10 &amp;&amp; scrollHeight &lt; parentHeight &amp;&amp; param.autoNext &amp;&amp; param.onLoad) {
+                            
+                                                        var nextPage = ++page;
+                            
+                                                        loadDownFn &amp;&amp; loadDownFn.call(module, nextPage, pageSize);
+                                                    }
+                            
+                                                    trigger.call(module, &quot;loadpage&quot;, data, page);
+                            
+                                                } else {
+                            
+                                                    //已经最后一页
+                                                    nextFlag = false;
+                                                    lastFlag = true;
+                            
+                                                    //第一页没有数据那变提醒没有数据而不是提醒最后一页
+                                                    var isNoData = firstFlag &amp;&amp; data &amp;&amp; data.length &lt; 1;
+                                                    var tips = isNoData ? param.scrollTips.nodata : param.scrollTips.last;
+                            
+                                                    isNoData ? status(&quot;nodata&quot;) : status(&quot;last&quot;);
+                            
+                                                    loading &amp;&amp; loading.start({
+                                                        text: tips,
+                                                        onlyText: true
+                                                    });
+                            
+                                                    trigger.call(module, &quot;loadpage&quot;, data, page);
+                                                    trigger.call(module, &quot;lastpage&quot;, data, page);
+                            
+                                                }
+                            
+                            
+                                            } else {
+                            
+                                                //无需继续请求
+                                                nextFlag = false;
+                                                lastFlag = true;
+                            
+                                                loading &amp;&amp; loading.stop();
+                            
+                                            }
+                            
+                                            //缓存数据
+                                            return cache[start] = data;
+                            
+                                        }, 10)
+                            
+                                    };
+                            
+                            
+                                    /**
+                                     * 返回原位
+                                     *  @method reverse
+                                     *  @param {function} [callback] 回调
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //回调里面触发 uiScroll基于顶部例子
+                                        uiScroll.reverse();
+                            
+                                     */
+                                    function reverse(callback) {
+                            
+                                        uiRefresh &amp;&amp; uiRefresh.reverse();
+                            
+                                        callback &amp;&amp; callback.call(module, uiRefresh);
+                            
+                            
+                                        return this;
+                                    }
+                            
+                                    //isRefresh 获取执行状态
+                                    function isRefresh() {
+                                        return isRefreshing;
+                                    };
+                                    //getCache 获取页面缓存
+                                    function getCache(argument) {
+                                        return cache;
+                                    };
+                                    //clearCache 清除缓存
+                                    function clearCache(argument) {
+                                        cache = {};
+                            
+                                        return;
+                                    };
+                            
+                                    /**
+                                     * 失败点击可以重新加载当前页
+                                     *  @method fail
+                                     *  @param {number} [start] 第几页
+                                     *  @param {number} [count] 每页多少条
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //回调里面触发 uiScroll基于顶部例子
+                                        uiScroll.fail();
+                            
+                                     */
+                                    function fail(start, count) {
+                            
+                                        isFail = true;
+                                        isUpLock = true;
+                            
+                                        status(&quot;fail&quot;)
+                                        loading.show({
+                                            text: param.scrollTips.fail,
+                                            onlyText: true,
+                                            callback: function (argument) {
+                                                //点击重新加载
+                                                loadFn(start, count);
+                                            }
+                                        }).hideRing();
+                            
+                                        //锁定拖拽
+                                        uiRefresh &amp;&amp; uiRefresh.lock();
+                            
+                                        return this;
+                            
+                            
+                                    }
+                            
+                                    /**
+                                     * 数据过滤,用于已有缓存过滤
+                                     *  @method filter
+                                     *  @param {string} keyword 关键字
+                                     *  @param {string} key 在哪个字段
+                                     *  @return {array} [返回符合条件的数据]
+                                     *  @example
+                                     *
+                                        //过滤数据中的phone字段,是否含有139224这个数据
+                                        var filterData = uiScroll.filter(&quot;139224&quot;,&quot;phone&quot;);
+                            
+                                     */
+                                    function filter(keyword, key) {
+                                        var data = [];
+                                        var i, j;
+                            
+                            
+                                        if (keyword &amp;&amp; key) {
+                            
+                                            for (i in cache) {
+                            
+                                                var result = ui.array.filter(cache[i], keyword, key) || [];
+                            
+                                                if (result.length) {
+                                                    //转变为1维数组
+                                                    for (j in result) {
+                            
+                                                        data.push(result[j]);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        return data;
+                                    }
+                            
+                                    /**
+                                     * 跳到指定元素
+                                     *  @method to
+                                     *  @param {number} index 内容的索引,例如第3个li 则 index=2
+                                     *  @param {function} callback 跳转后执行
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        uiScroll.to(2);
+                            
+                                     */
+                                    function to(index, callback) {
+                            
+                                        var index = index || 0;
+                                        $children = $id.find(param.children).children(param.handle);
+                            
+                                        var parentHeight = $id.height(),
+                                            itemHeight = parseFloat($children.height());
+                            
+                                        //计算当前总高度
+                                        var childHeight = el.scrollHeight;
+                            
+                                        // 得到指定的索引的滚动条高度
+                                        var itemScrollTop = itemHeight * parseInt(index) - itemHeight;
+                            
+                                        if (childHeight &gt; parentHeight) {
+                            
+                                            el.scrollTop = itemScrollTop;
+                                            trigger.call(module, &quot;to&quot;, index);
+                            
+                                            callback &amp;&amp; callback.call(module, parseInt(index));
+                            
+                                        }
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 跳到底部
+                                     *  @method toBottom
+                                     *  @param {function} callback 跳转后执行
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        uiScroll.toBottom();
+                            
+                                     */
+                                    function toBottom(callback) {
+                            
+                                        if ($id[0]) {
+                                            $id[0].scrollTop = $id[0].scrollHeight;
+                                            callback &amp;&amp; callback.call(module);
+                                        }
+                            
+                                        return this;
+                            
+                                    }
+                            
+                            
+                            
+                                    /**
+                                     * 跳到指定的滚动高度值
+                                     *  @method scrollTop
+                                     *  @since 1.4.3
+                                     *  @param {number|object} [num]  非必须,默认:0 
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        uiScroll.scrollTop(2);
+                            
+                                     */
+                                    function scrollTop(obj) {
+                                        var num = 0;
+                            
+                                        if (typeof obj === &quot;object&quot;) {
+                                            num = $(obj)[0].offsetTop;
+                                        } else if (typeof obj === &quot;string&quot; &amp;&amp; obj.indexOf(&quot;#&quot;) &gt; -1) {
+                                            num = $(obj)[0].offsetTop;
+                                        } else {
+                                            num = parseInt(obj) || 0;
+                                        }
+                            
+                                        el.scrollTop = num;
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 设置滚动的高度,常用于$(window).resize(fun)
+                                     *  @method setHeight
+                                     *  @param {number|string} [height] 设置的高度
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.setHeight(300);
+                            
+                                     */
+                                    function setHeight(height) {
+                                        // 多种场景的计算
+                                        // bui.list.html
+                                        // bui.tab_list.html
+                                        // bui.searchbar_tab.html
+                                        // 嵌套tab list, 163案例
+                            
+                                        // 优先设置的高度，然后tab，dialog，main，window
+                                        var listHeight = height || $id.parents(&quot;.bui-tab-main-item&quot;).height() || $id.parents(&quot;.bui-dialog-main&quot;).height() || $id.parents(&quot;main&quot;).height() || (window.viewport.height() - ($id[0] ? $id[0].offsetTop : 0));
+                            
+                                        //设置高度才能滚动
+                                        $id.height(listHeight);
+                                    }
+                            
+                            
+                                    /**
+                                     * 修改status属性
+                                     *  @method status
+                                     *  @since 1.8.0
+                                     *  @chainable
+                                     *  @example
+                                        
+                                        uiScroll.status(&quot;start&quot;);
+                            
+                                     */
+                                    function status(opt) {
+                                        if (typeof opt === &quot;string&quot;) {
+                                            $id.attr(&quot;scroll-status&quot;, opt);
+                            
+                                        } else {
+                                            var sta = $id.attr(&quot;scroll-status&quot;);
+                                            return sta;
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 不允许滚动加载
+                                     *  @method lock
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.lock();
+                            
+                                     */
+                                    function lock() {
+                            
+                                        $id.off(&quot;scroll&quot;);
+                            
+                                        trigger.call(module, &quot;lock&quot;);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 不允许下拉刷新
+                                     *  @method lockrefresh
+                                     *  @since 1.6.3
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.lockrefresh();
+                            
+                                     */
+                                    function lockrefresh() {
+                            
+                                        uiRefresh.lock();
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 不允许下拉刷新
+                                     *  @method unlockrefresh
+                                     *  @since 1.6.3
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.unlockrefresh();
+                            
+                                     */
+                                    function unlockrefresh() {
+                            
+                                        uiRefresh.unlock();
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 允许滚动加载
+                                     *  @method unlock
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.unlock();
+                            
+                                     */
+                                    function unlock(argument) {
+                            
+                                        $id.on(&quot;scroll&quot;, ui.unit.debounce(loadMore, param.delayTime));
+                            
+                                        trigger.call(module, &quot;unlock&quot;);
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 手动执行刷新数据
+                                     *  @method refresh
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.refresh();
+                            
+                                     */
+                                    function refresh() {
+                                        // 刷新前先把滚动条置顶,这样可以防止多次请求.
+                                        to(1);
+                                        uiRefresh &amp;&amp; uiRefresh.refresh();
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 刷新数据无动画
+                                     *  @method reload
+                                     *  @since 1.7.6 
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.reload();
+                            
+                                     */
+                                    function reload() {
+                                        // 刷新前先把滚动条置顶,这样可以防止多次请求.
+                                        to(1);
+                                        uiRefresh &amp;&amp; uiRefresh.reload();
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 手动加载更多数据
+                                     *  @method load
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.load();
+                            
+                                     */
+                                    function loadData(p) {
+                                        var p = p || page;
+                                        page = p;
+                                        loadDownFn &amp;&amp; loadDownFn.call(module, page, pageSize);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     * 加载下一页数据
+                                     *  @method nextPage
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.nextPage();
+                            
+                                     */
+                                    function nextPage() {
+                                        loadDownFn &amp;&amp; loadDownFn.call(module, ++page, pageSize);
+                                        return this;
+                                    }
+                                    /**
+                                     * 加载上一页数据
+                                     *  @method prevPage
+                                     *  @chainable
+                                     *  @example
+                                     *
+                                        //uiScroll基于顶部例子
+                                        uiScroll.prevPage();
+                            
+                                     */
+                                    function prevPage() {
+                                        if (page-- &gt; 0) {
+                            
+                                            loadDownFn &amp;&amp; loadDownFn.call(module, page--, pageSize);
+                                        }
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                    * 重新计算高度
+                                    *  @method resize
+                                    *  @since 1.5.3
+                                    *  @param { object } [option]  可以不传 
+                                    *  @param { number } [option.width]  如果不传则自动计算 
+                                    *  @param { number } [option.height]  如果不传则自动计算,一些特殊情况需要告诉它在哪个高度下自动计算 
+                                    *  @chainable
+                                    *  @example
+                            
+                            
+                                       //重新计算高度
+                                       uiScroll.resize();
+                            
+                                    */
+                                    function resize(opts) {
+                                        var opt = opts || {
+                                            height: 0,
+                                            width: 0
+                                        };
+                            
+                                        cacheHeight = 0;
+                            
+                                        if (typeof opts === &quot;undefined&quot; || typeof opt == &quot;number&quot; || typeof opt == &quot;string&quot; || (opt &amp;&amp; opt.height)) {
+                            
+                                            this.setHeight(opt.height || opt);
+                                        }
+                            
+                                        if (opt &amp;&amp; opt.width) {
+                                            $id.width(opt.width);
+                                        }
+                            
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                     *  @example
+                            
+                                        //销毁
+                                        uiScroll.destroy();
+                            
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                            
+                                        if ($id) {
+                                            $id.off(&quot;scroll&quot;);
+                                            bool &amp;&amp; $id.remove();
+                                        }
+                            
+                                        uiRefresh &amp;&amp; uiRefresh.destroy(bool);
+                                        loading &amp;&amp; loading.destroy(bool);
+                            
+                                        off(&quot;loadpage&quot;);
+                                        off(&quot;lastpage&quot;);
+                                        off(&quot;scrolltop&quot;);
+                                        off(&quot;scrollbottom&quot;);
+                                        off(&quot;scrollend&quot;);
+                            
+                                    }
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 pullrefresh loading 
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiScrollWidget = uiScroll.widget();
+                            
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {
+                                            pullrefresh: uiRefresh,
+                                            loading: loading
+                                        };
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiScroll.option();
+                            
+                                        //获取某个参数
+                                        var id = uiScroll.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiScroll.option( &quot;distance&quot;,100 );
+                            
+                                        //修改多个参数
+                                        uiScroll.option( {&quot;distance&quot;:100} );
+                            
+                                     */
+                                    function options(key, value) {
+                            
+                                        return ui.option.call(module, key, value);
+                                    }
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;loadpage&quot;(数据加载后) | &quot;lastpage&quot;(加载最后一页时触发) | &quot;scrollend&quot;(每次滚动结束) | &quot;scrolltop&quot;(滚动到顶部) |&quot;scrollbottom&quot;(滚动到底部)   
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiScroll.on(&quot;scrollend&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;loadpage&quot;(数据加载后) | &quot;lastpage&quot;(加载最后一页时触发) | &quot;scrollend&quot;(每次滚动结束) | &quot;scrolltop&quot;(滚动到顶部) |&quot;scrollbottom&quot;(滚动到底部)  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiScroll.off(&quot;scrollend&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                                    return module;
+                            
+                                };
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

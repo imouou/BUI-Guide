@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/method/bui.unit.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/method/bui.unit.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * 常用方法库
+                             * @module Method
+                             */
+                            
+                            ;
+                            (function (ui, $) {
+                            
+                                /**
+                                 * 常用小方法
+                                 * @namespace  bui
+                                 * @class  unit
+                                 */
+                                ui.unit = {};
+                            
+                                /**
+                                 * rem的值转换成px
+                                 * @namespace  bui
+                                 * @method  remToPx
+                                 * @constructor
+                                 * @param {string} size [ rem的值 ]
+                                 * @example
+                                 *      var size = bui.unit.remToPx(2);
+                            
+                                 *
+                                 */
+                                ui.unit.remToPx = function (size) {
+                            
+                                    var htmlSize = window &amp;&amp; window.viewport &amp;&amp; window.viewport.fontSize || 100,
+                                        // 比例的换算
+                                        size = (parseFloat(size) * htmlSize).toFixed(2);
+                            
+                                    return size;
+                            
+                                };
+                                /**
+                                 * 脚本获取元素大小px的值转换成rem
+                                 * @namespace  bui
+                                 * @method  pxToRem
+                                 * @constructor
+                                 * @param {string} size [ px的值 ]
+                                 * @example
+                                 *      var size = bui.unit.pxToRem(200);
+                            
+                                 *
+                                 */
+                                ui.unit.pxToRem = function (size) {
+                            
+                                    var htmlSize = window &amp;&amp; window.viewport &amp;&amp; window.viewport.fontSize || 100,
+                                        // 比例的换算
+                                        size = (parseFloat(size) / htmlSize).toFixed(2);
+                            
+                                    return size;
+                                };
+                                /**
+                                 * 原比例转换,750的元素大小px转换rem单位;
+                                 * @namespace  bui
+                                 * @method  pxToRemZoom
+                                 * @constructor
+                                 * @param {string} size [ px的值 ]
+                                 * @example
+                                 *      var size = bui.unit.pxToRemZoom(200);
+                            
+                                 *
+                                 */
+                                ui.unit.pxToRemZoom = function (size) {
+                            
+                                    var htmlSize = 100,
+                                        // 比例的换算
+                                        size = (parseFloat(size) / htmlSize).toFixed(2);
+                            
+                                    return size;
+                                };
+                            
+                                // 事件优化, 来源网络: http://demo.nimius.net/debounce_throttle/helpers.js
+                            
+                                /**
+                                 * 操作结束后才执行,比方正在输入文本,正在移动鼠标,是实时触发的,通过这个方法,可以让它在操作结束才执行;
+                                 * @namespace  bui
+                                 * @method  debounce
+                                 * @constructor
+                                 * @param  {[function]} fn  [要执行的函数]
+                                 * @param  {[number]} wait  [等待的时间,单位毫秒]
+                                 * @param  {[object]} scope [函数执行的范围]
+                                 * @return {[function]}       [description]
+                                 * @example
+                            
+                                        $(&quot;#id&quot;).on(&quot;scroll&quot;,bui.unit.debounce(function(){
+                                            // 滚动结束后才执行
+                                        },400);)
+                                 *
+                                 */
+                                ui.unit.debounce = function (fn, wait, scope) {
+                                    var timeout = null;
+                                    return function () {
+                            
+                                        var context = scope || this,
+                                            args = arguments;
+                            
+                                        var later = function () {
+                                            timeout = null;
+                                            fn.apply(context, args);
+                                            clearTimeout(timeout);
+                                        };
+                                        clearTimeout(timeout);
+                                        timeout = setTimeout(later, wait);
+                                    };
+                                }
+                            
+                                    /*
+                                     * 间隔执行,函数节流, 用在滑动操作类控件会导致问题,特别是pullrefresh;
+                                     * @namespace  bui
+                                     * @method  throttle
+                                     * @constructor
+                                     * @param  {[function]} fn  [要执行的函数]
+                                     * @param  {[number]} threshhold  [间隔的时间,单位毫秒]
+                                     * @param  {[object]} scope [函数执行的范围]
+                                     * @return {[function]}       [description]
+                                     * @example
+                                     *      $(&quot;#id&quot;).on(&quot;scroll&quot;,bui.unit.throttle(function(){
+                                     *          // 每隔50毫秒就运行一次
+                                     *      },50);)
+                            
+                                     *
+                                     */
+                                    ui.unit.throttle = function (fn, threshhold, scope) {
+                                        threshhold || (threshhold = 250);
+                                        var last,
+                                            deferTimer;
+                                        return function () {
+                                            var context = scope || this;
+                            
+                                            var now = +new Date,
+                                                args = arguments;
+                                            if (last &amp;&amp; now &lt; last + threshhold) {
+                                                // hold on to it
+                                                clearTimeout(deferTimer);
+                                                deferTimer = setTimeout(function () {
+                                                    last = now;
+                                                    fn.apply(context, args);
+                                                }, threshhold);
+                                            } else {
+                                                last = now;
+                                                fn.apply(context, args);
+                                            }
+                                        };
+                                    }
+                            
+                                // 以ID或者Class开始
+                                ui.unit.startWithCss = function (str) {
+                                    var reg = new RegExp(&quot;^\\.|^#&quot;),
+                                        bool = typeof str == &quot;string&quot; ? reg.test(str) : false;
+                                    return bool;
+                                }
+                                // 以某个字符串开始
+                                ui.unit.startWithStr = function (str, startStr) {
+                            
+                                    var reg = new RegExp(&quot;^&quot; + startStr),
+                                        bool = typeof str == &quot;string&quot; ? reg.test(str) : false;
+                                    return bool;
+                                }
+                                // 以ID开始
+                                ui.unit.startWithId = function (str) {
+                                    var reg = new RegExp(&quot;^#&quot;),
+                                        bool = typeof str == &quot;string&quot; ? reg.test(str) : false;
+                                    return bool;
+                                }
+                                // 以Class开始
+                                ui.unit.startWithClass = function (str) {
+                                    var reg = new RegExp(&quot;^\\.&quot;),
+                                        bool = typeof str == &quot;string&quot; ? reg.test(str) : false;
+                                    return bool;
+                                }
+                                // 是否是图片
+                                ui.unit.endWithImage = function (str) {
+                                    var reg = new RegExp(&quot;(\.png|\.jpg|\.gif)$&quot;),
+                                        bool = typeof str == &quot;string&quot; ? reg.test(str) : false;
+                                    return bool;
+                                }
+                            
+                                /**
+                                 * 拨打电话,单页的a 标签跳转电话无效
+                                 * @namespace  bui
+                                 * @method  tel
+                                 * @constructor
+                                 * @param  {[number|string]} num  [电话号码, + 代表是国际电话号码]
+                                 * @example
+                            
+                                 *      // 拨打电话
+                                 *          bui.unit.tel(&quot;13800138000&quot;)
+                                 *      // 拨打国际电话
+                                 *          bui.unit.tel(&quot;+13800138000&quot;)
+                                 *
+                                 */
+                                ui.unit.tel = function (num) {
+                                    var num = String(num),
+                                        nums,
+                                        pact = &quot;tel:&quot;,
+                                        isPhone = /(^1\d{10}$)|(^0\d{2,3}-?\d{7,8}$)/;
+                            
+                                    // if( !isPhone.test(num) &amp;&amp; num.indexOf(&quot;+&quot;) !== 0 ){
+                                    //     return ui;
+                                    // }
+                                    // 支持国际协议
+                                    if (num.indexOf(&quot;+&quot;) == 0) {
+                                        pact = &quot;wtai://wp/mc;&quot;;
+                                    }
+                                    nums = num;
+                            
+                                    window.location.href = pact + nums;
+                            
+                                    return ui;
+                                }
+                                /**
+                                 * 发送短信
+                                 * @namespace  bui
+                                 * @method  sms
+                                 * @constructor
+                                 * @param  {[string]} num  [电话号码,多个号码用逗号分割]
+                                 * @param  {[string]} content  [发送的内容]
+                                 * @example
+                            
+                                 *      // 发送短信
+                                 *      bui.unit.sms(&quot;10086&quot;,&quot;CZMM&quot;)
+                                 *
+                                 *
+                                 */
+                                ui.unit.sms = function (num, content) {
+                            
+                                    var u = navigator.userAgent,
+                                        isIphone = /(iPhone|iPad|iOS)/i.test(u),
+                                        split = isIphone ? &quot;&amp;&quot; : &quot;?&quot;,
+                                        pact = &quot;sms:&quot;;
+                            
+                                    window.location.href = &quot;sms:&quot; + num + split + &quot;body=&quot; + content;
+                            
+                                    return ui;
+                                }
+                                /**
+                                 * 发送邮件
+                                 * @namespace  bui
+                                 * @method  mailto
+                                 * @constructor
+                                 * @param {object} option
+                                 * @param {string} option.email [收件人,多个收件人英文逗号分开]
+                                 * @param {string} option.cc [抄送,多个收件人英文逗号分开]
+                                 * @param {string} option.subject [邮件主题]
+                                 * @param {string} option.body [邮件内容]
+                                 * @example
+                            
+                                      // 收件人带主题
+                                 *    bui.unit.mailto({
+                                 *        email:&quot;test1@163.com&quot;,
+                                 *        subject:&quot;Testing&quot;
+                                 *    })
+                                 *
+                                 */
+                                ui.unit.mailto = function (option) {
+                                    var option = &quot;email&quot; in option ? option : {};
+                            
+                                    if (typeof option.email === &quot;string&quot; &amp;&amp; option.email.indexOf(&quot;@&quot;) &gt; 0) {
+                                        window.location.href = &quot;mailto:&quot; + option.email + &quot;?subject=&quot; + (option.subject || &quot;&quot;) + &quot;&amp;body=&quot; + (option.body || &quot;&quot;) + &quot;&amp;cc=&quot; + (option.cc || &quot;&quot;);
+                                    } else {
+                                        ui.showLog(email + &quot;格式不正确&quot;);
+                                    }
+                                    return ui;
+                                }
+                            
+                            
+                                /*
+                                 * 对地址的外部处理,打电话,发短信,写邮件等,保持跟href的写法一致
+                                 * @namespace  bui
+                                 * @method  openExtral
+                                 * @constructor
+                                 * @param  {[string]} url  [邮箱,多个邮箱用逗号分割]
+                                 * @example
+                            
+                                      // 收件人带主题
+                                 *    bui.unit.openExtral(&quot;mailto:test1@163.com?subject=Testing&quot;)
+                                      // 打电话
+                                 *    bui.unit.openExtral(&quot;tel:13800138000&quot;)
+                                      // 发短信
+                                 *    bui.unit.openExtral(&quot;sms:13800138000?body=test&quot;)
+                                 *
+                                 */
+                                ui.unit.openExtral = function (url) {
+                                    var urls = [],
+                                        newurl = &quot;&quot;,
+                                        url = String(url);
+                            
+                                    // 发送邮件
+                                    if (url.indexOf(&quot;mailto:&quot;) &gt;= 0) {
+                            
+                                        urls = url.split(&quot;mailto:&quot;),
+                                            newurl = urls[1];
+                            
+                                        if (newurl.indexOf(&quot;?&quot;) &gt; -1) {
+                                            var emails = newurl.split(&quot;?&quot;);
+                            
+                                            var obj = ui.unit.keyStringToObject(emails[1]);
+                                            obj.email = emails[0];
+                            
+                                            ui.unit.mailto(obj);
+                                        } else {
+                                            ui.unit.mailto({
+                                                email: newurl
+                                            });
+                                        }
+                                    }
+                                    // 拨打电话
+                                    if (url.indexOf(&quot;tel:&quot;) &gt;= 0) {
+                            
+                                        urls = url.split(&quot;tel:&quot;)
+                                        newurl = parseInt(urls[1]);
+                            
+                                        ui.unit.tel(newurl);
+                                    }
+                                    // 发送短信
+                                    if (url.indexOf(&quot;sms:&quot;) &gt;= 0) {
+                            
+                                        urls = url.split(&quot;sms:&quot;);
+                                        newurl = urls[1];
+                            
+                                        if (url.indexOf(&quot;=&quot;) &gt;= 0) {
+                                            var contents = url.split(&quot;=&quot;),
+                                                content = contents[1];
+                            
+                                            ui.unit.sms(newurl, content);
+                            
+                                        } else {
+                            
+                                            ui.unit.sms(newurl);
+                                        }
+                                    }
+                                    return ui;
+                            
+                                }
+                            
+                            
+                                /*
+                                 * [objectToKeyString 把对象转换成 &amp; 相加]
+                                 * @method  objectToKeyString
+                                 * @param  {[type]} obj  [description]
+                                 * @param  {[type]} bool [description]
+                                 * @return {[type]}      [description]
+                                 */
+                                ui.unit.objectToKeyString = function (obj, bool) {
+                                    var str = &#x27;&#x27;;
+                                    //用javascript的for/in循环遍历对象的属性
+                                    for (var i in obj) {
+                                        var item = obj[i];
+                                        var funstr = &quot;&quot;;
+                                        // 历史记录针对方法的处理，不支持在url直接传回调，即使本地存储了方法，该方法的执行依然没有上下文，如果要刷新后仍能正确执行，就只能传参数在当前页执行方法
+                                        if (typeof (item) === &quot;function&quot;) {
+                                            funstr += &#x27;&amp;&#x27; + i + &#x27;=function&#x27;;
+                                            str += funstr;
+                            
+                                            delete obj[i];
+                                        } else {
+                                            var val = bool ? encodeURIComponent(item) : item;
+                            
+                                            str += &#x27;&amp;&#x27; + i + &#x27;=&#x27; + val;
+                                        }
+                            
+                                    }
+                            
+                                    return str.substr(1);
+                                }
+                            
+                                /*
+                                 * [keyStringToObject 把key=value的键值字符串转换成对象]
+                                 * @method  keyStringToObject
+                                 * @param  {[type]} obj  [description]
+                                 * @param  {[type]} bool [description]
+                                 * @return {[type]}      [description]
+                                 */
+                                ui.unit.keyStringToObject = function (str, bool) {
+                                    var obj = {},
+                                        strs = [],
+                                        i;
+                                    try {
+                            
+                                        strs = str.split(&quot;&amp;&quot;);
+                                        for (i = 0; i &lt; strs.length; i++) {
+                                            var val = bool ? decodeURIComponent(strs[i].split(&quot;=&quot;)[1]) : strs[i].split(&quot;=&quot;)[1];
+                            
+                                            obj[strs[i].split(&quot;=&quot;)[0]] = val;
+                                        }
+                                    } catch (e) {
+                                        ui.showLog(e);
+                                    }
+                            
+                                    return obj;
+                                }
+                            
+                            
+                                /*
+                                 * [检查点击的目标是否包含指定的样式名, 例如 bui.pullrefresh, bui.slide, bui.swipe等控件]
+                                 * @namespace  bui
+                                 * @method  checkTargetInclude
+                                 * @param  {[object]} target     [ 一般为事件的e.target 对象]
+                                 * @param  {[string]} includeHandle [默认:&quot;&quot;; 支持多个样式名,用逗号分开,不需要&quot;.&quot;]
+                                 * @return {[boolean]}               [返回布尔值]
+                                 */
+                                ui.unit.checkTargetInclude = function (targetObj, includeHandle) {
+                            
+                                    var handle = includeHandle,
+                                        handles = [];
+                            
+                                    if (handle.indexOf(&quot;,&quot;) &gt; -1) {
+                                        handles = handle.split(&quot;,&quot;);
+                                        var i, l = handles.length;
+                                        for (i = 0; i &lt; l; i++) {
+                                            var item = handles[i];
+                                            if (item.indexOf(&quot;.&quot;) &gt; -1) {
+                                                handles[i] = item.substr(1);
+                                            }
+                                        }
+                                    } else {
+                                        if (handle.indexOf(&quot;.&quot;) &gt; -1) {
+                                            handles[0] = handle.substr(1);
+                                        } else {
+                                            handles[0] = handle;
+                                        }
+                                    }
+                            
+                                    var n, len = handles.length;
+                                    for (n = 0; n &lt; len; n++) {
+                            
+                                        if ($(targetObj).hasClass(handles[n]) || $(targetObj).closest(&quot;.&quot; + handles[n]).length) {
+                                            return true;
+                                        }
+                                    }
+                                    return false;
+                                }
+                            
+                            
+                                /*
+                                 * JSON对象转换成字符串,支持多层转换,用于数据的存储
+                                 * @namespace  bui
+                                 * @method  jsonToString
+                                 * @since  1.4.1
+                                 * @constructor
+                                 * @param {object} data [对象]
+                                 * @return {string} [返回  string ]
+                                 * @example
+                            
+                                 *       var obj = {&quot;data&quot;:[{&quot;id&quot;:&quot;123&quot;}]};
+                                 *       var objStr = bui.unit.jsonToString(obj);
+                                 *
+                                 */
+                                ui.unit.jsonToString = function (data) {
+                                    var jsonString;
+                                    if (typeof (data) === &quot;object&quot;) {
+                                        jsonString = objectAllToString(data);
+                                    } else {
+                                        jsonString = data;
+                                    }
+                            
+                                    // 一层一层转换成string
+                                    function objectAllToString(data) {
+                                        var datastr;
+                                        if (ui.typeof(data) === &quot;object&quot;) {
+                                            for (var i in data) {
+                                                data[i] = checkObject(data, i);
+                                            }
+                            
+                                            // 最后再转换成string
+                                            datastr = JSON.stringify(data);
+                                        } else if (ui.typeof(data) === &quot;array&quot;) {
+                                            data.forEach(function (item, i) {
+                                                data[i] = checkObject(data, i);
+                                            })
+                                            // 最后再转换成string
+                                            datastr = JSON.stringify(data);
+                                        } else {
+                                            datastr = data;
+                                        }
+                            
+                                        function checkObject(data, index) {
+                                            var item = data[index];
+                            
+                                            if (item &amp;&amp; ui.typeof(item) === &quot;object&quot;) {
+                                                data[index] = objectToString(item);
+                                            } else if (item &amp;&amp; ui.typeof(item) === &quot;array&quot;) {
+                                                data[index] = arrayToString(item);
+                                            } else {
+                                                data[index] = item;
+                                            }
+                            
+                                            return data[index];
+                                        }
+                            
+                                        return datastr;
+                                    }
+                            
+                                    // 对象转字符串
+                                    function objectToString(data) {
+                                        if (data &amp;&amp; ui.typeof(data) === &quot;object&quot;) {
+                                            for (var i in data) {
+                                                var item = data[i];
+                                                if (typeof (item) === &quot;object&quot;) {
+                                                    data[i] = JSON.stringify(item);
+                                                }
+                                            }
+                                            return data;
+                                        }
+                                    }
+                            
+                                    // 数组转字符串
+                                    function arrayToString(data) {
+                                        if (data &amp;&amp; ui.typeof(data) === &quot;array&quot;) {
+                                            data.forEach(function (item, i) {
+                                                if (typeof (item) === &quot;object&quot;) {
+                                                    data[i] = JSON.stringify(item);
+                                                }
+                                            })
+                            
+                                            return data;
+                                        }
+                                    }
+                            
+                                    return jsonString;
+                                }
+                            
+                                /*
+                                 * 简单的JSON字符串转换成对象,逐层转换
+                                 * @namespace  bui
+                                 * @method  stringToJson
+                                 * @since  1.4.1
+                                 * @constructor
+                                 * @param {string} str [对象]
+                                 * @return {object} [返回  string ]
+                                 * @example
+                            
+                                 *     var str = &quot;[\&quot;1\&quot;,2,3]&quot;,
+                                 *         data = bui.unit.stringToJson(str);
+                                 *
+                                 */
+                                ui.unit.stringToJson = function (jsonStr) {
+                                    var jsonObj;
+                            
+                                    jsonObj = jsonStr &amp;&amp; stringToObject(jsonStr);
+                            
+                                    // 转对象
+                                    function stringToObject(str) {
+                                        var data,
+                                            dataObj;
+                                        try {
+                            
+                                            data = typeof str === &quot;object&quot; ? str : JSON.parse(str);
+                            
+                                            if (ui.typeof(data) === &quot;array&quot;) {
+                                                data.forEach(function (item, i) {
+                                                    data[i] = stringToObject(item);
+                                                })
+                            
+                                            } else if (ui.typeof(data) === &quot;object&quot;) {
+                                                for (var i in data) {
+                                                    var item = data[i];
+                            
+                                                    data[i] = stringToObject(item);
+                                                }
+                                            }
+                            
+                                            dataObj = data;
+                                        } catch (e) {
+                                            dataObj = str;
+                                        }
+                            
+                                        return dataObj;
+                                    }
+                            
+                            
+                                    return jsonObj;
+                                }
+                            
+                                /*
+                                 * 字符串转数组
+                                 * @namespace  bui
+                                 * @method  stringToArray
+                                 * @since  1.6.2
+                                 * @constructor
+                                 * @param {string} str [对象]
+                                 * @return {object} [返回  string ]
+                                 * @example
+                            
+                                 *     var a = &quot;search,index&quot;;
+                                       var types = ui.unit.stringToArray(a);
+                                       // 输出 [&quot;search&quot;,&quot;index&quot;] 
+                                 *
+                                 */
+                                ui.unit.stringToArray = function (type) {
+                                    var types = null;
+                                    var typestr = ui.typeof(type);
+                                    if (typestr === &quot;array&quot;) {
+                                        types = type;
+                                    } else if (typestr === &quot;string&quot; &amp;&amp; type.indexOf(&quot;,&quot;) &gt; -1) {
+                                        types = type.split(&quot;,&quot;)
+                                    } else {
+                                        types = [type]
+                                    }
+                                    return types;
+                                }
+                            
+                                /*
+                                 * 一维数组逐层转json, 把 page.name 转换成 { page: { name: {} }}
+                                 * @namespace  bui
+                                 * @method  setKeyValue
+                                 * @since  1.5.0
+                                 * @constructor
+                                 * @param {string} name [&quot;page.name&quot;]
+                                 * @param {string} [value] 设置的值
+                                 * @param {object} [targetObj] 要在哪个对象上设置
+                                 * @return {object} [返回对象 ]
+                                 * @example
+                            
+                                    // 新建一个对象
+                                    var data = {}
+                                    bui.unit.setKeyValue(&quot;page.name&quot;,&quot;test&quot;,data);
+                                      console.log(data)   // { page: { name: &quot;test&quot; }}
+                                    // 修改一个对象
+                                    var obj = { page: { name: &quot;&quot;, tel: 123 }}
+                                        bui.unit.setKeyValue(&quot;page.name&quot;,&quot;test&quot;,obj);
+                                      console.log(data2)   // { page: { name: &quot;test&quot;, tel: 123 }}
+                                 *
+                                 */
+                                ui.unit.setKeyValue = function (name, value, targetObj) {
+                                    var data = name &amp;&amp; name.indexOf(&#x27;.&#x27;) &gt; -1 ? name.split(&#x27;.&#x27;) : [name];
+                            
+                                    function extend(pName, o) {
+                            
+                                        // 如果还有长度继续遍历
+                                        if (data.length) {
+                            
+                                            o[pName] = o.hasOwnProperty(pName) ? o[pName] : {};
+                            
+                                            return extend(data.shift(), o[pName])
+                                        } else {
+                                            // 会死循环
+                                            // if( ui.typeof(o[pName]) === &quot;array&quot; &amp;&amp; value instanceof Array ){
+                                            //     o[pName].splice(0,o[pName].length,...value);
+                                            //     return;
+                                            // }
+                                            o[pName] = value;
+                                        }
+                                    }
+                                    return extend(data.shift(), targetObj)
+                                }
+                            
+                                /*
+                                 * 根据 page.name 字符串获取数据的值, 用于field配置的映射
+                                 * @namespace  bui
+                                 * @method  getKeyValue
+                                 * @since  1.5.0
+                                 * @constructor
+                                 * @param {string} name [&quot;page.name&quot;]
+                                 * @param {string} data [设置的值]
+                                 * @return {object} [返回对象 ]
+                                 * @example
+                            
+                                    var data = { page: { name: &quot;123&quot; }}
+                                      var n = bui.unit.getKeyValue(&quot;page.name&quot;,data);
+                                      console.log(n)   // 123
+                            
+                                 *
+                                 */
+                                ui.unit.getKeyValue = function (field, fieldData) {
+                                    var data = field &amp;&amp; field.indexOf(&#x27;.&#x27;) &gt; -1 ? field.split(&#x27;.&#x27;) : [field];
+                            
+                                    function extend(pName, o) {
+                                        var val = o[pName];
+                            
+                                        if (val &amp;&amp; typeof val === &quot;string&quot; &amp;&amp; val.indexOf(&quot;{&quot;) &gt; -1 &amp;&amp; val.indexOf(&quot;}&quot;) &gt; -1) {
+                                            try {
+                                                o[pName] = JSON.parse(val);
+                                            } catch (e) {
+                                                o[pName] = val;
+                                            }
+                                        }
+                                        // 如果还有长度继续遍历
+                                        if (val &amp;&amp; typeof val !== &quot;undefined&quot; &amp;&amp; data.length) {
+                            
+                                            return extend(data.shift(), val)
+                                        }
+                                        return val;
+                                    }
+                                    return extend(data.shift(), fieldData)
+                                }
+                            
+                                /*
+                                 * 根据 page.name 字符串获取数据的对象, 用于field配置的映射
+                                 * @namespace  bui
+                                 * @method  getKeyObj
+                                 * @since  1.5.0
+                                 * @constructor
+                                 * @param {string} name [&quot;page.name&quot;]
+                                 * @param {string} data [设置的值]
+                                 * @return {object} [返回  对象 ]
+                                 * @example
+                            
+                                    var data = { page: { name: &quot;123&quot; }}
+                                    var n = bui.unit.getKeyObj(&quot;page.name&quot;,data);
+                                      console.log(n)   // {name:123}
+                            
+                                 *
+                                 */
+                                ui.unit.getKeyObj = function (field, fieldData) {
+                            
+                                    var data = field &amp;&amp; field.indexOf(&#x27;.&#x27;) &gt; -1 ? field.split(&#x27;.&#x27;) : [field];
+                            
+                                    function extend(pName, o) {
+                                        var val = o[pName];
+                                        if (!(ui.typeof(val) === &quot;array&quot;) &amp;&amp; ui.typeof(val) === &quot;object&quot;) {
+                            
+                                            return extend(data.shift(), val)
+                                        }
+                                        return val
+                                    }
+                                    return extend(data.shift(), fieldData)
+                            
+                                }
+                            
+                                /*
+                                 * 获取对象里的每个字段连接的数组,没有使用过，废弃
+                                 * @namespace  bui
+                                 * @method  getKeyName
+                                 * @since  1.6.2
+                                 * @constructor
+                                 * @param {object} data []
+                                 * @return {object} [返回  对象 ]
+                                 * @example
+                            
+                                    var data = { page: { name: &quot;123&quot; }}
+                                    var n = bui.unit.getKeyName(&quot;page.name&quot;,data);
+                                      console.log(n)   // {name:123}
+                            
+                                 *
+                                 */
+                                ui.unit.getKeyName = function (fieldData) {
+                            
+                                    var data = field &amp;&amp; field.indexOf(&#x27;.&#x27;) &gt; -1 ? field.split(&#x27;.&#x27;) : [field];
+                            
+                                    function extend(pName, o) {
+                                        var val = o[pName];
+                                        if (!(ui.typeof(val) === &quot;array&quot;) &amp;&amp; ui.typeof(val) === &quot;object&quot;) {
+                            
+                                            return extend(data.shift(), val)
+                                        }
+                                        return val
+                                    }
+                                    return extend(data.shift(), fieldData)
+                            
+                                }
+                            
+                                /*
+                                 * 根据 page.name 删除某个字段的数据
+                                 * @namespace  bui
+                                 * @method  delKey
+                                 * @since  1.5.0
+                                 * @constructor
+                                 * @param {string} name [&quot;page.name&quot;]
+                                 * @param {object} data [删除的字段在哪个对象]
+                                 * @return {object} [返回  删除以后的对象 ]
+                                 * @example
+                            
+                                    var data = { page: { name: &quot;123&quot;, tel: 456 }}
+                                        bui.unit.delKey(&quot;page.name&quot;,data);
+                                      console.log(data)   // { page: { tel: 456 }}
+                            
+                                 *
+                                 */
+                                ui.unit.delKey = function (field, fieldData) {
+                            
+                                    var data = field &amp;&amp; field.indexOf(&#x27;.&#x27;) &gt; -1 ? field.split(&#x27;.&#x27;) : [field];
+                            
+                                    function extend(pName, o) {
+                                        if (data.length) {
+                            
+                                            return extend(data.shift(), o[pName])
+                                        }
+                            
+                                        delete o[pName];
+                                        return fieldData;
+                                    }
+                                    return extend(data.shift(), fieldData)
+                            
+                                }
+                                /**
+                                 * 利用calc百分比减高度,低版本手机不支持.
+                                 * @namespace  bui
+                                 * @method  calcHeight
+                                 * @since  1.5.2
+                                 * @constructor
+                                 * @param {object} target [选择器,例如: &quot;.bui-page&quot;]
+                                 * @param {string} height [带单位 10px]
+                                 * @example
+                                 *
+                                  var $main = $(&quot;main&quot;);
+                                  var headHeight = $(&quot;header&quot;).height();
+                                  // 设置main的高度 = 100% - headerHeight 
+                                  bui.unit.calcHeight($main,headHeight)
+                                 *
+                                 */
+                                ui.unit.calcHeight = function (target, height) {
+                                    var $target = $(target);
+                            
+                                    $target[0] &amp;&amp; ($target[0].style.height = &quot;calc(100% - &quot; + height + &quot;)&quot;);
+                                }
+                            
+                                // 解析单页路由的相对路径
+                                ui.unit.resolvePath = function (url) {
+                                    if (!ui.hasRouter) {
+                                        return url;
+                                    }
+                                    url = url || &quot;&quot;;
+                                    var newurl = url;
+                            
+                                    var prevHistory = router &amp;&amp; router.history &amp;&amp; router.history.getLast() || {
+                                        url: newurl
+                                    };
+                                    var prevUrl = prevHistory.url || &quot;&quot;;
+                            
+                                    if (typeof prevUrl === &quot;function&quot;) {
+                                        return newurl;
+                                    }
+                                    var lastUrlIndex = prevUrl.lastIndexOf(&quot;/&quot;);
+                            
+                                    var lastPath = prevUrl.substr(0, lastUrlIndex);
+                            
+                                    if (url.indexOf(&quot;../&quot;) &gt; -1) {
+                                        url = url.replace(/\..\//g, function (res) {
+                                            var lastIndex = lastPath.lastIndexOf(&quot;/&quot;);
+                                            lastPath = lastPath.substr(0, lastIndex);
+                                            return &quot;&quot;;
+                                        });
+                                        newurl = lastPath ? lastPath + &quot;/&quot; + url : url;
+                            
+                                    } else if (url.indexOf(&quot;./&quot;) &gt; -1) {
+                                        newurl = lastPath + &quot;/&quot; + url.replace(/\.\//g, &quot;&quot;);
+                                    } else if (url.indexOf(&quot;/&quot;) === 0) {
+                                        newurl = url.substr(1);
+                                    }
+                            
+                                    return newurl;
+                                }
+                            
+                                /**
+                                    * 由于target会有很多多余字段，所以可以提取一些store需要用的字段就可以。
+                                    * @namespace  bui
+                                    * @method  filterField
+                                    * @since  1.5.5
+                                    * @constructor
+                                    * @param {object} target [要提取的目标对象]
+                                    * @param {object|array} opt [ 数组时，为要提取的有哪些字段；对象时，如果没有值，则跟数组一致，如果有value,则是相互映射关系，具体查看例子3。]
+                                    * @example
+                                    
+                                    // 例子1： a 为store的初始值，请求后拿到了b 有很多多余数据字段，而实际上只需要一个 test 
+                                    * var a = {test:&quot;&quot;};
+                                    * var b = { name:12,test:13,sex:&quot;男&quot;};
+                                    * var filter = bui.unit.filterField(b,a);
+                                    * // console.log(filter) // 输出 {test: 13}
+                                    
+                                    // 例子2： a 为要提取的字段，请求后拿到了b 有很多多余数据字段，而实际上只需要一个 test 
+                                    * var a = [&quot;test&quot;];
+                                    * var b = { name:12,test:13,sex:&quot;男&quot;};
+                                    * var filter = bui.unit.filterField(b,a);
+                                    * // console.log(filter) // 输出 {test: 13}
+                                    
+                                    // 例子3：
+                                    // dropdown 的数据是 name,value ，接口返回的数据没有 name, value 字段，所以需要转换。
+                                    * var dropdownData = {name:&quot;title&quot;,value:&quot;id&quot;}
+                                    * var target = { id:12,title:&quot;我是标题&quot;,sex:&quot;男&quot;};
+                                    * var filter = bui.unit.filterField(target,dropdownData);
+                                    * // console.log(filter) // 输出 {name: &quot;我是标题&quot;, value: 12}
+                                    
+                                    // 例子4：
+                                    // dropdown 的数据是 name,value ，接口返回的数据没有 name, value 字段，所以需要转换。
+                                    * var dropdownData = {name:&quot;title&quot;,value:&quot;id&quot;}
+                                    * var target = [{ id:12,title:&quot;我是标题&quot;,sex:&quot;男&quot;},{ id:13,title:&quot;我是标题2&quot;,sex:&quot;男&quot;}];
+                                    * var filter = bui.unit.filterField(target,dropdownData);
+                                    * // console.log(filter) // 输出  [{name: &quot;我是标题&quot;, value: 12},{name: &quot;我是标题2&quot;, value: 13}]
+                                    */
+                                ui.unit.filterField = function (target, opt) {
+                                    var newTarget = {};
+                                    if (typeof opt !== &quot;object&quot;) {
+                                        return;
+                                    }
+                                    var targetIsObj = ui.typeof(target) === &quot;object&quot;;
+                                    var optIsObj = ui.typeof(opt) === &quot;object&quot;;
+                                    var targetIsArr = ui.typeof(target) === &quot;array&quot;;
+                                    var optIsArr = ui.typeof(opt) === &quot;array&quot;;
+                            
+                                    // 获取深层次的数据
+                                    function getDeepValue(data, field) {
+                                        return field.indexOf(&quot;.&quot;) &gt; -1 ? ui.unit.getKeyValue(field, data) : data[field]
+                                    }
+                            
+                                    if (targetIsObj) {
+                                        if (optIsObj) {
+                                            for (let key in opt) {
+                                                newTarget[key] = opt[key] ? getDeepValue(target, opt[key]) : target[key];
+                                            }
+                                        } else if (optIsArr) {
+                                            opt.forEach(function (item, index) {
+                                                newTarget[item] = getDeepValue(target, item); //item.indexOf(&quot;.&quot;) &gt; -1 ? ui.unit.getKeyValue(item,target) : target[item];
+                                            })
+                                        }
+                                        return newTarget;
+                            
+                                    } else if (targetIsArr) {
+                                        // 新数组
+                                        newTarget = [];
+                            
+                                        if (optIsArr) {
+                                            target.forEach(function (itemTarget, i) {
+                                                let newObj = {};
+                                                opt.forEach(function (item, index) {
+                                                    newObj[item] = getDeepValue(itemTarget, item);//itemTarget[item];
+                                                })
+                                                newTarget.push(newObj);
+                                            })
+                            
+                                        } else if (optIsObj) {
+                            
+                                            target.forEach(function (itemTarget, i) {
+                                                let newObj = {};
+                                                for (let key in opt) {
+                                                    newObj[key] = opt[key] ? getDeepValue(itemTarget, opt[key]) : itemTarget[key];
+                                                }
+                                                newTarget.push(newObj);
+                                            })
+                                        }
+                                        return newTarget;
+                                    }
+                                }
+                            
+                                // 补零
+                                ui.unit.fixZero = function (num) {
+                                    return num &lt; 10 ? &quot;0&quot; + num : num;
+                                }
+                            
+                                /**
+                                    * 获取所有属性及值
+                                    * @namespace  bui
+                                    * @method  getAttributes
+                                    * @since  1.5.6
+                                    * @constructor
+                                    * @param {object} target [要提取的目标对象]
+                                    * @example
+                                    
+                                    // 例子1： 获取某个dom的所有属性和值
+                                    * var attrs = bui.unit.getAttributes()
+                                    */
+                                ui.unit.getAttributes = function (target) {
+                            
+                                    if (typeof target !== &quot;object&quot;) {
+                                        return null;
+                                    }
+                                    var params = {};
+                            
+                                    var isObject = /\{.+\}$/g,
+                                        isArray = /\[.+\]$/g;
+                                    // jsdom对象,不能是jq
+                                    target.attributes &amp;&amp; Object.keys(target.attributes).forEach(function (key, i) {
+                                        var attrs = target.attributes[key];
+                                        var val = attrs[&quot;value&quot;];
+                            
+                                        if ((isObject.test(val) || isArray.test(val))) {
+                                            try {
+                                                val = JSON.parse(val);
+                                            } catch (e) {
+                                                val = val;
+                                                ui.showLog(e)
+                                            }
+                                        }
+                                        params[attrs[&quot;name&quot;]] = val;
+                                    })
+                                    return params;
+                                }
+                            
+                                // 配合 bui.unit.resolvePathname 使用
+                                ui.unit.resolvePathname = function (pathname, startIndex) {
+                                    startIndex = startIndex || 0;
+                                    // 本地打包
+                                    var lastPath = pathname.lastIndexOf(&quot;/&quot;),
+                                        newPath = pathname.substring(startIndex, lastPath);
+                                    return newPath.indexOf(&quot;/&quot;) &gt; -1 ? newPath.split(&quot;/&quot;) : [newPath];
+                                }
+                            
+                                // 配合 bui.unit.relativePath 使用
+                                ui.unit.relativeUrl = function (newPaths, newUrls) {
+                                    var newUrl = [];
+                            
+                                    if (newUrls.length &gt;= newPaths.length) {
+                                        newUrls.forEach(function (item, index) {
+                                            let paths = newPaths[index];
+                            
+                                            if (paths &amp;&amp; item === paths) {
+                                                // newUrl.push(&quot;&quot;);
+                                            } else if (paths &amp;&amp; item !== paths) {
+                                                newUrl.unshift(&quot;..&quot;);
+                                                newUrl.push(item);
+                                            } else {
+                                                newUrl.push(item);
+                                            }
+                                        })
+                                    } else {
+                                        newPaths.forEach(function (item, index) {
+                                            let paths = newUrls[index];
+                                            if (paths &amp;&amp; item === paths) {
+                                                // newUrl.push(&quot;&quot;);
+                                            } else if (paths &amp;&amp; item !== paths) {
+                                                newUrl.unshift(&quot;..&quot;);
+                                                newUrl.push(paths);
+                                            } else {
+                                                newUrl.unshift(&quot;..&quot;);
+                                            }
+                                        })
+                                    }
+                                    return newUrl;
+                                }
+                            
+                                /**
+                                    * 获取多页相对路径
+                                    * @namespace  bui
+                                    * @method  relativePath
+                                    * @since  1.5.6
+                                    * @constructor
+                                    * @param {string} url [提取多页的相对路径]
+                                    * @param {string} [path] 默认: &quot;pages&quot; 静态页面的根路径,所有路径都相对当前路径 
+                                    * @example
+                                    
+                                    // 例子： 
+                                    * var path = bui.unit.relativePath(&quot;pages/ui_controls/bui.list&quot;)
+                                      // 在首页 index.html 打开则输出 pages/ui_controls/bui.list , 在二级页面 pages/index.html 打开, 则是ui_controls/bui.list;
+                                    */
+                                ui.unit.relativePath = function (url, path) {
+                                    path = path || &quot;pages&quot;;
+                                    var href = window.self.location.href;
+                            
+                                    // 如果在文档里说明被嵌在iframe里面,针对oeditor单独处理
+                                    // if (href.indexOf(&quot;easybui.com/docs/&quot;) &gt; -1) {
+                                    //     return window.location.host + &quot;/demo/&quot; + url;
+                                    // }
+                                    // 如果是在源码查看,保持当前单页请求的路径,不做处理
+                                    if (href.indexOf(&quot;source.html?url=&quot;) &gt; -1 &amp;&amp; href.indexOf(&quot;code=&quot;) &gt; -1) {
+                                        return url;
+                                    }
+                                    // 如果是远程地址,直接返回
+                                    if (url.indexOf(&quot;http://&quot;) === 0 || url.indexOf(&quot;https://&quot;) === 0 || url.indexOf(&quot;./&quot;) === 0) {
+                                        return url;
+                                    }
+                                    var locationUrl = window.location.href,
+                                        pathIndex = locationUrl.indexOf(path),
+                                        newUrls = url &amp;&amp; url.indexOf(&quot;/&quot;) &gt; -1 ? url.split(&quot;/&quot;) : [url],
+                                        newUrl = [];
+                            
+                                    if (pathIndex &lt; 0) {
+                                        // 没有pages 可以做判断的时候, 以dist,src,www
+                                        var pathname = window.location.pathname.toLocaleLowerCase(),
+                                            wwwIndex = pathname.indexOf(&quot;www&quot;),
+                                            srcIndex = pathname.indexOf(&quot;src&quot;),
+                                            distIndex = pathname.indexOf(&quot;dist&quot;);
+                                        if (wwwIndex &gt; -1) {
+                                            // 本地打包
+                                            // 4 = &quot;www/&quot;
+                                            let newPaths = ui.unit.resolvePathname(pathname, wwwIndex + 4);
+                                            newUrl = ui.unit.relativeUrl(newPaths, newUrls);
+                                        } else if (distIndex &gt; -1) {
+                                            // 编译
+                                            // 5 = &quot;dist/&quot;
+                                            let newPaths = ui.unit.resolvePathname(pathname, distIndex + 5);
+                                            newUrl = ui.unit.relativeUrl(newPaths, newUrls);
+                                        } else if (srcIndex &gt; -1) {
+                                            // 源码
+                                            // 4 = &quot;src/&quot;
+                                            let newPaths = ui.unit.resolvePathname(pathname, srcIndex + 4);
+                                            newUrl = ui.unit.relativeUrl(newPaths, newUrls);
+                            
+                                        } else {
+                                            // 根路径
+                                            return url.indexOf(&quot;/&quot;) == 0 ? url.replace(&quot;/&quot;, &quot;&quot;) : url;
+                                        }
+                            
+                                    } else {
+                            
+                                        let newPaths = ui.unit.resolvePathname(locationUrl, pathIndex);
+                            
+                                        newUrl = ui.unit.relativeUrl(newPaths, newUrls);
+                                    }
+                                    return newUrl.join(&quot;/&quot;);
+                                }
+                            
+                                /**
+                                    * 检测值是否在最小最大之间
+                                    * @namespace  bui
+                                    * @method  between
+                                    * @since  1.6.2
+                                    * @constructor
+                                    * @param {number} val [检测的值,可以是数字,也可以是日期]
+                                    * @param {number} min [最小值, 默认为0, 比对日期时, 最小值必须传]
+                                    * @param {number} [max] 最大值, 默认为今年的最后一天, 13位数的数字 
+                                    * @return {boolean} 
+                                    * @example
+                                    
+                                    // 例子： 
+                                    * var bool = bui.unit.between(10,0,100);
+                                      // 返回true
+                                    // 例子： 
+                                    * var bool = bui.unit.between(&quot;2020-5-19&quot;,&quot;2020-5-1&quot;,&quot;2020-5-30&quot;);
+                                      // 返回true
+                                    */
+                            
+                                ui.unit.between = function (val, min, max) {
+                                    var bool = true;
+                                    var date = new Date();
+                                    min = min || 0;
+                                    max = max || ui.date.convert(date.getFullYear + &quot;/12/31&quot;).getTime();
+                            
+                                    if (typeof val === &quot;number&quot;) {
+                                        if (val &lt; min || val &gt; max) {
+                                            bool = false;
+                                        }
+                                    } else {
+                                        if (!min) {
+                                            ui.showLog(&quot;bui.unit.between 第2个参数为最小日期&quot;);
+                                        }
+                            
+                                        try {
+                                            min = ui.date.convert(min).getTime();
+                                            max = ui.date.convert(max).getTime();
+                                            val = ui.date.convert(val).getTime();
+                            
+                                            if (val &lt; min || val &gt; max) {
+                                                bool = false;
+                                            }
+                                        } catch (e) {
+                                            ui.showLog(&quot;bui.unit.between 用来检测数字或者日期,请检查参数格式是否正确&quot;);
+                                        }
+                                    }
+                            
+                                    return bool;
+                                }
+                            
+                            
+                                /*
+                                 * 数字大于4位则进行转换转成多少万
+                                 * @namespace  bui
+                                 * @method  numberunit
+                                 * @since  1.6.2
+                                 * @constructor
+                                 * @param {number} num [ 数字]
+                                 * @return {object} [返回  string ]
+                                 * @example
+                            
+                                 *     var num = bui.unit.numberunit(17000)
+                                       // 输出 1.7万
+                                 *
+                                 */
+                                ui.unit.numberunit = function (num) {
+                                    var _num = +num;
+                                    var str = _num;
+                                    if (_num &gt; 10000) {
+                                        str = parseFloat(_num / 10000).toFixed(1) + &quot;万&quot;
+                                    }
+                                    return str
+                                }
+                            
+                                /*
+                                 * 处理样式局部，避免样式冲突
+                                 * @namespace  bui
+                                 * @method  handleStyleScope
+                                 * @since  1.6.7
+                                 * @constructor
+                                 * @param {string} num [ 数字]
+                                 * @return {object} [返回  string ]
+                                 * @example
+                            
+                                 *     var a = &#x60;#test1 .test {
+                                                    background:url(&quot;&quot;);
+                                                    color:#fff
+                                                }
+                                                .test .test{
+                                                    background:url(&quot;&quot;);
+                                                    color:#fff
+                                                }&#x60;
+                                        var b = bui.unit.handleStyleScope(a);
+                                       // 结果
+                                        &#x60;#module.id #test1 .test {
+                                                background:url(&quot;&quot;);
+                                                color:#fff
+                                            }
+                                          #module.id .test .test{
+                                                background:url(&quot;&quot;);
+                                                color:#fff
+                                            }&#x60;
+                                 *
+                                 */
+                                ui.unit.handleStyleScope = function (str) {
+                                    // var rule = /(?=[#|\.|(!@)|\w]).*[,|\{][\s\S]*?}/gm;
+                                    // @keyframes
+                                    var frameRule = /@\-*[\s\S]*\{[\s\S]+[from|\d|%]+[\s]*\{[\s\S]+?\}[\s\S]+?\}/gm;
+                                    // @media 规则还有点问题，暂不支持响应式处理
+                                    // var mediaRule = /@media[\s\S]*\{[\s|\w].+[\s]*\}[\s]*\}/gm;
+                                    // .xxx,#xxx,li {}
+                                    var rule = /(?=[#|\.|\w]).*[,|\{][\s\S]*?\}/gm;
+                                    // 缓存帧动画的样式
+                                    var keyframes = str.match(frameRule) || [];
+                            
+                                    // 去除帧动画的样式
+                                    str = str.replace(frameRule, &quot;&quot;)
+                            
+                                    // var medias = str.match(mediaRule) || [];
+                                    var strs = str.match(rule) || [];
+                            
+                            
+                                    strs = strs.map(function (res) {
+                                        let indexDouhao = res.indexOf(&quot;,&quot;);
+                                        let indexDaKuohao = res.indexOf(&quot;{&quot;);
+                                        // 处理样式的多个逗号
+                                        if (indexDouhao &gt; -1 &amp;&amp; indexDouhao &lt; indexDaKuohao &amp;&amp; res.indexOf(&quot;,#module.id&quot;) &lt; 0) {
+                                            res = res.replace(/,/g, &quot;,#module.id &quot;);
+                                        }
+                            
+                                        // 处理样式的第一个选择器, 不包括 @keyframes 和 100% {}
+                                        if (res.indexOf(&quot;#module.id&quot;) != 0 &amp;&amp; !/@[\-|\w]*keyfreames/.test(res) &amp;&amp; !/[\d]+%[\s]*\{/.test(res)) {
+                                            return &quot;#module.id &quot; + res;
+                                        } else {
+                                            return res;
+                                        }
+                            
+                                    }).join(&quot;&quot;);
+                            
+                                    // 把动画帧提取出来
+                                    strs = keyframes.join(&quot;&quot;) + strs //+ medias.join(&quot;&quot;);
+                            
+                                    return strs
+                                }
+                                // 获取html里面所有的style,包含style标签
+                                ui.unit.getStyleStr = function (str) {
+                                    var rule = /&lt;style[\s\S]*?&lt;\/style&gt;/g;
+                                    var strs = str.match(rule);
+                            
+                                    return strs.join(&quot;&quot;)
+                                }
+                                // 获取html里面所有的style
+                                ui.unit.getStyleContent = function (str) {
+                                    var strs = ui.unit.getStyleStr(str);
+                                    // 替换掉后面的style
+                                    strs = strs.replace(/&lt;\/style&gt;/g, &quot;&quot;);
+                                    // 替换掉前面的style
+                                    var rule = /&lt;style[\s\S]*?&gt;/g;
+                                    var content = strs.replace(rule, &quot;&quot;);
+                            
+                                    return content;
+                                }
+                                // 获取html里面所有的style
+                                ui.unit.changeParamBoolean = function (option) {
+                                    for (let key in option) {
+                                        if (option[key] === &quot;false&quot;) {
+                                            option[key] = false;
+                                        } else if (option[key] === &quot;true&quot;) {
+                                            option[key] = true;
+                                        }
+                                    }
+                                    return option;
+                                }
+                                /*
+                                 * 把html结果处理成样式局部的方法
+                                 * @namespace  bui
+                                 * @method  handleContent
+                                 * @since  1.6.7
+                                 * @constructor
+                                 * @param {string} num [ 数字]
+                                 * @return {object} [返回  string ]
+                                 * @example
+                            
+                                 *     var a = &#x60;
+                                            &lt;style&gt;#test1 .test {
+                                                    background:url(&quot;&quot;);
+                                                    color:#fff
+                                                }&lt;/style&gt;
+                                            &lt;div class=&quot;page&quot;&gt;&lt;/div&gt;&#x60;
+                            
+                                        var b = bui.unit.handleContent(a);
+                                       // 结果
+                                        &#x60;&lt;style&gt;#module.id #test1 .test {
+                                                background:url(&quot;&quot;);
+                                                color:#fff
+                                            }
+                                          #module.id .test .test{
+                                                background:url(&quot;&quot;);
+                                                color:#fff
+                                            }&lt;/style&gt;&lt;div class=&quot;page&quot;&gt;&lt;/div&gt;&#x60;
+                                 *
+                                 */
+                            
+                                ui.unit.handleContent = function (str) {
+                                    var stylerule = /&lt;style[\s\S]*?&lt;\/style&gt;/g;
+                            
+                                    var res = typeof str === &quot;string&quot; ? str : &quot;&quot;;
+                                    var styles = res &amp;&amp; res.match(stylerule);
+                                    if (!styles) {
+                                        return res;
+                                    }
+                                    // 支持import的处理
+                                    var styleImportRule = /@import url.+\)[;]?/g;
+                                    var styleimport = res &amp;&amp; res.match(styleImportRule);
+                                    var styleImportStr = styleimport ? styleimport.join(&quot;&quot;) : &quot;&quot;;
+                            
+                                    // 这个缓存成style
+                                    var stylestr = styles.join(&quot;&quot;);
+                            
+                                    // 除了style 剩下的html
+                                    var html = res.replace(stylerule, &quot;&quot;);
+                                    // 提取style标签里面的内容
+                                    var styleContent = ui.unit.getStyleContent(stylestr);
+                                    // 处理成包含#module.id 的结构
+                                    var styleScope = &#x60;&lt;style&gt;${styleImportStr}${ui.unit.handleStyleScope(styleContent)}&lt;/style&gt;&#x60;;
+                                    // 合并成新的文本
+                                    var newContent = styleScope + html + &quot;&quot;;
+                            
+                                    return newContent;
+                                }
+                            
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

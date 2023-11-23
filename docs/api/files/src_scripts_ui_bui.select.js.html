@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>src/scripts/ui/bui.select.js - BUI</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css"> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+    <div id="sidemenu" class="sidebar-menu">菜单</div>
+    <div id="doc">
+        <div id="hd" class="yui3-g header" style="display: none;">
+            <div class="yui3-u-3-4">
+                <h1><a href="../index.html"><img src="../assets/css/logo.png"
+                            title="BUI" width="30px"></a>
+                    <a href="../index.html">BUI</a>
+                </h1>
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                        <option value="../api/index.html" selected>1.8.x</option>
+                        <option value="../api-1.7.x/index.html">1.7.x</option>
+                        <option value="../api-1.6.x/index.html">1.6.x</option>
+                        <option value="../api-1.5.x/index.html">1.5.x</option>
+                        <option value="../api-1.4.8/index.html">1.4.x</option>
+                    </select></p>
+                <p class="off-left" style="font-size:12px;margin-right: 15px;">API for BUI
+                    1.8.x </p>
+
+            </div>
+        </div>
+        <div id="bd" class="yui3-g" style="padding-top: 0;">
+            <div id="sidebar" class="yui3-u-1-4" style="top:0;">
+
+                <a href="../index.html"
+                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+
+                <div id="docs-sidebar" class="sidebar apidocs">
+                    <div id="api-list">
+                        <div id="api-tabview" class="tabview">
+                    
+                            <ul class="tabs">
+                                <li><a href="#api-classes">Classes</a></li>
+                                <li><a href="#api-modules">Modules</a></li>
+                            </ul>
+                    
+                            <div id="api-tabview-filter">
+                                <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                            </div>
+                    
+                            <div id="api-tabview-panel">
+                                <ul id="api-classes" class="apis classes">
+                                    <li><a href="../classes/bui.accordion.html">bui.accordion</a></li>
+                                    <li><a href="../classes/bui.actionsheet.html">bui.actionsheet</a></li>
+                                    <li><a href="../classes/bui.ajax.html">bui.ajax</a></li>
+                                    <li><a href="../classes/bui.alert.html">bui.alert</a></li>
+                                    <li><a href="../classes/bui.all.html">bui.all</a></li>
+                                    <li><a href="../classes/bui.animate.html">bui.animate</a></li>
+                                    <li><a href="../classes/bui.array.html">bui.array</a></li>
+                                    <li><a href="../classes/bui.back.html">bui.back</a></li>
+                                    <li><a href="../classes/bui.btn.html">bui.btn</a></li>
+                                    <li><a href="../classes/bui.checkVersion.html">bui.checkVersion</a></li>
+                                    <li><a href="../classes/bui.cmd.html">bui.cmd</a></li>
+                                    <li><a href="../classes/bui.config.html">bui.config</a></li>
+                                    <li><a href="../classes/bui.confirm.html">bui.confirm</a></li>
+                                    <li><a href="../classes/bui.date.html">bui.date</a></li>
+                                    <li><a href="../classes/bui.delete.html">bui.delete</a></li>
+                                    <li><a href="../classes/bui.dialog.html">bui.dialog</a></li>
+                                    <li><a href="../classes/bui.download.html">bui.download</a></li>
+                                    <li><a href="../classes/bui.dropdown.html">bui.dropdown</a></li>
+                                    <li><a href="../classes/bui.emitter.html">bui.emitter</a></li>
+                                    <li><a href="../classes/bui.extend.html">bui.extend</a></li>
+                                    <li><a href="../classes/bui.file.html">bui.file</a></li>
+                                    <li><a href="../classes/bui.fileselect.html">bui.fileselect</a></li>
+                                    <li><a href="../classes/bui.floor.html">bui.floor</a></li>
+                                    <li><a href="../classes/bui.get.html">bui.get</a></li>
+                                    <li><a href="../classes/bui.getPageParams.html">bui.getPageParams</a></li>
+                                    <li><a href="../classes/bui.guid.html">bui.guid</a></li>
+                                    <li><a href="../classes/bui.hint.html">bui.hint</a></li>
+                                    <li><a href="../classes/bui.history.html">bui.history</a></li>
+                                    <li><a href="../classes/bui.init.html">bui.init</a></li>
+                                    <li><a href="../classes/bui.input.html">bui.input</a></li>
+                                    <li><a href="../classes/bui.levelselect.html">bui.levelselect</a></li>
+                                    <li><a href="../classes/bui.list.html">bui.list</a></li>
+                                    <li><a href="../classes/bui.listview.html">bui.listview</a></li>
+                                    <li><a href="../classes/bui.load.html">bui.load</a></li>
+                                    <li><a href="../classes/bui.loader.html">bui.loader</a></li>
+                                    <li><a href="../classes/bui.loading.html">bui.loading</a></li>
+                                    <li><a href="../classes/bui.mask.html">bui.mask</a></li>
+                                    <li><a href="../classes/bui.number.html">bui.number</a></li>
+                                    <li><a href="../classes/bui.page.html">bui.page</a></li>
+                                    <li><a href="../classes/bui.pickerdate.html">bui.pickerdate</a></li>
+                                    <li><a href="../classes/bui.platform.html">bui.platform</a></li>
+                                    <li><a href="../classes/bui.popover.html">bui.popover</a></li>
+                                    <li><a href="../classes/bui.post.html">bui.post</a></li>
+                                    <li><a href="../classes/bui.prompt.html">bui.prompt</a></li>
+                                    <li><a href="../classes/bui.pullrefresh.html">bui.pullrefresh</a></li>
+                                    <li><a href="../classes/bui.put.html">bui.put</a></li>
+                                    <li><a href="../classes/bui.rating.html">bui.rating</a></li>
+                                    <li><a href="../classes/bui.ready.html">bui.ready</a></li>
+                                    <li><a href="../classes/bui.refresh.html">bui.refresh</a></li>
+                                    <li><a href="../classes/bui.router.html">bui.router</a></li>
+                                    <li><a href="../classes/bui.run.html">bui.run</a></li>
+                                    <li><a href="../classes/bui.scroll.html">bui.scroll</a></li>
+                                    <li><a href="../classes/bui.searchbar.html">bui.searchbar</a></li>
+                                    <li><a href="../classes/bui.select.html">bui.select</a></li>
+                                    <li><a href="../classes/bui.setting.html">bui.setting</a></li>
+                                    <li><a href="../classes/bui.sidebar.html">bui.sidebar</a></li>
+                                    <li><a href="../classes/bui.slide.html">bui.slide</a></li>
+                                    <li><a href="../classes/bui.stepbar.html">bui.stepbar</a></li>
+                                    <li><a href="../classes/bui.storage.html">bui.storage</a></li>
+                                    <li><a href="../classes/bui.store.html">bui.store</a></li>
+                                    <li><a href="../classes/bui.swipe.html">bui.swipe</a></li>
+                                    <li><a href="../classes/bui.tab.html">bui.tab</a></li>
+                                    <li><a href="../classes/bui.timer.html">bui.timer</a></li>
+                                    <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
+                                    <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
+                                    <li><a href="../classes/bui.unit.html">bui.unit</a></li>
+                                    <li><a href="../classes/bui.upload.html">bui.upload</a></li>
+                                    <li><a href="../classes/bui.viewport.html">bui.viewport</a></li>
+                                </ul>
+                    
+                                <ul id="api-modules" class="apis modules">
+                                    <li><a href="../modules/Animate.html">Animate</a></li>
+                                    <li><a href="../modules/Core.html">Core</a></li>
+                                    <li><a href="../modules/Event.html">Event</a></li>
+                                    <li><a href="../modules/Method.html">Method</a></li>
+                                    <li><a href="../modules/Native.html">Native</a></li>
+                                    <li><a href="../modules/UI.html">UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // iframe 里执行脚本，通过引入index.js 的方式无法成功
+                        function sidebarInit() {
+                            var sidebarHeight = $(window).height() - 153;
+                    
+                            $("#api-tabview-panel").height(sidebarHeight);
+                        }
+                        sidebarInit();
+                    </script>                </div>
+            </div>
+            <div class="yui3-u-3-4">
+                    <div id="api-options">
+                        Show:
+                        <label for="api-show-inherited">
+                            <input type="checkbox" id="api-show-inherited" checked>
+                            Inherited
+                        </label>
+                
+                        <label for="api-show-protected">
+                            <input type="checkbox" id="api-show-protected">
+                            Protected
+                        </label>
+                
+                        <label for="api-show-private">
+                            <input type="checkbox" id="api-show-private">
+                            Private
+                        </label>
+                        <label for="api-show-deprecated">
+                            <input type="checkbox" id="api-show-deprecated">
+                            Deprecated
+                        </label>
+                
+                    </div>
+                
+                <div class="apidocs">
+                    <div id="docs-main">
+                        <div class="content">
+                            <h1 class="file-heading">File: src/scripts/ui/bui.select.js</h1>
+                            
+                            <div class="file">
+                                <pre class="code prettyprint linenums">
+                            /**
+                             * UI控件库
+                             * @module UI
+                             */
+                            ;
+                            (function (ui, $) {
+                                &quot;use strict&quot;;
+                            
+                                /**
+                                 * &lt;div class=&quot;oui-fluid&quot;&gt;
+                                 *   &lt;div class=&quot;span8&quot;&gt;
+                                 *     &lt;h2&gt;选择列表&lt;/h2&gt;
+                                 *     &lt;p&gt;选择列表同样也支持动态渲染,及静态渲染,一个是简单,一个是自由,支持单选和多选,可以自己定义checkbox的样式以及位置.&lt;/p&gt;
+                                 *     &lt;h3&gt;预览地址: &lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.select.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/h3&gt;
+                                 *     &lt;h3&gt;方法说明:&lt;/h3&gt;
+                                 * {{#crossLink &quot;bui.select/value&quot;}}{{/crossLink}}: 获取或者设置值 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/values&quot;}}{{/crossLink}}: 1.5新增,获取键值对数组 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/text&quot;}}{{/crossLink}}: 获取或者设置文本 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/active&quot;}}{{/crossLink}}: 选中第几个数据 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/show&quot;}}{{/crossLink}}: 显示 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/hide&quot;}}{{/crossLink}}: 隐藏 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/selectAll&quot;}}{{/crossLink}}: 全选 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/selectNone&quot;}}{{/crossLink}}: 全不选 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/option&quot;}}{{/crossLink}}: 获取设置参数 &lt;br&gt;
+                                 * {{#crossLink &quot;bui.select/widget&quot;}}{{/crossLink}}: 获取依赖控件 &lt;br&gt;
+                                 *   &lt;/div&gt;
+                                 *   &lt;div class=&quot;span4&quot;&gt;&lt;a href=&quot;http://www.easybui.com/demo/index.html#pages/ui_controls/bui.select.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://www.easybui.com/static/images/controls/bui-select_low.gif&quot; alt=&quot;控件预览&quot;/&gt;&lt;/a&gt;&lt;/div&gt;
+                                 * &lt;/div&gt;
+                                 *  @namespace bui
+                                 *  @class select
+                                 *  @constructor
+                                 *  @param {object} option
+                                 *  @param {string} [option.id]  数据渲染在某个容器下, popup如果是true, 则不一定需要这个id.
+                                 *  @param {string} [option.uid] 1.6.6新增，实例的自定义唯一名字，用于命令式调用
+                                 *  @param {array} option.data 默认:[], 二级菜单的数据,静态绑定无需传数据,name,value 如果不是这2个字段,可以通过field字段配置.
+                                 *  @param {string} [option.data.name] 显示的文本
+                                 *  @param {string} [option.data.value] 文本的值,相当于option的value
+                                 *  @param {string} [option.className] 自定义checkbox的值 默认：&quot;bui-choose&quot; || &quot;bui-radio&quot; || &quot;bui-checkbox&quot;
+                                 *  @param {string} [option.name]  1.4.5新增 radio,checkbox 上的name 值, 默认为空,会自动生成
+                                 *  @param {object} [option.field] 1.4.5新增 默认,{name:&quot;name&quot;,value:&quot;value&quot;}
+                                 *  @param {string} [option.field.name]  数据的文本字段 
+                                 *  @param {string} [option.field.value]  数据的值字段 
+                                 *  @param {string} [option.field.search]  1.7.0新增 搜索哪个字段, 默认空会查找 field.name 的字段
+                                 *  @param {string} [option.title] 弹出层的标题
+                                 *  @param {string} [option.placeholder] 等待的脚本
+                                 *  @param {string} [option.handle]  默认: &quot;.bui-list .bui-btn&quot; 会从id 查找, 如果是自定义模板,则需要注意下索引变更,比方分组标题,不要bui-btn,或者这里改个样式,指定可以选择的是哪个样式.
+                                 *  @param {number} [option.height]  默认0
+                                 *  @param {number} [option.width]  默认0
+                                 *  @param {boolean} [option.change]  弹出选择的时候,是否修改对应的值, 默认 true ,如false需要自己用dom修改  
+                                 *  @param {boolean} [option.popup]  是否弹出, popup: true, 则需要 trigger参数, popup:false 则需要id参数  
+                                 *  @param {string} [option.trigger] 触发select框的按钮,有trigger,不需要有id参数, trigger也不是必须,可以自己控制实例的展示隐藏 
+                                 *  @param {string} [option.triggerChildren] 选中后值的位置
+                                 *  @param {boolean} [option.autoClose]  默认true 点击以后自动关闭 | false 
+                                 *  @param {boolean} [option.mask]  true | false 是否显示遮罩
+                                 *  @param {boolean} [option.toggle]  1.4.5新增 单选的时候,是否可以点击取消选择, 默认 false 
+                                 *  @param {boolean} [option.fullscreen]  false | true 是否全屏
+                                 *  @param {boolean} [option.zIndex]  默认 110 
+                                 *  @param {boolean} [option.needSearch]  1.5.6新增 默认false | true 是否需要搜索,针对弹窗的数据比较多
+                                 *  @param {string|array} option.value  1.4.5新增 初始化选中的文本 例如: [&quot;广东&quot;]  
+                                 *  @param {string} [option.effect] 出现的效果,更多参考{{#crossLink &quot;bui.toggle&quot;}}{{/crossLink}}
+                                 *  @param {string} [option.type]  选择的类型 radio | checkbox | select 
+                                 *  @param {string} [option.direction]  type出现的位置 left | right | center
+                                 *  @param {string} [option.position]  显示的位置 top | bottom | center  
+                                 *  @param {function} [option.templateTitle]  必须 return &quot;&lt;div class=&quot;bui-dialog-title&quot;&gt;&lt;/div&gt;&quot;  
+                                 *  @param {function} [option.template]  1.4.6新增 自定义模板, 注意, 这个1.5.2的自定义模板,需要一个完整的结构,1.5.2以前,是只需要内容的自定义而已  
+                                 *  @param {function} [option.onChange]  点击checkbox | radio 的回调 
+                                 *  @param {function} [option.onInited]  初始化以后的回调,在值设置以后 
+                                 *  @param {array} option.buttons  底部的按钮 格式为:[&quot;确定&quot;,&quot;取消&quot;] || [{name:&quot;确定&quot;,className:&quot;primary-reverse&quot;}]  
+                                 *  @param {function} [option.callback]  点击确定按钮的回调 
+                                 *  @param {function} [option.onBeforeOpen]  1.5.2新增 popup:true 的时候,打开前触发, return false 则不能打开 
+                                 *  @param {function} [option.onBeforeInit]  1.5.1新增 初始化前触发 
+                                 *  @param {function} [option.onInited]  1.5.1新增 初始化以后触发 
+                                 *  @param {function} [option.callbackHandle]  classname 用于定义触发callback, 默认为底部的按钮 .bui-dialog-foot .bui-btn 
+                                 *  @param {string|object} [option.appendTo]  1.4.3新增 默认:&quot;&quot;, 添加到哪里去,主要配合单页使用 
+                                 *  @example
+                                 * 
+                                 *
+                                 *  例子1: 动态绑定
+                                 *
+                                 *   html:
+                                 *
+                                        &lt;div id=&quot;select&quot; class=&quot;bui-select&quot;&gt;请选择&lt;/div&gt;
+                                 *
+                                 *   js:
+                                 *
+                                        // 动态绑定初始化
+                                        var uiSelect = bui.select({
+                                            trigger: &quot;#select&quot;,
+                                            type:&quot;checkbox&quot;,
+                                            data: [{
+                                                &quot;name&quot;:&quot;广东&quot;,
+                                                &quot;value&quot;:&quot;11&quot;
+                                            },{&quot;name&quot;:&quot;广西&quot;,
+                                                &quot;value&quot;:&quot;22&quot;
+                                            },{
+                                                &quot;name&quot;:&quot;上海&quot;,
+                                                &quot;value&quot;:&quot;33&quot;
+                                            },{&quot;name&quot;:&quot;北京&quot;,
+                                                &quot;value&quot;:&quot;44&quot;
+                                            },{
+                                                &quot;name&quot;:&quot;深圳&quot;,
+                                                &quot;value&quot;:&quot;55&quot;
+                                            },{&quot;name&quot;:&quot;南京&quot;,
+                                                &quot;value&quot;:&quot;66&quot;
+                                            }]
+                                        })
+                            
+                                 *  例子2: 自定义模板分组
+                                 *
+                                 *   html:
+                                 *
+                                        &lt;div id=&quot;select&quot; class=&quot;bui-select&quot;&gt;请选择&lt;/div&gt;
+                                 *
+                                 *   js:
+                                 *
+                                        var uiSelect = bui.select({
+                                            trigger: &quot;#select&quot;,
+                                            title: &quot;请选择区域&quot;,
+                                            type: &quot;checkbox&quot;,
+                                            data: [{
+                                                &quot;name&quot;: &quot;南方&quot;,
+                                                &quot;type&quot;: &quot;group&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;广州&quot;,
+                                                &quot;value&quot;: &quot;11&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;深圳&quot;,
+                                                &quot;value&quot;: &quot;22&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;东莞&quot;,
+                                                &quot;value&quot;: &quot;55&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;北方&quot;,
+                                                &quot;type&quot;: &quot;group&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;北京&quot;,
+                                                &quot;value&quot;: &quot;44&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;上海&quot;,
+                                                &quot;value&quot;: &quot;33&quot;
+                                            }, {
+                                                &quot;name&quot;: &quot;郑州&quot;,
+                                                &quot;value&quot;: &quot;66&quot;
+                                            }],
+                                            value: [&quot;广州&quot;, &quot;上海&quot;],
+                                            //如果需要点击再进行操作,增加按钮
+                                            buttons: [{ name: &quot;重置&quot;, className: &quot;&quot; }, { name: &quot;确定&quot;, className: &quot;primary-reverse&quot; }],
+                                            callback: function(e) {
+                            
+                                                var text = $(e.target).text();
+                                                if (text == &quot;重置&quot;) {
+                                                    uiSelect.selectNone();
+                                                } else {
+                                                    uiSelect.hide();
+                                                }
+                                            },
+                                            template: function(data) {
+                                                var html = &#x27;&#x27;;
+                                                // 1.5.2 需要加这行, 1.5.2 以前,这行是不需要的, 正常不需要自己自定义模板. 
+                                                html += &#x27;&lt;div class=&quot;bui-list bui-list-select&quot;&gt;&#x27;;
+                                                data.forEach(function(item, i) {
+                                                    if (item.type) {
+                                                        html += &#x60;&lt;div class=&quot;bui-btn bui-btn-title&quot;&gt;${item.name}&lt;/div&gt;&#x60;
+                                                    } else {
+                                                        html += &#x60;&lt;div class=&quot;bui-btn bui-btn-line bui-box&quot;&gt;
+                                                                    &lt;i class=&quot;icon-face&quot;&gt;&lt;/i&gt;
+                                                                    &lt;div class=&quot;span1&quot;&gt;${item.name}&lt;/div&gt;
+                                                                    &lt;input type=&quot;checkbox&quot; name=&quot;test&quot; class=&quot;bui-choose&quot; value=&quot;${item.value}&quot; text=&quot;${item.name}&quot;&gt;
+                                                                &lt;/div&gt;&#x60;
+                                                    }
+                                                })
+                                                html += &#x27;&lt;/div&gt;&#x27;;
+                            
+                                                return html;
+                                            }
+                                        })
+                            
+                            
+                                  * 例子3: 静态绑定--全屏选择列表分组示例
+                            
+                                  *  html:
+                            
+                                    &lt;div id=&quot;select&quot; class=&quot;bui-select bui-box&quot;&gt;
+                                        &lt;div class=&quot;span1&quot;&gt;请选择区域&lt;/div&gt;
+                                        &lt;i class=&quot;icon-listright&quot;&gt;&lt;/i&gt;
+                                    &lt;/div&gt;
+                            
+                                    &lt;!-- select 静态弹出自定义框 放在body层--&gt;
+                                    &lt;div id=&quot;select-dialog&quot; class=&quot;bui-dialog&quot; style=&quot;display:none;&quot;&gt;
+                                      &lt;div class=&quot;bui-dialog-head bui-box-align-middle&quot;&gt;
+                                        &lt;div class=&quot;span1&quot;&gt;请选择区域&lt;/div&gt;
+                                        &lt;div id=&quot;close&quot; class=&quot;bui-btn primary round&quot;&gt;确定&lt;/div&gt;
+                                      &lt;/div&gt;
+                                      &lt;div class=&quot;bui-dialog-main&quot;&gt;
+                                        &lt;div class=&quot;bui-list&quot;&gt;
+                                          &lt;div class=&quot;bui-btn-title&quot;&gt;
+                                            南方
+                                          &lt;/div&gt;
+                                          &lt;div class=&quot;bui-btn bui-btn-line bui-box&quot;&gt;
+                                            &lt;i class=&quot;icon-face&quot;&gt;&lt;/i&gt;
+                                            &lt;div class=&quot;span1&quot;&gt;广东&lt;/div&gt;
+                                            &lt;input type=&quot;checkbox&quot; class=&quot;bui-choose&quot; value=&quot;11&quot; text=&quot;广东&quot;&gt;
+                                          &lt;/div&gt;
+                                          &lt;div class=&quot;bui-btn bui-btn-line bui-box&quot;&gt;
+                                            &lt;i class=&quot;icon-face&quot;&gt;&lt;/i&gt;
+                                            &lt;div class=&quot;span1&quot;&gt;广西&lt;/div&gt;
+                                            &lt;input type=&quot;checkbox&quot; class=&quot;bui-choose&quot; value=&quot;22&quot; text=&quot;广西&quot;&gt;
+                                          &lt;/div&gt;
+                                        &lt;/div&gt;
+                                      &lt;/div&gt;
+                                    &lt;/div&gt;
+                            
+                                   * js:
+                            
+                                    var uiSelect2 = bui.select({
+                                            id:&quot;#select-dialog&quot;,
+                                            trigger:&quot;#select&quot;,
+                                            type:&quot;checkbox&quot;,
+                                            effect: &quot;fadeInRight&quot;,
+                                            position: &quot;left&quot;,
+                                            fullscreen: true,
+                                            buttons: []
+                                        });
+                            
+                                    // 绑定关闭
+                                    $(&quot;#close&quot;).on(&quot;click&quot;,function (argument) {
+                                        uiSelect2.hide();
+                                    });
+                                 *
+                                 *
+                                 */
+                                ui.select = function (option) {
+                            
+                                    //默认配置
+                                    var config = {
+                                        id: &quot;&quot;, //静态绑定
+                                        uid: &quot;&quot;,
+                                        trigger: &quot;&quot;,
+                                        triggerChildren: &quot;.span1&quot;,
+                                        handle: &quot;.bui-list .bui-btn&quot;,
+                                        className: &quot;&quot;,
+                                        name: &quot;&quot;,
+                                        appendTo: &quot;&quot;,
+                                        data: [],
+                                        popup: true,
+                                        title: &quot;&quot;,
+                                        autoClose: true,
+                                        placeholder: &quot;&quot;,
+                                        field: {
+                                            name: &quot;name&quot;,
+                                            value: &quot;value&quot;,
+                                            image: &quot;image&quot;,
+                                            icon: &quot;icon&quot;,
+                                            search: &quot;&quot;,
+                                        },
+                                        height: 0,
+                                        width: 0,
+                                        mask: true,
+                                        useBox: false,
+                                        zIndex: 110,
+                                        change: true,
+                                        toggle: false, // radio 不允许取消,除非设置为true
+                                        effect: &quot;fadeInUp&quot;,
+                                        type: &quot;select&quot;, //radio | checkbox | select
+                                        direction: &quot;left&quot;,
+                                        position: &quot;bottom&quot;,
+                                        fullscreen: false,
+                                        needSearch: false,
+                                        value: &quot;&quot;,
+                                        buttons: [], // {name: &quot;确定&quot;,className: &quot;primary&quot;}
+                                        onChange: null,
+                                        autoinit: true,
+                                        onBeforeOpen: null,
+                                        onBeforeInit: null,
+                                        template: null,
+                                        onInited: null,
+                                        callbackHandle: &quot;.bui-dialog-foot .bui-btn&quot;,
+                                        callback: null
+                                    }
+                            
+                                    //方法
+                                    var module = {
+                                        name: &quot;select&quot;,
+                                        handle: {},
+                                        on: on,
+                                        off: off,
+                                        value: value,
+                                        values: values,
+                                        allValues: allValues,
+                                        index: index,
+                                        active: active,
+                                        unactive: unactive,
+                                        disabled: disabled,
+                                        enabled: enabled,
+                                        disabledSelect: disabledSelect,
+                                        enabledSelect: enabledSelect,
+                                        template: useTemplate,
+                                        empty: empty,
+                                        text: text,
+                                        show: show,
+                                        hide: hide,
+                                        selectAll: selectAll,
+                                        selectNone: selectNone,
+                                        reset: reset,
+                                        clearSearch: clearSearch,
+                                        unselect: unselect,
+                                        selected: selected,
+                                        unselected: unselected,
+                                        destroy: destroy,
+                                        widget: widget,
+                                        option: options,
+                                        config: param,
+                                        init: init
+                                    };
+                                    //用于option方法的设置参数
+                                    var opts = module.config = $.extend(true, {}, option);
+                                    var param = module.config = $.extend(true, {}, config, ui.config.select, option);
+                            
+                            
+                                    var $trigger = ui.obj(param.trigger),
+                                        $id,
+                                        $input,
+                                        //对话框的id
+                                        gid = ui.guid(),
+                                        cachegid = gid,
+                                        // input name 属性
+                                        gidname = param.name || ui.guid(),
+                                        $children,
+                                        initText = param.placeholder || $trigger &amp;&amp; $trigger.text() || &quot;&quot;,
+                                        uiMask,
+                                        firstChange = true,
+                                        fieldName = param.field.name,
+                                        fieldValue = param.field.value,
+                                        fieldImg = param.field.image,
+                                        fieldIcon = param.field.icon,
+                                        // 使用的模板
+                                        useTemplate = null,
+                                        selects = [],
+                                        // 选中的文本
+                                        selectText = [],
+                                        // 选中的值
+                                        selectValue = [],
+                                        selectIndex = [],
+                                        selectIcon = [],
+                                        placeholder = &quot;&quot;,
+                                        $handle,
+                                        hasEventInit = false,
+                                        hasResult = false,
+                                        uiDialog;
+                            
+                                    //执行初始化
+                                    param.autoinit &amp;&amp; init(param);
+                            
+                            
+                                    /**
+                                     * 初始化方法,用于重新初始化结构,事件只初始化一次
+                                     *  @method init
+                                     *  @param {object} [option] 参数控件本身
+                                     *  @chainable
+                                     */
+                                    function init(opt) {
+                                        var option = $.extend(true, param, opt);
+                            
+                                        option.onBeforeInit &amp;&amp; option.onBeforeInit.call(module, option);
+                                        // 父级的处理
+                                        option.appendTo = option.appendTo || (ui.hasRouter ? router.currentPage() || &quot;body&quot; : &quot;body&quot;);
+                            
+                                        selectText = [];
+                                        selectValue = [];
+                                        selectIndex = [];
+                                        selectIcon = [];
+                            
+                                        //option获取新参数使用
+                                        param = module.config = option;
+                            
+                                        useTemplate = typeof option.template === &quot;function&quot; ? option.template : templateList;
+                                        //动态数据, 重复调用初始化的时候,就会重新渲染, 静态则只需要初始化一次
+                                        if (option.data &amp;&amp; option.data.length || hasEventInit) {
+                                            //生成结构
+                                            var htmlList = useTemplate.call(this, option.data);
+                                        }
+                            
+                                        module.template = useTemplate;
+                            
+                                        // 非弹窗
+                                        if (!option.popup) {
+                                            if (!option.id) {
+                                                ui.hint(&quot;select id 必须有&quot;);
+                                                return;
+                                            }
+                                            $id = ui.obj(option.id);
+                                            //动态数据, 第2次渲染重新修改
+                                            if (option.data &amp;&amp; option.data.length || hasEventInit) {
+                            
+                                                $id.html(htmlList);
+                                            }
+                                        }
+                            
+                                        //是否是弹出
+                                        if (option.popup) {
+                            
+                                            //对话框的id, 有传ID，取自定义的id
+                                            gid = option.id &amp;&amp; (option.id !== option.trigger) ? ui.obj(option.id).attr(&quot;id&quot;) || gid : gid;
+                            
+                                            $id = ui.obj(gid);
+                            
+                                            if (!uiDialog) {
+                            
+                            
+                                                var htmlDialog = template();
+                            
+                                                // 如果有传appendTo 或者 没有找到对应的id的情况下，才会动态创建，避免影响到原本的自定义结构
+                                                (opts.appendTo || !$id.length) &amp;&amp; $(option.appendTo).append(htmlDialog);
+                            
+                                                // 动态结构
+                                                $id = ui.obj(gid);
+                                                // 渲染数据
+                                                $id.find(&quot;.bui-dialog-list&quot;).html(htmlList);
+                            
+                            
+                                                uiDialog = ui.dialog({
+                                                    id: gid,
+                                                    effect: option.effect,
+                                                    mask: option.mask,
+                                                    zIndex: option.zIndex,
+                                                    position: option.position,
+                                                    autoClose: false,
+                                                    useBox: option.useBox,
+                                                    height: option.height,
+                                                    width: option.width,
+                                                    zoom: false,
+                                                    fullscreen: option.fullscreen,
+                                                    onMask: function (e) {
+                                                        option.autoClose &amp;&amp; hide();
+                                                        option.onMask &amp;&amp; option.onMask.call(module, e)
+                                                    }
+                                                });
+                            
+                                                uiDialog.on(&quot;open&quot;, function () {
+                            
+                                                    if (option.needSearch) {
+                                                        var top = $id.find(&quot;.bui-dialog-head&quot;).height();
+                                                        var bottom = $id.find(&quot;.bui-dialog-foot&quot;).height();
+                                                        var mainHeight = $id.height() - top - bottom;
+                            
+                                                        $id.find(&quot;.bui-dialog-result&quot;).css({ top: top + &#x27;px&#x27;, bottom: bottom + &#x27;px&#x27;, height: mainHeight + &#x27;px&#x27; });
+                            
+                                                        hasResult = true;
+                            
+                                                    }
+                            
+                                                })
+                            
+                                                // 静态结构 自定义增加到哪个位置
+                                                if (opts.appendTo &amp;&amp; option.id &amp;&amp; option.data &amp;&amp; !option.data.length) {
+                            
+                                                    // 这里会影响到vue的数据渲染
+                                                    $(option.appendTo).append($id.prop(&quot;outerHTML&quot;));
+                                                    $id.remove();
+                                                    $id = $(option.appendTo).find(option.id);
+                            
+                                                }
+                            
+                                            } else {
+                                                //uiDialog.close();
+                                                // 重新渲染数据, 高度如果默认为0, 点开过一次以后，不会自动更改高度，这种类型最好通过固定高度的形式
+                                                $id.find(&quot;.bui-dialog-list&quot;).html(htmlList);
+                            
+                                            }
+                            
+                                        }
+                            
+                                        module.$el = $id;
+                            
+                                        $handle = $id.find(option.handle);
+                            
+                                        // 如果不是通过data传参,则从属性拿值,设置 param.data 的值
+                                        if (option.data &amp;&amp; option.data.length &lt; 1) {
+                                            getInputValue();
+                                        }
+                            
+                            
+                                        // if (!hasEventInit) {
+                                        bind(option);
+                                        // }
+                                        let val = $trigger &amp;&amp; ($trigger.attr(&quot;value&quot;) || $trigger.val() || &quot;&quot;);
+                            
+                                        if (option.value || val) {
+                                            value(option.value || val);
+                            
+                                            option.onChange &amp;&amp; option.onChange.call(module, { currentTarget: $handle, target: $handle.find(&#x27;input&#x27;)[0], value: selectValue.join(&quot;,&quot;) });
+                                        }
+                            
+                            
+                                        // 存储实例
+                                        option.uid &amp;&amp; ui.history.setUI &amp;&amp; ui.history.setUI({
+                                            uid: option.uid,
+                                            ui: module
+                                        })
+                                        option.onInited &amp;&amp; option.onInited.call(module, option);
+                                        return this;
+                                    }
+                            
+                                    // 获取静态input的值
+                                    function getInputValue() {
+                            
+                                        var inputValue = [],
+                                            inputText = [];
+                            
+                                        $handle.find(&#x27;input&#x27;).each(function (i, item) {
+                                            var $input = $(this);
+                            
+                                            if ($input.length &lt; 1) {
+                                                return;
+                                            }
+                                            var val = $input.val();
+                                            var valText = $input.attr(&quot;text&quot;);
+                                            var valImg = $input.attr(&quot;image&quot;);
+                                            var valIcon = $input.attr(&quot;icon&quot;);
+                                            var isChecked = $input.is(&#x27;:checked&#x27;);
+                            
+                                            // 从静态获取值
+                                            param.data[i] = {};
+                                            param.data[i][fieldName] = valText;
+                                            param.data[i][fieldValue] = val;
+                                            param.data[i][fieldImg] = valImg;
+                                            param.data[i][fieldIcon] = valIcon;
+                            
+                                            // 扁平化值
+                                            inputValue.push(val);
+                                            inputText.push(valText);
+                            
+                                            // 把选中的值储存
+                                            if (isChecked) {
+                                                addValue({
+                                                    name: valText,
+                                                    value: val,
+                                                    index: i
+                                                })
+                                            }
+                            
+                                            // 执行回调
+                                            // callback &amp;&amp; callback.call(this,i,item);
+                            
+                                        })
+                            
+                                        return {
+                                            value: inputValue,
+                                            text: inputText
+                                        };
+                                    }
+                            
+                                    // 增加值
+                                    function addValue(opt) {
+                                        var index = parseInt(opt.index, 10);
+                            
+                                        switch (param.type) {
+                                            case &quot;radio&quot;:
+                                                selectText = [];
+                                                selectValue = [];
+                                                selectIndex = [];
+                                                selectIcon = [];
+                                                selectText.push(opt.name);
+                                                selectValue.push(opt.value);
+                                                selectIcon.push(opt.icon);
+                                                selectIndex.push(index);
+                                                break;
+                                            case &quot;select&quot;:
+                                                selectText = [];
+                                                selectValue = [];
+                                                selectIndex = [];
+                                                selectIcon = [];
+                                                selectText.push(opt.name);
+                                                selectValue.push(opt.value);
+                                                selectIcon.push(opt.icon);
+                                                selectIndex.push(index);
+                                                break;
+                                            case &quot;checkbox&quot;:
+                            
+                                                selectText.push(opt.name);
+                                                selectValue.push(opt.value);
+                                                selectIcon.push(opt.icon);
+                                                selectIndex.push(index);
+                                                break;
+                                        }
+                            
+                                    }
+                            
+                                    // 搜索
+                                    function search(val) {
+                                        // 过滤文本
+                                        var newArr = ui.array.filter(param.data, val, param.field.search || param.field.name);
+                                        var tpl = &#x60;没有与此相关的结果:&lt;span class=&quot;danger-reverse&quot;&gt;${val}&lt;/span&gt;&#x60;;
+                                        var gidname = ui.guid();
+                                        // 修改数据
+                                        if (newArr.length) {
+                                            tpl = templateList(newArr, gidname);
+                                        }
+                            
+                                        $id.find(&quot;.bui-dialog-result&quot;).css(&quot;display&quot;, &quot;block&quot;).html(tpl);
+                                    }
+                            
+                                    function bind(option) {
+                            
+                                        $trigger = ui.obj(option.trigger);
+                            
+                                        placeholder = option.placeholder || $trigger &amp;&amp; $trigger.text() || option.title;
+                                        //是否里面有布局的情况
+                                        $children = $trigger &amp;&amp; $trigger.find(option.triggerChildren).length ? $trigger.find(option.triggerChildren) : $trigger;
+                            
+                                        if (option.trigger &amp;&amp; option.popup) {
+                            
+                                            //初始化select的值
+                                            // initText = option.placeholder || $.trim($children.html() || &quot;&quot;);
+                                            //把title设置进去,这样才能点击到
+                                            if (option.placeholder) {
+                            
+                                                $children.html(option.placeholder);
+                                            }
+                                            //绑定按钮触发
+                                            $trigger.off(&quot;click.bui&quot;).on(&quot;click.bui&quot;, function (argument) {
+                                                var canOpen = option.onBeforeOpen &amp;&amp; option.onBeforeOpen.call(module);
+                                                if ($(this).hasClass(&quot;disabled&quot;) || canOpen == false) {
+                                                    return;
+                                                }
+                                                // var status = $id.attr(&quot;status&quot;) || 0;
+                                                // if( status == &quot;0&quot; ){
+                                                // 显示
+                                                show();
+                                                // }
+                                            })
+                            
+                                        }
+                            
+                                        function showClose(val) {
+                                            if (val) {
+                                                $result.css(&quot;display&quot;, &quot;block&quot;);
+                                                $resultClose.css(&quot;display&quot;, &quot;block&quot;);
+                                            } else {
+                                                $result.css(&quot;display&quot;, &quot;none&quot;);
+                                                $resultClose.css(&quot;display&quot;, &quot;none&quot;);
+                                            }
+                                        }
+                            
+                                        // 有2种改变的方式,通过方法改变,通过点击改变,
+                                        // 方法可以改变多个值,点击只能一次改变一个
+                            
+                                        var change = function (e) {
+                                            //如果点中的是 input
+                            
+                            
+                                            var $input = $(e.currentTarget).find(&quot;input&quot;),
+                                                hasDisabled = $input.attr(&quot;disabled&quot;);
+                            
+                                            var tagName = e.target.tagName;
+                            
+                                            if (hasDisabled) {
+                                                return;
+                                            }
+                                            var val = $input.val(),
+                                                name = $input.attr(&quot;text&quot;),
+                                                index = $input.attr(&quot;index&quot;),
+                                                // 这里如果点击的不是input 则取input的值,如果点击的是input,则要取相反的值
+                                                // isChecked = e.srcElement.nodeName !== &#x27;INPUT&#x27; ? $input.is(&#x27;:checked&#x27;) : !$input.is(&#x27;:checked&#x27;);
+                                                isChecked = $input.is(&#x27;:checked&#x27;);
+                                            // 修改点击的对象为input
+                                            e.target = $input[0];
+                                            e.index = index || $input.parents(&quot;.bui-btn&quot;).index();
+                            
+                                            // 点击的是input会变成反选
+                                            if ((isChecked &amp;&amp; tagName !== &quot;INPUT&quot; || (!isChecked &amp;&amp; tagName === &quot;INPUT&quot;)) &amp;&amp; (option.toggle || option.type == &quot;checkbox&quot;)) {
+                                                // 选中状态,并且是多选或者设置允许切换,才可以取消,针对radio不能点击取消
+                            
+                                                ui.array.remove(selectText, name);
+                                                ui.array.remove(selectValue, val);
+                                                ui.array.remove(selectIndex, index);
+                                                ui.array.remove(selectIcon, index);
+                            
+                                                // 触发取消选中事件
+                                                trigger.call(module, &quot;uncheck&quot;, e);
+                                            } else {
+                                                // 增加数据
+                                                addValue({
+                                                    name: name,
+                                                    value: val,
+                                                    index: index
+                                                })
+                            
+                                                // 触发选中事件
+                                                trigger.call(module, &quot;check&quot;, e);
+                                            }
+                            
+                                            firstChange &amp;&amp; option.onChange &amp;&amp; option.onChange.call(module, e);
+                                            var textStr = selectText.join(&quot;,&quot;);
+                                            var valStr = selectValue.join(&quot;,&quot;);
+                            
+                                            text(textStr || &quot;&quot;);
+                                            value(valStr || &quot;&quot;);
+                            
+                                        }
+                            
+                                        var changeValue = function (e) {
+                            
+                                            var $input = null;
+                            
+                                            // jquery || zepto
+                                            // e.srcElement = e.originalEvent &amp;&amp; e.originalEvent.srcElement || e.srcElement;
+                            
+                                            // 如果点中的是按钮
+                                            // $input = $(e.currentTarget).find(&quot;input&quot;);
+                            
+                                            // e.target = [$input[0]];
+                            
+                                            // 没选中则选中
+                                            change.call(module, e);
+                            
+                                            //如果是要自动关闭,那点击li会触发关闭
+                                            // if (option.popup &amp;&amp; option.autoClose) {
+                                            //     hide();
+                                            // }
+                            
+                                            trigger.call(module, &quot;select&quot;, e);
+                            
+                                            e.stopPropagation();
+                                        };
+                            
+                                        var handler = option.needSearch ? &quot;.bui-dialog-list &quot; + option.handle : option.handle;
+                            
+                                        //绑定二级菜单点击,事件绑在input避免触发两次,因为label已经触发到input
+                                        $id.off(&quot;click.bui&quot;, handler).on(&quot;click.bui&quot;, handler, changeValue)
+                            
+                                        // 点击弹窗的确定取消按钮
+                                        var clickFooter = function (e) {
+                            
+                                            // 回调
+                                            option.callback &amp;&amp; option.callback.call(module, e, module);
+                                            e.stopPropagation();
+                                        }
+                                        $id.off(&quot;click.bui&quot;, option.callbackHandle).on(&quot;click.bui&quot;, option.callbackHandle, clickFooter);
+                            
+                                        var $resultClose = $id.find(&quot;.bui-searchbar-close&quot;);
+                                        var $result = $id.find(&quot;.bui-dialog-result&quot;);
+                                        var $resultInput = $id.find(&quot;.bui-searchbar input&quot;);
+                                        if (option.data &amp;&amp; option.data.length &amp;&amp; option.needSearch) {
+                                            $id.find(&quot;.btn-search&quot;).click(function (e) {
+                                                var val = $id.find(&quot;.bui-searchbar input&quot;).val();
+                            
+                                                search(val);
+                                                showClose(val);
+                                                e.stopPropagation();
+                                            })
+                                            $resultInput.on(&quot;input&quot;, function (e) {
+                                                var val = $(this).val();
+                                                search(val);
+                                                showClose(val);
+                                                e.stopPropagation();
+                                            })
+                                            $resultClose.click(function (e) {
+                                                $resultInput.val(&quot;&quot;);
+                                                $result.css(&quot;display&quot;, &quot;none&quot;);
+                                                $(this).css(&quot;display&quot;, &quot;none&quot;);
+                                                e.stopPropagation();
+                                            })
+                            
+                                            $id.off(&quot;clilck.bui&quot;, &quot;.bui-dialog-result .bui-btn&quot;).on(&quot;click.bui&quot;, &quot;.bui-dialog-result .bui-btn&quot;, function (e) {
+                            
+                                                var $input = $(e.currentTarget).find(&quot;input&quot;);
+                            
+                                                var tagName = e.target.tagName;
+                            
+                                                // 这里如果点击的不是input 则取input的值,如果点击的是input,则要取相反的值
+                                                // var isChecked = e.srcElement.nodeName !== &#x27;INPUT&#x27; ? $input.is(&#x27;:checked&#x27;) : !$input.is(&#x27;:checked&#x27;);
+                                                var isChecked = $input.is(&#x27;:checked&#x27;);
+                                                var name = $input.attr(&quot;text&quot;),
+                                                    val = $input.attr(&quot;value&quot;),
+                                                    index = ui.array.index(option.data, val, &quot;value&quot;);
+                            
+                                                if ((isChecked &amp;&amp; tagName !== &quot;INPUT&quot; || (!isChecked &amp;&amp; tagName === &quot;INPUT&quot;)) &amp;&amp; (option.toggle || option.type == &quot;checkbox&quot;)) {
+                                                    $input.prop(&quot;checked&quot;, false);
+                            
+                                                    trigger.call(module, &quot;uncheck&quot;, e);
+                            
+                                                    ui.array.remove(selectText, name);
+                                                    ui.array.remove(selectValue, val);
+                                                    ui.array.remove(selectIndex, index);
+                                                    ui.array.remove(selectIcon, index);
+                            
+                                                    // 回调
+                                                    // option.onChange &amp;&amp; option.onChange.call(module, e);
+                                                } else {
+                                                    $input.prop(&quot;checked&quot;, true);
+                                                    // 触发选中事件
+                                                    trigger.call(module, &quot;check&quot;, e);
+                            
+                                                    // 增加数据
+                                                    addValue({
+                                                        name: name,
+                                                        value: val,
+                                                        index: index
+                                                    })
+                            
+                                                    // 回调
+                                                    // option.onChange &amp;&amp; option.onChange.call(module, e);
+                                                }
+                            
+                                                firstChange &amp;&amp; option.onChange &amp;&amp; option.onChange.call(module, e);
+                            
+                                                value(selectValue.join(&quot;,&quot;) || &quot;&quot;, e);
+                                                text(selectText.join(&quot;,&quot;) || &quot;&quot;);
+                                                e.stopPropagation();
+                                            })
+                            
+                                        }
+                            
+                                        hasEventInit = true;
+                                    }
+                            
+                                    function clearSearch() {
+                                        $id.find(&quot;.bui-searchbar-close&quot;).trigger(&quot;click&quot;)
+                                    }
+                            
+                                    //生成模板
+                                    function template(data) {
+                            
+                                        var html = &#x27;&#x27;;
+                                        var searchHtml = &#x60;&lt;div class=&quot;bui-searchbar bui-box&quot;&gt;
+                                                                &lt;div class=&quot;span1&quot;&gt;
+                                                                    &lt;div class=&quot;bui-input&quot;&gt;
+                                                                        &lt;i class=&quot;${ui.config.icon.search}&quot;&gt;&lt;/i&gt;
+                                                                        &lt;input type=&quot;search&quot; value=&quot;&quot; placeholder=&quot;请输入关键字&quot; /&gt;
+                                                                        &lt;div class=&quot;bui-searchbar-close&quot;&gt;&lt;i class=&quot;${ui.config.icon.remove}&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                                    &lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;&#x60;;
+                            
+                                        // 搜索结果
+                                        var searchResultHtml = &#x60;&lt;div class=&quot;bui-dialog-result&quot; style=&quot;top:&quot;&gt;&lt;/div&gt;&#x60;;
+                                        var titleHtml = param.templateTitle ? param.templateTitle.call(module, param) || &quot;&quot; : &#x60;&lt;div class=&quot;bui-dialog-title&quot;&gt;${param.title}&lt;/div&gt;&#x60;;
+                            
+                                        //生成弹窗
+                                        if (param.popup) {
+                                            html += &#x27;&lt;div id=&quot;&#x27; + gid + &#x27;&quot; class=&quot;bui-dialog bui-dialog-select&quot;&gt;&#x27;;
+                            
+                                            //多选框需要标题
+                                            if (param.title || param.needSearch) {
+                                                html += &#x60;&lt;div class=&quot;bui-dialog-head&quot;&gt;
+                                                            ${param.title || param.templateTitle ? titleHtml : &quot;&quot;}
+                                                            ${param.needSearch ? searchHtml : &quot;&quot;}
+                                                        &lt;/div&gt;&#x60;;
+                                            }
+                                            html += &#x27;  &lt;div class=&quot;bui-dialog-main&quot;&gt;&#x27;;
+                                        }
+                            
+                                        if (param.popup) {
+                                            html += &#x60;&lt;div class=&quot;bui-dialog-list&quot;&gt;&lt;/div&gt;&#x60;;
+                                            // 搜索结果下移，在这里如果有滚动数据，滚动以后会导致遮不住内容
+                                            // html += &#x60;${param.needSearch ? searchResultHtml : &quot;&quot;}&#x60;;
+                                            html += &#x27;  &lt;/div&gt;&#x27;;
+                            
+                                            //手动控制隐藏
+                                            if (param.buttons.length &gt; 0) {
+                            
+                                                html += &#x27;    &lt;div class=&quot;bui-dialog-foot&quot;&gt;&#x27;;
+                                                html += &#x27;       &lt;div class=&quot;bui-box&quot;&gt;&#x27;;
+                                                $.each(param.buttons, function (i, item) {
+                                                    html += &#x27;        &lt;div class=&quot;span1&quot;&gt;&#x27;;
+                                                    html += &#x27;             &lt;div class=&quot;bui-btn &#x27; + (item.className || &#x27;&#x27;) + &#x27;&quot; value=&quot;&#x27; + (item.value || &#x27;&#x27;) + &#x27;&quot;&gt;&#x27; + (item.name || item) + &#x27;&lt;/div&gt;&#x27;;
+                                                    html += &#x27;        &lt;/div&gt;&#x27;;
+                                                })
+                                                html += &#x27;    &lt;/div&gt;&#x27;;
+                                                html += &#x27;    &lt;/div&gt;&#x27;;
+                                            }
+                                            // 搜索结果不能在
+                                            html += &#x60;${param.needSearch ? searchResultHtml : &quot;&quot;}&#x60;;
+                                            html += &#x27;&lt;/div&gt;&#x27;;
+                                        }
+                                        return html;
+                                    }
+                            
+                                    function templateCheckbox(obj) {
+                                        var obj = obj || {};
+                                        var input = document.createElement(&quot;input&quot;);
+                            
+                                        var html = &#x27;&#x27;;
+                            
+                            
+                                        for (var i in obj) {
+                                            if (typeof obj[i] === &quot;string&quot; || typeof obj[i] === &quot;number&quot;) {
+                                                input.setAttribute(i, obj[i]);
+                                            }
+                                        }
+                                        switch (param.type) {
+                                            case &quot;mulelect&quot;:
+                                                input.setAttribute(&quot;type&quot;, &quot;checkbox&quot;);
+                                                input.setAttribute(&quot;class&quot;, (param.className || &quot;bui-choose&quot;));
+                                                break;
+                                            case &quot;select&quot;:
+                                                input.setAttribute(&quot;type&quot;, &quot;radio&quot;);
+                                                input.setAttribute(&quot;class&quot;, (param.className || &quot;bui-choose&quot;));
+                                                break;
+                                            case &quot;radio&quot;:
+                                                input.setAttribute(&quot;type&quot;, &quot;radio&quot;);
+                                                input.setAttribute(&quot;class&quot;, (param.className || &quot;bui-radio&quot;));
+                                                break;
+                                            case &quot;checkbox&quot;:
+                                                input.setAttribute(&quot;type&quot;, &quot;checkbox&quot;);
+                                                input.setAttribute(&quot;class&quot;, (param.className || &quot;bui-choose&quot;));
+                                                break;
+                                            default:
+                                                input.setAttribute(&quot;type&quot;, &quot;checkbox&quot;);
+                                                break;
+                                        }
+                                        // 选中
+                                        if (ui.array.compare(selectValue, obj[&quot;value&quot;])) {
+                                            input.setAttribute(&quot;checked&quot;, &quot;true&quot;);
+                                        }
+                                        return input;
+                                    }
+                                    //生成 list 模板
+                                    function templateList(data, groupname) {
+                            
+                                        var guid = groupname || gidname;
+                                        var html = &#x27;&#x27;;
+                                        var itemHtml = &#x27;&#x27;;
+                            
+                                        $.each(data, function (i, el) {
+                                            var name = typeof el == &quot;string&quot; ? el : el[fieldName] || el || &quot;&quot;;
+                                            var img = (el &amp;&amp; el[fieldImg]) ? el[fieldImg] || el : &quot;&quot;;
+                                            var icon = (el &amp;&amp; el[fieldIcon]) ? el[fieldIcon] || el : &quot;&quot;;
+                                            var value = (el &amp;&amp; el[fieldValue]) ? el[fieldValue] || el : el || name || i;
+                                            var index = i;
+                            
+                                            var obj = {
+                                                name: guid,
+                                                value: value,
+                                                text: name,
+                                                index: index,
+                                            }
+                                            img &amp;&amp; (obj.image = img);
+                                            icon &amp;&amp; (obj.icon = icon);
+                            
+                                            el = el &amp;&amp; ui.typeof(el) === &quot;object&quot; ? el : {};
+                            
+                                            var newobj = $.extend(true, {}, el, obj);
+                                            //选择框的类型
+                                            var checkbox = templateCheckbox(newobj).outerHTML;
+                            
+                                            //label标签下如果有input外标签,比方文本在div标签下,导致ios 下的label标签无法触发input
+                                            itemHtml += &#x27;    &lt;div class=&quot;bui-btn bui-box bui-btn-line&quot;&gt;&#x27;;
+                            
+                                            //出现的位置
+                                            if (param.direction == &quot;left&quot;) {
+                                                itemHtml += checkbox;
+                                            }
+                                            //图片,支持路径或者样式名
+                                            if (img) {
+                                                var imgSrc = ui.unit.endWithImage(img) ? &#x27;&lt;div class=&quot;thumbnail&quot;&gt;&lt;img src=&quot;&#x27; + img + &#x27;&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&#x27; : &#x27;&lt;div class=&quot;thumbnail &#x27; + img + &#x27;&quot;&gt;&lt;/div&gt;&#x27;;
+                                                itemHtml += imgSrc;
+                                            }
+                                            //图标,支持路径或者样式名
+                                            if (icon) {
+                                                var iconSrc = ui.unit.endWithImage(icon) ? &#x27;&lt;i class=&quot;icon&quot;&gt;&lt;img src=&quot;&#x27; + icon + &#x27;&quot; alt=&quot;&quot; /&gt;&lt;/i&gt;&#x27; : &#x27;&lt;i class=&quot;icon &#x27; + icon + &#x27;&quot;&gt;&lt;/i&gt;&#x27;;
+                                                itemHtml += iconSrc;
+                                            }
+                                            if (param.direction == &quot;center&quot;) {
+                                                //itemHtml +=&#x27;        &lt;div class=&quot;span1&quot; align=&quot;center&quot;&gt;&lt;label for=&quot;check-&#x27;+guid+&#x27;-&#x27;+i+&#x27;&quot; &gt;&#x27;+name+&#x27;&lt;/label&gt;&lt;/div&gt;&#x27;;
+                                                itemHtml += &#x27;        &lt;div class=&quot;span1&quot; align=&quot;center&quot;&gt;&#x27; + name + &#x27;&lt;/div&gt;&#x27;;
+                                                itemHtml += checkbox;
+                                            } else {
+                                                // itemHtml +=&#x27;        &lt;div class=&quot;span1&quot;&gt;&lt;label for=&quot;check-&#x27;+guid+&#x27;-&#x27;+i+&#x27;&quot; &gt;&#x27;+name+&#x27;&lt;/label&gt;&lt;/div&gt;&#x27;;
+                                                itemHtml += &#x27;        &lt;div class=&quot;span1&quot;&gt;&#x27; + name + &#x27;&lt;/div&gt;&#x27;;
+                                            }
+                                            if (param.direction == &quot;right&quot;) {
+                                                itemHtml += checkbox;
+                                            }
+                                            itemHtml += &#x27;    &lt;/div&gt;&#x27;;
+                                        })
+                            
+                            
+                                        html += &#x27;    &lt;div class=&quot;bui-list bui-list-select&quot;&gt;&#x27;;
+                            
+                                        html += itemHtml;
+                            
+                                        html += &#x27;    &lt;/div&gt;&#x27;;
+                            
+                                        return html;
+                                    }
+                            
+                                    /**
+                                     * 菜单显示
+                                     *  @method show
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //显示菜单
+                                        uiSelect.show();
+                            
+                                     */
+                                    function show(callback) {
+                                        trigger.call(this, &quot;beforeshow&quot;);
+                                        var _opt = {};
+                                        if (typeof callback === &quot;function&quot;) {
+                                            _opt.callback = function () {
+                                                callback &amp;&amp; callback.call(module);
+                                                trigger.call(module, &quot;show&quot;);
+                                            };
+                                        } else if (typeof callback === &quot;string&quot;) {
+                                            _opt.effect = callback;
+                                        } else if (typeof callback === &quot;object&quot;) {
+                                            _opt = callback;
+                                        }
+                                        if (param.popup &amp;&amp; uiDialog) {
+                            
+                                            //显示菜单
+                                            !uiDialog.isOpen() &amp;&amp; uiDialog.open(_opt);
+                            
+                                            trigger.call(module, &quot;show&quot;);
+                                        } else {
+                                            $id.css(&quot;display&quot;, &quot;block&quot;) //.attr(&quot;status&quot;,&quot;1&quot;);
+                            
+                                            _opt.callback ? _opt.callback() : trigger.call(module, &quot;show&quot;);
+                                        }
+                            
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 清空数据
+                                     *  @method empty
+                                     *  @since 1.4.7
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //清空数据
+                                        uiSelect.empty();
+                            
+                                     */
+                                    function empty() {
+                            
+                                        $id.html(&#x27;&#x27;);
+                            
+                                        param.data = [];
+                            
+                                        hasEventInit = false;
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 菜单隐藏
+                                     *  @method hide
+                                     *  @chainable
+                                     *  @example
+                            
+                                        //显示菜单
+                                        uiSelect.hide();
+                            
+                                     */
+                                    function hide(callback) {
+                                        trigger.call(this, &quot;beforehide&quot;);
+                            
+                                        var _opt = {};
+                                        if (typeof callback === &quot;function&quot;) {
+                                            _opt.callback = function () {
+                                                callback &amp;&amp; callback.call(module);
+                                            };
+                                        } else if (typeof callback === &quot;string&quot;) {
+                                            _opt.effect = callback;
+                                        } else if (typeof callback === &quot;object&quot;) {
+                                            _opt = callback;
+                                        }
+                                        if (param.popup &amp;&amp; uiDialog) {
+                            
+                                            //隐藏菜单
+                                            uiDialog.isOpen() &amp;&amp; uiDialog.close(_opt.effect || _opt.callback);
+                            
+                                            trigger.call(module, &quot;hide&quot;);
+                            
+                                        } else {
+                                            $id.css(&quot;display&quot;, &quot;none&quot;) //.attr(&quot;status&quot;,&quot;0&quot;);
+                            
+                                            _opt.callback ? _opt.callback() : trigger.call(module, &quot;hide&quot;);
+                            
+                                        }
+                            
+                                        return this;
+                            
+                                    }
+                            
+                                    /**
+                                     * 获取选中的索引
+                                     *  @method index
+                                     *  @since 1.5.0
+                                     *  @example
+                            
+                                        var index = uiSelect.index();
+                            
+                                     */
+                                    function index() {
+                            
+                                        return selectIndex.join(&quot;,&quot;);
+                                    };
+                                    /**
+                                     * 设置或者获取值, 会按二级菜单出现的顺序重新排序
+                                     *  @method value
+                                     *  @param {string} [text] 设置的值
+                                     *  @example
+                            
+                                        //设置值
+                                        uiSelect.value(&quot;10&quot;);
+                            
+                                        // 多选,设置多个值
+                                        uiSelect.value(&quot;10,12&quot;);
+                            
+                                     */
+                                    function value(vals, e) {
+                            
+                                        if (typeof vals === &quot;undefined&quot;) {
+                                            // var attrValue = $id.attr(&quot;value&quot;);
+                                            return selectValue.join(&quot;,&quot;);
+                                        } else {
+                                            e = e || event;
+                                            // 搜索会有两个列表，只取列表里的数据，不取搜索结果的数据
+                                            var handler = param.needSearch ? &quot;.bui-dialog-list &quot; + param.handle : param.handle;
+                            
+                                            $handle = $id.find(handler);
+                            
+                                            var inputDoms = [];
+                            
+                                            var _selectText = [],
+                                                _selectValue = [],
+                                                _selectIcon = [],
+                                                _selectIndex = [];
+                                            var data = [];
+                            
+                                            //为了点击确定的时候,把值设置回去
+                                            if (typeof vals === &quot;string&quot; &amp;&amp; vals.indexOf(&quot;,&quot;) &gt; -1) {
+                                                data = vals.split(&quot;,&quot;);
+                                            } else if (ui.typeof(vals) === &quot;array&quot;) {
+                                                data = vals;
+                                            } else {
+                                                vals &amp;&amp; data.push(vals);
+                                            }
+                            
+                                            // 动态渲染的数据要重新提取数据匹配
+                            
+                            
+                                            if (param.data.length &lt; 1 || param.data.length !== $handle.length) {
+                                                param.data = [];
+                                                // 如果不是通过data传参,则从属性拿值,设置 param.data 的值
+                            
+                                                getInputValue();
+                                            }
+                                            param.data &amp;&amp; param.data.forEach(function (item, i) {
+                                                // 对数据全部转成字符串处理,拿到的值全部会是字符串
+                                                //
+                                                // 获取input的文本
+                                                var valText = item &amp;&amp; ui.typeof(item) === &quot;object&quot; &amp;&amp; item.hasOwnProperty(fieldName) ? String(item[fieldName]) : String(item);
+                                                var icon = item &amp;&amp; ui.typeof(item) === &quot;object&quot; &amp;&amp; item.hasOwnProperty(fieldIcon) ? String(item[fieldIcon]) : &quot;&quot;;
+                                                var val = item &amp;&amp; ui.typeof(item) === &quot;object&quot; &amp;&amp; item.hasOwnProperty(fieldValue) ? String(item[fieldValue]) : String(item) || String(i); //没值时为索引
+                            
+                                                var $input = $handle.eq(i).find(&quot;input&quot;);
+                            
+                                                if (item == &quot;&quot;) {
+                                                    $input.prop(&quot;checked&quot;, false);
+                                                    selectText = [];
+                                                    selectValue = [];
+                                                    selectIndex = [];
+                                                    selectIcon = [];
+                                                    return;
+                                                }
+                            
+                                                var index = ui.array.index(data, valText);
+                                                var indexVal = ui.array.index(data, val);
+                            
+                                                if (indexVal &gt; -1 || index &gt; -1) {
+                                                    if (param.type == &quot;radio&quot; || param.type == &quot;select&quot;) {
+                                                        _selectText = [];
+                                                        _selectValue = [];
+                                                        _selectIndex = [];
+                                                        _selectIcon = [];
+                                                    }
+                                                    //重新排序
+                                                    _selectText.push(valText);
+                                                    _selectValue.push(val);
+                                                    _selectIcon.push(icon);
+                                                    _selectIndex.push(i);
+                            
+                            
+                                                    inputDoms[i] = $input;
+                            
+                                                    //更改为确定
+                                                    $input.prop(&quot;checked&quot;, true);
+                            
+                                                    $handle.eq(i).addClass(&quot;selected&quot;);
+                            
+                                                } else {
+                                                    //取消选择
+                                                    $input.prop(&quot;checked&quot;, false);
+                            
+                                                    $handle.eq(i).removeClass(&quot;selected&quot;);
+                                                }
+                                            })
+                            
+                                            selectText = _selectText.slice(0);
+                                            selectValue = _selectValue.slice(0);
+                                            selectIndex = _selectIndex.slice(0);
+                                            selectIcon = _selectIcon.slice(0);
+                            
+                                            var context = e || {
+                                                target: inputDoms[selectIndex],
+                                                index: selectIndex
+                                            };
+                            
+                                            // 最后一个触发的change,levelselect 需要用到
+                                            trigger.call(module, &quot;change&quot;, context);
+                            
+                                            // 回调第一次不触发onChange
+                                            !firstChange &amp;&amp; param.onChange &amp;&amp; param.onChange.call(module, context);
+                            
+                                            if ($trigger &amp;&amp; param.change) {
+                            
+                                                //设置值
+                                                if ($trigger[0] &amp;&amp; $trigger[0].tagName === &quot;INPUT&quot;) {
+                                                    $trigger.val(_selectValue.join(&quot;,&quot;));
+                                                    // 触发change会导致 store 第一次触发2次
+                                                    // !firstChange &amp;&amp; $trigger.trigger(&quot;change&quot;);
+                                                } else {
+                                                    $trigger.attr(&quot;value&quot;, _selectValue.join(&quot;,&quot;));
+                                                }
+                                                $children.text(selectText.join(&quot;,&quot;) || placeholder);
+                                            }
+                            
+                                            $id.attr(&quot;value&quot;, _selectValue.join(&quot;,&quot;));
+                            
+                                            firstChange = false;
+                            
+                                        }
+                            
+                                    }
+                                    /**
+                                     * 获取对象值
+                                     *  @method values
+                                     *  @param {string} [text] 设置的值
+                                     *  @example
+                            
+                                        //设置值
+                                        var selectVal = uiSelect.values();
+                                        // [{name:&quot;&quot;,value:&quot;&quot;,index:0}]
+                            
+                            
+                                     */
+                                    function values() {
+                                        var vals = [];
+                            
+                                        selectValue.forEach(function (item, i) {
+                                            vals.push({
+                                                value: item,
+                                                name: selectText[i],
+                                                index: selectIndex[i],
+                                                icon: selectIcon[i],
+                                            })
+                                        })
+                            
+                                        return vals
+                                    }
+                            
+                                    /**
+                                     * 获取所有对象值,不管选中没选中,返回 data 的每条的 checked 状态
+                                     *  @method allValues
+                                     *  @since 1.5.5
+                                     *  @example
+                            
+                                        //设置值
+                                        var selectVal = uiSelect.allValues();
+                                        // [{name:&quot;&quot;,value:&quot;&quot;,checked:true},{name:&quot;&quot;,value:&quot;&quot;,checked:false}]
+                            
+                            
+                                     */
+                                    function allValues() {
+                                        var vals = [];
+                            
+                                        param.data &amp;&amp; param.data.forEach(function (item, i) {
+                                            var $input = $handle.eq(i).find(&quot;input&quot;);
+                                            var status = $input.prop(&quot;checked&quot;);
+                            
+                                            item.checked = status;
+                                            vals.push(item);
+                                        })
+                            
+                                        return vals
+                                    }
+                            
+                            
+                                    /**
+                                     * 设置或者获取文本
+                                     *  @method text
+                                     *  @param {string} [text] 设置文本
+                                     *  @example
+                            
+                                        //设置文本
+                                        uiSelect.text(&quot;广东省&quot;);
+                            
+                                     */
+                                    function text(value) {
+                            
+                                        if (typeof value === &quot;undefined&quot;) {
+                            
+                                            return selectText.join(&quot;,&quot;);
+                                        } else {
+                            
+                                            if ($trigger &amp;&amp; param.change) {
+                            
+                                                $trigger.attr(&quot;text&quot;, value);
+                            
+                                                //设置值
+                                                if ($children[0] &amp;&amp; $children[0].tagName === &quot;INPUT&quot;) {
+                                                    $children.val(value || initText);
+                                                    // 触发change会导致 store 第一次触发2次
+                                                    !firstChange &amp;&amp; $children.trigger(&quot;change&quot;);
+                                                } else {
+                                                    $children.html(value || initText);
+                                                }
+                                            }
+                            
+                                            $id.attr(&quot;text&quot;, value);
+                            
+                                            return this;
+                                        }
+                                    }
+                            
+                            
+                                    /**
+                                     * 默认选中第几个, 支持多个
+                                     *  @method active
+                                     *  @since 1.3.0
+                                     *  @param {string} [index] 索引值, 如果是多个,使用逗号分开, 例如: &quot;0,2&quot;
+                                     *  @example
+                            
+                                        //激活选中的checkbox
+                                        uiSelect.active(1);
+                            
+                                     */
+                                    function active(index) {
+                                        var indexs = [];
+                                        // var inputDoms = [];
+                                        if (String(index).indexOf(&quot;,&quot;) &gt; -1) {
+                                            indexs = index.split(&quot;,&quot;);
+                                        } else {
+                                            indexs.push(parseInt(index));
+                                        }
+                            
+                                        //先清空已有数据
+                                        selectText = [];
+                                        selectValue = [];
+                            
+                                        indexs.forEach(function (item, i) {
+                                            // 把选中的值存储
+                                            param.data[item] &amp;&amp; selectText.push(param.data[item][fieldName] || param.data[item]);
+                                            param.data[item] &amp;&amp; selectValue.push(param.data[item][fieldValue] || param.data[item] || i);
+                                        })
+                            
+                                        if (param.type == &quot;checkbox&quot; || param.type == &quot;mulselect&quot;) {
+                                            text(selectText.join(&quot;,&quot;));
+                                            value(selectValue.join(&quot;,&quot;));
+                                        } else {
+                                            text(selectText[0]);
+                                            value(selectValue[0]);
+                                        }
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 不选择第几个索引
+                                     *  @method unactive
+                                     *  @since 1.5.2
+                                     *  @param {string} [index] 索引值, 如果是多个,使用逗号分开, 例如: &quot;0,2&quot;
+                                     *  @example
+                            
+                                        //激活选中的checkbox
+                                        uiSelect.unactive(1);
+                            
+                                     */
+                                    function unactive(index) {
+                                        var indexs = [];
+                                        // var inputDoms = [];
+                                        if (String(index).indexOf(&quot;,&quot;) &gt; -1) {
+                                            indexs = index.split(&quot;,&quot;);
+                                        } else {
+                                            indexs.push(parseInt(index));
+                                        }
+                            
+                                        indexs.forEach(function (item, i) {
+                                            var $input = $handle.eq(item).find(&quot;input&quot;),
+                                                val = $input.val(),
+                                                name = $input.attr(&quot;text&quot;);
+                            
+                                            ui.array.delete(selectText, name);
+                                            ui.array.delete(selectValue, val);
+                            
+                                            //弹出菜单的时候,要知道原来设置的值哪个是选中的
+                                            $input.prop(&quot;checked&quot;, null);
+                            
+                                        })
+                            
+                                        trigger.call(module, &quot;change&quot;, {});
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 全选,多选才能全选
+                                     *  @method selectAll
+                                     *  @example
+                            
+                                        //设置文本
+                                        uiSelect.selectAll();
+                            
+                                     */
+                                    function selectAll() {
+                            
+                                        //多选才有选择
+                                        if (param.type == &quot;checkbox&quot;) {
+                                            var indexs = param.data.map(function (item, i) {
+                                                return i;
+                                            })
+                                            active(indexs.join(&quot;,&quot;))
+                                        } else {
+                                            active(0);
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 全不选
+                                     *  @method selectNone
+                                     *  @example
+                            
+                                        //设置文本
+                                        uiSelect.selectNone();
+                            
+                                     */
+                                    function selectNone() {
+                                        //重新排序
+                                        selectText = [];
+                                        selectValue = [];
+                                        selectIndex = [];
+                                        selectIcon = [];
+                            
+                                        $handle = $id.find(param.handle);
+                            
+                                        //弹出菜单的时候,要知道原来设置的值哪个是选中的
+                                        $handle.find(&quot;input&quot;).prop(&quot;checked&quot;, null);
+                            
+                                        value(&quot;&quot;);
+                                        text(&quot;&quot;);
+                            
+                                        trigger.call(this, &quot;reset&quot;);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 重置
+                                     *  @method reset
+                                     *  @since 1.6.2
+                                     *  @example
+                            
+                                        //重置
+                                        uiSelect.reset();
+                            
+                                     */
+                                    function reset() {
+                                        //重新排序
+                                        selectNone();
+                            
+                                        text(param.placeholder);
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 反选
+                                     *  @method unselect
+                                     *  @example
+                            
+                                        //反选
+                                        uiSelect.unselect();
+                            
+                                     */
+                                    function unselect() {
+                                        if (param.type == &quot;checkbox&quot;) {
+                                            // 缓存当前选中
+                                            var _selevtText = selectText.map(function (item, i) {
+                                                return item;
+                                            }),
+                                                _selectValue = selectValue.map(function (item, i) {
+                                                    return item;
+                                                });
+                                            // 清空选中
+                                            selectText = [];
+                                            selectValue = [];
+                                            param.data &amp;&amp; param.data.forEach(function (item, i) {
+                                                var $input = $handle.eq(i).find(&quot;input&quot;);
+                                                var index = ui.array.index(_selevtText, item[fieldName]);
+                                                // 存在
+                                                if (index &gt; -1) {
+                                                    $input.prop(&quot;checked&quot;, null);
+                                                } else {
+                                                    $input.prop(&quot;checked&quot;, true);
+                            
+                                                    selectText.push(item[fieldName]);
+                                                    selectValue.push(item[fieldValue]);
+                                                }
+                                            })
+                            
+                                            value(selectValue.join(&quot;,&quot;) || &quot;&quot;);
+                                            text(selectText.join(&quot;,&quot;) || &quot;&quot;);
+                            
+                                        } else {
+                                            selectNone();
+                                        }
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 不选择某个值
+                                     *  @method unselected
+                                     *  @since 1.5.2
+                                     *  @param {string} value [可以是name值,也可以是value值, 如果是索引,请使用 unactive ]
+                                     *  @example
+                            
+                                        uiSelect.unselected(&quot;北京&quot;);
+                            
+                                     */
+                                    function unselected(val) {
+                                        var vals = [];
+                                        // var inputDoms = [];
+                                        if (String(val).indexOf(&quot;,&quot;) &gt; -1) {
+                                            vals = val.split(&quot;,&quot;);
+                                        } else {
+                                            vals.push(val);
+                                        }
+                            
+                                        vals.forEach(function (itemVal, i) {
+                            
+                                            var $input = null;
+                            
+                                            param.data.forEach(function (item, index) {
+                                                var name = item[fieldName] || item,
+                                                    value = item[fieldValue] || item;
+                                                if (itemVal == value || itemVal == name) {
+                            
+                                                    $input = $handle.eq(index).find(&quot;input&quot;);
+                            
+                                                    //弹出菜单的时候,要知道原来设置的值哪个是选中的
+                                                    $input.prop(&quot;checked&quot;, null);
+                            
+                                                    ui.array.remove(selectText, name);
+                                                    ui.array.remove(selectValue, value);
+                                                }
+                                            })
+                            
+                                        })
+                            
+                                        trigger.call(module, &quot;change&quot;, {});
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 选择某个值,多选以新增不改变之前的选择的情况
+                                     *  @method selected
+                                     *  @since 1.6.7
+                                     *  @param {string} value [可以是name值,也可以是value值 ]
+                                     *  @example
+                            
+                                        uiSelect.selected(&quot;北京&quot;);
+                            
+                                     */
+                                    function selected(val) {
+                                        var vals = [];
+                                        // var inputDoms = [];
+                                        if (String(val).indexOf(&quot;,&quot;) &gt; -1) {
+                                            vals = val.split(&quot;,&quot;);
+                                        } else {
+                                            vals.push(val);
+                                        }
+                            
+                                        vals.forEach(function (itemVal, i) {
+                            
+                                            var $input = null;
+                            
+                                            var itemNameIndex = ui.array.index(param.data, itemVal, &quot;name&quot;);
+                                            var itemIndex = ui.array.index(param.data, itemVal, &quot;value&quot;);
+                                            var indexText = ui.array.index(selectText, itemVal);
+                                            var indexVal = ui.array.index(selectValue, itemVal);
+                                            var index = itemNameIndex &gt; -1 ? itemNameIndex : itemIndex;
+                            
+                                            if (indexText &lt; 0 &amp;&amp; indexVal &lt; 0 &amp;&amp; index &gt; 0) {
+                                                var item = param.data[index];
+                                                $input = $handle.eq(index).find(&quot;input&quot;);
+                                                //弹出菜单的时候,要知道原来设置的值哪个是选中的
+                                                $input.prop(&quot;checked&quot;, true);
+                            
+                                                selectText.push(item.name);
+                                                selectValue.push(item.value);
+                                            }
+                            
+                                        })
+                            
+                                        trigger.call(module, &quot;change&quot;, {});
+                            
+                                        return this;
+                                    }
+                                    /**
+                                     * 如果实例是popup:true,可以阻止按钮点击触发
+                                     *  @method disabled
+                                     *  @chainable
+                                     *  @since 1.4
+                                     *  @example
+                            
+                                        // 不允许选择
+                                        uiSelect.disabled();
+                            
+                                     */
+                                    function disabled() {
+                                        var $handleItem = $trigger;
+                            
+                                        $handleItem &amp;&amp; $handleItem.addClass(&quot;disabled&quot;);
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 如果实例是popup:true,可以允许按钮点击触发
+                                     *  @method enabled
+                                     *  @chainable
+                                     *  @since 1.4
+                                     *  @example
+                            
+                                        //显示第几个
+                                        uiSelect.enabled();
+                            
+                                     */
+                                    function enabled() {
+                                        var $handleItem = $trigger;
+                            
+                                        $handleItem &amp;&amp; $handleItem.removeClass(&quot;disabled&quot;);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 阻止选中
+                                     *  @method disabledSelect
+                                     *  @param {number} [index]  默认: 全部 || 1   
+                                     *  @chainable
+                                     *  @since 1.5.2
+                                     *  @example
+                            
+                                        // 不允许选择
+                                        uiSelect.disabledSelect();
+                            
+                                     */
+                                    function disabledSelect(index) {
+                                        if (typeof index === &quot;undefined&quot;) {
+                                            $handle.find(&#x27;input&#x27;).attr(&quot;disabled&quot;, true);
+                                        } else {
+                                            if (typeof index !== &quot;number&quot;) {
+                                                console.log(&quot;index 必须为数字&quot;)
+                                                return;
+                                            }
+                                            $handle.eq(index).find(&#x27;input&#x27;).attr(&quot;disabled&quot;, true);
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 允许选中
+                                     *  @method enabledSelect
+                                     *  @param {number} [index]  默认: 全部 || 1   
+                                     *  @chainable
+                                     *  @since 1.5.2
+                                     *  @example
+                            
+                                        // 不允许选择
+                                        uiSelect.enabledSelect();
+                            
+                                     */
+                                    function enabledSelect(index) {
+                                        if (typeof index === &quot;undefined&quot;) {
+                                            $handle.find(&#x27;input&#x27;).removeAttr(&quot;disabled&quot;);
+                                        } else {
+                                            if (typeof index !== &quot;number&quot;) {
+                                                console.log(&quot;index 必须为数字&quot;)
+                                                return;
+                                            }
+                                            $handle.eq(index).find(&#x27;input&#x27;).removeAttr(&quot;disabled&quot;);
+                                        }
+                            
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * [销毁控件]
+                                     *  @method destroy
+                                     *  @since 1.4.2
+                                     *  @param {boolean} [bool]  默认: false 销毁部分 | true 销毁全部   
+                                     *  @example
+                            
+                                        //销毁
+                                        uiSelect.destroy();
+                            
+                                     */
+                                    function destroy(bool) {
+                                        var bool = bool == true ? true : false;
+                            
+                                        if ($id) {
+                                            $id.off();
+                                            bool &amp;&amp; $id.remove();
+                                        }
+                                        if ($trigger) {
+                                            $trigger.off(&quot;click.bui&quot;);
+                                            bool &amp;&amp; $trigger.remove();
+                                        }
+                            
+                                        uiDialog &amp;&amp; uiDialog.destroy(bool);
+                            
+                                        hasEventInit = false;
+                            
+                                        off(&quot;show&quot;);
+                                        off(&quot;hide&quot;);
+                                        off(&quot;change&quot;);
+                                        off(&quot;select&quot;);
+                                        off(&quot;check&quot;);
+                                        off(&quot;uncheck&quot;);
+                            
+                                        return this;
+                            
+                                    }
+                                    /**
+                                     * 获取依赖的控件
+                                     *  @method widget
+                                     *  @param {string} [name]  依赖控件名 dialog 
+                                     *  @example
+                            
+                                        //获取依赖控件
+                                        var uiSelectWidget = uiSelect.widget();
+                            
+                            
+                                     */
+                                    function widget(name) {
+                                        var control = {
+                                            dialog: uiDialog || {}
+                                        };
+                                        return ui.widget.call(control, name);
+                                    };
+                                    /**
+                                     * 获取设置参数
+                                     *  @method option
+                                     *  @param { string | object } [key]  不传则获取所有参数, 类型为string,没有第2个参数则获取某个参数 
+                                     *  @param { string | number | boolean | function } [value]  设置参数的时候要传,设置多个参数不用传,获取参数的时候也不用传 
+                                     *  @chainable
+                                     *  @example
+                            
+                            
+                                        //获取所有参数
+                                         //获取所有参数
+                                        var option = uiSelect.option();
+                            
+                                        //获取某个参数
+                                        var id = uiSelect.option( &quot;id&quot; );
+                            
+                                        //修改一个参数
+                                        uiSelect.option( &quot;popup&quot;,false );
+                            
+                                        //修改多个参数
+                                        uiSelect.option( {&quot;popup&quot;:false} );
+                            
+                                     */
+                                    function options(key, value) {
+                                        return ui.option.call(module, key, value);
+                                    }
+                                    /**
+                                     * 为控件绑定事件
+                                     *  @event on
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;change&quot;(点击选择框改变的时候触发) | &quot;select&quot;(点击选择框的时候触发)| &quot;check&quot;(选中才触发)| &quot;uncheck&quot;(取消选中才触发) | &quot;reset&quot;(全部清0的时候触发) | &quot;show&quot;(如果是popup:true才会有show事件) | &quot;hide&quot;(如果是popup:true才会有hide事件) |  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiSelect.on(&quot;show&quot;,function () {
+                                            // 点击的菜单
+                                            console.log(this);
+                                        });
+                            
+                            
+                                     */
+                                    function on(type, callback) {
+                                        ui.on.apply(module, arguments);
+                                        return this;
+                                    }
+                            
+                                    /**
+                                     * 为控件取消绑定事件
+                                     *  @event off
+                                     *  @since 1.3.0
+                                     *  @param {string} [type]  事件类型: &quot;change&quot;(点击选择框改变的时候触发) | &quot;select&quot;(点击选择框的时候触发)| &quot;check&quot;(选中才触发)| &quot;uncheck&quot;(取消选中才触发) | &quot;reset&quot;(全部清0的时候触发) | &quot;show&quot;(如果是popup:true才会有show事件) | &quot;hide&quot;(如果是popup:true才会有hide事件) |  
+                                     *  @param {function} [callback]  绑定的事件, this 为当前点击的菜单 
+                                     *  @example
+                            
+                                        uiSelect.off(&quot;show&quot;);
+                            
+                            
+                                     */
+                                    function off(type, callback) {
+                                        ui.off.apply(module, arguments);
+                                        return this;
+                            
+                                    }
+                                    /*
+                                     * 触发自定义事件
+                                     */
+                                    function trigger(type) {
+                                        //点击事件本身,或者为空,避免循环引用
+                                        module.self = (this == window || this == module) ? null : this;
+                            
+                                        ui.trigger.apply(module, arguments);
+                                    }
+                                    return module;
+                            
+                                };
+                            
+                                return ui;
+                            
+                            })(window.bui || {}, window.libs);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/yui-min.js"></script>
+    <script src="../assets/js/combo/oop-min.js"></script>
+    <script src="../assets/js/combo/array-extras-min.js"></script>
+    <script src="../assets/js/combo/autocomplete.js"></script>
+    <script src="../assets/js/combo/history-base-min.js"></script>
+    <script src="../assets/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+    <script src="../assets/js/yui-prettify.js"></script>
+    <script src="../assets/../api.js"></script>
+    <script src="../assets/js/api-filter.js"></script>
+    <script src="../assets/js/api-list.js"></script>
+    <script src="../assets/js/api-search.js"></script>
+    <script src="../assets/js/apidocs.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var analytics_bd = '6781b936303667306495d5d92ad58add';
+            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>

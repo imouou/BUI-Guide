@@ -30,7 +30,7 @@
                             title="BUI" width="30px"></a>
                     <a href="../index.html">BUI</a>
                 </h1>
-                <p class="off-left">其它版本:<select name="" id="" onchange="window.open(this.value)">
+                <p class="off-left">其它版本:<select name="" id="" onchange="window.location.href=this.value">
                         <option value="../api/index.html" selected>1.7.x</option>
                         <option value="../api-1.6.x/index.html">1.6.x</option>
                         <option value="../api-1.5.x/index.html">1.5.x</option>
@@ -43,10 +43,9 @@
         </div>
         <div id="bd" class="yui3-g" style="padding-top: 0;">
             <div id="sidebar" class="yui3-u-1-4" style="top:0;">
-
-                <a href="../index.html"
-                    style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
-
+                
+                <a href="../index.html" style="display: block;padding:6px;font-size:16px;background:#fff;position:absolute;z-index:1000;width:70px;letter-spacing:2px;text-align:right;left:220px;top:20px;color:#333;">返回</a>
+                
                 <div id="docs-sidebar" class="sidebar apidocs">
                     <div id="api-list">
                         <div id="api-tabview" class="tabview">
@@ -125,6 +124,7 @@
                                     <li><a href="../classes/bui.tab.html">bui.tab</a></li>
                                     <li><a href="../classes/bui.timer.html">bui.timer</a></li>
                                     <li><a href="../classes/bui.toggle.html">bui.toggle</a></li>
+                                    <li><a href="../classes/bui.touch.html">bui.touch</a></li>
                                     <li><a href="../classes/bui.typeof.html">bui.typeof</a></li>
                                     <li><a href="../classes/bui.unit.html">bui.unit</a></li>
                                     <li><a href="../classes/bui.upload.html">bui.upload</a></li>
@@ -181,12 +181,12 @@
                             
                                         Module: <a href="../modules/Animate.html">Animate</a>
                             
-                                    <p>Available since 1.7.4</p>
+                                    <p>Available since 1.7.3</p>
                             </div>
                             
                             
                             <div class="box intro">
-                                <p>常用的动画,有transform动画,链式动画,属性动画, 1.7.3 开始支持属性动画，支持同步操控动画
+                                <p>常用的动画,有transform动画,链式动画,属性动画
                             <h3>预览地址: <a href="http://www.easybui.com/demo/index.html#pages/ui_method/bui.animate.html" target="_blank">demo</a></h3></p>
                             <p><h5>动画配置修改</h5>
                             <a href="../classes/bui.animate.html#method_option" class="crosslink">option</a>: 设置修改参数 <br>
@@ -246,7 +246,7 @@
                                     
                                     
                                     
-                                                <p>Available since 1.7.4</p>
+                                                <p>Available since 1.7.3</p>
                                         </div>
                                     
                                         <div class="description">
@@ -277,50 +277,6 @@
                                                                     </div>
                                     
                                                                 </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[transition]</code>
-                                                                        <span class="type">String</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>默认 &quot;all 300ms ease-out&quot;</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[times]</code>
-                                                                        <span class="type">Number</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>默认 循环次数 99999</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[clear]</code>
-                                                                        <span class="type">Boolean</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>默认 false （不清除为累积动画） | true</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[zoom]</code>
-                                                                        <span class="type">Boolean</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                    
-                                                                    <div class="param-description">
-                                                                        <p>是否等比缩放，默认 true （rem为单位） | false (px)</p>
-                                    
-                                                                    </div>
-                                    
-                                                                </li>
                                                             </ul>
                                                     </li>
                                                 </ul>
@@ -331,34 +287,7 @@
                                                 <h4>Example:</h4>
                                     
                                                 <div class="example-content">
-                                                    <pre class="code prettyprint"><code>   1.7.3 以上
-                                       html:
-                                       &lt;div class=&quot;moving&quot; anim-left=&quot;200&quot;&gt;
-                                           移动的元素A
-                                       &lt;/div&gt;
-                                       &lt;div class=&quot;moving&quot; anim-transition=&quot;1500ms&quot; anim-right=&quot;200&quot;&gt;
-                                           移动的元素B
-                                       &lt;/div&gt;
-                                    
-                                       // 支持循环动画属性，anim-left,anim-right,anim-up,anim-down,anim-scale,anim-scale-x,anim-scale-y,anim-skew,anim-skew-x,anim-skew-y
-                                       anim-rotate,anim-width,anim-height,anim-border
-                                       
-                                       // 不支持循环动画属性，anim-padding,anim-margin,anim-color,anim-background,anim-box-shadow
-                                    
-                                    
-                                       js: 
-                                       var uiAnimate = bui.animate({
-                                               id: &quot;.moving&quot;,
-                                               clear: true,
-                                           });
-                                       
-                                       // 开始属性动画 promise 
-                                       uiAnimate.start();
-                                    
-                                    
-                                    
-                                       1.7.3 以下
-                                        //初始化page对象
+                                                    <pre class="code prettyprint"><code>    //初始化page对象
                                         var uiAnimate = bui.animate(&quot;#page&quot;);
                                     
                                         //链式动画
@@ -399,23 +328,11 @@
                             
                                                         </li>
                                                         <li class="index-item method">
-                                                            <a href="#method_delay">delay</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
                                                             <a href="#method_down">down</a>
                             
                                                         </li>
                                                         <li class="index-item method">
                                                             <a href="#method_left">left</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_loop">loop</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_none">none</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -435,19 +352,7 @@
                             
                                                         </li>
                                                         <li class="index-item method">
-                                                            <a href="#method_restart">restart</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
                                                             <a href="#method_reverse">reverse</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_reversestart">reversestart</a>
-                            
-                                                        </li>
-                                                        <li class="index-item method">
-                                                            <a href="#method_revert">revert</a>
                             
                                                         </li>
                                                         <li class="index-item method">
@@ -540,7 +445,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l749"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:749</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l602"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:602</code></a>
                                                         </p>
                                                 
                                                 
@@ -567,89 +472,6 @@
                                                             </div>
                                                         </div>
                                                 </div>
-                                                <div id="method_delay" class="method item">
-                                                    <h3 class="name"><code>delay</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code class="optional">[time]</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l990"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:990</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>延迟动画</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[time]</code>
-                                                                        <span class="type">Number</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>默认 500 。 500ms=1秒*</p>
-                                                
-                                                                    </div>
-                                                
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>      //初始化page对象
-                                                       var uiAnimate = bui.animate(&quot;#page&quot;);
-                                                
-                                                       async function anim(){
-                                                          await uiAnimate.delay(500);
-                                                          await uiAnimate.start();
-                                                       }
-                                                
-                                                       // 执行
-                                                       anim()</code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
                                                 <div id="method_down" class="method item">
                                                     <h3 class="name"><code>down</code></h3>
                                                 
@@ -672,7 +494,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l343"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:343</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l277"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:277</code></a>
                                                         </p>
                                                 
                                                 
@@ -738,7 +560,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l247"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:247</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l179"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:179</code></a>
                                                         </p>
                                                 
                                                 
@@ -782,190 +604,6 @@
                                                             </div>
                                                         </div>
                                                 </div>
-                                                <div id="method_loop" class="method item">
-                                                    <h3 class="name"><code>loop</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code class="optional">[opt]</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l865"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:865</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>循环动画</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[opt]</code>
-                                                                        <span class="type">Object</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>在第几次动画的时候执行回调</p>
-                                                
-                                                                    </div>
-                                                
-                                                                        <ul class="params-list">
-                                                                            <li class="param">
-                                                                                    <code class="param-name optional">[times]</code>
-                                                                                    <span class="type">Number</span>
-                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                                                <div class="param-description">
-                                                                                    <p>循环的次数，默认99999</p>
-                                                
-                                                                                </div>
-                                                
-                                                                            </li>
-                                                                            <li class="param">
-                                                                                    <code class="param-name optional">[type]</code>
-                                                                                    <span class="type">String</span>
-                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                                                <div class="param-description">
-                                                                                    <p>动画的类型 默认 normal (轮转动画) | restart (每次0到1的动画) | reverse （反向轮转）  | reversestart (每次1到0的动画)</p>
-                                                
-                                                                                </div>
-                                                
-                                                                            </li>
-                                                                            <li class="param">
-                                                                                    <code class="param-name optional">[delay]</code>
-                                                                                    <span class="type">String</span>
-                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                                                <div class="param-description">
-                                                                                    <p>每次动画后等待多少秒 默认 0</p>
-                                                
-                                                                                </div>
-                                                
-                                                                            </li>
-                                                                            <li class="param">
-                                                                                    <code class="param-name optional">[frames]</code>
-                                                                                    <span class="type">Array</span>
-                                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                                                <div class="param-description">
-                                                                                    <p>在第几次动画的时候执行回调 格式看示例</p>
-                                                
-                                                                                </div>
-                                                
-                                                                            </li>
-                                                                        </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>      //初始化page对象
-                                                       var uiAnimate = bui.animate(&quot;#page&quot;);
-                                                   
-                                                       //执行循环2次动画
-                                                       uiAnimate.loop(2);
-                                                       uiAnimate.loop({
-                                                          times: 5,
-                                                          type: &quot;restart&quot;,
-                                                          frames: [{ loop: 1, after: null, before:null, delay:0 }]
-                                                       });</code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_none" class="method item">
-                                                    <h3 class="name"><code>none</code></h3>
-                                                
-                                                        <span class="paren">()</span>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l711"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:711</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>不要动画</p>
-                                                
-                                                    </div>
-                                                
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>      //初始化page对象
-                                                       var uiAnimate = bui.animate(&quot;#page&quot;);
-                                                
-                                                       uiAnimate.none()
-                                                </code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
                                                 <div id="method_open3D" class="method item">
                                                     <h3 class="name"><code>open3D</code></h3>
                                                 
@@ -977,20 +615,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1385"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1385</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l870"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:870</code></a>
                                                         </p>
                                                 
                                                 
@@ -1020,15 +656,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -1068,7 +695,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1477"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1477</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l941"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:941</code></a>
                                                         </p>
                                                 
                                                 
@@ -1155,7 +782,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l607"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:607</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l541"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:541</code></a>
                                                         </p>
                                                 
                                                 
@@ -1210,20 +837,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1413"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1413</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l895"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:895</code></a>
                                                         </p>
                                                 
                                                 
@@ -1253,15 +878,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -1272,60 +888,6 @@
                                                    
                                                        //清除动画的位置
                                                        uiAnimate.transition(500).property(&quot;width&quot;,&quot;500px&quot;);</code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_restart" class="method item">
-                                                    <h3 class="name"><code>restart</code></h3>
-                                                
-                                                        <span class="paren">()</span>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1022"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1022</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>重新开始动画</p>
-                                                
-                                                    </div>
-                                                
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>      //初始化page对象
-                                                       var uiAnimate = bui.animate(&quot;#page&quot;);
-                                                
-                                                       uiAnimate.restart();
-                                                </code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -1341,20 +903,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1265"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1265</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l781"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:781</code></a>
                                                         </p>
                                                 
                                                 
@@ -1362,7 +922,7 @@
                                                     </div>
                                                 
                                                     <div class="description">
-                                                        <p>返回原来位置,只对transform有效</p>
+                                                        <p>返回原来位置,只对transform有效, 暂时跟stop效果一样</p>
                                                 
                                                     </div>
                                                 
@@ -1384,15 +944,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -1403,161 +954,6 @@
                                                    
                                                        //清除动画的位置
                                                        uiAnimate.reverse();</code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_reversestart" class="method item">
-                                                    <h3 class="name"><code>reversestart</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code>num</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1235"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1235</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>反向动画</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name">num</code>
-                                                                        <span class="type">Number</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>度数</p>
-                                                
-                                                                    </div>
-                                                
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>      //初始化page对象
-                                                       var uiAnimate = bui.animate(&quot;#page&quot;);
-                                                   
-                                                       uiAnimate.reversestart();</code></pre>
-                                                
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div id="method_revert" class="method item">
-                                                    <h3 class="name"><code>revert</code></h3>
-                                                
-                                                        <div class="args">
-                                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                                <li class="arg">
-                                                                        <code class="optional">[callback]</code>
-                                                                </li>
-                                                            </ul><span class="paren">)</span>
-                                                        </div>
-                                                
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    <div class="meta">
-                                                                <p>
-                                                                Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l825"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:825</code></a>
-                                                        </p>
-                                                
-                                                
-                                                
-                                                            <p>Available since 1.7.4</p>
-                                                    </div>
-                                                
-                                                    <div class="description">
-                                                        <p>返回原来位置，无动画</p>
-                                                
-                                                    </div>
-                                                
-                                                        <div class="params">
-                                                            <h4>Parameters:</h4>
-                                                
-                                                            <ul class="params-list">
-                                                                <li class="param">
-                                                                        <code class="param-name optional">[callback]</code>
-                                                                        <span class="type">Function</span>
-                                                                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                                                
-                                                
-                                                                    <div class="param-description">
-                                                                        <p>动画执行完触发</p>
-                                                
-                                                                    </div>
-                                                
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
-                                                
-                                                        <div class="example">
-                                                            <h4>Example:</h4>
-                                                
-                                                            <div class="example-content">
-                                                                <pre class="code prettyprint"><code>      //初始化page对象
-                                                       var uiAnimate = bui.animate(&quot;#page&quot;);
-                                                   
-                                                       //返回原来的样子
-                                                       uiAnimate.revert();</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -1584,7 +980,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l278"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:278</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l210"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:210</code></a>
                                                         </p>
                                                 
                                                 
@@ -1650,7 +1046,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l446"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:446</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l380"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:380</code></a>
                                                         </p>
                                                 
                                                 
@@ -1716,7 +1112,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l471"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:471</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l405"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:405</code></a>
                                                         </p>
                                                 
                                                 
@@ -1782,7 +1178,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l495"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:495</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l429"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:429</code></a>
                                                         </p>
                                                 
                                                 
@@ -1848,7 +1244,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l376"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:376</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l310"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:310</code></a>
                                                         </p>
                                                 
                                                 
@@ -1914,7 +1310,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l398"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:398</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l332"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:332</code></a>
                                                         </p>
                                                 
                                                 
@@ -1980,7 +1376,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l422"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:422</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l356"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:356</code></a>
                                                         </p>
                                                 
                                                 
@@ -2046,7 +1442,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l519"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:519</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l453"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:453</code></a>
                                                         </p>
                                                 
                                                 
@@ -2112,7 +1508,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l561"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:561</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l495"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:495</code></a>
                                                         </p>
                                                 
                                                 
@@ -2178,7 +1574,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l583"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:583</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l517"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:517</code></a>
                                                         </p>
                                                 
                                                 
@@ -2233,20 +1629,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1059"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1059</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l670"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:670</code></a>
                                                         </p>
                                                 
                                                 
@@ -2277,15 +1671,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -2311,20 +1696,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l773"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:773</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l626"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:626</code></a>
                                                         </p>
                                                 
                                                 
@@ -2355,15 +1738,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -2392,20 +1766,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1339"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1339</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l838"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:838</code></a>
                                                         </p>
                                                 
                                                 
@@ -2447,15 +1819,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -2484,20 +1847,18 @@
                                                             </ul><span class="paren">)</span>
                                                         </div>
                                                 
-                                                        <span class="returns-inline">
-                                                            <span class="type">Object</span>
-                                                        </span>
                                                 
                                                 
                                                 
                                                 
                                                 
+                                                        <span class="flag chainable">chainable</span>
                                                 
                                                 
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l638"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:638</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l565"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:565</code></a>
                                                         </p>
                                                 
                                                 
@@ -2531,7 +1892,7 @@
                                                 
                                                 
                                                                     <div class="param-description">
-                                                                        <p>默认 ease 动画的效果 ease-in | ease-out | ease | linear | ease-in-out</p>
+                                                                        <p>动画的效果 ease-in | ease-out | ease</p>
                                                 
                                                                     </div>
                                                 
@@ -2539,15 +1900,6 @@
                                                             </ul>
                                                         </div>
                                                 
-                                                        <div class="returns">
-                                                            <h4>Returns:</h4>
-                                                
-                                                            <div class="returns-description">
-                                                                        <span class="type">Object</span>:
-                                                                    <p>Promise</p>
-                                                
-                                                            </div>
-                                                        </div>
                                                 
                                                         <div class="example">
                                                             <h4>Example:</h4>
@@ -2557,8 +1909,7 @@
                                                        var uiAnimate = bui.animate(&quot;#page&quot;);
                                                    
                                                        //执行动画
-                                                       uiAnimate.transition(500)
-                                                       uiAnimate.left(200).start();</code></pre>
+                                                       uiAnimate.transition(500).left(200).start();</code></pre>
                                                 
                                                             </div>
                                                         </div>
@@ -2585,7 +1936,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l310"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:310</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l242"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:242</code></a>
                                                         </p>
                                                 
                                                 
@@ -2650,7 +2001,7 @@
                                                     <div class="meta">
                                                                 <p>
                                                                 Defined in
-                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l1462"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:1462</code></a>
+                                                        <a href="../files/src_scripts_animate_bui.animate.js.html#l926"><code>src&#x2F;scripts&#x2F;animate&#x2F;bui.animate.js:926</code></a>
                                                         </p>
                                                 
                                                 
@@ -2714,12 +2065,12 @@
     <script src="../assets/js/api-search.js"></script>
     <script src="../assets/js/apidocs.js"></script>
     <script>
-        var _hmt = _hmt || [];
+        var _hmt=_hmt||[];
         (function () {
-            var hm = document.createElement("script");
-            var analytics_bd = '6781b936303667306495d5d92ad58add';
-            hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
-            var s = document.getElementsByTagName("script")[0];
+            var hm=document.createElement("script");
+            var analytics_bd='6781b936303667306495d5d92ad58add';
+            hm.src=['ht', 't', 'ps', ':/', '/h', 'm', '.', 'ba', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm', '.j', 's?', analytics_bd].join('');
+            var s=document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
